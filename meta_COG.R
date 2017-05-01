@@ -1,6 +1,6 @@
 #load required packages
 library(tidyverse)
-
+library(reshape2)
 
 ##############
 #PREPARE DATA#
@@ -102,7 +102,7 @@ ars <- melt(ars, id.vars = "COG.Name", measure.vars = c("Genomes", "Metagenomes"
     ylab("COG Proportion (count per genome)") + 
     xlab("COG Name") +
     theme_bw(base_size = 12) +
-    scale_x_discrete(labels = function(x) str_wrap(x, width = 15)))
+    scale_x_discrete(labels = function(x) stringr::str_wrap(x, width = 15)))
 
 #save comparison plot
 ggsave(ars.plot, filename = paste(wd, "/figures/AsRG.proportions.png", sep=""), height = 4, width = 10)
@@ -112,6 +112,51 @@ ggsave(ars.plot, filename = paste(wd, "/figures/AsRG.proportions.png", sep=""), 
 #are overrepresented in genomes
 #perhaps metagenomes are more likely to have contaminated sites? or
 #genomes are more likely "domesticated" and less exposed to As?
+#this also depends on freq of *multiple* AsRG counts in one genome
+
+############################################################
+#WHAT IS THE DISTRIBUTION OF ASRG IN EACH GENOME (#/GENOME)#
+############################################################
+#It is known that multiple copies of AsRG can occur both
+#chromosomally and on plasmids. I need to see how frequent 
+#multiple AsRG copies is
+
+##COG0798: Arsenite efflux pump ArsB, ACR3 family
+
+#read in COG0798 data
+arsB <- read.delim(file = paste(wd, "/data/ccdCOGGenomesCOG079818206_01-may-2017.xls", sep = ""))
+
+#format COG0798 data (arsB)
+arsB <- arsB %>%
+  separate(col = Genome, into = "Genus", sep = " ", remove = FALSE)
+
+#plot COG0798 data (arsB)
+(arsB.hist <- ggplot(arsB, aes(x = Gene.Count)) +
+    geom_bar(fill = "black") +
+    ylab("Genome count") +
+    xlab("Arsenite efflux pump genes / genome") +
+    scale_x_continuous(breaks = c(0,1,2,3,4,5,6,7)) + 
+    theme_bw(base_size = 12))
+
+#group data by count
+arsB <- arsB %>%
+  group_by(Gene.Count, Genus) %>%
+  summarise(N=length(Genus))
+
+arsB$Genus <- as.factor(arsB$Genus)
+arsB <- arsB[order(arsB$Genus, arsB$N, decreasing = TRUE),]
+arsB <- arsB[which(arsB$N >1),]
+
+(genera.arsB <- ggplot(arsB, aes(x = Genus, y = N, fill = Genus)) +
+    geom_bar(stat = "identity", inherit.aes = TRUE) +
+    theme(axis.text.x = element_text(angle = 90, hjust = 1), legend.position="none") +
+    facet_wrap(~Gene.Count, ncol = 1, scales = "free_y"))
+
+ggsave(genera.arsB, filename = paste(wd, "/figures/arsB.genus.png", sep=""), height = 10, width = 30)
+
+
+
+
 
 
 
