@@ -143,18 +143,23 @@ arsB <- arsB %>%
   group_by(Gene.Count, Genus) %>%
   summarise(N=length(Genus))
 
-arsB$Genus <- as.factor(arsB$Genus)
-arsB <- arsB[order(arsB$Genus, arsB$N, decreasing = TRUE),]
-arsB <- arsB[which(arsB$N >1),]
+arsB.two <- arsB[which(arsB$Gene.Count ==4),]
 
-(genera.arsB <- ggplot(arsB, aes(x = Genus, y = N, fill = Genus)) +
+
+(genera.arsB.one <- ggplot(arsB.two, aes(x = Genus, y = N, fill = Genus)) +
     geom_bar(stat = "identity", inherit.aes = TRUE) +
-    theme(axis.text.x = element_text(angle = 90, hjust = 1), legend.position="none") +
-    facet_wrap(~Gene.Count, ncol = 1, scales = "free_y"))
+    theme(axis.text.x = element_text(angle = 90, hjust = 1), legend.position="none"))
 
-ggsave(genera.arsB, filename = paste(wd, "/figures/arsB.genus.png", sep=""), height = 10, width = 30)
+(genera.arsB.one <- ggplot(arsB, aes(x = Gene.Count, y = N, fill = Genus)) +
+    geom_bar(stat = "identity") +
+    theme(axis.text.x = element_text(angle = 90, hjust = 1), legend.position="none"))
+  
+#read in taxonomy data
+arsB <- matrix(read.delim(file = paste(wd, "/data/taxonomy.table.txt", sep = ""), sep = " ", header = FALSE, ncol(50)))
 
-
+library(phyloseq)
+tax <- tax_table(arsB)
+ta
 
 
 
