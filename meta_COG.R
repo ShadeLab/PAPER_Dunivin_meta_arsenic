@@ -72,7 +72,7 @@ ggsave(scg.var, filename = paste(wd, "/figures/scg.variation.png", sep=""), widt
 #read in COG0798 data
 arsB <- read.delim(file = paste(wd, "/data/ccdCOGGenomesCOG079818206_01-may-2017.xls", sep = ""))
 
-#format COG0798 data (arsB)
+#format COG0798 data (arsB) by adding a genus column
 arsB <- arsB %>%
   separate(col = Genome, into = "Genus", sep = " ", remove = FALSE)
 
@@ -87,25 +87,158 @@ arsB <- arsB %>%
 #save bar chart of genes encoding As efflux pumps / genome
 ggsave(arsB.hist, filename = paste(wd, "/figures/arsB.genome.hist.png", sep = ""), 
        height = 3.51, width = 5.69)
+#read in taxonomy data
+taxa <- read.table(file = paste(wd, "/data/taxonomy.table.txt", sep = ""), sep = " ", fill = TRUE, flush = TRUE)
+
+#add column names to taxa table
+colnames(taxa) <- c("K", "na", "Kingdom", "Phylum", "Class", "Order", "Family", "Genus")
+
+#remove non bacterial rows and NA column
+taxa <- taxa[which(taxa$K == "B"),]
+taxa <- select(taxa, -(K:Kingdom))
+
+#remove rows with no genus
+taxa <- taxa[-which(taxa$Genus == "."),]
+
+#change "." to NA
+taxa[taxa == "."] <- NA
+taxa[taxa == ""] <- NA
+
+#fill NAs with last observation
+taxa <- na.locf(taxa)
+
+#join taxanomic data with count data
+#not appropriate to use non-phylum data (join not specific enough)
+taxa.arsB <- left_join(arsB, taxa, by = "Genus")
+#15454 organisms
+
+#some cannot be joing at the genus level, so we will make a new
+#df with these values and join by next up taxanomic level and so on
+no.genus <- arsB %>%
+  anti_join(taxa, by = "Genus") %>%
+  rename(Family = Genus) %>%
+  left_join(taxa, by = "Family")
+#973 organisms
+
+no.family <- no.genus[is.na(no.genus$Phylum),]
+no.family <- no.family %>%
+  select(1:5) %>%
+  rename(Order = Family) %>%
+  left_join(taxa, by = "Order")
+#862 organisms
+
+no.order <- no.family[is.na(no.family$Phylum),]
+no.order <- no.order %>%
+  select(1:5) %>%
+  rename(Class = Order) %>%
+  left_join(taxa, by = "Class")
+#676 organisms
+
+no.class <- no.order[is.na(no.order$Phylum),]
+#457 organisms
+
+no.classA <- no.class[which(no.class$Class %in% taxa.arsB$Phylum),]
+#227 organisms
+
+no.classB <- no.class[-which(no.class$Class %in% taxa.arsB$Phylum),]
+#230 organisms
+
+
+no.classB <- no.classB %>%
+  lapply(function(x) gsub("Methylosarcina-21", "Euryarchaeota", x)) %>%
+  lapply(function(x) gsub("beta", "Proteobacteria", x)) %>%
+  lapply(function(x) gsub("Acidovorax-*", "Proteobacteria", x)) %>%
+  lapply(function(x) gsub("desulfomonile", "Proteobacteria", x)) %>%
+  lapply(function(x) gsub("alpha", "Proteobacteria", x)) %>%
+  lapply(function(x) gsub("Bacteriovorax*", "Proteobacteria", x)) %>%
+  lapply(function(x) gsub("Bacteroidetes*", "Proteobacteria", x)) %>%
+  lapply(function(x) gsub("BetaproteoUnknown", "Proteobacteria", x)) %>%
+  lapply(function(x) gsub("clostridium", "Firmicutes", x)) %>%
+  lapply(function(x) gsub("Geomicrobium", "Firmicutes", x)) %>%
+  lapply(function(x) gsub("DeltaproteoUnknown", "Proteobacteria", x)) %>%
+  lapply(function(x) gsub("Flavobacter*", "Bacteroidetes", x)) %>%
+  lapply(function(x) gsub("gamma", "Proteobacteria", x)) %>%
+  lapply(function(x) gsub("GammaproteoUnknown", "Proteobacteria", x)) %>%
+  lapply(function(x) gsub("methylo*", "Proteobacteria", x)) %>%
+  lapply(function(x) gsub("zeta", "Proteobacteria", x)) %>%
+  lapply(function(x) gsub("Zeta", "Proteobacteria", x)) %>%
+  lapply(function(x) gsub("Gamma*", "Proteobacteria", x)) %>%
+  lapply(function(x) gsub("Delta*", "Proteobacteria", x)) %>%
+  lapply(function(x) gsub("delta", "Proteobacteria", x)) %>%
+  lapply(function(x) gsub("actinobacterium", "Actinobacteria", x)) %>%
+  lapply(function(x) gsub("Actinobacterium", "Actinobacteria", x)) %>%
+  lapply(function(x) gsub("Proteobacteriaproteobacterium", "Actinobacteria", x)) %>%
+  lapply(function(x) gsub("Bacteroidetesia", "Bacteroidetes", x)) %>%
+  lapply(function(x) gsub("Bacteroidetesiaceae*", "Bacteroidetes", x)) %>%
+  lapply(function(x) gsub("Betaproteobacterium", "Proteobacteria", x)) %>%
+  lapply(function(x) gsub("Proteobacteria*", "Proteobacteria", x)) %>%
+  lapply(function(x) gsub("marine", "Proteobacteria", x)) %>%
+  lapply(function(x) gsub("Cyano_bin1_Alphaproteobacteria", "Proteobacteria", x)) %>%
+  lapply(function(x) gsub("Cyano_bin9_Proteobacteriaproteobacteria", "Proteobacteria", x)) %>%
+  lapply(function(x) gsub("Guam_bin1_Proteobacteria", "Proteobacteria", x)) %>%
+  lapply(function(x) gsub("LKpool_bin1_Proteobacteria", "Proteobacteria", x)) %>%
+  lapply(function(x) gsub("LKpool_bin7_Proteobacteria", "Proteobacteria", x)) %>%
+  data.frame()
+
+no.classC <- no.classB[which(no.classB$Class =="Proteobacteria" | no.classB$Class =="Bacteroidetes" | no.classB$Class =="Actinobacteria" | no.classB$Class =="Firmicutes" | no.classB$Class =="Euryarchaeota" | no.classB$Class =="Euryarchaeota" | no.classB$Class =="Parcubacteria"),]
+#61 orgs
+
+no.classD <- no.classB[-which(no.classB$Class =="Proteobacteria" | no.classB$Class =="Bacteroidetes" | no.classB$Class =="Actinobacteria" | no.classB$Class =="Firmicutes" | no.classB$Class =="Euryarchaeota" | no.classB$Class =="Euryarchaeota" | no.classB$Class =="Parcubacteria"),]
+
+no.classD <- mutate(no.classD, Phylum = "Unknown")
+#170 orgs
+  
+#obtain best matches and rbind
+a <- taxa.arsB[!is.na(taxa.arsB$Phylum),]
+a <- a[which(duplicated(a$Genome) == FALSE),]
+a <- select(a,Genome, Gene.Count, Phylum)
+#14481 orgs
+
+b <- no.genus[!is.na(no.genus$Phylum),]
+b <- b[which(duplicated(b$Genome) == FALSE),]
+b <- select(b,Genome, Gene.Count, Phylum)
+#111 orgs
+
+c <- no.family[!is.na(no.family$Phylum),]
+c <- c[which(duplicated(c$Genome) == FALSE),]
+c <- select(c,Genome, Gene.Count, Phylum)
+#186 orgs
+
+d <- no.order[!is.na(no.order$Phylum),]
+d <- d[which(duplicated(d$Genome) == FALSE),]
+d <- select(d,Genome, Gene.Count, Phylum)
+#219 orgs
+
+e <- no.classA %>%
+  mutate(Phylum = Class) %>%
+  select(Genome, Gene.Count, Phylum)
+#227  
+  
+f <- no.classC %>%
+  mutate(Phylum = Class) %>%
+  select(Genome, Gene.Count, Phylum)
+#56 orgs
+
+g <-select(no.classD, Genome, Gene.Count, Phylum)
+#169  
+
+taxa.final <- rbind(a,b,c,d,e,f,g)
 
 #group data by count
-arsB <- arsB %>%
-  group_by(Gene.Count, Genus) %>%
-  summarise(N=length(Genus))
+taxa.sum <- taxa.final %>%
+  group_by(Gene.Count, Phylum) %>%
+  summarise(N=length(Phylum))
 
-arsB.two <- arsB[which(arsB$Gene.Count ==4),]
+#plot a histogram of isolates from different phyla with arsB
+(arsB.phyla <- ggplot(taxa.final, aes(x = reorder(Phylum, Phylum, function(x)-length(x)), fill = Gene.Count)) +
+    geom_histogram(stat="count") +
+    xlab("Phylum") +
+    ylab("Number of Isolate Genomes") +
+    scale_fill_discrete(name = "Gene copy number") +
+    theme(axis.text.x = element_text(angle = 60, hjust = 1)))
 
-
-(genera.arsB.one <- ggplot(arsB.two, aes(x = Genus, y = N, fill = Genus)) +
-    geom_bar(stat = "identity", inherit.aes = TRUE) +
-    theme(axis.text.x = element_text(angle = 90, hjust = 1), legend.position="none"))
-
-(genera.arsB.one <- ggplot(arsB, aes(x = Gene.Count, y = N, fill = Genus)) +
-    geom_bar(stat = "identity") +
-    theme(axis.text.x = element_text(angle = 90, hjust = 1), legend.position="none"))
-  
-#read in taxonomy data
-arsB <- matrix(read.delim(file = paste(wd, "/data/taxonomy.table.txt", sep = ""), sep = " ", header = FALSE, ncol(50)))
+#save plot
+ggsave(arsB.phyla, filename = paste(wd, "/figures/arsB.isolates.phyla.png", sep=""), width = 6.5, height = 6)
 
 ####################################################
 #WHICH GENES ARE OVERREPRESENTED IN ISOLATE GENOMES#
