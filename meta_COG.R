@@ -1,6 +1,7 @@
 #load required packages
 library(tidyverse)
 library(reshape2)
+library(zoo)
 
 ##############
 #PREPARE DATA#
@@ -235,10 +236,11 @@ taxa.sum <- taxa.final %>%
     xlab("Phylum") +
     ylab("Number of Isolate Genomes") +
     scale_fill_discrete(name = "Gene copy number") +
+    theme_bw(base_size = 13) +
     theme(axis.text.x = element_text(angle = 60, hjust = 1)))
 
 #save plot
-ggsave(arsB.phyla, filename = paste(wd, "/figures/arsB.isolates.phyla.png", sep=""), width = 6.5, height = 6)
+ggsave(arsB.phyla, filename = paste(wd, "/figures/arsB.isolates.phyla.png", sep=""), width = 8.5, height = 7)
 
 ####################################################
 #WHICH GENES ARE OVERREPRESENTED IN ISOLATE GENOMES#
@@ -306,7 +308,7 @@ abund <- melt(abund, id.vars = c("COG.ID", "COG.Name"), measure.vars = c("Genome
     scale_x_discrete(labels = function(x) stringr::str_wrap(x, width = 15)))
 
 #save comparison plot
-ggsave(ars.plot, filename = paste(wd, "/figures/AsRG.proportions.png", sep=""), height = 4, width = 10)
+ggsave(ars.plot, filename = paste(wd, "/figures/AsRG.proportions.png", sep=""), height = 5, width = 11)
 
 #Some AsRG appear underrepresented in isolate genomes while 
 #arsC-glut is over-represented; arsC_glut is in E.coli, which
