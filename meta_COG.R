@@ -60,60 +60,6 @@ ggsave(scg.var, filename = paste(wd, "/figures/scg.variation.png", sep=""), widt
 #Both sets average around 1.1 copies per genome, which is acceptable
 #microbeCensus uses all 1 func catergory while Tringe has several 
 
-###################################################
-#NORMALIZE COG ABUND IN METAG BASED ON CENSUS SCGs#
-###################################################
-data <- mutate(data, 
-               Metagenomes = Metagenome.Count / mean(census$Metagenome.Count))
-
-####################################################
-#WHICH GENES ARE OVERREPRESENTED IN ISOLATE GENOMES#
-####################################################
-
-#view variation in COG genome representation by functional group
-(func.abund <- ggplot(data, aes(x = Catergory, y = Genomes)) +
-    geom_boxplot() + 
-    geom_jitter() + 
-    coord_flip())
-
-(func.abund.metaG <- ggplot(data, aes(x = Catergory, y = Metagenomes)) +
-    geom_boxplot() + 
-    geom_jitter() + 
-    coord_flip())
-
-#not particularly useful plots
-#does show scg pattern of ~1 (translation, ribosomal struct &biogen) for both ds
-#lots of variation by COG
-#more function unknown for metagenomes (sanity check)
-
-#select AsRG cogs (exclusing several arsR groups)
-ars <- c("COG0798", "COG1055", "COG1393", "COG0003", "COG0640", "COG2345", "COG4860")
-
-#subset data based on AsRG cogs
-ars <- data[which(data$COG.ID %in% ars),]
-
-#tidy ars
-ars <- melt(ars, id.vars = "COG.Name", measure.vars = c("Genomes", "Metagenomes"))
-
-#plot AsRG COG proportions in genomes and metagenomes
-(ars.plot <- ggplot(ars, aes(x = COG.Name, y = value, fill = variable)) +
-    geom_bar(stat = "identity", position = "dodge") +
-    guides(fill=guide_legend(title="Dataset")) +
-    ylab("COG Proportion (count per genome)") + 
-    xlab("COG Name") +
-    theme_bw(base_size = 12) +
-    scale_x_discrete(labels = function(x) stringr::str_wrap(x, width = 15)))
-
-#save comparison plot
-ggsave(ars.plot, filename = paste(wd, "/figures/AsRG.proportions.png", sep=""), height = 4, width = 10)
-
-#overall see more AsRG in metagenomes
-#compared to ATPase and efflux pumps, glutaredoxin As(V) reductases
-#are overrepresented in genomes
-#perhaps metagenomes are more likely to have contaminated sites? or
-#genomes are more likely "domesticated" and less exposed to As?
-#this also depends on freq of *multiple* AsRG counts in one genome
-
 ############################################################
 #WHAT IS THE DISTRIBUTION OF ASRG IN EACH GENOME (#/GENOME)#
 ############################################################
@@ -138,6 +84,10 @@ arsB <- arsB %>%
     scale_x_continuous(breaks = c(0,1,2,3,4,5,6,7)) + 
     theme_bw(base_size = 12))
 
+#save bar chart of genes encoding As efflux pumps / genome
+ggsave(arsB.hist, filename = paste(wd, "/figures/arsB.genome.hist.png", sep = ""), 
+       height = 3.51, width = 5.69)
+
 #group data by count
 arsB <- arsB %>%
   group_by(Gene.Count, Genus) %>%
@@ -157,11 +107,78 @@ arsB.two <- arsB[which(arsB$Gene.Count ==4),]
 #read in taxonomy data
 arsB <- matrix(read.delim(file = paste(wd, "/data/taxonomy.table.txt", sep = ""), sep = " ", header = FALSE, ncol(50)))
 
-library(phyloseq)
-tax <- tax_table(arsB)
-ta
+####################################################
+#WHICH GENES ARE OVERREPRESENTED IN ISOLATE GENOMES#
+####################################################
 
+#view variation in COG genome representation by functional group
+(func.abund <- ggplot(data, aes(x = Catergory, y = Genomes)) +
+   geom_boxplot() + 
+   geom_jitter() + 
+   coord_flip())
 
+#not particularly useful plots
+#does show scg pattern of ~1 (translation, ribosomal struct &biogen)
+#lots of variation by COG
 
+###################################################
+#COMPARE ABUNDANCE IN GENOMES VS IN METAGENOME GEs#
+###################################################
 
+##prep metagenome data
+#read in all metaG files with counts of genes of interest
+#written to incorporate date files were downloaded
+#change if you have unwanted files with same date specifications
+names=list.files(path = paste(wd, "/data/", sep = ""), pattern="*02-may-2017*")
+setwd(paste(wd, "/data/", sep = ""))
+metag=do.call(rbind, lapply(names, function(X) {
+  data.frame(id = basename(X), read.delim(X))}))
+setwd("../")
 
+#get Gene.Count sums for each gene of interest
+metag.abund <- metag %>%
+  separate(id, into = c("id", "COG.ID", "end"), sep = c(13, -23)) %>%
+  group_by(COG.ID) %>%
+  summarise(Abundance = sum(Gene.Count), StDev = sd(Gene.Count)) 
+
+#COG0052 count is 4945293
+#normalize abundance to abundance of single copy gene
+metag.abund <- metag.abund %>%
+  mutate(scg = 4945293, 
+         Metagenomes = Abundance / scg, 
+         StDeV = StDev / 4945293)
+
+##prep isolate genome data
+#select AsRG COGs and chosen single copy gene (COG0052)
+ars <- c("COG0798", "COG1055", "COG1393", "COG0003", "COG0640", "COG2345", "COG4860", "COG0052")
+
+#subset data based on AsRG cogs
+ars <- data[which(data$COG.ID %in% ars),]
+
+#tidy isolate data and join with metagenome dataset
+abund <- ars %>%
+  select(COG.ID, COG.Name, Genomes) %>%
+  inner_join(y = metag.abund, by = "COG.ID") 
+
+#tidy final data
+abund <- melt(abund, id.vars = c("COG.ID", "COG.Name"), measure.vars = c("Genomes", "Metagenomes"), variable.name = "Source", value.name = "Abundance")
+
+#plot AsRG COG proportions in genomes and metagenomes
+(ars.plot <- ggplot(abund, aes(x = COG.Name, y = Abundance, fill = Source)) +
+    geom_bar(stat = "identity", position = "dodge") +
+    guides(fill=guide_legend(title="Dataset")) +
+    ylab("COG Proportion (count per genome)") + 
+    xlab("COG Name") +
+    theme_bw(base_size = 12) +
+    scale_x_discrete(labels = function(x) stringr::str_wrap(x, width = 15)))
+
+#save comparison plot
+ggsave(ars.plot, filename = paste(wd, "/figures/AsRG.proportions.png", sep=""), height = 4, width = 10)
+
+#Some AsRG appear underrepresented in isolate genomes while 
+#arsC-glut is over-represented; arsC_glut is in E.coli, which
+#may explain some of this discrepancy 
+#metaG data makes more sense since it has higher arsenite efflux pump 
+#abundance than arsenate redcutase; an arsenate reductase is not useful
+#without an arsenite efflux pump 
+#as always, I do not really trust arsR COG data
