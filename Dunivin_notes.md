@@ -21,5 +21,25 @@ File contains notes on relevant publications for the analysis, broad decisions o
   * In completed genomes, are some AsRGs represented in particular phyla more than others?
     * In particular I am interested in whether thermophiles are more likely to be arsenic resistant (hyp yes)
 
+
+
+## May 2, 2017
 * JGI preliminary data
-  * 
+  * wrote .R script to examine COGs related to As resistance in *all* JGI genomes and metagenomes
+  * Glutaredoxin arsenate reductase COGs are overrepresented in isolate genomes
+   * Found in ~86% of isolate genomes 
+     * not exact since there can be multiple copies in one genome
+   * Found in ~34.5% of metagenome genome equivalents (norm to scg ribosomal protein S2)
+   * Note no COG exists for the gene encoding thioredoxin arsenate reductases 
+  * COGs for arsenite efflux pumps (arsB, acr3, arsenite permeases) are under-represented in isolate genomes
+   * This actually makes more sense seeing as arsenate reductases are not useful without arsenite efflux potential
+  * I am not analyzing arsR extensively here since I do not trust those COGs
+  
+  * The majority of isolate genomes with arsenite efflux pump COGs have 1. Max is 7.
+  
+  * Made figure of number of isolates in each available phyla have arsB/acr3
+   * Would like to analyze further to see whether this highlights database bias 
+   * Would like to see if thermophiles are over represented based on genome availability
+   * *considering* doing this for arsC; painful to make taxanomic table (might be another way)
+  
+  * Script also contains analysis of single copy genes in known genomes from the Tringe paper and microbeCensus
