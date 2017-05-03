@@ -62,7 +62,7 @@ ggsave(scg.var, filename = paste(wd, "/figures/scg.variation.png", sep=""), widt
 #microbeCensus uses all 1 func catergory while Tringe has several 
 
 ############################################################
-#WHAT IS THE DISTRIBUTION OF ASRG IN EACH GENOME (#/GENOME)#
+#WHAT IS THE DISTRIBUTION OF arsB IN EACH GENOME (#/GENOME)#
 ############################################################
 #It is known that multiple copies of AsRG can occur both
 #chromosomally and on plasmids. I need to see how frequent 
@@ -88,6 +88,11 @@ arsB <- arsB %>%
 #save bar chart of genes encoding As efflux pumps / genome
 ggsave(arsB.hist, filename = paste(wd, "/figures/arsB.genome.hist.png", sep = ""), 
        height = 3.51, width = 5.69)
+
+#calculate the actual percentage of genomes with >=1 copy of arsB
+perc.arsB <- count(arsB) / 51515
+#output: 0.3049209 have 1 copy of arsB
+
 #read in taxonomy data
 taxa <- read.table(file = paste(wd, "/data/taxonomy.table.txt", sep = ""), sep = " ", fill = TRUE, flush = TRUE)
 
@@ -242,6 +247,77 @@ taxa.sum <- taxa.final %>%
 #save plot
 ggsave(arsB.phyla, filename = paste(wd, "/figures/arsB.isolates.phyla.png", sep=""), width = 8.5, height = 7)
 
+############################################################
+#WHAT IS THE DISTRIBUTION OF arsC IN EACH GENOME (#/GENOME)#
+############################################################
+#It is known that multiple copies of AsRG can occur both
+#chromosomally and on plasmids. I need to see how frequent 
+#multiple AsRG copies is
+
+##COG1393: Arsenate reductase and related proteins, glutaredoxin family
+
+
+#read in COG1393 data
+arsC <- read.delim(file = paste(wd, "/data/ccdCOGGenomesCOG139337657_03-may-2017.xls", sep = ""))
+
+#format COG1393 data (arsC) by adding a genus column
+arsC <- arsC %>%
+  separate(col = Genome, into = "Ident", sep = " ", remove = FALSE)
+
+#plot COG1393 data (arsC)
+(arsC.hist <- ggplot(arsC, aes(x = Gene.Count)) +
+    geom_bar(fill = "black") +
+    ylab("Genome count") +
+    xlab("Arsenate reductase, glutaredoxin family / genome") +
+    theme_bw(base_size = 12))
+
+#save bar chart of genes encoding As efflux pumps / genome
+ggsave(arsC.hist, filename = paste(wd, "/figures/arsC.genome.hist.png", sep = ""), 
+       height = 3.51, width = 5.69)
+
+#calculate actual percent of orgs with >=1 copy arsC_glut
+perc.arsC <- count(arsC) / 51515
+#output = 0.7500534
+
+
+####IN PROGRESS/IGNORE####
+#make column names for taxa table
+#complete this ahead of time to set number of columns
+#colnames <- c("K", "na", "Kingdom", "Phylum", "Class", "Order", "Family", "Genus", "Species", "Species2")
+
+#read in taxonomy data with set col names
+#taxa.arsC <- read.table(file = paste(wd, "/data/taxa.table.arsC.txt", sep = ""), 
+#                  fill = TRUE, 
+#                  col.names=colnames)
+
+#remove non bacterial rows and NA column
+#taxa.arsC <- taxa.arsC[which(taxa.arsC$K == "B"),]
+#taxa.arsC <- select(taxa.arsC, -(K:Kingdom))
+
+#change "." to NA
+#taxa.arsC[taxa.arsC == "."] <- NA
+#taxa.arsC[taxa.arsC == ""] <- NA
+
+#fill NAs with last observation
+#taxa.arsC <- na.locf(taxa.arsC)
+
+#call species genome
+#taxa.arsC$Ident <- taxa.arsC$Genus
+
+#join taxa information with genomes/ arsC information 
+#taxa.arsC.data <- left_join(arsC, taxa.arsC, by = "Ident")
+
+#remove unnecessary columns
+#taxa.arsC.data <- select(taxa.arsC.data, Domain:Phylum)
+
+#only keep unique rows in taxa.arsC.data
+#taxa.arsC.data.u <- unique(taxa.arsC.data)
+
+
+#a <- taxa.arsB[!is.na(taxa.arsB$Phylum),]
+
+#unknown <- taxa.arsC.data.u[is.na(taxa.arsC.data.u$Phylum),]
+
 ####################################################
 #WHICH GENES ARE OVERREPRESENTED IN ISOLATE GENOMES#
 ####################################################
@@ -255,6 +331,8 @@ ggsave(arsB.phyla, filename = paste(wd, "/figures/arsB.isolates.phyla.png", sep=
 #not particularly useful plots
 #does show scg pattern of ~1 (translation, ribosomal struct &biogen)
 #lots of variation by COG
+
+
 
 ###################################################
 #COMPARE ABUNDANCE IN GENOMES VS IN METAGENOME GEs#
