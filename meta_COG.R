@@ -20,7 +20,7 @@ func <- read.delim(file = paste(wd, "/data/cog.categories.txt", sep = ""))
 #5/1/17 there are 44979 isolate genomes
 #ignore metaG since JGI already normalizes to metaG
 data <- data %>%
-  mutate(isolates = 44979) %>%
+  mutate(isolates = 51515) %>%
   inner_join(func, by = "COG.ID")
   
 
