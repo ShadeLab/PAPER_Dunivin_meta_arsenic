@@ -4,6 +4,8 @@ File contains notes on relevant publications for the analysis, broad decisions o
 
 ## Table of contents
 * [April 28, 2017](https://github.com/ShadeLab/meta_arsenic/blob/master/Dunivin_notes.md#april-28-2017)
+* [May 2, 2017](https://github.com/ShadeLab/meta_arsenic/blob/master/Dunivin_notes.md#may-2-2017)
+* [May 3, 2017]()
 
 
 ## April 28, 2017
@@ -44,3 +46,18 @@ File contains notes on relevant publications for the analysis, broad decisions o
     * *considering* doing this for arsC; painful to make taxanomic table (might be another way)
   
   * Script also contains analysis of single copy genes in known genomes from the Tringe paper and microbeCensus
+  
+## May 3, 2017
+* I realized the true percentages of COGs/ genome will be inflated since some genomes have >1 copy
+* Today I calculated the true percentages containing arsB/arsC
+  * arsB: 30.49%
+  * arsC: 75.00%
+  
+* I also made a histogram of isolate genomes with arsC. Actually many have 2/3
+  * Perhaps this is due to the loose struct of this COG? (my hmm is more specific)
+  
+
+
+
+
+
