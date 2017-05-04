@@ -61,262 +61,6 @@ ggsave(scg.var, filename = paste(wd, "/figures/scg.variation.png", sep=""), widt
 #Both sets average around 1.1 copies per genome, which is acceptable
 #microbeCensus uses all 1 func catergory while Tringe has several 
 
-############################################################
-#WHAT IS THE DISTRIBUTION OF arsB IN EACH GENOME (#/GENOME)#
-############################################################
-#It is known that multiple copies of AsRG can occur both
-#chromosomally and on plasmids. I need to see how frequent 
-#multiple AsRG copies is
-
-##COG0798: Arsenite efflux pump ArsB, ACR3 family
-
-#read in COG0798 data
-arsB <- read.delim(file = paste(wd, "/data/ccdCOGGenomesCOG079818206_01-may-2017.xls", sep = ""))
-
-#format COG0798 data (arsB) by adding a genus column
-arsB <- arsB %>%
-  separate(col = Genome, into = "Genus", sep = " ", remove = FALSE)
-
-#plot COG0798 data (arsB)
-(arsB.hist <- ggplot(arsB, aes(x = Gene.Count)) +
-    geom_bar(fill = "black") +
-    ylab("Genome count") +
-    xlab("Arsenite efflux pump genes / genome") +
-    scale_x_continuous(breaks = c(0,1,2,3,4,5,6,7)) + 
-    theme_bw(base_size = 12))
-
-#save bar chart of genes encoding As efflux pumps / genome
-ggsave(arsB.hist, filename = paste(wd, "/figures/arsB.genome.hist.png", sep = ""), 
-       height = 3.51, width = 5.69)
-
-#calculate the actual percentage of genomes with >=1 copy of arsB
-perc.arsB <- count(arsB) / 51515
-#output: 0.3049209 have 1 copy of arsB
-
-#read in taxonomy data
-taxa <- read.table(file = paste(wd, "/data/taxonomy.table.txt", sep = ""), sep = " ", fill = TRUE, flush = TRUE)
-
-#add column names to taxa table
-colnames(taxa) <- c("K", "na", "Kingdom", "Phylum", "Class", "Order", "Family", "Genus")
-
-#remove non bacterial rows and NA column
-taxa <- taxa[which(taxa$K == "B"),]
-taxa <- select(taxa, -(K:Kingdom))
-
-#remove rows with no genus
-taxa <- taxa[-which(taxa$Genus == "."),]
-
-#change "." to NA
-taxa[taxa == "."] <- NA
-taxa[taxa == ""] <- NA
-
-#fill NAs with last observation
-taxa <- na.locf(taxa)
-
-#join taxanomic data with count data
-#not appropriate to use non-phylum data (join not specific enough)
-taxa.arsB <- left_join(arsB, taxa, by = "Genus")
-#15454 organisms
-
-#some cannot be joing at the genus level, so we will make a new
-#df with these values and join by next up taxanomic level and so on
-no.genus <- arsB %>%
-  anti_join(taxa, by = "Genus") %>%
-  rename(Family = Genus) %>%
-  left_join(taxa, by = "Family")
-#973 organisms
-
-no.family <- no.genus[is.na(no.genus$Phylum),]
-no.family <- no.family %>%
-  select(1:5) %>%
-  rename(Order = Family) %>%
-  left_join(taxa, by = "Order")
-#862 organisms
-
-no.order <- no.family[is.na(no.family$Phylum),]
-no.order <- no.order %>%
-  select(1:5) %>%
-  rename(Class = Order) %>%
-  left_join(taxa, by = "Class")
-#676 organisms
-
-no.class <- no.order[is.na(no.order$Phylum),]
-#457 organisms
-
-no.classA <- no.class[which(no.class$Class %in% taxa.arsB$Phylum),]
-#227 organisms
-
-no.classB <- no.class[-which(no.class$Class %in% taxa.arsB$Phylum),]
-#230 organisms
-
-
-no.classB <- no.classB %>%
-  lapply(function(x) gsub("Methylosarcina-21", "Euryarchaeota", x)) %>%
-  lapply(function(x) gsub("beta", "Proteobacteria", x)) %>%
-  lapply(function(x) gsub("Acidovorax-*", "Proteobacteria", x)) %>%
-  lapply(function(x) gsub("desulfomonile", "Proteobacteria", x)) %>%
-  lapply(function(x) gsub("alpha", "Proteobacteria", x)) %>%
-  lapply(function(x) gsub("Bacteriovorax*", "Proteobacteria", x)) %>%
-  lapply(function(x) gsub("Bacteroidetes*", "Proteobacteria", x)) %>%
-  lapply(function(x) gsub("BetaproteoUnknown", "Proteobacteria", x)) %>%
-  lapply(function(x) gsub("clostridium", "Firmicutes", x)) %>%
-  lapply(function(x) gsub("Geomicrobium", "Firmicutes", x)) %>%
-  lapply(function(x) gsub("DeltaproteoUnknown", "Proteobacteria", x)) %>%
-  lapply(function(x) gsub("Flavobacter*", "Bacteroidetes", x)) %>%
-  lapply(function(x) gsub("gamma", "Proteobacteria", x)) %>%
-  lapply(function(x) gsub("GammaproteoUnknown", "Proteobacteria", x)) %>%
-  lapply(function(x) gsub("methylo*", "Proteobacteria", x)) %>%
-  lapply(function(x) gsub("zeta", "Proteobacteria", x)) %>%
-  lapply(function(x) gsub("Zeta", "Proteobacteria", x)) %>%
-  lapply(function(x) gsub("Gamma*", "Proteobacteria", x)) %>%
-  lapply(function(x) gsub("Delta*", "Proteobacteria", x)) %>%
-  lapply(function(x) gsub("delta", "Proteobacteria", x)) %>%
-  lapply(function(x) gsub("actinobacterium", "Actinobacteria", x)) %>%
-  lapply(function(x) gsub("Actinobacterium", "Actinobacteria", x)) %>%
-  lapply(function(x) gsub("Proteobacteriaproteobacterium", "Actinobacteria", x)) %>%
-  lapply(function(x) gsub("Bacteroidetesia", "Bacteroidetes", x)) %>%
-  lapply(function(x) gsub("Bacteroidetesiaceae*", "Bacteroidetes", x)) %>%
-  lapply(function(x) gsub("Betaproteobacterium", "Proteobacteria", x)) %>%
-  lapply(function(x) gsub("Proteobacteria*", "Proteobacteria", x)) %>%
-  lapply(function(x) gsub("marine", "Proteobacteria", x)) %>%
-  lapply(function(x) gsub("Cyano_bin1_Alphaproteobacteria", "Proteobacteria", x)) %>%
-  lapply(function(x) gsub("Cyano_bin9_Proteobacteriaproteobacteria", "Proteobacteria", x)) %>%
-  lapply(function(x) gsub("Guam_bin1_Proteobacteria", "Proteobacteria", x)) %>%
-  lapply(function(x) gsub("LKpool_bin1_Proteobacteria", "Proteobacteria", x)) %>%
-  lapply(function(x) gsub("LKpool_bin7_Proteobacteria", "Proteobacteria", x)) %>%
-  data.frame()
-
-no.classC <- no.classB[which(no.classB$Class =="Proteobacteria" | no.classB$Class =="Bacteroidetes" | no.classB$Class =="Actinobacteria" | no.classB$Class =="Firmicutes" | no.classB$Class =="Euryarchaeota" | no.classB$Class =="Euryarchaeota" | no.classB$Class =="Parcubacteria"),]
-#61 orgs
-
-no.classD <- no.classB[-which(no.classB$Class =="Proteobacteria" | no.classB$Class =="Bacteroidetes" | no.classB$Class =="Actinobacteria" | no.classB$Class =="Firmicutes" | no.classB$Class =="Euryarchaeota" | no.classB$Class =="Euryarchaeota" | no.classB$Class =="Parcubacteria"),]
-
-no.classD <- mutate(no.classD, Phylum = "Unknown")
-#170 orgs
-  
-#obtain best matches and rbind
-a <- taxa.arsB[!is.na(taxa.arsB$Phylum),]
-a <- a[which(duplicated(a$Genome) == FALSE),]
-a <- select(a,Genome, Gene.Count, Phylum)
-#14481 orgs
-
-b <- no.genus[!is.na(no.genus$Phylum),]
-b <- b[which(duplicated(b$Genome) == FALSE),]
-b <- select(b,Genome, Gene.Count, Phylum)
-#111 orgs
-
-c <- no.family[!is.na(no.family$Phylum),]
-c <- c[which(duplicated(c$Genome) == FALSE),]
-c <- select(c,Genome, Gene.Count, Phylum)
-#186 orgs
-
-d <- no.order[!is.na(no.order$Phylum),]
-d <- d[which(duplicated(d$Genome) == FALSE),]
-d <- select(d,Genome, Gene.Count, Phylum)
-#219 orgs
-
-e <- no.classA %>%
-  mutate(Phylum = Class) %>%
-  select(Genome, Gene.Count, Phylum)
-#227  
-  
-f <- no.classC %>%
-  mutate(Phylum = Class) %>%
-  select(Genome, Gene.Count, Phylum)
-#56 orgs
-
-g <-select(no.classD, Genome, Gene.Count, Phylum)
-#169  
-
-taxa.final <- rbind(a,b,c,d,e,f,g)
-
-#group data by count
-taxa.sum <- taxa.final %>%
-  group_by(Gene.Count, Phylum) %>%
-  summarise(N=length(Phylum))
-
-#plot a histogram of isolates from different phyla with arsB
-(arsB.phyla <- ggplot(taxa.final, aes(x = reorder(Phylum, Phylum, function(x)-length(x)), fill = Gene.Count)) +
-    geom_histogram(stat="count") +
-    xlab("Phylum") +
-    ylab("Number of Isolate Genomes") +
-    scale_fill_discrete(name = "Gene copy number") +
-    theme_bw(base_size = 13) +
-    theme(axis.text.x = element_text(angle = 60, hjust = 1)))
-
-#save plot
-ggsave(arsB.phyla, filename = paste(wd, "/figures/arsB.isolates.phyla.png", sep=""), width = 8.5, height = 7)
-
-############################################################
-#WHAT IS THE DISTRIBUTION OF arsC IN EACH GENOME (#/GENOME)#
-############################################################
-#It is known that multiple copies of AsRG can occur both
-#chromosomally and on plasmids. I need to see how frequent 
-#multiple AsRG copies is
-
-##COG1393: Arsenate reductase and related proteins, glutaredoxin family
-
-
-#read in COG1393 data
-arsC <- read.delim(file = paste(wd, "/data/ccdCOGGenomesCOG139337657_03-may-2017.xls", sep = ""))
-
-#format COG1393 data (arsC) by adding a genus column
-arsC <- arsC %>%
-  separate(col = Genome, into = "Ident", sep = " ", remove = FALSE)
-
-#plot COG1393 data (arsC)
-(arsC.hist <- ggplot(arsC, aes(x = Gene.Count)) +
-    geom_bar(fill = "black") +
-    ylab("Genome count") +
-    xlab("Arsenate reductase, glutaredoxin family / genome") +
-    theme_bw(base_size = 12))
-
-#save bar chart of genes encoding As efflux pumps / genome
-ggsave(arsC.hist, filename = paste(wd, "/figures/arsC.genome.hist.png", sep = ""), 
-       height = 3.51, width = 5.69)
-
-#calculate actual percent of orgs with >=1 copy arsC_glut
-perc.arsC <- count(arsC) / 51515
-#output = 0.7500534
-
-
-####IN PROGRESS/IGNORE####
-#make column names for taxa table
-#complete this ahead of time to set number of columns
-#colnames <- c("K", "na", "Kingdom", "Phylum", "Class", "Order", "Family", "Genus", "Species", "Species2")
-
-#read in taxonomy data with set col names
-#taxa.arsC <- read.table(file = paste(wd, "/data/taxa.table.arsC.txt", sep = ""), 
-#                  fill = TRUE, 
-#                  col.names=colnames)
-
-#remove non bacterial rows and NA column
-#taxa.arsC <- taxa.arsC[which(taxa.arsC$K == "B"),]
-#taxa.arsC <- select(taxa.arsC, -(K:Kingdom))
-
-#change "." to NA
-#taxa.arsC[taxa.arsC == "."] <- NA
-#taxa.arsC[taxa.arsC == ""] <- NA
-
-#fill NAs with last observation
-#taxa.arsC <- na.locf(taxa.arsC)
-
-#call species genome
-#taxa.arsC$Ident <- taxa.arsC$Genus
-
-#join taxa information with genomes/ arsC information 
-#taxa.arsC.data <- left_join(arsC, taxa.arsC, by = "Ident")
-
-#remove unnecessary columns
-#taxa.arsC.data <- select(taxa.arsC.data, Domain:Phylum)
-
-#only keep unique rows in taxa.arsC.data
-#taxa.arsC.data.u <- unique(taxa.arsC.data)
-
-
-#a <- taxa.arsB[!is.na(taxa.arsB$Phylum),]
-
-#unknown <- taxa.arsC.data.u[is.na(taxa.arsC.data.u$Phylum),]
 
 ####################################################
 #WHICH GENES ARE OVERREPRESENTED IN ISOLATE GENOMES#
@@ -395,3 +139,227 @@ ggsave(ars.plot, filename = paste(wd, "/figures/AsRG.proportions.png", sep=""), 
 #abundance than arsenate redcutase; an arsenate reductase is not useful
 #without an arsenite efflux pump 
 #as always, I do not really trust arsR COG data
+
+
+############################################################
+#WHAT IS THE DISTRIBUTION OF arsB IN EACH GENOME (#/GENOME)#
+############################################################
+#It is known that multiple copies of AsRG can occur both
+#chromosomally and on plasmids. I need to see how frequent 
+#multiple AsRG copies is
+
+##COG0798: Arsenite efflux pump ArsB, ACR3 family
+
+#read in COG0798 data
+arsB <- read.delim(file = paste(wd, "/data/ccdCOGGenomesCOG079818206_01-may-2017.xls", sep = ""))
+
+#read in taxonomy data
+taxa <- read_delim(file = paste(wd, "/data/taxontable51515_04-may-2017.xls", sep = ""), col_names = TRUE, delim = "\t")
+
+#change sample name to genome
+taxa.arsB <- taxa %>%
+  select(taxon_oid, Genome, Phylum:Species) %>%
+  right_join(arsB, by = "Genome") %>%
+  mutate(Gene = "arsB")
+
+#remove rows with no taxon ID
+taxa.arsB <- taxa.arsB[!is.na(taxa.arsB$taxon_oid),]
+
+#remove any duplicate rows 
+taxa.arsB <- taxa.arsB[!duplicated(taxa.arsB$Genome),]
+
+#calculate the actual percentage of genomes with >=1 copy of arsB
+perc.arsB <- count(arsB) / 51515
+#output: 0.3049209 have 1 copy of arsB
+
+#plot COG0798 data (arsB)
+(arsB.hist <- ggplot(arsB, aes(x = Gene.Count)) +
+    geom_bar(fill = "black") +
+    ylab("Genome count") +
+    xlab("Arsenite efflux pump genes / genome") +
+    scale_x_continuous(breaks = c(0,1,2,3,4,5,6,7)) + 
+    theme_bw(base_size = 12))
+
+#save bar chart of genes encoding As efflux pumps / genome
+ggsave(arsB.hist, filename = paste(wd, "/figures/arsB.genome.hist.png", sep = ""), 
+       height = 3.51, width = 5.69)
+
+#plot a histogram of isolates from different phyla with arsB
+(arsB.phyla <- ggplot(taxa.arsB, aes(x = reorder(Phylum, Phylum, function(x)-length(x)))) +
+    geom_histogram(stat="count") +
+    xlab("Phylum") +
+    ylab("Number of Isolate Genomes") +
+    theme_bw(base_size = 12) +
+    theme(axis.text.x = element_text(angle = 60, hjust = 1)))
+
+#save plot
+ggsave(arsB.phyla, filename = paste(wd, "/figures/arsB.isolates.phyla.png", sep=""), width = 8.5, height = 7)
+
+############################################################
+#WHAT IS THE DISTRIBUTION OF arsC IN EACH GENOME (#/GENOME)#
+############################################################
+#It is known that multiple copies of AsRG can occur both
+#chromosomally and on plasmids. I need to see how frequent 
+#multiple AsRG copies is
+
+##COG1393: Arsenate reductase and related proteins, glutaredoxin family
+
+#read in COG1393 data
+arsC <- read.delim(file = paste(wd, "/data/ccdCOGGenomesCOG139337657_03-may-2017.xls", sep = ""))
+
+#change sample name to genome and join with arsC data
+taxa.arsC <- taxa %>%
+  select(taxon_oid, Genome, Phylum:Species) %>%
+  right_join(arsC, by = "Genome") %>%
+  mutate(Gene = "arsC")
+
+#remove rows with no taxon ID
+taxa.arsC <- taxa.arsC[!is.na(taxa.arsC$taxon_oid),]
+
+#remove any duplicate genomes
+taxa.arsC <- taxa.arsC[!duplicated(taxa.arsC$Genome),]
+
+#calculate actual percent of orgs with >=1 copy arsC_glut
+perc.arsC <- count(taxa.arsC) / 51515
+#output = 0.7394545
+
+#plot COG1393 data (arsC)
+(arsC.hist <- ggplot(taxa.arsC, aes(x = Gene.Count)) +
+    geom_bar(fill = "black") +
+    ylab("Genome count") +
+    xlab("Arsenate reductase, glutaredoxin family / genome") +
+    theme_bw(base_size = 12))
+
+#save bar chart of genes encoding As efflux pumps / genome
+ggsave(arsC.hist, filename = paste(wd, "/figures/arsC.genome.hist.png", sep = ""), 
+       height = 3.51, width = 5.69)
+
+#plot a histogram of isolates from different phyla with arsB
+(arsC.phyla <- ggplot(taxa.arsC, aes(x = reorder(Phylum, Phylum, function(x)-length(x)))) +
+    geom_histogram(stat="count") +
+    xlab("Phylum") +
+    ylab("Number of Isolate Genomes") +
+    theme_bw(base_size = 13) +
+    theme(axis.text.x = element_text(angle = 60, hjust = 1)))
+
+#save plot
+ggsave(arsC.phyla, filename = paste(wd, "/figures/arsC.isolates.phyla.png", sep=""), width = 8.5, height = 7)
+
+############################################################
+#WHAT IS THE DISTRIBUTION OF arsA IN EACH GENOME (#/GENOME)#
+############################################################
+#It is known that multiple copies of AsRG can occur both
+#chromosomally and on plasmids. I need to see how frequent 
+#multiple AsRG copies is
+
+##COG0003: Arsenate reductase and related proteins, glutaredoxin family
+
+#read in COG0003 data
+arsA <- read.delim(file = paste(wd, "/data/arsA_COG0003_04-may-2017.txt", sep = ""))
+
+#change sample name to genome and join with arsA data
+taxa.arsA <- taxa %>%
+  select(taxon_oid, Genome, Phylum:Species) %>%
+  right_join(arsA, by = "Genome") %>%
+  mutate(Gene = "arsA")
+
+#remove rows with no taxon ID
+taxa.arsA <- taxa.arsA[!is.na(taxa.arsA$taxon_oid),]
+
+#remove duplicated rows
+taxa.arsA <- taxa.arsA[!duplicated(taxa.arsA$Genome),]
+
+#calculate actual percent of orgs with >=1 copy arsA
+perc.arsA <- count(arsA) / 51515
+#output = 0.1974765
+
+#plot COG0003 data (arsA)
+(arsA.hist <- ggplot(taxa.arsA, aes(x = Gene.Count)) +
+    geom_bar(fill = "black") +
+    ylab("Genome count") +
+    xlab("arsA / genome") +
+    theme_bw(base_size = 12))
+
+#save bar chart of genes encoding As efflux pumps / genome
+ggsave(arsA.hist, filename = paste(wd, "/figures/arsA.genome.hist.png", sep = ""), 
+       height = 3.51, width = 5.69)
+
+#plot a histogram of isolates from different phyla with arsA
+(arsA.phyla <- ggplot(taxa.arsA, aes(x = reorder(Phylum, Phylum, function(x)-length(x)))) +
+    geom_histogram(stat="count") +
+    xlab("Phylum") +
+    ylab("Number of Isolate Genomes") +
+    theme_bw(base_size = 13) +
+    theme(axis.text.x = element_text(angle = 60, hjust = 1)))
+
+#save plot
+ggsave(arsA.phyla, filename = paste(wd, "/figures/arsA.isolates.phyla.png", sep=""), width = 8.5, height = 7)
+
+####################################################################
+#WHAT IS THE DISTRIBUTION OF arsA,B,C IN GENOMES OF DIFFERENT PHYLA#
+####################################################################
+
+#join together all AsRG phylum data
+taxa.asrg <- rbind(taxa.arsA, taxa.arsB, taxa.arsC)
+
+#trim file so it only contains phyla with highest abundance
+taxa.asrg <- taxa.asrg %>%
+  group_by(Gene, Phylum) %>%
+  mutate(N = length(Phylum))
+taxa.asrg.slim <- taxa.asrg[which(taxa.asrg$N > 100),]
+
+#plot a histogram of isolates from different phyla with arsA
+(asrg.phyla <- ggplot(taxa.asrg.slim, aes(x = reorder(Phylum, Phylum, function(x)-length(x)), fill = Gene)) +
+    geom_histogram(stat="count") +
+    xlab("Phylum") +
+    ylab("Number of Isolate Genomes") +
+    facet_wrap(~Gene, ncol = 1) +
+    theme_bw(base_size = 13) +
+    theme(axis.text.x = element_text(angle = 60, hjust = 1)))
+
+#save plot
+ggsave(asrg.phyla, filename = paste(wd, "/figures/AsRG.isolates.abundant.phyla.png", sep=""))
+
+
+################################################
+#IS THERE DATABASE BIAS IN THE PHYLA WITH ASRG?#
+################################################
+#More specifically, do proteobacteria actually have 
+#lots of AsRG (arsC in particular)? Or are they just
+#over represented in the current database? 
+
+#Calculate the number of genomes from each phyla
+db.phyla <- taxa %>%
+  group_by(Phylum) %>%
+  summarise(total = length(Phylum))
+
+#Calculate the proportion of phyla with AsRGs
+phyla.summary <- taxa.asrg %>%
+  left_join(db.phyla, by = "Phylum") %>%
+  group_by(Phylum, Gene) %>%
+  select(Phylum, Gene, N, total) %>%
+  mutate(Proportion = N/total)
+
+#remove duplicated values
+phyla.summary <- phyla.summary[!duplicated(phyla.summary),]
+
+#Plot proportions of phyla with AsRGs
+(prop.asrg.phyla <- ggplot(phyla.summary, 
+                           aes(x = Phylum, y = Proportion, fill = Gene)) +
+    geom_bar(stat="identity") +
+    xlab("Proportion") +
+    ylab("Number of Isolate Genomes") +
+    facet_wrap(~Gene, ncol = 1) +
+    theme_bw(base_size = 13) +
+    theme(axis.text.x = element_text(angle = 60, hjust = 1)))
+
+#save plot
+ggsave(prop.asrg.phyla, filename = paste(wd, "/figures/AsRG.proportions.phyla.png", sep=""), width = 12, height = 7)
+
+
+
+
+
+
+
+
