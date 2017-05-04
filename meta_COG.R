@@ -130,7 +130,7 @@ abund <- melt(abund, id.vars = c("COG.ID", "COG.Name"), measure.vars = c("Genome
     scale_x_discrete(labels = function(x) stringr::str_wrap(x, width = 15)))
 
 #save comparison plot
-ggsave(ars.plot, filename = paste(wd, "/figures/AsRG.proportions.png", sep=""), height = 5, width = 11)
+ggsave(ars.plot, filename = paste(wd, "/figures/AsRG.proportions.png", sep=""), height = 6, width = 13)
 
 #Some AsRG appear underrepresented in isolate genomes while 
 #arsC-glut is over-represented; arsC_glut is in E.coli, which
@@ -310,15 +310,14 @@ taxa.asrg.slim <- taxa.asrg[which(taxa.asrg$N > 100),]
 
 #plot a histogram of isolates from different phyla with arsA
 (asrg.phyla <- ggplot(taxa.asrg.slim, aes(x = reorder(Phylum, Phylum, function(x)-length(x)), fill = Gene)) +
-    geom_histogram(stat="count") +
+    geom_histogram(stat="count", position = "dodge", color = "black") +
     xlab("Phylum") +
     ylab("Number of Isolate Genomes") +
-    facet_wrap(~Gene, ncol = 1) +
     theme_bw(base_size = 13) +
     theme(axis.text.x = element_text(angle = 60, hjust = 1)))
 
 #save plot
-ggsave(asrg.phyla, filename = paste(wd, "/figures/AsRG.isolates.abundant.phyla.png", sep=""))
+ggsave(asrg.phyla, filename = paste(wd, "/figures/AsRG.isolates.abundant.phyla.png", sep=""), height = 5, width = 7)
 
 
 ################################################
@@ -347,14 +346,14 @@ phyla.summary <- phyla.summary[!duplicated(phyla.summary),]
 (prop.asrg.phyla <- ggplot(phyla.summary, 
                            aes(x = Phylum, y = Proportion, fill = Gene)) +
     geom_bar(stat="identity") +
-    xlab("Proportion") +
-    ylab("Number of Isolate Genomes") +
+    xlab("Phylum") +
+    ylab("Proportion of Genomes with Arsenic Resistance Gene") +
     facet_wrap(~Gene, ncol = 1) +
     theme_bw(base_size = 13) +
     theme(axis.text.x = element_text(angle = 60, hjust = 1)))
 
 #save plot
-ggsave(prop.asrg.phyla, filename = paste(wd, "/figures/AsRG.proportions.phyla.png", sep=""), width = 12, height = 7)
+ggsave(prop.asrg.phyla, filename = paste(wd, "/figures/AsRG.proportions.phyla.png", sep=""), width = 14, height = 7)
 
 
 
