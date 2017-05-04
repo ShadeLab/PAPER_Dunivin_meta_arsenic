@@ -151,7 +151,7 @@ ggsave(ars.plot, filename = paste(wd, "/figures/AsRG.proportions.png", sep=""), 
 ##COG0798: Arsenite efflux pump ArsB, ACR3 family
 
 #read in COG0798 data
-arsB <- read.delim(file = paste(wd, "/data/ccdCOGGenomesCOG079818206_01-may-2017.xls", sep = ""))
+arsB <- read.delim(file = paste(wd, "/data/arsB_COG0798_01-may-2017.txt", sep = ""))
 
 #read in taxonomy data
 taxa <- read_delim(file = paste(wd, "/data/taxontable51515_04-may-2017.xls", sep = ""), col_names = TRUE, delim = "\t")
@@ -205,7 +205,7 @@ ggsave(arsB.phyla, filename = paste(wd, "/figures/arsB.isolates.phyla.png", sep=
 ##COG1393: Arsenate reductase and related proteins, glutaredoxin family
 
 #read in COG1393 data
-arsC <- read.delim(file = paste(wd, "/data/ccdCOGGenomesCOG139337657_03-may-2017.xls", sep = ""))
+arsC <- read.delim(file = paste(wd, "/data/arsC_COG1393_03-may-2017.txt", sep = ""))
 
 #change sample name to genome and join with arsC data
 taxa.arsC <- taxa %>%
