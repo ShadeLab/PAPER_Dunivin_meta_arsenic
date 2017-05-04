@@ -55,7 +55,19 @@ File contains notes on relevant publications for the analysis, broad decisions o
   
 * I also made a histogram of isolate genomes with arsC. Actually many have 2/3
   * Perhaps this is due to the loose struct of this COG? (my hmm is more specific)
-  
+
+
+## May 4, 2017
+* Some of the genomes appear to have been deleted from JGI/ do not have genome ID's. I do not trust these data, so I removed them from the datasets so they do not impact final calculations.
+* New percentages for the percent of organisms containing an AsRG are below. 
+  * arsA: 19.75%
+  * arsB: 30.49%
+  * arsC: 73.95%
+
+* It is not intuitive to get taxanomic information for all JGI genomes. See link below for future references
+  * home -> IMG Statistics -> Total (bacteria) -> Select a category -> reset -> Genomes Count -> reconfigure table to show phylum:Species
+  * https://img.jgi.doe.gov/cgi-bin/m/main.cgi
+
 
 
 
