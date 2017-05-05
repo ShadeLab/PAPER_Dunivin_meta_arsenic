@@ -318,7 +318,7 @@ taxa.asp <- taxa.asp[!duplicated(taxa.asp$Genome),]
 
 #calculate actual percent of orgs with >=1 copy arsA
 perc.asp <- count(asp) / 51515
-#output = ???
+#output = 0.6037271
 
 #plot COG0003 data (asp)
 (asp.hist <- ggplot(taxa.asp, aes(x = Gene.Count)) +
@@ -432,6 +432,8 @@ thermo.all.asrg <- thermo.all.asrg[!is.na(thermo.all.asrg$Phylum.x),]
     theme_bw(base_size = 13) +
     theme(axis.text.x = element_text(angle = 60, hjust = 1)))
 
+#save plot
+ggsave(thermo.all.asrg.phyla, filename = paste(wd, "/figures/thermo.AsRG.phyla.png", sep=""), width = 20, height = 12)
 
 #calculate the proportion of each phylum that has arsA, B, C
 thermo.all.asrg <- thermo.all.asrg %>%
@@ -452,6 +454,7 @@ thermo.all.asrg  <- thermo.all.asrg[!duplicated(thermo.all.asrg),]
     theme_bw(base_size = 13) +
     theme(axis.text.x = element_text(angle = 60, hjust = 1)))
 
+ggsave(prop.asrg.phyla.thermo.all, filename = paste(wd, "/figures/thermo.AsRG.proportions.phyla.png", sep=""), width = 20, height = 12)
 
 #############################################################
 #ARE THERMOPHILES MORE LIKELY TO HAVE ASRGS THAN MESOPHILES?#
