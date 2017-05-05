@@ -70,6 +70,14 @@ File contains notes on relevant publications for the analysis, broad decisions o
   * https://img.jgi.doe.gov/cgi-bin/m/main.cgi
 
 
+## May 5, 2017
+* Further developed thermophile analysis
+* Separately downloaded thermophile, hyperthermophile, and mesophile GOLD IMG genome information
+  * Thermophile = category groups thermophile and thermotolerant (365 genomes)
+  * Hyperthermophile = category group Hyperthermophile (94) 
+  * Mesophile = category group Mesophile (7706) 
+* genome search -> by metadata category chart -> temperature range -> show chart
+
 
 
 
