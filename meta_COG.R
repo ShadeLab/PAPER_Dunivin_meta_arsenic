@@ -433,7 +433,7 @@ thermo.all.asrg <- thermo.all.asrg[!is.na(thermo.all.asrg$Phylum.x),]
     theme(axis.text.x = element_text(angle = 60, hjust = 1)))
 
 #save plot
-ggsave(thermo.all.asrg.phyla, filename = paste(wd, "/figures/thermo.AsRG.phyla.png", sep=""), width = 20, height = 12)
+ggsave(thermo.all.asrg.phyla, filename = paste(wd, "/figures/thermo.AsRG.phyla.png", sep=""))
 
 #calculate the proportion of each phylum that has arsA, B, C
 thermo.all.asrg <- thermo.all.asrg %>%
@@ -451,10 +451,10 @@ thermo.all.asrg  <- thermo.all.asrg[!duplicated(thermo.all.asrg),]
     xlab("Phylum") +
     ylab("Thermophilic Genomes with AsRGs (%)") +
     facet_wrap(~Gene, ncol = 1) +
-    theme_bw(base_size = 13) +
+    theme_bw(base_size = 20) +
     theme(axis.text.x = element_text(angle = 60, hjust = 1)))
 
-ggsave(prop.asrg.phyla.thermo.all, filename = paste(wd, "/figures/thermo.AsRG.proportions.phyla.png", sep=""), width = 20, height = 12)
+ggsave(prop.asrg.phyla.thermo.all, filename = paste(wd, "/figures/thermo.AsRG.proportions.phyla.png", sep=""), height = 15)
 
 #############################################################
 #ARE THERMOPHILES MORE LIKELY TO HAVE ASRGS THAN MESOPHILES?#
@@ -471,35 +471,64 @@ meso <- read_delim(file = paste(wd, "/data/meso_gold_taxontable_05-may-2017.txt"
 thermo <- thermo %>%
   mutate(Classification = "Thermophile") %>%
   group_by(Classification, Phylum) 
-  
-thermo <- thermo %>%
-  mutate(Phylum.count = length(Phylum))
+
 
 hyperthermo <- hyperthermo %>%
   mutate(Classification = "Hyperthermophile") %>%
   group_by(Classification, Phylum)
 
-hyperthermo <- hyperthermo %>%
-  mutate(Phylum.count = length(Phylum))
 
 meso <- meso %>%
   mutate(Classification = "Mesophile") %>%
   group_by(Classification, Phylum)
 
-meso <- meso %>%
-  mutate(Phylum.count = length(Phylum))
 
 #join together all three datasets
 thermo.group.c <- rbind(meso, thermo, hyperthermo)
 
 #select important columns only
 thermo.group <- thermo.group.c %>%
-  select(Genome, Phylum:Species, Classification, Phylum.count) %>%
   left_join(taxa.asrg, by = "Genome") %>%
   group_by(Classification, Gene, Phylum.x) %>%
-  summarise(Count = sum(Gene.Count)) %>%
-  rename(Phylum = Phylum.x)
+  mutate(Count = sum(Gene.Count)) %>%
+  rename(Phylum = Phylum.x) %>%
+  select(Genome, Phylum.y:Species.y, Classification, Gene.Count)
 
+#replace NAs for zeros
+thermo.group$Gene.Count[is.na(thermo.group$Gene.Count)] = 0
+
+#replace NAs for "none" in gene column 
+thermo.group$Gene[is.na(thermo.group$Gene)] = "None"
+
+thermo.group <- thermo.group %>%
+  ungroup() %>%
+  group_by(Classification, Gene, Phylum) 
+
+thermo.group <- thermo.group %>%
+  mutate(Phylum.count = length(Phylum)) %>%
+  mutate(Gene.per.genome = Gene.Count/Phylum.count) %>%
+  group_by(Classification, Gene, Phylum) %>%
+  select(Gene, Phylum, Classification:Gene.per.genome)
+
+#order classification levels
+thermo.group$Classification <- ordered(thermo.group$Classification, levels = c("Hyperthermophile", "Thermophile", "Mesophile"))
+
+#plot  
+(thermo.plot <- ggplot(thermo.group, aes(x = Phylum, y = Gene.per.genome, fill = Gene)) +
+    geom_bar(stat="identity") +
+    xlab("Phylum") +
+    ylab("Thermophilic Genomes with AsRGs (%)") +
+    facet_wrap(~Classification) +
+    theme_bw(base_size = 13) +
+    theme(axis.text.x = element_text(angle = 60, hjust = 1)))
+
+
+scale_fill_manual(values=c("red", "orange", "khaki")) + 
+  
+
+
+
+#broken...
 thermo.group <- thermo.group.c %>%
   select(Phylum, Phylum.count) %>%
   right_join(thermo.group, by = "Phylum")
@@ -515,10 +544,21 @@ thermo.group.wide <- thermo.group %>%
 
 #tidy the data once again
 thermo.group.final <- melt(thermo.group.wide, id.vars = c("Classification", "Phylum", "Phylum.count"), measure.vars = c("arsA", "arsB", "arsC", "asp"), variable.name = "Gene", value.name = "Count")
- 
+
+#add a true false variable
+thermo.group.final$Count <- gsub(0, NA, thermo.group.final$Count)
+thermo.group.final.tf <- thermo.group.final %>%
+  group_by(Classification, Phylum, Gene) %>%
+  mutate(Present = paste(is.na(Count)))
+
+thermo.group.final.tf$Present <- gsub("FALSE", "Present", thermo.group.final.tf$Present)
+thermo.group.final.tf$Present <- gsub("TRUE", "Absent", thermo.group.final.tf$Present)
+
+thermo.group.final.tf$Classification <- ordered(thermo.group.final.tf$Classification, levels = c("Hyperthermophile", "Thermophile", "Mesophile"))
 #plot  
-(thermo.group.plot <- ggplot(thermo.group.final, aes(x = Phylum, y = Count, fill = Classification)) +
-    geom_bar(stat="identity", position = "fill") +
+(thermo.group.plot <- ggplot(thermo.group.final.tf, aes(x = Present, fill = Classification)) +
+    geom_histogram(stat="count") +
+    scale_fill_manual(values=c("red", "orange", "khaki")) + 
     xlab("Phylum") +
     ylab("Thermophilic Genomes with AsRGs (%)") +
     facet_wrap(~Gene) +
