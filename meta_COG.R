@@ -92,6 +92,18 @@ metag=do.call(rbind, lapply(names, function(X) {
   data.frame(id = basename(X), read.delim(X))}))
 setwd("../")
 
+#remove all metatranscriptome data
+metag <- metag[!grepl("transcriptome", metag$Genome),]
+
+##look at data overall
+#get COGID information separated out from JGI naming
+metag.lrg <- metag %>%
+  separate(id, into = c("id", "COG.ID", "end"), sep = c(13, -23)) 
+
+#plot data
+ggplot(metag.lrg, aes(x = COG.ID, y = Gene.Count)) +
+  geom_jitter()
+
 #get Gene.Count sums for each gene of interest
 metag.abund <- metag %>%
   separate(id, into = c("id", "COG.ID", "end"), sep = c(13, -23)) %>%
@@ -101,9 +113,9 @@ metag.abund <- metag %>%
 #COG0052 count is 4945293
 #normalize abundance to abundance of single copy gene
 metag.abund <- metag.abund %>%
-  mutate(scg = 4945293, 
+  mutate(scg = 4616128, 
          Metagenomes = Abundance / scg, 
-         StDeV = StDev / 4945293)
+         StDeV = StDev / 4616128)
 
 ##prep isolate genome data
 #select AsRG COGs and chosen single copy gene (COG0052)
