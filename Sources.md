@@ -61,6 +61,10 @@ Tyson, G. W. et al. Community structure and metabolism through reconstruction of
 * Early metagenome characterization
 * Contains As in metadata
 * Insert plasmid library
+|---------------|---|---|---|---|:---:|
+| Sample_shortname | As | Cu | Zn | Fe | pH |
+| CA_AMD | 2mM | 4mM | 14mM | 317mM  | 0.83 |
+
 
 ### PA_AMD
 No available metadata or publications
