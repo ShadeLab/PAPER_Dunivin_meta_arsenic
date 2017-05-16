@@ -24,7 +24,7 @@ data <- data %>%
   inner_join(func, by = "COG.ID")
   
 
-#calculate number of each COG per genome/ metagenome
+#calculate number of each COG per genome
 data <- mutate(data, 
                Genomes = Isolate.Genome.Count / isolates)
 
@@ -92,7 +92,8 @@ metag=do.call(rbind, lapply(names, function(X) {
   data.frame(id = basename(X), read.delim(X))}))
 setwd("../")
 
-#remove all metatranscriptome data
+#remove all metatranscriptome data as we are only
+#interested in metagenomes in this analysis
 metag <- metag[!grepl("transcriptome", metag$Genome),]
 
 ##look at data overall
@@ -110,7 +111,7 @@ metag.abund <- metag %>%
   group_by(COG.ID) %>%
   summarise(Abundance = sum(Gene.Count), StDev = sd(Gene.Count)) 
 
-#COG0052 count is 4945293
+#COG0052 count is 4616128
 #normalize abundance to abundance of single copy gene
 metag.abund <- metag.abund %>%
   mutate(scg = 4616128, 
@@ -124,7 +125,7 @@ ars <- c("COG0798", "COG1055", "COG1393", "COG0003", "COG0640", "COG2345", "COG4
 #subset data based on AsRG cogs
 ars <- data[which(data$COG.ID %in% ars),]
 
-#tidy isolate data and join with metagenome dataset
+#join isolate data with metagenome dataset
 abund <- ars %>%
   select(COG.ID, COG.Name, Genomes) %>%
   inner_join(y = metag.abund, by = "COG.ID") 
@@ -142,6 +143,9 @@ abund <- melt(abund, id.vars = c("COG.ID", "COG.Name"), measure.vars = c("Genome
     scale_x_discrete(labels = function(x) stringr::str_wrap(x, width = 15)))
 
 #save comparison plot
+#note these comparisons do NOT account for multiple AsRG copies per genome
+#this is purposeful since we cannot know that for metaG. 
+#see files created later (perc.GENE) for +/- genome percentages
 ggsave(ars.plot, filename = paste(wd, "/figures/AsRG.proportions.png", sep=""), height = 6, width = 13)
 
 #Some AsRG appear underrepresented in isolate genomes while 
@@ -353,6 +357,7 @@ ggsave(asp.hist, filename = paste(wd, "/figures/asp.genome.hist.png", sep = ""),
 
 #save plot
 ggsave(asp.phyla, filename = paste(wd, "/figures/asp.isolates.phyla.png", sep=""), width = 8.5, height = 7)
+
 ####################################################################
 #WHAT IS THE DISTRIBUTION OF arsA,B,C IN GENOMES OF DIFFERENT PHYLA#
 ####################################################################
@@ -479,64 +484,76 @@ hyperthermo <- read_delim(file = paste(wd, "/data/hyperthermo_gold_taxontable_05
 
 meso <- read_delim(file = paste(wd, "/data/meso_gold_taxontable_05-may-2017.txt", sep = ""), col_names = TRUE, delim = "\t")
 
-#add naming column to each file before binding
+#add naming column to each file before binding and calculate number of each phyla 
 thermo <- thermo %>%
-  mutate(Classification = "Thermophile") %>%
-  group_by(Classification, Phylum) 
+  group_by(Phylum) %>%
+  mutate(Classification = "Thermophile", phy.count = length(Phylum))
 
 
 hyperthermo <- hyperthermo %>%
-  mutate(Classification = "Hyperthermophile") %>%
-  group_by(Classification, Phylum)
+  group_by(Phylum) %>%
+  mutate(Classification = "Hyperthermophile", phy.count = length(Phylum)) 
 
 
 meso <- meso %>%
-  mutate(Classification = "Mesophile") %>%
-  group_by(Classification, Phylum)
+  group_by(Phylum) %>%
+  mutate(Classification = "Mesophile", phy.count = length(Phylum))  
 
 
 #join together all three datasets
 thermo.group.c <- rbind(meso, thermo, hyperthermo)
 
-#select important columns only
-thermo.group <- thermo.group.c %>%
+#double check that you have the appropriate # of genomes (should be 8165 (IMG))
+thermo.check <- thermo.group.c %>%
+  select(Phylum, Classification, phy.count) 
+thermo.check <- unique(thermo.check)
+sum(thermo.check$phy.count)
+################################################
+#IN PROGRESS...
+#select important columns only 
+thermo.group.c2 <- thermo.group.c %>%
   left_join(taxa.asrg, by = "Genome") %>%
-  group_by(Classification, Gene, Phylum.x) %>%
-  mutate(Count = sum(Gene.Count)) %>%
-  rename(Phylum = Phylum.x) %>%
-  select(Genome, Phylum.y:Species.y, Classification, Gene.Count)
+  select(Phylum.x:Species.x, Classification, Gene, phy.count, Gene.Count) %>%
+  group_by(Classification, Phylum.x, Gene.Count) %>%
+  mutate(Gene.Logical = length(Gene.Count))
+
 
 #replace NAs for zeros
-thermo.group$Gene.Count[is.na(thermo.group$Gene.Count)] = 0
+thermo.group.c$Gene.Count[is.na(thermo.group.c$Gene.Count)] = 0
+
+
+#summarise data by getting number of genomes with an AsRG
+#avoids over-estimation from multiple copies in 1 genome
+thermo.group <- thermo.group.c %>%
+  summarise(Gene.logical = length(Gene.Count)) %>%
+  ungroup() 
 
 #replace NAs for "none" in gene column 
 thermo.group$Gene[is.na(thermo.group$Gene)] = "None"
 
+#add back phy.count information (so we can look at proportions
+#of genomes with AsRGs)
 thermo.group <- thermo.group %>%
-  ungroup() %>%
-  group_by(Classification, Gene, Phylum) 
+  right_join(thermo.group.c, by = "Phylum") %>%
+  select(Classification.x:Gene.logical, phy.count)
 
-thermo.group <- thermo.group %>%
-  mutate(Phylum.count = length(Phylum)) %>%
-  mutate(Gene.per.genome = Gene.Count/Phylum.count) %>%
-  group_by(Classification, Gene, Phylum) %>%
-  select(Gene, Phylum, Classification:Gene.per.genome)
+#get unique rows
+thermo.group2 <- unique(thermo.group)
 
 #order classification levels
 thermo.group$Classification <- ordered(thermo.group$Classification, levels = c("Hyperthermophile", "Thermophile", "Mesophile"))
 
 #plot  
-(thermo.plot <- ggplot(thermo.group, aes(x = Phylum, y = Gene.per.genome, fill = Gene)) +
+(thermo.plot <- ggplot(thermo.group2, aes(x = Phylum, y = Gene.logical, fill = Classification)) +
     geom_bar(stat="identity") +
     xlab("Phylum") +
-    ylab("Thermophilic Genomes with AsRGs (%)") +
-    facet_wrap(~Classification) +
+    ylab("Number of Genomes with AsRGs") +
+    facet_wrap(~Gene, scales = "free_y") +
     theme_bw(base_size = 13) +
     theme(axis.text.x = element_text(angle = 60, hjust = 1)))
 
 
-scale_fill_manual(values=c("red", "orange", "khaki")) + 
-  
+
 
 
 
