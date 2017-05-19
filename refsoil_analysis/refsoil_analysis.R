@@ -65,7 +65,7 @@ ncbi <- ncbi %>%
 #check that all AsRG hits match the first NCBI.ID
 check <- data.70 %>%
   anti_join(ncbi, by = "NCBI.ID")
-#151 hits do not match NCBI.ID #1
+#144 hits do not match NCBI.ID #1
 
 
 #join AsRG information with taxanomic data that match NCBI.ID #1, 2, 3
@@ -120,6 +120,9 @@ data.tax <- data.tax[order(data.tax$t.name, abs(data.tax$score1), decreasing = T
 #remove duplicates that have the lower score
 data.tax <- data.tax[!duplicated(data.tax$t.name),]
 
+#add back NAs
+data.tax <- rbind(data.tax, data.tax.na)
+
 #make color scheme
 n <- 25
 qual_col_pals = brewer.pal.info[brewer.pal.info$category == 'qual',]
@@ -135,7 +138,7 @@ phy.color <- print(sample(col_vector, n))
   theme_classic(base_size = 12))
 
 #save plot
-ggsave(asrg.phyla.bar, filename = paste(wd, "/figures/asrg.phyla.bar.png", 
+ggsave(asrg.phyla.bar, filename = paste(wd, "/figures/asrg.phyla.70.bar.png", 
                                         sep = ""), width = 10)
 
 #summarise NCBI so that we know how many of each phyla are in the 922 
@@ -168,7 +171,7 @@ data.tax.sum$Phylum <- factor(data.tax.sum$Phylum,
     theme(axis.text.x = element_text(angle = 90, size = 12, hjust=0.95,vjust=0.2), legend.position = "none"))
 
 #save plot
-ggsave(asrg.phyla.bar, filename = paste(wd, "/figures/asrg.rel.phyla.bar.png", sep = ""), width = 10)
+ggsave(asrg.phyla.bar, filename = paste(wd, "/figures/asrg.rel.phyla.70.bar.png", sep = ""), width = 10)
 
 
 #############################
@@ -187,7 +190,7 @@ data.tax.uniq <- data.tax[!duplicated(data.tax[c(2,21)]),]
     theme_classic(base_size = 12))
 
 #save plot
-ggsave(asrg.logi.phyla.bar, filename = paste(wd, "/figures/asrg.logi.phyla.bar.png", sep = ""), width = 10)
+ggsave(asrg.logi.phyla.bar, filename = paste(wd, "/figures/asrg.logi.phyla.70.bar.png", sep = ""), width = 10)
 
 #join phy count information with data.tax
 data.tax.uniq.logi <- data.tax.uniq %>%
@@ -210,5 +213,5 @@ data.tax.uniq.logi$Phylum <- factor(data.tax.uniq.logi$Phylum,
     theme_classic(base_size = 12) +
     theme(axis.text.x = element_text(angle = 90, size = 12, hjust=0.95,vjust=0.2), legend.position = "none"))
 
-ggsave(asrg.logi.rel.phyla.bar, filename = paste(wd, "/figures/asrg.logi.rel.phyla.bar.png", sep = ""), width = 10)
+ggsave(asrg.logi.rel.phyla.bar, filename = paste(wd, "/figures/asrg.logi.rel.phyla.70.bar.png", sep = ""), width = 10)
 
