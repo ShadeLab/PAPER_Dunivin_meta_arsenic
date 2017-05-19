@@ -75,6 +75,23 @@ sed '/#/d' ./GENE.refsoil.E-##.dom.txt > GENE.r.txt
       * __Tenericutes__: more than 50% have no AsRG. Remaining have arsC_glut and arsB. This phylum therefore favors glut over thio and arsB over acr3.
       * __Thermotogae__: 100% test positive for arsB and under 50% have arsC_thio. Prefers arsB over acr3; prefers arsC_thio over arsC_glut. Perhaps there is evidence that this phylum mostly encounters arsenite??
       * __Verrucomicrobia__: 100% have arsC_thio, arsC_glut, and arsM. 50% have arsB while 100% have acr3. This is a very As resistant phylum according to this sample size. 
+
+* Not many phyla test positive for aioA or arrA. Is this expected?
+   * Andres, J. & Bertin, P. N. The microbial genomics of arsenic. FEMS Microbiol. Rev. 40, 299–322 (2016).
+   * The above paper reports the following for these genes
+   
+   | Phylum | Gene | Known representatives (#) | Phylum in RefSoil? | RefSoil hits | Acceptable? |
+   | ------ | ---- | ----------------------- | -------------- | -------- | ------ |
+   | Deinococcus–Thermus | aioA | 3 | 1 | no | yes |
+   | Proteobacteria | aioA | 34 | 458 | 12 | yes |
+   | Crenarcheota | aioA | 7 | 9 | none | yes:model for bact |
+   | Chlorobi | aioA | 2 | 3 | none | yes |
+   | Chloroflexi | aioA | 2 | 9 | none | yes |
+   | Aquificae | aioA | 2 | 3 | none | yes |
+   | Firmicutes | arrA | 11 | 206 | 4 | yes |
+   | Deferribacteres | arrA | 2 | 1 | 1 | yes |
+   | Chrysiogenetes | arrA | 2 | no | NA | NA |
+
       
       
       
