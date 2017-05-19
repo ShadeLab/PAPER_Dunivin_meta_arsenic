@@ -40,10 +40,11 @@ colnames(data) <- c("t.name", "t.accession", "t.length", "gene",
 data <- data %>%
   mutate(length = to.ali - from.ali) %>%
   left_join(hmm, by = "gene") %>%
-  mutate(perc.ali = length / hmm.length)
+  mutate(perc.ali = length / hmm.length, perc.t = t.length/q.length)
 
 #remove rows that do not have at least 70% of hmm length (std)
-data.70 <- data[which(data$perc.ali > 0.70),]
+data.70 <- data[which(data$perc.ali > 0.70 & data$perc.t < 1.4 & 
+                        data$perc.t > 0.6),]
 
 #read in taxanomic information
 ncbi <- read_delim(file = paste(wd, "/data/ismej2016168x6.csv", sep = ""), 
@@ -86,7 +87,7 @@ data.tax.ncbi1.1 <- data.tax.ncbi1[!is.na(data.tax.ncbi1$t.name),]
 data.tax.ncbi2 <- data.tax.ncbi2[!is.na(data.tax.ncbi2$t.name),]
 data.tax.ncbi3 <- data.tax.ncbi3[!is.na(data.tax.ncbi3$t.name),]
 
-#make sure number of matches is equal to total number (3483)
+#make sure number of matches is equal to total number (3385)
 check <- nrow(data.tax.ncbi1.1) + nrow(data.tax.ncbi2) + nrow(data.tax.ncbi3)
 
 #make colnames of all three datasets match
@@ -102,6 +103,22 @@ data.tax <- data.tax %>%
 
 #change NA gene to "None"
 data.tax$gene[is.na(data.tax$gene)] <- "None"
+
+#remove NA's to protect them from duplicate removal step
+data.tax.na <- data.tax[is.na(data.tax$t.length),]
+data.tax <- data.tax[!is.na(data.tax$t.length),]
+
+#examine if any HMM hits apply to two genes
+duplicates <- data.tax[duplicated(data.tax$t.name),]
+#4 hits are duplicates
+
+#of the duplicates, all are arrA/aioA mixed hits
+#we will accept the one with a higher score
+#arrange data by score
+data.tax <- data.tax[order(data.tax$t.name, abs(data.tax$score1), decreasing = TRUE), ] 
+
+#remove duplicates that have the lower score
+data.tax <- data.tax[!duplicated(data.tax$t.name),]
 
 #make color scheme
 n <- 25
@@ -142,7 +159,7 @@ data.tax.sum$Phylum <- factor(data.tax.sum$Phylum,
 
 #plot proportional bar chart with filled phyla
 (asrg.phyla.bar <- ggplot(data = data.tax.sum, aes(x = Phylum, y = rel.count, fill = Phylum)) +
-    geom_bar(stat = "identity") +
+    geom_bar(stat = "identity", color = "black") +
     scale_fill_manual(values = phy.color) +
     ylab("Proportion of Phyla with AsRG") +
     xlab("Phylum") +
@@ -185,7 +202,7 @@ data.tax.uniq.logi$Phylum <- factor(data.tax.uniq.logi$Phylum,
 
 #plot proportional bar chart (logical) with filled phyla
 (asrg.logi.rel.phyla.bar <- ggplot(data = data.tax.uniq.logi, aes(x = Phylum, y = rel.logi.count, fill = Phylum)) +
-    geom_bar(stat = "identity") +
+    geom_bar(stat = "identity", color = "black") +
     scale_fill_manual(values = phy.color) +
     ylab("Proportion of of genomes with gene (logical)") +
     xlab("Phylum") +
