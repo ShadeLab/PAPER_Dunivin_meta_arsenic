@@ -34,3 +34,11 @@ sed '/#/d' ./GENE.refsoil.E-##.dom.txt > GENE.r.txt
     * Likely this is because the database is still biased towards Firmicutes and Proteobacteria, which consistently show AsRG
     * Still see high arsC_glut counts, however, many orgs might have more than one copy per genome
     * Will need to perform future data analysis to account for copies per genome
+    
+## May 19, 2017
+* Adjusted R script to include gene presence/absence in genomes (logical rather than absolute). 
+* I would like to additionally go through alignments and check which % alignment lengths are most appropriate
+      * I used 70% here since that is what JGI uses
+      * This is likely too relaxed
+      * Perhaps something more like 90% would be better for this analysis
+
