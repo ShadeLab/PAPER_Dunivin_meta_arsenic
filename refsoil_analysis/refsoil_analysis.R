@@ -154,7 +154,44 @@ data.tax.sum$Phylum <- factor(data.tax.sum$Phylum,
 ggsave(asrg.phyla.bar, filename = paste(wd, "/figures/asrg.rel.phyla.bar.png", sep = ""), width = 10)
 
 
+#############################
+#EXAMINE LOGICAL GENE COUNTS#
+#############################
 
+#remove rows resulting from more than one copy/ genome
+data.tax.uniq <- data.tax[!duplicated(data.tax[c(2,21)]),]
 
+#plot bar chart with filled phyla (+/- gene)
+(asrg.logi.phyla.bar <- ggplot(data = data.tax.uniq, aes(x = gene, fill = Phylum)) +
+    geom_bar(stat = "count") +
+    scale_fill_manual(values = phy.color) +
+    ylab("Number of genomes with gene (logical)") +
+    xlab("gene") +
+    theme_classic(base_size = 12))
 
+#save plot
+ggsave(asrg.logi.phyla.bar, filename = paste(wd, "/figures/asrg.logi.phyla.bar.png", sep = ""), width = 10)
+
+#join phy count information with data.tax
+data.tax.uniq.logi <- data.tax.uniq %>%
+  group_by(gene, Phylum) %>%
+  summarise(logi.count = length(Phylum)) %>%
+  left_join(ncbi.sum, by = "Phylum") %>%
+  mutate(rel.logi.count = logi.count / phy.n)
+
+#order based on phylum abundance
+data.tax.uniq.logi$Phylum <- factor(data.tax.uniq.logi$Phylum, 
+                              levels = data.tax.uniq.logi$Phylum[order(data.tax.uniq.logi$rel.logi.count)])
+
+#plot proportional bar chart (logical) with filled phyla
+(asrg.logi.rel.phyla.bar <- ggplot(data = data.tax.uniq.logi, aes(x = Phylum, y = rel.logi.count, fill = Phylum)) +
+    geom_bar(stat = "identity") +
+    scale_fill_manual(values = phy.color) +
+    ylab("Proportion of of genomes with gene (logical)") +
+    xlab("Phylum") +
+    facet_wrap(~gene) +
+    theme_classic(base_size = 12) +
+    theme(axis.text.x = element_text(angle = 90, size = 12, hjust=0.95,vjust=0.2), legend.position = "none"))
+
+ggsave(asrg.logi.rel.phyla.bar, filename = paste(wd, "/figures/asrg.logi.rel.phyla.bar.png", sep = ""), width = 10)
 
