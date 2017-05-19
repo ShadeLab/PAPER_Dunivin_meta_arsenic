@@ -1,7 +1,7 @@
 # Estimating AsRG abundance in RefSoil genomes
-## Taylor Dunivin
+### Taylor Dunivin
 
-__Table of Contents__
+### Table of Contents ###
 * [May 18, 2017](https://github.com/ShadeLab/meta_arsenic/blob/master/refsoil_analysis/Dunivin_notes.md#may-18-2017)
 * [May 19, 2017](https://github.com/ShadeLab/meta_arsenic/blob/master/refsoil_analysis/Dunivin_notes.md#may-19-2017)
 
