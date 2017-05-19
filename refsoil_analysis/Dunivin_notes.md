@@ -42,7 +42,7 @@ sed '/#/d' ./GENE.refsoil.E-##.dom.txt > GENE.r.txt
 ## May 19, 2017
 * Adjusted R script to include gene presence/absence in genomes (logical rather than absolute). 
 * I would like to additionally go through alignments and check which % alignment lengths are most appropriate
-      * I used 70% here since that is what JGI uses
-      * This is likely too relaxed
-      * Perhaps something more like 90% would be better for this analysis
+     * I used 70% here since that is what JGI uses
+     * This is likely too relaxed
+     * Perhaps something more like 90% would be better for this analysis
 
