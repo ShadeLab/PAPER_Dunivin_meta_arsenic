@@ -80,7 +80,7 @@ sed '/#/d' ./GENE.refsoil.E-##.dom.txt > GENE.r.txt
    * Andres, J. & Bertin, P. N. The microbial genomics of arsenic. FEMS Microbiol. Rev. 40, 299–322 (2016).
    * The above paper reports the following for these genes
    
-   | Phylum | Gene | Known representatives (#) | Phylum in RefSoil? | RefSoil hits | Acceptable? |
+   | Phylum | Gene | Known representatives (#) | Representatives in RefSoil? | RefSoil hits | Acceptable? |
    | ------ | ---- | ----------------------- | -------------- | -------- | ------ |
    | Deinococcus–Thermus | aioA | 3 | 1 | no | yes |
    | Proteobacteria | aioA | 34 | 458 | 12 | yes |
