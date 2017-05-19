@@ -45,4 +45,15 @@ sed '/#/d' ./GENE.refsoil.E-##.dom.txt > GENE.r.txt
      * I used 70% here since that is what JGI uses
      * This is likely too relaxed
      * Perhaps something more like 90% would be better for this analysis
-
+* Adjusted script to set minimum score to 50 (what Xander does) and make sure that the target lenght is not more than 40% different from the query (1.4<->0.6%)
+   * This reduced the number of results, but not by too much
+* Adjusted script to deal with duplicate calls
+   * Several targets hit to two genes (aioA/arrA)
+   * This is not unexpected since these proteins are quite similar
+   * In looking at all cases (4 with 70% cutoff), there was a clear "true" match based on the score
+   * Ordered name by score and removed duplicates
+   
+* What initial Phylum-level patterns do we see with a stringent dataset? 
+   * parameters: 90% alignment length; >50 score; within 40% of target length
+   * for now, I will focus on relative presence/absence within genome when there are multiple representatives
+      * This excludes: Deferribacteres, Fusobacteria, Gemmatimonadetes, Planctomycetes, Terrabacteria_group, Synergistetes
