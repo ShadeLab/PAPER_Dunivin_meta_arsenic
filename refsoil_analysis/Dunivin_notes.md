@@ -68,10 +68,13 @@ sed '/#/d' ./GENE.refsoil.E-##.dom.txt > GENE.r.txt
       * __Cyanobacteria__: Show a mix of arsB/acr3 and arsC_glut/arsC_thio. Favors reduction and efflux over methylation (less than 5%). Fewer than 5% show now resistance.
       * __Deinococcus–Thermus__: About 75% test postivie for arsB; 75% for arsC_thio; 25% for no AsRG tested. DT therefore favors arsB over acr3 and arsC_thio over arsC_glut. Methylation is not favored either. 
       * __Euryarchaeota__:  No AsRG found.
-      * __Firmicutes__: 75% test positive for arsB; ~70% test positive for arsC_glut and arsC_thio; and 50% test positive for acr3. Firmicutes, thus, favor reduction and efflux over methylation but do not prefer glut/thio, arsB/acr3. Roughly 5% have no AsRG. 
+      * __Firmicutes__: 75% test positive for arsB; ~70% test positive for arsC_glut and arsC_thio; and 50% test positive for acr3. Firmicutes, thus, favor reduction and efflux over methylation but do not prefer glut/thio, arsB/acr3. Roughly 5% have no AsRG. Some (less than 5%) test positive for arrA
       * __Nitrospirae__: ~30% have arsM, 100% have arsB, 75% have arsC_thio. Favors arsB over acr3, and arsC_thio over arsC_glut. 
-      * __Proteobacteria__: ~30% have arsB and ~30% acr3. Roughly 90% have arsC_glut, while ~30% have arsC_thio. About 5% have no AsRG and even fewer test positive for arsM. Proteobacteria generally favor arsC_glut and favor reduction and efflux over methylation.
-      * 
+      * __Proteobacteria__: ~30% have arsB and ~30% acr3. Roughly 90% have arsC_glut, while ~30% have arsC_thio. About 5% have no AsRG and even fewer test positive for arsM. Proteobacteria generally favor arsC_glut and favor reduction and efflux over methylation. A small portion have arrA and aioA (the only phylum to have hits to aioA). 
+      * __Spirochaetes__: No arsM, less than 5% arsB, ~20% acr3, 30% have none; 30% arsC_glut; 25% arsC_thio. 
+      * __Tenericutes__: more than 50% have no AsRG. Remaining have arsC_glut and arsB. This phylum therefore favors glut over thio and arsB over acr3.
+      * __Thermotogae__: 100% test positive for arsB and under 50% have arsC_thio. Prefers arsB over acr3; prefers arsC_thio over arsC_glut. Perhaps there is evidence that this phylum mostly encounters arsenite??
+      * __Verrucomicrobia__: 100% have arsC_thio, arsC_glut, and arsM. 50% have arsB while 100% have acr3. This is a very As resistant phylum according to this sample size. 
       
       
       
