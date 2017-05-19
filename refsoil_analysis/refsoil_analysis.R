@@ -44,7 +44,7 @@ data <- data %>%
 
 #remove rows that do not have at least 70% of hmm length (std)
 data.70 <- data[which(data$perc.ali > 0.70 & data$perc.t < 1.4 & 
-                        data$perc.t > 0.6),]
+                        data$perc.t > 0.6 & data$score1 > 50),]
 
 #read in taxanomic information
 ncbi <- read_delim(file = paste(wd, "/data/ismej2016168x6.csv", sep = ""), 
@@ -65,7 +65,7 @@ ncbi <- ncbi %>%
 #check that all AsRG hits match the first NCBI.ID
 check <- data.70 %>%
   anti_join(ncbi, by = "NCBI.ID")
-#144 hits do not match NCBI.ID #1
+#142 hits do not match NCBI.ID #1
 
 
 #join AsRG information with taxanomic data that match NCBI.ID #1, 2, 3
