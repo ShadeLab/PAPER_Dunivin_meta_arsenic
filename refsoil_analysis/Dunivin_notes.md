@@ -57,3 +57,39 @@ sed '/#/d' ./GENE.refsoil.E-##.dom.txt > GENE.r.txt
    * parameters: 90% alignment length; >50 score; within 40% of target length
    * for now, I will focus on relative presence/absence within genome when there are multiple representatives
       * This excludes: Deferribacteres, Fusobacteria, Gemmatimonadetes, Planctomycetes, Terrabacteria_group, Synergistetes
+      * __Acidobacteria__: Favor arsC_thio and acr3, although many (~75%) have arsB as well. A small portion test positive for arsM. No other arsenic resistance capabilities are seen.
+      * __Actinobacteria__: Do not have preferences for arsC_thio/arsC_glut or arsB/acr3. Roughly 50% have one of each type. Less than 5% have arsM, and less than 10% have no AsRG screened. 
+      * __Aquificae__: 100% have arsB and arsC_thio. No other tested resistance mechanisms are seen. 
+      * __Armatimonadetes__: 50% have arsM, another 50% have arsC_thio, and 50% have acr3. Likely those with arsC_thio also have acr3. 
+      * __Bacteroidetes__: 20% have arsM, 75% have acr3, 75% have arsC_glut, ~30% have arsC_thio, and less than 5% have none. It looks like acr3 is favored over arsB and arsC_glut is favored over arsC_thio. Possibly arsC_thio relates to arsM?
+      * __Chlamydiae__:  No AsRG found.
+      * __Chloroflexi__: Nearly 100% test positive for arsM, arsB, acr3, and arsC_thio. Chloroflexi here therefore favor arsC_thio over arsC_glut. And also favor arsenite methylation.
+      * __Crenarchaeota__: No AsRG found.
+      * __Cyanobacteria__: Show a mix of arsB/acr3 and arsC_glut/arsC_thio. Favors reduction and efflux over methylation (less than 5%). Fewer than 5% show now resistance.
+      * __Deinococcus–Thermus__: About 75% test postivie for arsB; 75% for arsC_thio; 25% for no AsRG tested. DT therefore favors arsB over acr3 and arsC_thio over arsC_glut. Methylation is not favored either. 
+      * __Euryarchaeota__:  No AsRG found.
+      * __Firmicutes__: 75% test positive for arsB; ~70% test positive for arsC_glut and arsC_thio; and 50% test positive for acr3. Firmicutes, thus, favor reduction and efflux over methylation but do not prefer glut/thio, arsB/acr3. Roughly 5% have no AsRG. 
+      * __Nitrospirae__: ~30% have arsM, 100% have arsB, 75% have arsC_thio. Favors arsB over acr3, and arsC_thio over arsC_glut. 
+      * __Proteobacteria__: ~30% have arsB and ~30% acr3. Roughly 90% have arsC_glut, while ~30% have arsC_thio. About 5% have no AsRG and even fewer test positive for arsM. Proteobacteria generally favor arsC_glut and favor reduction and efflux over methylation.
+      * 
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
