@@ -1,6 +1,10 @@
 # Estimating AsRG abundance in RefSoil genomes
 ### Taylor Dunivin
 
+__Table of Contents__
+* [May 18, 2017](https://github.com/ShadeLab/meta_arsenic/blob/master/refsoil_analysis/Dunivin_notes.md#may-18-2017)
+* [May 19, 2017](https://github.com/ShadeLab/meta_arsenic/blob/master/refsoil_analysis/Dunivin_notes.md#may-19-2017)
+
 ## May 18, 2017
 * Downloaded the 922 genomes used for RefSoil database 
     * Choi, J. et al. Strategies to improve reference databases for soil microbiomes. 11, 829–834 (2016).
