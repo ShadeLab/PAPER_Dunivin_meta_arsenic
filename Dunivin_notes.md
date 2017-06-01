@@ -8,7 +8,7 @@ File contains notes on relevant publications for the analysis, broad decisions o
 * [May 3, 2017](https://github.com/ShadeLab/meta_arsenic/blob/master/Dunivin_notes.md#may-3-2017)
 * [May 4, 2017](https://github.com/ShadeLab/meta_arsenic/blob/master/Dunivin_notes.md#may-4-2017)
 * [May 5, 2017](https://github.com/ShadeLab/meta_arsenic/blob/master/Dunivin_notes.md#may-5-2017)
-* [May 25, 2017](https://github.com/ShadeLab/meta_arsenic/blob/master/Dunivin_notes.md#may-25-2017)
+* [June 1, 2017](https://github.com/ShadeLab/meta_arsenic/blob/master/Dunivin_notes.md#June-1-2017)
 
 
 ## April 28, 2017
@@ -81,6 +81,22 @@ File contains notes on relevant publications for the analysis, broad decisions o
 * genome search -> by metadata category chart -> temperature range -> show chart
 
 
-## May 25, 2017
+## June 1, 2017
+* Since we will not be able to download the desired datasets from IMG, I have decided to use MG-RAST for downloads instead. 
+* I found datasets with two sets of search parameters
+  1. Uncontaminated soils
+   * Seq type - shotgun metagenome
+   * Public - true
+   * Material - soil
+  2. Contaminated soils
+   * Seq type - shotgun metagenome
+   * Public - true
+   * Study - acid mine
+ * Studies were only considered if 
+   1. they had more than one sample (ie a replicate)
+   2. >7 Gbases (samples were ordered in MG-RAST based on #bp so top hits had most)
+   3. Sequencing method had to be illumina
+   4. Location of sample/ descriptor should be clear
+ * This effort resulted in 17 separate studies (2 contaminated and 15 uncontaminated). 
 
 
