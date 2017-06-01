@@ -1,0 +1,18 @@
+Project.ID	Sample.Shortname	Link
+GP corn unassembled (mgp6368)	Iowa_corn	http://metagenomics.anl.gov/mgmain.html?mgpage=project&project=mgp6368
+Hofmockel Soil Aggregate COB KBASE (mgp2592)	Iowa_agricultural	http://metagenomics.anl.gov/mgmain.html?mgpage=project&project=mgp2592
+Mining of new genes and pathways from soil of mangrove forest (mgp11628)	Mangrove	http://metagenomics.anl.gov/mgmain.html?mgpage=project&project=mgp11628
+Permafrost sediments, North-East Siberia, Kolyma lowland (mgp7176)	Permafrost_Russia	http://metagenomics.anl.gov/mgmain.html?mgpage=project&project=mgp7176
+GED prairie unassembled (mgp6377)	Iowa_prairie	http://metagenomics.anl.gov/mgmain.html?mgpage=project&project=mgp6377
+ARMO (mgp3731)	Brazilian_forest	http://metagenomics.anl.gov/mgmain.html?mgpage=project&project=mgp3731
+ISA-SMC-2011 (mgp2076)	Illinois_soybean	http://metagenomics.anl.gov/mgmain.html?mgpage=project&project=mgp2076
+CedarCreek_minsoil_June2013 (mgp5588)	Minisota_creek	http://metagenomics.anl.gov/mgmain.html?mgpage=project&project=mgp5588
+NEON (mgp13948)	Disney_preserve	http://metagenomics.anl.gov/mgmain.html?mgpage=project&project=mgp13948
+Loma_Ridge_grassland (mgp1992)	California_grassland	http://metagenomics.anl.gov/mgmain.html?mgpage=project&project=mgp1992
+Acid Sulfate Soil Metagenome (mgp13205)	China_soil	http://metagenomics.anl.gov/mgmain.html?mgpage=project&project=mgp13205
+Permafrost_thaw (mgp11953)	Permafrost_USA	http://metagenomics.anl.gov/mgmain.html?mgpage=project&project=mgp11953
+Fermi-syntheticlongreads (mgp14596)	Illinois_soil	http://metagenomics.anl.gov/mgmain.html?mgpage=project&project=mgp14596
+Ungulate Exclosure 2015 (mgp15600)	Wyoming_soil	http://metagenomics.anl.gov/mgmain.html?mgpage=project&project=mgp15600
+Axel Heiberg Permafrost: Part 4A, Unassembled Metagenomes (mgp252)	Permafrost_Canada	http://metagenomics.anl.gov/mgmain.html?mgpage=project&project=mgp252
+Mine Tailings (mgp79868)	Contaminated_Canada	http://metagenomics.anl.gov/mgmain.html?mgpage=project&project=mgp79868
+Metagenomic analysis of copper mine tailings (mgp13736)	Contaminated_China	http://metagenomics.anl.gov/mgmain.html?mgpage=project&project=mgp13736; http://metagenomics.anl.gov/mgmain.html?mgpage=project&project=mgp14988
