@@ -94,7 +94,7 @@ File contains notes on relevant publications for the analysis, broad decisions o
    * Study - acid mine
  * Studies were only considered if 
    1. they had more than one sample (ie a replicate)
-   2. >7 Gbases (samples were ordered in MG-RAST based on #bp so top hits had most)
+   2. more than 7 Gbases (samples were ordered in MG-RAST based on #bp so top hits had most)
    3. Sequencing method had to be illumina
    4. Location of sample/ descriptor should be clear
  * This effort resulted in 17 separate studies (2 contaminated and 15 uncontaminated). 
