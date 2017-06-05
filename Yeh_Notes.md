@@ -98,6 +98,7 @@ ProjectID: mgp15600
   * FastQC: seq length: 151, Sanger/Illumina 1.9, per base sequence count is a little skewed from position 1-8, everything else looks good
 * Sample2: mgm4670120.3; fastq file, 2nd most bp, 6% failed QC
   * File was too small, downloading again
+  * FastQC: seq length: 151, Sanger/Illumina 1.9, per base seq content not very good below 10, everything else looks good
 * Metadata for this project
 
 #### 13. Permafrost_Canada
