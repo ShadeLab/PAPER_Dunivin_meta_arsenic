@@ -69,6 +69,7 @@ ProjectID: mgp5588
 #### 9. Disney_preserve
 ProjectID: mgp13948
 * Sample1: mgm4664918.3; fastq file, most bp, .05% failed QC
+  * first download didn't work, downloading again
 * Sample2: mgm4664925.3; fastq file, 2nd most bp, 
   * FastQC: seq. length 12-190, failed per tile sequence qual., per base sequence content not very good from 1-8
 * Metadata from this project
@@ -108,7 +109,9 @@ ProjectID: mgp252
 #### 14. Permafrost_USA 
 ProjectID: mgp11953
 * Sample1: mgm4469340.3; fq file, 2nd most bp in project (samplew ith most bp is fna format), 5% failed QC
+  * #### NOTE: *Failed to process Permafrost_USA_4469340.3.fastq uk.ac.babraham.FastQC.Sequence.SequenceFormatException: ID line didn't start with '@'*
 * Sample2: mgm4470009.3; fq file, 6th most bp, 0% failed QC
+  * #### NOTE: *Failed to process Permafrost_USA_4470009.3.fastq uk.ac.babraham.FastQC.Sequence.SequenceFormatException: ID line didn't start with '@'*
 * Metadata for this project
 
 #### Note: Contaminated_Canada files are all in fna format, so I did not download
