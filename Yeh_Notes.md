@@ -61,6 +61,8 @@ ProjectID: mgp13948
 #### 10. California_grassland
 ProjectID: mgp1992
 * Sample1: mgm4511061.3; fastq file, most bp, 19% failed QC
+ * NOTE: *Failed to process file California_grassland_4511061.3.fastq uk.ac.babraham.FastQC.Sequence.SequenceFormatException: Ran out of data in the middle of a fastq entry.  Your file is probably truncated* 
+
 * Sample2: mgm4511115.3; fastq file, 2nd most bp, 10% failed QC
   * FastQC: Sanger/Illumina 1.9, Per base sequence quality not very good from position ~70-100, flag on per base sequence content, failed per sequence GC content, failed Kmer content
 * Metadata from this project
