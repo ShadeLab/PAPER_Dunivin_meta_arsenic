@@ -1,6 +1,8 @@
+#### Susanna Yeh
 ## June 2-5, 2017
+
 These are the files I am downloading from MG-RAST and performing FastQC on:
-#### 1. Iowa_corn  
+#### 1. Iowa_corn
 ProjectID: mgp6369
 * Sample1: mgm4539522.3;  fastq file, has the 2nd bp in the project (the file with the most bp is not in fastq format), <30% failed QC
   * FastQC: Sequence length 31-100, failed Kmer, everything else looks good
@@ -119,3 +121,16 @@ ProjectID: mgp79868
 
 #### Note: Contaminated_China file is in fna format, so I did not download
 ProjectID: mgp13736
+
+#### Commands:
+To download samples, use curl with the API command. For example: IowaCorn_4539522.3:
+```
+curl "http://api.metagenomics.anl.gov/1/download/mgm4539522.3?file=050.1" > IowaCorn_4539522.3.fastq
+```
+To run FastQC, first download FastQC, copy your .fastq files in the FastQC directory, and perform FastQC. Then I copied the .html file into my home directory so I could move the file onto my dekstop and open it. For example: Iowa_agricultural_450901.3:
+```
+cp Iowa_agricultural_4509401.3.fastq /mnt/scratch/f0002188/MG-RAST_samples/FastQC
+cd /mnt/scratch/f0002188/MG-RAST_samples/FastQC
+/.fastqc Iowa_agricultural_4509401.3.fastq
+cp Iowa_agricultural_4509401.3_fastq.html /mnt/home/f0002188
+```
