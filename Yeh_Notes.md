@@ -18,7 +18,7 @@
 * [Permafrost_USA](https://github.com/ShadeLab/meta_arsenic/blob/master/Yeh_Notes.md#14-permafrost_usa)
 * [Workflow](https://github.com/ShadeLab/meta_arsenic/blob/master/Yeh_Notes.md#commands)
 
-These are the files I am downloading from MG-RAST and performing FastQC on:
+These are the files I am downloading from MG-RAST and performing FastQC and FastX on:
 #### 1. Iowa_corn
 ProjectID: mgp6369
 * Sample1: mgm4539522.3;  fastq file, has the 2nd bp in the project (the file with the most bp is not in fastq format), <30% failed QC
@@ -56,7 +56,7 @@ ProjectID: mgp7176
 #### 5. Iowa_prairie
 ProjectID: mgp6377
 * Sample1: mgm4539575.3; fastq file, has the most bp, 14% failed QC
-  * FastQC: seq length 33-100, flagged per tile seq. qual., everything else looks good
+  * FastQC: seq length 33-100,Illumina 1.5 flagged per tile seq. qual., everything else looks good
 * Sample2: mgm4539572.3; fastq file, has the 2nd most bp, 14% failed QC
   * FastQC: seq length 33-100, looks good
 * Metadata from this project
@@ -64,7 +64,7 @@ ProjectID: mgp6377
 #### 6. Brazilian_forest
 ProjectID: mgp3731
 * Sample1: mgm4546395.3; fastq file, has the most bp, 7% failed QC
-  * FastQC: seq length 150-292, failed per base sequence quality, flagged per tile seq. quality, failed per base seq. content, flagged Kmer content
+  * FastQC: seq length 150-292, Illumina 1.5, failed per base sequence quality, flagged per tile seq. quality, failed per base seq. content, flagged Kmer content
 * Sample2: mgm4536139.3; fast1 file, has the 2nd most bp, 9% failed QC
   * FastQC: seq length 150-292, failed per base seq quality, per seq. qual. score peak ~21, failed per base seq. content, failed Kmer content
 * Metadata from this project
@@ -88,8 +88,7 @@ ProjectID: mgp5588
 #### 9. Disney_preserve
 ProjectID: mgp13948
 * Sample1: mgm4664918.3; fastq file, most bp, .05% failed QC
-  * first download didn't work, downloading again
-  * Second dowload: FastQC: seq length 12-190, failed per tile seq quality, per base seq content not very good below 10, everything else looks good
+  * FastQC: seq length 12-190, Illumina 1.9, failed per tile seq quality, per base seq content not very good below 10, everything else looks good
 * Sample2: mgm4664925.3; fastq file, 2nd most bp, 
   * FastQC: seq. length 12-190, failed per tile sequence qual., per base sequence content not very good from 1-8
 * Metadata from this project
@@ -127,6 +126,7 @@ ProjectID: mgp252
   * Files too small, downloading again
   * second download: 12K
   * #### NOTE: *Failed to process Permafrost_Canada_4523778.3.fastq uk.ac.babraham.FastQC.Sequence.SequenceFormatException: ID line didn't start with '@'*
+  * didnt do FastX
 * Sample2: mgm4523023.3; fastq file, 2nd most bp, 10% failed QC
   * Files too small, downloading again
   * Second download: 16G
@@ -137,8 +137,10 @@ ProjectID: mgp252
 ProjectID: mgp11953
 * Sample1: mgm4469340.3; fq file, 2nd most bp in project (samplew ith most bp is fna format), 5% failed QC
   * #### NOTE: *Failed to process Permafrost_USA_4469340.3.fastq uk.ac.babraham.FastQC.Sequence.SequenceFormatException: ID line didn't start with '@'*
+  * downloading again
 * Sample2: mgm4470009.3; fq file, 6th most bp, 0% failed QC
   * #### NOTE: *Failed to process Permafrost_USA_4470009.3.fastq uk.ac.babraham.FastQC.Sequence.SequenceFormatException: ID line didn't start with '@'*
+  * downloading again
 * Metadata for this project
 
 #### Note: Contaminated_Canada files are all in fna format, so I did not download
@@ -148,6 +150,8 @@ ProjectID: mgp79868
 ProjectID: mgp13736
 
 #### Commands:
+To find the samples, go to http://metagenomics.anl.gov/mgmain.html?mgpage=search, enter the project ID in the search bar (ex. mgp79868), and choose the field to be project ID. Then all the samples will come up in that project. On the left, click on the gears/settings button and choose "bp count" and "file type". Then have the samples order themselves by bp count.
+
 To download samples, use curl with the API command. For example: IowaCorn_4539522.3:
 ```
 curl "http://api.metagenomics.anl.gov/1/download/mgm4539522.3?file=050.1" > IowaCorn_4539522.3.fastq
@@ -171,6 +175,6 @@ To run FastX, first download FastX using `module load FASTX/0.0.14` then get the
 ```
 fastq_quality_filter -Q 64 -q 30 -p 50 -i IowaCorn_4539522.3.fastq | gzip -9c > IowaCorn_4539522.3.qc.fastq.gz
 ```
-*Note: found undocumented info on -Q: http://seqanswers.com/forums/showthread.php?t=9357: "Yeah, I found out about that -Q parameter on SEQanswers, it's "undocumented" in the Fastx toolkit. If the quality scores for your libraries are in the fastq sanger format (ascii(phred+33)), rather than the fastq illumina format (ascii(phred+64)), you would use the -Q33 parameter. fastq_quality_filter automatically assumes fastq illumina quality scores. See here for original explanation: http://seqanswers.com/forums/showthread.php?t=6701"*
+*Note: found undocumented info on -Q: https://www.biostars.org/p/137049/ and http://seqanswers.com/forums/showthread.php?t=9357: "If the quality scores for your libraries are in the fastq sanger format (ascii(phred+33)), rather than the fastq illumina format (ascii(phred+64)), you would use the -Q33 parameter. fastq_quality_filter automatically assumes fastq illumina quality scores. See here for original explanation: http://seqanswers.com/forums/showthread.php?t=6701"*
 
 Then, get the quality stats of the trimmed output file is through `fastx_quality_stats -i IowaCorn_4539522.3.qc.fastq.gz -o IowaCorn_4539522.3_qc_quality.txt`
