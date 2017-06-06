@@ -29,8 +29,7 @@ ProjectID: mgp11628
 #### 4. Permafrost_Russia
 ProjectID: mgp7176
 * Sample1: mgm4546812.3; fastq file, has the most bp (tied with Sample2), 12% failed QC
-  * #### *NOTE: Failed to process file Permafrost_Russia_mgm4546812.3.fastq uk.ac.babraham.FastQC.Sequence.SequenceFormatException: Ran out of data in the middle of a fastq entry.  Your file is probably truncated* 
-  * file is 22G
+  * *NOTE: Failed to process file Permafrost_Russia_mgm4546812.3.fastq uk.ac.babraham.FastQC.Sequence.SequenceFormatException: Ran out of data in the middle of a fastq entry.  Your file is probably truncated* <-- file is 22G
   * downloading file again
   * second download: 53G file: FastQC: seq length 100, per base seq. qual. not very good after 80, failed Kmer content, everything else looks good
 * Sample2: mgm4546813.3; fastq file, has the most bp (tied with Sample1), 15% failed QC
@@ -81,11 +80,14 @@ ProjectID: mgp13948
 #### 10. California_grassland
 ProjectID: mgp1992
 * Sample1: mgm4511061.3; fastq file, most bp, 19% failed QC
-  * #### NOTE: *Failed to process file California_grassland_4511061.3.fastq uk.ac.babraham.FastQC.Sequence.SequenceFormatException: Ran out of data in the middle of a fastq entry.  Your file is probably truncated* 
+  * #### NOTE: *Failed to process file California_grassland_4511061.3.fastq uk.ac.babraham.FastQC.Sequence.SequenceFormatException: Ran out of data in the middle of a fastq entry.  Your file is probably truncated* <-- file is 5.4G
+  * downloading file again
+  * second download: 
 * Sample2: mgm4511115.3; fastq file, 2nd most bp, 10% failed QC
   * FastQC: seq length: 100, Sanger/Illumina 1.9, Per base sequence quality not very good from position ~70-100, flag on per base sequence content, failed per sequence GC content, failed Kmer content
 * Metadata from this project
-
+Milana Fuksenko
+Emilia Fuksenko
 #### 11. Illinois_soil
 ProjectID: mgp14596
 * Sample1: mgm4653791.3; fastq file, most bp, .05% failed QC
