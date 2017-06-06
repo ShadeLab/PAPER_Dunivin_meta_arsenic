@@ -23,15 +23,15 @@ These are the files I am downloading from MG-RAST and performing FastQC and Fast
 [ProjectID: mgp6368](http://metagenomics.anl.gov/mgmain.html?mgpage=project&project=mgp6368)
 * [Sample1](http://metagenomics.anl.gov/mgmain.html?mgpage=overview&metagenome=mgm4539522.3): mgm4539522.3;  fastq file, has the 2nd bp in the project (the file with the most bp is not in fastq format), less than 30% failed QC; 8298450011 bp
   * FastQC: Sequence length 31-100, failed Kmer, everything else looks good
-* Sample2: mgm4539523.3;   fastq file, has the 3rd most bp in the project, <30% failed QC
+* [Sample2](http://metagenomics.anl.gov/mgmain.html?mgpage=overview&metagenome=mgm4539523.3): mgm4539523.3;   fastq file, has the 3rd most bp in the project, 13% failed QC; 8223202056 bp
   * FastQC: Sequence length 31-100, Illumina 1.5, failed Kmer, everything else looks good
 * Metadata from this project
 
 #### 2. Iowa_agricultural
-ProjectID: mgp2592
-* Sample1: mgm4509400.3; fastq file, has the most bp, 23% failed QC
+[ProjectID: mgp2592](http://metagenomics.anl.gov/mgmain.html?mgpage=project&project=mgp2592)
+* [Sample1](http://metagenomics.anl.gov/mgmain.html?mgpage=overview&metagenome=mgm4509400.3): mgm4509400.3; fastq file, has the most bp, 23% failed QC; 28875056044 bp
   * FastQC: seq length: 101, Sanger/Illumina 1.9, failed per base sequence quality, everything else looks good
-* Sample2: mgm4509401.3; fastq file, has the 3rd most bp (the data with 2nd most bp has a failed QC of 38% so it is not used), 11% failed QC
+* [Sample2](http://metagenomics.anl.gov/mgmain.html?mgpage=overview&metagenome=mgm4509401.3): mgm4509401.3; fastq file, has the 3rd most bp (the data with 2nd most bp has a failed QC of 38% so it is not used), 11% failed QC; 8831209922 bp
   * FastQC: seq length 101, Sanger/Illumina 1.9, per base seq qaulity failed, per base seq content not very good below 9, everything else looks good
 * Metadata from this project
 
@@ -45,36 +45,36 @@ ProjectID: mgp2592
 * Metadata from this project
 
 #### 4. Permafrost_Russia
-ProjectID: mgp7176
-* Sample1: mgm4546812.3; fastq file, has the most bp (tied with Sample2), 12% failed QC
+[ProjectID: mgp7176](http://metagenomics.anl.gov/mgmain.html?mgpage=project&project=mgp7176)
+* [Sample1](http://metagenomics.anl.gov/mgmain.html?mgpage=overview&metagenome=mgm4546812.3): mgm4546812.3; fastq file, has the most bp (tied with Sample2), 12% failed QC; 21951850400 bp
   * *NOTE: Failed to process file Permafrost_Russia_mgm4546812.3.fastq uk.ac.babraham.FastQC.Sequence.SequenceFormatException: Ran out of data in the middle of a fastq entry.  Your file is probably truncated* <-- file is 22G
   * downloading file again
   * second download: 53G file: FastQC: seq length 100, per base seq. qual. not very good after 80, failed Kmer content, everything else looks good
-* Sample2: mgm4546813.3; fastq file, has the most bp (tied with Sample1), 15% failed QC
+* [Sample2](http://metagenomics.anl.gov/mgmain.html?mgpage=overview&metagenome=mgm4546813.3): mgm4546813.3; fastq file, has the most bp (tied with Sample1), 15% failed QC; 21951850400 bp
   * FastQC: seq length 100, Sanger/Illumina 1.9, failed per base seq quality, failed Kmer content, everything else looks good
 * Metadata from this project
 
 #### 5. Iowa_prairie
-ProjectID: mgp6377
-* Sample1: mgm4539575.3; fastq file, has the most bp, 14% failed QC
+[ProjectID: mgp6377](http://metagenomics.anl.gov/mgmain.html?mgpage=project&project=mgp6377)
+* [Sample1](http://metagenomics.anl.gov/mgmain.html?mgpage=overview&metagenome=mgm4539575.3): mgm4539575.3; fastq file, has the most bp, 14% failed QC; 19954890565 bp
   * FastQC: seq length 33-100,Illumina 1.5 flagged per tile seq. qual., everything else looks good
-* Sample2: mgm4539572.3; fastq file, has the 2nd most bp, 14% failed QC
+* [Sample2](http://metagenomics.anl.gov/mgmain.html?mgpage=overview&metagenome=mgm4539572.3): mgm4539572.3; fastq file, has the 2nd most bp, 14% failed QC; 18724092302 bp
   * FastQC: seq length 33-100, looks good
 * Metadata from this project
 
 #### 6. Brazilian_forest
-ProjectID: mgp3731
-* Sample1: mgm4546395.3; fastq file, has the most bp, 7% failed QC
+[ProjectID: mgp3731](http://metagenomics.anl.gov/mgmain.html?mgpage=project&project=mgp3731)
+* [Sample1](http://metagenomics.anl.gov/mgmain.html?mgpage=overview&metagenome=mgm4546395.3): mgm4546395.3; fastq file, has the most bp, 7% failed QC; 17999861638 bp
   * FastQC: seq length 150-292, Illumina 1.5, failed per base sequence quality, flagged per tile seq. quality, failed per base seq. content, flagged Kmer content
-* Sample2: mgm4536139.3; fast1 file, has the 2nd most bp, 9% failed QC
+* [Sample2](http://metagenomics.anl.gov/mgmain.html?mgpage=overview&metagenome=mgm4536139.3): mgm4536139.3; fast1 file, has the 2nd most bp, 9% failed QC; 17631239942 bp
   * FastQC: seq length 150-292, failed per base seq quality, per seq. qual. score peak ~21, failed per base seq. content, failed Kmer content
 * Metadata from this project
 
 #### 7. Illinois_soybean
-ProjectID: mgp2076
-* Sample1: mgm4502542.3; fastq file, has the most bp, 26% failed QC
+[ProjectID: mgp2076](http://metagenomics.anl.gov/mgmain.html?mgpage=project&project=mgp2076)
+* [Sample1](http://metagenomics.anl.gov/mgmain.html?mgpage=overview&metagenome=mgm4502542.3): mgm4502542.3; fastq file, has the most bp, 26% failed QC; 13345395200 bp
   * FastQC: seq length 100, Sanger/Illumina 1.9, per base seq. qual not good from 75-100, per base seq. content not very good below 10
-* Sample2: mgm4502540.3; fastq file, has the 2nd most bp, 11% failed QC
+* [Sample2](http://metagenomics.anl.gov/mgmain.html?mgpage=overview&metagenome=mgm4502540.3): mgm4502540.3; fastq file, has the 2nd most bp, 11% failed QC; 11312148300 bp
   * FastQC: seq length 100, Sanger/Illumina 1.9, bad per base seq. qual. 80-100, per base seq. content not very good below 12, everything else looks good
 * Metadata from this project
 
@@ -87,64 +87,64 @@ ProjectID: mgp5588
 * Metadata from this project
 
 #### 9. Disney_preserve
-ProjectID: mgp13948
-* Sample1: mgm4664918.3; fastq file, most bp, .05% failed QC
+[ProjectID: mgp13948](http://metagenomics.anl.gov/mgmain.html?mgpage=project&project=mgp13948)
+* [Sample1](http://metagenomics.anl.gov/mgmain.html?mgpage=overview&metagenome=mgm4664918.3): mgm4664918.3; fastq file, most bp, .05% failed QC; 11665934500 bp
   * FastQC: seq length 12-190, Illumina 1.9, failed per tile seq quality, per base seq content not very good below 10, everything else looks good
-* Sample2: mgm4664925.3; fastq file, 2nd most bp, 
+* [Sample2](http://metagenomics.anl.gov/mgmain.html?mgpage=overview&metagenome=mgm4664925.3): mgm4664925.3; fastq file, 2nd most bp, .04% failed QC; 4319683800 bp
   * FastQC: seq. length 12-190, failed per tile sequence qual., per base sequence content not very good from 1-8
 * Metadata from this project
 
 #### 10. California_grassland
-ProjectID: mgp1992
-* Sample1: mgm4511061.3; fastq file, most bp, 19% failed QC
+[ProjectID: mgp1992](http://metagenomics.anl.gov/mgmain.html?mgpage=project&project=mgp1992)
+* [Sample1](http://metagenomics.anl.gov/mgmain.html?mgpage=overview&metagenome=mgm4511061.3): mgm4511061.3; fastq file, most bp, 19% failed QC; 11650135800 bp
   * NOTE: *Failed to process file California_grassland_4511061.3.fastq uk.ac.babraham.FastQC.Sequence.SequenceFormatException: Ran out of data in the middle of a fastq entry.  Your file is probably truncated* <-- file is 5.4G
   * downloading file again
   * second download: 29G; FastQC: seq length: 100, Sanger/Illumina 1.9, per base seq qual not very good after 85, flagged per base sequence content, failed per sequence GC content, everything else looks good
-* Sample2: mgm4511115.3; fastq file, 2nd most bp, 10% failed QC
+* [Sample2](http://metagenomics.anl.gov/mgmain.html?mgpage=overview&metagenome=mgm4511115.3): mgm4511115.3; fastq file, 2nd most bp, 10% failed QC; 7009796000 bp
   * FastQC: seq length: 100, Sanger/Illumina 1.9, Per base sequence quality not very good from position ~70-100, flag on per base sequence content, failed per sequence GC content, failed Kmer content
 * Metadata from this project
 
 #### 11. Illinois_soil
-ProjectID: mgp14596
-* Sample1: mgm4653791.3; fastq file, most bp, .05% failed QC
+[ProjectID: mgp14596](http://metagenomics.anl.gov/mgmain.html?mgpage=project&project=mgp14596)
+* [Sample1](http://metagenomics.anl.gov/mgmain.html?mgpage=overview&metagenome=mgm4653791.3): mgm4653791.3; fastq file, most bp, .05% failed QC; 8078926770 bp
   * FastQC: seq. length 12-190, Sanger/Illumina 1.9, per base seq. content not very good below 9 and above 160, everything else looks good
-* Sample2: mgm4653788.3; fastq file, 2nd most bp, .06% failed QC
+* [Sample2](http://metagenomics.anl.gov/mgmain.html?mgpage=overview&metagenome=mgm4653788.3): mgm4653788.3; fastq file, 2nd most bp, .06% failed QC; 7255603912 bp
   * FastQC: seq length: 12-190, Sanger/Illumina 1.9, seq. length 12-190, per base seq. content not very good below position 9, everything else looks good
 * Metadata for this project
 
 #### 12. Wyoming_soil
-ProjectID: mgp15600
-* Sample1: mgm4670122.3; fastq file, most bp, 6% failed QC
+[ProjectID: mgp15600](http://metagenomics.anl.gov/mgmain.html?mgpage=project&project=mgp15600)
+* [Sample1](http://metagenomics.anl.gov/mgmain.html?mgpage=overview&metagenome=mgm4670122.3): mgm4670122.3; fastq file, most bp, 6% failed QC; 7678885748 bp
   * FastQC: seq length: 151, Sanger/Illumina 1.9, per base sequence count is a little skewed from position 1-8, everything else looks good
-* Sample2: mgm4670120.3; fastq file, 2nd most bp, 6% failed QC
+* [Sample2](http://metagenomics.anl.gov/mgmain.html?mgpage=overview&metagenome=mgm4670120.3): mgm4670120.3; fastq file, 2nd most bp, 6% failed QC; 7003222356 bp
   * File was too small, downloading again
   * FastQC: seq length: 151, Sanger/Illumina 1.9, per base seq content not very good below 10, everything else looks good
 * Metadata for this project
 
 #### 13. Permafrost_Canada
-ProjectID: mgp252
-* Sample1: mgm4523778.3; fastq file, most bp, 8% failed QC
+[ProjectID: mgp252](http://metagenomics.anl.gov/mgmain.html?mgpage=project&project=mgp252)
+* [Sample1](http://metagenomics.anl.gov/mgmain.html?mgpage=overview&metagenome=mgm4523778.3): mgm4523778.3; fastq file, most bp, 8% failed QC; 7078859018 bp
   * Files too small, downloading again
   * second download: 12K
   * #### NOTE: *Failed to process Permafrost_Canada_4523778.3.fastq uk.ac.babraham.FastQC.Sequence.SequenceFormatException: ID line didn't start with '@'*
   * didnt do FastX
-* Sample2: mgm4523023.3; fastq file, 2nd most bp, 10% failed QC
+* [Sample2](http://metagenomics.anl.gov/mgmain.html?mgpage=overview&metagenome=mgm4523023.3): mgm4523023.3; fastq file, 2nd most bp, 10% failed QC; 6700261439 bp
   * Files too small, downloading again
   * Second download: 16G
   * FastQC: seq length: 102-192, Sanger/Illumina 1.9, failed per tile seq quality, per base seq. content bad below 20, flagged seq length distribution, failed Kmer content
   * Submitted a job for only this file to run fastq_quality_filter and it's walltime of 1 hour expired (only 3.6G of the output was made)... submitted a new job with longer walltime and edited walltimes for other scripts that are longer
-* Sample 3 (because Sample 1 didnt work with FastQC): mgm4523145.3; fastq file, third most bp, 17% failed QC
+* [Sample 3](http://metagenomics.anl.gov/mgmain.html?mgpage=overview&metagenome=mgm4523145.3) (because Sample 1 didnt work with FastQC): mgm4523145.3; fastq file, third most bp, 17% failed QC; 5614599082 bp
   * 13G
   * FastQC: seq length 102-192, Sanger/Illumina 1.9, per base seq content bad below 20, failed per seq GC content, flaggd seq length distribution, failed Kmer content
 * Metadata for this project
 
 #### 14. Permafrost_USA 
-ProjectID: mgp11953
-* Sample1: mgm4469340.3; fq file, 2nd most bp in project (samplew ith most bp is fna format), 5% failed QC
+[ProjectID: mgp11953](http://metagenomics.anl.gov/mgmain.html?mgpage=project&project=mgp11953)
+* [Sample1](http://metagenomics.anl.gov/mgmain.html?mgpage=overview&metagenome=mgm4469340.3): mgm4469340.3; fq file, 2nd most bp in project (samplew ith most bp is fna format), 5% failed QC; 8421304260 bp
   * #### NOTE: *Failed to process Permafrost_USA_4469340.3.fastq uk.ac.babraham.FastQC.Sequence.SequenceFormatException: ID line didn't start with '@'*
   * downloading again... second download had same problem
   * didnt do FastX
-* Sample2: mgm4470009.3; fq file, 6th most bp, 0% failed QC
+* [Sample2](http://metagenomics.anl.gov/mgmain.html?mgpage=overview&metagenome=mgm4470009.3): mgm4470009.3; fq file, 6th most bp, 0% failed QC; 4667382870 bp
   * #### NOTE: *Failed to process Permafrost_USA_4470009.3.fastq uk.ac.babraham.FastQC.Sequence.SequenceFormatException: ID line didn't start with '@'*
   * downloading again... second download had same problem
   * didnt do FastX
