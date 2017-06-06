@@ -32,6 +32,7 @@ ProjectID: mgp7176
   * #### *NOTE: Failed to process file Permafrost_Russia_mgm4546812.3.fastq uk.ac.babraham.FastQC.Sequence.SequenceFormatException: Ran out of data in the middle of a fastq entry.  Your file is probably truncated* 
   * file is 22G
   * downloading file again
+  * second download: 53G file: FastQC: seq length 100, per base seq. qual. not very good after 80, failed Kmer content, everything else looks good
 * Sample2: mgm4546813.3; fastq file, has the most bp (tied with Sample1), 15% failed QC
   * FastQC: seq length 100, Sanger/Illumina 1.9, failed per base seq quality, failed Kmer content, everything else looks good
 * Metadata from this project
@@ -72,6 +73,7 @@ ProjectID: mgp5588
 ProjectID: mgp13948
 * Sample1: mgm4664918.3; fastq file, most bp, .05% failed QC
   * first download didn't work, downloading again
+  * Second dowload: FastQC: seq length 12-190, failed per tile seq quality, per base seq content not very good below 10, everything else looks good
 * Sample2: mgm4664925.3; fastq file, 2nd most bp, 
   * FastQC: seq. length 12-190, failed per tile sequence qual., per base sequence content not very good from 1-8
 * Metadata from this project
