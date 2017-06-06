@@ -136,10 +136,15 @@ To download samples, use curl with the API command. For example: IowaCorn_453952
 ```
 curl "http://api.metagenomics.anl.gov/1/download/mgm4539522.3?file=050.1" > IowaCorn_4539522.3.fastq
 ```
-To run FastQC, first download FastQC, copy your .fastq files in the FastQC directory, and perform FastQC. Then I copied the .html file into my home directory so I could move the file onto my dekstop and open it. For example: Iowa_agricultural_450901.3:
+To run FastQC, first download FastQC (then unzip and change mode so you can run it), copy your .fastq files in the FastQC directory, and perform FastQC. Then I copied the .html file into my home directory so I could move the file onto my dekstop and open it. For example: IowaCorn_4539522.3.fastq:
 ```
-cp Iowa_agricultural_4509401.3.fastq /mnt/scratch/f0002188/MG-RAST_samples/FastQC
-cd /mnt/scratch/f0002188/MG-RAST_samples/FastQC
-/.fastqc Iowa_agricultural_4509401.3.fastq
-cp Iowa_agricultural_4509401.3_fastq.html /mnt/home/f0002188
+wget http://www.bioinformatics.babraham.ac.uk/projects/fastqc/fastqc_v0.11.3.zip
+unzip fastqc_v0.11.3.zip
+cd FastQC
+chmod 755 fastqc
+cd ..
+cp IowaCorn_4539522.3.fastq /directory/FastQC
+cd FastQC
+/.fastqc IowaCorn_4539522.3.fastq
+cp IowaCorn_4539522.3_fastq.html /your-home-directory
 ```
