@@ -131,16 +131,22 @@ ProjectID: mgp252
   * Files too small, downloading again
   * Second download: 16G
   * FastQC: seq length: 102-192, Sanger/Illumina 1.9, failed per tile seq quality, per base seq. content bad below 20, flagged seq length distribution, failed Kmer content
+  * Submitted a job for only this file to run fastq_quality_filter and it's walltime of 1 hour expired (only 3.6G of the output was made)... submitted a new job with longer walltime and edited walltimes for other scripts that are longer
+* Sample 3 (because Sample 1 didnt work with FastQC): mgm4523145.3; fastq file, third most bp, 17% failed QC
+  * 13G
+  * FastQC: seq length 102-192, Sanger/Illumina 1.9, per base seq content bad below 20, failed per seq GC content, flaggd seq length distribution, failed Kmer content
 * Metadata for this project
 
 #### 14. Permafrost_USA 
 ProjectID: mgp11953
 * Sample1: mgm4469340.3; fq file, 2nd most bp in project (samplew ith most bp is fna format), 5% failed QC
   * #### NOTE: *Failed to process Permafrost_USA_4469340.3.fastq uk.ac.babraham.FastQC.Sequence.SequenceFormatException: ID line didn't start with '@'*
-  * downloading again
+  * downloading again... second download had same problem
+  * didnt do FastX
 * Sample2: mgm4470009.3; fq file, 6th most bp, 0% failed QC
   * #### NOTE: *Failed to process Permafrost_USA_4470009.3.fastq uk.ac.babraham.FastQC.Sequence.SequenceFormatException: ID line didn't start with '@'*
-  * downloading again
+  * downloading again... second download had same problem
+  * didnt do FastX
 * Metadata for this project
 
 #### Note: Contaminated_Canada files are all in fna format, so I did not download
