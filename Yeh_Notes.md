@@ -24,7 +24,7 @@ ProjectID: mgp6369
 * Sample1: mgm4539522.3;  fastq file, has the 2nd bp in the project (the file with the most bp is not in fastq format), <30% failed QC
   * FastQC: Sequence length 31-100, failed Kmer, everything else looks good
 * Sample2: mgm4539523.3;   fastq file, has the 3rd most bp in the project, <30% failed QC
-  * FastQC: Sequence length 31-100, failed Kmer, everything else looks good
+  * FastQC: Sequence length 31-100, Illumina 1.5, failed Kmer, everything else looks good
 * Metadata from this project
 
 #### 2. Iowa_agricultural
@@ -165,3 +165,8 @@ cd FastQC
 /.fastqc IowaCorn_4539522.3.fastq
 cp IowaCorn_4539522.3_fastq.html /your-home-directory
 ```
+To run FastX, first download FastX using `module load FASTX/0.0.14` then get the quality stats using `fastx_quality_stats -i IowaCorn_4539522.3.fastq -o IowaCorn_4539522.3_quality.txt`. The -i preceeds the input and the -o preceeds the output filename. Use fast_quality_filter to trim the data using -Q64 (Illumina 1.5), -q 30 (minimum quality to keep), -p 50 (minimum percent of bases to have the -q quality), and -z (compress output to zipped file):
+```
+fastq_quality_filter -Q 64 -q 30 -p 50 -i IowaCorn_4539522.3.fastq | gzip -9c > IowaCorn_4539522.3.qc.fastq.gz
+```
+*Note: found undocumented info on -Q: http://seqanswers.com/forums/showthread.php?t=9357: "Yeah, I found out about that -Q parameter on SEQanswers, it's "undocumented" in the Fastx toolkit. If the quality scores for your libraries are in the fastq sanger format (ascii(phred+33)), rather than the fastq illumina format (ascii(phred+64)), you would use the -Q33 parameter. fastq_quality_filter automatically assumes fastq illumina quality scores. See here for original explanation: http://seqanswers.com/forums/showthread.php?t=6701"*
