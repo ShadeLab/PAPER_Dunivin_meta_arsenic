@@ -20,8 +20,8 @@
 
 These are the files I am downloading from MG-RAST and performing FastQC and FastX on:
 #### 1. Iowa_corn
-ProjectID: mgp6369
-* Sample1: mgm4539522.3;  fastq file, has the 2nd bp in the project (the file with the most bp is not in fastq format), <30% failed QC
+[ProjectID: mgp6368](http://metagenomics.anl.gov/mgmain.html?mgpage=project&project=mgp6368)
+* [Sample1](http://metagenomics.anl.gov/mgmain.html?mgpage=overview&metagenome=mgm4539522.3): mgm4539522.3;  fastq file, has the 2nd bp in the project (the file with the most bp is not in fastq format), less than 30% failed QC; 8298450011 bp
   * FastQC: Sequence length 31-100, failed Kmer, everything else looks good
 * Sample2: mgm4539523.3;   fastq file, has the 3rd most bp in the project, <30% failed QC
   * FastQC: Sequence length 31-100, Illumina 1.5, failed Kmer, everything else looks good
@@ -36,10 +36,11 @@ ProjectID: mgp2592
 * Metadata from this project
 
 #### 3. Mangrove
-ProjectID: mgp11628
-* Sample1: mgm4603402.3; fastq file, has the most bp, 3.65% failed QC
+[ProjectID: mgp11628](http://metagenomics.anl.gov/mgmain.html?mgpage=project&project=mgp11628)
+* [Sample1](http://metagenomics.anl.gov/mgmain.html?mgpage=overview&metagenome=mgm4603402.3): mgm4603402.3; fastq file, has the most bp, 3.65% failed QC; 55G, 25815320787 bp
   * FastQC: seq length 151-291, Sanger/Illumina 1.9, has some Universal Illumina Adaptor, failed Kmer content
-* Sample2: mgm4603270.3; fastq file, has the 2nd most bp, 3.1% failed QC
+  * the output from `fastx_quality_stats -i Mangrove_4603402.3.fastq -o Mangrove_4603402.3_quality.txt` was of size 0, so i deleted it and ran the command again... taking a long time to complete and is still at size 0... I believe something is wrong.
+* [Sample2](http://metagenomics.anl.gov/mgmain.html?mgpage=overview&metagenome=mgm4603270.3): mgm4603270.3; fastq file, has the 2nd most bp, 3.1% failed QC; 19G, 25267542871 bp
   * FastQC: seq length 31-100, seq. length distribution flagged, failed Kmer content, everything else looks good
 * Metadata from this project
 
