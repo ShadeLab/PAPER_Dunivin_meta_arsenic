@@ -97,7 +97,7 @@ ProjectID: mgp13948
 #### 10. California_grassland
 ProjectID: mgp1992
 * Sample1: mgm4511061.3; fastq file, most bp, 19% failed QC
-  * #### NOTE: *Failed to process file California_grassland_4511061.3.fastq uk.ac.babraham.FastQC.Sequence.SequenceFormatException: Ran out of data in the middle of a fastq entry.  Your file is probably truncated* <-- file is 5.4G
+  * NOTE: *Failed to process file California_grassland_4511061.3.fastq uk.ac.babraham.FastQC.Sequence.SequenceFormatException: Ran out of data in the middle of a fastq entry.  Your file is probably truncated* <-- file is 5.4G
   * downloading file again
   * second download: 29G; FastQC: seq length: 100, Sanger/Illumina 1.9, per base seq qual not very good after 85, flagged per base sequence content, failed per sequence GC content, everything else looks good
 * Sample2: mgm4511115.3; fastq file, 2nd most bp, 10% failed QC
@@ -152,19 +152,22 @@ To download samples, use curl with the API command. For example: IowaCorn_453952
 ```
 curl "http://api.metagenomics.anl.gov/1/download/mgm4539522.3?file=050.1" > IowaCorn_4539522.3.fastq
 ```
-To run FastQC, first download FastQC (then unzip and change mode so you can run it), copy your .fastq files in the FastQC directory, and perform FastQC. Then I copied the .html file into my home directory so I could move the file onto my dekstop and open it. For example: IowaCorn_4539522.3.fastq:
+To run FastQC, first download FastQC, unzip and change mode of fastqc so you can run it: 
 ```
 wget http://www.bioinformatics.babraham.ac.uk/projects/fastqc/fastqc_v0.11.3.zip
 unzip fastqc_v0.11.3.zip
 cd FastQC
 chmod 755 fastqc
 cd ..
+```
+Then copy your .fastq files in the FastQC directory, and perform FastQC. Then I copied the .html file into my home directory so I could move the file onto my dekstop and open it. For example: IowaCorn_4539522.3.fastq:
+```
 cp IowaCorn_4539522.3.fastq /directory/FastQC
 cd FastQC
 /.fastqc IowaCorn_4539522.3.fastq
 cp IowaCorn_4539522.3_fastq.html /your-home-directory
 ```
-To run FastX, first download FastX using `module load FASTX/0.0.14` then get the quality stats using `fastx_quality_stats -i IowaCorn_4539522.3.fastq -o IowaCorn_4539522.3_quality.txt`. The -i preceeds the input and the -o preceeds the output filename. Use fast_quality_filter to trim the data using -Q64 (Illumina 1.5), -q 30 (minimum quality to keep), -p 50 (minimum percent of bases to have the -q quality), and -z (compress output to zipped file):
+To run FastX, first download FastX using `module load FASTX/0.0.14` then get the quality stats using `fastx_quality_stats -i IowaCorn_4539522.3.fastq -o IowaCorn_4539522.3_quality.txt`. The -i preceeds the input and the -o preceeds the output filename. Use fast_quality_filter to trim the data using -Q64 (Illumina 1.5), -q 30 (minimum quality to keep), -p 50 (minimum percent of bases to have the -q quality), and -z (compress output to zipped file): 
 ```
 fastq_quality_filter -Q 64 -q 30 -p 50 -i IowaCorn_4539522.3.fastq | gzip -9c > IowaCorn_4539522.3.qc.fastq.gz
 ```
