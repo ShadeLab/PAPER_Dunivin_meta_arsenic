@@ -107,8 +107,12 @@ ProjectID: mgp15600
 ProjectID: mgp252
 * Sample1: mgm4523778.3; fastq file, most bp, 8% failed QC
   * Files too small, downloading again
+  * second download: 12K
+  * #### NOTE: *Failed to process Permafrost_Canada_4523778.3.fastq uk.ac.babraham.FastQC.Sequence.SequenceFormatException: ID line didn't start with '@'*
 * Sample2: mgm4523023.3; fastq file, 2nd most bp, 10% failed QC
   * Files too small, downloading again
+  * Second download: 16G
+  * FastQC: seq length: 102-192, Sanger/Illumina 1.9, failed per tile seq quality, per base seq. content bad below 20, flagged seq length distribution, failed Kmer content
 * Metadata for this project
 
 #### 14. Permafrost_USA 
