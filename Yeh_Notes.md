@@ -1,5 +1,5 @@
 #### Susanna Yeh
-## June 2-5, 2017
+## June 2-6, 2017
 
 #### Table of Contents:
 * [Iowa_corn](https://github.com/ShadeLab/meta_arsenic/blob/master/Yeh_Notes.md#1-iowa_corn)
@@ -99,12 +99,11 @@ ProjectID: mgp1992
 * Sample1: mgm4511061.3; fastq file, most bp, 19% failed QC
   * #### NOTE: *Failed to process file California_grassland_4511061.3.fastq uk.ac.babraham.FastQC.Sequence.SequenceFormatException: Ran out of data in the middle of a fastq entry.  Your file is probably truncated* <-- file is 5.4G
   * downloading file again
-  * second download: 
+  * second download: 29G; FastQC: seq length: 100, Sanger/Illumina 1.9, per base seq qual not very good after 85, flagged per base sequence content, failed per sequence GC content, everything else looks good
 * Sample2: mgm4511115.3; fastq file, 2nd most bp, 10% failed QC
   * FastQC: seq length: 100, Sanger/Illumina 1.9, Per base sequence quality not very good from position ~70-100, flag on per base sequence content, failed per sequence GC content, failed Kmer content
 * Metadata from this project
-Milana Fuksenko
-Emilia Fuksenko
+
 #### 11. Illinois_soil
 ProjectID: mgp14596
 * Sample1: mgm4653791.3; fastq file, most bp, .05% failed QC
