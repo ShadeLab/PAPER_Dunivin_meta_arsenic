@@ -79,10 +79,10 @@ These are the files I am downloading from MG-RAST and performing FastQC and Fast
 * Metadata from this project
 
 #### 8. Minnesota_creek
-ProjectID: mgp5588
-* Sample1: mgm4541646.3; fastq file, has the most bp, 2.55% failed QC
+[ProjectID: mgp5588](http://metagenomics.anl.gov/mgmain.html?mgpage=project&project=mgp5588)
+* [Sample1](http://metagenomics.anl.gov/mgmain.html?mgpage=overview&metagenome=mgm4541646.3): mgm4541646.3; fastq file, has the most bp, 2.55% failed QC; 11702083089 bp
   * FastQC: seq length 151, Sanger/Illumina 1.9, per base seq qual not good above 140, per base seq. content not very good below 9
-* Sample2:mgm4541645.3; fastq file, has the 2nd most bp, 2.58% failed QC
+* [Sample2](http://metagenomics.anl.gov/mgmain.html?mgpage=overview&metagenome=mgm4541645.3): mgm4541645.3; fastq file, has the 2nd most bp, 2.58% failed QC; 10745529044 bp
   * FastQC: seq length 151, Sanger/Ilumina 1.9, per base sequence qual. not good above 140, per base seq. content not very good below 9, failed Kmer content
 * Metadata from this project
 
