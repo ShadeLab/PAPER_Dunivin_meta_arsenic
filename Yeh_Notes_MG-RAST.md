@@ -123,6 +123,7 @@ These are the files I am downloading from MG-RAST and performing FastQC and Fast
   * FastQC: seq length: 100, Sanger/Illumina 1.9, Per base sequence quality not very good from position ~70-100, flag on per base sequence content, failed per sequence GC content, failed Kmer content
   * FastX: used flag -Q33 (Illumina 1.9)
   * June 7: File size seems too small, I am downloading again under name "California_grassland_4511115.3_new.fastq"
+    * The new download is 18G. The first download must not have finished for some reason. The job script did not abort so I don't know why it did't download all the way. I will scratch the files from the first download and re-do fastQC and fastX for this new download
 * Metadata from this project
 
 #### 11. Illinois_soil
@@ -141,6 +142,7 @@ These are the files I am downloading from MG-RAST and performing FastQC and Fast
   * FastQC: seq length: 151, Sanger/Illumina 1.9, per base sequence count is a little skewed from position 1-8, everything else looks good
   * FastX: used flag -Q33 (Illumina 1.9)
   * June 7: File size seems to small, I am downloading again with command `curl "http://api.metagenomics.anl.gov/1/download/mgm4670122.3?file=050.1" > Wyoming_soil_4670122.3_new.fastq`
+    * The new download is 18G. The first download must not have finished for some reason. The job script did not abort so I don't know why it did't download all the way. I will scratch the files from the first download and re-do fastQC and fastX for this new download
 * [Sample2](http://metagenomics.anl.gov/mgmain.html?mgpage=overview&metagenome=mgm4670120.3): mgm4670120.3; fastq file, 2nd most bp, 6% failed QC; 7,003,222,356 bp, 16G
   * File was too small, downloading again
   * FastQC: seq length: 151, Sanger/Illumina 1.9, per base seq content not very good below 10, everything else looks good
