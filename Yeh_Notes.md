@@ -1,5 +1,5 @@
 #### Susanna Yeh
-## June 2-6, 2017
+## June 2-7, 2017
 
 #### Table of Contents:
 * [Iowa_corn](https://github.com/ShadeLab/meta_arsenic/blob/master/Yeh_Notes.md#1-iowa_corn)
@@ -24,6 +24,7 @@ These are the files I am downloading from MG-RAST and performing FastQC and Fast
 * [Sample1](http://metagenomics.anl.gov/mgmain.html?mgpage=overview&metagenome=mgm4539522.3): mgm4539522.3;  fastq file, has the 2nd bp in the project (the file with the most bp is not in fastq format), less than 30% failed QC; 8,298,450,011 bp, 19G
   * FastQC: Sequence length 31-100, Illumina 1.5, failed Kmer, everything else looks good
   * fastx: used -Q64 flag(Illumina 1.5)
+  * 8,298,450,011 bp -- good
 * [Sample2](http://metagenomics.anl.gov/mgmain.html?mgpage=overview&metagenome=mgm4539523.3): mgm4539523.3;   fastq file, has the 3rd most bp in the project, 13% failed QC; 8,223,202,056 bp, 19G
   * FastQC: Sequence length 31-100, Illumina 1.5, failed Kmer, everything else looks good
   * fastx: used -Q64 flag
@@ -107,9 +108,11 @@ These are the files I am downloading from MG-RAST and performing FastQC and Fast
 * [Sample1](http://metagenomics.anl.gov/mgmain.html?mgpage=overview&metagenome=mgm4664918.3): mgm4664918.3; fastq file, most bp, .05% failed QC; 11,665,934,500 bp, 26G
   * FastQC: seq length 12-190, Illumina 1.9, failed per tile seq quality, per base seq content not very good below 10, everything else looks good
   * FastX: used flag -Q33 (Illumina 1.9)
+  * 11,665,934,500 bp in downloaded file -- good, matches what is stated on MG-RAST
 * [Sample2](http://metagenomics.anl.gov/mgmain.html?mgpage=overview&metagenome=mgm4664925.3): mgm4664925.3; fastq file, 2nd most bp, .04% failed QC; 4,319,683,800 bp, 9.6G
   * FastQC: seq. length 12-190, failed per tile sequence qual., per base sequence content not very good from 1-8
   * FastX: used flag -Q33 (Illumina 1.9)
+  * 4,319,683,800 bp -- good, this matches!
 * Metadata from this project
 
 #### 10. California_grassland
@@ -214,3 +217,5 @@ fastq_quality_filter -Q 64 -q 30 -p 50 -i IowaCorn_4539522.3.fastq | gzip -9c > 
 *Note: found undocumented info on -Q: https://www.biostars.org/p/137049/ and http://seqanswers.com/forums/showthread.php?t=9357: "If the quality scores for your libraries are in the fastq sanger format (ascii(phred+33)), rather than the fastq illumina format (ascii(phred+64)), you would use the -Q33 parameter. fastq_quality_filter automatically assumes fastq illumina quality scores. See here for original explanation: http://seqanswers.com/forums/showthread.php?t=6701"*
 
 Then, get the quality stats of the trimmed output file is through `fastx_quality_stats -i IowaCorn_4539522.3.qc.fastq.gz -o IowaCorn_4539522.3_qc_quality.txt`
+
+To count the number of basepairs in a file, I used this (example is Disney_preserve_4664918.3.fastq) `cat Disney_preserve_4664918.3.fastq | paste - - - - | cut -f2 | tr -d '\n'| wc -c` which prints the file, pipes it to `paste` which prints four consecutive lines in one row (tab delimited), pipes that output to `cut -f2` which prints only the sequence, then remove the newline characters, and `wc -c` counts the characters/basepairs.
