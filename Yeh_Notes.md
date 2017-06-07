@@ -33,9 +33,10 @@ These are the files I am downloading from MG-RAST and performing FastQC and Fast
 [ProjectID: mgp2592](http://metagenomics.anl.gov/mgmain.html?mgpage=project&project=mgp2592)
 * [Sample1](http://metagenomics.anl.gov/mgmain.html?mgpage=overview&metagenome=mgm4509400.3): mgm4509400.3; fastq file, has the most bp, 23% failed QC; 28,875,056,044 bp, 71G
   * FastQC: seq length: 101, Sanger/Illumina 1.9, failed per base sequence quality, everything else looks good
-  * fastx: used -Q64 (Illumina 1.9)
+  * fastx: used -Q33 (Illumina 1.9)
 * [Sample2](http://metagenomics.anl.gov/mgmain.html?mgpage=overview&metagenome=mgm4509401.3): mgm4509401.3; fastq file, has the 3rd most bp (the data with 2nd most bp has a failed QC of 38% so it is not used), 11% failed QC; 8,831,209,922 bp, 22G
   * FastQC: seq length 101, Sanger/Illumina 1.9, per base seq qaulity failed, per base seq content not very good below 9, everything else looks good
+  * FastX: used flag -Q33 (Illumina 1.9)
 * Metadata from this project
 
 #### 3. Mangrove
