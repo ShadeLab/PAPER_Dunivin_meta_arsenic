@@ -111,7 +111,7 @@ These are the files I am downloading from MG-RAST and performing FastQC and Fast
   * 17,631,239,942 bp in downloaded file -- good :)
   * MicrobeCensus: average_genome_size:    8,789,768.62772; total_bases:    9,037,116,463; genome_equivalents:     1028.14042619
 
-* [Sample3](http://metagenomics.anl.gov/mgmain.html?mgpage=overview&metagenome=mgm4535554.3): fastq, 3rd most bp, 9.82% failed QC; 17,365,069,895 bp
+* [Sample3](http://metagenomics.anl.gov/mgmain.html?mgpage=overview&metagenome=mgm4535554.3): mgm4535554.3; fastq, 3rd most bp, 9.82% failed QC; 17,365,069,895 bp
   * I chose to download another sample from this project because the first two samples have different average genome sizes
 * Metadata from this project
 
