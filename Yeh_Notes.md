@@ -25,17 +25,13 @@ These are the files I am downloading from MG-RAST and performing FastQC and Fast
   * FastQC: Sequence length 31-100, Illumina 1.5, failed Kmer, everything else looks good
   * fastx: used -Q64 flag(Illumina 1.5)
   * 8,298,450,011 bp -- good :)
-  * MicrobeCensus: average_genome_size:    5,248,659.14022;
-total_bases:    8,192,645,322;
-genome_equivalents:     1560.90252827
+  * MicrobeCensus: average_genome_size:    5,248,659.14022; total_bases:    8,192,645,322; genome_equivalents:     1560.90252827
 
 * [Sample2](http://metagenomics.anl.gov/mgmain.html?mgpage=overview&metagenome=mgm4539523.3): mgm4539523.3;   fastq file, has the 3rd most bp in the project, 13% failed QC; 8,223,202,056 bp, 19G
   * FastQC: Sequence length 31-100, Illumina 1.5, failed Kmer, everything else looks good
   * fastx: used -Q64 flag
   * 8,223,202,056 bases in downloaded file -- good :)
-  * MicrobeCensus: average_genome_size:    5,208,064.83522;
-total_bases:    8,119,063,902;
-genome_equivalents:     1558.94063513
+  * MicrobeCensus: average_genome_size:    5,208,064.83522; total_bases:    8,119,063,902; genome_equivalents:     1558.94063513
 * Metadata from this project
 
 #### 2. Iowa_agricultural
@@ -120,6 +116,7 @@ genome_equivalents:     1558.94063513
   * FastX: used flag -Q33 (Illumina 1.9)
   * 13,345,395,200 bp in downloaded file -- good :)
   * MicrobeCensus: average_genome_size:    6,541,610.42007; total_bases:    12,538,228,600; genome_equivalents:     1916.68836798
+  
 * [Sample2](http://metagenomics.anl.gov/mgmain.html?mgpage=overview&metagenome=mgm4502540.3): mgm4502540.3; fastq file, has the 2nd most bp, 11% failed QC; 11,312,148,300 bp, 28G
   * FastQC: seq length 100, Sanger/Illumina 1.9, bad per base seq. qual. 80-100, per base seq. content not very good below 12, everything else looks good
   * FastX: used flag -Q33 (Illumina 1.9)
@@ -133,6 +130,7 @@ genome_equivalents:     1558.94063513
   * FastQC: seq length 151, Sanger/Illumina 1.9, per base seq qual not good above 140, per base seq. content not very good below 9
   * FastX: used flag -Q33 (Illumina 1.9)
   * 11,702,083,089 bp in downloaded file -- good :)
+  * MicrobeCensus: average_genome_size:    6,504,862.26434; total_bases:    10,652,021,539; genome_equivalents:     1637.54759227
   
 * [Sample2](http://metagenomics.anl.gov/mgmain.html?mgpage=overview&metagenome=mgm4541645.3): mgm4541645.3; fastq file, has the 2nd most bp, 2.58% failed QC; 10,745,529,044 bp, 25G
   * FastQC: seq length 151, Sanger/Ilumina 1.9, per base sequence qual. not good above 140, per base seq. content not very good below 9, failed Kmer content
@@ -152,7 +150,8 @@ genome_equivalents:     1558.94063513
 * [Sample2](http://metagenomics.anl.gov/mgmain.html?mgpage=overview&metagenome=mgm4664925.3): mgm4664925.3; fastq file, 2nd most bp, .04% failed QC; 4,319,683,800 bp, 9.6G
   * FastQC: seq. length 12-190, failed per tile sequence qual., per base sequence content not very good from 1-8
   * FastX: used flag -Q33 (Illumina 1.9)
-  * 4,319,683,800 bp -- good :)
+  * 4,319,683,800 bp in downloaded file -- good :)
+  * MicrobeCensus: average_genome_size:    7,230,169.78764; total_bases:    4,140,346,138; genome_equivalents:     572.648535181
 * Metadata from this project
 
 #### 10. California_grassland
@@ -191,16 +190,17 @@ genome_equivalents:     1558.94063513
 #### 12. Wyoming_soil
 [ProjectID: mgp15600](http://metagenomics.anl.gov/mgmain.html?mgpage=project&project=mgp15600)
 * [Sample1](http://metagenomics.anl.gov/mgmain.html?mgpage=overview&metagenome=mgm4670122.3): mgm4670122.3; fastq file, most bp, 6% failed QC; 7,678,885,748 bp, 2.0G
-  * FastQC: seq length: 151, Sanger/Illumina 1.9, per base sequence count is a little skewed from position 1-8, everything else looks good
-  * FastX: used flag -Q33 (Illumina 1.9)
+  * ~~FastQC: seq length: 151, Sanger/Illumina 1.9, per base sequence count is a little skewed from position 1-8, everything else looks good
+  * FastX: used flag -Q33 (Illumina 1.9)~~
   * June 7: File size seems to small, I am downloading again with command `curl "http://api.metagenomics.anl.gov/1/download/mgm4670122.3?file=050.1" > Wyoming_soil_4670122.3_new.fastq`
     * The new download is 18G. The first download must not have finished for some reason. The job script did not abort so I don't know why it did't download all the way. I will scratch the files from the first download and re-do fastQC and fastX for this new download
-  * 
+  * 7,678,885,748 bp in downloaded file -- good :)
     
 * [Sample2](http://metagenomics.anl.gov/mgmain.html?mgpage=overview&metagenome=mgm4670120.3): mgm4670120.3; fastq file, 2nd most bp, 6% failed QC; 7,003,222,356 bp, 16G
   * File was too small, downloading again
   * FastQC: seq length: 151, Sanger/Illumina 1.9, per base seq content not very good below 10, everything else looks good
   * FastX: used flag -Q33 (Illumina 1.9)
+  * 7,003,222,356 bp in downloaded file -- good :)
   * MicrobeCensus: average_genome_size:    5,350,858.32398; total_bases:    6,407,352,347; genome_equivalents:     1197.44384154
 * Metadata for this project
 
@@ -218,10 +218,13 @@ genome_equivalents:     1558.94063513
   * FastQC: seq length: 102-192, Sanger/Illumina 1.9, failed per tile seq quality, per base seq. content bad below 20, flagged seq length distribution, failed Kmer content
   * Submitted a job for only this file to run fastq_quality_filter and it's walltime of 1 hour expired (only 3.6G of the output was made)... submitted a new job with longer walltime
   * FastX: used flag -Q33 (Illumina 1.9)
-  
+  * 6,700,261,439 bp in downloaded file -- good :)
+  * MicrobeCensus: average_genome_size:    3,932,079.96927; total_bases:    6,516,361,434; genome_equivalents:     1657.23013899
+
 * [Sample 3](http://metagenomics.anl.gov/mgmain.html?mgpage=overview&metagenome=mgm4523145.3) (because Sample 1 didnt work with FastQC): mgm4523145.3; fastq file, third most bp, 17% failed QC; 5,614,599,082 bp, 13G
   * FastQC: seq length 102-192, Sanger/Illumina 1.9, per base seq content bad below 20, failed per seq GC content, flaggd seq length distribution, failed Kmer content
   * FastX: used flag -Q33 (Illumina 1.9)
+  * 5,614,599,082 bp in downloaded file -- good :)
 * Metadata for this project
 
 #### 14. Permafrost_USA 
