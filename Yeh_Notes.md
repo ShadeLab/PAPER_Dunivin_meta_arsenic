@@ -1,5 +1,5 @@
 #### Susanna Yeh
-## June 2-7, 2017
+## June 2-8, 2017
 
 #### Table of Contents:
 * [Iowa_corn](https://github.com/ShadeLab/meta_arsenic/blob/master/Yeh_Notes.md#1-iowa_corn)
@@ -25,9 +25,17 @@ These are the files I am downloading from MG-RAST and performing FastQC and Fast
   * FastQC: Sequence length 31-100, Illumina 1.5, failed Kmer, everything else looks good
   * fastx: used -Q64 flag(Illumina 1.5)
   * 8,298,450,011 bp -- good
+  * MicrobeCensus: average_genome_size:    5,248,659.14022;
+total_bases:    8,192,645,322;
+genome_equivalents:     1560.90252827
+
 * [Sample2](http://metagenomics.anl.gov/mgmain.html?mgpage=overview&metagenome=mgm4539523.3): mgm4539523.3;   fastq file, has the 3rd most bp in the project, 13% failed QC; 8,223,202,056 bp, 19G
   * FastQC: Sequence length 31-100, Illumina 1.5, failed Kmer, everything else looks good
   * fastx: used -Q64 flag
+  * 8,223,202,056 bases in downloaded file -- good
+  * MicrobeCensus: average_genome_size:    5,208,064.83522;
+total_bases:    8,119,063,902;
+genome_equivalents:     1558.94063513
 * Metadata from this project
 
 #### 2. Iowa_agricultural
@@ -35,9 +43,14 @@ These are the files I am downloading from MG-RAST and performing FastQC and Fast
 * [Sample1](http://metagenomics.anl.gov/mgmain.html?mgpage=overview&metagenome=mgm4509400.3): mgm4509400.3; fastq file, has the most bp, 23% failed QC; 28,875,056,044 bp, 71G
   * FastQC: seq length: 101, Sanger/Illumina 1.9, failed per base sequence quality, everything else looks good
   * fastx: used -Q33 (Illumina 1.9)
+  * MicrobeCensus: average_genome_size: 6,203,490.57042;
+total_bases:    24,978,407,768;
+genome_equivalents:     4026.50854136
+
 * [Sample2](http://metagenomics.anl.gov/mgmain.html?mgpage=overview&metagenome=mgm4509401.3): mgm4509401.3; fastq file, has the 3rd most bp (the data with 2nd most bp has a failed QC of 38% so it is not used), 11% failed QC; 8,831,209,922 bp, 22G
   * FastQC: seq length 101, Sanger/Illumina 1.9, per base seq qaulity failed, per base seq content not very good below 9, everything else looks good
   * FastX: used flag -Q33 (Illumina 1.9)
+  * MicrobeCensus: average_genome_size: 6,023,548.5101; total_bases: 7,858,262,277; genome_equivalents: 1304.59018697
 * Metadata from this project
 
 #### 3. Mangrove
@@ -46,6 +59,9 @@ These are the files I am downloading from MG-RAST and performing FastQC and Fast
   * FastQC: seq length 151-291, Sanger/Illumina 1.9, has some Universal Illumina Adaptor, failed Kmer content
   * the output from `fastx_quality_stats -i Mangrove_4603402.3.fastq -o Mangrove_4603402.3_quality.txt` was of size 0, so i deleted it and ran the command again
   * fastX: used flag -Q33 (Illumina 1.9)
+  * MicrobeCensus: average_genome_size:    5,979,725.46729;
+total_bases:    24,378,385,485;
+genome_equivalents:     4076.84025268
 * [Sample2](http://metagenomics.anl.gov/mgmain.html?mgpage=overview&metagenome=mgm4603270.3): mgm4603270.3; fastq file, has the 2nd most bp, 3.1% failed QC; 19G; 25,267,542,871 bp
   * FastQC: seq length 31-100, seq. length distribution flagged, failed Kmer content, everything else looks good
   * fastX: used flag -Q33 (Illumina 1.9)
@@ -218,4 +234,31 @@ fastq_quality_filter -Q 64 -q 30 -p 50 -i IowaCorn_4539522.3.fastq | gzip -9c > 
 
 Then, get the quality stats of the trimmed output file is through `fastx_quality_stats -i IowaCorn_4539522.3.qc.fastq.gz -o IowaCorn_4539522.3_qc_quality.txt`
 
-To count the number of basepairs in a file, I used this (example is Disney_preserve_4664918.3.fastq) `cat Disney_preserve_4664918.3.fastq | paste - - - - | cut -f2 | tr -d '\n'| wc -c` which prints the file, pipes it to `paste` which prints four consecutive lines in one row (tab delimited), pipes that output to `cut -f2` which prints only the sequence, then remove the newline characters, and `wc -c` counts the characters/basepairs.
+To count the number of basepairs in a file, I used this (example is Disney_preserve_4664918.3.fastq) `cat Disney_preserve_4664918.3.fastq | paste - - - - | cut -f2 | tr -d '\n'| wc -c`
+
+I then used MicrobeCensus to estimate the average genome size in each metagenome. Instructions can be found [here](https://github.com/snayfach/MicrobeCensus). First I [set up a Python virtural environment](https://wiki.hpcc.msu.edu/display/hpccdocs/Using+Python+virtualenv+on+the+HPCC) then downloaded MicrobeCensus using `pip install MicrobeCensus`. I ran MicrobeCensus on each metagenome. Here is an example qsub script I used for the Iowa_agricultural data:
+```
+#!/bin/bash --login
+
+#PBS -l nodes=1:ppn=1
+#PBS -l walltime=16:00:00
+#PBS -l mem=500gb
+
+#PBS -j oe
+#PBS -M susanna.yeh@gmail.com
+#PBS -m abe
+#PBS -N IowaAgCensus
+
+cd /mnt/research/ShadeLab/WorkingSpace/Yeh/myPy2/bin
+
+module load NumPy
+module load SciPy
+module load Biopython
+source /mnt/research/ShadeLab/WorkingSpace/Yeh/myPy2/bin/activate
+
+python run_microbe_census.py /mnt/scratch/f0002188/MG-RAST_samples/Iowa_agricultural_4509400.3.qc.fastq.gz Iowa_agricultural_4509
+400.3_census
+
+python run_microbe_census.py /mnt/scratch/f0002188/MG-RAST_samples/Iowa_agricultural_4509401.3.qc.fastq.gz Iowa_agricultural_4509
+401.3_census
+```
