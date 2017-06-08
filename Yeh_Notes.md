@@ -43,6 +43,7 @@ genome_equivalents:     1558.94063513
 * [Sample1](http://metagenomics.anl.gov/mgmain.html?mgpage=overview&metagenome=mgm4509400.3): mgm4509400.3; fastq file, has the most bp, 23% failed QC; 28,875,056,044 bp, 71G
   * FastQC: seq length: 101, Sanger/Illumina 1.9, failed per base sequence quality, everything else looks good
   * fastx: used -Q33 (Illumina 1.9)
+  * 28,875,056,044 bp in downloaded file -- good
   * MicrobeCensus: average_genome_size: 6,203,490.57042;
 total_bases:    24,978,407,768;
 genome_equivalents:     4026.50854136
@@ -139,8 +140,8 @@ genome_equivalents:     4076.84025268
   * second download: 29G; FastQC: seq length: 100, Sanger/Illumina 1.9, per base seq qual not very good after 85, flagged per base sequence content, failed per sequence GC content, everything else looks good
   * FastX: used flag -Q33 (Illumina 1.9)
 * [Sample2](http://metagenomics.anl.gov/mgmain.html?mgpage=overview&metagenome=mgm4511115.3): mgm4511115.3; fastq file, 2nd most bp, 10% failed QC; 7,009,796,000 bp, 1.9G
-  * FastQC: seq length: 100, Sanger/Illumina 1.9, Per base sequence quality not very good from position ~70-100, flag on per base sequence content, failed per sequence GC content, failed Kmer content
-  * FastX: used flag -Q33 (Illumina 1.9)
+  * ~~FastQC~~: ~~seq length: 100, Sanger/Illumina 1.9, Per base sequence quality not very good from position 70-100, flag on per base sequence content, failed per sequence GC content, failed Kmer content~~
+  * ~~FastX~~: ~~used flag -Q33 (Illumina 1.9)~~ <-- first download
   * June 7: File size seems too small, I am downloading again under name "California_grassland_4511115.3_new.fastq"
     * The new download is 18G. The first download must not have finished for some reason. The job script did not abort so I don't know why it did't download all the way. I will scratch the files from the first download and re-do fastQC and fastX for this new download
 * Metadata from this project
