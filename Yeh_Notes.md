@@ -245,20 +245,19 @@ I then used MicrobeCensus to estimate the average genome size in each metagenome
 #PBS -l mem=500gb
 
 #PBS -j oe
-#PBS -M susanna.yeh@gmail.com
+#PBS -M my_email
 #PBS -m abe
 #PBS -N IowaAgCensus
 
-cd /mnt/research/ShadeLab/WorkingSpace/Yeh/myPy2/bin
+### myPy2 is what I named my Python virtualenv
+cd /my-directory/myPy2/bin
 
 module load NumPy
 module load SciPy
 module load Biopython
-source /mnt/research/ShadeLab/WorkingSpace/Yeh/myPy2/bin/activate
+source /my-directory/myPy2/bin/activate
 
-python run_microbe_census.py /mnt/scratch/f0002188/MG-RAST_samples/Iowa_agricultural_4509400.3.qc.fastq.gz Iowa_agricultural_4509
-400.3_census
+python run_microbe_census.py /my-directory/Iowa_agricultural_4509400.3.qc.fastq.gz Iowa_agricultural_4509400.3_census
 
-python run_microbe_census.py /mnt/scratch/f0002188/MG-RAST_samples/Iowa_agricultural_4509401.3.qc.fastq.gz Iowa_agricultural_4509
-401.3_census
+python run_microbe_census.py /my-directory/Iowa_agricultural_4509401.3.qc.fastq.gz Iowa_agricultural_4509401.3_census
 ```
