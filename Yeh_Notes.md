@@ -59,19 +59,15 @@ These are the files I am downloading from MG-RAST and performing FastQC and Fast
   * MicrobeCensus: average_genome_size:    5,979,725.46729; total_bases:    24,378,385,485; genome_equivalents:     4076.84025268
   
 * [Sample2](http://metagenomics.anl.gov/mgmain.html?mgpage=overview&metagenome=mgm4603270.3): mgm4603270.3; fastq file, has the 2nd most bp, 3.1% failed QC; ~~19G~~ 58G; 25,267,542,871 bp
-  * ~~FastQC: seq length 31-100, seq. length distribution flagged, failed Kmer content, everything else looks good~~
-  * ~~fastX: used flag -Q33 (Illumina 1.9)~~ 
-  * ~~8,223,202,056 bp~~ *This is the wrong number of bp! I will re-download the file and redo FastQC and FastX*
   * FastQC: seq length 151-291, Sanger/Ilumina 1.9, per base seq content not very good below 9, has Illumina Universal Adaptor, failed Kmer content
   * 25,267,542,871 bp -- good :)
+  * MicrobeCensus: average_genome_size:    6,005,221.20659; total_bases:    24,539,452,204; genome_equivalents:     4086.35275201
 * Metadata from this project
 
 #### 4. Permafrost_Russia
 [ProjectID: mgp7176](http://metagenomics.anl.gov/mgmain.html?mgpage=project&project=mgp7176)
 * [Sample1](http://metagenomics.anl.gov/mgmain.html?mgpage=overview&metagenome=mgm4546812.3): mgm4546812.3; fastq file, has the most bp (tied with Sample2), 12% failed QC; 21,951,850,400 bp, 53G
-  * ~~*NOTE: Failed to process file Permafrost_Russia_mgm4546812.3.fastq uk.ac.babraham.FastQC.Sequence.SequenceFormatException: Ran out of data in the middle of a fastq entry.  Your file is probably truncated* <-- file is 22G~~
-  * downloading file again
-  * second download: 53G file: FastQC: seq length 100, per base seq. qual. not very good after 80, failed Kmer content, everything else looks good
+  * FastQC: seq length 100, per base seq. qual. not very good after 80, failed Kmer content, everything else looks good
   * FastX: used -Q33 flag (Illumina 1.9)
   * 21,951,850,400 bp in downloaded file -- good :)
   * MicrobeCensus: average_genome_size:    5,135,678.5758; total_bases:    20,045,920,100; genome_equivalents:     3903.26610284
@@ -92,11 +88,13 @@ These are the files I am downloading from MG-RAST and performing FastQC and Fast
   * MicrobeCensus: average_genome_size:    6,994,965.44095; total_bases:    18,794,418,950; genome_equivalents:     2686.84943602
   
 * [Sample2](http://metagenomics.anl.gov/mgmain.html?mgpage=overview&metagenome=mgm4539572.3): mgm4539572.3; fastq file, has the 2nd most bp, 14% failed QC; 18,724,092,302 bp, 41G
-  * FastQC: seq length 33-100, looks good
-  * #### NOTE: Iowa_prairie_mgm4539572.3.qc.fastq.gz is of size 0... error outputted: *fastq_quality_filter: writing nucleotides failed: Broken pipe*
+  * FastQC: seq length 33-100, Illumina 1.5, looks good
   * 18,724,092,302 bp in downloaded file -- good :)
+  * MicrobeCensus: average_genome_size:    7,169,200.19245; total_bases:    17,582,137,098; genome_equivalents:     2452.45447554
 
-* [Sample3](http://metagenomics.anl.gov/mgmain.html?mgpage=overview&metagenome=mgm4539576.3): mgm4539576.3; fastq file, 3rd most bp, 14% failed QC; 18,582,589,285 bp
+* [Sample3](http://metagenomics.anl.gov/mgmain.html?mgpage=overview&metagenome=mgm4539576.3): mgm4539576.3; fastq file, 3rd most bp, 14% failed QC; 18,582,589,285 bp, 41G
+  * Iowa_prairie_mgm4539576.3.qc.fastq.gz is of size 16G
+  * MicrobeCensus: average_genome_size:    7,088,957.26281; total_bases:    17,427,453,635; genome_equivalents:     2458.39451261
 * Metadata from this project
 
 #### 6. Brazilian_forest
@@ -115,6 +113,7 @@ These are the files I am downloading from MG-RAST and performing FastQC and Fast
 
 * [Sample3](http://metagenomics.anl.gov/mgmain.html?mgpage=overview&metagenome=mgm4535554.3): mgm4535554.3; fastq, 3rd most bp, 9.82% failed QC; 17,365,069,895 bp
   * I chose to download another sample from this project because the first two samples have different average genome sizes
+  * MicrobeCensus: average_genome_size:    8,371,924.00995; total_bases:    9,686,371,640; genome_equivalents:     1157.00663653
 * Metadata from this project
 
 #### 7. Illinois_soybean
@@ -165,18 +164,13 @@ These are the files I am downloading from MG-RAST and performing FastQC and Fast
 #### 10. California_grassland
 [ProjectID: mgp1992](http://metagenomics.anl.gov/mgmain.html?mgpage=project&project=mgp1992)
 * [Sample1](http://metagenomics.anl.gov/mgmain.html?mgpage=overview&metagenome=mgm4511061.3): mgm4511061.3; fastq file, most bp, 19% failed QC; 11,650,135,800 bp, 29G
-  * ~~NOTE: *Failed to process file California_grassland_4511061.3.fastq uk.ac.babraham.FastQC.Sequence.SequenceFormatException: Ran out of data in the middle of a fastq entry.  Your file is probably truncated* <-- file is 5.4G~~
-  * downloading file again
-  * second download: 29G; FastQC: seq length: 100, Sanger/Illumina 1.9, per base seq qual not very good after 85, flagged per base sequence content, failed per sequence GC content, everything else looks good
+  * FastQC: seq length: 100, Sanger/Illumina 1.9, per base seq qual not very good after 85, flagged per base sequence content, failed per sequence GC content, everything else looks good
   * FastX: used flag -Q33 (Illumina 1.9)
   * 11,650,135,800 bp in downloaded file -- good :)
   * MicrobeCensus: average_genome_size:    35,964,880.0131; total_bases:    11,084,443,800; genome_equivalents:     308.201884615
   
 * [Sample2](http://metagenomics.anl.gov/mgmain.html?mgpage=overview&metagenome=mgm4511115.3): mgm4511115.3; fastq file, 2nd most bp, 10% failed QC; 7,009,796,000 bp, 18G
-  * ~~FastQC~~: ~~seq length: 100, Sanger/Illumina 1.9, Per base sequence quality not very good from position 70-100, flag on per base sequence content, failed per sequence GC content, failed Kmer content~~
-  * ~~FastX~~: ~~used flag -Q33 (Illumina 1.9)~~ <-- first download
   * June 7: File size seems too small, I am downloading again under name "California_grassland_4511115.3_new.fastq"
-    * The new download is 18G. The first download must not have finished for some reason. The job script did not abort so I don't know why it did't download all the way. I will scratch the files from the first download and re-do fastQC and fastX for this new download
   * FastQC: seq length: 100, Sanger/Illumina 1.9, per base seq quality bad after 80, per base seq content not very good below 10, failed per seq GC content, failed Kmer content.
   * 7,009,796,000 bp in downloaded file -- good :)
   * MicrobeCensus: average_genome_size:    7,414,208.05852; total_bases:    6,504,798,300; genome_equivalents:     877.342293156
@@ -200,16 +194,11 @@ These are the files I am downloading from MG-RAST and performing FastQC and Fast
 #### 12. Wyoming_soil
 [ProjectID: mgp15600](http://metagenomics.anl.gov/mgmain.html?mgpage=project&project=mgp15600)
 * [Sample1](http://metagenomics.anl.gov/mgmain.html?mgpage=overview&metagenome=mgm4670122.3): mgm4670122.3; fastq file, most bp, 6% failed QC; 7,678,885,748 bp, 2.0G
-  * ~~FastQC: seq length: 151, Sanger/Illumina 1.9, per base sequence count is a little skewed from position 1-8, everything else looks good~~
-  * ~~FastX: used flag -Q33 (Illumina 1.9)~~
-  * June 7: File size seems to small, I am downloading again with command `curl "http://api.metagenomics.anl.gov/1/download/mgm4670122.3?file=050.1" > Wyoming_soil_4670122.3_new.fastq`
-    * The new download is 18G. The first download must not have finished for some reason. The job script did not abort so I don't know why it did't download all the way. I will scratch the files from the first download and re-do fastQC and fastX for this new download
   * 7,678,885,748 bp in downloaded file -- good :)
   * MicrobeCensus: average_genome_size:    5,354,164.77361; total_bases:    820,651,478; genome_equivalents:     153.27348199
 
     
 * [Sample2](http://metagenomics.anl.gov/mgmain.html?mgpage=overview&metagenome=mgm4670120.3): mgm4670120.3; fastq file, 2nd most bp, 6% failed QC; 7,003,222,356 bp, 16G
-  * File was too small, downloading again
   * FastQC: seq length: 151, Sanger/Illumina 1.9, per base seq content not very good below 10, everything else looks good
   * FastX: used flag -Q33 (Illumina 1.9)
   * 7,003,222,356 bp in downloaded file -- good :)
@@ -228,7 +217,6 @@ These are the files I am downloading from MG-RAST and performing FastQC and Fast
   * Files too small, downloading again
   * Second download: 16G
   * FastQC: seq length: 102-192, Sanger/Illumina 1.9, failed per tile seq quality, per base seq. content bad below 20, flagged seq length distribution, failed Kmer content
-  * Submitted a job for only this file to run fastq_quality_filter and it's walltime of 1 hour expired (only 3.6G of the output was made)... submitted a new job with longer walltime
   * FastX: used flag -Q33 (Illumina 1.9)
   * 6,700,261,439 bp in downloaded file -- good :)
   * MicrobeCensus: average_genome_size:    3,932,079.96927; total_bases:    6,516,361,434; genome_equivalents:     1657.23013899
