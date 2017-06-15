@@ -1,4 +1,4 @@
-# Review/ notes on studies of AsRG in metagenomic datasets
+# Review of studies on AsRG in metagenomic datasets
 ### Taylor Dunivin
 
 __Goals:__
@@ -11,7 +11,8 @@ __Goals:__
 * [Engel et al., 2013](https://github.com/ShadeLab/meta_arsenic/blob/master/Literature_review.md#engel-et-al-2013)
 * [Kurth et al., 2013](https://github.com/ShadeLab/meta_arsenic/blob/master/Literature_review.md#kurth-et-al-2017)
 * [Escudero et al., 2013](https://github.com/ShadeLab/meta_arsenic/blob/master/Literature_review.md#escudero-et-al-2017)
-
+* [Zeng et al., 2016](https://github.com/ShadeLab/meta_arsenic/blob/master/Literature_review.md#zeng-et-al-2016)
+* [Li et al., 2014](https://github.com/ShadeLab/meta_arsenic/blob/master/Literature_review.md#li-et-al-2014)
 
 ### Engel et al., 2013
 * Study aims to compare 16S rRNA gene diversity with _aioA_ diversity in microbial mats from arsenic contaminated gyser effluent in Chile. 
@@ -40,7 +41,21 @@ __Goals:__
 * also find mostly alphaproteobacteria aioA
  
 ### Escudero et al., 2013
+* Examined arsC, acr3, aioA, arrA from a wide variety of sites with wide randing arsenic concentrations
+* Found arrA and some form (dif primer pairs) of arsC in every sample 
+* Likely biased by PCR methods
+* See enterobacter arsC in low arsenic concentrations but firmicutes arsC (thio) in higher arsenic concentrations
+
+### Zeng et al., 2016
 * 
+
+### Li et al., 2014
+* "However, our knowledge of the distribution, redundancies and organization of these genes in bacteria is still limited."
+* "we analyzed the 188 Burkholderiales genomes and found that 95% genomes harbored arsenic-related genes, with an average of 6.6 genes per genome."
+* _ars_ related genes were most common
+* Do not find a correlation between genome size and number of As resistance genes 
+ * Could check this with jgi cogs data
+* Nice example of examining AsRG distribution with genomes
 
 
 
