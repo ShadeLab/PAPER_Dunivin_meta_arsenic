@@ -15,7 +15,6 @@
 * [Illinois_soil](https://github.com/ShadeLab/meta_arsenic/blob/master/Yeh_Notes.md#11-illinois_soil)
 * [Wyoming_soil](https://github.com/ShadeLab/meta_arsenic/blob/master/Yeh_Notes.md#12-wyoming_soil)
 * [Permafrost_Canada](https://github.com/ShadeLab/meta_arsenic/blob/master/Yeh_Notes.md#13-permafrost_canada)
-* [Permafrost_USA](https://github.com/ShadeLab/meta_arsenic/blob/master/Yeh_Notes.md#14-permafrost_usa)
 * [Workflow](https://github.com/ShadeLab/meta_arsenic/blob/master/Yeh_Notes.md#commands)
 
 These are the files I am downloading from MG-RAST and performing FastQC and FastX on:
@@ -167,7 +166,7 @@ These are the files I am downloading from MG-RAST and performing FastQC and Fast
   * FastQC: seq length: 100, Sanger/Illumina 1.9, per base seq qual not very good after 85, flagged per base sequence content, failed per sequence GC content, everything else looks good
   * FastX: used flag -Q33 (Illumina 1.9)
   * 11,650,135,800 bp in downloaded file -- good :)
-  * MicrobeCensus: average_genome_size:    35,964,880.0131; total_bases:    11,084,443,800; genome_equivalents:     308.201884615
+  * MicrobeCensus: average_genome_size:    41,173,627.473; total_bases:    11,084,443,800; genome_equivalents:     308.201884615
   
 * [Sample2](http://metagenomics.anl.gov/mgmain.html?mgpage=overview&metagenome=mgm4511115.3): mgm4511115.3; fastq file, 2nd most bp, 10% failed QC; 7,009,796,000 bp, 18G
   * June 7: File size seems too small, I am downloading again under name "California_grassland_4511115.3_new.fastq"
@@ -228,22 +227,18 @@ These are the files I am downloading from MG-RAST and performing FastQC and Fast
   * MicrobeCensus: average_genome_size:    4,719,216.01282; total_bases:    5,523,397,608; genome_equivalents:     1170.40576083
 * Metadata for this project
 
-#### 14. Permafrost_USA 
-[ProjectID: mgp11953](http://metagenomics.anl.gov/mgmain.html?mgpage=project&project=mgp11953)
-* [Sample1](http://metagenomics.anl.gov/mgmain.html?mgpage=overview&metagenome=mgm4469340.3): mgm4469340.3; fq file, 2nd most bp in project (samplew ith most bp is fna format), 5% failed QC; 8,421,304,260 bp, 9.6G
-  * #### NOTE: *Failed to process Permafrost_USA_4469340.3.fastq uk.ac.babraham.FastQC.Sequence.SequenceFormatException: ID line didn't start with '@'*
-  * downloading again... second download had same problem
-  * didnt do FastX
-* [Sample2](http://metagenomics.anl.gov/mgmain.html?mgpage=overview&metagenome=mgm4470009.3): mgm4470009.3; fq file, 6th most bp, 0% failed QC; 4,667,382,870 bp, 5.4G
-  * #### NOTE: *Failed to process Permafrost_USA_4470009.3.fastq uk.ac.babraham.FastQC.Sequence.SequenceFormatException: ID line didn't start with '@'*
-  * downloading again... second download had same problem
-  * didnt do FastX
-* Metadata for this project
+#### New Zealand Cole Mine all samples had about 80% failed QC
+Project ID: mgp17652
 
-#### Note: Contaminated_Canada files are all in fna format, so I did not download
+#### Gold Uranium Mines all had > 35% failed QC
+Project ID: mgp16411
+
+#### Permafrost_USA *Failed to process Permafrost_USA_4469340.3.fastq uk.ac.babraham.FastQC.Sequence.SequenceFormatException: ID line didn't start with '@'* wrong format
+
+#### Contaminated_Canada files are all in fna format, so I did not download
 ProjectID: mgp79868
 
-#### Note: Contaminated_China file is in fna format, so I did not download
+#### Contaminated_China file is in fna format, so I did not download
 ProjectID: mgp13736
 
 #### Commands:
@@ -302,4 +297,35 @@ source /my-directory/myPy2/bin/activate
 python run_microbe_census.py /my-directory/Iowa_agricultural_4509400.3.qc.fastq.gz Iowa_agricultural_4509400.3_census
 
 python run_microbe_census.py /my-directory/Iowa_agricultural_4509401.3.qc.fastq.gz Iowa_agricultural_4509401.3_census
+```
+
+
+#### Xander automation:
+```
+#!/bin/bash
+
+#you have to type the gene name after calling this script, for example "$./testAutomation.sh arsB"
+#$1 means the first argument (arsB in the example, so the variable GENE would be arsB)
+GENE=$1
+
+#load blast
+module load GNU/4.4.5
+module load Gblastn/2.28
+
+#switch into correct directory (I added this.. not sure if its what you want???)
+cd /mnt/research/ShadeLab/WorkingSpace/Dunivin/xander/blast/${GENE}
+
+#make database from diverse gene sequences
+makeblastdb -in /mnt/research/ShadeLab/WorkingSpace/Dunivin/xander/analysis/RDPTools/Xander_assembler/gene_resource/${GENE}/originaldata/nucl.fa  -dbtype nucl -out $GENE.database
+
+#blast xander results against db
+#tabular format, show seq id, query id (and description), e-value, only show 1 match
+blastn -db $GENE.database -query *_final_nucl.fasta -out blast.txt -outfmt "6 qseqid salltitles evalue" -max_target_seqs 1
+
+#make a list of reads from *match_reads.fa
+grep "^>" *match_reads.fa | sed '0~1s/^.\{1\}//g' >matchreadlist.txt
+
+##Extract info for stats calculations in R
+#take the framebot stats
+grep "STATS" *_framebot.txt > framebotstats.txt
 ```
