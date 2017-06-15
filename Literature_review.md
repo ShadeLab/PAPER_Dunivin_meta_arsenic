@@ -9,7 +9,7 @@ __Goals:__
 ### Table of Contents
 * [Summary table](https://docs.google.com/spreadsheets/d/1-QjI7Aun_S2CxAXtMExuNcwu6ipUIYg97lo7WJB23JA/edit#gid=0)
 * [Engel et al., 2013](https://github.com/ShadeLab/meta_arsenic/blob/master/Literature_review.md#engel-et-al-2013)
-* [Kurth et al., 2013](https://github.com/ShadeLab/meta_arsenic/blob/master/Literature_review.md#kurth-et-al-2013)
+* [Kurth et al., 2013](https://github.com/ShadeLab/meta_arsenic/blob/master/Literature_review.md#kurth-et-al-2017)
 
 
 ### Engel et al., 2013
