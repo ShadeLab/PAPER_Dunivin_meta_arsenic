@@ -301,7 +301,7 @@ python run_microbe_census.py /my-directory/Iowa_agricultural_4509401.3.qc.fastq.
 
 
 #### Xander automation:
-you have to type the gene and sample names after calling this script, for example "$./scriptName.sh arsB cen10"
+you have to type the gene and sample names after calling this script, for example if this script is called scriptName.sh, type "$./scriptName.sh arsB cen10" into the commandline
 ```
 #!/bin/bash
 
@@ -314,19 +314,18 @@ SAMPLE=$2
 module load GNU/4.4.5
 module load Gblastn/2.28
 
-#switch into correct directory (I added this.. the directory databases does not exist though, not sure if its what you want???)
-#cd /mnt/research/ShadeLab/WorkingSpace/Dunivin/xander/blast/databases
-cd /mnt/home/${USER}
-
-#mkdir $GENE
-#cd $GENE
+#switch into correct directory. (Not sure which directory you want)
+#cd /mnt/research/ShadeLab/WorkingSpace/Yeh/xander/Assessment
+cd /mnt/home/${USER}/examples/test
+mkdir databases_${SAMPLE}
+cd databases_${SAMPLE}
 
 #make database from diverse gene sequences
 makeblastdb -in /mnt/research/ShadeLab/WorkingSpace/Dunivin/xander/analysis/RDPTools/Xander_assembler/gene_resource/${GENE}/originaldata/nucl.fa  -dbtype nucl -out ${GENE}_database
 
 #blast xander results against db
 #tabular format, show seq id, query id (and description), e-value, only show 1 match
-blastn -db ${GENE}_database -query *_final_nucl.fasta -out ${GENE}_blast.txt -outfmt "6 qseqid salltitles evalue" -max_target_seqs 1
+blastn -db ${GENE}_database -query /mnt/research/ShadeLab/WorkingSpace/Dunivin/xander/analysis/${SAMPLE}/k45/${GENE}/cluster/*_final_nucl.fasta -out ${GENE}_blast.txt -outfmt "6 qseqid salltitles evalue" -max_target_seqs 1
 
 #make a list of reads from *match_reads.fa
 grep "^>" /mnt/research/ShadeLab/WorkingSpace/Dunivin/xander/analysis/${SAMPLE}/k45/${GENE}/cluster/*match_reads.fa | sed '0~1s/^.\{1\}//g' > ${GENE}_matchreadlist.txt
@@ -338,86 +337,30 @@ grep "STATS" /mnt/research/ShadeLab/WorkingSpace/Dunivin/xander/analysis/${SAMPL
 #take the list of matching reads (from sequencing)
 grep "^>" /mnt/research/ShadeLab/WorkingSpace/Dunivin/xander/analysis/${SAMPLE}/k45/${GENE}/cluster/*match_reads.fa | sed '0~1s/^.\{1\}//g' >${GENE}_matchreadlist.txt
 
-```
-#start in cluster directory from xander output to work in R!
-cd /mnt/research/ShadeLab/WorkingSpace/Dunivin/xander/analysis/${SAMPLE}/k45/${GENE}/cluster/
-load R, paste script into terminal:
-```
-#load R
+#start in cluster directory from xander output!
+#cd /mnt/research/ShadeLab/WorkingSpace/Dunivin/xander/analysis/${SAMPLE}/k45/${GENE}/cluster/
+cd /mnt/research/ShadeLab/WorkingSpace/Yeh/xander/cluster_example_aioA_cen10
+
+# swap and load the version of R you want to use here with module commands
 module load GNU/4.9
 module load OpenMPI/1.10.0
 module load R/3.3.0
-R
+ 
+# Run R Command with input script myRprogram.R
+#R script should read in files from the cluster and create 4 new files
+R < /mnt/research/ShadeLab/WorkingSpace/Yeh/xander/Assessment/assembly_assessmentR.R --no-save
 
-#load required packages
-library(ggplot2)
-library(dplyr)
-
-##COUNT NUMBER OF READ MATCHES
-#load packages
-library(dplyr)
-
-#read in file 
-data=read.table("matchreadlist.txt", header=FALSE)
-
-#count unique in query_id column
-reads=summarize(data, UniqueReads=length(unique(data$V1)),TotalReads=length(data$V1))
-
-#write results,change filename to include gene name, then move to home directory
-write.table(reads, "readssummary2.txt", row.names=FALSE)
-
-##KMER ABUND DISTRIBUTION
-#read in kmer abund file
-kmer=read.table(list.files(pattern = "_abundance.txt"), header=TRUE)
-
-#plot dist
-plot=ggplot(kmer, aes(x=kmer_abundance, y=frequency)) + geom_point() + labs(x="kmer abundance", y="Frequency")
-
-#save plot, change filename to include gene name, move to home
-ggsave("kmerabundancedist2.png", plot=last_plot(), width=4, height=4)
-
-##NUCL STATS 
-#read in stats on length
-stats=read.table("framebotstats.txt", header=FALSE)
-
-#calculate statistics
-results=summarise(stats, ProteinContigClusters.99=length(stats$V4),AverageLength=mean(stats$V4),MedianLength=median(stats$V4), MinLength.bp=min(stats$V4), MaxLength.bp=max(stats$V4), MaxPercentIdentity=max(stats$V6), MinPercentIdentity=min(stats$V6), AveragePercentIdentity=mean(stats$V6))
-
-#save results, move to home 
-write.table(results, "stats2.txt", row.names=FALSE)
-
-##BLAST STATS
-#read in blast results from above
-blast=read.delim("blast.txt", header=FALSE)
-
-#write column names based on blast search
-colnames(blast)=c("contig", "match", "eval")
-
-#calculate number of low quality sequences along with
-#the min, max, mean, and median e values
-evalues=summarize(blast, lowq=length(blast[,which(blast$eval>1e-2)]), min=min(blast$eval), max=max(blast$eval), avg=mean(blast$eval), median=median(blast$eval))
-
-#save results, move to home
-write.table(evalues, "e.values2.txt", row.names=FALSE)
-q()
-```
-
-Take the output and move them into wherever you want the files
-```
-#!/bin/bash
-
-GENE=$1
+#move R files to databases_${SAMPLE}
 
 mv readssummary2.txt ${GENE}_readssummary.txt
-mv ${GENE}_readssummary.txt /mnt/home/${USER}/examples/test/databases
+mv ${GENE}_readssummary.txt /mnt/home/${USER}/examples/test/databases_${SAMPLE}
 
 mv kmerabundancedist2.png ${GENE}_kmerabundancedist.png
-mv ${GENE}_kmerabundancedist.png /mnt/home/${USER}/examples/test/databases
+mv ${GENE}_kmerabundancedist.png /mnt/home/${USER}/examples/test/databases_${SAMPLE}
 
 mv stats2.txt ${GENE}_stats.txt
-mv ${GENE}_stats.txt /mnt/home/${USER}/examples/test/databases
+mv ${GENE}_stats.txt /mnt/home/${USER}/examples/test/databases_${SAMPLE}
 
 mv e.values2.txt ${GENE}_e.values.txt
-mv ${GENE}_e.values.txt /mnt/home/${USER}/examples/test/databases
-
+mv ${GENE}_e.values.txt /mnt/home/${USER}/examples/test/databases_${SAMPLE}
 ```
