@@ -385,7 +385,7 @@ mv ${SAMPLE}_${GENE}_gc_out.txt /mnt/research/ShadeLab/WorkingSpace/Yeh/xander/A
 to count number of unique gene descriptions and tally how many hits to each unique gene description, use commands 
 ```
 cat descriptor.blast | awk -F '[|[]' '{print $3}' > file.txt
-sort file.txt | uniq -cd > file2.txt
+sort file.txt | uniq -c > file2.txt
 ```
 That will create a file, file.txt, that contains all the gene descriptions. The command awk finds and replaces text and the -F flag is where you give the delimiters. In our case, since the descriptor.blast file has many lines that are organized like this: `>ref|WP_007602791.1| arsenite oxidase large subunit [Bradyrhizobium sp. WSM1253]`, we want the description that is between the | and [ characters. The `{print $3}'` tells awk to print the third column. Then the next command will print duplicate lines only, with counts, so the output file will look something like this: 
 ```
