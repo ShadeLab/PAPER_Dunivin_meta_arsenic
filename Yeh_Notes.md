@@ -300,8 +300,8 @@ python run_microbe_census.py /my-directory/Iowa_agricultural_4509401.3.qc.fastq.
 ```
 
 
-#### Xander automation:
-you have to type the gene and sample names after calling this script, for example if this script is called scriptName.sh, type "$./scriptName.sh arsB cen10" into the commandline
+#### Assembly Assessment Xander automation:
+you have to type the gene and sample name after calling this script, for example if this script is called scriptName.sh, type "$./scriptName.sh arsB cen10" into the commandline. This will create a folder "blastdatabases_SAMPLENAME" and put several files into that folder for the blast database, it will also make and put 4 files made from R into that folder: GENENAME_readssummary.txt, GENENAME_kmerabundancedist.png, GENENAME_stats.txt, and GENENAME_e.values.txt. Then it will find the GC content of the SAMPLENAME_GENENAME_45_final_nucl.fasta file and place the output of that in a folder called GENENAME_gc in my directory
 ```
 #!/bin/bash
 
@@ -337,6 +337,8 @@ grep "STATS" /mnt/research/ShadeLab/WorkingSpace/Dunivin/xander/analysis/${SAMPL
 #take the list of matching reads (from sequencing)
 grep "^>" /mnt/research/ShadeLab/WorkingSpace/Dunivin/xander/analysis/${SAMPLE}/k45/${GENE}/cluster/*match_reads.fa | sed '0~1s/^.\{1\}//g' >${GENE}_matchreadlist.txt
 
+# USE R TO CREATE STATISTIC FILES
+
 #start in cluster directory from xander output!
 #cd /mnt/research/ShadeLab/WorkingSpace/Dunivin/xander/analysis/${SAMPLE}/k45/${GENE}/cluster/
 cd /mnt/research/ShadeLab/WorkingSpace/Yeh/xander/cluster_example_aioA_cen10
@@ -363,4 +365,19 @@ mv ${GENE}_stats.txt /mnt/home/${USER}/examples/test/databases_${SAMPLE}
 
 mv e.values2.txt ${GENE}_e.values.txt
 mv ${GENE}_e.values.txt /mnt/home/${USER}/examples/test/databases_${SAMPLE}
+
+
+#GET GC COUNT OF THIS SAMPLE!
+
+cd /mnt/research/ShadeLab/WorkingSpace/Yeh/xander/Assessment
+
+#load perl
+module load perl/5.24.1
+#get GC count and put output into ${GENE}_gc folder
+./get_gc_counts.pl /mnt/research/ShadeLab/WorkingSpace/Dunivin/xander/analysis/${SAMPLE}/k45/${GENE}/cluster/${SAMPLE}_${GENE}_45_final_nucl.fasta
+
+mv gc_out.txt ${SAMPLE}_${GENE}_gc_out.txt
+mkdir ${GENE}_gc
+mv ${SAMPLE}_${GENE}_gc_out.txt /mnt/research/ShadeLab/WorkingSpace/Yeh/xander/Assessment/${GENE}_gc
+
 ```
