@@ -299,6 +299,7 @@ python run_microbe_census.py /my-directory/Iowa_agricultural_4509400.3.qc.fastq.
 python run_microbe_census.py /my-directory/Iowa_agricultural_4509401.3.qc.fastq.gz Iowa_agricultural_4509401.3_census
 ```
 
+## June 16, 2017
 
 #### Assembly Assessment Xander automation:
 you have to type the gene and sample name after calling this script, for example if this script is called scriptName.sh, type "$./scriptName.sh arsB cen10" into the commandline. This will create a folder "blastdatabases_SAMPLENAME" and put several files into that folder for the blast database, it will also make and put 4 files made from R into that folder: GENENAME_readssummary.txt, GENENAME_kmerabundancedist.png, GENENAME_stats.txt, and GENENAME_e.values.txt. Then it will find the GC content of the SAMPLENAME_GENENAME_45_final_nucl.fasta file and place the output of that in a folder called GENENAME_gc in my directory
@@ -394,3 +395,4 @@ That will create a file, file.txt, that contains all the gene descriptions. The 
       7  Arsenite oxidase large subunit
      12  arsenite oxidase large subunit, partial
 ```
+The output of all the files from Taylor's centralia data is in my directory called `/centralia_descriptors`
