@@ -1,6 +1,6 @@
 #### Susanna Yeh
-[June 2-8, 2017](https://github.com/ShadeLab/meta_arsenic/blob/master/Yeh_Notes.md#june-2-8-2017)
-[June 16, 2017](https://github.com/ShadeLab/meta_arsenic/blob/master/Yeh_Notes.md#june-16-2017)
+* [June 2-8, 2017](https://github.com/ShadeLab/meta_arsenic/blob/master/Yeh_Notes.md#june-2-8-2017)
+* [June 16, 2017](https://github.com/ShadeLab/meta_arsenic/blob/master/Yeh_Notes.md#june-16-2017)
 ## June 2-8, 2017
 
 #### Table of Contents:
