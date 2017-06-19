@@ -394,88 +394,44 @@ The output of all the files from Taylor's centralia data is in my directory call
 #### Xander results:
 *arsC_glut, arsC_thio, and arsD* uses `MIN_LENGTH=55  # minimum assembled protein contigs` because they are <150 aa long
 #### 1. Iowa_corn
-* mgm4539522.3
- * arsB: no cluster, aioA: no cluster, arrA: no cluster, acr3: cluster with `cen01_acr3_45` files
-
-* mgm4539523.3
- * arsB: no cluster, aioA: no cluster, arrA: no cluster, acr3: cluster with `cen01_acr3_45` files
-
+* mgm4539522.3: arsB: no cluster, aioA: no cluster, arrA: no cluster, acr3: cluster with `cen01_acr3_45` files
+* mgm4539523.3: arsB: no cluster, aioA: no cluster, arrA: no cluster, acr3: cluster with `cen01_acr3_45` files
 #### 2. Iowa_agricultural
-* mgm4509400.3
- * arsB: no cluster, aioA: cluster with `cen01_aioA_45` files, arrA: no cluster, acr3: cluster with `cen01_acr3_45` files
-
-* mgm4509401.3
- * arsB: no cluster, aioA: no cluster, arrA: no cluster, acr3: no cluster
-
+* mgm4509400.3: arsB: no cluster, aioA: cluster with `cen01_aioA_45` files, arrA: no cluster, acr3: cluster with `cen01_acr3_45` files
+* mgm4509401.3: arsB: no cluster, aioA: no cluster, arrA: no cluster, acr3: no cluster
 #### 3. Mangrove
-* mgm4603402.3
- * arsB: no cluster, aioA: cluster with ` cen01_aioA_45`
-  
-* mgm4603270.3
-* arsB: no cluster, aioA: cluster with ` cen01_aioA_45`
-
+* mgm4603402.3: arsB: no cluster, aioA: cluster with ` cen01_aioA_45`
+* mgm4603270.3: arsB: no cluster, aioA: cluster with ` cen01_aioA_45`
 #### 4. Permafrost_Russia
-* mgm4546812.3
-  
-* mgm4546813.3
-
+* mgm4546812.3:
+* mgm4546813.3:
 #### 5. Iowa_prairie
-* mgm4539575.3
- * working directory was wrong, redoing
-  
-* mgm4539572.3
- * search contigs failed for arsB, search contigs failed for aioA, search contigs failed for arrA, search contigs failed for acr3
-
-* mgm4539576.3
- * arsB; no cluster, aioA: cluster with `cen01_aioA_45` files
-
+* mgm4539575.3: working directory was wrong, redoing
+* mgm4539572.3: search contigs failed for arsB, search contigs failed for aioA, search contigs failed for arrA, search contigs failed for acr3
+* mgm4539576.3: arsB; no cluster, aioA: cluster with `cen01_aioA_45` files
 #### 6. Brazilian_forest
-* mgm4546395.3
- * arsB: no cluster, aioA: no cluster
-  
-* mgm4536139.3
- * arsB: no cluster, aioA: no cluster, arrA: no cluster, acr3: no cluster
-
-* mgm4535554.3
- * arsB: no cluster, aioA: cluster contains `cen01_aioA_45` files
-
+* mgm4546395.3: arsB: no cluster, aioA: no cluster
+* mgm4536139.3: arsB: no cluster, aioA: no cluster, arrA: no cluster, acr3: no cluster
+* mgm4535554.3: arsB: no cluster, aioA: cluster contains `cen01_aioA_45` files
 #### 7. Illinois_soybean
-* mgm4502542.3
- * arsB: no cluster, aioA: no cluster, arrA: no cluster, acr3: no cluster, 
-  
-* mgm4502540.3
- * arsB: no cluster, aioA: no cluster, arrA: no cluster, acr3: no cluster, 
-
+* mgm4502542.3: arsB: no cluster, aioA: no cluster, arrA: no cluster, acr3: no cluster, 
+* mgm4502540.3: arsB: no cluster, aioA: no cluster, arrA: no cluster, acr3: no cluster, 
 #### 8. Minnesota_creek
-* mgm4541646.3
-  
-* mgm4541645.3
-
+* mgm4541646.3:
+* mgm4541645.3: 
 #### 9. Disney_preserve
-* mgm4664918.3
- * arsB: no cluster, aioA: no cluster, arrA: no cluster, acr3: cluster with `cen01_acr3_45` files, arrA: no cluster, acr3: cluster with `cen01_acr3` files
-
-* mgm4664925.3
- * arsB: no cluster, aioA: no cluster, arrA: no cluster, acr3: cluster with `cen01_acr3_45` files
-
+* mgm4664918.3: arsB: no cluster, aioA: no cluster, arrA: no cluster, acr3: cluster with `cen01_acr3_45` files, arrA: no cluster, acr3: cluster with `cen01_acr3` files
+* mgm4664925.3: arsB: no cluster, aioA: no cluster, arrA: no cluster, acr3: cluster with `cen01_acr3_45` files
 #### 10. California_grassland
-* mgm4511115.3
- * arsB: cluster contains `cen01_arsB_45` files, aioA: no cluster, arrA: no cluster, acr3: cluster with `cen01_acr3_45` files
- 
+* mgm4511115.3: arsB: cluster contains `cen01_arsB_45` files, aioA: no cluster, arrA: no cluster, acr3: cluster with `cen01_acr3_45` files
 * mgm4511062.3
-
 #### 11. Illinois_soil
 * mgm4653791.3
  * arsB: no cluster, aioA: cluster with `cen01_aioA_` files, arrA: no cluster, acr3: cluster with `cen01_acr3_45` files, arx: no cluster
-  
-* mgm4653788.3
- * arsB: no cluster, aioA: NOT DONE YET, arrA: no cluster, acr3: cluster with `cen01_acr3_45` files, arxA: no cluster
-
+* mgm4653788.3: arsB: no cluster, aioA: NOT DONE YET, arrA: no cluster, acr3: cluster with `cen01_acr3_45` files, arxA: no cluster
 #### 12. Wyoming_soil
 * mgm4670122.3
 * mgm4670120.3
-
 #### 13. Permafrost_Canada  
 * mgm4523023.3
-
 * mgm4523145.3
