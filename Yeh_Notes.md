@@ -232,6 +232,10 @@ ProjectID: mgp13736
 
 ![gbasesvsgenomeeqpic](https://user-images.githubusercontent.com/28952961/27299060-01714570-54f9-11e7-9500-bc576fe6436f.png)
 
+#### Average Genome Size per Sample per Project
+
+![agspersample](https://user-images.githubusercontent.com/28952961/27301107-241c667a-5500-11e7-9f6f-59e94da6d334.png)
+
 
 ### Commands:
 To find the samples, go to http://metagenomics.anl.gov/mgmain.html?mgpage=search, enter the project ID in the search bar (ex. mgp79868), and choose the field to be project ID. Then all the samples will come up in that project. On the left, click on the gears/settings button and choose "bp count" and "file type". Then have the samples order themselves by bp count.
@@ -389,7 +393,6 @@ That will create a file, file.txt, that contains all the gene descriptions. The 
 ```
 The output of all the files from Taylor's centralia data is in my directory called `/centralia_descriptors`
 
-
 ## June 19, 2017
 #### Xander results:
 *arsC_glut, arsC_thio, and arsD* uses `MIN_LENGTH=55  # minimum assembled protein contigs` because they are <150 aa long
@@ -420,14 +423,13 @@ The output of all the files from Taylor's centralia data is in my directory call
 * mgm4541646.3:
 * mgm4541645.3: 
 #### 9. Disney_preserve
-* mgm4664918.3: arsB: no cluster, aioA: no cluster, arrA: no cluster, acr3: cluster with `cen01_acr3_45` files, arrA: no cluster, acr3: cluster with `cen01_acr3` files
+* mgm4664918.3: arsB: no cluster, aioA: no cluster, arrA: no cluster, acr3: cluster with `cen01_acr3_45` files, arrA: no cluster
 * mgm4664925.3: arsB: no cluster, aioA: no cluster, arrA: no cluster, acr3: cluster with `cen01_acr3_45` files
 #### 10. California_grassland
 * mgm4511115.3: arsB: cluster contains `cen01_arsB_45` files, aioA: no cluster, arrA: no cluster, acr3: cluster with `cen01_acr3_45` files
 * mgm4511062.3
 #### 11. Illinois_soil
-* mgm4653791.3
- * arsB: no cluster, aioA: cluster with `cen01_aioA_` files, arrA: no cluster, acr3: cluster with `cen01_acr3_45` files, arx: no cluster
+* mgm4653791.3: arsB: no cluster, aioA: cluster with `cen01_aioA_` files, arrA: no cluster, acr3: cluster with `cen01_acr3_45` files, arx: no cluster
 * mgm4653788.3: arsB: no cluster, aioA: NOT DONE YET, arrA: no cluster, acr3: cluster with `cen01_acr3_45` files, arxA: no cluster
 #### 12. Wyoming_soil
 * mgm4670122.3
