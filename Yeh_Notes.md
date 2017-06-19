@@ -1,6 +1,8 @@
 #### Susanna Yeh
 * [June 2-8, 2017](https://github.com/ShadeLab/meta_arsenic/blob/master/Yeh_Notes.md#june-2-8-2017)
 * [June 16, 2017](https://github.com/ShadeLab/meta_arsenic/blob/master/Yeh_Notes.md#june-16-2017)
+* June 19, 2017
+
 ## June 2-8, 2017
 
 #### Table of Contents:
@@ -164,11 +166,11 @@ These are the files I am downloading from MG-RAST and performing FastQC and Fast
 
 #### 10. California_grassland
 [ProjectID: mgp1992](http://metagenomics.anl.gov/mgmain.html?mgpage=project&project=mgp1992)
-* [Sample1](http://metagenomics.anl.gov/mgmain.html?mgpage=overview&metagenome=mgm4511061.3): mgm4511061.3; fastq file, most bp, 19% failed QC; 11,650,135,800 bp, 29G
+* ~~[Sample1](http://metagenomics.anl.gov/mgmain.html?mgpage=overview&metagenome=mgm4511061.3): mgm4511061.3; fastq file, most bp, 19% failed QC; 11,650,135,800 bp, 29G
   * FastQC: seq length: 100, Sanger/Illumina 1.9, per base seq qual not very good after 85, flagged per base sequence content, failed per sequence GC content, everything else looks good
   * FastX: used flag -Q33 (Illumina 1.9)
   * 11,650,135,800 bp in downloaded file -- good :)
-  * MicrobeCensus: average_genome_size:    41,173,627.473; total_bases:    11,084,443,800; genome_equivalents:     308.201884615
+  * MicrobeCensus: average_genome_size:    41,173,627.473; total_bases:    11,084,443,800; genome_equivalents:     308.201884615~~
   
 * [Sample2](http://metagenomics.anl.gov/mgmain.html?mgpage=overview&metagenome=mgm4511115.3): mgm4511115.3; fastq file, 2nd most bp, 10% failed QC; 7,009,796,000 bp, 18G
   * June 7: File size seems too small, I am downloading again under name "California_grassland_4511115.3_new.fastq"
@@ -176,6 +178,11 @@ These are the files I am downloading from MG-RAST and performing FastQC and Fast
   * 7,009,796,000 bp in downloaded file -- good :)
   * MicrobeCensus: average_genome_size:    7,414,208.05852; total_bases:    6,504,798,300; genome_equivalents:     877.342293156
 * Metadata from this project
+
+* [Sample 3](http://metagenomics.anl.gov/mgmain.html?mgpage=overview&metagenome=mgm4511062.3): mgm4511062.3; fastq file, 4rd most bp (sample with 3rd most bp had >30% failed QC), 22.8% failed QC; 5,909,734,300 bp, 15G
+
+
+* Metadata
 
 #### 11. Illinois_soil
 [ProjectID: mgp14596](http://metagenomics.anl.gov/mgmain.html?mgpage=project&project=mgp14596)
@@ -398,3 +405,95 @@ That will create a file, file.txt, that contains all the gene descriptions. The 
      12  arsenite oxidase large subunit, partial
 ```
 The output of all the files from Taylor's centralia data is in my directory called `/centralia_descriptors`
+
+
+## June 19, 2017
+#### Xander results:
+*arsC_glut, arsC_thio, and arsD* uses `MIN_LENGTH=55  # minimum assembled protein contigs` because they are <150 aa long
+#### 1. Iowa_corn
+* mgm4539522.3
+ * arsB: no cluster, aioA: no cluster, arrA: no cluster, acr3: cluster with `cen01_acr3_45` files
+
+* mgm4539523.3
+ * arsB: no cluster, aioA: no cluster, arrA: no cluster, acr3: cluster with `cen01_acr3_45` files
+
+#### 2. Iowa_agricultural
+* mgm4509400.3
+ * arsB: no cluster, aioA: cluster with `cen01_aioA_45` files, arrA: no cluster, acr3: cluster with `cen01_acr3_45` files
+
+* mgm4509401.3
+ * arsB: no cluster, aioA: no cluster, arrA: no cluster, acr3: no cluster
+
+#### 3. Mangrove
+* mgm4603402.3
+ * arsB: no cluster, aioA: cluster with ` cen01_aioA_45`
+  
+* mgm4603270.3
+* arsB: no cluster, aioA: cluster with ` cen01_aioA_45`
+
+#### 4. Permafrost_Russia
+* mgm4546812.3
+  
+* mgm4546813.3
+
+#### 5. Iowa_prairie
+* mgm4539575.3
+ * working directory was wrong, redoing
+  
+* mgm4539572.3
+ * search contigs failed for arsB, search contigs failed for aioA, search contigs failed for arrA, search contigs failed for acr3
+
+* mgm4539576.3
+ * arsB; no cluster, aioA: cluster with `cen01_aioA_45` files
+
+#### 6. Brazilian_forest
+* mgm4546395.3
+ * arsB: no cluster, aioA: no cluster
+  
+* mgm4536139.3
+ * arsB: no cluster, aioA: no cluster, arrA: no cluster, acr3: no cluster
+
+* mgm4535554.3
+ * arsB: no cluster, aioA: cluster contains `cen01_aioA_45` files
+
+#### 7. Illinois_soybean
+* mgm4502542.3
+ * arsB: no cluster, aioA: no cluster, arrA: no cluster, acr3: no cluster, 
+  
+* mgm4502540.3
+ * arsB: no cluster, aioA: no cluster, arrA: no cluster, acr3: no cluster, 
+
+#### 8. Minnesota_creek
+* mgm4541646.3
+  
+* mgm4541645.3
+
+#### 9. Disney_preserve
+* mgm4664918.3
+ * arsB: no cluster, aioA: no cluster, arrA: no cluster, acr3: cluster with `cen01_acr3_45` files, arrA: no cluster, acr3: cluster with `cen01_acr3` files
+
+* mgm4664925.3
+ * arsB: no cluster, aioA: no cluster, arrA: no cluster, acr3: cluster with `cen01_acr3_45` files
+
+#### 10. California_grassland
+* mgm4511115.3
+ * arsB: cluster contains `cen01_arsB_45` files, aioA: no cluster, arrA: no cluster, acr3: cluster with `cen01_acr3_45` files
+ 
+* mgm4511062.3
+
+#### 11. Illinois_soil
+* mgm4653791.3
+ * arsB: no cluster, aioA: cluster with `cen01_aioA_` files, arrA: no cluster, acr3: cluster with `cen01_acr3_45` files, arx: no cluster
+  
+* mgm4653788.3
+ * arsB: no cluster, aioA: NOT DONE YET, arrA: no cluster, acr3: cluster with `cen01_acr3_45` files, arxA: no cluster
+
+#### 12. Wyoming_soil
+* mgm4670122.3
+* mgm4670120.3
+
+#### 13. Permafrost_Canada  
+* mgm4523023.3
+
+* mgm4523145.3
+
