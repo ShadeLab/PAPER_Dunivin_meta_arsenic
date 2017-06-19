@@ -19,6 +19,7 @@
 * [Illinois_soil](https://github.com/ShadeLab/meta_arsenic/blob/master/Yeh_Notes.md#11-illinois_soil)
 * [Wyoming_soil](https://github.com/ShadeLab/meta_arsenic/blob/master/Yeh_Notes.md#12-wyoming_soil)
 * [Permafrost_Canada](https://github.com/ShadeLab/meta_arsenic/blob/master/Yeh_Notes.md#13-permafrost_canada)
+* [Plots]
 * [Workflow](https://github.com/ShadeLab/meta_arsenic/blob/master/Yeh_Notes.md#commands)
 
 These are the files I am downloading from MG-RAST and performing FastQC and FastX on:
@@ -249,6 +250,12 @@ ProjectID: mgp79868
 
 #### Contaminated_China file is in fna format, so I did not download
 ProjectID: mgp13736
+
+#### Plots:
+#### Gbases vs Genome Equivalents
+
+![gbasesvsgenomeeqpic](https://user-images.githubusercontent.com/28952961/27299060-01714570-54f9-11e7-9500-bc576fe6436f.png)
+
 
 #### Commands:
 To find the samples, go to http://metagenomics.anl.gov/mgmain.html?mgpage=search, enter the project ID in the search bar (ex. mgp79868), and choose the field to be project ID. Then all the samples will come up in that project. On the left, click on the gears/settings button and choose "bp count" and "file type". Then have the samples order themselves by bp count.
@@ -496,4 +503,3 @@ The output of all the files from Taylor's centralia data is in my directory call
 * mgm4523023.3
 
 * mgm4523145.3
-
