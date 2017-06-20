@@ -1,7 +1,7 @@
 #### Susanna Yeh
 * [June 2-8, 2017](https://github.com/ShadeLab/meta_arsenic/blob/master/Yeh_Notes.md#june-2-8-2017)
 * [June 16, 2017](https://github.com/ShadeLab/meta_arsenic/blob/master/Yeh_Notes.md#june-16-2017)
-* [June 19, 2017](https://github.com/ShadeLab/meta_arsenic/blob/master/Yeh_Notes.md#june-19-2017)
+* [June 19-20, 2017](https://github.com/ShadeLab/meta_arsenic/blob/master/Yeh_Notes.md#june-19-2017)
 
 ## June 2-8, 2017
 
@@ -168,6 +168,8 @@ These are the files I am downloading from MG-RAST and performing FastQC and Fast
   * MicrobeCensus: average_genome_size:    7,414,208.05852; total_bases:    6,504,798,300; genome_equivalents:     877.342293156
 * Metadata from this project
 * [Sample 3](http://metagenomics.anl.gov/mgmain.html?mgpage=overview&metagenome=mgm4511062.3): mgm4511062.3; fastq file, 4rd most bp (sample with 3rd most bp had >30% failed QC), 22.8% failed QC; 5,909,734,300 bp, 15G
+  * FastQC: seq length 100, Sanger/Illumina 1.9, per base quality not very good above 85, failed per tile seq, per base seq content not vey good below 10, flagged per seq GC content, failed Kmer content
+  * 5,909,734,300 bp -- good :)
 * Metadata
 
 #### 11. Illinois_soil
@@ -395,7 +397,8 @@ The output of all the files from Taylor's centralia data is in my directory call
 
 ## June 19, 2017
 #### Xander results:
-*arsC_glut, arsC_thio, and arsD* uses `MIN_LENGTH=55  # minimum assembled protein contigs` because they are <150 aa long
+*arsC_glut, arsC_thio, and arsD* uses `MIN_LENGTH=50  # minimum assembled protein contigs` because they are <150 aa long
+* some of my clusters have files beginning with the name `cen01` because I forgot to change the name 
 #### 1. Iowa_corn
 * mgm4539522.3: arsB: no cluster, aioA: no cluster, arrA: no cluster, acr3: cluster with `cen01_acr3_45` files
 * mgm4539523.3: arsB: no cluster, aioA: no cluster, arrA: no cluster, acr3: cluster with `cen01_acr3_45` files
@@ -418,7 +421,7 @@ The output of all the files from Taylor's centralia data is in my directory call
 * mgm4535554.3: arsB: no cluster, aioA: cluster contains `cen01_aioA_45` files
 #### 7. Illinois_soybean
 * mgm4502542.3: arsB: no cluster, aioA: no cluster, arrA: no cluster, acr3: no cluster, 
-* mgm4502540.3: arsB: no cluster, aioA: no cluster, arrA: no cluster, acr3: no cluster, 
+* mgm4502540.3: arsB: no cluster, aioA: no cluster, arrA: no cluster, acr3: no cluster, arxA: no cluster
 #### 8. Minnesota_creek
 * mgm4541646.3:
 * mgm4541645.3: 
@@ -430,7 +433,7 @@ The output of all the files from Taylor's centralia data is in my directory call
 * mgm4511062.3
 #### 11. Illinois_soil
 * mgm4653791.3: arsB: no cluster, aioA: cluster with `cen01_aioA_` files, arrA: no cluster, acr3: cluster with `cen01_acr3_45` files, arx: no cluster
-* mgm4653788.3: arsB: no cluster, aioA: NOT DONE YET, arrA: no cluster, acr3: cluster with `cen01_acr3_45` files, arxA: no cluster
+* mgm4653788.3: arsB: no cluster, aioA: cluter with `IllSoil88.3_aioA` files, arrA: no cluster, acr3: cluster with `cen01_acr3_45` files, arxA: no cluster
 #### 12. Wyoming_soil
 * mgm4670122.3
 * mgm4670120.3
