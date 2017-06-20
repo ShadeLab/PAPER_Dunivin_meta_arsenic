@@ -232,11 +232,15 @@ ProjectID: mgp13736
 ### Plots:
 #### Gbases vs Genome Equivalents
 
-![gbasesvsgenomeeqpic](https://user-images.githubusercontent.com/28952961/27299060-01714570-54f9-11e7-9500-bc576fe6436f.png)
+![gbasesvsgenomeeqpic](https://user-images.githubusercontent.com/28952961/27347468-af056980-55be-11e7-9efb-1e83d2b6e5ce.png)
 
 #### Average Genome Size per Sample per Project
 
 ![agspersample](https://user-images.githubusercontent.com/28952961/27301107-241c667a-5500-11e7-9f6f-59e94da6d334.png)
+
+#### AGS per biome
+
+![boxplot_biomeags](https://user-images.githubusercontent.com/28952961/27347358-50d565ea-55be-11e7-9924-7d9e929a961c.png)
 
 
 ### Commands:
@@ -569,7 +573,7 @@ to count number of unique gene descriptions and tally how many hits to each uniq
 cat descriptor.blast | awk -F '[|[]' '{print $3}' > file.txt
 sort file.txt | uniq -c > file2.txt
 ```
-That will create a file, file.txt, that contains all the gene descriptions. The command awk finds and replaces text and the -F flag is where you give the delimiters. In our case, since the descriptor.blast file has many lines that are organized like this: `>ref|WP_007602791.1| arsenite oxidase large subunit [Bradyrhizobium sp. WSM1253]`, we want the description that is between the | and [ characters. The `{print $3}'` tells awk to print the third column. Then the next command will print duplicate lines only, with counts, so the output file will look something like this: 
+That will create a file, file.txt, that contains all the gene descriptions. The command awk finds and replaces text and the -F flag is where you give the delimiters. In our case, since the descriptor.blast file has many lines that are organized like this: `>ref|WP_007602791.1| arsenite oxidase large subunit [Bradyrhizobium sp. WSM1253]`, we want the description that is between the | and [ characters. The `{print $3}'` tells awk to print the third column. Then the next command will create a file of the unique lines, with counts, so the output file will look something like this: 
 ```
      12  arsenate reductase (azurin)
      58  arsenite oxidase large subunit
@@ -581,7 +585,7 @@ The output of all the files from Taylor's centralia data is in my directory call
 ## June 19, 2017
 #### Xander results:
 *arsC_glut, arsC_thio, and arsD* uses `MIN_LENGTH=50  # minimum assembled protein contigs` because they are <150 aa long
-* some of my clusters have files beginning with the name `cen01` because I forgot to change the name 
+* some of my clusters have files beginning with the name `cen01_45` because I forgot to change the name 
 #### 1. Iowa_corn
 * mgm4539522.3: arsB: no cluster, aioA: no cluster, arrA: no cluster, acr3: cluster with `cen01_acr3_45` files
 * mgm4539523.3: arsB: no cluster, aioA: no cluster, arrA: no cluster, acr3: cluster with `cen01_acr3_45` files
@@ -601,7 +605,7 @@ The output of all the files from Taylor's centralia data is in my directory call
 #### 6. Brazilian_forest
 * mgm4546395.3: arsB: no cluster, aioA: no cluster
 * mgm4536139.3: arsB: no cluster, aioA: no cluster, arrA: no cluster, acr3: no cluster
-* mgm4535554.3: arsB: no cluster, aioA: cluster contains `cen01_aioA_45` files
+* mgm4535554.3: arsB: no cluster, aioA: cluster contains `cen01_aioA_45` files, arrA: no cluster, acr3: no cluster
 #### 7. Illinois_soybean
 * mgm4502542.3: arsB: no cluster, aioA: no cluster, arrA: no cluster, acr3: no cluster, 
 * mgm4502540.3: arsB: no cluster, aioA: no cluster, arrA: no cluster, acr3: no cluster, arxA: no cluster
