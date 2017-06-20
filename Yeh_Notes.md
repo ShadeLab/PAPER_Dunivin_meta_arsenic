@@ -298,6 +298,8 @@ python run_microbe_census.py /my-directory/Iowa_agricultural_4509401.3.qc.fastq.
 ```
 
 ## June 16, 2017
+* [Assembly Assessment](https://github.com/ShadeLab/meta_arsenic/blob/master/Yeh_Notes.md#assembly-assessment-xander-automation)
+* [Assessment by Gene](https://github.com/ShadeLab/meta_arsenic/blob/master/Yeh_Notes.md#assessment-by-gene)
 
 #### Assembly Assessment Xander automation:
 you have to type the gene and sample name after calling this script, for example if this script is called scriptName.sh, type "$./scriptName.sh arsB cen10" into the commandline. This will create a folder "blastdatabases_SAMPLENAME" and put several files into that folder for the blast database, it will also make and put 4 files made from R into that folder: GENENAME_readssummary.txt, GENENAME_kmerabundancedist.png, GENENAME_stats.txt, and GENENAME_e.values.txt. Then it will find the GC content of the SAMPLENAME_GENENAME_45_final_nucl.fasta file and place the output of that in a folder called GENENAME_gc in my directory
@@ -313,9 +315,9 @@ SAMPLE=$2
 module load GNU/4.4.5
 module load Gblastn/2.28
 
-#switch into correct directory. (Not sure which directory you want)
+#switch into correct directory. (EDIT THIS-- Not sure which directory you want)
 #cd /mnt/research/ShadeLab/WorkingSpace/Yeh/xander/Assessment
-cd /mnt/home/${USER}/examples/test
+#cd /mnt/home/${USER}/examples/test
 mkdir databases_${SAMPLE}
 cd databases_${SAMPLE}
 
@@ -351,23 +353,23 @@ module load R/3.3.0
 #R script should read in files from the cluster and create 4 new files
 R < /mnt/research/ShadeLab/WorkingSpace/Yeh/xander/Assessment/assembly_assessmentR.R --no-save
 
-#move R files to databases_${SAMPLE}
+#move R files to databases_${SAMPLE} -- EDIT THIS to fit what you want!!!
 
 mv readssummary2.txt ${GENE}_readssummary.txt
-mv ${GENE}_readssummary.txt /mnt/home/${USER}/examples/test/databases_${SAMPLE}
+#EDIT THIS: mv ${GENE}_readssummary.txt /mnt/home/${USER}/examples/test/databases_${SAMPLE}
 
 mv kmerabundancedist2.png ${GENE}_kmerabundancedist.png
-mv ${GENE}_kmerabundancedist.png /mnt/home/${USER}/examples/test/databases_${SAMPLE}
+#EDIT THIS: mv ${GENE}_kmerabundancedist.png /mnt/home/${USER}/examples/test/databases_${SAMPLE}
 
 mv stats2.txt ${GENE}_stats.txt
-mv ${GENE}_stats.txt /mnt/home/${USER}/examples/test/databases_${SAMPLE}
+#EDIT THIS: mv ${GENE}_stats.txt /mnt/home/${USER}/examples/test/databases_${SAMPLE}
 
 mv e.values2.txt ${GENE}_e.values.txt
-mv ${GENE}_e.values.txt /mnt/home/${USER}/examples/test/databases_${SAMPLE}
+#EDIT THIS: mv ${GENE}_e.values.txt /mnt/home/${USER}/examples/test/databases_${SAMPLE}
 
 
-#GET GC COUNT OF THIS SAMPLE!
-
+#GET GC COUNT OF THIS SAMPLE
+#EDIT THIS to include the directory you want:
 cd /mnt/research/ShadeLab/WorkingSpace/Yeh/xander/Assessment
 
 #load perl
@@ -377,8 +379,189 @@ module load perl/5.24.1
 
 mv gc_out.txt ${SAMPLE}_${GENE}_gc_out.txt
 mkdir ${GENE}_gc
-mv ${SAMPLE}_${GENE}_gc_out.txt /mnt/research/ShadeLab/WorkingSpace/Yeh/xander/Assessment/${GENE}_gc
+#EDIT THIS: mv ${SAMPLE}_${GENE}_gc_out.txt /mnt/research/ShadeLab/WorkingSpace/Yeh/xander/Assessment/${GENE}_gc
 
+```
+This is the R file assembly_assessmentR.R used:
+```
+# load required packages
+library(ggplot2)
+library(dplyr)
+
+# COUNT NUMBER OF READ MATCHES
+# load packages
+library(dplyr)
+
+# read in file
+data=read.table("matchreadlist.txt", header=FALSE)
+
+# count unique in query_id column
+reads=summarize(data, UniqueReads=length(unique(data$V1)),TotalReads=length(data$V1))
+
+# write results,change filename to include gene name, then move to home directory
+write.table(reads, "readssummary2.txt", row.names=FALSE)
+
+# KMER ABUND DISTRIBUTION
+# read in kmer abund file
+kmer=read.table(list.files(pattern = "_abundance.txt"), header=TRUE)
+
+# plot dist
+plot=ggplot(kmer, aes(x=kmer_abundance, y=frequency)) + geom_point() + labs(x="kmer abundance", y="Frequency")
+
+# save plot, change filename to include gene name, move to home
+ggsave("kmerabundancedist2.png", plot=last_plot(), width=4, height=4)
+
+# NUCL STATS
+# read in stats on length
+stats=read.table("framebotstats.txt", header=FALSE)
+
+# calculate statistics
+results=summarise(stats, ProteinContigClusters.99=length(stats$V4),AverageLength=mean(stats$V4),MedianLength=median(stats$V
+4), MinLength.bp=min(stats$V4), MaxLength.bp=max(stats$V4), MaxPercentIdentity=max(stats$V6), MinPercentIdentity=min(stats$
+V6), AveragePercentIdentity=mean(stats$V6))
+
+# save results, move to home
+write.table(results, "stats2.txt", row.names=FALSE)
+
+# BLAST STATS
+# read in blast results from above
+blast=read.delim("blast.txt", header=FALSE)
+
+# write column names based on blast search
+colnames(blast)=c("contig", "match", "eval")
+
+# calculate number of low quality sequences along with
+# the min, max, mean, and median e values
+evalues=summarize(blast, lowq=length(blast[,which(blast$eval>1e-2)]), min=min(blast$eval), max=max(blast$eval), avg=mean(bl
+ast$eval), median=median(blast$eval))
+
+# save results
+write.table(evalues, "e.values2.txt", row.names=FALSE)
+```
+This is the Perl file used to get the GC counts:
+```
+#!/usr/bin/perl -w
+####################################################################################################
+### Get GC Content                                                                               ###
+### Usage: get_gc_content.pl <fasta file>                                                        ###
+### This program takes a fasta file as it's first (and only) parameter.                          ###
+###                                                                                              ###
+### It returns a tab delimited file (gc_out.txt): column 1 = header ID (everything between ">"   ###
+### and the first space in the header), and column 2 = gc content for the fasta entry.           ###
+###                                                                                              ###
+### Jennifer Meneghin                                                                            ###
+### July 23, 2009                                                                                ###
+###                                                                                              ###
+### This script now works properly with sequences that contain spaces.                           ###
+### September 20, 2010                                                                           ###
+###                                                                                              ###
+### This script now also returns the total nucleotide count, along with the number of of         ###
+### A's, G's, C's and T's for each fasta record.                                                 ###
+### September 21, 2010                                                                           ###
+####################################################################################################
+#--------------------------------------------------------------------------------------------------------------------------
+-
+#Deal with passed parameters
+#--------------------------------------------------------------------------------------------------------------------------
+-
+
+if ($#ARGV == -1) {
+    usage();
+    exit;
+}
+$fasta_file = $ARGV[0];
+$out_file = "gc_out.txt";
+unless ( open(IN, "$fasta_file") ) {
+    print "Got a bad fasta file: $fasta_file\n\n";
+    exit;
+}
+unless ( open(OUT, ">$out_file") ) {
+    print "Couldn't create $out_file\n";
+    exit;
+}
+print "Parameters:\nfasta file = $fasta_file\noutput file = $out_file\n\n";
+#--------------------------------------------------------------------------------------------------------------------------
+-
+#The main event
+#--------------------------------------------------------------------------------------------------------------------------
+-
+print OUT "ID\t% GCContent\tTotal Count\tG Count\tC Count\tA Count\tT Count\n";
+$seq = "";
+while (<IN>) {
+    chomp;
+    if (/^>/) {
+    #finish up previous line.
+    if (length($seq) > 0) {
+        &process_it;
+    }
+    #start new line.
+    $id = $_;
+    $id =~ s/^>(.+?)\s.+$/$1/g;
+    print OUT "$id\t";
+    }
+    else {
+    $seq = $seq . $_;
+    }
+}
+
+#finish up last line.
+&process_it;
+
+close(IN);
+close(OUT);
+
+sub usage {
+    print "Get GC Content\n";
+    print "Usage: get_gc_content.pl <fasta file>\n";
+    print "This program takes a fasta file as it's first (and only) parameter.\n\n";
+    print "It returns a tab delimited file (gc_out.txt): column 1 = header ID (everything between \">\"\n";
+    print "and the first space in the header), and column 2 = gc content for the fasta entry.\n\n";
+    print "Jennifer Meneghin\n";
+    print "July 23, 2009\n\n";
+    print "Updated September 20, 2010:\n";
+    print "This script now works properly with sequences that contain spaces.\n\n";
+    print "Updated September 21, 2010:\n";
+    print "This script now also returns the total nucleotide count, along with the number of of A's, G's, C's and T's for e
+ach fasta record.\n\n";
+}
+
+sub process_it {
+    @letters = split(//, $seq);
+    $gccount = 0;
+    $totalcount = 0;
+    $acount = 0;
+    $tcount = 0;
+    $gcount = 0;
+    $ccount = 0;
+    foreach $i (@letters) {
+    if (lc($i) =~ /[a-z]/) {
+        $totalcount++;
+    }
+    if (lc($i) eq "g" || lc($i) eq "c") {
+        $gccount++;
+    }
+    if (lc($i) eq "a") {
+        $acount++;
+    }
+    if (lc($i) eq "t") {
+        $tcount++;
+    }
+    if (lc($i) eq "g") {
+        $gcount++;
+    }
+    if (lc($i) eq "c") {
+        $ccount++;
+    }
+    }
+    if ($totalcount > 0) {
+    $gccontent = (100 * $gccount) / $totalcount;
+    }
+    else {
+    $gccontent = 0;
+    }
+    print OUT "$gccontent\t$totalcount\t$gcount\t$ccount\t$acount\t$tcount\n";
+    $seq = "";
+}
 ```
 #### Assessment by Gene:
 to count number of unique gene descriptions and tally how many hits to each unique gene description, use commands 
