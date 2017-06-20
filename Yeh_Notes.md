@@ -586,44 +586,34 @@ The output of all the files from Taylor's centralia data is in my directory call
 #### Xander results:
 *arsC_glut, arsC_thio, and arsD* uses `MIN_LENGTH=50  # minimum assembled protein contigs` because they are <150 aa long
 * some of my clusters have files beginning with the name `cen01_45` because I forgot to change the name 
-#### 1. Iowa_corn
-* mgm4539522.3: arsB: no cluster, aioA: no cluster, arrA: no cluster, acr3: cluster with `cen01_acr3_45` files
-* mgm4539523.3: arsB: no cluster, aioA: no cluster, arrA: no cluster, acr3: cluster with `cen01_acr3_45` files
-#### 2. Iowa_agricultural
-* mgm4509400.3: arsB: no cluster, aioA: cluster with `cen01_aioA_45` files, arrA: no cluster, acr3: cluster with `cen01_acr3_45` files
-* mgm4509401.3: arsB: no cluster, aioA: no cluster, arrA: no cluster, acr3: no cluster
-#### 3. Mangrove
-* mgm4603402.3: arsB: no cluster, aioA: cluster with ` cen01_aioA_45`
-* mgm4603270.3: arsB: no cluster, aioA: cluster with ` cen01_aioA_45`
-#### 4. Permafrost_Russia
-* mgm4546812.3:
-* mgm4546813.3:
-#### 5. Iowa_prairie
-* mgm4539575.3: working directory was wrong, redoing
-* mgm4539572.3: search contigs failed for arsB, search contigs failed for aioA, search contigs failed for arrA, search contigs failed for acr3
-* mgm4539576.3: arsB; no cluster, aioA: cluster with `cen01_aioA_45` files
-#### 6. Brazilian_forest
-* mgm4546395.3: arsB: no cluster, aioA: no cluster
-* mgm4536139.3: arsB: no cluster, aioA: no cluster, arrA: no cluster, acr3: no cluster
-* mgm4535554.3: arsB: no cluster, aioA: cluster contains `cen01_aioA_45` files, arrA: no cluster, acr3: no cluster
-#### 7. Illinois_soybean
-* mgm4502542.3: arsB: no cluster, aioA: no cluster, arrA: no cluster, acr3: no cluster, 
-* mgm4502540.3: arsB: no cluster, aioA: no cluster, arrA: no cluster, acr3: no cluster, arxA: no cluster
-#### 8. Minnesota_creek
-* mgm4541646.3:
-* mgm4541645.3: 
-#### 9. Disney_preserve
-* mgm4664918.3: arsB: no cluster, aioA: no cluster, arrA: no cluster, acr3: cluster with `cen01_acr3_45` files, arrA: no cluster
-* mgm4664925.3: arsB: no cluster, aioA: no cluster, arrA: no cluster, acr3: cluster with `cen01_acr3_45` files
-#### 10. California_grassland
-* mgm4511115.3: arsB: cluster contains `cen01_arsB_45` files, aioA: no cluster, arrA: no cluster, acr3: cluster with `cen01_acr3_45` files
-* mgm4511062.3
-#### 11. Illinois_soil
-* mgm4653791.3: arsB: no cluster, aioA: cluster with `cen01_aioA_` files, arrA: no cluster, acr3: cluster with `cen01_acr3_45` files, arx: no cluster
-* mgm4653788.3: arsB: no cluster, aioA: cluter with `IllSoil88.3_aioA` files, arrA: no cluster, acr3: cluster with `cen01_acr3_45` files, arxA: no cluster
-#### 12. Wyoming_soil
-* mgm4670122.3
-* mgm4670120.3
-#### 13. Permafrost_Canada  
-* mgm4523023.3
-* mgm4523145.3
+
+| | arsB  | aioA | arrA | acr3 | arxA | arsC_glut | arsC_thio | arsD | arsM |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Iowa_corn22.3 | -  | - | - | cluster | arxA | arsC_glut | arsC_thio | arsD | arsM |
+| IowaCorn23.3  | -  | - | - | cluster | arxA | arsC_glut | arsC_thio | arsD | arsM |
+| Iowa_agricultural00.3  | -  | cluster | - | cluster | arxA | arsC_glut | arsC_thio | arsD | arsM |
+| Iowa_agricultural01.3  | -  | - | - | - | arxA | arsC_glut | arsC_thio | arsD | arsM |
+| Mangrove02.3  | -  | cluster | arrA | acr3 |  arxA | arsC_glut | arsC_thio | arsD | arsM |
+| Mangrove70.3  | -  | cluster | arrA | acr3 |  arxA | arsC_glut | arsC_thio | arsD | arsM |
+| Permafrost_Russia12.3  | arsB  | aioA | arrA | acr3 | arxA | arsC_glut | arsC_thio | arsD | arsM |
+| Permafrost_Russia13.3  | arsB  | aioA | arrA | acr3 | arxA | arsC_glut | arsC_thio | arsD | arsM |
+| Iowa_prairie75.3  | arsB  | aioA | arrA | acr3 | arxA | arsC_glut | arsC_thio | arsD | arsM |
+| Iowa_prairie72.3  | search contigs failed  | search contigs failed | search contigs failed | search contigs failed | arxA | arsC_glut | arsC_thio | arsD | arsM |
+| Iowa_prairie76.3  | - | cluster | arrA | acr3 | arxA | arsC_glut | arsC_thio | arsD | arsM |
+| Brazilian_forest95.3  | - | - | arrA | acr3 | arxA | arsC_glut | arsC_thio | arsD | arsM |
+| Brazilian_forest39.3  | -  | - | - | - | arxA | arsC_glut | arsC_thio | arsD | arsM |
+| Brazilian_forest54.3  | -  | cluster | - | - | arxA | arsC_glut | arsC_thio | arsD | arsM |
+| Illinois_soybean42.3  | -  | - | - | - | - | arsC_glut | arsC_thio | arsD | arsM |
+| Illinois_soybean40.3  | -  | - | - | - | - | arsC_glut | arsC_thio | arsD | arsM |
+| Minnesota_creek46.3  | arsB  | aioA | arrA | acr3 | arxA | arsC_glut | arsC_thio | arsD | arsM |
+| Minnesota_creek45.3  | arsB  | aioA | arrA | acr3 | arxA | arsC_glut | arsC_thio | arsD | arsM |
+| Disney_preserve18.3  | -  | - | - | cluster | - | arsC_glut | arsC_thio | arsD | arsM |
+| Disney_preserve25.3  | -  | - | - | cluster | arxA | arsC_glut | arsC_thio | arsD | arsM |
+| California_grassland15.3  | cluster  | - | arrA | acr3 | arxA | arsC_glut | arsC_thio | arsD | arsM |
+| California_grassland62.3  | arsB  | aioA | arrA | acr3 | arxA | arsC_glut | arsC_thio | arsD | arsM |
+| Illinois_soil91.3  | -  | cluster | - | cluster | arxA | arsC_glut | arsC_thio | arsD | arsM |
+| Illinois_soil88.3  | -  | cluster | - | cluster | - | arsC_glut | arsC_thio | arsD | arsM |
+| Wyoming_soil20.3  | -  | aioA | arrA | acr3 | arxA | arsC_glut | arsC_thio | arsD | arsM |
+| Wyoming_soil22.3  | -  | - | arrA | acr3 | arxA | arsC_glut | arsC_thio | arsD | arsM |
+| Permafrost_Canada23.3  | arsB  | aioA | arrA | acr3 | arxA | arsC_glut | arsC_thio | arsD | arsM |
+| Permafrost_Canada45.3  | arsB  | aioA | arrA | acr3 | arxA | arsC_glut | arsC_thio | arsD | arsM |
