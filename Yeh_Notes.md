@@ -236,7 +236,7 @@ ProjectID: mgp13736
 
 #### Average Genome Size per Sample per Project
 
-![agspersample](https://user-images.githubusercontent.com/28952961/27301107-241c667a-5500-11e7-9f6f-59e94da6d334.png)
+![agspersample](https://user-images.githubusercontent.com/28952961/27347725-93bb1eee-55bf-11e7-8c49-4e2e7585e303.png)
 
 #### AGS per biome
 
