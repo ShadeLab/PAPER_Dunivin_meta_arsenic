@@ -595,8 +595,8 @@ The output of all the files from Taylor's centralia data is in my directory call
 | Iowa_agricultural01.3  | -  | - | - | - | - | arsC_glut | arsC_thio | arsD | arsM |
 | Mangrove02.3  | -  | cluster | arrA | acr3 |  arxA | arsC_glut | arsC_thio | arsD | arsM |
 | Mangrove70.3  | -  | cluster | arrA | acr3 |  arxA | arsC_glut | arsC_thio | arsD | arsM |
-| Permafrost_Russia12.3  | arsB  | aioA | arrA | acr3 | arxA | arsC_glut | arsC_thio | arsD | arsM |
-| Permafrost_Russia13.3  | arsB  | aioA | arrA | acr3 | arxA | arsC_glut | arsC_thio | arsD | arsM |
+| Permafrost_Russia12.3  | -  | aioA | arrA | acr3 | arxA | arsC_glut | arsC_thio | arsD | arsM |
+| Permafrost_Russia13.3  | -  | aioA | arrA | acr3 | arxA | arsC_glut | arsC_thio | arsD | arsM |
 | Iowa_prairie75.3  | arsB  | aioA | arrA | acr3 | arxA | arsC_glut | arsC_thio | arsD | arsM |
 | Iowa_prairie72.3  | search contigs failed  | search contigs failed | search contigs failed | search contigs failed | get uniq starting kmers failed for arxA | arsC_glut | arsC_thio | arsD | arsM |
 | Iowa_prairie76.3  | - | cluster | arrA | acr3 | arxA | arsC_glut | arsC_thio | arsD | arsM |
@@ -612,7 +612,7 @@ The output of all the files from Taylor's centralia data is in my directory call
 | California_grassland15.3  | cluster  | - | - | cluster | get uniq starting kmers failed for arxA | arsC_glut | arsC_thio | arsD | arsM |
 | California_grassland62.3  | arsB  | aioA | arrA | acr3 | arxA | arsC_glut | arsC_thio | arsD | arsM |
 | Illinois_soil91.3  | -  | cluster | - | cluster | - | cluster | cluster | arsD | arsM |
-| Illinois_soil88.3  | -  | cluster | - | cluster | - | cluster | cluster | arsD | arsM |
+| Illinois_soil88.3  | -  | cluster | - | cluster | - | cluster | cluster | cluster | arsM |
 | Wyoming_soil20.3  | -  | aioA | arrA | acr3 | arxA | arsC_glut | arsC_thio | arsD | arsM |
 | Wyoming_soil22.3  | -  | - | arrA | acr3 | arxA | arsC_glut | arsC_thio | arsD | arsM |
 | Permafrost_Canada23.3  | cluster  | aioA | arrA | acr3 | arxA | arsC_glut | arsC_thio | arsD | arsM |
