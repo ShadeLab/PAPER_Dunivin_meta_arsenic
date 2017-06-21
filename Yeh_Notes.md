@@ -156,11 +156,11 @@ These are the files I am downloading from MG-RAST and performing FastQC and Fast
 
 #### 10. California_grassland
 [ProjectID: mgp1992](http://metagenomics.anl.gov/mgmain.html?mgpage=project&project=mgp1992)
-* ~~[Sample1](http://metagenomics.anl.gov/mgmain.html?mgpage=overview&metagenome=mgm4511061.3): mgm4511061.3; fastq file, most bp, 19% failed QC; 11,650,135,800 bp, 29G
-  * FastQC: seq length: 100, Sanger/Illumina 1.9, per base seq qual not very good after 85, flagged per base sequence content, failed per sequence GC content, everything else looks good
-  * FastX: used flag -Q33 (Illumina 1.9)
-  * 11,650,135,800 bp in downloaded file -- good :)
-  * MicrobeCensus: average_genome_size:    41,173,627.473; total_bases:    11,084,443,800; genome_equivalents:     308.201884615~~
+* ~~[Sample1](http://metagenomics.anl.gov/mgmain.html?mgpage=overview&metagenome=mgm4511061.3): mgm4511061.3; fastq file, most bp, 19% failed QC; 11,650,135,800 bp, 29G~~
+  * ~~FastQC: seq length: 100, Sanger/Illumina 1.9, per base seq qual not very good after 85, flagged per base sequence content, failed per sequence GC content, everything else looks good~~
+  * ~~FastX: used flag -Q33 (Illumina 1.9)~~
+  * ~~11,650,135,800 bp in downloaded file -- good :)~~
+  * ~~MicrobeCensus: average_genome_size:    41,173,627.473; total_bases:    11,084,443,800; genome_equivalents:     308.201884615~~
 * [Sample2](http://metagenomics.anl.gov/mgmain.html?mgpage=overview&metagenome=mgm4511115.3): mgm4511115.3; fastq file, 2nd most bp, 10% failed QC; 7,009,796,000 bp, 18G
   * June 7: File size seems too small, I am downloading again under name "California_grassland_4511115.3_new.fastq"
   * FastQC: seq length: 100, Sanger/Illumina 1.9, per base seq quality bad after 80, per base seq content not very good below 10, failed per seq GC content, failed Kmer content.
@@ -591,29 +591,29 @@ The output of all the files from Taylor's centralia data is in my directory call
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | Iowa_corn22.3 | -  | - | - | cluster | arxA | arsC_glut | arsC_thio | arsD | arsM |
 | IowaCorn23.3  | -  | - | - | cluster | arxA | arsC_glut | arsC_thio | arsD | arsM |
-| Iowa_agricultural00.3  | -  | cluster | - | cluster | arxA | arsC_glut | arsC_thio | arsD | arsM |
-| Iowa_agricultural01.3  | -  | - | - | - | arxA | arsC_glut | arsC_thio | arsD | arsM |
+| Iowa_agricultural00.3  | -  | cluster | - | cluster | - | arsC_glut | arsC_thio | arsD | arsM |
+| Iowa_agricultural01.3  | -  | - | - | - | - | arsC_glut | arsC_thio | arsD | arsM |
 | Mangrove02.3  | -  | cluster | arrA | acr3 |  arxA | arsC_glut | arsC_thio | arsD | arsM |
 | Mangrove70.3  | -  | cluster | arrA | acr3 |  arxA | arsC_glut | arsC_thio | arsD | arsM |
 | Permafrost_Russia12.3  | arsB  | aioA | arrA | acr3 | arxA | arsC_glut | arsC_thio | arsD | arsM |
 | Permafrost_Russia13.3  | arsB  | aioA | arrA | acr3 | arxA | arsC_glut | arsC_thio | arsD | arsM |
 | Iowa_prairie75.3  | arsB  | aioA | arrA | acr3 | arxA | arsC_glut | arsC_thio | arsD | arsM |
-| Iowa_prairie72.3  | search contigs failed  | search contigs failed | search contigs failed | search contigs failed | arxA | arsC_glut | arsC_thio | arsD | arsM |
+| Iowa_prairie72.3  | search contigs failed  | search contigs failed | search contigs failed | search contigs failed | get uniq starting kmers failed for arxA | arsC_glut | arsC_thio | arsD | arsM |
 | Iowa_prairie76.3  | - | cluster | arrA | acr3 | arxA | arsC_glut | arsC_thio | arsD | arsM |
 | Brazilian_forest95.3  | - | - | arrA | acr3 | arxA | arsC_glut | arsC_thio | arsD | arsM |
 | Brazilian_forest39.3  | -  | - | - | - | arxA | arsC_glut | arsC_thio | arsD | arsM |
 | Brazilian_forest54.3  | -  | cluster | - | - | arxA | arsC_glut | arsC_thio | arsD | arsM |
 | Illinois_soybean42.3  | -  | - | - | - | - | arsC_glut | arsC_thio | arsD | arsM |
-| Illinois_soybean40.3  | -  | - | - | - | - | arsC_glut | arsC_thio | arsD | arsM |
-| Minnesota_creek46.3  | arsB  | aioA | arrA | acr3 | arxA | arsC_glut | arsC_thio | arsD | arsM |
-| Minnesota_creek45.3  | arsB  | aioA | arrA | acr3 | arxA | arsC_glut | arsC_thio | arsD | arsM |
+| Illinois_soybean40.3  | -  | - | - | - | - | cluster | - | arsD | arsM |
+| Minnesota_creek46.3  | - | cluster | - | cluster | arxA | arsC_glut | arsC_thio | arsD | arsM |
+| Minnesota_creek45.3  | - | - | - | - | arxA | arsC_glut | arsC_thio | arsD | arsM |
 | Disney_preserve18.3  | -  | - | - | cluster | - | arsC_glut | arsC_thio | arsD | arsM |
 | Disney_preserve25.3  | -  | - | - | cluster | arxA | arsC_glut | arsC_thio | arsD | arsM |
-| California_grassland15.3  | cluster  | - | arrA | acr3 | arxA | arsC_glut | arsC_thio | arsD | arsM |
+| California_grassland15.3  | cluster  | - | - | cluster | get uniq starting kmers failed for arxA | arsC_glut | arsC_thio | arsD | arsM |
 | California_grassland62.3  | arsB  | aioA | arrA | acr3 | arxA | arsC_glut | arsC_thio | arsD | arsM |
-| Illinois_soil91.3  | -  | cluster | - | cluster | arxA | arsC_glut | arsC_thio | arsD | arsM |
-| Illinois_soil88.3  | -  | cluster | - | cluster | - | arsC_glut | arsC_thio | arsD | arsM |
+| Illinois_soil91.3  | -  | cluster | - | cluster | - | cluster | cluster | arsD | arsM |
+| Illinois_soil88.3  | -  | cluster | - | cluster | - | cluster | cluster | arsD | arsM |
 | Wyoming_soil20.3  | -  | aioA | arrA | acr3 | arxA | arsC_glut | arsC_thio | arsD | arsM |
 | Wyoming_soil22.3  | -  | - | arrA | acr3 | arxA | arsC_glut | arsC_thio | arsD | arsM |
-| Permafrost_Canada23.3  | arsB  | aioA | arrA | acr3 | arxA | arsC_glut | arsC_thio | arsD | arsM |
+| Permafrost_Canada23.3  | cluster  | aioA | arrA | acr3 | arxA | arsC_glut | arsC_thio | arsD | arsM |
 | Permafrost_Canada45.3  | arsB  | aioA | arrA | acr3 | arxA | arsC_glut | arsC_thio | arsD | arsM |
