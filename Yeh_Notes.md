@@ -601,13 +601,13 @@ The output of all the files from Taylor's centralia data is in my directory call
 | Brazilian_forest95.3  | - | - | arrA | acr3 | arxA | arsC_glut | arsC_thio | arsD | arsM |
 | Brazilian_forest39.3  | -  | - | - | - | arxA | arsC_glut | arsC_thio | arsD | arsM |
 | Brazilian_forest54.3  | -  | cluster | - | - | arxA | arsC_glut | arsC_thio | arsD | arsM |
-| Illinois_soybean42.3  | -  | - | - | - | - | arsC_glut | arsC_thio | arsD | arsM |
+| Illinois_soybean42.3  | -  | - | - | - | - | cluster | - | arsD | arsM |
 | Illinois_soybean40.3  | -  | - | - | - | - | cluster | - | - | arsM |
 | Minnesota_creek46.3  | - | cluster | - | cluster | arxA | arsC_glut | arsC_thio | arsD | arsM |
 | Minnesota_creek45.3  | - | - | - | - | arxA | arsC_glut | arsC_thio | arsD | arsM |
 | Disney_preserve18.3  | -  | - | - | cluster | - | arsC_glut | arsC_thio | arsD | arsM |
 | Disney_preserve25.3  | -  | - | - | cluster | arxA | arsC_glut | arsC_thio | arsD | arsM |
-| California_grassland15.3  | cluster  | - | - | cluster | get uniq starting kmers failed for arxA | arsC_glut | arsC_thio | arsD | arsM |
+| California_grassland15.3  | cluster  | - | - | cluster | get uniq starting kmers failed for arxA | arsC_glut: cluster | arsC_thio:cluster | get uniq starting kmers failed for arsD | arsM |
 | California_grassland62.3  | cluster | aioA | arrA | acr3 | arxA | arsC_glut | arsC_thio | arsD | arsM |
 | Illinois_soil91.3  | -  | cluster | - | cluster | - | cluster | cluster | cluster | arsM |
 | Illinois_soil88.3  | -  | cluster | - | cluster | - | cluster | cluster | cluster | cluster |
