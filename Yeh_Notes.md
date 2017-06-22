@@ -319,71 +319,72 @@ SAMPLE=$2
 module load GNU/4.4.5
 module load Gblastn/2.28
 
-#switch into correct directory. (EDIT THIS-- Not sure which directory you want)
-#cd /mnt/research/ShadeLab/WorkingSpace/Yeh/xander/Assessment
-#cd /mnt/home/${USER}/examples/test
-mkdir databases_${SAMPLE}
-cd databases_${SAMPLE}
+#switch into correct directory
+cd /mnt/research/ShadeLab/WorkingSpace/Yeh/xander/${SAMPLE}/k45/${GENE}/cluster
 
 #make database from diverse gene sequences
-makeblastdb -in /mnt/research/ShadeLab/WorkingSpace/Dunivin/xander/analysis/RDPTools/Xander_assembler/gene_resource/${GENE}/originaldata/nucl.fa  -dbtype nucl -out ${GENE}_database
+makeblastdb -in /mnt/research/ShadeLab/WorkingSpace/Dunivin/xander/analysis/RDPTools/Xander_assembler/gene_resource/${GENE}/originaldata/nucl.fa  -dbtype nucl -out ${SAMPLE}_${GENE}_database
 
 #blast xander results against db
 #tabular format, show seq id, query id (and description), e-value, only show 1 match
-blastn -db ${GENE}_database -query /mnt/research/ShadeLab/WorkingSpace/Dunivin/xander/analysis/${SAMPLE}/k45/${GENE}/cluster/*_final_nucl.fasta -out ${GENE}_blast.txt -outfmt "6 qseqid salltitles evalue" -max_target_seqs 1
+blastn -db ${SAMPLE}_${GENE}_database -query /mnt/research/ShadeLab/WorkingSpace/Yeh/xander/${SAMPLE}/k45/${GENE}/cluster/*_final_nucl.fasta -out blast.txt -outfmt "6 qseqid salltitles evalue" -max_target_seqs 1
 
 #make a list of reads from *match_reads.fa
-grep "^>" /mnt/research/ShadeLab/WorkingSpace/Dunivin/xander/analysis/${SAMPLE}/k45/${GENE}/cluster/*match_reads.fa | sed '0~1s/^.\{1\}//g' > ${GENE}_matchreadlist.txt
+grep "^>" /mnt/research/ShadeLab/WorkingSpace/Yeh/xander/${SAMPLE}/k45/${GENE}/cluster/*match_reads.fa | sed '0~1s/^.\{1\}//g' > matchreadlist.txt
 
 ##Extract info for stats calculations in R
 #take the framebot stats
-grep "STATS" /mnt/research/ShadeLab/WorkingSpace/Dunivin/xander/analysis/${SAMPLE}/k45/${GENE}/cluster/*_framebot.txt > ${GENE}_framebotstats.txt
+grep "STATS" /mnt/research/ShadeLab/WorkingSpace/Yeh/xander/${SAMPLE}/k45/${GENE}/cluster/*_framebot.txt > framebotstats.txt
 
-#take the list of matching reads (from sequencing)
-grep "^>" /mnt/research/ShadeLab/WorkingSpace/Dunivin/xander/analysis/${SAMPLE}/k45/${GENE}/cluster/*match_reads.fa | sed '0~1s/^.\{1\}//g' >${GENE}_matchreadlist.txt
-
-# USE R TO CREATE STATISTIC FILES
-
-#start in cluster directory from xander output!
-#cd /mnt/research/ShadeLab/WorkingSpace/Dunivin/xander/analysis/${SAMPLE}/k45/${GENE}/cluster/
-cd /mnt/research/ShadeLab/WorkingSpace/Yeh/xander/cluster_example_aioA_cen10
-
-# swap and load the version of R you want to use here with module commands
+#load R
 module load GNU/4.9
 module load OpenMPI/1.10.0
 module load R/3.3.0
- 
-# Run R Command with input script myRprogram.R
+
 #R script should read in files from the cluster and create 4 new files
 R < /mnt/research/ShadeLab/WorkingSpace/Yeh/xander/Assessment/assembly_assessmentR.R --no-save
 
-#move R files to databases_${SAMPLE} -- EDIT THIS to fit what you want!!!
-
-mv readssummary2.txt ${GENE}_readssummary.txt
-#EDIT THIS: mv ${GENE}_readssummary.txt /mnt/home/${USER}/examples/test/databases_${SAMPLE}
-
-mv kmerabundancedist2.png ${GENE}_kmerabundancedist.png
-#EDIT THIS: mv ${GENE}_kmerabundancedist.png /mnt/home/${USER}/examples/test/databases_${SAMPLE}
-
-mv stats2.txt ${GENE}_stats.txt
-#EDIT THIS: mv ${GENE}_stats.txt /mnt/home/${USER}/examples/test/databases_${SAMPLE}
-
-mv e.values2.txt ${GENE}_e.values.txt
-#EDIT THIS: mv ${GENE}_e.values.txt /mnt/home/${USER}/examples/test/databases_${SAMPLE}
-
-
-#GET GC COUNT OF THIS SAMPLE
-#EDIT THIS to include the directory you want:
+#create folder databases_${GENE}
 cd /mnt/research/ShadeLab/WorkingSpace/Yeh/xander/Assessment
+mkdir databases_${GENE}
+cd /mnt/research/ShadeLab/WorkingSpace/Yeh/xander/${SAMPLE}/k45/${GENE}/cluster
+
+#move 8 files to databases_${GENE}
+mv ${SAMPLE}_${GENE}_database* /mnt/research/ShadeLab/WorkingSpace/Yeh/xander/Assessment/databases_${GENE}
+
+mv blast.txt ${SAMPLE}_${GENE}_blast.txt
+mv ${SAMPLE}_${GENE}_blast.txt /mnt/research/ShadeLab/WorkingSpace/Yeh/xander/Assessment/databases_${GENE}
+
+mv matchreadlist.txt ${SAMPLE}_${GENE}_matchreadlist.txt
+mv ${SAMPLE}_${GENE}_matchreadlist.txt /mnt/research/ShadeLab/WorkingSpace/Yeh/xander/Assessment/databases_${GENE}
+
+mv framebotstats.txt ${SAMPLE}_${GENE}_framebotstats.txt
+mv ${SAMPLE}_${GENE}_framebotstats.txt /mnt/research/ShadeLab/WorkingSpace/Yeh/xander/Assessment/databases_${GENE}
+
+mv readssummary.txt ${SAMPLE}_${GENE}_readssummary.txt
+mv ${SAMPLE}_${GENE}_readssummary.txt /mnt/research/ShadeLab/WorkingSpace/Yeh/xander/Assessment/databases_${GENE}
+
+mv kmerabundancedist.png ${SAMPLE}_${GENE}_kmerabundancedist.png
+mv ${SAMPLE}_${GENE}_kmerabundancedist.png /mnt/research/ShadeLab/WorkingSpace/Yeh/xander/Assessment/databases_${GENE}
+
+mv stats.txt ${SAMPLE}_${GENE}_stats.txt
+mv ${SAMPLE}_${GENE}_stats.txt /mnt/research/ShadeLab/WorkingSpace/Yeh/xander/Assessment/databases_${GENE}
+
+mv e.values.txt ${SAMPLE}_${GENE}_e.values.txt
+mv ${SAMPLE}_${GENE}_e.values.txt /mnt/research/ShadeLab/WorkingSpace/Yeh/xander/Assessment/databases_${GENE}
+
+#GET GC COUNT OF THIS SAMPLE!
+
+cd /mnt/research/ShadeLab/WorkingSpace/Yeh/xander/Assessment/
 
 #load perl
+module load GNU/4.9
 module load perl/5.24.1
 #get GC count and put output into ${GENE}_gc folder
-./get_gc_counts.pl /mnt/research/ShadeLab/WorkingSpace/Dunivin/xander/analysis/${SAMPLE}/k45/${GENE}/cluster/${SAMPLE}_${GENE}_45_final_nucl.fasta
+./get_gc_counts.pl /mnt/research/ShadeLab/WorkingSpace/Yeh/xander/${SAMPLE}/k45/${GENE}/cluster/*_final_nucl.fasta
 
 mv gc_out.txt ${SAMPLE}_${GENE}_gc_out.txt
-mkdir ${GENE}_gc
-#EDIT THIS: mv ${SAMPLE}_${GENE}_gc_out.txt /mnt/research/ShadeLab/WorkingSpace/Yeh/xander/Assessment/${GENE}_gc
+mv ${SAMPLE}_${GENE}_gc_out.txt /mnt/research/ShadeLab/WorkingSpace/Yeh/xander/Assessment/${GENE}_gc
 
 ```
 This is the R file assembly_assessmentR.R used:
@@ -396,14 +397,14 @@ library(dplyr)
 # load packages
 library(dplyr)
 
-# read in file
+# read in file 
 data=read.table("matchreadlist.txt", header=FALSE)
 
 # count unique in query_id column
 reads=summarize(data, UniqueReads=length(unique(data$V1)),TotalReads=length(data$V1))
 
-# write results,change filename to include gene name, then move to home directory
-write.table(reads, "readssummary2.txt", row.names=FALSE)
+# write results. later the name of the file will be changed to include the gene name
+write.table(reads, "readssummary.txt", row.names=FALSE)
 
 # KMER ABUND DISTRIBUTION
 # read in kmer abund file
@@ -413,19 +414,17 @@ kmer=read.table(list.files(pattern = "_abundance.txt"), header=TRUE)
 plot=ggplot(kmer, aes(x=kmer_abundance, y=frequency)) + geom_point() + labs(x="kmer abundance", y="Frequency")
 
 # save plot, change filename to include gene name, move to home
-ggsave("kmerabundancedist2.png", plot=last_plot(), width=4, height=4)
+ggsave("kmerabundancedist.png", plot=last_plot(), width=4, height=4)
 
-# NUCL STATS
+# NUCL STATS 
 # read in stats on length
 stats=read.table("framebotstats.txt", header=FALSE)
 
 # calculate statistics
-results=summarise(stats, ProteinContigClusters.99=length(stats$V4),AverageLength=mean(stats$V4),MedianLength=median(stats$V
-4), MinLength.bp=min(stats$V4), MaxLength.bp=max(stats$V4), MaxPercentIdentity=max(stats$V6), MinPercentIdentity=min(stats$
-V6), AveragePercentIdentity=mean(stats$V6))
+results=summarise(stats, ProteinContigClusters.99=length(stats$V4),AverageLength=mean(stats$V4),MedianLength=median(stats$V4), MinLength.bp=min(stats$V4), MaxLength.bp=max(stats$V4), MaxPercentIdentity=max(stats$V6), MinPercentIdentity=min(stats$V6), AveragePercentIdentity=mean(stats$V6))
 
-# save results, move to home
-write.table(results, "stats2.txt", row.names=FALSE)
+# save results
+write.table(results, "stats.txt", row.names=FALSE)
 
 # BLAST STATS
 # read in blast results from above
@@ -436,11 +435,10 @@ colnames(blast)=c("contig", "match", "eval")
 
 # calculate number of low quality sequences along with
 # the min, max, mean, and median e values
-evalues=summarize(blast, lowq=length(blast[,which(blast$eval>1e-2)]), min=min(blast$eval), max=max(blast$eval), avg=mean(bl
-ast$eval), median=median(blast$eval))
+evalues=summarize(blast, lowq=length(blast[,which(blast$eval>1e-2)]), min=min(blast$eval), max=max(blast$eval), avg=mean(blast$eval), median=median(blast$eval))
 
 # save results
-write.table(evalues, "e.values2.txt", row.names=FALSE)
+write.table(evalues, "e.values.txt", row.names=FALSE)
 ```
 This is the Perl file used to get the GC counts:
 ```
@@ -615,5 +613,5 @@ The output of all the files from Taylor's centralia data is in my directory call
 | Illinois_soil88.3  | -  | cluster | - | cluster | - | cluster | cluster | cluster | cluster |
 | Wyoming_soil20.3  | -  | search contigs failed for aioA | arrA | acr3 | arxA | arsC_glut | arsC_thio | arsD | arsM |
 | Wyoming_soil22.3  | -  | - | - | cluster | arxA | arsC_glut | arsC_thio | arsD | arsM |
-| Permafrost_Canada23.3  | cluster  | aioA | arrA | acr3 | arxA | arsC_glut | arsC_thio | arsD | arsM |
+| Permafrost_Canada23.3  | cluster | aioA | arrA | acr3 | arxA | arsC_glut | arsC_thio | arsD | arsM |
 | Permafrost_Canada45.3  | arsB  | aioA | arrA | acr3 | arxA | arsC_glut | arsC_thio | arsD | arsM |
