@@ -583,35 +583,36 @@ The output of all the files from Taylor's centralia data is in my directory call
 ## June 19, 2017
 #### Xander results:
 *arsC_glut, arsC_thio, and arsD* uses `MIN_LENGTH=50  # minimum assembled protein contigs` because they are <150 aa long
+*arsM uses `MIN_LENGTH=160  # minimum assembled protein contigs`
 * some of my clusters have files beginning with the name `cen01_45` because I forgot to change the name 
 
-| | arsB  | aioA | arrA | acr3 | arxA | arsC_glut | arsC_thio | arsD | arsM |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Iowa_corn22.3 | -  | - | - | cluster | arxA | arsC_glut | arsC_thio | arsD | arsM |
-| Iowa_corn23.3  | -  | - | - | cluster | arxA | arsC_glut | arsC_thio | arsD | arsM |
-| Iowa_agricultural00.3  | -  | cluster | - | cluster | - | arsC_glut | arsC_thio | arsD | arsM |
-| Iowa_agricultural01.3  | -  | - | - | - | - | arsC_glut | arsC_thio | arsD | arsM |
-| Mangrove02.3  | -  | cluster | arrA | acr3 |  arxA | arsC_glut | arsC_thio | arsD | arsM |
-| Mangrove70.3  | -  | cluster | arrA | acr3 |  arxA | arsC_glut | arsC_thio | arsD | arsM |
-| Permafrost_Russia12.3  | search contigs failed for arsB | aioA | arrA | acr3 | arxA | arsC_glut | arsC_thio | arsD | arsM |
-| Permafrost_Russia13.3  | search contigs failed for arsB | aioA | arrA | acr3 | arxA | arsC_glut | arsC_thio | arsD | arsM |
-| Iowa_prairie75.3  | -  | aioA | arrA | acr3 | arxA | arsC_glut | arsC_thio | arsD | arsM |
-| Iowa_prairie72.3  | search contigs failed  | search contigs failed | search contigs failed | search contigs failed | get uniq starting kmers failed for arxA | arsC_glut | arsC_thio | arsD | arsM |
-| Iowa_prairie76.3  | - | cluster | arrA | acr3 | arxA | arsC_glut | arsC_thio | arsD | arsM |
-| Brazilian_forest95.3  | - | - | arrA | acr3 | arxA | arsC_glut | arsC_thio | arsD | arsM |
-| Brazilian_forest39.3  | -  | - | - | - | arxA | arsC_glut | arsC_thio | arsD | arsM |
-| Brazilian_forest54.3  | -  | cluster | - | - | arxA | arsC_glut | arsC_thio | arsD | arsM |
-| Illinois_soybean42.3  | -  | - | - | - | - | cluster | - | arsD | arsM |
-| Illinois_soybean40.3  | -  | - | - | - | - | cluster | - | - | arsM |
-| Minnesota_creek46.3  | - | cluster | - | cluster | arxA | arsC_glut | arsC_thio | arsD | arsM |
-| Minnesota_creek45.3  | - | - | - | - | arxA | arsC_glut | arsC_thio | arsD | arsM |
-| Disney_preserve18.3  | -  | - | - | cluster | - | arsC_glut | arsC_thio | arsD | arsM |
-| Disney_preserve25.3  | -  | - | - | cluster | arxA | arsC_glut | arsC_thio | arsD | arsM |
-| California_grassland15.3  | cluster  | - | - | cluster | get uniq starting kmers failed for arxA | arsC_glut: cluster | arsC_thio:cluster | get uniq starting kmers failed for arsD | arsM |
-| California_grassland62.3  | cluster | aioA | arrA | acr3 | arxA | arsC_glut | arsC_thio | arsD | arsM |
-| Illinois_soil91.3  | -  | cluster | - | cluster | - | cluster | cluster | cluster | arsM |
-| Illinois_soil88.3  | -  | cluster | - | cluster | - | cluster | cluster | cluster | cluster |
-| Wyoming_soil20.3  | -  | search contigs failed for aioA | arrA | acr3 | arxA | arsC_glut | arsC_thio | arsD | arsM |
-| Wyoming_soil22.3  | -  | - | - | cluster | arxA | arsC_glut | arsC_thio | arsD | arsM |
-| Permafrost_Canada23.3  | cluster | aioA | arrA | acr3 | arxA | arsC_glut | arsC_thio | arsD | arsM |
-| Permafrost_Canada45.3  | arsB  | aioA | arrA | acr3 | arxA | arsC_glut | arsC_thio | arsD | arsM |
+| | arsB  | aioA | arrA | acr3 | arxA | arsC_glut | arsC_thio | arsD | arsM | rplB |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Iowa_corn22.3 | -  | - | - | cluster | arxA | arsC_glut | arsC_thio | arsD | arsM | rplB |
+| Iowa_corn23.3  | -  | - | - | cluster | arxA | arsC_glut | arsC_thio | arsD | arsM | rplB |
+| Iowa_agricultural00.3  | -  | cluster | - | cluster | - | arsC_glut | arsC_thio | arsD | arsM | rplB |
+| Iowa_agricultural01.3  | -  | - | - | - | - | cluster | - | - | arsM | rplB |
+| Mangrove02.3  | -  | cluster | arrA | acr3 |  arxA | arsC_glut | arsC_thio | arsD | arsM | rplB |
+| Mangrove70.3  | -  | cluster | arrA | acr3 |  arxA | arsC_glut | arsC_thio | arsD | arsM | rplB |
+| Permafrost_Russia12.3  | search contigs failed for arsB | aioA | arrA | acr3 | arxA | arsC_glut | arsC_thio | arsD | arsM | rplB |
+| Permafrost_Russia13.3  | search contigs failed for arsB | aioA | arrA | acr3 | arxA | arsC_glut | arsC_thio | arsD | arsM | rplB |
+| Iowa_prairie75.3  | -  | aioA | arrA | acr3 | arxA | arsC_glut | arsC_thio | arsD | arsM | rplB |
+| Iowa_prairie72.3  | search contigs failed  | search contigs failed | search contigs failed | search contigs failed | get uniq starting kmers failed for arxA | arsC_glut | arsC_thio | arsD | arsM | rplB |
+| Iowa_prairie76.3  | - | cluster | arrA | acr3 | arxA | arsC_glut | arsC_thio | arsD | arsM | rplB |
+| Brazilian_forest95.3  | - | - | arrA | acr3 | arxA | arsC_glut | arsC_thio | arsD | arsM | rplB |
+| Brazilian_forest39.3  | -  | - | - | - | arxA | arsC_glut | arsC_thio | arsD | arsM | rplB |
+| Brazilian_forest54.3  | -  | cluster | - | - | arxA | arsC_glut | arsC_thio | arsD | arsM | rplB |
+| Illinois_soybean42.3  | -  | - | - | - | - | cluster | - | arsD | arsM | rplB |
+| Illinois_soybean40.3  | -  | - | - | - | - | cluster | - | - | - | rplB |
+| Minnesota_creek46.3  | - | cluster | - | cluster | arxA | arsC_glut | arsC_thio | arsD | arsM | rplB |
+| Minnesota_creek45.3  | - | - | - | - | arxA | arsC_glut | arsC_thio | arsD | arsM | rplB |
+| Disney_preserve18.3  | -  | - | - | cluster | - | arsC_glut | arsC_thio | arsD | arsM | rplB |
+| Disney_preserve25.3  | -  | - | - | cluster | arxA | arsC_glut | arsC_thio | arsD | arsM | rplB |
+| California_grassland15.3  | cluster  | - | - | cluster | get uniq starting kmers failed for arxA | arsC_glut: cluster | arsC_thio:cluster | get uniq starting kmers failed for arsD | arsM | rplB |
+| California_grassland62.3  | cluster | - | - | cluster | arxA | arsC_glut | arsC_thio | arsD | arsM | rplB |
+| Illinois_soil91.3  | -  | cluster | - | cluster | - | cluster | cluster | cluster | arsM | rplB |
+| Illinois_soil88.3  | -  | cluster | - | cluster | - | cluster | cluster | cluster | cluster | rplB |
+| Wyoming_soil20.3  | -  | search contigs failed for aioA | arrA | acr3 | arxA | arsC_glut | arsC_thio | arsD | arsM | rplB |
+| Wyoming_soil22.3  | -  | - | - | cluster | - | arsC_glut | arsC_thio | arsD | arsM | rplB |
+| Permafrost_Canada23.3  | cluster | cluster | - | cluster | arxA | arsC_glut | arsC_thio | arsD | arsM | rplB |
+| Permafrost_Canada45.3  | arsB  | aioA | arrA | acr3 | arxA | arsC_glut | arsC_thio | arsD | arsM | rplB |
