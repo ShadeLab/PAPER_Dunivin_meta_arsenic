@@ -170,6 +170,7 @@ These are the files I am downloading from MG-RAST and performing FastQC and Fast
 * [Sample 3](http://metagenomics.anl.gov/mgmain.html?mgpage=overview&metagenome=mgm4511062.3): mgm4511062.3; fastq file, 4rd most bp (sample with 3rd most bp had >30% failed QC), 22.8% failed QC; 5,909,734,300 bp, 15G
   * FastQC: seq length 100, Sanger/Illumina 1.9, per base quality not very good above 85, failed per tile seq, per base seq content not vey good below 10, flagged per seq GC content, failed Kmer content
   * 5,909,734,300 bp -- good :)
+  * MicrobeCensus: average_genome_size:    12,981,156.173; total_bases:    5771841900; genome_equivalents:     444.632344229
 * Metadata
 
 #### 11. Illinois_soil
@@ -232,15 +233,15 @@ ProjectID: mgp13736
 ### Plots:
 #### Gbases vs Genome Equivalents
 
-![gbasesvsgenomeeqpic](https://user-images.githubusercontent.com/28952961/27347468-af056980-55be-11e7-9efb-1e83d2b6e5ce.png)
+![gbasesvsgenomeeqpic](https://user-images.githubusercontent.com/28952961/27486042-34019736-57fd-11e7-9650-7c42679c4870.png)
 
 #### Average Genome Size per Sample per Project
 
-![agspersample](https://user-images.githubusercontent.com/28952961/27347725-93bb1eee-55bf-11e7-8c49-4e2e7585e303.png)
+![ags_site_alphabetical](https://user-images.githubusercontent.com/28952961/27485814-42c9abba-57fc-11e7-8a9a-d799580d208a.png)
 
 #### AGS per biome
 
-![boxplot_biomeags](https://user-images.githubusercontent.com/28952961/27347358-50d565ea-55be-11e7-9924-7d9e929a961c.png)
+![boxplot_biome_ags_colorsite](https://user-images.githubusercontent.com/28952961/27485670-a5d36346-57fb-11e7-96c6-2356e7af7d8d.png)
 
 
 ### Commands:
@@ -588,18 +589,18 @@ The output of all the files from Taylor's centralia data is in my directory call
 
 | | arsB  | aioA | arrA | acr3 | arxA | arsC_glut | arsC_thio | arsD | arsM | rplB |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Iowa_corn22.3 | -  | - | - | cluster | - | arsC_glut | arsC_thio | arsD | arsM | rplB |
+| Iowa_corn22.3 | -  | - | - | cluster | - | cluster | - | - | arsM | rplB |
 | Iowa_corn23.3  | -  | - | - | cluster | - | arsC_glut | arsC_thio | arsD | arsM | rplB |
 | Iowa_agricultural00.3  | -  | cluster, done | - | cluster | - | arsC_glut | arsC_thio | arsD | arsM | rplB |
-| Iowa_agricultural01.3  | -  | - | - | - | - | cluster | - | - | arsM | rplB |
+| Iowa_agricultural01.3  | -  | - | - | - | - | cluster | - | - | - | rplB |
 | Mangrove02.3  | -  | cluster, done | cluster | cluster |  arxA | arsC_glut | arsC_thio | arsD | arsM | rplB |
 | Mangrove70.3  | -  | cluster, done | cluster | - |  arxA | arsC_glut | arsC_thio | arsD | arsM | rplB |
 | Permafrost_Russia12.3  | search contigs failed for arsB | search contigs failed for aioA | search contigs failed for arrA | search contigs failed for acr3 |search contigs failed for arxA | arsC_glut | arsC_thio | arsD | arsM | rplB |
-| Permafrost_Russia13.3  | search contigs failed for arsB | search contigs failed for aioA | search contigs failed for arrA | search contigs failed for acr3 |search contigs failed for arxA | arsC_glut | arsC_thio | arsD | arsM | rplB |
+| Permafrost_Russia13.3  | retrying arsB | search contigs failed for aioA | search contigs failed for arrA | search contigs failed for acr3 |search contigs failed for arxA | arsC_glut | arsC_thio | arsD | arsM | rplB |
 | Iowa_prairie75.3  | -  | cluster, ISSUE IN R FILE: kmer=read.table(list.files(pattern = "_abundance.txt"), header=TRUE) Error in file(file, "rt") : invalid 'description' argument Calls: read.table -> file Execution halted  | arrA | acr3 | arxA | arsC_glut | arsC_thio | arsD | arsM | rplB |
-| Iowa_prairie72.3  | search contigs failed  | search contigs failed | search contigs failed | search contigs failed | get uniq starting kmers failed for arxA | arsC_glut | arsC_thio | arsD | arsM | rplB |
+| Iowa_prairie72.3  | retrying-arsB  | aioA | arrA | acr3 | arxA | arsC_glut | arsC_thio | arsD | arsM | rplB |
 | Iowa_prairie76.3  | - | cluster, done | arrA | acr3 | arxA | arsC_glut | arsC_thio | arsD | arsM | rplB |
-| Brazilian_forest95.3  | - | - | - | - | arxA | arsC_glut | arsC_thio | arsD | arsM | rplB |
+| Brazilian_forest95.3  | - | - | - | - | - | arsC_glut | arsC_thio | arsD | arsM | cluster |
 | Brazilian_forest39.3  | -  | - | - | - | arxA | arsC_glut | arsC_thio | arsD | arsM | rplB |
 | Brazilian_forest54.3  | -  | cluster, done | - | - | arxA | arsC_glut | arsC_thio | arsD | arsM | rplB |
 | Illinois_soybean42.3  | -  | - | - | - | - | cluster | - | arsD | arsM | rplB |
@@ -607,10 +608,10 @@ The output of all the files from Taylor's centralia data is in my directory call
 | Minnesota_creek46.3  | - | cluster, done | - | cluster | arxA | arsC_glut | arsC_thio | arsD | arsM | rplB |
 | Minnesota_creek45.3  | - | - | - | - | arxA | arsC_glut | arsC_thio | arsD | arsM | rplB |
 | Disney_preserve18.3  | -  | - | - | cluster | - | arsC_glut | arsC_thio | arsD | arsM | rplB |
-| Disney_preserve25.3  | -  | - | - | cluster | arxA | arsC_glut | arsC_thio | arsD | arsM | rplB |
-| California_grassland15.3  | cluster, done | - | - | cluster | get uniq starting kmers failed for arxA | arsC_glut: cluster | arsC_thio:cluster | get uniq starting kmers failed for arsD | - | rplB |
-| California_grassland62.3  | cluster, done | - | - | cluster | get uniq starting kmers failed for arxA | arsC_glut | arsC_thio | arsD | arsM | rplB |
-| Illinois_soil91.3  | -  | cluster, done | - | cluster | - | cluster | cluster | cluster | arsM | rplB |
+| Disney_preserve25.3  | -  | - | - | cluster | - | arsC_glut | arsC_thio | arsD | arsM | rplB |
+| California_grassland15.3  | cluster, done | - | - | cluster | get uniq starting kmers failed for arxA | arsC_glut: cluster | arsC_thio:cluster | get uniq starting kmers failed for arsD | - | cluster |
+| California_grassland62.3  | cluster, done | - | - | cluster | get uniq starting kmers failed for arxA | cluster | - | arsD | arsM | rplB |
+| Illinois_soil91.3  | -  | cluster, done | - | cluster | - | cluster | cluster | cluster | cluster | rplB |
 | Illinois_soil88.3  | -  | cluster, done | - | cluster | - | cluster | cluster | cluster | cluster | rplB |
 | Wyoming_soil20.3  | -  | search contigs failed for aioA | arrA | acr3 | arxA | arsC_glut | arsC_thio | arsD | arsM | rplB |
 | Wyoming_soil22.3  | -  | - | - | cluster | - | arsC_glut | arsC_thio | arsD | arsM | rplB |
