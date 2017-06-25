@@ -589,31 +589,31 @@ The output of all the files from Taylor's centralia data is in my directory call
 
 | | arsB  | aioA | arrA | acr3 | arxA | arsC_glut | arsC_thio | arsD | arsM | rplB |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Iowa_corn22.3 | -  | - | - | cluster,done | - | cluster, done | - | - | arsM | rplB |
-| Iowa_corn23.3  | -  | - | - | cluster,done | - | arsC_glut | arsC_thio | arsD | arsM | rplB |
-| Iowa_agricultural00.3  | -  | cluster, done | - | cluster,done | - | arsC_glut | arsC_thio | arsD | arsM | rplB |
-| Iowa_agricultural01.3  | -  | - | - | - | - | cluster, done | - | - | - | rplB |
-| Mangrove02.3  | -  | cluster, done | cluster, done | cluster,done |  arxA | arsC_glut | arsC_thio | arsD | arsM | rplB |
+| Iowa_corn22.3 | -  | - | - | cluster,done | - | cluster, done, copied | - | - | cluster, done, copied | cluster, done, copied  |
+| Iowa_corn23.3  | -  | - | - | cluster,done | - | arsC_glut | cluster, done, copied | arsD | cluster, done, copied | rplB |
+| Iowa_agricultural00.3  | -  | cluster, done | - | cluster,done | - | arsC_glut: cluster, done, copied | - | arsD: cluster, done, copied, cannot stat `e.values.txt` | arsM | rplB |
+| Iowa_agricultural01.3  | -  | - | - | - | - | cluster, done, copied | - | - | - | cluster, done, copied |
+| Mangrove02.3  | -  | cluster, done | cluster, done | cluster,done |  arxA | arsC_glut | arsC_thio | arsD | arsM | cluster, done, copied |
 | Mangrove70.3  | -  | cluster, done | cluster,done | - |  arxA | arsC_glut | arsC_thio | arsD | arsM | rplB |
 | Permafrost_Russia12.3  | search contigs failed for arsB | search contigs failed for aioA | search contigs failed for arrA | search contigs failed for acr3 |search contigs failed for arxA | arsC_glut | arsC_thio | arsD | arsM | rplB |
 | Permafrost_Russia13.3  | retrying arsB | search contigs failed for aioA | search contigs failed for arrA | search contigs failed for acr3 |search contigs failed for arxA | arsC_glut | arsC_thio | arsD | arsM | rplB |
 | Iowa_prairie75.3  | -  | cluster, done  | arrA | acr3 | arxA | arsC_glut | arsC_thio | arsD | arsM | rplB |
-| Iowa_prairie72.3  | retrying-arsB  | aioA | arrA | acr3 | arxA | arsC_glut | arsC_thio | arsD | arsM | rplB |
-| Iowa_prairie76.3  | - | cluster, done | arrA | acr3 | arxA | arsC_glut | arsC_thio | arsD | arsM | rplB |
-| Brazilian_forest95.3  | - | - | - | - | - | arsC_glut | arsC_thio | arsD | arsM | cluster |
-| Brazilian_forest39.3  | -  | - | - | - | arxA | arsC_glut | arsC_thio | arsD | arsM | rplB |
+| Iowa_prairie72.3  | retrying-arsB  | aioA: cluster, done, copied | arrA | acr3 | arxA | arsC_glut | arsC_thio | arsD | arsM | rplB |
+| Iowa_prairie76.3  | - | cluster, done, copied | - | acr3 | arxA | arsC_glut | arsC_thio | arsD | arsM | rplB |
+| Brazilian_forest95.3  | - | - | - | - | - | cluster, done, copied | - | arsD | arsM | cluster, done, copied |
+| Brazilian_forest39.3  | -  | - | - | - | arxA | cluster, done, copied | arsC_thio | arsD | arsM | rplB |
 | Brazilian_forest54.3  | -  | cluster, done | - | - | arxA | arsC_glut | arsC_thio | arsD | arsM | rplB |
-| Illinois_soybean42.3  | -  | - | - | - | - | cluster, done | - | arsD | arsM | rplB |
-| Illinois_soybean40.3  | -  | - | - | - | - | cluster, done | - | - | - | rplB |
+| Illinois_soybean42.3  | -  | - | - | - | - | cluster, done, copied | - | - | arsM | rplB |
+| Illinois_soybean40.3  | -  | - | - | - | - | cluster, done, copied | - | - | - | cluster, done, copied |
 | Minnesota_creek46.3  | - | cluster, done | - | cluster,done | arxA | arsC_glut | arsC_thio | arsD | arsM | rplB |
 | Minnesota_creek45.3  | - | - | - | - | arxA | arsC_glut | arsC_thio | arsD | arsM | rplB |
 | Disney_preserve18.3  | -  | - | - | cluster,done | - | arsC_glut | arsC_thio | arsD | arsM | rplB |
-| Disney_preserve25.3  | -  | - | - | cluster, done | - | arsC_glut | arsC_thio | arsD | arsM | rplB |
-| California_grassland15.3  | cluster, done | - | - | cluster, done | get uniq starting kmers failed for arxA | arsC_glut: cluster, done | arsC_thio:cluster, done | get uniq starting kmers failed for arsD | - | cluster |
-| California_grassland62.3  | cluster, done | - | - | cluster, done | get uniq starting kmers failed for arxA | cluster, done | - | get uniq starting kmers failed for arsD | arsM | rplB |
-| Illinois_soil91.3  | -  | cluster, done | - | cluster,done | - | cluster, done | cluster: blast.txt empty | cluster | cluster | rplB |
-| Illinois_soil88.3  | -  | cluster, done | - | cluster, done | - | cluster,done | cluster: blast.txt empty | cluster | cluster | rplB |
+| Disney_preserve25.3  | -  | - | - | cluster, done | - | arsC_glut:cluster, done, copied | arsC_thio | arsD | arsM | rplB |
+| California_grassland15.3  | cluster, done | - | - | cluster, done | get uniq starting kmers failed for arxA | arsC_glut: cluster, done, copied | arsC_thio:cluster, done | get uniq starting kmers failed for arsD | - | cluster, done, copied |
+| California_grassland62.3  | cluster, done | - | - | cluster, done | get uniq starting kmers failed for arxA | cluster, done, copied | - | get uniq starting kmers failed for arsD | arsM | cluster, done, copied |
+| Illinois_soil91.3  | -  | cluster, done | - | cluster,done | - | cluster, done, copied | cluster: blast.txt empty | cluster | cluster, done, copied | cluster, done, copied |
+| Illinois_soil88.3  | -  | cluster, done | - | cluster, done | - | cluster,done, copied | cluster: blast.txt empty | cluster | cluster, done copied | rplB: cluster, done, copied |
 | Wyoming_soil20.3  | -  | search contigs failed for aioA | arrA | acr3 | arxA | arsC_glut | arsC_thio | arsD | arsM | rplB |
-| Wyoming_soil22.3  | -  | - | - | cluster,done | - | arsC_glut | arsC_thio | arsD | arsM | rplB |
+| Wyoming_soil22.3  | -  | - | - | cluster,done | - | cluster, done, copied | arsC_thio | arsD | arsM | rplB |
 | Permafrost_Canada23.3  | cluster, done | cluster, done | - | cluster,done | - | arsC_glut | arsC_thio | arsD | arsM | rplB |
 | Permafrost_Canada45.3  | arsB  | aioA | arrA | acr3 | arxA | arsC_glut | arsC_thio | arsD | arsM | rplB |
