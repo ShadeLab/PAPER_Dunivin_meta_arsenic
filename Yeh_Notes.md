@@ -598,8 +598,8 @@ The output of all the files from Taylor's centralia data is in my directory call
 | Permafrost_Russia12.3  | search contigs failed for arsB | search contigs failed for aioA | search contigs failed for arrA | search contigs failed for acr3 |search contigs failed for arxA | arsC_glut | arsC_thio | arsD | arsM | rplB |
 | Permafrost_Russia13.3  | retrying arsB | search contigs failed for aioA | search contigs failed for arrA | search contigs failed for acr3 |search contigs failed for arxA | arsC_glut | arsC_thio | arsD | arsM | rplB |
 | Iowa_prairie75.3  | -  | cluster, done  | arrA | acr3 | arxA | arsC_glut | arsC_thio | arsD | arsM | rplB |
-| Iowa_prairie72.3  | retrying-arsB  | aioA: cluster, done, copied | arrA | acr3 | arxA | arsC_glut | arsC_thio | arsD | arsM | rplB |
-| Iowa_prairie76.3  | - | cluster, done, copied | - | acr3 | arxA | arsC_glut | arsC_thio | arsD | arsM | rplB |
+| Iowa_prairie72.3  | retrying-arsB  | aioA: cluster, done, copied | - | acr3 | arxA | arsC_glut | arsC_thio | arsD | arsM | rplB |
+| Iowa_prairie76.3  | - | cluster, done | - | arrA | arxA | arsC_glut | arsC_thio | arsD | arsM | rplB |
 | Brazilian_forest95.3  | - | - | - | - | - | cluster, done, copied | - | arsD | arsM | cluster, done, copied |
 | Brazilian_forest39.3  | -  | - | - | - | arxA | cluster, done, copied | arsC_thio | arsD | arsM | rplB |
 | Brazilian_forest54.3  | -  | cluster, done | - | - | arxA | arsC_glut | arsC_thio | arsD | arsM | rplB |
