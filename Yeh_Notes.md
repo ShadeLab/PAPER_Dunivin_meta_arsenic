@@ -675,8 +675,7 @@ cat *45_coverage.txt > final_coverage.txt
 
 #get all coverage files
 #copy all files to database
-/mnt/research/ShadeLab/WorkingSpace/Dunivin/xander/OTUabundances/bin/./get_OTUabundance.sh final_coverage.txt /mnt/research/ShadeLab/WorkingSpace/Yeh/xander/OT
-Uabundances/${GENE} 0 ${CLUST} alignment/*
+/mnt/research/ShadeLab/WorkingSpace/Dunivin/xander/OTUabundances/bin/./get_OTUabundance.sh final_coverage.txt /mnt/research/ShadeLab/WorkingSpace/Yeh/xander/OTUabundances/${GENE} 0 ${CLUST} alignment/*
 
 #rename rformat of interest
 mv rformat_dist_${CLUST}.txt ${GENE}_rformat_dist_${CLUST}.txt
@@ -701,17 +700,14 @@ cat complete.clust_full_rep_seqs_${CLUST}_unaligned_short.fasta reference_seqs.f
 #make tree for visualization:
 #align file with all sequences
 module load HMMER/3.1b2
-hmmalign --amino --outformat SELEX -o ${GENE}_alignment_${CLUST}_short.selex /mnt/research/ShadeLab/WorkingSpace/Dunivin/xander/analysis/RDPTools/Xander_assemb
-ler/gene_resource/${GENE}/originaldata/${GENE}.hmm complete.clust_full_rep_seqs_${CLUST}_unaligned_seeds_short.fasta
+hmmalign --amino --outformat SELEX -o ${GENE}_alignment_${CLUST}_short.selex /mnt/research/ShadeLab/WorkingSpace/Dunivin/xander/analysis/RDPTools/Xander_assembler/gene_resource/${GENE}/originaldata/${GENE}.hmm complete.clust_full_rep_seqs_${CLUST}_unaligned_seeds_short.fasta
 
 #convert alignment from selex format to aligned fasta (xmfa)
 module load Bioperl/1.6.923
-/mnt/research/ShadeLab/WorkingSpace/Dunivin/xander/OTUabundances/bin/./convertAlignment.pl -i ${GENE}_alignment_${CLUST}_short.selex -o ${GENE}_alignment_${CLU
-ST}_short.fa -f xmfa -g selex
+/mnt/research/ShadeLab/WorkingSpace/Dunivin/xander/OTUabundances/bin/./convertAlignment.pl -i ${GENE}_alignment_${CLUST}_short.selex -o ${GENE}_alignment_${CLUST}_short.fa -f xmfa -g selex
 
 #remove last line of aligned seqs (= sign)
-dd if=/dev/null of=${GENE}_alignment_${CLUST}_short.fa bs=1 seek=$(echo $(stat --format=%s ${GENE}_alignment_${CLUST}_short.fa ) - $( tail -n1 ${GENE}_alignmen
-t_${CLUST}_short.fa | wc -c) | bc )
+dd if=/dev/null of=${GENE}_alignment_${CLUST}_short.fa bs=1 seek=$(echo $(stat --format=%s ${GENE}_alignment_${CLUST}_short.fa ) - $( tail -n1 ${GENE}_alignment_${CLUST}_short.fa | wc -c) | bc )
 
 #make two separate trees
 module load GNU/4.4.5
