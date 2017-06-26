@@ -662,7 +662,7 @@ rm *_45_final_prot.fasta
 Used [workflow from TD](https://github.com/ShadeLab/Xander_arsenic/blob/2f5c639b5f3e35eba66b3054a10b006e261b8230/phylogenetic_analysis/workflow.md) to add listed sequences to `reference_seqs.fa` file in `/mnt/research/ShadeLab/WorkingSpace/Yeh/xander/OTUabundances/GENE`
 `reference_seqs.fa` consists of: FASTA (from `ncbi.input.txt`), seeds (`cat /mnt/research/ShadeLab/WorkingSpace/Dunivin/xander/analysis/RDPTools/Xander_assembler/gene_resource/GENE/originaldata/GENE.seeds > reference_seqs.fa`), and root.
 * Roots used: arsB: first sequence from `acr3.seeds`; 
-After copying all *final_prot_aligned.fasta* from clusters to the `/OTUabudances/GENE/alignment` directory and the *_coverage.txt* files to the `OTUabundances/GENE` folder, followed workflow from TD, script:
+* After copying all *final_prot_aligned.fasta* from clusters to the `/OTUabudances/GENE/alignment` directory and the *_coverage.txt* files to the `OTUabundances/GENE` folder, followed workflow from TD, script:
 ```
 #!/bin/bash
 
