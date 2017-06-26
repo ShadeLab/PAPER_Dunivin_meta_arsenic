@@ -624,6 +624,7 @@ The output of all the files from TD's centralia data is in my directory called `
 ![protein_name](https://user-images.githubusercontent.com/28952961/27546204-1fdeeb86-5a60-11e7-8191-fd5ad1245929.PNG)
 
 ## June 26, 2017
+#### Blast against non redundant database
 Used [work flow from TD](https://github.com/ShadeLab/Xander_arsenic/blob/2f5c639b5f3e35eba66b3054a10b006e261b8230/phylogenetic_analysis/workflow.md) to test genes against non redundant database. After copying all *final_prot.fasta* files from the clusters to the `databases_${GENE}` folders, blast against nr database. type the name of the script followed by the gene name, such as `./blast.summary.sh GENE`
 ```
 #!/bin/bash
@@ -656,3 +657,5 @@ rm gene.descriptor.txt
 rm accno.txt
 rm *_45_final_prot.fasta
 ```
+#### Check Phylogeny
+Used [work flow from TD](https://github.com/ShadeLab/Xander_arsenic/blob/2f5c639b5f3e35eba66b3054a10b006e261b8230/phylogenetic_analysis/workflow.md) to add listed sequences to `reference_seqs.fa` file in `/mnt/research/ShadeLab/WorkingSpace/Yeh/xander/OTUabundances/GENE`
