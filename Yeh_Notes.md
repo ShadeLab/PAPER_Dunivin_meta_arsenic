@@ -590,7 +590,7 @@ The output of all the files from Taylor's centralia data is in my directory call
 | | arsB  | aioA | arrA | acr3 | arxA | arsC_glut | arsC_thio | arsD | arsM | rplB |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | Iowa_corn22.3 | -  | - | - | cluster,done | - | cluster, done, copied | - | - | cluster, done, copied | cluster, done, copied  |
-| Iowa_corn23.3  | -  | - | - | cluster,done | - | arsC_glut | cluster, done, copied | - | cluster, done, copied | rplB |
+| Iowa_corn23.3  | -  | - | - | cluster,done | - | arsC_glut | cluster, done, copied | - | cluster, done, copied | cluster, done, copied |
 | Iowa_agricultural00.3  | -  | cluster, done | - | cluster,done | - | arsC_glut: cluster, done, copied | - | arsD: cluster, done, copied, cannot stat `e.values.txt` | arsM: cluster, done, copied | rplB |
 | Iowa_agricultural01.3  | -  | - | - | - | - | cluster, done, copied | - | - | - | cluster, done, copied |
 | Mangrove02.3  | -  | cluster, done | cluster, done | cluster,done |  arxA: cluster, done, copied | arsC_glut | arsC_thio | arsD | arsM | cluster, done, copied |
