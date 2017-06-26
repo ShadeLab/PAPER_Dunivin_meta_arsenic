@@ -608,7 +608,7 @@ The output of all the files from Taylor's centralia data is in my directory call
 | Minnesota_creek46.3  | - | cluster, done | - | cluster,done | - | arsC_glut | arsC_thio | arsD | arsM | rplB |
 | Minnesota_creek45.3  | - | - | - | - | arxA | arsC_glut: cluster, done, copied | arsC_thio: cluster, blast.txt empty, copied  | - | arsM | rplB |
 | Disney_preserve18.3  | -  | - | - | cluster, done | - | arsC_glut | arsC_thio | arsD | arsM | rplB |
-| Disney_preserve25.3  | -  | - | - | cluster, done | - | arsC_glut:cluster, done, copied | arsC_thio: cluster, done, copied | arsD | arsM | rplB |
+| Disney_preserve25.3  | -  | - | - | cluster, done | - | arsC_glut:cluster, done, copied | arsC_thio: cluster, done, copied | - | arsM | rplB |
 | California_grassland15.3  | cluster, done | - | - | cluster, done | get uniq starting kmers failed for arxA | arsC_glut: cluster, done, copied | arsC_thio:cluster, done | get uniq starting kmers failed for arsD | - | cluster, done, copied |
 | California_grassland62.3  | cluster, done | - | - | cluster, done | get uniq starting kmers failed for arxA | cluster, done, copied | - | get uniq starting kmers failed for arsD | - | cluster, done, copied |
 | Illinois_soil91.3  | -  | cluster, done | - | cluster,done | - | cluster, done, copied | cluster: blast.txt empty | cluster | cluster, done, copied | cluster, done, copied |
