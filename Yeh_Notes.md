@@ -603,7 +603,7 @@ The output of all the files from Taylor's centralia data is in my directory call
 | Brazilian_forest95.3  | - | - | - | - | - | cluster, done, copied | - | arsD | arsM  | cluster, done, copied |
 | Brazilian_forest39.3  | -  | - | - | - | get uniq starting kmers failed for arxA | cluster, done, copied | arsC_thio: cluster, done, copied | - | arsM: cluster, done, copied | rplB |
 | Brazilian_forest54.3  | -  | cluster, done | - | - | arxA | arsC_glut: cluster, done, copied | arsC_thio: cluster, done, copied | get uniq starting kmers failed for arsD | arsM | rplB |
-| Illinois_soybean42.3  | -  | - | - | - | - | cluster, done, copied | - | - | arsM: cluster, blast.txt empty, copied | rplB |
+| Illinois_soybean42.3  | -  | - | - | - | - | cluster, done, copied | - | - | arsM: cluster, blast.txt empty, copied | cluster, done, copied |
 | Illinois_soybean40.3  | -  | - | - | - | - | cluster, done, copied | - | - | - | cluster, done, copied |
 | Minnesota_creek46.3  | - | cluster, done | - | cluster,done | - | arsC_glut | arsC_thio | arsD | arsM | rplB |
 | Minnesota_creek45.3  | - | - | - | - | arxA | arsC_glut: cluster, done, copied | arsC_thio: cluster, blast.txt empty, copied  | - | arsM | rplB |
