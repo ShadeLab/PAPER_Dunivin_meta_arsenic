@@ -599,6 +599,7 @@ sort file.txt | uniq -c > file2.txt
 *arsM* uses `MIN_LENGTH=160  # minimum assembled protein contigs`
 * The rest of the genes use `MIN_LENGTH=150`
 * some of my clusters have files beginning with the name `cen01_45` because I forgot to change the name 
+* "cluster" means there is a cluster, "done" means I executed `assessment.sh`, "copied" means i copied the `final_prot.fasta` file fom the cluster to the `/xander/databases_GENE` folder
 
 | | arsB  | aioA | arrA | acr3 | arxA | arsC_glut | arsC_thio | arsD | arsM | rplB |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -684,8 +685,9 @@ rm *_45_final_prot.fasta
 * [Written by TD](https://github.com/ShadeLab/Xander_arsenic/blob/2f5c639b5f3e35eba66b3054a10b006e261b8230/phylogenetic_analysis/workflow.md) 
 * Pre-script activities: 
   * add file `reference_seqs.fa`
-      * consists of: FASTA (from `ncbi.input.txt`), seeds (`cat /mnt/research/ShadeLab/WorkingSpace/Dunivin/xander/analysis/RDPTools/Xander_assembler/gene_resource/GENE/originaldata/GENE.seeds > reference_seqs.fa`), and root.
-      * Roots used: arsB: first sequence from `acr3.seeds`; 
+      * consists of: FASTA (see directions below), seeds (from `/mnt/research/ShadeLab/WorkingSpace/Dunivin/xander/analysis/RDPTools/Xander_assembler/gene_resource/GENE/originaldata/GENE.seeds`), and root.
+      * Roots used: arsB: first sequence from `acr3.seeds`; aioA: first sequence from `arrA.seeds`
+      * FASTA file directions: save `GENE.ncbi.input.txt`, upload to [batch entrez](https://www.ncbi.nlm.nih.gov/sites/batchentrez), click "Retrieve", "Retrieve records for # UID(s)", click on the pull down menu "Summar" and "FASTA (text)
   * Copy all *final_prot_aligned.fasta* from clusters to the `/OTUabudances/GENE/alignment` directory and the *_coverage.txt* files to the `OTUabundances/GENE` folder
 * Relevant outputs:
   * `${GENE}_${CLUST}_labels_short.txt`: Labels of all sequences (short) for incorporating into iTOL trees
