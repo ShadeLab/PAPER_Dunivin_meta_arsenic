@@ -630,12 +630,11 @@ sort file.txt | uniq -c > file2.txt
 | Wyoming_soil20.3  | -  | search contigs failed for aioA | - | - | - | - | - | - | - | - |
 | Wyoming_soil22.3  | -  | - | - | cluster, done | - | cluster, done, copied | - | - | arsM: cluster, done, copied | cluster, done, copied |
 | Permafrost_Canada23.3  | cluster, done | cluster, done | - | cluster,done | - | arsC_glut: cluster, done, copied | arsC_thio: cluster, done, copied | arsD: cluster, done, copied | arsM: cluster done, copied | rplB |
-| Permafrost_Canada45.3  | building bloom filter failed (tried twice)  | aioA | arrA | acr3 | arxA | arsC_glut | arsC_thio | arsD | arsM | rplB |
+| Permafrost_Canada45.3  | fixed xander script to include correct file name (Permafrost_Canada_4523145.3.qc.fastq.gz), waiting on the qsub file | aioA | arrA | acr3 | arxA | arsC_glut | arsC_thio | arsD | arsM | rplB |
 
 
 #### Genes and the respective proteins, with Xander's success
-
-![protein_name](https://user-images.githubusercontent.com/28952961/27546204-1fdeeb86-5a60-11e7-8191-fd5ad1245929.PNG)
+![protein_name](https://user-images.githubusercontent.com/28952961/27607231-2e2bae30-5b51-11e7-9047-838d0480af34.PNG)
 
 ## June 26, 2017
 #### Blast against non redundant database
