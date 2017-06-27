@@ -308,12 +308,16 @@ python run_microbe_census.py /my-directory/Iowa_agricultural_4509401.3.qc.fastq.
 * [Assessment by Gene](https://github.com/ShadeLab/meta_arsenic/blob/master/Yeh_Notes.md#assessment-by-gene)
 
 #### Assembly Assessment Xander automation:
-you have to type the gene and sample name after calling this script, for example if this script is called scriptName.sh, type "$./scriptName.sh arsB cen10" into the commandline. This will create a folder "blastdatabases_SAMPLENAME" and put several files into that folder for the blast database, it will also make and put 4 files made from R into that folder: GENENAME_readssummary.txt, GENENAME_kmerabundancedist.png, GENENAME_stats.txt, and GENENAME_e.values.txt. Then it will find the GC content of the SAMPLENAME_GENENAME_45_final_nucl.fasta file and place the output of that in a folder called GENENAME_gc in my directory
+* Script title: `assessment.sh`
+* To execute: `./asssessment.sh GENE SAMPLE`
+* Stored in: `/mnt/research/ShadeLab/WorkingSpace/Yeh/xander/Assessment`
+* Creates folder `databases_GENE` and puts  files into that folder, including 4 R files (`GENE_readssummary.txt`, `GENE_kmerabundancedist.png`, `GENE_stats.txt`, and `GENE_e.values.txt`)
+* Finds GC content of `SAMPLE_GENE_45_final_nucl.fasta`, the output will be in `GENE_gc` directory
 ```
 #!/bin/bash
 
-#you have to type the gene and sample names after calling this script, for example "$./testAutomation.sh arsB cen10"
-#$1 means the first argument (arsB in the example, so the variable GENE would be arsB), $2 is site name
+#the gene name and sample name are arguments, for example "$./assessment.sh arsB cen10"
+#$1 means the first argument (arsB in the example), $2 is site name
 GENE=$1
 SAMPLE=$2
 
@@ -389,7 +393,10 @@ mv gc_out.txt ${SAMPLE}_${GENE}_gc_out.txt
 mv ${SAMPLE}_${GENE}_gc_out.txt /mnt/research/ShadeLab/WorkingSpace/Yeh/xander/Assessment/${GENE}_gc
 
 ```
-This is the R file assembly_assessmentR.R used:
+* Title: assembly_assessmentR.R
+* Used in above script `assessment.sh`
+* Relevant outputs: `GENE_readssummary.txt`, `GENE_kmerabundancedist.png`, `GENE_stats.txt`, `GENE_e.values.txt`
+* Written by T. Dunivin
 ```
 # load required packages
 library(ggplot2)
@@ -442,7 +449,10 @@ evalues=summarize(blast, lowq=length(blast[,which(blast$eval>1e-2)]), min=min(bl
 # save results
 write.table(evalues, "e.values.txt", row.names=FALSE)
 ```
-This is the Perl file used to get the GC counts:
+* Title: `get_gc_counts.pl`
+* Used in above `assessment.sh`
+* Relevant Output: `gc_out.txt`
+* Written by J. Meneghin
 ```
 #!/usr/bin/perl -w
 ####################################################################################################
@@ -570,45 +580,47 @@ sub process_it {
 #### Assessment by Gene:
 to count number of unique gene descriptions and tally how many hits to each unique gene description, use commands 
 ```
-cat descriptor.blast | awk -F '[|[]' '{print $3}' > file.txt
+cat descriptor.blast.txt | awk -F '[|]' '{print $3}' > file.txt
 sort file.txt | uniq -c > file2.txt
 ```
-That will create a file, file.txt, that contains all the gene descriptions. The command awk finds and replaces text and the -F flag is where you give the delimiters. In our case, since the descriptor.blast file has many lines that are organized like this: `>ref|WP_007602791.1| arsenite oxidase large subunit [Bradyrhizobium sp. WSM1253]`, we want the description that is between the | and [ characters. The `'{print $3}'` tells awk to print the third column. Then the next command will create a file of the lines with counts, so the output file will look something like this: 
+* Used in `blast.summary.sh` below
+* Creates a file (`file.txt`) that contains all the gene descriptions. `awk` finds and replaces text and the -F flag is for delimiters. In our case, since the descriptor.blast.txt file has many lines that are organized like this: `>ref|WP_007602791.1| arsenite oxidase large subunit [Bradyrhizobium sp. WSM1253]`, the delimeter is `|`. The `'{print $3}'` instructs to print the third column. `uniq -c` creates a file of the lines with counts, so the output file will look something like this: 
 ```
      12  arsenate reductase (azurin)
      58  arsenite oxidase large subunit
       7  Arsenite oxidase large subunit
      12  arsenite oxidase large subunit, partial
 ```
-The output of all the files from TD's centralia data is in my directory called `/centralia_descriptors`
+* The output of all the files from TD's centralia data is in my directory called `/centralia_descriptors`
 
 ## June 19, 2017
 #### Xander results:
 *arsC_glut, arsC_thio, and arsD* uses `MIN_LENGTH=50  # minimum assembled protein contigs` because they are <150 aa long
-*arsM uses `MIN_LENGTH=160  # minimum assembled protein contigs`
+*arsM* uses `MIN_LENGTH=160  # minimum assembled protein contigs`
+* The rest of the genes use `MIN_LENGTH=150`
 * some of my clusters have files beginning with the name `cen01_45` because I forgot to change the name 
 
 | | arsB  | aioA | arrA | acr3 | arxA | arsC_glut | arsC_thio | arsD | arsM | rplB |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | Iowa_corn22.3 | -  | - | - | cluster,done | - | cluster, done, copied | - | - | cluster, done, copied | cluster, done, copied  |
-| Iowa_corn23.3  | -  | - | - | cluster,done | - | arsC_glut | cluster, done, copied | - | cluster, done, copied | cluster, done, copied |
+| Iowa_corn23.3  | -  | - | - | cluster,done | - | arsC_glut: cluster, done, copied | cluster, done, copied | - | cluster, done, copied | cluster, done, copied |
 | Iowa_agricultural00.3  | -  | cluster, done | - | cluster,done | - | arsC_glut: cluster, done, copied | - | arsD: cluster, done, copied, cannot stat `e.values.txt` | arsM: cluster, done, copied | rplB: cluster, done, copied |
 | Iowa_agricultural01.3  | -  | - | - | - | - | cluster, done, copied | - | - | - | cluster, done, copied |
-| Mangrove02.3  | -  | cluster, done | cluster, done | cluster,done |  arxA: cluster, done, copied | arsC_glut: cluster, done, copied | arsC_thio | arsD: cluster, done, copied, blast.txt empty, no e.values.txt | arsM | cluster, done, copied |
+| Mangrove02.3  | -  | cluster, done | cluster, done | cluster,done |  arxA: cluster, done, copied | arsC_glut: cluster, done, copied | arsC_thio | arsD: cluster, done, copied, blast.txt empty, no e.values.txt | arsM: cluster, done, copied | cluster, done, copied |
 | Mangrove70.3  | -  | cluster, done | cluster,done | - |  arxA: cluster, done, copied | arsC_glut: cluster, done, copied | arsC_thio: cluster, done, copied | arsD: cluster, done, copied | arsM: cluster, done, copied | - |
 | Permafrost_Russia12.3  | search contigs failed for arsB | search contigs failed for aioA | search contigs failed for arrA | search contigs failed for acr3 |search contigs failed for arxA | - | - | - | - | - |
 | Permafrost_Russia13.3  | - | aioA: cluster, done, copied  | arrA: cluster, done, copied |  acr3: cluster, done, copied | arxA: cluster, done, copied, blast.txt empty, no e.values.txt | arsC_glut | arsC_thio | arsD | arsM | rplB |
-| Iowa_prairie75.3  | -  | cluster, done, copied | - | - | get uniq starting kmers failed for arxA | arsC_glut: cluster, done, copied | - | - | arsM: cluster, done, copied | rplB |
-| Iowa_prairie72.3  | retrying-arsB  | aioA: cluster, done, copied | - | acr3: cluster, done, copied | - | arsC_glut: cluster, done, copied | - | - | arsM | rplB |
+| Iowa_prairie75.3  | -  | cluster, done, copied | - | - | get uniq starting kmers failed for arxA | arsC_glut: cluster, done, copied | - | - | arsM: cluster, done, copied | rplB: cluster, done, copied |
+| Iowa_prairie72.3  | retrying-arsB  | aioA: cluster, done, copied | - | acr3: cluster, done, copied | - | arsC_glut: cluster, done, copied | - | - | arsM: cluster, done, copied | rplB |
 | Iowa_prairie76.3  | - | cluster, done | - | - | - | arsC_glut | arsC_thio | arsD | arsM | rplB |
-| Brazilian_forest95.3  | - | - | - | - | - | cluster, done, copied | - | - | arsM  | cluster, done, copied |
+| Brazilian_forest95.3  | - | - | - | - | - | cluster, done, copied | - | - | arsM: cluster, done, copied  | cluster, done, copied |
 | Brazilian_forest39.3  | -  | - | - | - | get uniq starting kmers failed for arxA | cluster, done, copied | arsC_thio: cluster, done, copied | - | arsM: cluster, done, copied | cluster, done, copied |
-| Brazilian_forest54.3  | -  | cluster, done | - | - | arxA | arsC_glut: cluster, done, copied | arsC_thio: cluster, done, copied | get uniq starting kmers failed for arsD | arsM: cluster, done, copied | rplB |
+| Brazilian_forest54.3  | -  | cluster, done | - | - | arxA | arsC_glut: cluster, done, copied | arsC_thio: cluster, done, copied | get uniq starting kmers failed for arsD | arsM: cluster, done, copied | rplB: cluster, done, copied |
 | Illinois_soybean42.3  | -  | - | - | - | - | cluster, done, copied | - | - | arsM: cluster, blast.txt empty, copied | cluster, done, copied |
 | Illinois_soybean40.3  | -  | - | - | - | - | cluster, done, copied | - | - | - | cluster, done, copied |
-| Minnesota_creek46.3  | - | cluster, done | - | cluster,done | - | arsC_glut: cluster, done, copied | - | - | arsM: cluster, done, copied, MIN_LENGTH was 150, will do again with 160 | rplB |
+| Minnesota_creek46.3  | - | cluster, done | - | cluster,done | - | arsC_glut: cluster, done, copied | - | - | arsM: cluster, done, copied, MIN_LENGTH was 150, will do again with 160 | rplB: cluster, done, copied |
 | Minnesota_creek45.3  | - | - | - | - | arxA | arsC_glut: cluster, done, copied | arsC_thio: cluster, blast.txt empty, copied  | - | arsM: cluster, done, copied | cluster, done, copied |
-| Disney_preserve18.3  | -  | - | - | cluster, done | - | arsC_glut: cluster, done, copied | arsC_thio: cluster, done, copied | arsD: cluster, done, copied, blast.txt empty, no e.values.txt | arsM | rplB |
+| Disney_preserve18.3  | -  | - | - | cluster, done | - | arsC_glut: cluster, done, copied | arsC_thio: cluster, done, copied | arsD: cluster, done, copied, blast.txt empty, no e.values.txt | arsM: cluster, done, copied | rplB |
 | Disney_preserve25.3  | -  | - | - | cluster, done | - | arsC_glut:cluster, done, copied | arsC_thio: cluster, done, copied | - | arsM: cluster, done, copied | cluster, done, copied |
 | California_grassland15.3  | cluster, done, copied | - | - | cluster, done | get uniq starting kmers failed for arxA | arsC_glut: cluster, done, copied | arsC_thio:cluster, done | get uniq starting kmers failed for arsD | - | cluster, done, copied |
 | California_grassland62.3  | cluster, done, copied | - | - | cluster, done | get uniq starting kmers failed for arxA | cluster, done, copied | - | get uniq starting kmers failed for arsD | - | cluster, done, copied |
@@ -616,7 +628,7 @@ The output of all the files from TD's centralia data is in my directory called `
 | Illinois_soil88.3  | -  | cluster, done | - | cluster, done | - | cluster,done, copied | cluster: blast.txt empty | cluster | cluster, done copied | cluster, done, copied |
 | Wyoming_soil20.3  | -  | search contigs failed for aioA | - | - | - | - | - | - | - | - |
 | Wyoming_soil22.3  | -  | - | - | cluster, done | - | cluster, done, copied | - | - | arsM: cluster, done, copied | cluster, done, copied |
-| Permafrost_Canada23.3  | cluster, done | cluster, done | - | cluster,done | - | arsC_glut: cluster, done, copied | arsC_thio: cluster, done, copied | arsD: cluster, done, copied | arsM | rplB |
+| Permafrost_Canada23.3  | cluster, done | cluster, done | - | cluster,done | - | arsC_glut: cluster, done, copied | arsC_thio: cluster, done, copied | arsD: cluster, done, copied | arsM: cluster done, copied | rplB |
 | Permafrost_Canada45.3  | building bloom filter failed (tried twice)  | aioA | arrA | acr3 | arxA | arsC_glut | arsC_thio | arsD | arsM | rplB |
 
 
@@ -626,7 +638,15 @@ The output of all the files from TD's centralia data is in my directory called `
 
 ## June 26, 2017
 #### Blast against non redundant database
-Used [work flow from TD](https://github.com/ShadeLab/Xander_arsenic/blob/2f5c639b5f3e35eba66b3054a10b006e261b8230/phylogenetic_analysis/workflow.md) to test genes against non redundant database. After copying all *final_prot.fasta* files from the clusters to the `databases_${GENE}` folders, blast against nr database. type the name of the script followed by the gene name, such as `./blast.summary.sh GENE`
+* [Written by T. Dunivin](https://github.com/ShadeLab/Xander_arsenic/blob/2f5c639b5f3e35eba66b3054a10b006e261b8230/phylogenetic_analysis/workflow.md) to test genes against non redundant database
+* Script title: `blast.summary.sh`
+* Located: `/mnt/research/ShadeLab/WorkingSpace/Yeh/xander/Assessment`
+* Pre script activities: 
+  * Copy all *final_prot.fasta* files from the clusters to the `databases_${GENE}` folders
+* To execute: `./blast.summary.sh GENE`
+* Relevent outputs: 
+  * `ncbi.input.txt`: contains protein accession numbers which can be used to gather sequences for phylogenetic analysis
+  * `gene.descriptor.final.txt`: Contains unique gene descriptor hits; look to see how often a specific hit shows up/ if the results look gene-specific
 ```
 #!/bin/bash
 
@@ -659,10 +679,17 @@ rm accno.txt
 rm *_45_final_prot.fasta
 ```
 #### Check Phylogeny
-Used [workflow from TD](https://github.com/ShadeLab/Xander_arsenic/blob/2f5c639b5f3e35eba66b3054a10b006e261b8230/phylogenetic_analysis/workflow.md) to add listed sequences to `reference_seqs.fa` file in `/mnt/research/ShadeLab/WorkingSpace/Yeh/xander/OTUabundances/GENE`
-`reference_seqs.fa` consists of: FASTA (from `ncbi.input.txt`), seeds (`cat /mnt/research/ShadeLab/WorkingSpace/Dunivin/xander/analysis/RDPTools/Xander_assembler/gene_resource/GENE/originaldata/GENE.seeds > reference_seqs.fa`), and root.
-* Roots used: arsB: first sequence from `acr3.seeds`; 
-* After copying all *final_prot_aligned.fasta* from clusters to the `/OTUabudances/GENE/alignment` directory and the *_coverage.txt* files to the `OTUabundances/GENE` folder, followed workflow from TD, script:
+* Script title: `phylo.sh`
+* Location: `/mnt/research/ShadeLab/WorkingSpace/Yeh/xander/OTUabundances/bin`
+* [Written by TD](https://github.com/ShadeLab/Xander_arsenic/blob/2f5c639b5f3e35eba66b3054a10b006e261b8230/phylogenetic_analysis/workflow.md) 
+* Pre-script activities: 
+  * add file `reference_seqs.fa`
+      * consists of: FASTA (from `ncbi.input.txt`), seeds (`cat /mnt/research/ShadeLab/WorkingSpace/Dunivin/xander/analysis/RDPTools/Xander_assembler/gene_resource/GENE/originaldata/GENE.seeds > reference_seqs.fa`), and root.
+      * Roots used: arsB: first sequence from `acr3.seeds`; 
+  * Copy all *final_prot_aligned.fasta* from clusters to the `/OTUabudances/GENE/alignment` directory and the *_coverage.txt* files to the `OTUabundances/GENE` folder
+* Relevant outputs:
+  * `${GENE}_${CLUST}_labels_short.txt`: Labels of all sequences (short) for incorporating into iTOL trees
+  * `${GENE}_${CLUST}_tree_short.nwk`: Maximum likelihood tree of all sequences (short) for iTOL tree
 ```
 #!/bin/bash
 
