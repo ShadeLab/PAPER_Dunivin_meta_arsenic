@@ -634,7 +634,7 @@ sort file.txt | uniq -c > file2.txt
 
 
 #### Genes and the respective proteins, with Xander's success
-![protein_name](https://user-images.githubusercontent.com/28952961/27607231-2e2bae30-5b51-11e7-9047-838d0480af34.PNG)
+![protein_name](https://user-images.githubusercontent.com/28952961/27612824-72f0ee76-5b66-11e7-9934-73e761fa9312.PNG)
 
 ## June 26, 2017
 #### Blast against non redundant database
