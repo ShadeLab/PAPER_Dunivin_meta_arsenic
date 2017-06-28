@@ -604,33 +604,33 @@ sort file.txt | uniq -c > file2.txt
 | | arsB  | aioA | arrA | acr3 | arxA | arsC_glut | arsC_thio | arsD | arsM | rplB |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | Iowa_corn22.3 | -  | - | - | cluster,done | - | cluster, done, copied | - | - | cluster, done, copied | cluster, done, copied  |
-| Iowa_corn23.3  | -  | - | - | cluster,done | - | arsC_glut: cluster, done, copied | cluster, done, copied | - | cluster, done, copied | cluster, done, copied |
-| Iowa_agricultural00.3  | -  | cluster, done | - | cluster,done | - | arsC_glut: cluster, done, copied | - | arsD: cluster, done, copied, cannot stat `e.values.txt` | arsM: cluster, done, copied | rplB: cluster, done, copied |
+| Iowa_corn23.3  | -  | - | - | cluster,done | - | cluster, done, copied | cluster, done, copied | - | cluster, done, copied | cluster, done, copied |
+| Iowa_agricultural00.3  | -  | cluster, done | - | cluster,done | - | cluster, done, copied | - | cluster, done, copied, **cannot stat `e.values.txt`** | cluster, done, copied | cluster, done, copied |
 | Iowa_agricultural01.3  | -  | - | - | - | - | cluster, done, copied | - | - | - | cluster, done, copied |
-| Mangrove02.3  | -  | cluster, done | cluster, done | cluster,done |  arxA: cluster, done, copied | arsC_glut: cluster, done, copied | arsC_thio | arsD: cluster, done, copied, blast.txt empty, no e.values.txt | arsM: cluster, done, copied | cluster, done, copied |
-| Mangrove70.3  | -  | cluster, done | cluster,done | - |  arxA: cluster, done, copied | arsC_glut: cluster, done, copied | arsC_thio: cluster, done, copied | arsD: cluster, done, copied | arsM: cluster, done, copied | - |
-| Permafrost_Russia12.3  | search contigs failed for arsB | search contigs failed for aioA | search contigs failed for arrA | search contigs failed for acr3 |search contigs failed for arxA | - | - | - | - | - |
-| Permafrost_Russia13.3  | - | aioA: cluster, done, copied  | arrA: cluster, done, copied |  acr3: cluster, done, copied | arxA: cluster, done, copied, blast.txt empty, no e.values.txt | arsC_glut | arsC_thio | arsD | arsM | rplB |
-| Iowa_prairie75.3  | -  | cluster, done, copied | - | - | get uniq starting kmers failed for arxA | arsC_glut: cluster, done, copied | - | - | arsM: cluster, done, copied | rplB: cluster, done, copied |
-| Iowa_prairie72.3  | retrying-arsB  | aioA: cluster, done, copied | - | acr3: cluster, done, copied | - | arsC_glut: cluster, done, copied | - | - | arsM: cluster, done, copied | cluster, done, copied |
-| Iowa_prairie76.3  | - | cluster, done | - | - | - | arsC_glut | arsC_thio | arsD | arsM | rplB |
-| Brazilian_forest95.3  | - | - | - | - | - | cluster, done, copied | - | - | arsM: cluster, done, copied  | cluster, done, copied |
-| Brazilian_forest39.3  | -  | - | - | - | get uniq starting kmers failed for arxA | cluster, done, copied | arsC_thio: cluster, done, copied | - | arsM: cluster, done, copied | cluster, done, copied |
-| Brazilian_forest54.3  | -  | cluster, done | - | - | - | arsC_glut: cluster, done, copied | arsC_thio: cluster, done, copied | get uniq starting kmers failed for arsD | arsM: cluster, done, copied | rplB: cluster, done, copied |
-| Illinois_soybean42.3  | -  | - | - | - | - | cluster, done, copied | - | - | arsM: cluster, blast.txt empty, copied | cluster, done, copied |
+| Mangrove02.3  | -  | cluster, done | cluster, done | cluster, done | cluster, done, copied | cluster, done, copied | **arsC_thio** | cluster, done, copied, **blast.txt empty** | cluster, done, copied | cluster, done, copied |
+| Mangrove70.3  | -  | cluster, done | cluster,done | - | cluster, done, copied | cluster, done, copied | cluster, done, copied | cluster, done, copied | cluster, done, copied | - |
+| **Permafrost_Russia12.3**  | - | - | - | - | - | - | - | - | - | - |
+| Permafrost_Russia13.3  | - | cluster, done, copied  | cluster, done, copied | cluster, done, copied | cluster, done, copied, **blast.txt empty** | cluster, done, copied | cluster, done, copied | cluster, done, copied, **blast.txt empty** | **arsM** | **rplB** |
+| Iowa_prairie75.3  | -  | cluster, done, copied | - | - | - | cluster, done, copied | - | - | cluster, done, copied | cluster, done, copied |
+| Iowa_prairie72.3  | - | cluster, done, copied | - | cluster, done, copied | - | cluster, done, copied | - | - | cluster, done, copied | cluster, done, copied |
+| Iowa_prairie76.3  | - | cluster, done | - | - | - | cluster, done, copied | cluster, done, copied | - | **arsM** | **rplB** |
+| Brazilian_forest95.3  | - | - | - | - | - | cluster, done, copied | - | - | cluster, done, copied  | cluster, done, copied |
+| Brazilian_forest39.3  | -  | - | - | - | - | cluster, done, copied | cluster, done, copied | - | cluster, done, copied | cluster, done, copied |
+| Brazilian_forest54.3  | -  | cluster, done | - | - | - | cluster, done, copied | cluster, done, copied | - | cluster, done, copied | cluster, done, copied |
+| Illinois_soybean42.3  | -  | - | - | - | - | cluster, done, copied | - | - | cluster, **blast.txt empty**, copied | cluster, done, copied |
 | Illinois_soybean40.3  | -  | - | - | - | - | cluster, done, copied | - | - | - | cluster, done, copied |
-| Minnesota_creek46.3  | - | cluster, done | - | cluster,done | - | arsC_glut: cluster, done, copied | - | - | arsM: cluster, done, copied, MIN_LENGTH was 150, will do again with 160 | rplB: cluster, done, copied |
-| Minnesota_creek45.3  | - | - | - | - | - | arsC_glut: cluster, done, copied | arsC_thio: cluster, blast.txt empty, copied  | - | arsM: cluster, done, copied | cluster, done, copied |
-| Disney_preserve18.3  | -  | - | - | cluster, done | - | arsC_glut: cluster, done, copied | arsC_thio: cluster, done, copied | arsD: cluster, done, copied, blast.txt empty, no e.values.txt | arsM: cluster, done, copied | cluster, done, copied |
-| Disney_preserve25.3  | -  | - | - | cluster, done | - | arsC_glut:cluster, done, copied | arsC_thio: cluster, done, copied | - | arsM: cluster, done, copied | cluster, done, copied |
-| California_grassland15.3  | cluster, done, copied | - | - | cluster, done | get uniq starting kmers failed for arxA | arsC_glut: cluster, done, copied | arsC_thio:cluster, done | get uniq starting kmers failed for arsD | - | cluster, done, copied |
-| California_grassland62.3  | cluster, done, copied | - | - | cluster, done | get uniq starting kmers failed for arxA | cluster, done, copied | - | get uniq starting kmers failed for arsD | - | cluster, done, copied |
-| Illinois_soil91.3  | -  | cluster, done | - | cluster,done | - | cluster, done, copied | cluster: blast.txt empty | cluster | cluster, done, copied | cluster, done, copied |
-| Illinois_soil88.3  | -  | cluster, done | - | cluster, done | - | cluster,done, copied | cluster: blast.txt empty | cluster | cluster, done copied | cluster, done, copied |
-| Wyoming_soil20.3  | -  | search contigs failed for aioA | - | - | - | - | - | - | - | - |
-| Wyoming_soil22.3  | -  | - | - | cluster, done | - | cluster, done, copied | - | - | arsM: cluster, done, copied | cluster, done, copied |
-| Permafrost_Canada23.3  | cluster, done | cluster, done | - | cluster,done | - | arsC_glut: cluster, done, copied | arsC_thio: cluster, done, copied | arsD: cluster, done, copied | arsM: cluster done, copied | cluster, done, copied |
-| Permafrost_Canada45.3  | fixed xander script to include correct file name (Permafrost_Canada_4523145.3.qc.fastq.gz), waiting on the qsub file | aioA | arrA | acr3 | arxA | arsC_glut | arsC_thio | arsD | arsM | rplB |
+| Minnesota_creek46.3  | - | cluster, done | - | cluster, done | - | cluster, done, copied | - | - | cluster, done, copied, MIN_LENGTH was 150, will do again with 160- **IN QUEUE** | cluster, done, copied |
+| Minnesota_creek45.3  | - | - | - | - | - | cluster, done, copied | cluster, **blast.txt empty**, copied  | - | cluster, done, copied | cluster, done, copied |
+| Disney_preserve18.3  | -  | - | - | cluster, done | - | cluster, done, copied | cluster, done, copied | cluster, done, copied, **blast.txt empty** | cluster, done, copied | cluster, done, copied |
+| Disney_preserve25.3  | -  | - | - | cluster, done | - | cluster, done, copied | cluster, done, copied | - | cluster, done, copied | cluster, done, copied |
+| California_grassland15.3  | cluster, done, copied | - | - | cluster, done | - | cluster, done, copied | cluster, done | - | - | cluster, done, copied |
+| California_grassland62.3  | cluster, done, copied | - | - | cluster, done | - | cluster, done, copied | - | - | - | cluster, done, copied |
+| Illinois_soil91.3  | -  | cluster, done | - | cluster,done | - | cluster, done, copied | cluster: **blast.txt empty** | cluster | cluster, done, copied | cluster, done, copied |
+| Illinois_soil88.3  | -  | cluster, done | - | cluster, done | - | cluster,done, copied | cluster: **blast.txt empty** | cluster | cluster, done copied | cluster, done, copied |
+| **Wyoming_soil20.3**  | -  | - | - | - | - | - | - | - | - | - |
+| Wyoming_soil22.3  | -  | - | - | cluster, done | - | cluster, done, copied | - | - | cluster, done, copied | cluster, done, copied |
+| Permafrost_Canada23.3  | cluster, done | cluster, done | - | cluster,done | - | cluster, done, copied | cluster, done, copied | cluster, done, copied | cluster done, copied | cluster, done, copied |
+| Permafrost_Canada45.3  | fixed xander script to include correct file name (Permafrost_Canada_4523145.3.qc.fastq.gz), **waiting on the qsub file** | aioA | arrA | acr3 | arxA | arsC_glut | arsC_thio | arsD | arsM | rplB |
 
 
 #### Genes and the respective proteins, with Xander's success
