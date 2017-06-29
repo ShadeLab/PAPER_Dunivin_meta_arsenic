@@ -688,20 +688,25 @@ rm *_45_final_prot.fasta
   * add file `reference_seqs.fa`
       * consists of: FASTA (see directions below), seeds (from `/mnt/research/ShadeLab/WorkingSpace/Dunivin/xander/analysis/RDPTools/Xander_assembler/gene_resource/GENE/originaldata/GENE.seeds`), and root.
       * Roots used: arsB: first sequence from `acr3.seeds`; aioA: first sequence from `arrA.seeds`
-      * FASTA file directions: save `GENE.ncbi.input.txt`, upload to [batch entrez](https://www.ncbi.nlm.nih.gov/sites/batchentrez), click "Retrieve", "Retrieve records for # UID(s)", click on the pull down menu "Summar" and "FASTA (text)
-  * Copy all *final_prot_aligned.fasta* from clusters to the `/OTUabudances/GENE/alignment` directory and the *_coverage.txt* files to the `OTUabundances/GENE` folder:
-  * `GENE=arsB; for i in California_grassland15.3 California_grassland62.3 Permafrost_Canada23.3; do cp /mnt/research/ShadeLab/WorkingSpace/Yeh/xander/${i}/k45/${GENE}/cluster/*final_prot_aligned.fasta /mnt/research/ShadeLab/WorkingSpace/Yeh/xander/OTUabudances/${GENE}/alignment; done`
-  * `GENE=arsB; for i in California_grassland15.3 California_grassland62.3 Permafrost_Canada23.3; do cp /mnt/research/ShadeLab/WorkingSpace/Yeh/xander/${i}/k45/${GENE}/cluster/*_coverage.txt /mnt/research/ShadeLab/WorkingSpace/Yeh/xander/OTUabudances/${GENE}; done`
+      * FASTA file directions: save `GENE.ncbi.input.txt`, upload to [batch entrez](https://www.ncbi.nlm.nih.gov/sites/batchentrez), click "Retrieve", "Retrieve records for # UID(s)", click on the pull down menu "Summar" and "FASTA (text), copy and paste into `reference_seqs.fa`
+  * Copy all *final_prot_aligned.fasta* from clusters to the `/OTUabudances/GENE/alignment` directory and the *_coverage.txt* files to the `OTUabundances/GENE` folder. For example, for arsB:
+  * `GENE=arsB; for i in California_grassland15.3 California_grassland62.3 Permafrost_Canada23.3; do cp /mnt/research/ShadeLab/WorkingSpace/Yeh/xander/${i}/k45/${GENE}/cluster/*final_prot_aligned.fasta /mnt/research/ShadeLab/WorkingSpace/Yeh/xander/OTUabundances/${GENE}/alignment/${i}_${GENE}_45_final_prot_aligned.fasta; done`
+  * `GENE=arsB; for i in California_grassland15.3 California_grassland62.3 Permafrost_Canada23.3; do cp /mnt/research/ShadeLab/WorkingSpace/Yeh/xander/${i}/k45/${GENE}/cluster/*_coverage.txt /mnt/research/ShadeLab/WorkingSpace/Yeh/xander/OTUabundances/${GENE}/${i}_${GENE}_45_coverage.txt; done`
   * In the scripts above, replace GENE and i with the gene and samples which have clusters at that gene
 * Relevant outputs:
   * `${GENE}_${CLUST}_labels_short.txt`: Labels of all sequences (short) for incorporating into iTOL trees
   * `${GENE}_${CLUST}_tree_short.nwk`: Maximum likelihood tree of all sequences (short) for iTOL tree
+* To execute: `./phylo.sh GENE CLUST`
+* I did this for each gene, at clusters of 0.01 and 0.03
 ```
 #!/bin/bash
 
-#you have to type the gene
+#you have to type the gene and cluster
 GENE=$1
 CLUST=$2
+
+#start in the correct directory
+cd /mnt/research/ShadeLab/WorkingSpace/Yeh/xander/OTUabundances/${GENE}
 
 #merge coverage.txt files
 cat *45_coverage.txt > final_coverage.txt
@@ -765,8 +770,8 @@ rm ${GENE}_${CLUST}_labels_short.n.txt
 rm *_${GENE}_45_coverage.txt
 
 ```
-* uploaded `tree_short.nwk` files (both 0.1 and 0.3) onto iTOL and added labels.
-Used label template to create labels, for example this is for arsB_0.1_tree_short.awk:
+* uploaded `tree_short.nwk` files (both 0.01 and 0.03) onto [iTOL](http://itol.embl.de/) and added labels.
+* Used [label template](http://itol.embl.de/help/labels_template.txt) to create labels, for example this is for arsB_0.1_tree_short.awk:
 ```
 LABELS
 SEPARATOR COMMA
