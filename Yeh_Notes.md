@@ -642,7 +642,9 @@ sort file.txt | uniq -c > file2.txt
 * Script title: `blast.summary.sh`
 * Located: `/mnt/research/ShadeLab/WorkingSpace/Yeh/xander/Assessment`
 * Pre script activities: 
-  * Copy all *final_prot.fasta* files from the clusters to the `databases_${GENE}` folders
+  * Copy all *final_prot.fasta* files from the clusters to the `databases_${GENE}` folders, for example for arsB, there are 3 clusters: California_grassland15.3, California_grassland62.3, Permafrost_Canada23.3:
+    * `GENE=arsB; for i in California_grassland15.3 California_grassland62.3 Permafrost_Canada23.3; do cp /mnt/research/ShadeLab/WorkingSpace/Yeh/xander/${i}/k45/${GENE}/cluster/*final_prot.fasta /mnt/research/ShadeLab/WorkingSpace/Yeh/xander/Assessment/databases_${GENE}; done`
+    * In the script, replace the variables GENE and i with the gene and samples that have clusters
 * To execute: `./blast.summary.sh GENE`
 * Relevent outputs: 
   * `ncbi.input.txt`: contains protein accession numbers which can be used to gather sequences for phylogenetic analysis
@@ -687,7 +689,9 @@ rm *_45_final_prot.fasta
       * consists of: FASTA (see directions below), seeds (from `/mnt/research/ShadeLab/WorkingSpace/Dunivin/xander/analysis/RDPTools/Xander_assembler/gene_resource/GENE/originaldata/GENE.seeds`), and root.
       * Roots used: arsB: first sequence from `acr3.seeds`; aioA: first sequence from `arrA.seeds`
       * FASTA file directions: save `GENE.ncbi.input.txt`, upload to [batch entrez](https://www.ncbi.nlm.nih.gov/sites/batchentrez), click "Retrieve", "Retrieve records for # UID(s)", click on the pull down menu "Summar" and "FASTA (text)
-  * Copy all *final_prot_aligned.fasta* from clusters to the `/OTUabudances/GENE/alignment` directory and the *_coverage.txt* files to the `OTUabundances/GENE` folder
+  * Copy all *final_prot_aligned.fasta* from clusters to the `/OTUabudances/GENE/alignment` directory and the *_coverage.txt* files to the `OTUabundances/GENE` folder:
+      * `GENE=arsB; for i in California_grassland15.3 California_grassland62.3 Permafrost_Canada23.3; do cp /mnt/research/ShadeLab/WorkingSpace/Yeh/xander/${i}/k45/${GENE}/cluster/*final_prot_aligned.fasta /mnt/research/ShadeLab/WorkingSpace/Yeh/xander/OTUabudances/${GENE}/alignment; done`
+      * `GENE=arsB; for i in California_grassland15.3 California_grassland62.3 Permafrost_Canada23.3; do cp /mnt/research/ShadeLab/WorkingSpace/Yeh/xander/${i}/k45/${GENE}/cluster/*_coverage.txt /mnt/research/ShadeLab/WorkingSpace/Yeh/xander/OTUabudances/${GENE}; done`
 * Relevant outputs:
   * `${GENE}_${CLUST}_labels_short.txt`: Labels of all sequences (short) for incorporating into iTOL trees
   * `${GENE}_${CLUST}_tree_short.nwk`: Maximum likelihood tree of all sequences (short) for iTOL tree
