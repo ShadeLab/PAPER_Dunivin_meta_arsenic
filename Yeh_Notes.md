@@ -313,6 +313,9 @@ python run_microbe_census.py /my-directory/Iowa_agricultural_4509401.3.qc.fastq.
 * Stored in: `/mnt/research/ShadeLab/WorkingSpace/Yeh/xander/Assessment`
 * Creates folder `databases_GENE` and puts  files into that folder, including 4 R files (`GENE_readssummary.txt`, `GENE_kmerabundancedist.png`, `GENE_stats.txt`, and `GENE_e.values.txt`)
 * Finds GC content of `SAMPLE_GENE_45_final_nucl.fasta`, the output will be in `GENE_gc` directory
+* Uses [`assembly_assessmentsR.R`](https://github.com/ShadeLab/Xander_arsenic/blob/master/assembly_assessments/bin/assembly_assessments.R) by T. Dunivin
+   * Relevant outputs: `GENE_readssummary.txt`, `GENE_kmerabundancedist.png`, `GENE_stats.txt`, `GENE_e.values.txt`
+   * Uses [`get_gc_content.pl'](https://github.com/ShadeLab/Xander_arsenic/blob/master/assembly_assessments/bin/get_gc_content.pl)
 ```
 #!/bin/bash
 
@@ -393,190 +396,6 @@ mv gc_out.txt ${SAMPLE}_${GENE}_gc_out.txt
 mv ${SAMPLE}_${GENE}_gc_out.txt /mnt/research/ShadeLab/WorkingSpace/Yeh/xander/Assessment/${GENE}_gc
 
 ```
-* Title: assembly_assessmentR.R
-* Used in above script `assessment.sh`
-* Relevant outputs: `GENE_readssummary.txt`, `GENE_kmerabundancedist.png`, `GENE_stats.txt`, `GENE_e.values.txt`
-* Written by T. Dunivin
-```
-# load required packages
-library(ggplot2)
-library(dplyr)
-
-# COUNT NUMBER OF READ MATCHES
-# load packages
-library(dplyr)
-
-# read in file 
-data=read.table("matchreadlist.txt", header=FALSE)
-
-# count unique in query_id column
-reads=summarize(data, UniqueReads=length(unique(data$V1)),TotalReads=length(data$V1))
-
-# write results. later the name of the file will be changed to include the gene name
-write.table(reads, "readssummary.txt", row.names=FALSE)
-
-# KMER ABUND DISTRIBUTION
-# read in kmer abund file
-kmer=read.table(list.files(pattern = "_abundance.txt"), header=TRUE)
-
-# plot dist
-plot=ggplot(kmer, aes(x=kmer_abundance, y=frequency)) + geom_point() + labs(x="kmer abundance", y="Frequency")
-
-# save plot, change filename to include gene name, move to home
-ggsave("kmerabundancedist.png", plot=last_plot(), width=4, height=4)
-
-# NUCL STATS 
-# read in stats on length
-stats=read.table("framebotstats.txt", header=FALSE)
-
-# calculate statistics
-results=summarise(stats, ProteinContigClusters.99=length(stats$V4),AverageLength=mean(stats$V4),MedianLength=median(stats$V4), MinLength.bp=min(stats$V4), MaxLength.bp=max(stats$V4), MaxPercentIdentity=max(stats$V6), MinPercentIdentity=min(stats$V6), AveragePercentIdentity=mean(stats$V6))
-
-# save results
-write.table(results, "stats.txt", row.names=FALSE)
-
-# BLAST STATS
-# read in blast results from above
-blast=read.delim("blast.txt", header=FALSE)
-
-# write column names based on blast search
-colnames(blast)=c("contig", "match", "eval")
-
-# calculate number of low quality sequences along with
-# the min, max, mean, and median e values
-evalues=summarize(blast, lowq=length(blast[,which(blast$eval>1e-2)]), min=min(blast$eval), max=max(blast$eval), avg=mean(blast$eval), median=median(blast$eval))
-
-# save results
-write.table(evalues, "e.values.txt", row.names=FALSE)
-```
-* Title: `get_gc_counts.pl`
-* Used in above `assessment.sh`
-* Relevant Output: `gc_out.txt`
-* Written by J. Meneghin
-```
-#!/usr/bin/perl -w
-####################################################################################################
-### Get GC Content                                                                               ###
-### Usage: get_gc_content.pl <fasta file>                                                        ###
-### This program takes a fasta file as it's first (and only) parameter.                          ###
-###                                                                                              ###
-### It returns a tab delimited file (gc_out.txt): column 1 = header ID (everything between ">"   ###
-### and the first space in the header), and column 2 = gc content for the fasta entry.           ###
-###                                                                                              ###
-### Jennifer Meneghin                                                                            ###
-### July 23, 2009                                                                                ###
-###                                                                                              ###
-### This script now works properly with sequences that contain spaces.                           ###
-### September 20, 2010                                                                           ###
-###                                                                                              ###
-### This script now also returns the total nucleotide count, along with the number of of         ###
-### A's, G's, C's and T's for each fasta record.                                                 ###
-### September 21, 2010                                                                           ###
-####################################################################################################
-#--------------------------------------------------------------------------------------------------------------------------
--
-#Deal with passed parameters
-#--------------------------------------------------------------------------------------------------------------------------
--
-
-if ($#ARGV == -1) {
-    usage();
-    exit;
-}
-$fasta_file = $ARGV[0];
-$out_file = "gc_out.txt";
-unless ( open(IN, "$fasta_file") ) {
-    print "Got a bad fasta file: $fasta_file\n\n";
-    exit;
-}
-unless ( open(OUT, ">$out_file") ) {
-    print "Couldn't create $out_file\n";
-    exit;
-}
-print "Parameters:\nfasta file = $fasta_file\noutput file = $out_file\n\n";
-#--------------------------------------------------------------------------------------------------------------------------
--
-#The main event
-#--------------------------------------------------------------------------------------------------------------------------
--
-print OUT "ID\t% GCContent\tTotal Count\tG Count\tC Count\tA Count\tT Count\n";
-$seq = "";
-while (<IN>) {
-    chomp;
-    if (/^>/) {
-    #finish up previous line.
-    if (length($seq) > 0) {
-        &process_it;
-    }
-    #start new line.
-    $id = $_;
-    $id =~ s/^>(.+?)\s.+$/$1/g;
-    print OUT "$id\t";
-    }
-    else {
-    $seq = $seq . $_;
-    }
-}
-
-#finish up last line.
-&process_it;
-
-close(IN);
-close(OUT);
-
-sub usage {
-    print "Get GC Content\n";
-    print "Usage: get_gc_content.pl <fasta file>\n";
-    print "This program takes a fasta file as it's first (and only) parameter.\n\n";
-    print "It returns a tab delimited file (gc_out.txt): column 1 = header ID (everything between \">\"\n";
-    print "and the first space in the header), and column 2 = gc content for the fasta entry.\n\n";
-    print "Jennifer Meneghin\n";
-    print "July 23, 2009\n\n";
-    print "Updated September 20, 2010:\n";
-    print "This script now works properly with sequences that contain spaces.\n\n";
-    print "Updated September 21, 2010:\n";
-    print "This script now also returns the total nucleotide count, along with the number of of A's, G's, C's and T's for e
-ach fasta record.\n\n";
-}
-
-sub process_it {
-    @letters = split(//, $seq);
-    $gccount = 0;
-    $totalcount = 0;
-    $acount = 0;
-    $tcount = 0;
-    $gcount = 0;
-    $ccount = 0;
-    foreach $i (@letters) {
-    if (lc($i) =~ /[a-z]/) {
-        $totalcount++;
-    }
-    if (lc($i) eq "g" || lc($i) eq "c") {
-        $gccount++;
-    }
-    if (lc($i) eq "a") {
-        $acount++;
-    }
-    if (lc($i) eq "t") {
-        $tcount++;
-    }
-    if (lc($i) eq "g") {
-        $gcount++;
-    }
-    if (lc($i) eq "c") {
-        $ccount++;
-    }
-    }
-    if ($totalcount > 0) {
-    $gccontent = (100 * $gccount) / $totalcount;
-    }
-    else {
-    $gccontent = 0;
-    }
-    print OUT "$gccontent\t$totalcount\t$gcount\t$ccount\t$acount\t$tcount\n";
-    $seq = "";
-}
-```
 #### Assessment by Gene:
 to count number of unique gene descriptions and tally how many hits to each unique gene description, use commands 
 ```
@@ -604,7 +423,7 @@ sort file.txt | uniq -c > file2.txt
 | | arsB  | aioA | arrA | acr3 | arxA | arsC_glut | arsC_thio | arsD | arsM | rplB |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | Iowa_corn22.3 | -  | - | - | cluster,done | - | cluster, done, copied | - | - | cluster, done, copied | cluster, done, copied  |
-| Iowa_corn23.3  | -  | - | - | cluster,done | - | cluster, done, copied | cluster, done, copied | - | cluster, done, copied | cluster, done, copied |
+| Iowa_corn23.3  | -  | - | - | cluster,done | - | cluster, done, copied | - | - | cluster, done, copied | cluster, done, copied |
 | Iowa_agricultural00.3  | -  | cluster, done | - | cluster,done | - | cluster, done, copied | - | cluster, done, copied, **cannot stat `e.values.txt`** | cluster, done, copied | cluster, done, copied |
 | Iowa_agricultural01.3  | -  | - | - | - | - | cluster, done, copied | - | - | - | cluster, done, copied |
 | Mangrove02.3  | -  | cluster, done | cluster, done | cluster, done | cluster, done, copied | cluster, done, copied | cluster, done, copied | cluster, done, copied, **blast.txt empty** | cluster, done, copied | cluster, done, copied |
@@ -638,7 +457,7 @@ sort file.txt | uniq -c > file2.txt
 
 ## June 26, 2017
 #### Blast against non redundant database
-* [Written by T. Dunivin](https://github.com/ShadeLab/Xander_arsenic/blob/2f5c639b5f3e35eba66b3054a10b006e261b8230/phylogenetic_analysis/workflow.md) to test genes against non redundant database
+* [Written by T. Dunivin](https://github.com/ShadeLab/Xander_arsenic/blob/master/assembly_assessments/bin/blast.summary.pl) to test genes against non redundant database
 * Script title: `blast.summary.sh`
 * Located: `/mnt/research/ShadeLab/WorkingSpace/Yeh/xander/Assessment`
 * Pre script activities: 
@@ -646,40 +465,10 @@ sort file.txt | uniq -c > file2.txt
   * `GENE=arsB; for i in California_grassland15.3 California_grassland62.3 Permafrost_Canada23.3; do cp /mnt/research/ShadeLab/WorkingSpace/Yeh/xander/${i}/k45/${GENE}/cluster/*final_prot.fasta /mnt/research/ShadeLab/WorkingSpace/Yeh/xander/Assessment/databases_${GENE}; done`
     * In the script above, replace the variables GENE and i with the gene and samples that have clusters
 * To execute: `./blast.summary.sh GENE`
+* Start from correct directory, `cd /mnt/research/ShadeLab/WorkingSpace/Yeh/xander/Assessment/databases_${GENE}`
 * Relevent outputs: 
   * `ncbi.input.txt`: contains protein accession numbers which can be used to gather sequences for phylogenetic analysis
   * `gene.descriptor.final.txt`: Contains unique gene descriptor hits; look to see how often a specific hit shows up/ if the results look gene-specific
-```
-#!/bin/bash
-
-#you have to type the gene
-GENE=$1
-
-cd /mnt/research/ShadeLab/WorkingSpace/Yeh/xander/Assessment/databases_${GENE}
-
-#blast against nr database
-module load BLAST/2.2.26 
-export BLASTDB=/mnt/research/common-data/Bio/blastdb:$BLASTDB
-cat *_final_prot.fasta > final_prot.fasta
-blastall -d nr -i final_prot.fasta -p blastp -o blast.txt -b 1 -v 1 -e 1e-6 -a 8
-grep '^>' blast.txt > descriptor.blast.txt
-
-#get and count occurences of gene descriptions
-cat descriptor.blast.txt | awk -F '[|]' '{print $3}' > gene.descriptor.txt
-sort gene.descriptor.txt | uniq -c > ${GENE}.descriptor.final.txt
-
-#get and count occurrences of accession numbers
-cat descriptor.blast.txt | awk -F '[|]' '{print $2}' > accno.txt
-sort accno.txt | uniq -c > ${GENE}.accno.final.txt
-
-#this file contains protein accession numbers which can be used to gather sequences for phylogenetic analysis
-cat ${GENE}.accno.final.txt | awk '{print $2}' > ${GENE}.ncbi.input.txt
-
-#remove unnecessary files
-rm gene.descriptor.txt
-rm accno.txt
-rm *_45_final_prot.fasta
-```
 #### Check Phylogeny
 * Script title: `phylo.sh`
 * Location: `/mnt/research/ShadeLab/WorkingSpace/Yeh/xander/OTUabundances/bin`
@@ -687,7 +476,7 @@ rm *_45_final_prot.fasta
 * Pre-script activities: 
   * add file `reference_seqs.fa`
       * consists of: FASTA (see directions below), seeds (from `/mnt/research/ShadeLab/WorkingSpace/Dunivin/xander/analysis/RDPTools/Xander_assembler/gene_resource/GENE/originaldata/GENE.seeds`), and root.
-      * Roots used: arsB: first sequence from `acr3.seeds`; aioA: first sequence from `arrA.seeds`
+      * Roots used: arsB: first sequence from `acr3.seeds`; aioA: first sequence from `arrA.seeds`; arrA: first sequence from `aioA.seeds`; acr3: first sequence from `arsB.seeds`; arxA: first sequence from `arrA.seeds`
       * FASTA file directions: save `GENE.ncbi.input.txt`, upload to [batch entrez](https://www.ncbi.nlm.nih.gov/sites/batchentrez), click "Retrieve", "Retrieve records for # UID(s)", click on the pull down menu "Summar" and "FASTA (text), copy and paste into `reference_seqs.fa`
   * Copy all *final_prot_aligned.fasta* from clusters to the `/OTUabudances/GENE/alignment` directory and the *_coverage.txt* files to the `OTUabundances/GENE` folder. For example, for arsB:
   * `GENE=arsB; for i in California_grassland15.3 California_grassland62.3 Permafrost_Canada23.3; do cp /mnt/research/ShadeLab/WorkingSpace/Yeh/xander/${i}/k45/${GENE}/cluster/*final_prot_aligned.fasta /mnt/research/ShadeLab/WorkingSpace/Yeh/xander/OTUabundances/${GENE}/alignment/${i}_${GENE}_45_final_prot_aligned.fasta; done`
@@ -697,97 +486,13 @@ rm *_45_final_prot.fasta
   * `${GENE}_${CLUST}_labels_short.txt`: Labels of all sequences (short) for incorporating into iTOL trees
   * `${GENE}_${CLUST}_tree_short.nwk`: Maximum likelihood tree of all sequences (short) for iTOL tree
 * To execute: `./phylo.sh GENE CLUST`
-* I did this for each gene, at clusters of 0.01 and 0.03
-```
-#!/bin/bash
+* I did this for each gene, at clusters of 0.1 and 0.3
 
-#you have to type the gene and cluster
-GENE=$1
-CLUST=$2
-
-#start in the correct directory
-cd /mnt/research/ShadeLab/WorkingSpace/Yeh/xander/OTUabundances/${GENE}
-
-#merge coverage.txt files
-cat *45_coverage.txt > final_coverage.txt
-
-##CLUSTERING
-
-#get all coverage files
-#copy all files to database
-/mnt/research/ShadeLab/WorkingSpace/Dunivin/xander/OTUabundances/bin/./get_OTUabundance.sh final_coverage.txt /mnt/research/ShadeLab/WorkingSpace/Yeh/xander/OTUabundances/${GENE} 0 ${CLUST} alignment/*
-
-#rename rformat of interest
-mv rformat_dist_${CLUST}.txt ${GENE}_rformat_dist_${CLUST}.txt
-
-#get and rename sequences
-java -Xmx2g -jar /mnt/research/ShadeLab/WorkingSpace/Dunivin/xander/analysis/RDPTools/Clustering.jar rep-seqs -c --id-mapping ids --one rep-per-otu complete.clust ${CLUST} derep.fa
-
-#rename complete.clust_rep_seqs.fasta to match distance
-mv complete.clust_rep_seqs.fasta complete.clust_rep_seqs_${CLUST}.fasta
-
-#rename files based on OTU, not cluster for specified distance
-sed -i 's/[0-9]\{1,\}/0000000&/g;s/0*\([0-9]\{4,\}\)/\1/g' complete.clust_rep_seqs_${CLUST}.fasta
-sed -i 's/cluster_/OTU_/g' complete.clust_rep_seqs_${CLUST}.fasta
-
-#unalign sequences
-java -Xmx2g -jar /mnt/research/ShadeLab/WorkingSpace/Dunivin/xander/analysis/RDPTools/Clustering.jar to-unaligned-fasta complete.clust_rep_seqs_${CLUST}.fasta > complete.clust_rep_seqs_${CLUST}_unaligned_short.fasta
-
-#add seed data to sequence file
-#Note: first would need to uploade sequences to HPCC
-cat complete.clust_full_rep_seqs_${CLUST}_unaligned_short.fasta reference_seqs.fa > complete.clust_full_rep_seqs_${CLUST}_unaligned_seeds_short.fasta
-
-#make tree for visualization:
-#align file with all sequences
-module load HMMER/3.1b2
-hmmalign --amino --outformat SELEX -o ${GENE}_alignment_${CLUST}_short.selex /mnt/research/ShadeLab/WorkingSpace/Dunivin/xander/analysis/RDPTools/Xander_assembler/gene_resource/${GENE}/originaldata/${GENE}.hmm complete.clust_full_rep_seqs_${CLUST}_unaligned_seeds_short.fasta
-
-#convert alignment from selex format to aligned fasta (xmfa)
-module load Bioperl/1.6.923
-/mnt/research/ShadeLab/WorkingSpace/Dunivin/xander/OTUabundances/bin/./convertAlignment.pl -i ${GENE}_alignment_${CLUST}_short.selex -o ${GENE}_alignment_${CLUST}_short.fa -f xmfa -g selex
-
-#remove last line of aligned seqs (= sign)
-dd if=/dev/null of=${GENE}_alignment_${CLUST}_short.fa bs=1 seek=$(echo $(stat --format=%s ${GENE}_alignment_${CLUST}_short.fa ) - $( tail -n1 ${GENE}_alignment_${CLUST}_short.fa | wc -c) | bc )
-
-#make two separate trees
-module load GNU/4.4.5
-module load FastTree/2.1.7
-FastTree ${GENE}_alignment_${CLUST}_short.fa > ${GENE}_${CLUST}_tree_short.nwk
-
-#extract labels from fasta file
-grep "^>" ${GENE}_alignment_${CLUST}_short.fa > ${GENE}_alignment_${CLUST}_labels_short.txt
-
-#edit file name for iTOL
-sed 's/^........../,/' ${GENE}_alignment_${CLUST}_labels_short.txt > ${GENE}_${CLUST}_labels_short.txt
-sed 's/, /,/' ${GENE}_${CLUST}_labels_short.txt > ${GENE}_${CLUST}_labels_short.n.txt
-
-#add numbers to each line (seq_name)
-nl -w 1 -s "" ${GENE}_${CLUST}_labels_short.n.txt > ${GENE}_${CLUST}_labels_short.txt
-
-#delete unnecessary files
-rm rformat_dist_*
-rm ${GENE}_${CLUST}_labels_short.n.txt
-rm *_${GENE}_45_coverage.txt
-
-```
 * uploaded `tree_short.nwk` files (both 0.01 and 0.03) onto [iTOL](http://itol.embl.de/) and added labels.
-* Used [label template](http://itol.embl.de/help/labels_template.txt) to create labels, for example this is for arsB_0.1_tree_short.awk:
+* Used [label template](http://itol.embl.de/help/labels_template.txt) to create labels:
 ```
 LABELS
 SEPARATOR COMMA
 DATA
-1,NP_947603.1
-2,WP_005456475.1
-3,WP_007562299.1
-4,ARSB_ECOLI
-5,ARSB_STAAM
-6,ARSB_STAAW
-7,ARSB_STAAS
-8,ARSB_YEREN
-9,ARSB_STAXY
-10,Acidiphilium_multivorum
-11,ARSB2_ECOLX
-12,YDFA_BACSU
-13,O68021_PSEAE
-14,ROOT_ACR3_CORGL
+#DATA GOES HERE
 ```
