@@ -607,19 +607,19 @@ sort file.txt | uniq -c > file2.txt
 | Iowa_corn23.3  | -  | - | - | cluster,done | - | cluster, done, copied | cluster, done, copied | - | cluster, done, copied | cluster, done, copied |
 | Iowa_agricultural00.3  | -  | cluster, done | - | cluster,done | - | cluster, done, copied | - | cluster, done, copied, **cannot stat `e.values.txt`** | cluster, done, copied | cluster, done, copied |
 | Iowa_agricultural01.3  | -  | - | - | - | - | cluster, done, copied | - | - | - | cluster, done, copied |
-| Mangrove02.3  | -  | cluster, done | cluster, done | cluster, done | cluster, done, copied | cluster, done, copied | **arsC_thio** | cluster, done, copied, **blast.txt empty** | cluster, done, copied | cluster, done, copied |
+| Mangrove02.3  | -  | cluster, done | cluster, done | cluster, done | cluster, done, copied | cluster, done, copied | cluster, done, copied | cluster, done, copied, **blast.txt empty** | cluster, done, copied | cluster, done, copied |
 | Mangrove70.3  | -  | cluster, done | cluster,done | - | cluster, done, copied | cluster, done, copied | cluster, done, copied | cluster, done, copied | cluster, done, copied | - |
 | **Permafrost_Russia12.3**  | - | - | - | - | - | - | - | - | - | - |
-| Permafrost_Russia13.3  | - | cluster, done, copied  | cluster, done, copied | cluster, done, copied | cluster, done, copied, **blast.txt empty** | cluster, done, copied | cluster, done, copied | cluster, done, copied, **blast.txt empty** | **arsM** | **rplB** |
+| Permafrost_Russia13.3  | - | cluster, done, copied  | cluster, done, copied | cluster, done, copied | cluster, done, copied, **blast.txt empty** | cluster, done, copied | cluster, done, copied | cluster, done, copied, **blast.txt empty** | cluster, done, copied | **rplB: in Q** |
 | Iowa_prairie75.3  | -  | cluster, done, copied | - | - | - | cluster, done, copied | - | - | cluster, done, copied | cluster, done, copied |
 | Iowa_prairie72.3  | - | cluster, done, copied | - | cluster, done, copied | - | cluster, done, copied | - | - | cluster, done, copied | cluster, done, copied |
-| Iowa_prairie76.3  | - | cluster, done | - | - | - | cluster, done, copied | cluster, done, copied | - | **arsM** | **rplB** |
+| Iowa_prairie76.3  | - | cluster, done | - | - | - | cluster, done, copied | cluster, done, copied | - | cluster, done, copied | **rplB: in Q** |
 | Brazilian_forest95.3  | - | - | - | - | - | cluster, done, copied | - | - | cluster, done, copied  | cluster, done, copied |
 | Brazilian_forest39.3  | -  | - | - | - | - | cluster, done, copied | cluster, done, copied | - | cluster, done, copied | cluster, done, copied |
 | Brazilian_forest54.3  | -  | cluster, done | - | - | - | cluster, done, copied | cluster, done, copied | - | cluster, done, copied | cluster, done, copied |
 | Illinois_soybean42.3  | -  | - | - | - | - | cluster, done, copied | - | - | cluster, **blast.txt empty**, copied | cluster, done, copied |
 | Illinois_soybean40.3  | -  | - | - | - | - | cluster, done, copied | - | - | - | cluster, done, copied |
-| Minnesota_creek46.3  | - | cluster, done | - | cluster, done | - | cluster, done, copied | - | - | cluster, done, copied, MIN_LENGTH was 150, will do again with 160- **IN QUEUE** | cluster, done, copied |
+| Minnesota_creek46.3  | - | cluster, done | - | cluster, done | - | cluster, done, copied | - | - | cluster, done, copied | cluster, done, copied |
 | Minnesota_creek45.3  | - | - | - | - | - | cluster, done, copied | cluster, **blast.txt empty**, copied  | - | cluster, done, copied | cluster, done, copied |
 | Disney_preserve18.3  | -  | - | - | cluster, done | - | cluster, done, copied | cluster, done, copied | cluster, done, copied, **blast.txt empty** | cluster, done, copied | cluster, done, copied |
 | Disney_preserve25.3  | -  | - | - | cluster, done | - | cluster, done, copied | cluster, done, copied | - | cluster, done, copied | cluster, done, copied |
@@ -630,7 +630,7 @@ sort file.txt | uniq -c > file2.txt
 | **Wyoming_soil20.3**  | -  | - | - | - | - | - | - | - | - | - |
 | Wyoming_soil22.3  | -  | - | - | cluster, done | - | cluster, done, copied | - | - | cluster, done, copied | cluster, done, copied |
 | Permafrost_Canada23.3  | cluster, done | cluster, done | - | cluster,done | - | cluster, done, copied | cluster, done, copied | cluster, done, copied | cluster done, copied | cluster, done, copied |
-| Permafrost_Canada45.3  | fixed xander script to include correct file name (Permafrost_Canada_4523145.3.qc.fastq.gz), **waiting on the qsub file** | aioA | arrA | acr3 | arxA | arsC_glut | arsC_thio | arsD | arsM | rplB |
+| Permafrost_Canada45.3  | - | **in Q** | **in Q** | acr3 | arxA | arsC_glut | arsC_thio | arsD | arsM | rplB |
 
 
 #### Genes and the respective proteins, with Xander's success
@@ -643,9 +643,7 @@ sort file.txt | uniq -c > file2.txt
 * Located: `/mnt/research/ShadeLab/WorkingSpace/Yeh/xander/Assessment`
 * Pre script activities: 
   * Copy all *final_prot.fasta* files from the clusters to the `databases_${GENE}` folders, for example for arsB, there are 3 clusters: California_grassland15.3, California_grassland62.3, Permafrost_Canada23.3:
-  ```
-GENE=arsB; for i in California_grassland15.3 California_grassland62.3 Permafrost_Canada23.3; do cp /mnt/research/ShadeLab/WorkingSpace/Yeh/xander/${i}/k45/${GENE}/cluster/*final_prot.fasta /mnt/research/ShadeLab/WorkingSpace/Yeh/xander/Assessment/databases_${GENE}; done
-  ```
+  * `GENE=arsB; for i in California_grassland15.3 California_grassland62.3 Permafrost_Canada23.3; do cp /mnt/research/ShadeLab/WorkingSpace/Yeh/xander/${i}/k45/${GENE}/cluster/*final_prot.fasta /mnt/research/ShadeLab/WorkingSpace/Yeh/xander/Assessment/databases_${GENE}; done`
     * In the script above, replace the variables GENE and i with the gene and samples that have clusters
 * To execute: `./blast.summary.sh GENE`
 * Relevent outputs: 
@@ -692,12 +690,9 @@ rm *_45_final_prot.fasta
       * Roots used: arsB: first sequence from `acr3.seeds`; aioA: first sequence from `arrA.seeds`
       * FASTA file directions: save `GENE.ncbi.input.txt`, upload to [batch entrez](https://www.ncbi.nlm.nih.gov/sites/batchentrez), click "Retrieve", "Retrieve records for # UID(s)", click on the pull down menu "Summar" and "FASTA (text)
   * Copy all *final_prot_aligned.fasta* from clusters to the `/OTUabudances/GENE/alignment` directory and the *_coverage.txt* files to the `OTUabundances/GENE` folder:
-```
-GENE=arsB; for i in California_grassland15.3 California_grassland62.3 Permafrost_Canada23.3; do cp /mnt/research/ShadeLab/WorkingSpace/Yeh/xander/${i}/k45/${GENE}/cluster/*final_prot_aligned.fasta /mnt/research/ShadeLab/WorkingSpace/Yeh/xander/OTUabudances/${GENE}/alignment; done
-```
-```
-GENE=arsB; for i in California_grassland15.3 California_grassland62.3 Permafrost_Canada23.3; do cp /mnt/research/ShadeLab/WorkingSpace/Yeh/xander/${i}/k45/${GENE}/cluster/*_coverage.txt /mnt/research/ShadeLab/WorkingSpace/Yeh/xander/OTUabudances/${GENE}; done
-```
+  * `GENE=arsB; for i in California_grassland15.3 California_grassland62.3 Permafrost_Canada23.3; do cp /mnt/research/ShadeLab/WorkingSpace/Yeh/xander/${i}/k45/${GENE}/cluster/*final_prot_aligned.fasta /mnt/research/ShadeLab/WorkingSpace/Yeh/xander/OTUabudances/${GENE}/alignment; done`
+  * `GENE=arsB; for i in California_grassland15.3 California_grassland62.3 Permafrost_Canada23.3; do cp /mnt/research/ShadeLab/WorkingSpace/Yeh/xander/${i}/k45/${GENE}/cluster/*_coverage.txt /mnt/research/ShadeLab/WorkingSpace/Yeh/xander/OTUabudances/${GENE}; done`
+  * In the scripts above, replace GENE and i with the gene and samples which have clusters at that gene
 * Relevant outputs:
   * `${GENE}_${CLUST}_labels_short.txt`: Labels of all sequences (short) for incorporating into iTOL trees
   * `${GENE}_${CLUST}_tree_short.nwk`: Maximum likelihood tree of all sequences (short) for iTOL tree
