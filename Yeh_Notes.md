@@ -449,13 +449,13 @@ sort file.txt | uniq -c > file2.txt
 | **Wyoming_soil20.3**  | -  | - | - | - | - | - | - | - | - | - |
 | Wyoming_soil22.3  | -  | - | - | cluster, done | - | cluster, done, copied | - | - | cluster, done, copied | cluster, done, copied |
 | Permafrost_Canada23.3  | cluster, done | cluster, done | - | cluster,done | - | cluster, done, copied | cluster, done, copied | cluster, done, copied | cluster done, copied | cluster, done, copied |
-| Permafrost_Canada45.3  | - | **running** | **running** | acr3 | arxA | arsC_glut | arsC_thio | arsD | arsM | rplB |
+| Permafrost_Canada45.3  | - | **cluster, done, copied--NOT INCLUDED IN TREES** | - | **acr3: cluster, done, copied -- NOT INCLUDED IN TREES** | - | **arsC_glut: cluster, copied, done** | **arsC_thio: cluster, done, copied** | **WAITING** | arsM | rplB |
 
 
 #### Genes and the respective proteins, with Xander's success
 ![protein_name](https://user-images.githubusercontent.com/28952961/27612824-72f0ee76-5b66-11e7-9934-73e761fa9312.PNG)
 
-## June 26, 2017
+## June 26-30, 2017
 #### Blast against non redundant database
 * [Written by T. Dunivin](https://github.com/ShadeLab/Xander_arsenic/blob/master/assembly_assessments/bin/blast.summary.pl) to test genes against non redundant database
 * Script title: `blast.summary.sh`
