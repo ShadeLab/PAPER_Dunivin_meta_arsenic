@@ -449,7 +449,7 @@ sort file.txt | uniq -c > file2.txt
 | **Wyoming_soil20.3**  | -  | - | - | - | - | - | - | - | - | - |
 | Wyoming_soil22.3  | -  | - | - | cluster, done | - | cluster, done, copied | - | - | cluster, done, copied | cluster, done, copied |
 | Permafrost_Canada23.3  | cluster, done | cluster, done | - | cluster,done | - | cluster, done, copied | cluster, done, copied | cluster, done, copied | cluster done, copied | cluster, done, copied |
-| Permafrost_Canada45.3  | - | **in Q** | **in Q** | acr3 | arxA | arsC_glut | arsC_thio | arsD | arsM | rplB |
+| Permafrost_Canada45.3  | - | **running** | **running** | acr3 | arxA | arsC_glut | arsC_thio | arsD | arsM | rplB |
 
 
 #### Genes and the respective proteins, with Xander's success
@@ -472,10 +472,10 @@ sort file.txt | uniq -c > file2.txt
 #### Check Phylogeny
 * Script title: `phylo.sh`
 * Location: `/mnt/research/ShadeLab/WorkingSpace/Yeh/xander/OTUabundances/bin`
-* [Written by TD](https://github.com/ShadeLab/Xander_arsenic/blob/2f5c639b5f3e35eba66b3054a10b006e261b8230/phylogenetic_analysis/workflow.md) 
+* [Written by TD](https://github.com/ShadeLab/Xander_arsenic/blob/master/phylogenetic_analysis/bin/phylo.sh) 
 * Pre-script activities: 
   * add file `reference_seqs.fa`
-      * consists of: FASTA (see directions below), seeds (from `/mnt/research/ShadeLab/WorkingSpace/Dunivin/xander/analysis/RDPTools/Xander_assembler/gene_resource/GENE/originaldata/GENE.seeds`), and root.
+      * consists of: **FASTA** (see directions below), **seeds** (from `/mnt/research/ShadeLab/WorkingSpace/Dunivin/xander/analysis/RDPTools/Xander_assembler/gene_resource/GENE/originaldata/GENE.seeds`), and **root**.
       * Roots used: arsB: first sequence from `acr3.seeds`; aioA: first sequence from `arrA.seeds`; arrA: first sequence from `aioA.seeds`; acr3: first sequence from `arsB.seeds`; arxA: first sequence from `arrA.seeds`
       * FASTA file directions: save `GENE.ncbi.input.txt`, upload to [batch entrez](https://www.ncbi.nlm.nih.gov/sites/batchentrez), click "Retrieve", "Retrieve records for # UID(s)", click on the pull down menu "Summar" and "FASTA (text), copy and paste into `reference_seqs.fa`
   * Copy all *final_prot_aligned.fasta* from clusters to the `/OTUabudances/GENE/alignment` directory and the *_coverage.txt* files to the `OTUabundances/GENE` folder. For example, for arsB:
@@ -496,3 +496,8 @@ SEPARATOR COMMA
 DATA
 #DATA GOES HERE
 ```
+####[Examine phylogony of assembled genes](https://github.com/ShadeLab/Xander_arsenic/tree/master/phylogenetic_analysis)
+* Essentially the same as steps 1 and 2 except these scripts are gene specific and remove all sequences that are less than 90% of hmm length
+* To execute, `./GENE.phylo.sh GENE CLUST`
+* For 0.3 and 0.1
+* arsB 0.1 having trouble
