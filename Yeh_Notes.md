@@ -449,7 +449,7 @@ sort file.txt | uniq -c > file2.txt
 | **Wyoming_soil20.3**  | -  | - | - | - | - | - | - | - | - | - |
 | Wyoming_soil22.3  | -  | - | - | cluster, done | - | cluster, done, copied | - | - | cluster, done, copied | cluster, done, copied |
 | Permafrost_Canada23.3  | cluster, done | cluster, done | - | cluster,done | - | cluster, done, copied | cluster, done, copied | cluster, done, copied | cluster done, copied | cluster, done, copied |
-| Permafrost_Canada45.3  | - | **cluster, done, copied--NOT INCLUDED IN TREES** | - | **acr3: cluster, done, copied -- NOT INCLUDED IN TREES** | - | **arsC_glut: cluster, copied, done** | **arsC_thio: cluster, done, copied** | **WAITING** | arsM | rplB |
+| Permafrost_Canada45.3  | - | **cluster, done, copied--NOT INCLUDED IN TREES** | - | **acr3: cluster, done, copied -- NOT INCLUDED IN TREES** | - | **arsC_glut: cluster, copied, done** | **arsC_thio: cluster, done, copied** | **arsD: cluster, done, copied** | arsM | rplB |
 
 
 #### Genes and the respective proteins, with Xander's success
