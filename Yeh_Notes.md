@@ -1,8 +1,9 @@
 #### Susanna Yeh
-* [June 2-8, 2017](https://github.com/ShadeLab/meta_arsenic/blob/master/Yeh_Notes.md#june-2-8-2017)
-* [June 16, 2017](https://github.com/ShadeLab/meta_arsenic/blob/master/Yeh_Notes.md#june-16-2017)
-* [June 19-23, 2017](https://github.com/ShadeLab/meta_arsenic/blob/master/Yeh_Notes.md#june-19-2017)
-* [June 26-30, 2017](https://github.com/ShadeLab/meta_arsenic/blob/master/Yeh_Notes.md#june-26-2017)
+* [Summary of Sites Used](https://github.com/ShadeLab/meta_arsenic/blob/master/Yeh_Notes.md#june-2-8-2017)
+* [Assessments](https://github.com/ShadeLab/meta_arsenic/blob/master/Yeh_Notes.md#june-16-2017)
+* [Xander Results](https://github.com/ShadeLab/meta_arsenic/blob/master/Yeh_Notes.md#june-19-2017)
+* [Blast Against nr Database](https://github.com/ShadeLab/meta_arsenic/blob/master/Yeh_Notes.md#june-26-30-2017)
+* [Phylogenetic Analysis](https://github.com/ShadeLab/meta_arsenic/blob/master/Yeh_Notes.md#check-phylogeny)
 
 ## June 2-8, 2017
 
@@ -449,7 +450,7 @@ sort file.txt | uniq -c > file2.txt
 | **Wyoming_soil20.3**  | -  | - | - | - | - | - | - | - | - | - |
 | Wyoming_soil22.3  | -  | - | - | cluster, done | - | cluster, done, copied | - | - | cluster, done, copied | cluster, done, copied |
 | Permafrost_Canada23.3  | cluster, done | cluster, done | - | cluster,done | - | cluster, done, copied | cluster, done, copied | cluster, done, copied | cluster done, copied | cluster, done, copied |
-| Permafrost_Canada45.3  | - | **cluster, done, copied--NOT INCLUDED IN TREES** | - | **acr3: cluster, done, copied -- NOT INCLUDED IN TREES** | - | **arsC_glut: cluster, copied, done** | **arsC_thio: cluster, done, copied** | **arsD: cluster, done, copied** | arsM | rplB |
+| Permafrost_Canada45.3  | - | **cluster, done, copied--NOT INCLUDED IN TREES** | - | **acr3: cluster, done, copied -- NOT INCLUDED IN TREES** | - | arsC_glut: cluster, copied, done | arsC_thio: cluster, done, copied | arsD: cluster, done, copied | cluster, done, copied | **in queue** |
 
 
 #### Genes and the respective proteins, with Xander's success
