@@ -450,7 +450,61 @@ sort file.txt | uniq -c > file2.txt
 | **Wyoming_soil20.3**  | -  | - | - | - | - | - | - | - | - | - |
 | Wyoming_soil22.3  | -  | - | - | cluster, done | - | cluster, done, copied | - | - | cluster, done, copied | cluster, done, copied |
 | Permafrost_Canada23.3  | cluster, done | cluster, done | - | cluster,done | - | cluster, done, copied | cluster, done, copied | cluster, done, copied | cluster done, copied | cluster, done, copied |
-| Permafrost_Canada45.3  | - | **cluster, done, copied--NOT INCLUDED IN TREES** | - | acr3: cluster, done, copied; batch entrez: "Id=WP_022821127.1:	protein: Wrong UID WP_022821127.1 Id=YP_001021535.1:	protein: Wrong UID YP_001021535.1 Id=YP_002756438.1:	protein: Wrong UID YP_002756438.1 Id=YP_007953719.1:	protein: Wrong UID YP_007953719.1 Received lines: 20 Rejected lines: 4 Removed duplicates: 0 Passed to Entrez: 16" | - | arsC_glut: cluster, copied, done | arsC_thio: cluster, done, copied | arsD: cluster, done, copied | cluster, done, copied | **in queue** |
+| Permafrost_Canada45.3  | - | **cluster, done, copied--NOT INCLUDED IN TREES** | - | acr3: cluster, done, copied | - | arsC_glut: cluster, copied, done | arsC_thio: cluster, done, copied | arsD: cluster, done, copied | cluster, done, copied | **in queue** |
+
+* some labels were "TU_0001" so I changed to OTU_..."
+* Batch Entrez errors
+  * acr3: 
+  ```
+  Id=WP_022821127.1:	protein: Wrong UID WP_022821127.1 
+  Id=YP_001021535.1:	protein: Wrong UID YP_001021535.1 
+  Id=YP_002756438.1:	protein: Wrong UID YP_002756438.1 
+  Id=YP_007953719.1:	protein: Wrong UID YP_007953719.1 
+  Received lines: 20 
+  Rejected lines: 4 
+  Removed duplicates: 0 
+  Passed to Entrez: 16
+  ```
+  * arsC_glut:
+  ```
+  Id=WP_001358427.1:	protein: Wrong UID WP_001358427.1 
+  Id=WP_021244758.1: 
+  Id=YP_002130278.1:	protein: Wrong UID YP_002130278.1 
+  Id=YP_003593532.1:	protein: Wrong UID YP_003593532.1 
+  Id=YP_641411.1:	protein: Wrong UID YP_641411.1 
+  Received lines: 85 
+  Rejected lines: 5 
+  Removed duplicates: 0 
+  Passed to Entrez: 80
+  ```
+  
+  * arsC_thio: 
+  ```
+  The following records can't be retrieved:
+  Id=WP_019978755.1:	protein: Wrong UID WP_019978755.1
+  Id=YP_001001688.1:	protein: Wrong UID YP_001001688.1
+  Id=YP_001530761.1:
+  Id=YP_002457704.1:	protein: Wrong UID YP_002457704.1
+  Id=YP_003799310.1:	protein: Wrong UID YP_003799310.1
+  Id=YP_004172679.1:	protein: Wrong UID YP_004172679.1
+  Id=YP_007466755.1:	protein: Wrong UID YP_007466755.1
+  Id=YP_389284.1:
+  Id=YP_743542.1:	protein: Wrong UID YP_743542.1
+  Received lines: 66
+  Rejected lines: 9
+  Removed duplicates: 0
+  Passed to Entrez: 57
+  ```
+  * arsD:
+  ```
+  Id=YP_003625526.1:	protein: Wrong UID YP_003625526.1
+  Id=YP_003628198.1:	protein: Wrong UID YP_003628198.1
+  Id=YP_285838.1:	protein: Wrong UID YP_285838.1
+  Received lines: 19
+  Rejected lines: 3
+  Removed duplicates: 0
+  Passed to Entrez: 16
+  ```
 
 
 #### Genes and the respective proteins, with Xander's success
@@ -476,8 +530,16 @@ sort file.txt | uniq -c > file2.txt
 * Pre-script activities: 
   * add file `reference_seqs.fa`
       * consists of: **FASTA** (see directions below), **seeds** (from `/mnt/research/ShadeLab/WorkingSpace/Dunivin/xander/analysis/RDPTools/Xander_assembler/gene_resource/GENE/originaldata/GENE.seeds`), and **root**.
-      * Roots used: arsB: first sequence from `acr3.seeds`; aioA: first sequence from `arrA.seeds`; arrA: first sequence from `aioA.seeds`; acr3: first sequence from `arsB.seeds`; arxA: first sequence from `arrA.seeds`
-      * FASTA file directions: save `GENE.ncbi.input.txt`, upload to [batch entrez](https://www.ncbi.nlm.nih.gov/sites/batchentrez), select "Protein", click "Retrieve", "Retrieve records for # UID(s)", click on the pull down menu "Summar" and "FASTA (text), copy and paste into `reference_seqs.fa`
+      * Roots used: 
+         * arsB: first sequence from `acr3.seeds`
+         * aioA: first sequence from `arrA.seeds`
+         * arrA: first sequence from `aioA.seeds`
+         * acr3: first sequence from `arsB.seeds`
+         * arxA: first sequence from `arrA.seeds`
+         * arsC_glut: first sequence from `arsC_thio`
+         * arsC_thio: first sequence from `arsC_glut`
+         * arsD: `>sp|Q88LK1|ARSR1_PSEPK Arsenic resistance transcriptional regulator ArsR1 OS=Pseudomonas putida (strain ATCC 47054 / DSM 6125 / NCIMB 11950 / KT2440) GN=arsR1 PE=1 SV=1 MAVRAFPGGHMREILTPPIVFKCLADDTRARMTLLIAREGELCVCELTHALELSQPKISR HLAQLREAGILMDRRKGQWVYYRLHPEVPQWVDAMLKGVVDANQEWLSPDALRLAEMGER PQSPVACA`
+      * FASTA file directions: save `GENE.ncbi.input.txt`, upload to [batch entrez](https://www.ncbi.nlm.nih.gov/sites/batchentrez), select "Protein", click "Retrieve", "Retrieve records for # UID(s)", click on the pull down menu "Summar" and "FASTA (text), copy and paste into `reference_seqs.fa`
   * Copy all *final_prot_aligned.fasta* from clusters to the `/OTUabudances/GENE/alignment` directory and the *_coverage.txt* files to the `OTUabundances/GENE` folder. For example, for arsB:
   * `GENE=arsB; for i in California_grassland15.3 California_grassland62.3 Permafrost_Canada23.3; do cp /mnt/research/ShadeLab/WorkingSpace/Yeh/xander/${i}/k45/${GENE}/cluster/*final_prot_aligned.fasta /mnt/research/ShadeLab/WorkingSpace/Yeh/xander/OTUabundances/${GENE}/alignment/${i}_${GENE}_45_final_prot_aligned.fasta; done`
   * `GENE=arsB; for i in California_grassland15.3 California_grassland62.3 Permafrost_Canada23.3; do cp /mnt/research/ShadeLab/WorkingSpace/Yeh/xander/${i}/k45/${GENE}/cluster/*_coverage.txt /mnt/research/ShadeLab/WorkingSpace/Yeh/xander/OTUabundances/${GENE}/${i}_${GENE}_45_coverage.txt; done`
