@@ -1,0 +1,68 @@
+1,679.1 arsenate reductase [Anaerolinea thermophila UNI-1]
+2,310.1 arsenate reductase [Candidatus Nitrospira defluvii]
+3,045.1 protein tyrosine phosphatase [Chlorobium phaeobacteroides BS1]
+4,872.1 protein-tyrosine phosphatase,low molecular weight [Desulfatibacillum alkenivorans AK-01]
+5,761.1 protein tyrosine phosphatase [Desulfococcus oleovorans Hxd3]
+6,731.1 protein tyrosine phosphatase [Desulfobulbus propionicus DSM 2032]
+7,.1 arsenate reductase [Desulfovibrio alaskensis G20]
+8,332.1 protein-tyrosine phosphatase [Desulfovibrio desulfuricans ND132]
+9,743.1 Putative protein-tyrosine-phosphatase [Desulfobacterium autotrophicum HRM2]
+10,908.1 protein-tyrosine phosphatase [Desulfovibrio salexigens DSM 2638]
+11,.1 protein tyrosine phosphatase [Desulfovibrio alaskensis G20]
+12,227.1 protein tyrosine phosphatase [Treponema caldaria DSM 7334]
+13,.1 protein tyrosine phosphatase [Alkalilimnicola ehrlichii MLHE-1]
+14,688.1 protein tyrosine phosphatase [Halorhodospira halophila SL1]
+15,747.1 protein tyrosine phosphatase [Desulfotomaculum kuznetsovii DSM 6115]
+16,977.1 arsenate reductase [Alicyclobacillus acidocaldarius subsp. acidocaldarius DSM 446]
+17,760.1 protein tyrosine phosphatase [Geobacillus sp. WCH70]
+18,EQ (Q5HRI4)
+19,8 (Q2FXF5)
+20,HJ (Q4LAA8)
+21,EQ (Q5HKB7) 
+22,J (B9E7M5)
+23,S1 (Q49UH1)
+24,HJ (Q4LAB5) 
+25,Y (Q01257)
+26,U (P0A006)
+27,S1 (Q49WS7)
+28,704.1 arsenate reductase [Desulfitobacterium hafniense DCB-2]
+29,H (Q8ENQ5)
+30,K (Q5WJS9)
+31,D (Q9K8K8)
+32,D (Q8GJ74)
+33,356.1 arsenate reductase [Geobacillus sp. Y412MC61]
+34,1 ArsC2,partial [Geobacillus sp. A1]
+35,N (A4INR2)
+36,U (P45947)
+37,D (Q65IV4)
+38,SMU (Q9CM21)
+39,SMU (Q9CLS9)
+40,692.1 arsenate reductase [Phenylobacterium zucineum HLK1]
+41,.1 arsenate reductase [Mycobacterium sp. MCS]
+42,.1 arsenate reductase [Mycobacterium avium 104]
+43,532.1 arsenate reductase [Caulobacter segnis ATCC 21756]
+44,278.1 arsenate reductase [Phenylobacterium zucineum HLK1]
+45,237.1 arsenate reductase [Caulobacter segnis ATCC 21756]
+46,UCR (Q9A861)
+47,RP1 (Q9A083)
+48,SMU (Q9CJQ0)
+49,LX (P08692)
+50,L (P0AB97)
+51,551.1 arsenate reductase [Comamonas testosteroni CNB-2]
+52,460.1 arsenate reductase [Hyphomicrobium denitrificans ATCC 51888]
+53,857.1 arsenate reductase [Hyphomicrobium sp. MC1]
+54,1 arsenate reductase [Mesorhizobium loti]
+55,1 Arsenate reductase [Curvibacter putative symbiont of Hydra magnipapillata]
+56,873.1 arsenate reductase [Variovorax paradoxus S110]
+57,1 arsenate reductase,partial [Sinorhizobium meliloti]
+58,446.1 arsenate reductase [Methylocella silvestris BL2]
+59,.1 arsenate reductase [Burkholderia xenovorans LB400]
+60,.1 arsenate reductase [Rhodopseudomonas palustris BisA53]
+61,767.1 arsenate reductase (plasmid) [Sinorhizobium medicae WSM419]
+62,046.1 arsenate reductase [Oligotropha carboxidovorans OM5]
+63,.1 arsenate reductase [Rhodopseudomonas palustris CGA009]
+64,493.1 arsenate reductase [Pseudonocardia dioxanivorans CB1190]
+65,B (P63622)
+66,EAE (Q9I508)
+67,BCH (Q9KQ39)
+68,I (P76569)
