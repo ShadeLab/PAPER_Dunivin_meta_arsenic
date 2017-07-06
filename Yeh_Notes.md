@@ -538,8 +538,10 @@ sort file.txt | uniq -c > file2.txt
          * arxA: first sequence from `arrA.seeds`
          * arsC_glut: first sequence from `arsC_thio`
          * arsC_thio: first sequence from `arsC_glut`
-         * arsD: `>sp|Q88LK1|ARSR1_PSEPK Arsenic resistance transcriptional regulator ArsR1 OS=Pseudomonas putida (strain ATCC 47054 / DSM 6125 / NCIMB 11950 / KT2440) GN=arsR1 PE=1 SV=1 MAVRAFPGGHMREILTPPIVFKCLADDTRARMTLLIAREGELCVCELTHALELSQPKISR HLAQLREAGILMDRRKGQWVYYRLHPEVPQWVDAMLKGVVDANQEWLSPDALRLAEMGER PQSPVACA`
-      * FASTA file directions: save `GENE.ncbi.input.txt`, upload to [batch entrez](https://www.ncbi.nlm.nih.gov/sites/batchentrez), select "Protein", click "Retrieve", "Retrieve records for # UID(s)", click on the pull down menu "Summar" and "FASTA (text), copy and paste into `reference_seqs.fa`
+         * arsD: root from T.D.'s arsD `reference_seqs.fa`
+         * arsM: first root from T.D.'s `arsM reference_seqs.fa`
+         * **rplB: [protein blast](https://blast.ncbi.nlm.nih.gov/Blast.cgi?PAGE=Proteins) `rplB.seeds`, did not see any related family-- did not create tree for rplB**
+       * FASTA file directions: save `GENE.ncbi.input.txt`, upload to [batch entrez](https://www.ncbi.nlm.nih.gov/sites/batchentrez), select "Protein", click "Retrieve", "Retrieve records for # UID(s)", click on the pull down menu "Summar" and "FASTA (text), copy and paste into `reference_seqs.fa`
   * Copy all *final_prot_aligned.fasta* from clusters to the `/OTUabudances/GENE/alignment` directory and the *_coverage.txt* files to the `OTUabundances/GENE` folder. For example, for arsB:
   * `GENE=arsB; for i in California_grassland15.3 California_grassland62.3 Permafrost_Canada23.3; do cp /mnt/research/ShadeLab/WorkingSpace/Yeh/xander/${i}/k45/${GENE}/cluster/*final_prot_aligned.fasta /mnt/research/ShadeLab/WorkingSpace/Yeh/xander/OTUabundances/${GENE}/alignment/${i}_${GENE}_45_final_prot_aligned.fasta; done`
   * `GENE=arsB; for i in California_grassland15.3 California_grassland62.3 Permafrost_Canada23.3; do cp /mnt/research/ShadeLab/WorkingSpace/Yeh/xander/${i}/k45/${GENE}/cluster/*_coverage.txt /mnt/research/ShadeLab/WorkingSpace/Yeh/xander/OTUabundances/${GENE}/${i}_${GENE}_45_coverage.txt; done`
@@ -563,3 +565,17 @@ DATA
 * To execute, `./GENE.phylo.sh GENE CLUST`
 * For 0.3 and 0.1
 * arsB 0.1 having trouble
+
+####[Group Related Sequences](https://github.com/ShadeLab/Xander_arsenic/tree/master/phylogenetic_analysis)
+* Used with the following pairs:
+   * arrA, arxA, aioA: name: dissimilatory
+   * arsB, acr3: name: efflux.pumps
+   * arsC_glut, arsC_thio: name: reductases
+* Use [`group.muscle.sh`](https://github.com/ShadeLab/Xander_arsenic/blob/master/phylogenetic_analysis/bin/group.muscle.sh) for full length sequences and [`short.group.muscle.sh`](https://github.com/ShadeLab/Xander_arsenic/blob/master/phylogenetic_analysis/bin/short.group.muscle.sh) for all sequences
+* start in `/mnt/research/ShadeLab/WorkingSpace/Yeh/xander/OTUabundances/${GROUP}`
+* To execute, `../bin/./group.muscle.sh GROUP GENE1 GENE2 GENE3 CLUST`
+  * GROUP = name of group; directory for this group should already exist with `reference_seqs.fa` in it
+     * Don't know what to put in reference_seqs.fa... seed sequences, FASTA files, and ROOT?!?
+  * GENE123 = will take up to 3 genes; if you are grouping two genes, simply put NA for gene 3
+  * CLUST = what cluster cutoff you would like to run
+* View in iTOL (note: do not need to adjust labels here)
