@@ -560,11 +560,13 @@ SEPARATOR COMMA
 DATA
 #DATA GOES HERE
 ```
+
 ####[Examine phylogony of assembled genes](https://github.com/ShadeLab/Xander_arsenic/tree/master/phylogenetic_analysis)
 * Essentially the same as steps 1 and 2 except these scripts are gene specific and remove all sequences that are less than 90% of hmm length
 * To execute, `./GENE.phylo.sh GENE CLUST`
 * For 0.3 and 0.1
 * arsB 0.1 having trouble
+* **NOTES: I realized the code had a typo: it was using the short sequence file instead of the regular file, I must redo all the trees**
 
 ####[Group Related Sequences](https://github.com/ShadeLab/Xander_arsenic/tree/master/phylogenetic_analysis)
 * Used with the following pairs:
@@ -575,7 +577,9 @@ DATA
 * start in `/mnt/research/ShadeLab/WorkingSpace/Yeh/xander/OTUabundances/${GROUP}`
 * To execute, `../bin/./group.muscle.sh GROUP GENE1 GENE2 GENE3 CLUST`
   * GROUP = name of group; directory for this group should already exist with `reference_seqs.fa` in it
-     * Don't know what to put in reference_seqs.fa... seed sequences, FASTA files, and ROOT?!?
+     * **Don't know what to put in reference_seqs.fa... seed sequences and FASTA files for the genes?**
   * GENE123 = will take up to 3 genes; if you are grouping two genes, simply put NA for gene 3
   * CLUST = what cluster cutoff you would like to run
 * View in iTOL (note: do not need to adjust labels here)
+
+**NOTES: when working on dissimilatory group, I noticed that the complete.clust_full_rep_seqs_${CLUST}_unaligned.fasta files for aioA and arxA were empty. When playing around, I noticed that the file for arxA would only populate with lengths greater than 500, but 90% of the hmm length for arxA is 747. The tree did not form.
