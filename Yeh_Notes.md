@@ -568,6 +568,16 @@ DATA
 * arsB 0.1 having trouble
 * **NOTES: I realized the code had a typo: it was using the short sequence file instead of the regular file, I must redo all the trees**
 
+* **acr3: after clustering (`/mnt/research/ShadeLab/WorkingSpace/Dunivin/xander/OTUabundances/bin/./get_OTUabundance.sh final_coverage.txt /mnt/research/ShadeLab/WorkingSpace/Yeh/xander/OTUabundances/${GENE} 0 ${CLUST} alignment/*`), it shows error:
+Exception in thread "main" java.lang.RuntimeException: java.io.IOException: SID cen01_acr3_contig_9484_contig_9485 appears multiple times in the id mapping
+        at edu.msu.cme.pyro.derep.IdMapping.fromFile(IdMapping.java:114)
+        at edu.msu.cme.pyro.cluster.dist.DistanceCalculator.main(DistanceCalculator.java:295)
+        at edu.msu.cme.pyro.cluster.ClusterMain.main(ClusterMain.java:363)
+Caused by: java.io.IOException: SID cen01_acr3_contig_9484_contig_9485 appears multiple times in the id mapping
+        at edu.msu.cme.pyro.derep.IdMapping.fromFile(IdMapping.java:105)
+        ... 2 more
+dmatrix failed
+
 ####[Group Related Sequences](https://github.com/ShadeLab/Xander_arsenic/tree/master/phylogenetic_analysis)
 * Used with the following pairs:
    * arrA, arxA, aioA: name: dissimilatory
