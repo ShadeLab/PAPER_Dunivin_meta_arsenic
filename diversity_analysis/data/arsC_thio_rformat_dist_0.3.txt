@@ -1,0 +1,15 @@
+	OTU_01	OTU_02	OTU_03	OTU_04	OTU_05	OTU_06	OTU_07	OTU_08	OTU_09	OTU_10	OTU_11	OTU_12	OTU_13	OTU_14	OTU_15	OTU_16	OTU_17	OTU_18	OTU_19	OTU_20	OTU_21	OTU_22	OTU_23	OTU_24	OTU_25	OTU_26	OTU_27	OTU_28	OTU_29	OTU_30	OTU_31	OTU_32	OTU_33	OTU_34	OTU_35	OTU_36	OTU_37	OTU_38	OTU_39	OTU_40	OTU_41	OTU_42	OTU_43	OTU_44	OTU_45	OTU_46	OTU_47	OTU_48	OTU_49	OTU_50 
+Disney_preserve25.3_arsC_thio_45_final_prot_aligned	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+Brazilian_forest39.3_arsC_thio_45_final_prot_aligned	0	0	0	0	0	0	0	0	0	0	2	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0	1
+Illinois_soil88.3_arsC_thio_45_final_prot_aligned	0	0	0	3	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	2	0	0	0	0	0	0	0	0
+Permafrost_Canada45.3_arsC_thio_45_final_prot_aligned	0	0	0	20	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+Permafrost_Canada23.3_arsC_thio_45_final_prot_aligned	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	3	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+California_grassland15.3_arsC_thio_45_final_prot_aligned	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+Mangrove02.3_arsC_thio_45_final_prot_aligned	3	19	8	0	5	2	1	1	3	2	0	2	0	1	2	2	4	0	6	1	3	4	2	4	3	1	2	0	1	1	3	18	2	0	12	2	0	4	0	1	0	1	2	1	0	0	0	0	0	0
+Disney_preserve18.3_arsC_thio_45_final_prot_aligned	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+Illinois_soil91.3_arsC_thio_45_final_prot_aligned	0	0	0	3	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	2	0	0	0	0	0	0	0	0
+Minnesota_creek45.3_arsC_thio_45_final_prot_aligned	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+Permafrost_Russia13.3_arsC_thio_45_final_prot_aligned	0	0	4	0	0	0	0	13	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0
+Brazilian_forest54.3_arsC_thio_45_final_prot_aligned	0	0	1	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0
+Iowa_prairie76.3_arsC_thio_45_final_prot_aligned	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	2	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+Mangrove70.3_arsC_thio_45_final_prot_aligned	1	15	5	0	12	0	1	0	1	1	0	1	1	3	4	0	0	0	13	4	0	6	8	3	4	1	1	2	0	8	2	16	4	1	14	2	1	6	1	0	3	0	0	1	0	1	1	0	1	0
