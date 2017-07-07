@@ -1,0 +1,22 @@
+Taxon	Abundance	Fraction Abundance
+Acidobacteria	23.746	0.5957
+Verrucomicrobia	1.398	0.0351
+Actinobacteria	5.982	0.1501
+Alphaproteobacteria	7.391000000000001	0.1854
+Firmicutes	1.344	0.0337
+
+
+Lineage	MatchName	Abundance	Fraction Abundance
+Bacteria;Proteobacteria;Alphaproteobacteria;Rhizobiales;Bradyrhizobiaceae;Rhodopseudomonas	86570155_Rhodopseudomonas_palustris_HaA2	0.617	0.0155
+Bacteria;Proteobacteria;Alphaproteobacteria	159177800_alpha_proteobacterium_BAL199	1.268	0.0318
+Bacteria;Proteobacteria;Alphaproteobacteria;Rhizobiales;Bradyrhizobiaceae;Bradyrhizobium	146403799_Bradyrhizobium_sp._BTAi1	2.387	0.0599
+Bacteria;Verrucomicrobia;Spartobacteria;Chthoniobacter	196227372_Chthoniobacter_flavus_Ellin428	1.398	0.0351
+Bacteria;Acidobacteria;Acidobacteriales;Acidobacteriaceae;Acidobacterium	225791207_Acidobacterium_capsulatum_ATCC_51196	9.658	0.2423
+Bacteria;Acidobacteria;Acidobacteriales;Acidobacteriaceae;Terriglobus	319923767_Terriglobus_saanensis_SP1PR4	1.163	0.0292
+Bacteria;Actinobacteria;Actinobacteridae;Actinomycetales;Frankineae;Nakamurellaceae;Nakamurella	258553496_Nakamurella_multipartita_DSM_44233	3.656	0.0917
+Bacteria;Acidobacteria;Acidobacteriales;Acidobacteriaceae;CandidatusKoribacter	94549081_Candidatus_Koribacter_versatilis_Ellin345	12.924999999999997	0.3243
+Bacteria;Proteobacteria;Alphaproteobacteria;Rhizobiales;Bradyrhizobiaceae;Nitrobacter	74419069_Nitrobacter_winogradskyi_Nb-255	0.62	0.0156
+Bacteria;Proteobacteria;Alphaproteobacteria;Rhizobiales;Bradyrhizobiaceae;Bradyrhizobium	365422958_Bradyrhizobium_sp._STM_3843	2.499	0.0627
+Bacteria;Actinobacteria;Actinobacteridae;Actinomycetales;Corynebacterineae;Gordoniaceae;Gordonia	358245674_Gordonia_araii_NBRC_100433	1.826	0.0458
+Bacteria;Firmicutes;Negativicutes;Selenomonadales;Veillonellaceae;Megamonas	374564809_Megamonas_funiformis_YIT_11815	1.344	0.0337
+Bacteria;Actinobacteria;Actinobacteridae;Actinomycetales;Frankineae;Acidothermaceae;Acidothermus	117647674_Acidothermus_cellulolyticus_11B	0.5	0.0125
