@@ -1,0 +1,4 @@
+	OTU_1	OTU_2	OTU_3 
+California_grassland15.3_arsB_45_final_prot_aligned	0	3	0
+Permafrost_Canada23.3_arsB_45_final_prot_aligned	12	0	0
+California_grassland62.3_arsB_45_final_prot_aligned	0	0	3
