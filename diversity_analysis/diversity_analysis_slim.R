@@ -84,3 +84,374 @@ melt=melt(order.dcast,id.vars=row.names(order.dcast), variable.name= "Site",
 
 #adjust colnames of melt
 colnames(melt)=c("Taxon", "Site", "Fraction.Abundance")
+
+
+#########################################################
+#########################
+#aioA DIVERSITY ANALYSIS#
+#########################
+#read in distance matrix for 0.1
+aioA0.1=read.delim(file = paste(wd, "/data/aioA_rformat_dist_0.1.txt", sep=""))
+
+#add row names back
+rownames(aioA0.1)=aioA0.1[,1]
+
+#remove first column
+aioA0.1=aioA0.1[,-1]
+
+#make data matrix
+aioA0.1=data.matrix(aioA0.1)
+
+#i did not remove first column, it is OTU_01
+
+#make an output of total gene count per site
+aioA0.1.gcounts=rowSums(aioA0.1)
+
+#otu table
+otu_aioA0.1=otu_table(aioA0.1, taxa_are_rows = FALSE)
+col <- c("black", "darkred", "forestgreen", "orange", 
+         "blue", "yellow", "hotpink")
+#see rarefaction curve
+rarecurve(otu_aioA0.1, step=1, col=col, label = TRUE, cex=0.5)
+
+#rarefy
+rare_aioA0.1=rarefy_even_depth(otu_aioA0.1, sample.size = min(sample_sums(otu_aioA0.1)), 
+                       rngseed = TRUE)
+
+#check curve
+rarecurve(rare_aioA0.1, step=1, col = c("black", "darkred", "forestgreen", 
+                                "orange", "blue", "yellow", "hotpink"), 
+          label = FALSE)
+
+###################################
+#read in distance matrix for 0.3
+aioA0.3=read.delim(file = paste(wd, "/data/aioA_rformat_dist_0.3.txt", sep=""))
+
+#add row names back
+rownames(aioA0.3)=aioA0.3[,1]
+
+#remove first column
+aioA0.3=aioA0.3[,-1]
+
+#make data matrix
+aioA0.3=data.matrix(aioA0.3)
+
+#i did not remove first column, it is OTU_01
+
+#make an output of total gene count per site
+aioA0.3.gcounts=rowSums(aioA0.3)
+
+#otu table for aioA0.3
+otu_aioA0.3=otu_table(aioA0.3, taxa_are_rows = FALSE)
+head(otu_aioA0.3)
+col <- c("black", "darkred", "forestgreen", "orange", "blue", 
+         "yellow", "hotpink")
+#see rarefaction curve
+rarecurve(otu_aioA0.3, step=1, col=col, label = TRUE, cex=0.5)
+
+#rarefy
+rare_aioA0.3=rarefy_even_depth(otu_aioA0.3, 
+                               sample.size = min(sample_sums(otu_aioA0.3)), 
+                               rngseed = TRUE)
+
+#check curve
+rarecurve(rare_aioA0.3, step=1, col = c("black", "darkred", "forestgreen", 
+                                "orange", "blue", "yellow", "hotpink"), 
+          label = FALSE)
+
+#########################
+#arsC_glut DIVERSITY ANALYSIS#
+#########################
+#read in distance matrix for 0.1
+arsC_glut0.1=read.delim(file = paste(wd, 
+                                     "/data/arsC_glut_rformat_dist_0.1.txt", 
+                                     sep=""))
+
+#add row names back
+rownames(arsC_glut0.1)=arsC_glut0.1[,1]
+
+#remove first column
+arsC_glut0.1=arsC_glut0.1[,-1]
+
+#make data matrix
+arsC_glut0.1=data.matrix(arsC_glut0.1)
+
+#i did not remove first column
+
+#make an output of total gene count per site
+arsC_glut0.1.gcounts=rowSums(arsC_glut0.1)
+
+#otu table for aioA0.3
+otu_arsC_glut0.1=otu_table(arsC_glut0.1, taxa_are_rows = FALSE)
+head(otu_arsC_glut0.1)
+#see rarefaction curve
+rarecurve(otu_arsC_glut0.1, step=5, col=col, label = FALSE, cex=0.5)
+
+#rarefy
+rare_arsC_glut0.1=rarefy_even_depth(otu_arsC_glut0.1, 
+                               sample.size = min(sample_sums(otu_arsC_glut0.1)), 
+                               rngseed = TRUE)
+
+#check curve
+rarecurve(rare_arsC_glut0.1, step=1, col = c("black", "red", "forestgreen", 
+                                        "orange", "blue", "yellow", "hotpink"), 
+          label = TRUE, cex=0.4)
+
+###################################################
+#read in distance matrix for 0.3
+arsC_glut0.3=read.delim(file = paste(wd, 
+                                     "/data/arsC_glut_rformat_dist_0.3.txt", 
+                                     sep=""))
+
+#add row names back
+rownames(arsC_glut0.3)=arsC_glut0.3[,1]
+
+#did not remove first column
+
+#make data matrix
+arsC_glut0.3=data.matrix(arsC_glut0.3)
+
+#i removed first column, it is "X"
+arsC_glut0.3=arsC_glut0.3[,-1]
+
+#make an output of total gene count per site
+arsC_glut0.3.gcounts=rowSums(arsC_glut0.3)
+
+#otu table for aioA0.3
+otu_arsC_glut0.3=otu_table(arsC_glut0.3, taxa_are_rows = FALSE)
+head(otu_arsC_glut0.3)
+#see rarefaction curve
+rarecurve(otu_arsC_glut0.3, step=5, col=col, label = FALSE, cex=0.5)
+
+#rarefy
+rare_arsC_glut0.3=rarefy_even_depth(otu_arsC_glut0.3, 
+                                    sample.size = min(sample_sums(otu_arsC_glut0.3)), 
+                                    rngseed = TRUE)
+
+#check curve
+rarecurve(rare_arsC_glut0.3, step=1, col = c("black", "red", "forestgreen", 
+                                             "orange", "blue", "yellow", "hotpink"), 
+          label = TRUE, cex=0.4)
+
+#########################
+#arsC_thio DIVERSITY ANALYSIS#
+#########################
+#read in distance matrix for 0.1
+arsC_thio0.1=read.delim(file = paste(wd, 
+                                     "/data/arsC_thio_rformat_dist_0.1.txt", 
+                                     sep=""))
+
+#add row names back
+rownames(arsC_thio0.1)=arsC_thio0.1[,1]
+
+#remove first column
+arsC_thio0.1=arsC_thio0.1[,-1]
+
+#make data matrix
+arsC_thio0.1=data.matrix(arsC_thio0.1)
+
+#i did not remove first column
+
+#make an output of total gene count per site
+arsC_thio0.1.gcounts=rowSums(arsC_thio0.1)
+
+#otu table for aioA0.3
+otu_arsC_thio0.1=otu_table(arsC_thio0.1, taxa_are_rows = FALSE)
+head(otu_arsC_thio0.1)
+#see rarefaction curve
+rarecurve(otu_arsC_thio0.1, step=5, col=col, label = FALSE, cex=0.5)
+
+#rarefy
+rare_arsC_thio0.1=rarefy_even_depth(otu_arsC_thio0.1, 
+                                    sample.size = min(sample_sums(otu_arsC_thio0.1)), 
+                                    rngseed = TRUE)
+
+#check curve
+rarecurve(rare_arsC_thio0.1, step=1, col = c("black", "red", "forestgreen", 
+                                             "orange", "blue", "yellow", "hotpink"), 
+          label = TRUE, cex=0.4)
+
+###################################################
+#read in distance matrix for 0.3
+arsC_thio0.3=read.delim(file = paste(wd, 
+                                     "/data/arsC_thio_rformat_dist_0.3.txt", 
+                                     sep=""))
+
+#add row names back
+rownames(arsC_thio0.3)=arsC_thio0.3[,1]
+
+#remove first column
+arsC_thio0.3=arsC_thio0.3[,-1]
+
+#make data matrix
+arsC_thio0.3=data.matrix(arsC_thio0.3)
+
+#i did not remove first column
+
+#make an output of total gene count per site
+arsC_thio0.3.gcounts=rowSums(arsC_thio0.3)
+
+#otu table for aioA0.3
+otu_arsC_thio0.3=otu_table(arsC_thio0.3, taxa_are_rows = FALSE)
+head(otu_arsC_thio0.3)
+#see rarefaction curve
+rarecurve(otu_arsC_thio0.3, step=5, col=col, label = FALSE, cex=0.5)
+
+#rarefy
+rare_arsC_thio0.3=rarefy_even_depth(otu_arsC_thio0.3, 
+                                    sample.size = min(sample_sums(otu_arsC_thio0.3)), 
+                                    rngseed = TRUE)
+
+#check curve
+rarecurve(rare_arsC_thio0.3, step=1, col = c("black", "red", "forestgreen", 
+                                             "orange", "blue", "yellow", "hotpink"), 
+          label = TRUE, cex=0.4)
+
+#########################
+#arrA DIVERSITY ANALYSIS#
+#########################
+#read in distance matrix for 0.1
+arrA0.1=read.delim(file = paste(wd, 
+                                     "/data/arrA_rformat_dist_0.1.txt", 
+                                     sep=""))
+
+#add row names back
+rownames(arrA0.1)=arrA0.1[,1]
+
+#remove first column
+arrA0.1=arrA0.1[,-1]
+
+#make data matrix
+arrA0.1=data.matrix(arrA0.1)
+
+#i removed first column, it is "X"
+arrA0.1=arrA0.1[,-1]
+
+#make an output of total gene count per site
+arrA0.1.gcounts=rowSums(arrA0.1)
+
+#otu table for aioA0.3
+otu_arrA0.1=otu_table(arrA0.1, taxa_are_rows = FALSE)
+head(otu_arrA0.1)
+#see rarefaction curve
+rarecurve(otu_arrA0.1, step=5, col=col, label = TRUE, cex=0.5)
+
+#rarefy
+rare_arrA0.1=rarefy_even_depth(otu_arrA0.1, 
+                                    sample.size = min(sample_sums(otu_arrA0.1)), 
+                                    rngseed = TRUE)
+
+#check curve
+rarecurve(rare_arrA0.1, step=1, col = c("black", "red", "forestgreen", 
+                                             "orange", "blue", "yellow", "hotpink"), 
+          label = TRUE, cex=0.4)
+
+###################################################
+#read in distance matrix for 0.3
+arrA0.3=read.delim(file = paste(wd, "/data/arrA_rformat_dist_0.3.txt", 
+                                     sep=""))
+
+#add row names back
+rownames(arrA0.3)=arrA0.3[,1]
+
+#remove first column
+arrA0.3=arrA0.3[,-1]
+
+#make data matrix
+arrA0.3=data.matrix(arrA0.3)
+
+#i did not remove first column
+
+#make an output of total gene count per site
+arrA0.3.gcounts=rowSums(arrA0.3)
+
+#otu table for aioA0.3
+otu_arrA0.3=otu_table(arrA0.3, taxa_are_rows = FALSE)
+head(otu_arrA0.3)
+#see rarefaction curve
+rarecurve(otu_arrA0.3, step=5, col=col, label = TRUE, cex=0.3)
+
+#rarefy
+rare_arrA0.3=rarefy_even_depth(otu_arrA0.3, 
+                                    sample.size = min(sample_sums(otu_arrA0.3)), 
+                                    rngseed = TRUE)
+
+#check curve
+rarecurve(rare_arrA0.3, step=1, col = c("black", "red", "forestgreen", 
+                                             "orange", "blue", "yellow", "hotpink"), 
+          label = TRUE, cex=0.4)
+
+#########################
+#arsD DIVERSITY ANALYSIS#
+#########################
+#read in distance matrix for 0.1
+arsD0.1=read.delim(file = paste(wd, 
+                                "/data/arsD_rformat_dist_0.1.txt", 
+                                sep=""))
+
+#add row names back
+rownames(arsD0.1)=arsD0.1[,1]
+
+#remove first column
+arsD0.1=arsD0.1[,-1]
+
+#make data matrix
+arsD0.1=data.matrix(arsD0.1)
+
+#i removed first column, it is "X"
+arsD0.1=arsD0.1[,-1]
+
+#make an output of total gene count per site
+arsD0.1.gcounts=rowSums(arsD0.1)
+
+#otu table for aioA0.3
+otu_arsD0.1=otu_table(arsD0.1, taxa_are_rows = FALSE)
+head(otu_arsD0.1)
+#see rarefaction curve
+rarecurve(otu_arsD0.1, step=5, col=col, label = TRUE, cex=0.5)
+
+#rarefy
+rare_arsD0.1=rarefy_even_depth(otu_arsD0.1, 
+                               sample.size = min(sample_sums(otu_arsD0.1)), 
+                               rngseed = TRUE)
+
+#check curve
+rarecurve(rare_arsD0.1, step=1, col = c("black", "red", "forestgreen", 
+                                        "orange", "blue", "yellow", "hotpink"), 
+          label = TRUE, cex=0.4)
+
+###################################################
+#read in distance matrix for 0.3
+arsD0.3=read.delim(file = paste(wd, "/data/arsD_rformat_dist_0.3.txt", 
+                                sep=""))
+
+#add row names back
+rownames(arsD0.3)=arsD0.3[,1]
+
+#remove first column
+arsD0.3=arsD0.3[,-1]
+
+#make data matrix
+arsD0.3=data.matrix(arsD0.3)
+
+#i did not remove first column
+
+#make an output of total gene count per site
+arsD0.3.gcounts=rowSums(arsD0.3)
+
+#otu table for aioA0.3
+otu_arsD0.3=otu_table(arsD0.3, taxa_are_rows = FALSE)
+head(otu_arsD0.3)
+#see rarefaction curve
+rarecurve(otu_arsD0.3, step=5, col=col, label = TRUE, cex=0.3)
+
+#rarefy
+rare_arsD0.3=rarefy_even_depth(otu_arsD0.3, 
+                               sample.size = min(sample_sums(otu_arsD0.3)), 
+                               rngseed = TRUE)
+
+#check curve
+rarecurve(rare_arsD0.3, step=1, col = c("black", "red", "forestgreen", 
+                                        "orange", "blue", "yellow", "hotpink"), 
+          label = TRUE, cex=0.4)
+
