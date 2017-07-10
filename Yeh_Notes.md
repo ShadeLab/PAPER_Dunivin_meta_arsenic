@@ -600,10 +600,10 @@ dmatrix failed
 | arxA | one group without any OTUs: ![arxa_0 1_short](https://user-images.githubusercontent.com/28952961/28030546-346fd66a-6572-11e7-8ec1-d11648b813e8.PNG) | no OTUs, nothing >=90% ![arxa_0 1](https://user-images.githubusercontent.com/28952961/28031115-4a19faca-6574-11e7-9b60-c5242b11769d.PNG) | abundances |
 | arsC_glut | lots of OTUs, sequences between OTUs, not adding picture because it'd be too hard to read | ![arsc_glut_0 1](https://user-images.githubusercontent.com/28952961/28031284-c4ca1a2a-6574-11e7-8712-7ce08e129cc6.PNG) | abundances |
 | arsC_thio | lots of OTUs and sequences, looks good | no OTUs (nothing <=90%) ![arsc_thio_0 1](https://user-images.githubusercontent.com/28952961/28031382-162ae520-6575-11e7-85f0-12ddbd68b0ad.PNG) | abundances |
-| arsD | looks good [arsD_0.1_labels_short.txt](https://github.com/ShadeLab/meta_arsenic/files/1136593/arsD_0.1_labels_short.txt) | no OTUs,nothing >=90% | abundances |
+| arsD | looks good ![arsd_0 1_short](https://user-images.githubusercontent.com/28952961/28033443-48ad6ad4-657c-11e7-99b7-251fa86dce32.PNG) | no OTUs,nothing >=90% | abundances |
 | arsM | looks good | ![arsm_0 1](https://user-images.githubusercontent.com/28952961/28033343-ecbc038e-657b-11e7-9bcd-e798aa7ff826.PNG) | abundances |
-| dissimilatory | short tree | long tree | abundances |
-| efflux pumps | short tree | long tree | abundances |
-| reductases | short tree | long tree | abundances |
+| dissimilatory | tree file was 0, even when I used short sequences  | long tree | abundances |
+| efflux pumps | short tree | ![efflux pumps_0 1](https://user-images.githubusercontent.com/28952961/28036336-e2dbbf12-6585-11e7-8bce-bbd69358e7f7.PNG) | abundances |
+| reductases | short tree | ![reducatases_0 1](https://user-images.githubusercontent.com/28952961/28036400-25356606-6586-11e7-91d4-06a671e5e8c5.PNG) | abundances |
 | rplB | short tree | long tree | abundances |
 
