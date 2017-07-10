@@ -564,9 +564,6 @@ DATA
 ####[Examine phylogony of assembled genes](https://github.com/ShadeLab/Xander_arsenic/tree/master/phylogenetic_analysis)
 * Essentially the same as steps 1 and 2 except these scripts are gene specific and remove all sequences that are less than 90% of hmm length
 * To execute, `./GENE.phylo.sh GENE CLUST`
-* For 0.3 and 0.1
-* arsB 0.1 having trouble
-* **NOTES: I realized the code had a typo: it was using the short sequence file instead of the regular file, I must redo all the trees**
 
 * **acr3: after clustering (`/mnt/research/ShadeLab/WorkingSpace/Dunivin/xander/OTUabundances/bin/./get_OTUabundance.sh final_coverage.txt /mnt/research/ShadeLab/WorkingSpace/Yeh/xander/OTUabundances/${GENE} 0 ${CLUST} alignment/*`), it shows error:
 Exception in thread "main" java.lang.RuntimeException: java.io.IOException: SID cen01_acr3_contig_9484_contig_9485 appears multiple times in the id mapping
@@ -592,4 +589,21 @@ dmatrix failed
   * CLUST = what cluster cutoff you would like to run
 * View in iTOL (note: do not need to adjust labels here)
 
-**NOTES: when working on dissimilatory group, I noticed that the complete.clust_full_rep_seqs_${CLUST}_unaligned.fasta files for aioA and arxA were empty. When playing around, I noticed that the file for arxA would only populate with lengths greater than 500, but 90% of the hmm length for arxA is 747. The tree did not form.
+**NOTES: dissimilatory group: complete.clust_full_rep_seqs_${CLUST}_unaligned.fasta files for aioA and arxA were empty.There were no sequences >=90% of the full HMM. I will create a dissimilatory group tree with short sequences.
+
+| gene | short tree (.1) | long tree (.1) | abundances |
+| --- | --- | --- | ---|
+| arsB | first tree was wrong, it was mislabeled. The dissimilar 7 was the root. There are 3 OTUs ![arsb_0 1_short](https://user-images.githubusercontent.com/28952961/28029278-8202eaca-656d-11e7-8a0e-7403b5712e59.PNG) | no OTU (longest is <90%) | abundances |
+| aioA | looks good ![aioa_0 1_short](https://user-images.githubusercontent.com/28952961/28029390-e18ebca8-656d-11e7-9c8b-fbe50f4f2202.PNG) | no OTU's, not sure why, because there should be long sequences ![aioa_0 1](https://user-images.githubusercontent.com/28952961/28029701-e3c2ce46-656e-11e7-8290-d74885dbc0a1.PNG) | abundances |
+| arrA | many OTU's (the bottom of the tree is just OTU's) ![arra_0 1_short](https://user-images.githubusercontent.com/28952961/28029959-d8f5f8de-656f-11e7-8e37-d675f58d6bc0.PNG) | looks good ![arra_0 1](https://user-images.githubusercontent.com/28952961/28030058-2a8002e4-6570-11e7-908a-c20fff204fda.PNG) | abundances |
+| acr3 | no OTUs, error (see above) ![acr3_0 1_short](https://user-images.githubusercontent.com/28952961/28030327-4d248030-6571-11e7-86c0-671c8ec202a2.PNG) | same error, no OTUs ![acr3_0 1](https://user-images.githubusercontent.com/28952961/28030436-c473d46a-6571-11e7-94c0-1e14686a0b73.PNG) | abundances |
+| arxA | one group without any OTUs: ![arxa_0 1_short](https://user-images.githubusercontent.com/28952961/28030546-346fd66a-6572-11e7-8ec1-d11648b813e8.PNG) | no OTUs, nothing >=90% ![arxa_0 1](https://user-images.githubusercontent.com/28952961/28031115-4a19faca-6574-11e7-9b60-c5242b11769d.PNG) | abundances |
+| arsC_glut | lots of OTUs, sequences between OTUs, not adding picture because it'd be too hard to read | ![arsc_glut_0 1](https://user-images.githubusercontent.com/28952961/28031284-c4ca1a2a-6574-11e7-8712-7ce08e129cc6.PNG) | abundances |
+| arsC_thio | lots of OTUs and sequences, looks good | no OTUs (nothing <=90%) ![arsc_thio_0 1](https://user-images.githubusercontent.com/28952961/28031382-162ae520-6575-11e7-85f0-12ddbd68b0ad.PNG) | abundances |
+| arsD | looks good [arsD_0.1_labels_short.txt](https://github.com/ShadeLab/meta_arsenic/files/1136593/arsD_0.1_labels_short.txt) | no OTUs,nothing >=90% | abundances |
+| arsM | looks good | ![arsm_0 1](https://user-images.githubusercontent.com/28952961/28033343-ecbc038e-657b-11e7-9bcd-e798aa7ff826.PNG) | abundances |
+| dissimilatory | short tree | long tree | abundances |
+| efflux pumps | short tree | long tree | abundances |
+| reductases | short tree | long tree | abundances |
+| rplB | short tree | long tree | abundances |
+
