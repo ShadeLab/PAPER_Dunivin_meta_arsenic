@@ -127,7 +127,6 @@ rarecurve(rare_aioA0.1, step=1, col = c("black", "darkred", "forestgreen",
 aioA0.1[aioA0.1 > 0]  <- 1
 aioA0.1.OTUcounts=rowSums(aioA0.1)
 
-
 #########################
 #arsC_glut DIVERSITY ANALYSIS#
 #########################
@@ -145,16 +144,19 @@ arsC_glut0.1=arsC_glut0.1[,-1]
 #make data matrix
 arsC_glut0.1=data.matrix(arsC_glut0.1)
 
-#i did not remove first column
+#remove samples with <5 OTUs (Illinois_soybean40.3 (row 8), California_grasland62.3 (row16),
+#Illinois_soybean42.3(row 20), Iowa_agricultural01.3(row19))
+arsC_glut0.1 <- arsC_glut0.1[-c(8,16,20,19), ]
+
 
 #make an output of total gene count per site
 arsC_glut0.1.gcounts=rowSums(arsC_glut0.1)
 
 #otu table for aioA0.3
 otu_arsC_glut0.1=otu_table(arsC_glut0.1, taxa_are_rows = FALSE)
-head(otu_arsC_glut0.1)
+
 #see rarefaction curve
-rarecurve(otu_arsC_glut0.1, step=5, col=col, label = FALSE, cex=0.5)
+rarecurve(otu_arsC_glut0.1, step=5, col=rarecol, label = FALSE, cex=0.5)
 
 #rarefy
 rare_arsC_glut0.1=rarefy_even_depth(otu_arsC_glut0.1, 
@@ -165,6 +167,10 @@ rare_arsC_glut0.1=rarefy_even_depth(otu_arsC_glut0.1,
 rarecurve(rare_arsC_glut0.1, step=1, col = c("black", "red", "forestgreen", 
                                         "orange", "blue", "yellow", "hotpink"), 
           label = TRUE, cex=0.4)
+
+#make an output of total OTUs per site
+arsC_glut0.1[arsC_glut0.1 > 0]  <- 1
+arsC_glut0.1.OTUcounts=rowSums(arsC_glut0.1)
 
 #########################
 #arsC_thio DIVERSITY ANALYSIS#
