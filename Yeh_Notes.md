@@ -607,3 +607,19 @@ dmatrix failed
 | reductases | short tree | ![reducatases_0 1](https://user-images.githubusercontent.com/28952961/28036400-25356606-6586-11e7-91d4-06a671e5e8c5.PNG) | abundances |
 | rplB | short tree | long tree | abundances |
 
+Diversity Analysis:
+arsB:
+aioA: every sample had les than 4 OTUs
+arrA:
+acr3:
+arxA:
+arsC_glut:
+before removing data: 
+![arsc_glut_before](https://user-images.githubusercontent.com/28952961/28086404-eb31d198-664c-11e7-83fa-763935526cef.PNG)
+after removing data:
+![arsc_glut_after](https://user-images.githubusercontent.com/28952961/28086496-36a4fb82-664d-11e7-9cbc-ae0efc4cb08d.PNG)
+rarified:
+![arsc_glut_rare](https://user-images.githubusercontent.com/28952961/28086539-6075e232-664d-11e7-9805-98b3bb5e76e3.PNG)
+arsC_thio:
+arsD:
+arsM:
