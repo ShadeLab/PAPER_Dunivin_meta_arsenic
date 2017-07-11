@@ -123,6 +123,10 @@ rarecurve(rare_aioA0.1, step=1, col = c("black", "darkred", "forestgreen",
                                 "orange", "blue", "yellow", "hotpink"), 
           label = FALSE)
 
+#make an output of total OTUs per site
+aioA0.1[aioA0.1 > 0]  <- 1
+aioA0.1.OTUcounts=rowSums(aioA0.1)
+
 ###################################
 #read in distance matrix for 0.3
 aioA0.3=read.delim(file = paste(wd, "/data/aioA_rformat_dist_0.3.txt", sep=""))
