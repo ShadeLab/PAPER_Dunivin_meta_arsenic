@@ -609,10 +609,24 @@ dmatrix failed
 
 ####Diversity Analysis:
 * arsB:
-* aioA: every sample had les than 4 OTUs
-* arrA:
+only 3 samples
+![arsb_otu](https://user-images.githubusercontent.com/28952961/28089052-b267a064-6655-11e7-9f20-3b6593f7f7cd.PNG)
+
+* aioA: every sample had less than 4 OTUs ![aioa_numotus](https://user-images.githubusercontent.com/28952961/28089126-eab3ae0e-6655-11e7-8a3a-9afb8c06fa68.PNG)
+
+
+* arrA: only 3 samples
+before:
+![arra_before](https://user-images.githubusercontent.com/28952961/28087901-11677638-6652-11e7-8017-ce1c3245ef25.PNG)
+after:
+![arra_after](https://user-images.githubusercontent.com/28952961/28087946-37eda7b4-6652-11e7-87c3-7e9addd7c97f.PNG)
+rare:
+![arra_rare](https://user-images.githubusercontent.com/28952961/28087945-37eaba22-6652-11e7-8ece-923fb64b4989.PNG)
 * acr3:
-* arxA:
+
+* arxA: only 3 samples:
+![arxa_numotus](https://user-images.githubusercontent.com/28952961/28088901-34b4ff04-6655-11e7-83e6-7e5764d2f556.PNG)
+
 * arsC_glut:
 before removing data: 
 ![arsc_glut_before](https://user-images.githubusercontent.com/28952961/28086404-eb31d198-664c-11e7-83fa-763935526cef.PNG)
@@ -620,6 +634,7 @@ after removing data:
 ![arsc_glut_after](https://user-images.githubusercontent.com/28952961/28086496-36a4fb82-664d-11e7-9cbc-ae0efc4cb08d.PNG)
 rarified:
 ![arsc_glut_rare](https://user-images.githubusercontent.com/28952961/28086539-6075e232-664d-11e7-9805-98b3bb5e76e3.PNG)
+
 * arsC_thio:
 before removing data:
 ![arsc_thio_before](https://user-images.githubusercontent.com/28952961/28087735-7cc39926-6651-11e7-83db-9e931c1cd5e6.PNG)
@@ -628,5 +643,21 @@ after removing data:
 rarified:
 ![arsc_thio_rare](https://user-images.githubusercontent.com/28952961/28087769-97dc6e18-6651-11e7-97b5-e934478a58b8.PNG)
 
-* arsD:
-* arsM:
+* arsD: most samples had a small amount of OTUs
+Here is the number of OTUs per sample for arsD:
+![arsd_numotus](https://user-images.githubusercontent.com/28952961/28088177-e0ac356e-6652-11e7-9276-4eb6da72eceb.PNG)
+before:
+![arsd_before](https://user-images.githubusercontent.com/28952961/28088103-a352affe-6652-11e7-8bbd-ec62ce982d1d.PNG)
+after removing data:
+![arsd_after](https://user-images.githubusercontent.com/28952961/28088104-a354e1c0-6652-11e7-9da6-f7f4c65aef4d.PNG)
+rarified:
+![arsd_rare](https://user-images.githubusercontent.com/28952961/28088102-a351ecf4-6652-11e7-91f3-b630964f7d15.PNG)
+
+* arsM: number of OTUs per sample:
+![arsm_numotus](https://user-images.githubusercontent.com/28952961/28088273-2eb42a3c-6653-11e7-9adb-5898d0ea83ef.PNG)
+before removing data:
+![arsm_before](https://user-images.githubusercontent.com/28952961/28088678-73bca040-6654-11e7-8936-d81cb898ecac.PNG)
+after removing data:
+![arsm_after](https://user-images.githubusercontent.com/28952961/28088679-73bf9016-6654-11e7-8053-ada0284856f2.PNG)
+rarified:
+![arsm_rare](https://user-images.githubusercontent.com/28952961/28088680-73ca003c-6654-11e7-831f-72bc37db4286.PNG)
