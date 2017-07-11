@@ -607,19 +607,26 @@ dmatrix failed
 | reductases | short tree | ![reducatases_0 1](https://user-images.githubusercontent.com/28952961/28036400-25356606-6586-11e7-91d4-06a671e5e8c5.PNG) | abundances |
 | rplB | short tree | long tree | abundances |
 
-Diversity Analysis:
-arsB:
-aioA: every sample had les than 4 OTUs
-arrA:
-acr3:
-arxA:
-arsC_glut:
+####Diversity Analysis:
+* arsB:
+* aioA: every sample had les than 4 OTUs
+* arrA:
+* acr3:
+* arxA:
+* arsC_glut:
 before removing data: 
 ![arsc_glut_before](https://user-images.githubusercontent.com/28952961/28086404-eb31d198-664c-11e7-83fa-763935526cef.PNG)
 after removing data:
 ![arsc_glut_after](https://user-images.githubusercontent.com/28952961/28086496-36a4fb82-664d-11e7-9cbc-ae0efc4cb08d.PNG)
 rarified:
 ![arsc_glut_rare](https://user-images.githubusercontent.com/28952961/28086539-6075e232-664d-11e7-9805-98b3bb5e76e3.PNG)
-arsC_thio:
-arsD:
-arsM:
+* arsC_thio:
+before removing data:
+![arsc_thio_before](https://user-images.githubusercontent.com/28952961/28087735-7cc39926-6651-11e7-83db-9e931c1cd5e6.PNG)
+after removing data:
+![arsc_thio_after](https://user-images.githubusercontent.com/28952961/28087755-8d30586c-6651-11e7-9018-74e36dc1f289.PNG)
+rarified:
+![arsc_thio_rare](https://user-images.githubusercontent.com/28952961/28087769-97dc6e18-6651-11e7-97b5-e934478a58b8.PNG)
+
+* arsD:
+* arsM:
