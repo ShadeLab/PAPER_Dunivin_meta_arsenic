@@ -603,8 +603,8 @@ dmatrix failed
 | arsD | looks good ![arsd_0 1_short](https://user-images.githubusercontent.com/28952961/28033443-48ad6ad4-657c-11e7-99b7-251fa86dce32.PNG) | no OTUs,nothing >=90% | did not add abundances |
 | arsM | looks good | ![arsm_0 1](https://user-images.githubusercontent.com/28952961/28033343-ecbc038e-657b-11e7-9bcd-e798aa7ff826.PNG) | abundances from mangrove, Disney_preserve, Iowa_praire, Illinois_soil, Permafrost_Canada ![arsm_0 1_abundances](https://user-images.githubusercontent.com/28952961/28076058-76580836-662b-11e7-9130-c48d1c825707.PNG) |
 | dissimilatory | tree file was 0, even when I used short sequences  | long tree | abundances |
-| efflux pumps | short tree | ![efflux pumps_0 1](https://user-images.githubusercontent.com/28952961/28036336-e2dbbf12-6585-11e7-8bce-bbd69358e7f7.PNG) | abundances |
-| reductases | short tree | ![reducatases_0 1](https://user-images.githubusercontent.com/28952961/28036400-25356606-6586-11e7-91d4-06a671e5e8c5.PNG) | abundances |
+| efflux pumps | - | no OTUs ![efflux pumps_0 1](https://user-images.githubusercontent.com/28952961/28036336-e2dbbf12-6585-11e7-8bce-bbd69358e7f7.PNG) | - |
+| reductases | - | no OTUS ![reducatases_0 1](https://user-images.githubusercontent.com/28952961/28036400-25356606-6586-11e7-91d4-06a671e5e8c5.PNG) | - |
 | rplB | short tree | long tree | abundances |
 
 ####Diversity Analysis:
@@ -618,11 +618,12 @@ only 3 samples
 * arrA: only 3 samples
 before:
 ![arra_before](https://user-images.githubusercontent.com/28952961/28087901-11677638-6652-11e7-8017-ce1c3245ef25.PNG)
-after:
+after (removed one sample):
 ![arra_after](https://user-images.githubusercontent.com/28952961/28087946-37eda7b4-6652-11e7-87c3-7e9addd7c97f.PNG)
 rare:
 ![arra_rare](https://user-images.githubusercontent.com/28952961/28087945-37eaba22-6652-11e7-8ece-923fb64b4989.PNG)
-* acr3:
+
+* acr3: no rformat files, trees did not form correctly (see error above)
 
 * arxA: only 3 samples:
 ![arxa_numotus](https://user-images.githubusercontent.com/28952961/28088901-34b4ff04-6655-11e7-83e6-7e5764d2f556.PNG)
