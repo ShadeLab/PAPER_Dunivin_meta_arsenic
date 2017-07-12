@@ -629,6 +629,7 @@ rare:
 ![arxa_numotus](https://user-images.githubusercontent.com/28952961/28088901-34b4ff04-6655-11e7-83e6-7e5764d2f556.PNG)
 
 * arsC_glut:
+![arsc_glut_numotus](https://user-images.githubusercontent.com/28952961/28100089-102cdd4e-668e-11e7-8aba-e856893f1344.PNG)
 before removing data: 
 ![arsc_glut_before](https://user-images.githubusercontent.com/28952961/28086404-eb31d198-664c-11e7-83fa-763935526cef.PNG)
 after removing data:
@@ -637,6 +638,7 @@ rarified:
 ![arsc_glut_rare](https://user-images.githubusercontent.com/28952961/28086539-6075e232-664d-11e7-9805-98b3bb5e76e3.PNG)
 
 * arsC_thio:
+![arsc_thio_numotus](https://user-images.githubusercontent.com/28952961/28100450-247a3e20-6690-11e7-8be9-7ebc122c9af5.PNG)
 before removing data:
 ![arsc_thio_before](https://user-images.githubusercontent.com/28952961/28087735-7cc39926-6651-11e7-83db-9e931c1cd5e6.PNG)
 after removing data:
