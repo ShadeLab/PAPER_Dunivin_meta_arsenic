@@ -4,6 +4,7 @@
 * [Xander Results](https://github.com/ShadeLab/meta_arsenic/blob/master/Yeh_Notes.md#june-19-2017)
 * [Blast Against nr Database](https://github.com/ShadeLab/meta_arsenic/blob/master/Yeh_Notes.md#june-26-30-2017)
 * [Phylogenetic Analysis](https://github.com/ShadeLab/meta_arsenic/blob/master/Yeh_Notes.md#check-phylogeny)
+* [Diversity Analysis](https://github.com/ShadeLab/meta_arsenic/blob/master/Yeh_Notes.md#diversity-analysis)
 
 ## June 2-8, 2017
 
@@ -609,13 +610,13 @@ dmatrix failed
 
 #### Diversity Analysis:
 * arsB:
-only 3 samples
+there only 3 samples, so this is not a good way of looking at alpha diversity: 
 ![arsb_otu](https://user-images.githubusercontent.com/28952961/28089052-b267a064-6655-11e7-9f20-3b6593f7f7cd.PNG)
 
-* aioA: every sample had less than 4 OTUs ![aioa_numotus](https://user-images.githubusercontent.com/28952961/28089126-eab3ae0e-6655-11e7-8a3a-9afb8c06fa68.PNG)
+* aioA: every sample had less than 4 OTUs, so this is not a good way of lokoing at alpha diversity ![aioa_numotus](https://user-images.githubusercontent.com/28952961/28089126-eab3ae0e-6655-11e7-8a3a-9afb8c06fa68.PNG)
 
 
-* arrA: only 3 samples
+* arrA: only 3 samples, this is not a good way of looking at diversity: 
 ![arra_numotus](https://user-images.githubusercontent.com/28952961/28101804-e0320d70-6698-11e7-8f31-1c190d0b61db.PNG)
 before:
 ![arra_before](https://user-images.githubusercontent.com/28952961/28087901-11677638-6652-11e7-8017-ce1c3245ef25.PNG)
@@ -626,10 +627,10 @@ rare:
 
 * acr3: no rformat files, trees did not form correctly (see error above)
 
-* arxA: only 3 samples:
+* arxA: there only 3 samples, so I didnt do a curve:
 ![arxa_numotus](https://user-images.githubusercontent.com/28952961/28088901-34b4ff04-6655-11e7-83e6-7e5764d2f556.PNG)
 
-* arsC_glut:
+* arsC_glut: here are the num of OTUs per sample:
 ![arsc_glut_numotus](https://user-images.githubusercontent.com/28952961/28100089-102cdd4e-668e-11e7-8aba-e856893f1344.PNG)
 before removing data: 
 ![arsc_glut_before](https://user-images.githubusercontent.com/28952961/28086404-eb31d198-664c-11e7-83fa-763935526cef.PNG)
@@ -638,7 +639,7 @@ after removing data:
 rarified:
 ![arsc_glut_rare](https://user-images.githubusercontent.com/28952961/28086539-6075e232-664d-11e7-9805-98b3bb5e76e3.PNG)
 
-* arsC_thio:
+* arsC_thio: number of OTUs per sample:
 ![arsc_thio_numotus](https://user-images.githubusercontent.com/28952961/28100450-247a3e20-6690-11e7-8be9-7ebc122c9af5.PNG)
 before removing data:
 ![arsc_thio_before](https://user-images.githubusercontent.com/28952961/28087735-7cc39926-6651-11e7-83db-9e931c1cd5e6.PNG)
