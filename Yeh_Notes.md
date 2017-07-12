@@ -616,6 +616,7 @@ only 3 samples
 
 
 * arrA: only 3 samples
+![arra_numotus](https://user-images.githubusercontent.com/28952961/28101804-e0320d70-6698-11e7-8f31-1c190d0b61db.PNG)
 before:
 ![arra_before](https://user-images.githubusercontent.com/28952961/28087901-11677638-6652-11e7-8017-ce1c3245ef25.PNG)
 after (removed one sample):
