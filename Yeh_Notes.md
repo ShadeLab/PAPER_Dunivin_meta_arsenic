@@ -607,7 +607,7 @@ dmatrix failed
 | reductases | - | no OTUS ![reducatases_0 1](https://user-images.githubusercontent.com/28952961/28036400-25356606-6586-11e7-91d4-06a671e5e8c5.PNG) | - |
 | rplB | short tree | long tree | abundances |
 
-####Diversity Analysis:
+#### Diversity Analysis:
 * arsB:
 only 3 samples
 ![arsb_otu](https://user-images.githubusercontent.com/28952961/28089052-b267a064-6655-11e7-9f20-3b6593f7f7cd.PNG)
@@ -665,3 +665,8 @@ after removing data:
 ![arsm_after](https://user-images.githubusercontent.com/28952961/28088679-73bf9016-6654-11e7-8053-ada0284856f2.PNG)
 rarified:
 ![arsm_rare](https://user-images.githubusercontent.com/28952961/28088680-73ca003c-6654-11e7-831f-72bc37db4286.PNG)
+
+Observed Abundances facet_grid by gene
+![observed_abund1](https://user-images.githubusercontent.com/28952961/28125983-3d808116-66f6-11e7-9003-38800a6e4f6f.PNG)
+Observed Abundances by biome:
+![observed_abund2](https://user-images.githubusercontent.com/28952961/28126382-51acfde4-66f7-11e7-89cd-9da2c8e822a1.PNG)
