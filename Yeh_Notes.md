@@ -562,21 +562,11 @@ DATA
 #DATA GOES HERE
 ```
 
-####[Examine phylogony of assembled genes](https://github.com/ShadeLab/Xander_arsenic/tree/master/phylogenetic_analysis)
+#### [Examine phylogony of assembled genes](https://github.com/ShadeLab/Xander_arsenic/tree/master/phylogenetic_analysis)
 * Essentially the same as steps 1 and 2 except these scripts are gene specific and remove all sequences that are less than 90% of hmm length
 * To execute, `./GENE.phylo.sh GENE CLUST`
 
-* **acr3: after clustering (`/mnt/research/ShadeLab/WorkingSpace/Dunivin/xander/OTUabundances/bin/./get_OTUabundance.sh final_coverage.txt /mnt/research/ShadeLab/WorkingSpace/Yeh/xander/OTUabundances/${GENE} 0 ${CLUST} alignment/*`), it shows error:
-Exception in thread "main" java.lang.RuntimeException: java.io.IOException: SID cen01_acr3_contig_9484_contig_9485 appears multiple times in the id mapping
-        at edu.msu.cme.pyro.derep.IdMapping.fromFile(IdMapping.java:114)
-        at edu.msu.cme.pyro.cluster.dist.DistanceCalculator.main(DistanceCalculator.java:295)
-        at edu.msu.cme.pyro.cluster.ClusterMain.main(ClusterMain.java:363)
-Caused by: java.io.IOException: SID cen01_acr3_contig_9484_contig_9485 appears multiple times in the id mapping
-        at edu.msu.cme.pyro.derep.IdMapping.fromFile(IdMapping.java:105)
-        ... 2 more
-dmatrix failed
-
-####[Group Related Sequences](https://github.com/ShadeLab/Xander_arsenic/tree/master/phylogenetic_analysis)
+#### [Group Related Sequences](https://github.com/ShadeLab/Xander_arsenic/tree/master/phylogenetic_analysis)
 * Used with the following pairs:
    * arrA, arxA, aioA: name: dissimilatory
    * arsB, acr3: name: efflux.pumps
@@ -597,7 +587,7 @@ dmatrix failed
 | arsB | first tree was wrong, it was mislabeled. The dissimilar 7 was the root. There are 3 OTUs ![arsb_0 1_short](https://user-images.githubusercontent.com/28952961/28029278-8202eaca-656d-11e7-8a0e-7403b5712e59.PNG) | no OTU (longest is <90%) | did not add abundances |
 | aioA | looks good ![aioa_0 1_short](https://user-images.githubusercontent.com/28952961/28029390-e18ebca8-656d-11e7-9c8b-fbe50f4f2202.PNG) | no OTU's, not sure why, because there should be long sequences ![aioa_0 1](https://user-images.githubusercontent.com/28952961/28029701-e3c2ce46-656e-11e7-8290-d74885dbc0a1.PNG) | did not add abundances |
 | arrA | many OTU's (the bottom of the tree is just OTU's) ![arra_0 1_short](https://user-images.githubusercontent.com/28952961/28029959-d8f5f8de-656f-11e7-8e37-d675f58d6bc0.PNG) | looks good ![arra_0 1](https://user-images.githubusercontent.com/28952961/28030058-2a8002e4-6570-11e7-908a-c20fff204fda.PNG) | abundances from both Mangrove sites only |
-| acr3 | no OTUs, error (see above) ![acr3_0 1_short](https://user-images.githubusercontent.com/28952961/28030327-4d248030-6571-11e7-86c0-671c8ec202a2.PNG) | same error, no OTUs ![acr3_0 1](https://user-images.githubusercontent.com/28952961/28030436-c473d46a-6571-11e7-94c0-1e14686a0b73.PNG) | did not add abundances |
+| acr3 | looks good, very large | has OTUs ![acr3_0 1](https://user-images.githubusercontent.com/28952961/28139174-472590b4-6721-11e7-8c2a-b1d35b4f962b.PNG) | **WILL ADD ABUNDANCES** |
 | arxA | one group without any OTUs: ![arxa_0 1_short](https://user-images.githubusercontent.com/28952961/28030546-346fd66a-6572-11e7-8ec1-d11648b813e8.PNG) | no OTUs, nothing >=90% ![arxa_0 1](https://user-images.githubusercontent.com/28952961/28031115-4a19faca-6574-11e7-9b60-c5242b11769d.PNG) | dod not add abundances |
 | arsC_glut | lots of OTUs, sequences between OTUs, not adding picture because it'd be too hard to read | ![arsc_glut_0 1](https://user-images.githubusercontent.com/28952961/28031284-c4ca1a2a-6574-11e7-8712-7ce08e129cc6.PNG) | added abundances ![arsc_glut_0 1_abundances](https://user-images.githubusercontent.com/28952961/28075942-fb2a3d32-662a-11e7-997c-84521dc9c09e.PNG) |
 | arsC_thio | lots of OTUs and sequences, looks good | no OTUs (nothing <=90%) ![arsc_thio_0 1](https://user-images.githubusercontent.com/28952961/28031382-162ae520-6575-11e7-85f0-12ddbd68b0ad.PNG) | did not add abundances |
