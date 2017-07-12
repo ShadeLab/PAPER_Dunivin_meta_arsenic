@@ -306,3 +306,20 @@ rarecurve(rare_arsD0.1, step=1, col = c("black", "red", "forestgreen",
 arsD0.1[arsD0.1 > 0]  <- 1
 arsD0.1.OTUcounts=rowSums(arsD0.1)
 print(arsD0.1.OTUcounts)
+
+#########################
+#observed alpha diversity#
+#########################
+library(reshape2)
+library(datasets)
+observed_abundances=read.delim(file = paste(wd, 
+                                "/data/observed_abundances.txt",
+                                sep=""))
+
+observed_abundances.reshaped <- melt(observed_abundances.reshaped, id.vars=c("Sample"), 
+                          measure.vars=c('arsB','aioA','arrA','acr3','arxA','arsC_glut',
+                                         'arsC_thio','arsD','arsM'))
+
+plot_observed_abund<-ggplot(data=observed_abundances.reshaped, 
+                         aes(x=Sample, color=variable)) + theme(axis.text.x = element_text(angle = 50, hjust = 1))
+plot(plot_observed_abund)
