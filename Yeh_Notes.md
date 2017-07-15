@@ -440,7 +440,7 @@ sort file.txt | uniq -c > file2.txt
 | Brazilian_forest54.3  | -  | cluster, done | - | - | - | cluster, done, copied | cluster, done, copied | - | cluster, done, copied | cluster, done, copied |
 | Illinois_soybean42.3  | -  | - | - | - | - | cluster, done, copied | - | - | cluster, **blast.txt empty**, copied | cluster, done, copied |
 | Illinois_soybean40.3  | -  | - | - | - | - | cluster, done, copied | - | - | - | cluster, done, copied |
-| Minnesota_creek46.3  | - | cluster, done | - | cluster, done | - | cluster, done, copied | - | - | cluster, done, copied | cluster, done, copied |
+| Minnesota_creek46.3  | - | at first, there was a cluster, I deleted it and retried twice and there is no cluster | - | cluster, done | - | cluster, done, copied | - | - | cluster, done, copied | cluster, done, copied |
 | Minnesota_creek45.3  | - | - | - | - | - | cluster, done, copied | cluster, **blast.txt empty**, copied  | - | cluster, done, copied | cluster, done, copied |
 | Disney_preserve18.3  | -  | - | - | cluster, done | - | cluster, done, copied | cluster, done, copied | cluster, done, copied, **blast.txt empty** | cluster, done, copied | cluster, done, copied |
 | Disney_preserve25.3  | -  | - | - | cluster, done | - | cluster, done, copied | cluster, done, copied | - | cluster, done, copied | cluster, done, copied |
