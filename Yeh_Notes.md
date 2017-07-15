@@ -623,9 +623,10 @@ there only 3 samples, so this is not a good way of looking at alpha diversity:
 before removing data: 
 ![arsc_glut_before](https://user-images.githubusercontent.com/28952961/28086404-eb31d198-664c-11e7-83fa-763935526cef.PNG)
 after removing data:
-![arsc_glut_after](https://user-images.githubusercontent.com/28952961/28086496-36a4fb82-664d-11e7-9cbc-ae0efc4cb08d.PNG)
+![arsc_glut_after](https://user-images.githubusercontent.com/28952961/28235041-d02d702a-68d4-11e7-8436-6b5fe40d1833.PNG)
 rarified:
-![arsc_glut_rare](https://user-images.githubusercontent.com/28952961/28086539-6075e232-664d-11e7-9805-98b3bb5e76e3.PNG)
+![arsc_glut_rare](https://user-images.githubusercontent.com/28952961/28235048-d68f2350-68d4-11e7-8db3-e536f910d6f3.PNG)
+
 
 * arsC_thio: number of OTUs per sample:
 ![arsc_thio_numotus](https://user-images.githubusercontent.com/28952961/28100450-247a3e20-6690-11e7-8be9-7ebc122c9af5.PNG)
