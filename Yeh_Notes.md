@@ -659,6 +659,10 @@ rarified:
 ![rplb_numotus](https://user-images.githubusercontent.com/28952961/28223734-91b912ac-689a-11e7-89c2-0f06e0e27c20.PNG)
 Before:
 ![rplb_before](https://user-images.githubusercontent.com/28952961/28223856-fa2c7234-689a-11e7-83fa-36a23f900714.PNG)
+After:
+![rplb_after](https://user-images.githubusercontent.com/28952961/28234632-df1b7cda-68cf-11e7-8362-0db4ba7cfca5.PNG)
+Rarified:
+![rplb_rare](https://user-images.githubusercontent.com/28952961/28234648-023ce38e-68d0-11e7-8fa3-65bafd19500d.PNG)
 
 
 Observed Abundances facet_grid by gene
