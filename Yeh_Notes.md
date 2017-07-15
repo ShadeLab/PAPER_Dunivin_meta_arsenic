@@ -612,7 +612,9 @@ there only 3 samples, so this is not a good way of looking at alpha diversity:
 * arrA: only 3 samples, this is not a good way of looking at diversity: 
 ![arra_numotus](https://user-images.githubusercontent.com/28952961/28101804-e0320d70-6698-11e7-8f31-1c190d0b61db.PNG)
 
-* acr3: no rformat files, trees did not form correctly (see error above)
+* acr3: num OTUs:
+![acr3_numotus](https://user-images.githubusercontent.com/28952961/28235513-5f3abd10-68dd-11e7-8b95-c21b41fdcfe0.PNG)
+
 
 * arxA: there only 3 samples, so I didnt do a curve:
 ![arxa_numotus](https://user-images.githubusercontent.com/28952961/28088901-34b4ff04-6655-11e7-83e6-7e5764d2f556.PNG)
@@ -666,9 +668,7 @@ Rarified:
 
 
 Observed Abundances facet_grid by gene
-![observed_abund1](https://user-images.githubusercontent.com/28952961/28125983-3d808116-66f6-11e7-9003-38800a6e4f6f.PNG)
-Observed Abundances by biome:
-![observed_abund2](https://user-images.githubusercontent.com/28952961/28126382-51acfde4-66f7-11e7-89cd-9da2c8e822a1.PNG)
+![observed_abund2](https://user-images.githubusercontent.com/28952961/28235565-5f6dc902-68de-11e7-9467-70855fa6d689.PNG)
 
 Taxon Abundances Total:
 (i want to change this to be the MEAN of each taxon, but not sure how. I ordered it before plotting, but ggplot is only plotting is alphabetically)
