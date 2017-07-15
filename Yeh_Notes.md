@@ -590,7 +590,7 @@ DATA
 | gene | short tree (.1) | long tree (.1) | abundances |
 | --- | --- | --- | ---|
 | arsB | first tree was wrong, it was mislabeled. The dissimilar 7 was the root. There are 3 OTUs ![arsb_0 1_short](https://user-images.githubusercontent.com/28952961/28029278-8202eaca-656d-11e7-8a0e-7403b5712e59.PNG) | no OTU (longest is <90%) | did not add abundances |
-| aioA | looks good ![aioa_0 1_short](https://user-images.githubusercontent.com/28952961/28029390-e18ebca8-656d-11e7-9c8b-fbe50f4f2202.PNG) | no OTU's, not sure why, because there should be long sequences ![aioa_0 1](https://user-images.githubusercontent.com/28952961/28029701-e3c2ce46-656e-11e7-8290-d74885dbc0a1.PNG) | did not add abundances |
+| aioA | looks good ![aioa_0 1_short](https://user-images.githubusercontent.com/28952961/28029390-e18ebca8-656d-11e7-9c8b-fbe50f4f2202.PNG) | no OTU's, the only site with sequences >= 90% is Permafrost_Russia13.3, but somehow no OTUs are on the tree ![aioa_0 1](https://user-images.githubusercontent.com/28952961/28029701-e3c2ce46-656e-11e7-8290-d74885dbc0a1.PNG) | did not add abundances |
 | arrA | many OTU's (the bottom of the tree is just OTU's) ![arra_0 1_short](https://user-images.githubusercontent.com/28952961/28029959-d8f5f8de-656f-11e7-8e37-d675f58d6bc0.PNG) | looks good ![arra_0 1](https://user-images.githubusercontent.com/28952961/28030058-2a8002e4-6570-11e7-908a-c20fff204fda.PNG) | abundances from both Mangrove sites only |
 | acr3 | looks good, very large | has OTUs ![acr3_0 1](https://user-images.githubusercontent.com/28952961/28139174-472590b4-6721-11e7-8c2a-b1d35b4f962b.PNG) | **WILL ADD ABUNDANCES** |
 | arxA | one group without any OTUs: ![arxa_0 1_short](https://user-images.githubusercontent.com/28952961/28030546-346fd66a-6572-11e7-8ec1-d11648b813e8.PNG) | no OTUs, nothing >=90% ![arxa_0 1](https://user-images.githubusercontent.com/28952961/28031115-4a19faca-6574-11e7-9b60-c5242b11769d.PNG) | dod not add abundances |
@@ -601,7 +601,6 @@ DATA
 | dissimilatory | tree file was 0, even when I used short sequences  | long tree | abundances |
 | efflux pumps | - | no OTUs ![efflux pumps_0 1](https://user-images.githubusercontent.com/28952961/28036336-e2dbbf12-6585-11e7-8bce-bbd69358e7f7.PNG) | - |
 | reductases | - | no OTUS ![reducatases_0 1](https://user-images.githubusercontent.com/28952961/28036400-25356606-6586-11e7-91d4-06a671e5e8c5.PNG) | - |
-| rplB | short tree | long tree | abundances |
 
 #### Diversity Analysis:
 * arsB:
