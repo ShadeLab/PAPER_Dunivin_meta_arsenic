@@ -611,23 +611,44 @@ there only 3 samples, so this is not a good way of looking at alpha diversity:
 
 * arrA: only 3 samples, this is not a good way of looking at diversity: 
 ![arra_numotus](https://user-images.githubusercontent.com/28952961/28101804-e0320d70-6698-11e7-8f31-1c190d0b61db.PNG)
+Since I had to remove one sample before rarifying, I can't make oridnations because "Error in array(STATS, dims[perm]) : 'dims' cannot be of length 0"
 
 * acr3: num OTUs:
 ![acr3_numotus](https://user-images.githubusercontent.com/28952961/28235513-5f3abd10-68dd-11e7-8b95-c21b41fdcfe0.PNG)
+before removing data:
+![acr3_before](https://user-images.githubusercontent.com/28952961/28285097-64642116-6b01-11e7-8b6a-b2bc9d55d46a.PNG)
+after removing data:
+![acr3_after](https://user-images.githubusercontent.com/28952961/28285096-6463cd7e-6b01-11e7-90df-3cf154320078.PNG)
+rarified:
+![acr3_rare](https://user-images.githubusercontent.com/28952961/28285100-64657f16-6b01-11e7-9563-35803a0209f1.PNG)
+evenness:
+![acr3_eveness](https://user-images.githubusercontent.com/28952961/28285099-64651418-6b01-11e7-9f19-4e3e48e4cf16.PNG)
+bray curtis:
+![acr3_braycurtis](https://user-images.githubusercontent.com/28952961/28285101-6467d9dc-6b01-11e7-9758-cdcf8eb9bc1a.PNG)
+sorenson:
+![acr3_sorenson](https://user-images.githubusercontent.com/28952961/28285098-64649696-6b01-11e7-8b55-e438bcbf48ce.PNG)
 
 
 * arxA: there only 3 samples, so I didnt do a curve:
 ![arxa_numotus](https://user-images.githubusercontent.com/28952961/28088901-34b4ff04-6655-11e7-83e6-7e5764d2f556.PNG)
+evenness:
+![arxa_evenness](https://user-images.githubusercontent.com/28952961/28285381-805bc1ca-6b02-11e7-85d0-34d4a27b2ad0.PNG)
+![arxa_braycurtis](https://user-images.githubusercontent.com/28952961/28285379-805b873c-6b02-11e7-94e2-c61366c368a4.PNG)
+![arxa_sorenson](https://user-images.githubusercontent.com/28952961/28285380-805ba870-6b02-11e7-923f-ad1d4c60b639.PNG)
 
 * arsC_glut: here are the num of OTUs per sample:
 ![arsc_glut_numotus](https://user-images.githubusercontent.com/28952961/28100089-102cdd4e-668e-11e7-8aba-e856893f1344.PNG)
 before removing data: 
 ![arsc_glut_before](https://user-images.githubusercontent.com/28952961/28086404-eb31d198-664c-11e7-83fa-763935526cef.PNG)
 after removing data:
-![arsc_glut_after](https://user-images.githubusercontent.com/28952961/28235041-d02d702a-68d4-11e7-8436-6b5fe40d1833.PNG)
+![arsc_glut_after](https://user-images.githubusercontent.com/28952961/28286642-db70d2ea-6b06-11e7-8260-12303293410e.PNG)
 rarified:
-![arsc_glut_rare](https://user-images.githubusercontent.com/28952961/28235048-d68f2350-68d4-11e7-8db3-e536f910d6f3.PNG)
-
+![arsc_glut_rare](https://user-images.githubusercontent.com/28952961/28286652-e243fdf4-6b06-11e7-8505-991aec18ddd2.PNG)
+evenness:
+![arsc_glut_evenness](https://user-images.githubusercontent.com/28952961/28287021-2bbec74c-6b08-11e7-8420-9560c2a66456.PNG)
+One point has overlapping data, so I tried to show with the labels, but I need a way to make the labels not overlap:
+![arsc_glut_braycurtis](https://user-images.githubusercontent.com/28952961/28287149-9b44f348-6b08-11e7-818b-e550d42f8c95.PNG)
+![arsc_glut_sorenson](https://user-images.githubusercontent.com/28952961/28287150-9b47a93a-6b08-11e7-96ad-89d48ff4881d.PNG)
 
 * arsC_thio: number of OTUs per sample:
 ![arsc_thio_numotus](https://user-images.githubusercontent.com/28952961/28100450-247a3e20-6690-11e7-8be9-7ebc122c9af5.PNG)
@@ -637,6 +658,10 @@ after removing data:
 ![arsc_thio_after](https://user-images.githubusercontent.com/28952961/28087755-8d30586c-6651-11e7-9018-74e36dc1f289.PNG)
 rarified:
 ![arsc_thio_rare](https://user-images.githubusercontent.com/28952961/28087769-97dc6e18-6651-11e7-97b5-e934478a58b8.PNG)
+evenness:
+![arsc_thio_evenness](https://user-images.githubusercontent.com/28952961/28286533-7e4b9f50-6b06-11e7-9347-a3d26d2bae32.PNG)
+![arsc_thio_braycurtis](https://user-images.githubusercontent.com/28952961/28286535-7e5055ea-6b06-11e7-9247-471d4ffcb025.PNG)
+![arsc_thio_sorenson](https://user-images.githubusercontent.com/28952961/28286534-7e4dfac0-6b06-11e7-977e-fcde4c76d61c.PNG)
 
 * arsD: most samples had a small amount of OTUs
 Here is the number of OTUs per sample for arsD:
@@ -647,6 +672,10 @@ after removing data:
 ![arsd_after](https://user-images.githubusercontent.com/28952961/28088104-a354e1c0-6652-11e7-9da6-f7f4c65aef4d.PNG)
 rarified:
 ![arsd_rare](https://user-images.githubusercontent.com/28952961/28088102-a351ecf4-6652-11e7-91f3-b630964f7d15.PNG)
+evenness:
+![arsd_evenness](https://user-images.githubusercontent.com/28952961/28285841-22e89fca-6b04-11e7-82f6-e66e39e7d303.PNG)
+![arsd_braycurtis](https://user-images.githubusercontent.com/28952961/28285842-22e9dc28-6b04-11e7-856e-c522b25fd496.PNG)
+![arsd_sorenson](https://user-images.githubusercontent.com/28952961/28285840-22e441dc-6b04-11e7-93de-695e430a64b9.PNG)
 
 * arsM: number of OTUs per sample:
 ![arsm_numotus](https://user-images.githubusercontent.com/28952961/28088273-2eb42a3c-6653-11e7-9adb-5898d0ea83ef.PNG)
@@ -656,6 +685,12 @@ after removing data:
 ![arsm_after](https://user-images.githubusercontent.com/28952961/28088679-73bf9016-6654-11e7-8053-ada0284856f2.PNG)
 rarified:
 ![arsm_rare](https://user-images.githubusercontent.com/28952961/28088680-73ca003c-6654-11e7-831f-72bc37db4286.PNG)
+eveness:
+![arsm_eveness](https://user-images.githubusercontent.com/28952961/28284843-77833558-6b00-11e7-9677-79c373d37a48.PNG)
+Bray-Curtis: (There are 2 overlapping points, so I put labels to try to show that)
+![arsm_braycurtis](https://user-images.githubusercontent.com/28952961/28284912-bd48eccc-6b00-11e7-9e64-37563868661e.PNG)
+Sorenson:
+![arsm_sorenson](https://user-images.githubusercontent.com/28952961/28284844-77837522-6b00-11e7-95da-980de5dc4a9d.PNG)
 
 * rplB: number of OTUs per sample:
 ![rplb_numotus](https://user-images.githubusercontent.com/28952961/28223734-91b912ac-689a-11e7-89c2-0f06e0e27c20.PNG)
