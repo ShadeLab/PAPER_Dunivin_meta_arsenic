@@ -1,0 +1,8 @@
+Taxon	Abundance	Fraction Abundance
+coded_by=complement(6903..9452),organism=Desulfuromonadales bacterium GWC2_61_20,definition=dehydrogenase	5.996	0.4707
+coded_by=2770..5316,organism=Betaproteobacteria bacterium RIFCSPLOWO2_12_FULL_64_23,definition=dehydrogenase	6.742	0.5293
+
+
+Lineage	MatchName	Abundance	Fraction Abundance
+coded_by=complement(6903..9452),organism=Desulfuromonadales bacterium GWC2_61_20,definition=dehydrogenase	OGR29382	5.996	0.4707
+coded_by=2770..5316,organism=Betaproteobacteria bacterium RIFCSPLOWO2_12_FULL_64_23,definition=dehydrogenase	OGA33225	6.742	0.5293
