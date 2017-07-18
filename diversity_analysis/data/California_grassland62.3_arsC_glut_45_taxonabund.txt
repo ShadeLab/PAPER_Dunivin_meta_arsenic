@@ -1,0 +1,10 @@
+Taxon	Abundance	Fraction Abundance
+coded_by=3856620..3857048,organism=Sphingopyxis macrogoltabida,definition=arsenate reductase	3.423	0.5092
+coded_by=2631312..2631668,organism=Burkholderia cepacia GG4,definition=arsenate reductase	2.191	0.3259
+coded_by=169879..170307,organism=Sphingomonas sp. Leaf25,definition=arsenate reductase	1.108	0.1648
+
+
+Lineage	MatchName	Abundance	Fraction Abundance
+coded_by=2631312..2631668,organism=Burkholderia cepacia GG4,definition=arsenate reductase	AFQ51953	2.191	0.3259
+coded_by=169879..170307,organism=Sphingomonas sp. Leaf25,definition=arsenate reductase	KQN06930	1.108	0.1648
+coded_by=3856620..3857048,organism=Sphingopyxis macrogoltabida,definition=arsenate reductase	ALH82206	3.423	0.5092

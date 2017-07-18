@@ -1,0 +1,52 @@
+Taxon	Abundance	Fraction Abundance
+coded_by=422243..422677,organism=Azospirillum thiophilum,definition=arsenate reductase	2.944	0.0608
+coded_by=complement(181743..182171),organism=Belnapia rosea,definition=arsenate reductase	3.5709999999999997	0.0737
+coded_by=61576..62001,organism=Microvirga vignae,definition=arsenate reductase	1.868	0.0385
+coded_by=50036..50473,organism=Acetobacteraceae bacterium AT-5844,definition=arsenate reductase	1.151	0.0238
+coded_by=1428126..1428590,organism=Polymorphum gilvum SL003B-26A1,definition=Arsenate reductase (Glutaredoxin)	2.004	0.0414
+coded_by=complement(12795..13232),organism=Belnapia rosea,definition=arsenate reductase	9.751	0.2012
+coded_by=284669..285100,organism=Variovorax sp. Root411,definition=arsenate reductase	1.688	0.0348
+coded_by=complement(159122..159562),organism=Magnetospirillum magnetotacticum MS-1,definition=Arsenate reductase	1.137	0.0235
+coded_by=complement(939657..940070),organism=Hyphomicrobium facile,definition=arsenate reductase	1.815	0.0375
+coded_by=complement(26974..27399),organism=Oligotropha carboxidovorans OM5,definition=arsenate reductase	1.292	0.0267
+coded_by=complement(524161..524586),organism=Ochrobactrum anthropi ATCC 49188,definition=arsenate reductase	1.231	0.0254
+coded_by=complement(5579987..5580412),organism=Microvirga sp. V5/3M,definition=arsenate reductase (glutaredoxin)	1.197	0.0247
+coded_by=complement(53510..53935),organism=Methylobacterium sp. GXF4,definition=ArsC protein	1.621	0.0335
+coded_by=63127..63561,organism=Azospirillum lipoferum 4B,definition=arsenate reductase (Arsenical pump modifier)	2.784	0.0575
+coded_by=29357..29782,organism=Roseomonas sp. M3,definition=arsenate reductase (glutaredoxin)	0.769	0.0159
+coded_by=complement(9288..9731),organism=Pontibaca methylaminivorans,definition=arsenate reductase	1.487	0.0307
+coded_by=complement(43573..43995),organism=Acetobacter senegalensis,definition=arsenate reductase	1.009	0.0208
+coded_by=complement(647877..648320),organism=Variovorax sp. OK605,definition=arsenate reductase	1.243	0.0257
+coded_by=122205..122615,organism=Bradyrhizobium sp. Rc3b,definition=arsenate reductase	1.07	0.0221
+coded_by=7675..8097,organism=Lautropia sp. SCN 69-89,definition=arsenate reductase (glutaredoxin)	1.376	0.0284
+coded_by=complement(19170..19595),organism=Microvirga sp. BSC39,definition=arsenate reductase	1.388	0.0286
+coded_by=4501607..4502029,organism=Aminobacter aminovorans,definition=Arsenate reductase	1.722	0.0355
+coded_by=complement(248044..248391),organism=Duganella sp. Leaf61,definition=arsenate reductase	2.54	0.0524
+coded_by=2788508..2788873,organism=Gluconacetobacter diazotrophicus PAl 5,definition=arsenate reductase	1.799	0.0371
+
+
+Lineage	MatchName	Abundance	Fraction Abundance
+coded_by=61576..62001,organism=Microvirga vignae,definition=arsenate reductase	KLK94743	1.868	0.0385
+coded_by=complement(939657..940070),organism=Hyphomicrobium facile,definition=arsenate reductase	SFV28096	1.815	0.0375
+coded_by=2788508..2788873,organism=Gluconacetobacter diazotrophicus PAl 5,definition=arsenate reductase	ACI52278	1.799	0.0371
+coded_by=50036..50473,organism=Acetobacteraceae bacterium AT-5844,definition=arsenate reductase	EHM02458	1.151	0.0238
+coded_by=284669..285100,organism=Variovorax sp. Root411,definition=arsenate reductase	KQW55392	1.688	0.0348
+coded_by=complement(181743..182171),organism=Belnapia rosea,definition=arsenate reductase	SDB69083	3.5709999999999997	0.0737
+coded_by=422243..422677,organism=Azospirillum thiophilum,definition=arsenate reductase	ALG74773	2.944	0.0608
+coded_by=complement(248044..248391),organism=Duganella sp. Leaf61,definition=arsenate reductase	KQN79111	2.54	0.0524
+coded_by=complement(647877..648320),organism=Variovorax sp. OK605,definition=arsenate reductase	SFO76624	1.243	0.0257
+coded_by=7675..8097,organism=Lautropia sp. SCN 69-89,definition=arsenate reductase (glutaredoxin)	ODS94652	1.376	0.0284
+coded_by=4501607..4502029,organism=Aminobacter aminovorans,definition=Arsenate reductase	AMS43317	1.722	0.0355
+coded_by=complement(159122..159562),organism=Magnetospirillum magnetotacticum MS-1,definition=Arsenate reductase	KIL98440	1.137	0.0235
+coded_by=complement(53510..53935),organism=Methylobacterium sp. GXF4,definition=ArsC protein	EIZ87219	1.621	0.0335
+coded_by=122205..122615,organism=Bradyrhizobium sp. Rc3b,definition=arsenate reductase	SFN68473	1.07	0.0221
+coded_by=complement(26974..27399),organism=Oligotropha carboxidovorans OM5,definition=arsenate reductase	ACI91181	1.292	0.0267
+coded_by=complement(12795..13232),organism=Belnapia rosea,definition=arsenate reductase	SDB73800	9.751	0.2012
+coded_by=complement(19170..19595),organism=Microvirga sp. BSC39,definition=arsenate reductase	KFG70358	1.388	0.0286
+coded_by=complement(9288..9731),organism=Pontibaca methylaminivorans,definition=arsenate reductase	SIT73635	1.487	0.0307
+coded_by=complement(524161..524586),organism=Ochrobactrum anthropi ATCC 49188,definition=arsenate reductase	ABS15907	1.231	0.0254
+coded_by=29357..29782,organism=Roseomonas sp. M3,definition=arsenate reductase (glutaredoxin)	ONG55930	0.769	0.0159
+coded_by=63127..63561,organism=Azospirillum lipoferum 4B,definition=arsenate reductase (Arsenical pump modifier)	CBS90475	2.784	0.0575
+coded_by=1428126..1428590,organism=Polymorphum gilvum SL003B-26A1,definition=Arsenate reductase (Glutaredoxin)	ADZ69757	2.004	0.0414
+coded_by=complement(43573..43995),organism=Acetobacter senegalensis,definition=arsenate reductase	CEF43082	1.009	0.0208
+coded_by=complement(5579987..5580412),organism=Microvirga sp. V5/3M,definition=arsenate reductase (glutaredoxin)	ANY81295	1.197	0.0247

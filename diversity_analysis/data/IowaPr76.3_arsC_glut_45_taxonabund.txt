@@ -1,0 +1,28 @@
+Taxon	Abundance	Fraction Abundance
+coded_by=complement(939640..940020),organism=Phenylobacterium zucineum HLK1,definition=arsenate reductase	1.442	0.0446
+coded_by=83827..84252,organism=bacterium YEK0313,definition=Arsenate reductase	4.045	0.1250
+coded_by=21497..21940,organism=Alphaproteobacteria bacterium 62-8,definition=arsenate reductase (glutaredoxin)	1.923	0.0594
+coded_by=complement(198134..198538),organism=Rhizobium sp. Root1220,definition=arsenate reductase	1.576	0.0487
+coded_by=7002692..7003111,organism=Bradyrhizobium sp.,definition=Arsenate reductase EC 12041 CDS	1.097	0.0339
+coded_by=4154..4591,organism=Methylobacterium sp. Leaf100,definition=arsenate reductase	1.791	0.0554
+coded_by=97147..97554,organism=Filomicrobium insigne,definition=arsenate reductase	2.535	0.0784
+coded_by=<1..>350,organism=uncultured bacterium,definition=arsenate reductase	9.679	0.2992
+coded_by=357886..358230,organism=Microbulbifer yueqingensis,definition=arsenate reductase	1.997	0.0617
+coded_by=204812..205213,organism=Bradyrhizobium diazoefficiens SEMIA 5080,definition=arsenate reductase	1.223	0.0378
+coded_by=88441..88842,organism=Bradyrhizobium sp. BR 10245,definition=arsenate reductase	5.044	0.1559
+
+
+Lineage	MatchName	Abundance	Fraction Abundance
+coded_by=357886..358230,organism=Microbulbifer yueqingensis,definition=arsenate reductase	SDJ60067	1.997	0.0617
+coded_by=<1..>350,organism=uncultured bacterium,definition=arsenate reductase	AKS30182	2.887	0.0892
+coded_by=<1..>350,organism=uncultured bacterium,definition=arsenate reductase	AKS30155	4.394	0.1358
+coded_by=21497..21940,organism=Alphaproteobacteria bacterium 62-8,definition=arsenate reductase (glutaredoxin)	OJU58181	1.923	0.0594
+coded_by=<1..>350,organism=uncultured bacterium,definition=arsenate reductase	AIZ47800	2.398	0.0741
+coded_by=83827..84252,organism=bacterium YEK0313,definition=Arsenate reductase	CEJ16142	4.045	0.1250
+coded_by=4154..4591,organism=Methylobacterium sp. Leaf100,definition=arsenate reductase	KQP27065	1.791	0.0554
+coded_by=204812..205213,organism=Bradyrhizobium diazoefficiens SEMIA 5080,definition=arsenate reductase	KAK34985	1.223	0.0378
+coded_by=88441..88842,organism=Bradyrhizobium sp. BR 10245,definition=arsenate reductase	OAF07780	5.044	0.1559
+coded_by=97147..97554,organism=Filomicrobium insigne,definition=arsenate reductase	SDP09770	2.535	0.0784
+coded_by=complement(198134..198538),organism=Rhizobium sp. Root1220,definition=arsenate reductase	KQV84124	1.576	0.0487
+coded_by=7002692..7003111,organism=Bradyrhizobium sp.,definition=Arsenate reductase EC 12041 CDS	CUU20306	1.097	0.0339
+coded_by=complement(939640..940020),organism=Phenylobacterium zucineum HLK1,definition=arsenate reductase	ACG77263	1.442	0.0446

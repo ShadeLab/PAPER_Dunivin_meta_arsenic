@@ -1,0 +1,10 @@
+Taxon	Abundance	Fraction Abundance
+coded_by=complement(60095..60526),organism=Comamonas testosteroni S44,definition=arsenate reductase	1.028	0.2877
+coded_by=<1..>354,organism=uncultured bacterium,definition=ArsC	1.508	0.4221
+coded_by=88441..88842,organism=Bradyrhizobium sp. BR 10245,definition=arsenate reductase	1.037	0.2902
+
+
+Lineage	MatchName	Abundance	Fraction Abundance
+coded_by=complement(60095..60526),organism=Comamonas testosteroni S44,definition=arsenate reductase	EFI61188	1.028	0.2877
+coded_by=88441..88842,organism=Bradyrhizobium sp. BR 10245,definition=arsenate reductase	OAF07780	1.037	0.2902
+coded_by=<1..>354,organism=uncultured bacterium,definition=ArsC	AHA93583	1.508	0.4221
