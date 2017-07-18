@@ -1,0 +1,8 @@
+Taxon	Abundance	Fraction Abundance
+coded_by=complement(10270..10692),organism=Enterococcus faecium E980,definition=arsenate reductase	15.055	0.7223
+coded_by=1608651..1609046,organism=Macrococcus caseolyticus JCSC5402,definition=arsenate reductase	5.787	0.2777
+
+
+Lineage	MatchName	Abundance	Fraction Abundance
+coded_by=1608651..1609046,organism=Macrococcus caseolyticus JCSC5402,definition=arsenate reductase	BAH18193	5.787	0.2777
+coded_by=complement(10270..10692),organism=Enterococcus faecium E980,definition=arsenate reductase	EFF37530	15.055	0.7223

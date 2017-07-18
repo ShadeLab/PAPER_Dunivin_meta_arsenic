@@ -1,0 +1,6 @@
+Taxon	Abundance	Fraction Abundance
+coded_by=complement(2846927..2847346),organism=Geobacillus sp. JS12,definition=arsenate reductase	1.017	1.0000
+
+
+Lineage	MatchName	Abundance	Fraction Abundance
+coded_by=complement(2846927..2847346),organism=Geobacillus sp. JS12,definition=arsenate reductase	AMQ21798	1.017	1.0000

@@ -1,0 +1,6 @@
+Taxon	Abundance	Fraction Abundance
+coded_by=1951..2352,organism=Staphylococcus cohnii,definition=arsenate reductase	1.305	1.0000
+
+
+Lineage	MatchName	Abundance	Fraction Abundance
+coded_by=1951..2352,organism=Staphylococcus cohnii,definition=arsenate reductase	OAO11411	1.305	1.0000

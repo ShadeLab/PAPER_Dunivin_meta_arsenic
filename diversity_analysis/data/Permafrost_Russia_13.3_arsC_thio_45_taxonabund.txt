@@ -1,0 +1,12 @@
+Taxon	Abundance	Fraction Abundance
+coded_by=complement(53478..53906),organism=Alicyclobacillus sp. USBA-503,definition=arsenate reductase	1.646	0.0792
+coded_by=67172..67594,organism=Thermoactinomyces vulgaris,definition=arsenate reductase	1.131	0.0545
+coded_by=1863247..1863669,organism=Geobacillus sp. Y4.1MC1,definition=arsenate reductase (thioredoxin)	4.298	0.2069
+coded_by=1554786..1555208,organism=Bacillus methanolicus MGA3,definition=protein tyrosine phosphatase	13.695	0.6594
+
+
+Lineage	MatchName	Abundance	Fraction Abundance
+coded_by=1554786..1555208,organism=Bacillus methanolicus MGA3,definition=protein tyrosine phosphatase	AIE59975	13.695	0.6594
+coded_by=67172..67594,organism=Thermoactinomyces vulgaris,definition=arsenate reductase	KPC71072	1.131	0.0545
+coded_by=complement(53478..53906),organism=Alicyclobacillus sp. USBA-503,definition=arsenate reductase	SHJ74008	1.646	0.0792
+coded_by=1863247..1863669,organism=Geobacillus sp. Y4.1MC1,definition=arsenate reductase (thioredoxin)	ADP74658	4.298	0.2069

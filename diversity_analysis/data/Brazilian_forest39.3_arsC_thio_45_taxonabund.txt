@@ -1,0 +1,12 @@
+Taxon	Abundance	Fraction Abundance
+coded_by=complement(9760..10194),organism=Hydrogenibacillus schlegelii,definition=arsenate reductase	1.0	0.2500
+coded_by=20684..21103,organism=Bacillus sp. MRMR6,definition=arsenate reductase (thioredoxin)	1.0	0.2500
+coded_by=complement(447002..447406),organism=Bacillus cereus VD131,definition=protein ArsC	1.0	0.2500
+coded_by=complement(482412..482840),organism=Paenibacillus barengoltzii G22,definition=arsenate reductase (thioredoxin)	1.0	0.2500
+
+
+Lineage	MatchName	Abundance	Fraction Abundance
+coded_by=complement(482412..482840),organism=Paenibacillus barengoltzii G22,definition=arsenate reductase (thioredoxin)	EOS58034	1.0	0.2500
+coded_by=complement(9760..10194),organism=Hydrogenibacillus schlegelii,definition=arsenate reductase	KWX06849	1.0	0.2500
+coded_by=20684..21103,organism=Bacillus sp. MRMR6,definition=arsenate reductase (thioredoxin)	OLS35265	1.0	0.2500
+coded_by=complement(447002..447406),organism=Bacillus cereus VD131,definition=protein ArsC	EOP23659	1.0	0.2500
