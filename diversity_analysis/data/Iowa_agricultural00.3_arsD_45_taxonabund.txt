@@ -1,0 +1,6 @@
+Taxon	Abundance	Fraction Abundance
+coded_by=complement(3077358..3077735),organism=Alkalilimnicola ehrlichii MLHE-1,definition=Arsenical resistance operon trans-acting repressor ArsD	3.34	1.0000
+
+
+Lineage	MatchName	Abundance	Fraction Abundance
+coded_by=complement(3077358..3077735),organism=Alkalilimnicola ehrlichii MLHE-1,definition=Arsenical resistance operon trans-acting repressor ArsD	ABI58051	3.34	1.0000

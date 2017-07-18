@@ -1,0 +1,10 @@
+Taxon	Abundance	Fraction Abundance
+coded_by=1328507..1328896,organism=Sorangium cellulosum So0157-2,definition=hypothetical protein	1.0	0.2500
+coded_by=3062489..3062851,organism=Thiomonas arsenitoxydans,definition=Arsenical resistance operon trans-acting repressor arsD	2.0	0.5000
+coded_by=complement(2923873..2924247),organism=Labilithrix luteola,definition=Arsenical resistance operon trans-acting repressor ArsD	1.0	0.2500
+
+
+Lineage	MatchName	Abundance	Fraction Abundance
+coded_by=3062489..3062851,organism=Thiomonas arsenitoxydans,definition=Arsenical resistance operon trans-acting repressor arsD	CAZ89744	2.0	0.5000
+coded_by=complement(2923873..2924247),organism=Labilithrix luteola,definition=Arsenical resistance operon trans-acting repressor ArsD	AKU96244	1.0	0.2500
+coded_by=1328507..1328896,organism=Sorangium cellulosum So0157-2,definition=hypothetical protein	AGP33845	1.0	0.2500

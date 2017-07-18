@@ -1,0 +1,14 @@
+Taxon	Abundance	Fraction Abundance
+coded_by=complement(31244..31663),organism=Rhodopirellula sallentina SM41,definition=arsenical resistance operon trans-acting repressor ArsD	1.777	0.2622
+coded_by=57306..57671,organism=Patulibacter sp. I11,definition=Arsenical resistance operon trans-acting repressor ArsD	1.0	0.1476
+coded_by=140398..140784,organism=Ferriphaselus amnicola,definition=arsenical resistance operon trans-acting repressor ArsD	1.0	0.1476
+coded_by=complement(267002..267370),organism=Rhodopirellula baltica SH 1,definition=ArsD repressor protein	1.0	0.1476
+coded_by=18705..19094,organism=Sorangium cellulosum,definition=transcriptional regulator	2.0	0.2951
+
+
+Lineage	MatchName	Abundance	Fraction Abundance
+coded_by=140398..140784,organism=Ferriphaselus amnicola,definition=arsenical resistance operon trans-acting repressor ArsD	GAO34159	1.0	0.1476
+coded_by=57306..57671,organism=Patulibacter sp. I11,definition=Arsenical resistance operon trans-acting repressor ArsD	EHN13068	1.0	0.1476
+coded_by=18705..19094,organism=Sorangium cellulosum,definition=transcriptional regulator	KYF56972	2.0	0.2951
+coded_by=complement(267002..267370),organism=Rhodopirellula baltica SH 1,definition=ArsD repressor protein	CAD76333	1.0	0.1476
+coded_by=complement(31244..31663),organism=Rhodopirellula sallentina SM41,definition=arsenical resistance operon trans-acting repressor ArsD	EMI58078	1.777	0.2622

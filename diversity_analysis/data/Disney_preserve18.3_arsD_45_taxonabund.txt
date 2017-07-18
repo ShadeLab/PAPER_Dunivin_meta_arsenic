@@ -1,0 +1,6 @@
+Taxon	Abundance	Fraction Abundance
+coded_by=2036569..2036928,organism=Bacillus cereus F837/76,definition=Arsenical resistance operon trans-acting repressor ArsD	1.0	1.0000
+
+
+Lineage	MatchName	Abundance	Fraction Abundance
+coded_by=2036569..2036928,organism=Bacillus cereus F837/76,definition=Arsenical resistance operon trans-acting repressor ArsD	AEW55290	1.0	1.0000
