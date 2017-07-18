@@ -1,0 +1,54 @@
+Taxon	Abundance	Fraction Abundance
+coded_by=<1..792,organism=marine sediment metagenome,definition=Marine sediment metagenome DNA, contig: S12H4_S01475, whole genome shotgun sequence	1.175	0.0082
+coded_by=complement(3155720..3156520),organism=Geobacter metallireducens GS-15,definition=SAM-dependent methyltransferase, putative	1.958	0.0136
+coded_by=complement(2901154..2902023),organism=Candidatus Tenderia electrophaga,definition=arsenite S-adenosylmethyltransferase	3.072	0.0214
+coded_by=194369..195169,organism=Desulfatitalea sp. BRH_c12,definition=arsenite S-adenosylmethyltransferase	1.851	0.0129
+coded_by=<1..>325,organism=uncultured bacterium,definition=ArsM	13.126000000000001	0.0913
+coded_by=complement(28588..29454),organism=Candidatus Peregrinibacteria bacterium CG1_02_54_53,definition=SAM-dependent methyltransferase	2.274	0.0158
+coded_by=<1..>324,organism=uncultured bacterium,definition=ArsM	2.797	0.0195
+coded_by=<1..>323,organism=uncultured bacterium,definition=ArsM	29.162999999999997	0.2029
+coded_by=complement(1742..2608),organism=Anaerolineae bacterium SG8_19,definition=hypothetical protein	12.791	0.0890
+coded_by=complement(28593..29381),organism=Acidobacteria bacterium RIFCSPLOWO2_02_FULL_61_28,definition=arsenite S-adenosylmethyltransferase	2.7809999999999997	0.0193
+coded_by=287282..288121,organism=Steroidobacter denitrificans,definition=arsenite S-adenosylmethyltransferase	2.726	0.0190
+coded_by=10554..11366,organism=Mariprofundus ferrooxydans PV-1,definition=hypothetical protein	4.114000000000001	0.0286
+coded_by=complement(17982..18788),organism=Candidatus Thorarchaeota archaeon SMTZ-45,definition=hypothetical protein	1.924	0.0134
+coded_by=complement(<1..553),organism=marine sediment metagenome,definition=Marine sediment metagenome DNA, contig: S12H4_S18364, whole genome shotgun sequence	3.697	0.0257
+coded_by=<1..>347,organism=uncultured bacterium,definition=arsenite s-adenosylmethyltransferase	46.900999999999996	0.3263
+coded_by=complement(275377..276195),organism=Thioalkalivibrio sulfidiphilus HL-EbGr7,definition=arsenite S-adenosylmethyltransferase	1.274	0.0089
+coded_by=complement(54745..55578),organism=Mariprofundus micogutta,definition=arsenite methyltransferase	5.29	0.0368
+coded_by=<1..593,organism=marine sediment metagenome,definition=Marine sediment metagenome DNA, contig: S01H4_S05187, whole genome shotgun sequence	3.472	0.0242
+coded_by=3351..4169,organism=hydrocarbon metagenome,definition=trna (adenine57/58-n1)-methyltransferase	2.093	0.0146
+coded_by=complement(54634..55440),organism=Thiobacillus sp. 65-1402,definition=arsenite S-adenosylmethyltransferase	1.259	0.0088
+
+
+Lineage	MatchName	Abundance	Fraction Abundance
+coded_by=<1..>347,organism=uncultured bacterium,definition=arsenite s-adenosylmethyltransferase	AIZ48118	4.619	0.0321
+coded_by=<1..>347,organism=uncultured bacterium,definition=arsenite s-adenosylmethyltransferase	AIZ48090	3.4059999999999997	0.0237
+coded_by=complement(3155720..3156520),organism=Geobacter metallireducens GS-15,definition=SAM-dependent methyltransferase, putative	ABB33009	1.958	0.0136
+coded_by=<1..>347,organism=uncultured bacterium,definition=arsenite s-adenosylmethyltransferase	AIZ48096	12.827	0.0892
+coded_by=<1..>347,organism=uncultured bacterium,definition=arsenite s-adenosylmethyltransferase	AIZ48070	2.022	0.0141
+coded_by=3351..4169,organism=hydrocarbon metagenome,definition=trna (adenine57/58-n1)-methyltransferase	KUG24775	2.093	0.0146
+coded_by=<1..>347,organism=uncultured bacterium,definition=arsenite s-adenosylmethyltransferase	AIZ48067	1.527	0.0106
+coded_by=complement(54745..55578),organism=Mariprofundus micogutta,definition=arsenite methyltransferase	GAV20318	5.29	0.0368
+coded_by=<1..>325,organism=uncultured bacterium,definition=ArsM	AKN44072	11.655	0.0811
+coded_by=complement(28588..29454),organism=Candidatus Peregrinibacteria bacterium CG1_02_54_53,definition=SAM-dependent methyltransferase	OIO55471	2.274	0.0158
+coded_by=<1..593,organism=marine sediment metagenome,definition=Marine sediment metagenome DNA, contig: S01H4_S05187, whole genome shotgun sequence	GAH02761	3.472	0.0242
+coded_by=<1..792,organism=marine sediment metagenome,definition=Marine sediment metagenome DNA, contig: S12H4_S01475, whole genome shotgun sequence	GAI99812	1.175	0.0082
+coded_by=complement(28593..29381),organism=Acidobacteria bacterium RIFCSPLOWO2_02_FULL_61_28,definition=arsenite S-adenosylmethyltransferase	OFV98651	2.7809999999999997	0.0193
+coded_by=<1..>347,organism=uncultured bacterium,definition=arsenite s-adenosylmethyltransferase	AIZ48122	1.252	0.0087
+coded_by=10554..11366,organism=Mariprofundus ferrooxydans PV-1,definition=hypothetical protein	EAU55846	4.114000000000001	0.0286
+coded_by=<1..>347,organism=uncultured bacterium,definition=arsenite s-adenosylmethyltransferase	AIZ48162	4.567	0.0318
+coded_by=complement(275377..276195),organism=Thioalkalivibrio sulfidiphilus HL-EbGr7,definition=arsenite S-adenosylmethyltransferase	ACL71350	1.274	0.0089
+coded_by=complement(17982..18788),organism=Candidatus Thorarchaeota archaeon SMTZ-45,definition=hypothetical protein	KXH69969	1.924	0.0134
+coded_by=<1..>325,organism=uncultured bacterium,definition=ArsM	AKN41298	1.471	0.0102
+coded_by=complement(2901154..2902023),organism=Candidatus Tenderia electrophaga,definition=arsenite S-adenosylmethyltransferase	ALP54027	3.072	0.0214
+coded_by=<1..>323,organism=uncultured bacterium,definition=ArsM	AKN44161	29.162999999999997	0.2029
+coded_by=<1..>347,organism=uncultured bacterium,definition=arsenite s-adenosylmethyltransferase	AIZ47917	5.182	0.0361
+coded_by=<1..>324,organism=uncultured bacterium,definition=ArsM	AKN41489	2.797	0.0195
+coded_by=<1..>347,organism=uncultured bacterium,definition=arsenite s-adenosylmethyltransferase	AIZ47939	2.722	0.0189
+coded_by=<1..>347,organism=uncultured bacterium,definition=arsenite s-adenosylmethyltransferase	AIZ48255	8.777	0.0611
+coded_by=287282..288121,organism=Steroidobacter denitrificans,definition=arsenite S-adenosylmethyltransferase	AMN45746	2.726	0.0190
+coded_by=complement(54634..55440),organism=Thiobacillus sp. 65-1402,definition=arsenite S-adenosylmethyltransferase	OJW78017	1.259	0.0088
+coded_by=complement(<1..553),organism=marine sediment metagenome,definition=Marine sediment metagenome DNA, contig: S12H4_S18364, whole genome shotgun sequence	GAJ03244	3.697	0.0257
+coded_by=194369..195169,organism=Desulfatitalea sp. BRH_c12,definition=arsenite S-adenosylmethyltransferase	KJS30638	1.851	0.0129
+coded_by=complement(1742..2608),organism=Anaerolineae bacterium SG8_19,definition=hypothetical protein	KPK05013	12.791	0.0890

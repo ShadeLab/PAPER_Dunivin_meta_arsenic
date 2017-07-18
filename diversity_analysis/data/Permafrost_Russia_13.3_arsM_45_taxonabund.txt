@@ -1,0 +1,23 @@
+Taxon	Abundance	Fraction Abundance
+coded_by=complement(8281..9117),organism=Candidatus Atribacteria bacterium RBG_19FT_COMBO_35_14,definition=hypothetical protein	62.07299999999999	0.4443
+coded_by=complement(15220..16113),organism=Candidatus Aminicenantes bacterium RBG_19FT_COMBO_65_30,definition=hypothetical protein	3.709	0.0265
+coded_by=complement(5699222..5700112),organism=Singulisphaera acidiphila DSM 18658,definition=methylase involved in ubiquinone/menaquinone biosynthesis	22.329	0.1598
+coded_by=<1..>347,organism=uncultured bacterium,definition=arsenite s-adenosylmethyltransferase	28.173	0.2016
+coded_by=6194..6943,organism=Elusimicrobia bacterium GWA2_69_24,definition=hypothetical protein	3.391	0.0243
+coded_by=<1..>324,organism=uncultured bacterium,definition=ArsM	3.413	0.0244
+coded_by=8039..8824,organism=Euryarchaeota archaeon RBG_13_57_23,definition=hypothetical protein	5.665	0.0405
+coded_by=complement(1830..2645),organism=Planctomycetes bacterium RBG_19FT_COMBO_48_8,definition=arsenite S-adenosylmethyltransferase	10.964	0.0785
+
+
+Lineage	MatchName	Abundance	Fraction Abundance
+coded_by=<1..>347,organism=uncultured bacterium,definition=arsenite s-adenosylmethyltransferase	AIZ47892	2.998	0.0215
+coded_by=complement(15220..16113),organism=Candidatus Aminicenantes bacterium RBG_19FT_COMBO_65_30,definition=hypothetical protein	OGD28697	3.709	0.0265
+coded_by=<1..>347,organism=uncultured bacterium,definition=arsenite s-adenosylmethyltransferase	AIZ48255	10.063	0.0720
+coded_by=8039..8824,organism=Euryarchaeota archaeon RBG_13_57_23,definition=hypothetical protein	OGS43217	5.665	0.0405
+coded_by=<1..>324,organism=uncultured bacterium,definition=ArsM	AKN42032	3.413	0.0244
+coded_by=complement(1830..2645),organism=Planctomycetes bacterium RBG_19FT_COMBO_48_8,definition=arsenite S-adenosylmethyltransferase	OHB81137	10.964	0.0785
+coded_by=complement(8281..9117),organism=Candidatus Atribacteria bacterium RBG_19FT_COMBO_35_14,definition=hypothetical protein	OGD13982	62.07299999999999	0.4443
+coded_by=<1..>347,organism=uncultured bacterium,definition=arsenite s-adenosylmethyltransferase	AIZ48049	8.19	0.0586
+coded_by=<1..>347,organism=uncultured bacterium,definition=arsenite s-adenosylmethyltransferase	AIZ48067	6.922000000000001	0.0495
+coded_by=complement(5699222..5700112),organism=Singulisphaera acidiphila DSM 18658,definition=methylase involved in ubiquinone/menaquinone biosynthesis	AGA28785	22.329	0.1598
+coded_by=6194..6943,organism=Elusimicrobia bacterium GWA2_69_24,definition=hypothetical protein	OGR57576	3.391	0.0243

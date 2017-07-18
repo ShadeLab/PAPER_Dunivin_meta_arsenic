@@ -1,0 +1,18 @@
+Taxon	Abundance	Fraction Abundance
+coded_by=<1..>347,organism=uncultured bacterium,definition=arsenite S-adenosylmethyltransferase	16.994999999999997	0.1599
+coded_by=<1..>347,organism=uncultured bacterium,definition=arsenite s-adenosylmethyltransferase	13.874000000000002	0.1305
+coded_by=complement(131309..132133),organism=Sphingobacteriales bacterium 50-39,definition=arsenite S-adenosylmethyltransferase	2.434	0.0229
+coded_by=<1..>324,organism=uncultured bacterium,definition=ArsM	6.262	0.0589
+coded_by=complement(4876..5652),organism=Verrucomicrobia bacterium 13_1_20CM_3_54_17,definition=arsenite S-adenosylmethyltransferase	66.71300000000001	0.6277
+
+
+Lineage	MatchName	Abundance	Fraction Abundance
+coded_by=<1..>347,organism=uncultured bacterium,definition=arsenite s-adenosylmethyltransferase	AIZ48189	5.135	0.0483
+coded_by=<1..>347,organism=uncultured bacterium,definition=arsenite S-adenosylmethyltransferase	AFM97215	16.994999999999997	0.1599
+coded_by=<1..>347,organism=uncultured bacterium,definition=arsenite s-adenosylmethyltransferase	AIZ47871	1.922	0.0181
+coded_by=complement(4876..5652),organism=Verrucomicrobia bacterium 13_1_20CM_3_54_17,definition=arsenite S-adenosylmethyltransferase	OLE13587	66.71300000000001	0.6277
+coded_by=<1..>347,organism=uncultured bacterium,definition=arsenite s-adenosylmethyltransferase	AIZ48206	6.817	0.0641
+coded_by=complement(131309..132133),organism=Sphingobacteriales bacterium 50-39,definition=arsenite S-adenosylmethyltransferase	OJW56525	2.434	0.0229
+coded_by=<1..>324,organism=uncultured bacterium,definition=ArsM	AKN42275	2.511	0.0236
+coded_by=<1..>324,organism=uncultured bacterium,definition=ArsM	AKN44048	1.656	0.0156
+coded_by=<1..>324,organism=uncultured bacterium,definition=ArsM	AKN42754	2.095	0.0197

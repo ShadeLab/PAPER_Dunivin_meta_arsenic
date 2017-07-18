@@ -1,0 +1,4 @@
+Taxon	Abundance	Fraction Abundance
+
+
+Lineage	MatchName	Abundance	Fraction Abundance
