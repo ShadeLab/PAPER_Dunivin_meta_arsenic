@@ -1,0 +1,6 @@
+Taxon	Abundance	Fraction Abundance
+coded_by=3990825..3991868,organism=Acidobacterium capsulatum ATCC 51196,definition=arsenical-resistance protein	3.38	1.0000
+
+
+Lineage	MatchName	Abundance	Fraction Abundance
+coded_by=3990825..3991868,organism=Acidobacterium capsulatum ATCC 51196,definition=arsenical-resistance protein	ACO33632	3.38	1.0000

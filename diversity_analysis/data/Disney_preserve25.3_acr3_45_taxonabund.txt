@@ -1,0 +1,12 @@
+Taxon	Abundance	Fraction Abundance
+coded_by=3990825..3991868,organism=Acidobacterium capsulatum ATCC 51196,definition=arsenical-resistance protein	2.76	0.3259
+coded_by=complement(3502146..3503234),organism=Candidatus Koribacter versatilis Ellin345,definition=arsenical-resistance protein	1.328	0.1568
+coded_by=3144..4256,organism=candidate division Zixibacteria bacterium SM1_73,definition=arsenic resistance protein ArsB	1.614	0.1906
+coded_by=11707..12780,organism=Planctomycetes bacterium GWF2_50_10,definition=arsenical-resistance protein	2.7670000000000003	0.3267
+
+
+Lineage	MatchName	Abundance	Fraction Abundance
+coded_by=11707..12780,organism=Planctomycetes bacterium GWF2_50_10,definition=arsenical-resistance protein	OHB54828	2.7670000000000003	0.3267
+coded_by=complement(3502146..3503234),organism=Candidatus Koribacter versatilis Ellin345,definition=arsenical-resistance protein	ABF41959	1.328	0.1568
+coded_by=3990825..3991868,organism=Acidobacterium capsulatum ATCC 51196,definition=arsenical-resistance protein	ACO33632	2.76	0.3259
+coded_by=3144..4256,organism=candidate division Zixibacteria bacterium SM1_73,definition=arsenic resistance protein ArsB	KPL02528	1.614	0.1906

@@ -1,0 +1,18 @@
+Taxon	Abundance	Fraction Abundance
+coded_by=12030..13169,organism=Nitrospirae bacterium RIFCSPLOWO2_02_FULL_62_14,definition=arsenical-resistance protein	8.083	0.2598
+coded_by=1907253..1908329,organism=Methanobacterium lacus,definition=arsenical-resistance protein	2.64	0.0848
+coded_by=3990825..3991868,organism=Acidobacterium capsulatum ATCC 51196,definition=arsenical-resistance protein	3.834	0.1232
+coded_by=complement(57801..58844),organism=Spirochaetes bacterium RBG_16_49_21,definition=arsenical-resistance protein	5.407	0.1738
+coded_by=11707..12780,organism=Planctomycetes bacterium GWF2_50_10,definition=arsenical-resistance protein	6.568	0.2111
+coded_by=1718..2770,organism=Deltaproteobacteria bacterium RBG_16_64_85,definition=arsenical-resistance protein	2.319	0.0745
+coded_by=9313..10389,organism=Planctomycetes bacterium RBG_13_63_9,definition=arsenical-resistance protein	2.264	0.0728
+
+
+Lineage	MatchName	Abundance	Fraction Abundance
+coded_by=complement(57801..58844),organism=Spirochaetes bacterium RBG_16_49_21,definition=arsenical-resistance protein	OHD67921	5.407	0.1738
+coded_by=1718..2770,organism=Deltaproteobacteria bacterium RBG_16_64_85,definition=arsenical-resistance protein	OGP79408	2.319	0.0745
+coded_by=11707..12780,organism=Planctomycetes bacterium GWF2_50_10,definition=arsenical-resistance protein	OHB54828	6.568	0.2111
+coded_by=9313..10389,organism=Planctomycetes bacterium RBG_13_63_9,definition=arsenical-resistance protein	OHB72509	2.264	0.0728
+coded_by=12030..13169,organism=Nitrospirae bacterium RIFCSPLOWO2_02_FULL_62_14,definition=arsenical-resistance protein	OGW67641	8.083	0.2598
+coded_by=3990825..3991868,organism=Acidobacterium capsulatum ATCC 51196,definition=arsenical-resistance protein	ACO33632	3.834	0.1232
+coded_by=1907253..1908329,organism=Methanobacterium lacus,definition=arsenical-resistance protein	ADZ10083	2.64	0.0848

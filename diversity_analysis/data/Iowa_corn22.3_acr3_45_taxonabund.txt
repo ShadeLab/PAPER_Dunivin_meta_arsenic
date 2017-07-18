@@ -1,0 +1,8 @@
+Taxon	Abundance	Fraction Abundance
+coded_by=complement(65463..66596),organism=Gemmatimonadetes bacterium SCN 70-22,definition=arsenical-resistance protein	2.616	0.4283
+coded_by=complement(1892..2989),organism=Intrasporangium chromatireducens Q5-1,definition=arsenic transporter	3.492	0.5717
+
+
+Lineage	MatchName	Abundance	Fraction Abundance
+coded_by=complement(1892..2989),organism=Intrasporangium chromatireducens Q5-1,definition=arsenic transporter	EWT06622	3.492	0.5717
+coded_by=complement(65463..66596),organism=Gemmatimonadetes bacterium SCN 70-22,definition=arsenical-resistance protein	ODT04227	2.616	0.4283
