@@ -1,0 +1,18 @@
+Taxon	Abundance	Fraction Abundance
+coded_by=complement(8456..10999),organism=Deltaproteobacteria bacterium RBG_16_49_23,definition=dehydrogenase	1.0830000000000002	0.0140
+coded_by=403889..406426,organism=Desulfurispirillum indicum S5,definition=molybdopterin dinucleotide-binding region	1.054	0.0136
+coded_by=complement(2341..4887),organism=marine sediment metagenome,definition=hypothetical protein	1.054	0.0136
+coded_by=2920..5445,organism=Deltaproteobacteria bacterium RBG_13_49_15,definition=dehydrogenase	1.606	0.0207
+coded_by=5490..7997,organism=Spirochaeta sp. JC202,definition=dehydrogenase	56.19300000000001	0.7242
+coded_by=3816..6398,organism=Desulfobacterales bacterium S7086C20,definition=dehydrogenase	16.082	0.2073
+coded_by=complement(1123..3666),organism=Deltaproteobacteria bacterium RBG_19FT_COMBO_46_12,definition=dehydrogenase	0.521	0.0067
+
+
+Lineage	MatchName	Abundance	Fraction Abundance
+coded_by=complement(8456..10999),organism=Deltaproteobacteria bacterium RBG_16_49_23,definition=dehydrogenase	OGP74942	1.0830000000000002	0.0140
+coded_by=complement(2341..4887),organism=marine sediment metagenome,definition=hypothetical protein	KKN03754	1.054	0.0136
+coded_by=complement(1123..3666),organism=Deltaproteobacteria bacterium RBG_19FT_COMBO_46_12,definition=dehydrogenase	OGQ10864	0.521	0.0067
+coded_by=403889..406426,organism=Desulfurispirillum indicum S5,definition=molybdopterin dinucleotide-binding region	ADU65134	1.054	0.0136
+coded_by=2920..5445,organism=Deltaproteobacteria bacterium RBG_13_49_15,definition=dehydrogenase	OGP62781	1.606	0.0207
+coded_by=3816..6398,organism=Desulfobacterales bacterium S7086C20,definition=dehydrogenase	OEU45368	16.082	0.2073
+coded_by=5490..7997,organism=Spirochaeta sp. JC202,definition=dehydrogenase	KGM43415	56.19300000000001	0.7242
