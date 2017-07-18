@@ -1,0 +1,6 @@
+Taxon	Abundance	Fraction Abundance
+coded_by=complement(27219..29840),organism=Microvirga guangxiensis,definition=arsenite oxidase large subunit	2.063	1.0000
+
+
+Lineage	MatchName	Abundance	Fraction Abundance
+coded_by=complement(27219..29840),organism=Microvirga guangxiensis,definition=arsenite oxidase large subunit	SCY92917	2.063	1.0000

@@ -1,0 +1,6 @@
+Taxon	Abundance	Fraction Abundance
+coded_by=118277..120760,organism=Pseudomonas reinekei,definition=arsenate reductase (azurin) large subunit	1.596	1.0000
+
+
+Lineage	MatchName	Abundance	Fraction Abundance
+coded_by=118277..120760,organism=Pseudomonas reinekei,definition=arsenate reductase (azurin) large subunit	OLU00914	1.596	1.0000

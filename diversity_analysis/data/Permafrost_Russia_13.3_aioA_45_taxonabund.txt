@@ -1,0 +1,12 @@
+Taxon	Abundance	Fraction Abundance
+coded_by=6311..8776,organism=Hyphomicrobium sp. SCN 65-11,definition=arsenite oxidase large subunit	15.870999999999999	0.5341
+coded_by=27594..30131,organism=Agrobacterium sp. GW4,definition=arsenite oxidase	0.682	0.0230
+coded_by=13914..16538,organism=Sinorhizobium americanum,definition=arsenite oxidase large subunit	0.797	0.0268
+coded_by=196109..198733,organism=Rhizobium sp. LC145,definition=arsenite oxidase large subunit	12.363000000000001	0.4161
+
+
+Lineage	MatchName	Abundance	Fraction Abundance
+coded_by=27594..30131,organism=Agrobacterium sp. GW4,definition=arsenite oxidase	AFM38866	0.682	0.0230
+coded_by=196109..198733,organism=Rhizobium sp. LC145,definition=arsenite oxidase large subunit	KKX29356	12.363000000000001	0.4161
+coded_by=13914..16538,organism=Sinorhizobium americanum,definition=arsenite oxidase large subunit	OAP45972	0.797	0.0268
+coded_by=6311..8776,organism=Hyphomicrobium sp. SCN 65-11,definition=arsenite oxidase large subunit	ODT21655	15.870999999999999	0.5341
