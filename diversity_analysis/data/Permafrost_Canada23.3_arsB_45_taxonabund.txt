@@ -1,0 +1,10 @@
+Taxon	Abundance	Fraction Abundance
+coded_by=complement(31509..32978),organism=Actinotalea fermentans ATCC 43279 = JCM 9966 = DSM 3133,definition=hypothetical protein	2.941	0.2274
+coded_by=5246..6712,organism=Tersicoccus phoenicis,definition=arsenical efflux pump membrane protein ArsB	5.256	0.4065
+coded_by=82653..84122,organism=Cellulomonas carbonis T26,definition=arsenical pump membrane protein	4.734	0.3661
+
+
+Lineage	MatchName	Abundance	Fraction Abundance
+coded_by=82653..84122,organism=Cellulomonas carbonis T26,definition=arsenical pump membrane protein	KGM12777	4.734	0.3661
+coded_by=complement(31509..32978),organism=Actinotalea fermentans ATCC 43279 = JCM 9966 = DSM 3133,definition=hypothetical protein	KGM17808	2.941	0.2274
+coded_by=5246..6712,organism=Tersicoccus phoenicis,definition=arsenical efflux pump membrane protein ArsB	OMH25329	5.256	0.4065
