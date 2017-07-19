@@ -451,7 +451,7 @@ sort file.txt | uniq -c > file2.txt
 | **Wyoming_soil20.3**  | -  | - | - | - | - | - | - | - | - | - |
 | Wyoming_soil22.3  | -  | - | - | cluster, done | - | cluster, done, copied | - | - | cluster, done, copied | cluster, done, copied |
 | Permafrost_Canada23.3  | cluster, done | cluster, done | - | cluster,done | - | cluster, done, copied | cluster, done, copied | cluster, done, copied | cluster done, copied | cluster, done, copied |
-| Permafrost_Canada45.3  | - | **cluster, done, copied--NOT INCLUDED IN TREES** | - | acr3: cluster, done, copied | - | arsC_glut: cluster, copied, done | arsC_thio: cluster, done, copied | arsD: cluster, done, copied | cluster, done, copied | cluster, done, copied |
+| Permafrost_Canada45.3  | - | cluster, done, copied | - | acr3: cluster, done, copied | - | arsC_glut: cluster, copied, done | arsC_thio: cluster, done, copied | arsD: cluster, done, copied | cluster, done, copied | cluster, done, copied |
 
 * some labels were "TU_0001" so I changed to OTU_..."
 * Batch Entrez errors
@@ -706,9 +706,16 @@ Observed Abundances facet_grid by gene
 ![observed_abund2](https://user-images.githubusercontent.com/28952961/28235565-5f6dc902-68de-11e7-9467-70855fa6d689.PNG)
 
 Taxon Abundances Total:
-(i want to change this to be the MEAN of each taxon, but not sure how. I ordered it before plotting, but ggplot is only plotting is alphabetically)
 ![total phylum abund](https://user-images.githubusercontent.com/28952961/28221958-652367e4-6893-11e7-8d89-13a452dff55a.PNG)
 Taxon Abundances Per Site:
 ![taxon abund per site](https://user-images.githubusercontent.com/28952961/28222214-6cc58bf2-6894-11e7-9682-68189dffe5e7.PNG)
+
+#### meta_arg.R
+* R script used: meta_arg.R
+* Written by T. Dunivin: [meta_arg_rplB.R](https://github.com/ShadeLab/Xander_arsenic/blob/master/diversity_analysis/meta_arg_rplB.R)
+* Input: taxonabund.txt files from each gene and each site that clustered at the gene
+Mean Relative Abundance from rplB:
+![mean_rel_abundance](https://user-images.githubusercontent.com/28952961/28347879-bce241ea-6c07-11e7-8642-3db824e36723.PNG)
+
 
 
