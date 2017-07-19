@@ -711,7 +711,7 @@ Taxon Abundances Per Site:
 ![taxon abund per site](https://user-images.githubusercontent.com/28952961/28222214-6cc58bf2-6894-11e7-9682-68189dffe5e7.PNG)
 
 Relative Abundance by Site
-![rel_abun_by_site_colored](https://user-images.githubusercontent.com/28952961/28364215-7aaf2262-6c51-11e7-8610-7265df8054d6.png)
+![rel_abun_by_site_colored_averaged](https://user-images.githubusercontent.com/28952961/28364726-bbff119e-6c53-11e7-94cc-c69b77dd8797.png)
 
 #### meta_arg.R
 * R script used: meta_arg.R
