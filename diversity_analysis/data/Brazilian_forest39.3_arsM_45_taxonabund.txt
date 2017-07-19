@@ -6,9 +6,4 @@ coded_by=330961..331719,organism=Candidatus Nitrosotalea devanaterra,definition=
 coded_by=complement(4876..5652),organism=Verrucomicrobia bacterium 13_1_20CM_3_54_17,definition=arsenite S-adenosylmethyltransferase	4.092	0.2592
 
 
-Lineage	MatchName	Abundance	Fraction Abundance
-coded_by=complement(25393..26190),organism=Magnetospirillum magnetotacticum MS-1,definition=SAM-dependent methyltransferase DSY4148	KIM00430	2.1790000000000003	0.1381
-coded_by=complement(4876..5652),organism=Verrucomicrobia bacterium 13_1_20CM_3_54_17,definition=arsenite S-adenosylmethyltransferase	OLE13587	4.092	0.2592
-coded_by=330961..331719,organism=Candidatus Nitrosotalea devanaterra,definition=Methyltransferase type 11	CUR51123	1.795	0.1137
-coded_by=complement(1563..2408),organism=Acidobacteria bacterium 13_2_20CM_58_27,definition=arsenite S-adenosylmethyltransferase	OLB27562	4.226	0.2677
-coded_by=2815526..2816290,organism=Candidatus Nitrososphaera gargensis Ga9.2,definition=putative arsenite methyltransferase	AFU60494	3.492	0.2212
+
