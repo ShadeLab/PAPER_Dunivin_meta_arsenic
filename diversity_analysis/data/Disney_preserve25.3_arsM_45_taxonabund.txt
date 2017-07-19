@@ -1,14 +1,3 @@
 Taxon	Abundance	Fraction Abundance
 coded_by=<1..>347,organism=uncultured bacterium,definition=arsenite s-adenosylmethyltransferase	12.306000000000001	0.7138
 coded_by=<1..>324,organism=uncultured bacterium,definition=ArsM	4.9350000000000005	0.2862
-
-
-Lineage	MatchName	Abundance	Fraction Abundance
-coded_by=<1..>347,organism=uncultured bacterium,definition=arsenite s-adenosylmethyltransferase	AIZ48189	3.784	0.2195
-coded_by=<1..>347,organism=uncultured bacterium,definition=arsenite s-adenosylmethyltransferase	AIZ47881	1.456	0.0844
-coded_by=<1..>324,organism=uncultured bacterium,definition=ArsM	AKN42301	2.779	0.1612
-coded_by=<1..>347,organism=uncultured bacterium,definition=arsenite s-adenosylmethyltransferase	AIZ48005	0.865	0.0502
-coded_by=<1..>347,organism=uncultured bacterium,definition=arsenite s-adenosylmethyltransferase	AIZ48022	1.502	0.0871
-coded_by=<1..>324,organism=uncultured bacterium,definition=ArsM	AKN41490	2.156	0.1251
-coded_by=<1..>347,organism=uncultured bacterium,definition=arsenite s-adenosylmethyltransferase	AIZ47904	1.546	0.0897
-coded_by=<1..>347,organism=uncultured bacterium,definition=arsenite s-adenosylmethyltransferase	AIZ47877	3.153	0.1829
