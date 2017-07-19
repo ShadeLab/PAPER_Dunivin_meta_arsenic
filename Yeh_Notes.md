@@ -700,6 +700,9 @@ After:
 ![rplb_after](https://user-images.githubusercontent.com/28952961/28234632-df1b7cda-68cf-11e7-8362-0db4ba7cfca5.PNG)
 Rarified:
 ![rplb_rare](https://user-images.githubusercontent.com/28952961/28234648-023ce38e-68d0-11e7-8fa3-65bafd19500d.PNG)
+![rplb_eveness](https://user-images.githubusercontent.com/28952961/28380624-006e24a0-6c86-11e7-8cb3-561906305b20.PNG)
+![rplb_braycurtis](https://user-images.githubusercontent.com/28952961/28380623-006b1f4e-6c86-11e7-9d3e-a16d9942d32b.PNG)
+![rplb_sorenson](https://user-images.githubusercontent.com/28952961/28380625-006ebe9c-6c86-11e7-8cf8-cc61e8b8666b.PNG)
 
 
 Observed Abundances facet_grid by gene
