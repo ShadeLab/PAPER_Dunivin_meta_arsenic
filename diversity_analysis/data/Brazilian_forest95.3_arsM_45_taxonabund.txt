@@ -2,9 +2,3 @@ Taxon	Abundance	Fraction Abundance
 coded_by=2025..2867,organism=Betaproteobacteria bacterium RIFCSPLOWO2_02_64_14,definition=arsenite S-adenosylmethyltransferase	0.936	0.2588
 coded_by=complement(41562..42389),organism=Betaproteobacteria bacterium RBG_16_64_18,definition=arsenite S-adenosylmethyltransferase	0.949	0.2624
 coded_by=<1..>347,organism=uncultured bacterium,definition=arsenite s-adenosylmethyltransferase	1.732	0.4788
-
-
-Lineage	MatchName	Abundance	Fraction Abundance
-coded_by=complement(41562..42389),organism=Betaproteobacteria bacterium RBG_16_64_18,definition=arsenite S-adenosylmethyltransferase	OFZ87088	0.949	0.2624
-coded_by=2025..2867,organism=Betaproteobacteria bacterium RIFCSPLOWO2_02_64_14,definition=arsenite S-adenosylmethyltransferase	OGA12003	0.936	0.2588
-coded_by=<1..>347,organism=uncultured bacterium,definition=arsenite s-adenosylmethyltransferase	AIZ48180	1.732	0.4788
