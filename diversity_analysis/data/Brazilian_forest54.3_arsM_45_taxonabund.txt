@@ -3,10 +3,3 @@ coded_by=complement(25393..26190),organism=Magnetospirillum magnetotacticum MS-1
 coded_by=complement(53141..54004),organism=Criblamydia sequanensis CRIB-18,definition=Arsenite methyltransferase	1.117	0.1418
 coded_by=complement(1563..2408),organism=Acidobacteria bacterium 13_2_20CM_58_27,definition=arsenite S-adenosylmethyltransferase	1.459	0.1852
 coded_by=complement(4876..5652),organism=Verrucomicrobia bacterium 13_1_20CM_3_54_17,definition=arsenite S-adenosylmethyltransferase	3.851	0.4889
-
-
-Lineage	MatchName	Abundance	Fraction Abundance
-coded_by=complement(25393..26190),organism=Magnetospirillum magnetotacticum MS-1,definition=SAM-dependent methyltransferase DSY4148	KIM00430	1.4500000000000002	0.1841
-coded_by=complement(53141..54004),organism=Criblamydia sequanensis CRIB-18,definition=Arsenite methyltransferase	CDR35322	1.117	0.1418
-coded_by=complement(4876..5652),organism=Verrucomicrobia bacterium 13_1_20CM_3_54_17,definition=arsenite S-adenosylmethyltransferase	OLE13587	3.851	0.4889
-coded_by=complement(1563..2408),organism=Acidobacteria bacterium 13_2_20CM_58_27,definition=arsenite S-adenosylmethyltransferase	OLB27562	1.459	0.1852
