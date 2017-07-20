@@ -429,7 +429,7 @@ sort file.txt | uniq -c > file2.txt
 | Iowa_agricultural00.3  | -  | cluster, done | - | cluster,done | - | cluster, done, copied | - | cluster, done, copied, **cannot stat `e.values.txt`** | cluster, done, copied | cluster, done, copied |
 | Iowa_agricultural01.3  | -  | - | - | - | - | cluster, done, copied | - | - | - | cluster, done, copied |
 | Mangrove02.3  | -  | cluster, done | cluster, done | cluster, done | cluster, done, copied | cluster, done, copied | cluster, done, copied | cluster, done, copied, **blast.txt empty** | cluster, done, copied | cluster, done, copied |
-| Mangrove70.3  | -  | cluster, done | cluster,done | - | cluster, done, copied | cluster, done, copied | cluster, done, copied | cluster, done, copied | cluster, done, copied | - |
+| Mangrove70.3  | -  | cluster, done | cluster,done | - | cluster, done, copied | cluster, done, copied | cluster, done, copied | cluster, done, copied | cluster, done, copied | **cluster, copied... ./assessment.sh not working because no kmerabundanceist** |
 | **Permafrost_Russia12.3**  | - | - | - | - | - | - | - | - | - | - |
 | Permafrost_Russia13.3  | - | cluster, done, copied  | cluster, done, copied | cluster, done, copied | cluster, done, copied, **blast.txt empty** | cluster, done, copied | cluster, done, copied | cluster, done, copied, **blast.txt empty** | cluster, done, copied | cluster, done, copied |
 | Iowa_prairie75.3  | -  | cluster, done, copied | - | - | - | cluster, done, copied | - | - | cluster, done, copied | cluster, done, copied |
@@ -438,8 +438,8 @@ sort file.txt | uniq -c > file2.txt
 | Brazilian_forest95.3  | - | - | - | - | - | cluster, done, copied | - | - | cluster, done, copied  | cluster, done, copied |
 | Brazilian_forest39.3  | -  | - | - | - | - | cluster, done, copied | cluster, done, copied | - | cluster, done, copied | cluster, done, copied |
 | Brazilian_forest54.3  | -  | cluster, done | - | - | - | cluster, done, copied | cluster, done, copied | - | cluster, done, copied | cluster, done, copied |
-| Illinois_soybean42.3  | -  | - | - | - | - | cluster, done, copied | - | - | cluster, **blast.txt empty**, copied | cluster, done, copied |
-| Illinois_soybean40.3  | -  | - | - | - | - | cluster, done, copied | - | - | - | cluster, done, copied |
+| Illinois_soybean42.3  | -  | - | - | - | - | cluster, done, copied | - | - | cluster, **blast.txt empty**, copied | **redoing** |
+| Illinois_soybean40.3  | -  | - | - | - | - | cluster, done, copied | - | - | - | **redoing** |
 | Minnesota_creek46.3  | - | at first, there was a cluster, I deleted it and retried twice and there is no cluster | - | cluster, done | - | cluster, done, copied | - | - | cluster, done, copied | cluster, done, copied |
 | Minnesota_creek45.3  | - | - | - | - | - | cluster, done, copied | cluster, **blast.txt empty**, copied  | - | cluster, done, copied | cluster, done, copied |
 | Disney_preserve18.3  | -  | - | - | cluster, done | - | cluster, done, copied | cluster, done, copied | cluster, done, copied, **blast.txt empty** | cluster, done, copied | cluster, done, copied |
