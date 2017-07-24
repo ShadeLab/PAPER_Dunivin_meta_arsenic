@@ -1,4 +1,12 @@
 ## Summary of Sites 
+
+To find the samples, go to http://metagenomics.anl.gov/mgmain.html?mgpage=search, enter the project ID in the search bar (ex. mgp79868), and choose the field to be project ID. Then all the samples will come up in that project. On the left, click on the gears/settings button and choose "bp count" and "file type". Then have the samples order themselves by bp count.
+
+To download samples, use curl with the API command. For example: IowaCorn_4539522.3:
+```
+curl "http://api.metagenomics.anl.gov/1/download/mgm4539522.3?file=050.1" > IowaCorn_4539522.3.fastq
+```
+
 #### Table of Contents:
 * [Iowa_corn](https://github.com/ShadeLab/meta_arsenic/blob/master/download/download_notes.md#1-iowa_corn)
 * [Iowa_agricultural](https://github.com/ShadeLab/meta_arsenic/blob/master/download/download_notes.md#2-iowa_agricultural)
@@ -13,8 +21,6 @@
 * [Illinois_soil](https://github.com/ShadeLab/meta_arsenic/blob/master/download/download_notes.md#11-illinois_soil)
 * [Wyoming_soil](https://github.com/ShadeLab/meta_arsenic/blob/master/download/download_notes.md#12-wyoming_soil)
 * [Permafrost_Canada](https://github.com/ShadeLab/meta_arsenic/blob/master/download/download_notes.md#13-permafrost_canada)
-* [Plots]()
-* [Workflow]()
 
 These are the files I am downloading from MG-RAST and performing FastQC and FastX on:
 #### 1. Iowa_corn
