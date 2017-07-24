@@ -1,18 +1,18 @@
 ## Summary of Sites 
 #### Table of Contents:
-* [Iowa_corn]()
-* [Iowa_agricultural]()
-* [Mangrove]()
-* [Permafrost_Russia]()
-* [Iowa_prairie]()
-* [Brazilian_forest]()
-* [Illinois_soybean]()
-* [Minnesota_creek]()
-* [Disney_preserve]()
-* [California_grassland]()
-* [Illinois_soil]()
-* [Wyoming_soil]()
-* [Permafrost_Canada]()
+* [Iowa_corn](https://github.com/ShadeLab/meta_arsenic/blob/master/download/download_notes.md#1-iowa_corn)
+* [Iowa_agricultural](https://github.com/ShadeLab/meta_arsenic/blob/master/download/download_notes.md#2-iowa_agricultural)
+* [Mangrove](https://github.com/ShadeLab/meta_arsenic/blob/master/download/download_notes.md#3-mangrove)
+* [Permafrost_Russia](https://github.com/ShadeLab/meta_arsenic/blob/master/download/download_notes.md#4-permafrost_russia)
+* [Iowa_prairie](https://github.com/ShadeLab/meta_arsenic/blob/master/download/download_notes.md#5-iowa_prairie)
+* [Brazilian_forest](https://github.com/ShadeLab/meta_arsenic/blob/master/download/download_notes.md#6-brazilian_forest)
+* [Illinois_soybean](https://github.com/ShadeLab/meta_arsenic/blob/master/download/download_notes.md#7-illinois_soybean)
+* [Minnesota_creek](https://github.com/ShadeLab/meta_arsenic/blob/master/download/download_notes.md#8-minnesota_creek)
+* [Disney_preserve](https://github.com/ShadeLab/meta_arsenic/blob/master/download/download_notes.md#9-disney_preserve)
+* [California_grassland](https://github.com/ShadeLab/meta_arsenic/blob/master/download/download_notes.md#10-california_grassland)
+* [Illinois_soil](https://github.com/ShadeLab/meta_arsenic/blob/master/download/download_notes.md#11-illinois_soil)
+* [Wyoming_soil](https://github.com/ShadeLab/meta_arsenic/blob/master/download/download_notes.md#12-wyoming_soil)
+* [Permafrost_Canada](https://github.com/ShadeLab/meta_arsenic/blob/master/download/download_notes.md#13-permafrost_canada)
 * [Plots]()
 * [Workflow]()
 
@@ -238,60 +238,3 @@ ProjectID: mgp13736
 ![boxplot_biome_ags_colorsite](https://user-images.githubusercontent.com/28952961/27485670-a5d36346-57fb-11e7-96c6-2356e7af7d8d.png)
 
 
-### Commands:
-To find the samples, go to http://metagenomics.anl.gov/mgmain.html?mgpage=search, enter the project ID in the search bar (ex. mgp79868), and choose the field to be project ID. Then all the samples will come up in that project. On the left, click on the gears/settings button and choose "bp count" and "file type". Then have the samples order themselves by bp count.
-
-To download samples, use curl with the API command. For example: IowaCorn_4539522.3:
-```
-curl "http://api.metagenomics.anl.gov/1/download/mgm4539522.3?file=050.1" > IowaCorn_4539522.3.fastq
-```
-To run FastQC, first download FastQC, unzip and change mode of fastqc so you can run it: 
-```
-wget http://www.bioinformatics.babraham.ac.uk/projects/fastqc/fastqc_v0.11.3.zip
-unzip fastqc_v0.11.3.zip
-cd FastQC
-chmod 755 fastqc
-cd ..
-```
-Then copy your .fastq files in the FastQC directory, and perform FastQC. Then I copied the .html file into my home directory so I could move the file onto my dekstop and open it. For example: IowaCorn_4539522.3.fastq:
-```
-cp IowaCorn_4539522.3.fastq /directory/FastQC
-cd FastQC
-/.fastqc IowaCorn_4539522.3.fastq
-cp IowaCorn_4539522.3_fastq.html /your-home-directory
-```
-To run FastX, first download FastX using `module load FASTX/0.0.14` then get the quality stats using `fastx_quality_stats -i IowaCorn_4539522.3.fastq -o IowaCorn_4539522.3_quality.txt`. The -i preceeds the input and the -o preceeds the output filename. Then use fast_quality_filter to trim the data using -Q64 (Illumina 1.5), -q 30 (minimum quality to keep), -p 50 (minimum percent of bases to have the -q quality), and zip the output: 
-```
-fastq_quality_filter -Q 64 -q 30 -p 50 -i IowaCorn_4539522.3.fastq | gzip -9c > IowaCorn_4539522.3.qc.fastq.gz
-```
-*Note: found undocumented info on -Q: https://www.biostars.org/p/137049/ and http://seqanswers.com/forums/showthread.php?t=9357: "If the quality scores for your libraries are in the fastq sanger format (ascii(phred+33)), rather than the fastq illumina format (ascii(phred+64)), you would use the -Q33 parameter. fastq_quality_filter automatically assumes fastq illumina quality scores. See here for original explanation: http://seqanswers.com/forums/showthread.php?t=6701"*
-
-Then, get the quality stats of the trimmed output file is through `fastx_quality_stats -i IowaCorn_4539522.3.qc.fastq.gz -o IowaCorn_4539522.3_qc_quality.txt`
-
-To count the number of basepairs in a file, I used this (example is Disney_preserve_4664918.3.fastq) `cat Disney_preserve_4664918.3.fastq | paste - - - - | cut -f2 | tr -d '\n'| wc -c`
-
-I then used MicrobeCensus to estimate the average genome size in each metagenome. Instructions can be found [here](https://github.com/snayfach/MicrobeCensus). First I [set up a Python virtural environment](https://wiki.hpcc.msu.edu/display/hpccdocs/Using+Python+virtualenv+on+the+HPCC) then downloaded MicrobeCensus using `pip install MicrobeCensus`. I ran MicrobeCensus on each metagenome. Here is an example qsub script I used for the Iowa_agricultural data:
-```
-#!/bin/bash --login
-
-#PBS -l nodes=1:ppn=1
-#PBS -l walltime=16:00:00
-#PBS -l mem=500gb
-
-#PBS -j oe
-#PBS -M my_email
-#PBS -m abe
-#PBS -N IowaAgCensus
-
-### myPy2 is what I named my Python virtualenv
-cd /my-directory/myPy2/bin
-
-module load NumPy
-module load SciPy
-module load Biopython
-source /my-directory/myPy2/bin/activate
-
-python run_microbe_census.py /my-directory/Iowa_agricultural_4509400.3.qc.fastq.gz Iowa_agricultural_4509400.3_census
-
-python run_microbe_census.py /my-directory/Iowa_agricultural_4509401.3.qc.fastq.gz Iowa_agricultural_4509401.3_census
-```
