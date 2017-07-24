@@ -1,0 +1,31 @@
+#!/bin/bash --login
+
+#PBS -l nodes=1:ppn=1
+#PBS -l walltime=12:00:00
+#PBS -l mem=200gb
+
+#PBS -j oe /mnt/scratch/${USER}/MG-RAST_samples
+#PBS -M youremail@email.com
+#PBS -m abe
+#PBS -N BrazilX
+
+### switch into the correct directory that contains the metagenomes
+cd /mnt/scratch/${USER}/MG-RAST_samples
+
+### load fastx
+module load FASTX/0.0.14
+
+### Brazilian_forest_4536139.3.fastq, Illumina 1.5
+fastq_quality_filter -Q64 -q 30 -p 50 -i Brazilian_forest_4536139.3.fastq | gzip -9c > Brazilian_forest_4536139.3.qc.fastq.gz
+
+### Brazilian_forest_4546395.3.fastq, Illumina 1.5
+fastq_quality_filter -Q64 -q 30 -p 50 -i Brazilian_forest_4546395.3.fastq | gzip -9c > Brazilian_forest_4546395.3.qc.fastq.gz
+
+### Brazilian_forest_4535554.3.fastq, Illumina 1.5
+fastq_quality_filter -Q64 -q 30 -p 50 -i Brazilian_forest_4535554.3.fastq | gzip -9c > Brazilian_forest_4535554.3.qc.fastq.gz
+
+### output details
+echo "details of the job and queue"
+echo ---------
+
+qstat -f ${PBS_JOBID}
