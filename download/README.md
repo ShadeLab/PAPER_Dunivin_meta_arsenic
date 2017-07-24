@@ -19,3 +19,4 @@ Next I:
     * 2. Download MicrobeCensus using `pip install MicrobeCensus`
     * 3. Run MicrobeCensus: [Example qsub script](https://github.com/ShadeLab/meta_arsenic/blob/master/download/census.qsub)
         * Location: /mnt/research/ShadeLab/WorkingSpace/Yeh/census
+        * All MicrobeCensus data can be found: /mnt/research/ShadeLab/WorkingSpace/Yeh/myPy2/bin
