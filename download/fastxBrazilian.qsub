@@ -15,6 +15,9 @@ cd /mnt/scratch/${USER}/MG-RAST_samples
 ### load fastx
 module load FASTX/0.0.14
 
+### parameters: -Q64 (Illumina 1.5), -q 30 (minimum quality to keep), -p 50 (minimum percent of bases to have the -q quality)
+### and zip the output with "gzip -9c"
+
 ### Brazilian_forest_4536139.3.fastq, Illumina 1.5
 fastq_quality_filter -Q64 -q 30 -p 50 -i Brazilian_forest_4536139.3.fastq | gzip -9c > Brazilian_forest_4536139.3.qc.fastq.gz
 
