@@ -1,0 +1,40 @@
+#!/bin/bash --login
+
+#PBS -l nodes=1:ppn=1
+#PBS -l walltime=04:00:00
+#PBS -l mem=700gb
+
+#PBS -j oe /mnt/scratch/${USER}/MG-RAST_samples
+#PBS -M youremail@email.com
+#PBS -m abe
+#PBS -N fastx1
+
+### switch into the correct directory, which includes your metagenomes
+cd /mnt/scratch/${USER}/MG-RAST_samples
+
+### load fastx
+module load FASTX/0.0.14
+
+### get quality stats for Iowa_corn, Iowa_agricultural, and Mangrove
+
+### IowaCorn_4539522.3.fastq:
+fastx_quality_stats -i IowaCorn_4539522.3.fastq -o IowaCorn_4539522.3_quality.txt
+
+### IowaCorn_4539523.3.fastq:
+fastx_quality_stats -i IowaCorn_4539523.3.fastq -o IowaCorn_4539523.3_quality.txt
+
+### Iowa_agricultural_4509400.3.fastq:
+fastx_quality_stats -i Iowa_agricultural_4509400.3.fastq -o Iowa_agricultural_4509400.3_quality.txt
+
+### Iowa_agricultural_4509401.3.fastq:
+fastx_quality_stats -i Iowa_agricultural_4509401.3.fastq -o Iowa_agricultural_4509401.3_quality.txt
+
+### Mangrove_4603270.3.fastq:
+fastx_quality_stats -i Mangrove_4603270.3.fastq -o Mangrove_4603270.3_quality.txt
+
+### Mangrove_4603402.3.fastq:
+fastx_quality_stats -i Mangrove_4603402.3.fastq -o Mangrove_4603402.3_quality.txt
+
+### output details
+echo "details of the job and queue"
+echo ---------
