@@ -35,3 +35,6 @@
 | Wyoming_soil22.3  | -  | - | - | cluster, done | - | cluster, done, copied | - | - | cluster, done, copied | cluster, done, copied |
 | Permafrost_Canada23.3  | cluster, done | cluster, done | - | cluster,done | - | cluster, done, copied | cluster, done, copied | cluster, done, copied | cluster done, copied | cluster, done, copied |
 | Permafrost_Canada45.3  | - | cluster, done, copied | - | acr3: cluster, done, copied | - | arsC_glut: cluster, copied, done | arsC_thio: cluster, done, copied | arsD: cluster, done, copied | cluster, done, copied | cluster, done, copied |
+
+#### Genes and the respective proteins, with Xander's success
+![protein_name](https://user-images.githubusercontent.com/28952961/27612824-72f0ee76-5b66-11e7-9934-73e761fa9312.PNG)
