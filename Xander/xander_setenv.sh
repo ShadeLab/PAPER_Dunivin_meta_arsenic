@@ -42,7 +42,7 @@ s large
 
 ## Contig Merge Parameters
 MIN_BITS=60  # mimimum assembled contigs bit score
-MIN_LENGTH=150  # minimum assembled protein contigs- CHANGES BASED ON GENE OF INTEREST
+MIN_LENGTH=150  # minimum assembled protein contigs: arsC_glut, arsC_thio, arsD: MIN_LENGTH=50, arsM: MIN_LENGTH=160
 
 ## Contig Clustering Parameters
 DIST_CUTOFF=0.01  # cluster at aa distance
