@@ -1,0 +1,11 @@
+#example qsub script which builds the bloom filter, finds and searchs for sequences of rplB in the Brazilian_forest39.3 metagenome
+#!/bin/bash -login
+
+#PBS -l walltime=04:00:00
+#PBS -l nodes=01:ppn=8
+#PBS -l mem=350gb
+#PBS -N Braz39.3rplB
+
+cd /mnt/research/ShadeLab/WorkingSpace/Yeh/xander/Brazilian_forest39.3
+
+./run_xander_skel.sh xander_setenv.sh "build find search" "rplB"
