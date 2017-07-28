@@ -1,0 +1,10 @@
+	OTU_01	OTU_02	OTU_03	OTU_04	OTU_05	OTU_06	OTU_07	OTU_08	OTU_09	OTU_10	OTU_11	OTU_12	OTU_13	OTU_14	OTU_15	OTU_16	OTU_17	OTU_18	OTU_19	OTU_20	OTU_21	OTU_22	OTU_23	OTU_24	OTU_25	OTU_26 
+Permafrost_Canada45.3_arsD_45_final_prot_aligned	0	3	0	0	0	3	0	1	0	6	0	0	0	0	0	14	0	0	1	0	0	0	3	0	1	0
+Illinois_soil91.3_arsD_45_final_prot_aligned	0	0	0	0	0	0	0	0	2	0	0	0	0	0	0	0	0	1	0	0	0	0	0	1	0	0
+Disney_preserve18.3_arsD_45_final_prot_aligned	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+Iowa_agricultural00.3_arsD_45_final_prot_aligned	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	3	0	0	0	0	0	0	0	0	0
+Mangrove02.3_arsD_45_final_prot_aligned	1	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	1
+Mangrove70.3_arsD_45_final_prot_aligned	1	0	0	0	0	0	1	0	0	0	0	1	0	0	0	0	0	0	0	0	2	1	0	0	0	0
+Illinois_soil88.3_arsD_45_final_prot_aligned	0	0	0	0	0	0	0	0	2	0	0	0	0	0	0	0	0	1	0	0	0	0	0	1	0	0
+Permafrost_Russia13.3_arsD_45_final_prot_aligned	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	0	0
+Permafrost_Canada23.3_arsD_45_final_prot_aligned	0	3	1	0	0	0	0	0	0	0	3	0	1	0	1	0	0	0	0	0	0	0	0	0	0	0
