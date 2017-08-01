@@ -6,176 +6,208 @@ library(reshape2)
 library(RColorBrewer)
 library(readr)
 
-setwd("C:/Users/susan/Documents/arsenic")
-
 wd <- print(getwd())
 
 #make color pallette
 GnYlOrRd <- colorRampPalette(colors=c("green", "yellow", "orange","red"), bias=2)
 
-#read in microbe census data
-census <- read_delim(file = paste(wd, "/microbe_census.txt", sep = ""),
-                     delim = "\t", col_types = list(col_character(), col_number(),
-                                                    col_number(), col_number()))
-
 #make colors for rarefaction curves (n=12)
 rarecol <- c("black", "darkred", "forestgreen", "orange", "blue","yellow",
              "hotpink", "green", "red", "brown", "grey", "purple", "violet")
 
-##################################
-#PHYLUM_LEVEL_RESPONSES_WITH_RPLB#
-##################################
-
-#temporarily change working directory to data to bulk load files
-setwd(paste(wd, "/data", sep = ""))
-
-#read in abundance data
-names=list.files(pattern="*rplB_45_taxonabund.txt")
-data <- do.call(rbind, lapply(names, function(X) {
-data.frame(id = basename(X), read.csv(X))}))
-
-
-#move back up a directory to proceed with analysis
-setwd("../")
-wd <- print(getwd())
-
-#remove rows that include lineage match name (only need taxon)
-#aka remove duplicate data
-data <- data[!grepl(";", data$Taxon.Abundance.Fraction.Abundance),]
-data <- data[!grepl("Lineage", data$Taxon.Abundance.Fraction.Abundance),]
-
-#split columns 
-data <- data %>%
-  separate(col = id, into = c("Sample", "junk"), sep = "_rplB") %>%
-  select(-junk) %>%
-  separate(col = Taxon.Abundance.Fraction.Abundance, 
-           into = c("Taxon", "Abundance", "Fraction.Abundance"), 
-           sep = "\t") %>%
-  group_by(Sample)
-
-#make sure abundance and fraction abundance are numbers
-#R will think it's a char since it started w taxon name
-data$Fraction.Abundance <- as.numeric(data$Fraction.Abundance)
-data$Abundance <- as.numeric(data$Abundance)
-
-
-#double check that all fraction abundances = 1
-#slightly above or below is okay (Xander rounds)
-summarised <- data %>%
-  summarise(Total = sum(Fraction.Abundance), rplB = sum(Abundance))
-
-
-#save summarised data for future analyses
-write.table(x = summarised, file = paste(wd, "/output/rplB.summary.scg.txt", 
-                                         sep = ""), row.names = FALSE)
-#decast for abundance check
-dcast=acast(data, Taxon ~ Sample, value.var = "Fraction.Abundance")
-
-#call na's zeros
-dcast[is.na(dcast)] =0
-
-#order based on abundance
-order.dcast=dcast[order(rowSums(dcast),decreasing=TRUE),]
-
-#melt data
-melt=melt(order.dcast,id.vars=row.names(order.dcast), variable.name= "Site", 
-          value.name="Fraction.Abundance" )
-
-#adjust colnames of melt
-colnames(melt)=c("Taxon", "Site", "Fraction.Abundance")
+#read in available metadata
+metad <- read.delim(paste(wd, "/data/metadata.txt", sep = ""), sep = "\t")
 
 #########################
-#aioA DIVERSITY ANALYSIS#
+#rplB DIVERSITY ANALYSIS#
 #########################
 #read in distance matrix for 0.1
-aioA0.1=read.delim(file = paste(wd, "/data/aioA_rformat_dist_0.1.txt", sep=""))
+rplB0.01 <- read.delim(file = paste(wd, "/data/rplB_rformat_dist_0.01.txt", sep=""))
+
+#rename sites
+rplB0.01 <- rplB0.01 %>%
+  separate(col = X, into = c("Site", "junk"), sep = ".3_") %>%
+  select(-junk)
 
 #add row names back
-rownames(aioA0.1)=aioA0.1[,1]
+rownames(rplB0.01)=rplB0.01[,1]
 
 #remove first column
-aioA0.1=aioA0.1[,-1]
+rplB0.01=rplB0.01[,-1]
 
 #make data matrix
-aioA0.1=data.matrix(aioA0.1)
+rplB0.01=data.matrix(rplB0.01)
 
 #make an output of total gene count per site
-aioA0.1.gcounts=rowSums(aioA0.1)
-print(aioA0.1.gcounts)
+rplB0.01.gcounts=rowSums(rplB0.01)
+print(rplB0.01.gcounts)
 
 #otu table
-otu_aioA0.1=otu_table(aioA0.1, taxa_are_rows = FALSE)
-print(otu_aioA0.1)
+otu_rplB0.01=otu_table(rplB0.01, taxa_are_rows = FALSE)
 
 #see rarefaction curve
-rarecurve(otu_aioA0.1, step=1, col=rarecol, label = FALSE, cex=0.5)
+rarecurve(otu_rplB0.01, step=1, col=rarecol, label = TRUE, cex=0.5)
 
 #rarefy
-rare_aioA0.1=rarefy_even_depth(otu_aioA0.1, sample.size = min(sample_sums(otu_aioA0.1)), 
+rare_rplB0.01=rarefy_even_depth(otu_rplB0.01, sample.size = 40, 
                        rngseed = TRUE)
 
 
 #check curve
-rarecurve(rare_aioA0.1, step=1, col = c("black", "darkred", "forestgreen", 
+rarecurve(rare_rplB0.01, step=1, col = c("black", "darkred", "forestgreen", 
                                 "orange", "blue", "yellow", "hotpink"), 
           label = FALSE)
 
-#make an output of total OTUs per site
-aioA0.1[aioA0.1 > 0]  <- 1
-aioA0.1.OTUcounts=rowSums(aioA0.1)
-print(aioA0.1.OTUcounts)
+#remove unnecessary rows in metad
+meta <- metad[which(metad$Sample %in% rownames(rplB0.01)),]
+rownames(meta)=meta$Sample
+meta <- meta[-1]
+
+#make metadata a phyloseq class object
+meta <- sample_data(meta)
+
+##make biom for phyloseq
+phylo <- merge_phyloseq(rare_rplB0.01, meta)
+
+#plot phylo richness
+(richness <- plot_richness(phylo, x = "Site", measures = "Shannon"))
+
+#save plot 
+ggsave(richness, filename = paste(wd, "/figures/rplB_richness.png", sep=""))
+
+#calculate evenness
+s=specnumber(rare_rplB0.01)
+h=diversity(rare_rplB0.01, index="shannon")
+plieou=h/log(s)
+
+#save evenness number
+write.table(plieou, file = paste(wd, "/output/rplB_evenness.txt", sep=""))
+
+#make plieou a dataframe for plotting
+plieou=data.frame(plieou)
+
+#add site column to evenness data
+plieou$Sample=rownames(plieou)
+
+#merge evenness information with fire classification
+plieou=left_join(plieou, metad)
+
+#plot evenness by fire classification
+(evenness <- ggplot(plieou, aes(x = Site, y = plieou)) +
+    geom_point(size=3) +
+    ylab("Evenness") +
+    theme_bw(base_size = 12) +
+    theme(axis.text.x = element_text(angle = 90, size = 12, 
+                                     hjust=0.95,vjust=0.2)))
+
+#save evenness plot
+ggsave(evenness, filename = paste(wd, "/figures/rplB_evenness.png", sep=""), 
+       width = 7, height = 5)
+
+#plot Bray Curtis ordination
+ord <- ordinate(phylo, method="PCoA", distance="bray")
+(bc.ord=plot_ordination(phylo, ord, shape="Biome", color="Site",title="Bray Curtis") +
+    geom_point(size=5) +
+    theme_light(base_size = 12))
+
+#save bray curtis ordination
+ggsave(bc.ord, filename = paste(wd, "/figures/rplB_braycurtis.ord.png", sep=""), 
+       width = 6, height = 5)
+
+
+#plot Sorenson ordination
+ord.sor <- ordinate(phylo, method="PCoA", distance="bray", binary = TRUE)
+(sor.ord=plot_ordination(phylo, ord.sor, shape="Biome", color="Site",
+                         title="Sorensen") +
+    geom_point(size=5) +
+    theme_light(base_size = 12))
+
+library(ape)
+#make object phylo with tree and biom info
+tree <- read.tree(file = paste(wd, "/data/rplB_0.01_tree_short.nwk", sep=""))
+tree <- phy_tree(tree)
+
+#merge
+phylo=merge_phyloseq(tree, rare_rplB0.01, metad)
+
+#plot unweighted Unifrac ordination
+uni.u.ord.rplB <- ordinate(phylo, method="PCoA", distance="unifrac", weighted = FALSE)
+(uni.u.ord.rplB=plot_ordination(phylo, uni.u.ord.rplB, shape="Classification", 
+                                title="Unweighted Unifrac") +
+    geom_point(aes(color = SoilTemperature_to10cm), size=5) +
+    scale_color_gradientn(colours=GnYlOrRd(5), guide="colorbar", 
+                          guide_legend(title="Temperature (°C)")) +
+    theme_light(base_size = 12))
+
+#save unweighted Unifrac ordination
+ggsave(uni.u.ord.rplB, filename = paste(wd, "/figures/rplB.u.unifrac.ord.png", sep=""), 
+       width = 6, height = 5)
+
+#plot weighted Unifrac ordination
+uni.w.ord.rplB <- ordinate(phylo, method="PCoA", distance="unifrac", weighted = TRUE)
+(uni.w.ord.rplB=plot_ordination(phylo, uni.w.ord.rplB, shape="Classification", 
+                                title="Weighted Unifrac") +
+    geom_point(aes(color = SoilTemperature_to10cm), size=5) +
+    scale_color_gradientn(colours=GnYlOrRd(5), guide="colorbar", 
+                          guide_legend(title="Temperature (°C)")) +
+    theme_light(base_size = 12))
+
+#save weighted Unifrac ordination
+ggsave(uni.w.ord.rplB, filename = paste(wd, "/figures/rplB.w.unifrac.ord.png", sep=""), 
+       width = 6, height = 5)
+
 
 #########################
-#arsC_glut DIVERSITY ANALYSIS#
+#rplB DIVERSITY ANALYSIS#
 #########################
 #read in distance matrix for 0.1
-arsC_glut0.1=read.delim(file = paste(wd, 
-                                     "/data/arsC_glut_rformat_dist_0.1.txt", 
+rplB0.1=read.delim(file = paste(wd, 
+                                     "/data/rplB_rformat_dist_0.01.txt", 
                                      sep=""))
 
 #add row names back
-rownames(arsC_glut0.1)=arsC_glut0.1[,1]
+rownames(rplB0.1)=rplB0.1[,1]
 
 #remove first column
-arsC_glut0.1=arsC_glut0.1[,-1]
+rplB0.1=rplB0.1[,-1]
 
 #make data matrix
-arsC_glut0.1=data.matrix(arsC_glut0.1)
+rplB0.1=data.matrix(rplB0.1)
 
 #remove samples with <5 OTUs (Illinois_soybean40.3 (row 8), California_grasland62.3 (row16),
 # Illinois_soybean42.3(row 20), Iowa_agricultural01.3(row19))
-arsC_glut0.1 <- arsC_glut0.1[-c(8,16,20,19), ]
+rplB0.1 <- rplB0.1[-c(8,16,20,19), ]
 
 
 #make an output of total gene count per site
-arsC_glut0.1.gcounts=rowSums(arsC_glut0.1)
+rplB0.1.gcounts=rowSums(rplB0.1)
 
-#otu table for aioA0.3
-otu_arsC_glut0.1=otu_table(arsC_glut0.1, taxa_are_rows = FALSE)
+#otu table for rplB0.3
+otu_rplB0.1=otu_table(rplB0.1, taxa_are_rows = FALSE)
 
 #see rarefaction curve
-rarecurve(otu_arsC_glut0.1, step=5, col=rarecol, label = FALSE, cex=0.5)
+rarecurve(otu_rplB0.1, step=5, col=rarecol, label = FALSE, cex=0.5)
 
 #rarefy
-rare_arsC_glut0.1=rarefy_even_depth(otu_arsC_glut0.1, 
-                               sample.size = min(sample_sums(otu_arsC_glut0.1)), 
+rare_rplB0.1=rarefy_even_depth(otu_rplB0.1, 
+                               sample.size = min(sample_sums(otu_rplB0.1)), 
                                rngseed = TRUE)
 
 #check curve
-rarecurve(rare_arsC_glut0.1, step=1, col = c("black", "red", "forestgreen", 
+rarecurve(rare_rplB0.1, step=1, col = c("black", "red", "forestgreen", 
                                         "orange", "blue", "yellow", "hotpink"), 
           label = FALSE, cex=0.4)
 
 #make an output of total OTUs per site
-arsC_glut0.1[arsC_glut0.1 > 0]  <- 1
-arsC_glut0.1.OTUcounts=rowSums(arsC_glut0.1)
+rplB0.1[rplB0.1 > 0]  <- 1
+rplB0.1.OTUcounts=rowSums(rplB0.1)
 
 #########################
 #arsC_thio DIVERSITY ANALYSIS#
 #########################
 #read in distance matrix for 0.1
 arsC_thio0.1=read.delim(file = paste(wd, 
-                                     "/data/arsC_thio_rformat_dist_0.1.txt", 
+                                     "/data/arsC_thio_rformat_dist_0.01.txt", 
                                      sep=""))
 
 #add row names back
@@ -194,7 +226,7 @@ arsC_thio0.1 <- arsC_thio0.1[-c(1,2,3,4,5,6,8,9,10,11,12,13), ]
 #make an output of total gene count per site
 arsC_thio0.1.gcounts=rowSums(arsC_thio0.1)
 
-#otu table for aioA0.3
+#otu table for rplB0.3
 otu_arsC_thio0.1=otu_table(arsC_thio0.1, taxa_are_rows = FALSE)
 
 #see rarefaction curve
@@ -221,7 +253,7 @@ print(arsC_thio0.1.OTUcounts)
 #########################
 #read in distance matrix for 0.1
 arrA0.1=read.delim(file = paste(wd, 
-                                     "/data/arrA_rformat_dist_0.1.txt", 
+                                     "/data/arrA_rformat_dist_0.01.txt", 
                                      sep=""))
 
 #add row names back
@@ -243,7 +275,7 @@ arrA0.1 <- arrA0.1[-c(2), ]
 #make an output of total gene count per site
 arrA0.1.gcounts=rowSums(arrA0.1)
 
-#otu table for aioA0.3
+#otu table for rplB0.3
 otu_arrA0.1=otu_table(arrA0.1, taxa_are_rows = FALSE)
 
 #see rarefaction curve
@@ -268,7 +300,7 @@ print(arrA0.1.OTUcounts)
 #########################
 #read in distance matrix for 0.1
 arsD0.1=read.delim(file = paste(wd, 
-                                "/data/arsD_rformat_dist_0.1.txt", 
+                                "/data/arsD_rformat_dist_0.01.txt", 
                                 sep=""))
 
 #add row names back
@@ -287,7 +319,7 @@ arsD0.1 <- arsD0.1[-c(2,3,4,5,6,7,8), ]
 #make an output of total gene count per site
 arsD0.1.gcounts=rowSums(arsD0.1)
 
-#otu table for aioA0.3
+#otu table for rplB0.3
 otu_arsD0.1=otu_table(arsD0.1, taxa_are_rows = FALSE)
 
 #see rarefaction curve
@@ -317,7 +349,7 @@ observed_abundances=read.delim(file = paste(wd,
                                 sep=""))
 
 observed_abundances.reshaped <- melt(observed_abundances.reshaped, id.vars=c("Sample"), 
-                          measure.vars=c('arsB','aioA','arrA','acr3','arxA','arsC_glut',
+                          measure.vars=c('arsB','rplB','arrA','rplB','arxA','rplB',
                                          'arsC_thio','arsD','arsM'))
 
 plot_observed_abund<-ggplot(data=observed_abundances.reshaped, 
