@@ -1,6 +1,2 @@
 Taxon	Abundance	Fraction Abundance
 coded_by=849012..851498,organism=Ralstonia syzygii R24,definition=Arsenite oxidase large subunit (AOI)	1.494	1.0000
-
-
-Lineage	MatchName	Abundance	Fraction Abundance
-coded_by=849012..851498,organism=Ralstonia syzygii R24,definition=Arsenite oxidase large subunit (AOI)	CCA86643	1.494	1.0000

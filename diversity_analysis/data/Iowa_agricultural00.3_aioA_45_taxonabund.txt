@@ -1,8 +1,3 @@
 Taxon	Abundance	Fraction Abundance
 coded_by=72502..74964,organism=Nitrobacter hamburgensis X14,definition=Arsenate reductase (azurin)	4.235	0.5561
 coded_by=20351..22960,organism=Mesorhizobium alhagi CCNWXJ12-2,definition=arsenite oxidase large subunit	3.38	0.4439
-
-
-Lineage	MatchName	Abundance	Fraction Abundance
-coded_by=20351..22960,organism=Mesorhizobium alhagi CCNWXJ12-2,definition=arsenite oxidase large subunit	EHK52648	3.38	0.4439
-coded_by=72502..74964,organism=Nitrobacter hamburgensis X14,definition=Arsenate reductase (azurin)	ABE65011	4.235	0.5561

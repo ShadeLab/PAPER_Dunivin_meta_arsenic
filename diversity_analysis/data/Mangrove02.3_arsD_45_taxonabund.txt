@@ -3,10 +3,3 @@ coded_by=complement(3762..4118),organism=Methylomonas lenta,definition=transcrip
 coded_by=complement(267002..267370),organism=Rhodopirellula baltica SH 1,definition=ArsD repressor protein	1.0	0.2500
 coded_by=complement(4561927..4562289),organism=Salmonella enterica subsp. enterica serovar Paratyphi B str. SPB7,definition=hypothetical protein	1.0	0.2500
 coded_by=36270..36629,organism=Pseudomonas aeruginosa,definition=arsenical resistance operon repressor protein	1.0	0.2500
-
-
-Lineage	MatchName	Abundance	Fraction Abundance
-coded_by=36270..36629,organism=Pseudomonas aeruginosa,definition=arsenical resistance operon repressor protein	ACD39061	1.0	0.2500
-coded_by=complement(3762..4118),organism=Methylomonas lenta,definition=transcriptional regulator	OAI10639	1.0	0.2500
-coded_by=complement(4561927..4562289),organism=Salmonella enterica subsp. enterica serovar Paratyphi B str. SPB7,definition=hypothetical protein	ABX70696	1.0	0.2500
-coded_by=complement(267002..267370),organism=Rhodopirellula baltica SH 1,definition=ArsD repressor protein	CAD76333	1.0	0.2500

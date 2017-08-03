@@ -120,7 +120,7 @@ metag.abund <- metag.abund %>%
 
 ##prep isolate genome data
 #select AsRG COGs and chosen single copy gene (COG0052)
-ars <- c("COG0798", "COG1055", "COG1393", "COG0003", "COG0640", "COG2345", "COG4860", "COG0052")
+ars <- c("COG0798", "COG1393", "COG0003", "COG0052")
 
 #subset data based on AsRG cogs
 ars <- data[which(data$COG.ID %in% ars),]
@@ -146,7 +146,7 @@ abund <- melt(abund, id.vars = c("COG.ID", "COG.Name"), measure.vars = c("Genome
 #note these comparisons do NOT account for multiple AsRG copies per genome
 #this is purposeful since we cannot know that for metaG. 
 #see files created later (perc.GENE) for +/- genome percentages
-ggsave(ars.plot, filename = paste(wd, "/figures/AsRG.proportions.png", sep=""), height = 6, width = 13)
+ggsave(ars.plot, filename = paste(wd, "/figures/AsRG.proportions.png", sep=""))
 
 #Some AsRG appear underrepresented in isolate genomes while 
 #arsC-glut is over-represented; arsC_glut is in E.coli, which

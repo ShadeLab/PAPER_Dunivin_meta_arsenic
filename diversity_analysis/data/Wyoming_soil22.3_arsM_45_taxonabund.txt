@@ -10,35 +10,3 @@ coded_by=2815526..2816290,organism=Candidatus Nitrososphaera gargensis Ga9.2,def
 coded_by=<1..>324,organism=uncultured bacterium,definition=ArsM	8.116999999999999	0.0426
 coded_by=330961..331719,organism=Candidatus Nitrosotalea devanaterra,definition=Methyltransferase type 11	3.622	0.0190
 coded_by=complement(6504448..6505257),organism=Kibdelosporangium phytohabitans,definition=arsenite S-adenosylmethyltransferase	2.076	0.0109
-
-
-Lineage	MatchName	Abundance	Fraction Abundance
-coded_by=622570..623361,organism=Conexibacter woesei DSM 14684,definition=Methyltransferase type 11	ADB49026	0.588	0.0031
-coded_by=<1..>347,organism=uncultured bacterium,definition=arsenite s-adenosylmethyltransferase	AIZ48104	5.85	0.0307
-coded_by=<1..>324,organism=uncultured bacterium,definition=ArsM	AKN42777	2.912	0.0153
-coded_by=<1..>347,organism=uncultured bacterium,definition=arsenite s-adenosylmethyltransferase	AIZ48021	1.452	0.0076
-coded_by=<1..>347,organism=uncultured bacterium,definition=arsenite s-adenosylmethyltransferase	AIZ48098	1.565	0.0082
-coded_by=2815526..2816290,organism=Candidatus Nitrososphaera gargensis Ga9.2,definition=putative arsenite methyltransferase	AFU60494	6.784	0.0356
-coded_by=<1..>347,organism=uncultured bacterium,definition=arsenite s-adenosylmethyltransferase	AIZ48243	7.601000000000001	0.0399
-coded_by=<1..>347,organism=uncultured bacterium,definition=arsenite s-adenosylmethyltransferase	AIZ48269	46.97099999999999	0.2465
-coded_by=complement(5220..6011),organism=Intrasporangium chromatireducens Q5-1,definition=arsenite S-adenosylmethyltransferase	EWT05606	1.8840000000000001	0.0099
-coded_by=<1..>347,organism=uncultured bacterium,definition=arsenite s-adenosylmethyltransferase	AIZ48262	2.72	0.0143
-coded_by=<1..>347,organism=uncultured bacterium,definition=arsenite s-adenosylmethyltransferase	AIZ47943	2.16	0.0113
-coded_by=complement(6504448..6505257),organism=Kibdelosporangium phytohabitans,definition=arsenite S-adenosylmethyltransferase	ALG15151	2.076	0.0109
-coded_by=<1..>324,organism=uncultured bacterium,definition=ArsM	AKN42138	2.039	0.0107
-coded_by=<1..>325,organism=uncultured bacterium,definition=ArsM	AKN41317	0.525	0.0028
-coded_by=<1..>324,organism=uncultured bacterium,definition=ArsM	AKN41361	0.878	0.0046
-coded_by=complement(3705170..3705967),organism=Xylanimonas cellulosilytica DSM 15894,definition=Methyltransferase type 11	ACZ32346	2.268	0.0119
-coded_by=complement(58679..59461),organism=Mycobacterium shimoidei,definition=arsenite S-adenosylmethyltransferase	ODR14605	1.141	0.0060
-coded_by=<1..>347,organism=uncultured bacterium,definition=arsenite s-adenosylmethyltransferase	AIZ48053	3.851	0.0202
-coded_by=<1..>347,organism=uncultured bacterium,definition=arsenite s-adenosylmethyltransferase	AIZ47916	2.998	0.0157
-coded_by=<1..>324,organism=uncultured bacterium,definition=ArsM	AKN43389	2.288	0.0120
-coded_by=<1..>347,organism=uncultured bacterium,definition=arsenite s-adenosylmethyltransferase	AIZ47997	1.996	0.0105
-coded_by=<1..>347,organism=uncultured bacterium,definition=arsenite S-adenosylmethionine methyltransferase	AKS26170	1.005	0.0053
-coded_by=330961..331719,organism=Candidatus Nitrosotalea devanaterra,definition=Methyltransferase type 11	CUR51123	3.622	0.0190
-coded_by=<1..>347,organism=uncultured bacterium,definition=arsenite s-adenosylmethyltransferase	AIZ47932	4.446	0.0233
-coded_by=<1..>347,organism=uncultured bacterium,definition=arsenite s-adenosylmethyltransferase	AIZ47957	14.874	0.0781
-coded_by=<1..>347,organism=uncultured bacterium,definition=arsenite s-adenosylmethyltransferase	AIZ48250	4.226	0.0222
-coded_by=<1..>347,organism=uncultured bacterium,definition=arsenite s-adenosylmethyltransferase	AIZ47953	3.504	0.0184
-coded_by=<1..>347,organism=uncultured bacterium,definition=arsenite s-adenosylmethyltransferase	AIZ47934	51.84499999999999	0.2721
-coded_by=<1..>347,organism=uncultured bacterium,definition=arsenite s-adenosylmethyltransferase	AIZ47933	6.463	0.0339

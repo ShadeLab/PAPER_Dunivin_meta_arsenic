@@ -1,6 +1,2 @@
 Taxon	Abundance	Fraction Abundance
 coded_by=complement(301285..303747),organism=Bradyrhizobium sp. LMTR 3,definition=arsenite oxidase large subunit	5.805	1.0000
-
-
-Lineage	MatchName	Abundance	Fraction Abundance
-coded_by=complement(301285..303747),organism=Bradyrhizobium sp. LMTR 3,definition=arsenite oxidase large subunit	OCK55889	5.805	1.0000

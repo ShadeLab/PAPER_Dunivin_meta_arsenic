@@ -8,14 +8,13 @@ library(RColorBrewer)
 library(taxize)
 library(psych)
 
-setwd("C:/Users/susan/Documents/arsenic")
 wd <- print(getwd())
 
 #read in metadata
 meta <- data.frame(read_delim(file = paste(wd, "/data/metadata.txt", sep = ""), delim = "\t"))
 
 #read in microbe census data
-census <- read_delim(file = paste(wd, "/microbe_census_wo.3.txt", sep = ""),
+census <- read_delim(file = paste(wd, "/microbe_census.txt", sep = ""),
                      delim = "\t", col_types = list(col_character(), col_number(),
                                                     col_number(), col_number()))
 
@@ -46,6 +45,18 @@ data <- data %>%
   separate(col = junk, into = c("Gene", "junk"), sep = "_45_", remove = TRUE) %>%
   select(-junk) 
 
+#fix russia name by removing "_"
+data$Sample <- gsub("Russia_", "Russia", data$Sample)
+
+#fix iowa prarie76 sample name
+data$Sample <- gsub("IowaPr76", "Iowa_prairie76", data$Sample)
+
+
+#remove sites with low rplB (ie low seq depth/ confidence)
+data <- data[-which(data$Sample == "Iowa_agricultural01"),]
+data <- data[-which(data$Sample == "Illinois_soybean42"),]
+data <- data[-which(data$Sample == "Illinois_soybean40"),]
+
 #separate out rplB data (not needed for gene-centric analysis)
 rplB <- data[which(data$Gene == "rplB"),]
 data <- data[-which(data$Gene == "rplB"),]
@@ -73,6 +84,14 @@ summarised.rplB <- rplB %>%
 write.table(x = summarised.rplB, file = paste(wd, "/output/rplB.summary.scg.txt", sep = ""), 
             row.names = FALSE)
 
+#join rlpB summarsied data with metadata for plotting
+summarised.rplB.meta <- summarised.rplB %>%
+  left_join(meta, by = "Sample") 
+
+#plot rplB differences
+ggplot(summarised.rplB.meta, aes(x = Site, y = rplB, fill= Sample)) +
+  geom_bar(stat = "identity", position = "dodge", color = "black")
+
 #decast for abundance check
 dcast <- acast(rplB, Taxon ~ Sample, value.var = "Fraction.Abundance")
 
@@ -92,14 +111,15 @@ colnames(melt) <- c("Taxon", "Sample", "Fraction.Abundance")
 #join metadata with regular data
 history <- melt %>%
   left_join(meta, by="Sample") %>%
-  group_by(Taxon) %>%
+  group_by(Site, Taxon) %>%
   summarise(N = length(Fraction.Abundance),
             Average = mean(Fraction.Abundance))
 
 #plot
 (phylum.plot=(ggplot(history, aes(x=Taxon, y=Average)) +
                 geom_point(size=2) +
-                labs(x="Phylum", y="Mean relative abundance")+
+                labs(x="Phylum", y="Mean relative abundance") +
+                facet_wrap(~Site) +
                 theme(axis.text.x = element_text(angle = 90, size = 10, 
                                                  hjust=0.95,vjust=0.2))))
 
@@ -112,9 +132,9 @@ ggsave(phylum.plot, filename = paste(wd, "/figures/phylum.responses.png", sep=""
 
 #Tidy gene data
 data.tidy <- data %>%
+  left_join(meta, by = "Sample") %>%
   separate(col = Taxon, into = c("Code", "Organism"), sep = "organism=") %>%
   separate(col = Organism, into = c("Organism", "Definition"), sep = ",definition=") %>%
-  select(Sample, Gene, Organism:Fraction.Abundance) %>%
   group_by(Gene, Sample)
 
 #make sure abundance and fraction abundance are numbers
@@ -127,97 +147,125 @@ data.tidy$Abundance <- as.numeric(data.tidy$Abundance)
 summarised.total <- data.tidy %>%
   summarise(N = length(Sample), Total = sum(Fraction.Abundance))
 
-#read in metadata
-meta <- data.frame(read_delim(file = paste(wd, "/data/metadata.txt", sep = ""), delim = "\t"))
-
+#make column for organism name and join 
+#with microbe census data and normalize to it
 data.annotated <- data.tidy %>%
-  left_join(meta, by = "Sample")
-
-data.annotated <- data.annotated %>%
-  left_join(gene, by = "Gene")
-
-#make column for organism name and join with microbe census data and normalize to it
-data.annotated <- data.annotated %>%
-  left_join(census, by = "Sample") %>%
   left_join(summarised.rplB, by = "Sample") %>%
-  select(Sample:GE, rplB) %>%
-  mutate(Normalized.Abundance.census = Abundance / GE, 
-         Normalized.Abundance.rplB = Abundance / rplB)
-
-#summarise data to get number of genes per gene per site
-#data.site <- data.annotated %>%
-  #group_by(Gene, Sample) %>%
-  #summarise(Count = sum(Abundance), 
-      #      Count.rplB = sum(Normalized.Abundance.rplB),
-       #     Count.census = sum(Normalized.Abundance.census)) %>%
-  #left_join(meta, by = "Sample")
-
-##############################
-#EXAMINE PHYLUM LEVEL CHANGES#
-##############################
-
-##Plot relative abundances for all the genes, must summarize by SAMPLE to count the normalized abundance
-data.count <- data.annotated %>%
-  group_by(Gene, Sample, Group) %>%
-  summarise(count = sum(Normalized.Abundance.rplB))
-
-#read in metadata (for all the genes and sites)
-meta <- data.frame(read_delim(file = paste(wd, "/data/metadata_with_removed_data.txt", sep = ""), delim = "\t"))
-
-data.count <- data.count %>%
-  left_join(meta, by="Sample")
-
-#separate out arsC_glut and arsM
-data.count <- data.count[-which(data.count$Gene == "aioA"),]
-data.count <- data.count[-which(data.count$Gene == "acr3"),]
-data.count <- data.count[-which(data.count$Gene == "arsC_thio"),]
-data.count <- data.count[-which(data.count$Gene == "arsD"),]
-data.count <- data.count[-which(data.count$Gene == "arxA"),]
-data.count <- data.count[-which(data.count$Gene == "arsB"),]
-data.count <- data.count[-which(data.count$Gene == "arrA"),]
-
-data.count <- na.omit(data.count)
-
-#summarize by site, then count up
-data.summarised <- data.count %>%
-  group_by(Gene, Site, Biome) %>%
-  summarise(count = mean(count))
+  left_join(gene, by = "Gene") %>%
+  mutate(Normalized.Abundance.rplB = Abundance / rplB)
 
 #order genes by group
-data.summarised$Gene <- factor(data.summarised$Gene)
-levels(data.summarised$Gene)
-data.summarised$Gene <- reorder(data.summarised$Gene, data.summarised$Group)
+data.annotated$Gene <- factor(data.annotated$Gene)
+levels(data.annotated$Gene)
+data.annotated$Gene <- reorder(data.annotated$Gene, data.annotated$Group)
 
-#plot to wrap per gene: (facet_wrap(~ Gene, scales="free_y") +)
-(gene.bar.census <- ggplot(data.summarised, 
-                           aes(x = Site, y = count*100, fill=Gene)) +
+#plot mean abundance per site
+data.annotated.summarised <- data.annotated %>%
+  ungroup() %>%
+  group_by(Sample, Site, Gene) %>%
+  summarise(Total.normalized.rplB = sum(Normalized.Abundance.rplB)) %>%
+  ungroup() %>%
+  group_by(Site, Gene) %>%
+  summarise(Avg.norm.rplB = mean(Total.normalized.rplB),
+            sd = sd(Total.normalized.rplB), 
+                    N = length(Site))
+
+(gene.bar <- ggplot(data.annotated.summarised, 
+                    aes(x = Site, y = Avg.norm.rplB*100, 
+                               fill=Gene)) +
     geom_bar(stat="identity", position="stack") +
-    ylab("Gene per rplB (%)") +
+    ylab("Average gene per rplB (%)") +
     theme_bw()  +
-    theme(text = element_text(size=34)) +
+    theme(text = element_text(size=12)) +
     scale_fill_manual(values=c("#81C784", "#388E3C", "#FFEB3B",
                                "#29B6F6", "#00838F", "#9575CD",
                                "#D500F9", "#FF5733", "#F48FB1")) +
-    theme(axis.text.x = element_text(angle = 30, hjust=1, size=20)))
+    theme(axis.text.x = element_text(angle = 30, hjust=1, size=12)))
 
 #save plot
-ggsave(gene.bar.census, 
-       filename = paste(wd, "/figures/phylum.abundance.rplB.arC_glut_arsM.png", 
+ggsave(gene.bar, 
+       filename = paste(wd, "/figures/phylum.abundance.rplB.png", 
                         sep=""), height = 10, width = 18)
+
+#plot to wrap per gene: (facet_wrap(~ Gene, scales="free_y") +)
+(gene.bar.se <- ggplot(data.annotated.summarised, 
+                    aes(x = Site, y = Avg.norm.rplB*100, 
+                        fill=Site)) +
+    geom_bar(stat="identity", position="dodge") +
+    ylab("Average gene per rplB (%)") +
+    geom_errorbar(aes(ymin = 100*(Avg.norm.rplB - sd/N), 
+                      ymax = 100*(Avg.norm.rplB + sd/N))) +
+    theme_bw()  +
+    theme(text = element_text(size=12)) +
+    facet_wrap(~Gene, scales = "free_y") +
+    theme(axis.text.x = element_text(angle = 30, hjust=1, size=12)))
+
+#save plot
+ggsave(gene.bar.se, 
+       filename = paste(wd, "/figures/phylum.abundance.rplB_byGene.png", 
+                        sep=""), height = 10, width = 18)
+
 
 ##Plot just arsM and arsC_glut on X and Y Axis to compare their abundances:
 #read data.summarized for arsM and arsC_glut
-data.summarised.arsC_glut.arsM=read.delim(file = paste(wd, 
-                                "/data/data.summarized.arsC_glut.arsM.txt", 
-                                sep=""))
-colnames(data.summarised.arsC_glut.arsM) = c("Site", "Biome", "arsC_glut","arsM")
+#data.summarised.arsC_glut.arsM=read.delim(file = paste(wd, 
+#                                "/data/data.summarized.arsC_glut.arsM.txt", 
+#                                sep=""))
+#colnames(data.summarised.arsC_glut.arsM) = c("Site", "Biome", "arsC_glut","arsM")
 
 #plot x axis arsM, y axis arsC_glut
-(gene.bar.census <- ggplot(data.summarised.arsC_glut.arsM, 
-                           aes(x = arsC_glut, y = arsM, color=Site)) +
-    geom_point(size=2) +
-    scale_fill_manual(values = color) +
-    ylab("arsM per rplB (%)") +
-    xlab("arsC_glut per rplB (%)") +
-    theme_bw() +
-    theme(axis.text.x = element_text(angle = 90, size = 10, hjust=0.95,vjust=0.2)))
+#(gene.bar.census <- ggplot(data.summarised.arsC_glut.arsM, 
+#                           aes(x = arsC_glut, y = arsM, color=Site)) +
+#    geom_point(size=2) +
+#    scale_fill_manual(values = color) +
+#    ylab("arsM per rplB (%)") +
+#    xlab("arsC_glut per rplB (%)") +
+#    theme_bw() +
+#    theme(axis.text.x = element_text(angle = 90, size = 10, hjust=0.95,vjust=0.2)))
+
+####################################
+#Add taxanomic information to plots#
+####################################
+
+#add taxanomic information 
+org.info <- unique(data.annotated$Organism)
+data.ncbi <- tax_name(query = org.info, 
+                      get = c("genus", "class", "phylum"), db = "ncbi")
+
+
+#label query "Organism" for joining purposes
+data.ncbi$Organism <- data.ncbi$query
+
+#save this table since the above step takes a long time
+write.table(data.ncbi, file = paste(wd, "/output/ncbi.taxonomy.txt", sep = ""), 
+            row.names = FALSE)
+
+#read in NCBI data
+data.ncbi <- read_delim(paste(wd, "/output/ncbi.taxonomy.txt", sep = ""), delim = " ")
+
+#join ncbi information with annotated data
+#output should have same number of rows 
+data.annotated.ncbi <- data.annotated %>%
+  left_join(data.ncbi, by = "Organism") %>%
+  unique()
+
+#replace NA in phylum with unknown
+data.annotated.ncbi$phylum[is.na(data.annotated.ncbi$phylum)] = "Unknown"
+
+#call NA class by phyla
+data.annotated.ncbi$class[is.na(data.annotated.ncbi$class)] <- as.character(data.annotated.ncbi$phylum[is.na(data.annotated.ncbi$class)])
+
+#call NA genus by class (may be phyla in cases where class was NA)
+data.annotated.ncbi$genus[is.na(data.annotated.ncbi$genus)] <- as.character(data.annotated.ncbi$class[is.na(data.annotated.ncbi$genus)])
+
+#plot by taxa (phylum)
+(bar.phylum.acr3 <- subset(data.annotated.ncbi, Gene == "acr3") %>%
+    group_by(Sample, Gene, phylum) %>%
+    summarise(sum = sum(Normalized.Abundance.rplB)) %>%
+    ggplot(aes(x = Sample, y = sum)) +
+  geom_bar(stat = "identity", aes(fill = phylum)) +
+  facet_wrap(~Gene) +
+    theme(axis.text.x = element_text(angle = 30, hjust=1, size=12)))
+
+
+

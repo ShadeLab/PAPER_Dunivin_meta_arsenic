@@ -28,35 +28,3 @@ coded_by=39566..40699,organism=Gemmatimonadetes bacterium SCN 70-22,definition=a
 coded_by=complement(69374..70444),organism=Mucilaginibacter pineti,definition=arsenite transporter, ACR3 family	52.272000000000006	0.1637
 coded_by=complement(65463..66596),organism=Gemmatimonadetes bacterium SCN 70-22,definition=arsenical-resistance protein	4.8	0.0150
 coded_by=1847..3055,organism=Actinobacteria bacterium RBG_16_68_12,definition=arsenical-resistance protein	16.035	0.0502
-
-
-Lineage	MatchName	Abundance	Fraction Abundance
-coded_by=complement(140397..141512),organism=Nocardioides sp. Soil777,definition=arsenic transporter	KRF02594	6.588	0.0206
-coded_by=complement(404439..405566),organism=Geodermatophilus taihuensis,definition=arsenite transporter, ACR3 family	SFC93343	6.436	0.0202
-coded_by=1129373..1130491,organism=Terrabacter sp. Root181,definition=arsenic transporter	KRB48452	34.817	0.1091
-coded_by=complement(1236..2291),organism=Solirubrobacterales bacterium 70-9,definition=arsenical-resistance protein	OJU79861	2.796	0.0088
-coded_by=complement(1465..2496),organism=Candidatus Gallionella acididurans,definition=arsenic transporter ArsB	KXS31947	25.901999999999997	0.0811
-coded_by=complement(1958543..1959631),organism=Rhodococcus sp. PBTS 2,definition=Arsenical-resistance protein Acr3	AMY23236	4.35	0.0136
-coded_by=complement(65463..66596),organism=Gemmatimonadetes bacterium SCN 70-22,definition=arsenical-resistance protein	ODT04227	4.8	0.0150
-coded_by=232688..233713,organism=Flavobacterium sp. TAB 87,definition=arsenical-resistance protein	KVV13324	4.768	0.0149
-coded_by=5228455..5229534,organism=Rhodococcus aetherivorans,definition=arsenic transporter	AKE91705	7.866	0.0246
-coded_by=complement(139676..140761),organism=Mucilaginibacter sp. OK283,definition=arsenite transporter, ACR3 family	SEP25353	7.977	0.0250
-coded_by=complement(305717..306859),organism=Terrabacter sp. Root85,definition=arsenic transporter	KRC92068	1.088	0.0034
-coded_by=1386950..1388026,organism=Herbaspirillum sp. TSA66,definition=arsenic transporter	KIF80706	4.177	0.0131
-coded_by=600636..601715,organism=Acidobacteriales bacterium 59-55,definition=arsenical-resistance protein	OJV43459	4.861	0.0152
-coded_by=complement(254315..255400),organism=Mycobacterium peregrinum,definition=arsenical-resistance protein	OBB31205	13.766	0.0431
-coded_by=complement(624225..625301),organism=Phycicoccus sp. Root563,definition=arsenic transporter	KQZ90880	6.472	0.0203
-coded_by=complement(34769..35881),organism=Actinomadura sp. CNU-125,definition=arsenical-resistance protein	OLT13324	12.595	0.0395
-coded_by=complement(69374..70444),organism=Mucilaginibacter pineti,definition=arsenite transporter, ACR3 family	SDF60432	52.272000000000006	0.1637
-coded_by=132433..133515,organism=Flavisolibacter ginsengisoli DSM 18119,definition=arsenite transporter, ACR3 family	SHF48379	4.468	0.0140
-coded_by=584332..585450,organism=Mycobacterium europaeum,definition=arsenical-resistance protein	CQD03591	3.826	0.0120
-coded_by=39566..40699,organism=Gemmatimonadetes bacterium SCN 70-22,definition=arsenical-resistance protein	ODT04884	2.006	0.0063
-coded_by=49814..50896,organism=Opitutaceae bacterium TAV3,definition=arsenical-resistance protein	OAS29966	2.081	0.0065
-coded_by=complement(25419..26525),organism=Actinomadura sp. CNU-125,definition=arsenical-resistance protein	OLT12721	8.055	0.0252
-coded_by=6216058..6217164,organism=Kutzneria albida DSM 43870,definition=hypothetical protein	AHH98970	10.146	0.0318
-coded_by=complement(344..1474),organism=Mycobacterium kansasii,definition=arsenical-resistance protein	KZS49966	32.115	0.1006
-coded_by=1847..3055,organism=Actinobacteria bacterium RBG_16_68_12,definition=arsenical-resistance protein	OFW72001	16.035	0.0502
-coded_by=28418..29512,organism=Williamsia sp. D3,definition=arsenic transporter	ETD33790	21.149	0.0663
-coded_by=67800..68942,organism=Actinobacteria bacterium DSM 45722,definition=arsenite transporter, ACR3 family	SCX60646	7.007	0.0219
-coded_by=complement(1071158..1072231),organism=Tsukamurella tyrosinosolvens,definition=arsenic transporter	KXP06366	0.558	0.0017
-coded_by=3214..4293,organism=Rhodococcus rhodochrous ATCC 21198,definition=arsenical-resistance protein	ETT27691	10.253	0.0321

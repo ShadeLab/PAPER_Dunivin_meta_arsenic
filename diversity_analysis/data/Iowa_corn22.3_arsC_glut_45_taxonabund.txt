@@ -9,16 +9,3 @@ coded_by=<1..>350,organism=uncultured bacterium,definition=arsenate reductase	2.
 coded_by=complement(100211..100555),organism=Rhodanobacter glycinis,definition=arsenate reductase	2.385	0.0923
 coded_by=complement(2990537..2990938),organism=Bradyrhizobium sp. CCGE-LA001,definition=arsenate reductase	2.11	0.0817
 coded_by=3909847..3910269,organism=Massilia sp. WG5,definition=arsenate reductase	1.031	0.0399
-
-
-Lineage	MatchName	Abundance	Fraction Abundance
-coded_by=complement(4441..4785),organism=Rhodanobacter sp. RIFOXYA1_FULL_67_6,definition=arsenate reductase (glutaredoxin)	OHC44209	5.883	0.2277
-coded_by=<1..>350,organism=uncultured bacterium,definition=arsenate reductase	AIZ47780	2.574	0.0996
-coded_by=21497..21940,organism=Alphaproteobacteria bacterium 62-8,definition=arsenate reductase (glutaredoxin)	OJU58181	2.653	0.1027
-coded_by=3376961..3377326,organism=Lysobacter enzymogenes,definition=arsenate reductase	ALN58350	2.471	0.0956
-coded_by=complement(100211..100555),organism=Rhodanobacter glycinis,definition=arsenate reductase	SFK82735	2.385	0.0923
-coded_by=complement(90196..90540),organism=Rhodanobacter sp. Root561,definition=arsenate reductase	KQZ77535	3.453	0.1336
-coded_by=complement(2990537..2990938),organism=Bradyrhizobium sp. CCGE-LA001,definition=arsenate reductase	AMA57235	2.11	0.0817
-coded_by=3909847..3910269,organism=Massilia sp. WG5,definition=arsenate reductase	ALK99671	1.031	0.0399
-coded_by=489363..489728,organism=Lysobacter sp. yr284,definition=arsenate reductase	SDY23636	1.595	0.0617
-coded_by=complement(165771..166193),organism=Burkholderia multivorans ATCC 17616,definition=arsenate reductase	ABX19953	1.686	0.0652

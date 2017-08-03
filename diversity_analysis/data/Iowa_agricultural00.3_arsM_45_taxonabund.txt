@@ -6,19 +6,3 @@ coded_by=113701..114483,organism=Nakamurella multipartita DSM 44233,definition=M
 coded_by=79666..80523,organism=Humibacillus sp. DSM 29435,definition=arsenite S-adenosylmethyltransferase	1.61	0.0353
 coded_by=complement(3432375..3433205),organism=Pimelobacter simplex,definition=SAM-dependent methyltransferase DSY4148 (UbiE-like)	4.068	0.0892
 coded_by=<1..>347,organism=uncultured bacterium,definition=arsenite s-adenosylmethyltransferase	21.703999999999997	0.4761
-
-
-Lineage	MatchName	Abundance	Fraction Abundance
-coded_by=<1..>347,organism=uncultured bacterium,definition=arsenite s-adenosylmethyltransferase	AIZ48060	3.909	0.0858
-coded_by=113701..114483,organism=Nakamurella multipartita DSM 44233,definition=Methyltransferase type 11	ACV76538	2.717	0.0596
-coded_by=11162..11920,organism=Nitrosopumilus sp. BACL13 MAG-121220-bin23,definition=protein-L-isoaspartate(D-aspartate) O-methyltransferase	KRO29602	5.751	0.1262
-coded_by=<1..>347,organism=uncultured bacterium,definition=arsenite s-adenosylmethyltransferase	AIZ48189	2.788	0.0612
-coded_by=complement(3432375..3433205),organism=Pimelobacter simplex,definition=SAM-dependent methyltransferase DSY4148 (UbiE-like)	AIY18020	4.068	0.0892
-coded_by=<1..>347,organism=uncultured bacterium,definition=arsenite s-adenosylmethyltransferase	AIZ48187	3.377	0.0741
-coded_by=<1..>347,organism=uncultured bacterium,definition=arsenite s-adenosylmethyltransferase	AIZ47997	3.017	0.0662
-coded_by=<1..>347,organism=uncultured bacterium,definition=arsenite S-adenosylmethyltransferase	AFM97215	3.333	0.0731
-coded_by=79666..80523,organism=Humibacillus sp. DSM 29435,definition=arsenite S-adenosylmethyltransferase	OFE18383	1.61	0.0353
-coded_by=<1..>347,organism=uncultured bacterium,definition=arsenite s-adenosylmethyltransferase	AIZ48184	2.899	0.0636
-coded_by=<1..>347,organism=uncultured bacterium,definition=arsenite s-adenosylmethyltransferase	AIZ47879	3.037	0.0666
-coded_by=<1..>347,organism=uncultured bacterium,definition=arsenite S-adenosylmethionine methyltransferase	AKS26171	6.403	0.1405
-coded_by=<1..>347,organism=uncultured bacterium,definition=arsenite s-adenosylmethyltransferase	AIZ47951	2.677	0.0587

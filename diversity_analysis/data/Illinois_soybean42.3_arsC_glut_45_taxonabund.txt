@@ -2,9 +2,3 @@ Taxon	Abundance	Fraction Abundance
 coded_by=21497..21940,organism=Alphaproteobacteria bacterium 62-8,definition=arsenate reductase (glutaredoxin)	2.231	0.0672
 coded_by=complement(823595..823948),organism=Serratia marcescens,definition=arsenate reductase	1.757	0.0529
 coded_by=complement(7034318..7034719),organism=Bradyrhizobium diazoefficiens,definition=arsenate reductase	29.234	0.8800
-
-
-Lineage	MatchName	Abundance	Fraction Abundance
-coded_by=complement(823595..823948),organism=Serratia marcescens,definition=arsenate reductase	CVG61994	1.757	0.0529
-coded_by=complement(7034318..7034719),organism=Bradyrhizobium diazoefficiens,definition=arsenate reductase	BAR60273	29.234	0.8800
-coded_by=21497..21940,organism=Alphaproteobacteria bacterium 62-8,definition=arsenate reductase (glutaredoxin)	OJU58181	2.231	0.0672

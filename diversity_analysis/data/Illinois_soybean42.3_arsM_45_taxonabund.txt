@@ -1,8 +1,3 @@
 Taxon	Abundance	Fraction Abundance
 coded_by=11162..11920,organism=Nitrosopumilus sp. BACL13 MAG-121220-bin23,definition=protein-L-isoaspartate(D-aspartate) O-methyltransferase	4.746	0.4027
 coded_by=330961..331719,organism=Candidatus Nitrosotalea devanaterra,definition=Methyltransferase type 11	7.038	0.5973
-
-
-Lineage	MatchName	Abundance	Fraction Abundance
-coded_by=11162..11920,organism=Nitrosopumilus sp. BACL13 MAG-121220-bin23,definition=protein-L-isoaspartate(D-aspartate) O-methyltransferase	KRO29602	4.746	0.4027
-coded_by=330961..331719,organism=Candidatus Nitrosotalea devanaterra,definition=Methyltransferase type 11	CUR51123	7.038	0.5973

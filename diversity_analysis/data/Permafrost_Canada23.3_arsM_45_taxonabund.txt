@@ -15,26 +15,3 @@ coded_by=complement(442254..443009),organism=Intrasporangium calvum DSM 43043,de
 coded_by=complement(2527..3357),organism=Actinobacteria bacterium RBG_16_70_17,definition=hypothetical protein	5.917	0.0335
 coded_by=complement(4339..5154),organism=Candidatus Rokubacteria bacterium RIFCSPHIGHO2_02_FULL_73_26,definition=arsenite S-adenosylmethyltransferase	1.978	0.0112
 coded_by=3610315..3611220,organism=Rubinisphaera brasiliensis DSM 5305,definition=Methyltransferase type 11	2.638	0.0149
-
-
-Lineage	MatchName	Abundance	Fraction Abundance
-coded_by=<1..>347,organism=uncultured bacterium,definition=arsenite s-adenosylmethyltransferase	AIZ48106	2.834	0.0160
-coded_by=complement(2527..3357),organism=Actinobacteria bacterium RBG_16_70_17,definition=hypothetical protein	OFW52718	5.917	0.0335
-coded_by=complement(4339..5154),organism=Candidatus Rokubacteria bacterium RIFCSPHIGHO2_02_FULL_73_26,definition=arsenite S-adenosylmethyltransferase	OGK95185	1.978	0.0112
-coded_by=<1..>347,organism=uncultured bacterium,definition=arsenite s-adenosylmethyltransferase	AIZ48095	2.829	0.0160
-coded_by=3610315..3611220,organism=Rubinisphaera brasiliensis DSM 5305,definition=Methyltransferase type 11	ADY60590	2.638	0.0149
-coded_by=complement(8841..9599),organism=Actinobacteria bacterium 13_2_20CM_2_66_6,definition=hypothetical protein	OLB95250	43.827	0.2479
-coded_by=complement(2784321..2785109),organism=Polaromonas sp. JS666,definition=Methyltransferase type 11	ABE44561	12.094	0.0684
-coded_by=complement(1678..2499),organism=Actinobacteria bacterium RBG_16_70_17,definition=hypothetical protein	OFW52706	11.172	0.0632
-coded_by=<1..>347,organism=uncultured bacterium,definition=arsenite s-adenosylmethyltransferase	AIZ47928	15.741	0.0890
-coded_by=complement(442254..443009),organism=Intrasporangium calvum DSM 43043,definition=Methyltransferase type 11	ADU46956	1.434	0.0081
-coded_by=complement(4058760..4059569),organism=Microlunatus phosphovorus NM-1,definition=putative methyltransferase	BAK36772	2.122	0.0120
-coded_by=complement(53447..54337),organism=Streptomyces mangrovisoli,definition=arsenite S-adenosylmethyltransferase	OIJ64374	3.513	0.0199
-coded_by=6025..6759,organism=Solirubrobacterales bacterium 70-9,definition=arsenite S-adenosylmethyltransferase	OJU80617	4.192	0.0237
-coded_by=79731..>80588,organism=Chloroflexi bacterium RBG_16_70_13,definition=hypothetical protein	OGO55090	1.928	0.0109
-coded_by=<1..>347,organism=uncultured bacterium,definition=arsenite s-adenosylmethyltransferase	AIZ48244	5.471	0.0309
-coded_by=<1..>324,organism=uncultured bacterium,definition=ArsM	AKN42714	9.678	0.0547
-coded_by=complement(2467..3213),organism=Actinobacteria bacterium 13_2_20CM_2_66_6,definition=hypothetical protein	OLB92933	7.234	0.0409
-coded_by=583..1341,organism=Actinobacteria bacterium 13_1_20CM_2_66_18,definition=hypothetical protein	OLE72196	11.807	0.0668
-coded_by=complement(1300..2193),organism=Geodermatophilus sp. DSM 44208,definition=Methyltransferase domain-containing protein	SFP99197	1.385	0.0078
-coded_by=<1..>347,organism=uncultured bacterium,definition=arsenite s-adenosylmethyltransferase	AIZ47874	29.008	0.1641

@@ -1,8 +1,3 @@
 Taxon	Abundance	Fraction Abundance
 Verrucomicrobia	6.417	0.2740
 Alphaproteobacteria	17.003999999999998	0.7260
-
-
-Lineage	MatchName	Abundance	Fraction Abundance
-Bacteria;Verrucomicrobia;Spartobacteria;Chthoniobacter	196227372_Chthoniobacter_flavus_Ellin428	6.417	0.2740
-Bacteria;Proteobacteria;Alphaproteobacteria;Rhizobiales;Bradyrhizobiaceae;Bradyrhizobium	354952622_Bradyrhizobium_japonicum_USDA_6	17.003999999999998	0.7260

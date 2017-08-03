@@ -4,11 +4,3 @@ coded_by=2036569..2036928,organism=Bacillus cereus F837/76,definition=Arsenical 
 coded_by=complement(38934..39293),organism=Achromobacter sp. 2789STDY5608606,definition=Arsenical resistance operon trans-acting repressor ArsD	1.242	0.1187
 coded_by=complement(34842..35228),organism=Actinotalea fermentans ATCC 43279 = JCM 9966 = DSM 3133,definition=hypothetical protein	3.457	0.3304
 coded_by=10667..11029,organism=Propionivibrio sp. S1,definition=Arsenical resistance operon trans-acting repressor ArsD	1.0	0.0956
-
-
-Lineage	MatchName	Abundance	Fraction Abundance
-coded_by=complement(34842..35228),organism=Actinotalea fermentans ATCC 43279 = JCM 9966 = DSM 3133,definition=hypothetical protein	KGM17810	3.457	0.3304
-coded_by=complement(38934..39293),organism=Achromobacter sp. 2789STDY5608606,definition=Arsenical resistance operon trans-acting repressor ArsD	CUJ38276	1.242	0.1187
-coded_by=complement(47464..47844),organism=Nocardia asteroides NBRC 15531,definition=arsenic resistance operon repressor ArsD	GAD83344	1.0	0.0956
-coded_by=10667..11029,organism=Propionivibrio sp. S1,definition=Arsenical resistance operon trans-acting repressor ArsD	SBT03702	1.0	0.0956
-coded_by=2036569..2036928,organism=Bacillus cereus F837/76,definition=Arsenical resistance operon trans-acting repressor ArsD	AEW55290	3.765	0.3598

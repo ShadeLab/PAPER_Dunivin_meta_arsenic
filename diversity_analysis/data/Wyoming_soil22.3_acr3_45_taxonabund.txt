@@ -1,6 +1,2 @@
 Taxon	Abundance	Fraction Abundance
 coded_by=complement(180646..181731),organism=Belnapia rosea,definition=arsenite transporter, ACR3 family	2.934	1.0000
-
-
-Lineage	MatchName	Abundance	Fraction Abundance
-coded_by=complement(180646..181731),organism=Belnapia rosea,definition=arsenite transporter, ACR3 family	SDB69081	2.934	1.0000

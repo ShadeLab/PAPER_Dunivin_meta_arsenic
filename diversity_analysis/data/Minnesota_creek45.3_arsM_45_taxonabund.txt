@@ -1,8 +1,3 @@
 Taxon	Abundance	Fraction Abundance
 coded_by=622570..623361,organism=Conexibacter woesei DSM 14684,definition=Methyltransferase type 11	3.357	0.5018
 coded_by=complement(4876..5652),organism=Verrucomicrobia bacterium 13_1_20CM_3_54_17,definition=arsenite S-adenosylmethyltransferase	3.333	0.4982
-
-
-Lineage	MatchName	Abundance	Fraction Abundance
-coded_by=622570..623361,organism=Conexibacter woesei DSM 14684,definition=Methyltransferase type 11	ADB49026	3.357	0.5018
-coded_by=complement(4876..5652),organism=Verrucomicrobia bacterium 13_1_20CM_3_54_17,definition=arsenite S-adenosylmethyltransferase	OLE13587	3.333	0.4982

@@ -3,11 +3,3 @@ coded_by=complement(10710..11504),organism=Gemmatimonadetes bacterium 13_1_40CM_
 coded_by=complement(67098..68069),organism=Gemmatimonadetes bacterium SCN 70-22,definition=arsenite S-adenosylmethyltransferase	3.451	0.2042
 coded_by=<1..>347,organism=uncultured bacterium,definition=arsenite s-adenosylmethyltransferase	8.492	0.5025
 coded_by=<1..>324,organism=uncultured bacterium,definition=ArsM	2.061	0.1220
-
-
-Lineage	MatchName	Abundance	Fraction Abundance
-coded_by=complement(10710..11504),organism=Gemmatimonadetes bacterium 13_1_40CM_3_69_22,definition=arsenite S-adenosylmethyltransferase	OLD03445	2.896	0.1714
-coded_by=complement(67098..68069),organism=Gemmatimonadetes bacterium SCN 70-22,definition=arsenite S-adenosylmethyltransferase	ODT04205	3.451	0.2042
-coded_by=<1..>347,organism=uncultured bacterium,definition=arsenite s-adenosylmethyltransferase	AIZ48177	3.623	0.2144
-coded_by=<1..>324,organism=uncultured bacterium,definition=ArsM	AKN41490	2.061	0.1220
-coded_by=<1..>347,organism=uncultured bacterium,definition=arsenite s-adenosylmethyltransferase	AIZ47943	4.869	0.2881

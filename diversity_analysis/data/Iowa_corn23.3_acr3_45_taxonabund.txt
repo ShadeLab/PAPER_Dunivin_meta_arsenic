@@ -1,8 +1,3 @@
 Taxon	Abundance	Fraction Abundance
 coded_by=39566..40699,organism=Gemmatimonadetes bacterium SCN 70-22,definition=arsenical-resistance protein	3.914	0.5694
 coded_by=complement(4538..5572),organism=Arenimonas sp. SCN 70-307,definition=arsenical-resistance protein	2.96	0.4306
-
-
-Lineage	MatchName	Abundance	Fraction Abundance
-coded_by=complement(4538..5572),organism=Arenimonas sp. SCN 70-307,definition=arsenical-resistance protein	ODS62024	2.96	0.4306
-coded_by=39566..40699,organism=Gemmatimonadetes bacterium SCN 70-22,definition=arsenical-resistance protein	ODT04884	3.914	0.5694

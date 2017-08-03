@@ -2,9 +2,3 @@ Taxon	Abundance	Fraction Abundance
 coded_by=<1..>347,organism=uncultured bacterium,definition=arsenite s-adenosylmethyltransferase	2.01	0.3936
 coded_by=complement(4876..5652),organism=Verrucomicrobia bacterium 13_1_20CM_3_54_17,definition=arsenite S-adenosylmethyltransferase	2.063	0.4040
 coded_by=3962547..3963350,organism=Nocardioides sp. JS614,definition=Methyltransferase type 11	1.034	0.2025
-
-
-Lineage	MatchName	Abundance	Fraction Abundance
-coded_by=complement(4876..5652),organism=Verrucomicrobia bacterium 13_1_20CM_3_54_17,definition=arsenite S-adenosylmethyltransferase	OLE13587	2.063	0.4040
-coded_by=<1..>347,organism=uncultured bacterium,definition=arsenite s-adenosylmethyltransferase	AIZ48002	2.01	0.3936
-coded_by=3962547..3963350,organism=Nocardioides sp. JS614,definition=Methyltransferase type 11	ABL83243	1.034	0.2025

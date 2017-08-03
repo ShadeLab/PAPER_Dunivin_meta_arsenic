@@ -1,6 +1,2 @@
 Taxon	Abundance	Fraction Abundance
 coded_by=1115228..1117714,organism=Ralstonia solanacearum PSI07,definition=Arsenite oxidase large subunit (AOI)	2.406	1.0000
-
-
-Lineage	MatchName	Abundance	Fraction Abundance
-coded_by=1115228..1117714,organism=Ralstonia solanacearum PSI07,definition=Arsenite oxidase large subunit (AOI)	CBJ35261	2.406	1.0000

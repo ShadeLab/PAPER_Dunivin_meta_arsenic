@@ -16,29 +16,3 @@ coded_by=complement(<1..553),organism=marine sediment metagenome,definition=Mari
 coded_by=complement(4048..>4709),organism=Anaerolineae bacterium CG1_02_58_13,definition=arsenite S-adenosylmethyltransferase	1.35	0.0230
 coded_by=<1..>347,organism=uncultured bacterium,definition=arsenite s-adenosylmethyltransferase	13.811	0.2358
 coded_by=3507..4244,organism=Candidatus Buchananbacteria bacterium RIFCSPLOWO2_01_FULL_46_12,definition=arsenite S-adenosylmethyltransferase	2.149	0.0367
-
-
-Lineage	MatchName	Abundance	Fraction Abundance
-coded_by=complement(2621..3436),organism=Acidobacteria bacterium 13_1_40CM_2_68_5,definition=hypothetical protein	OLD64941	1.216	0.0208
-coded_by=<1..>347,organism=uncultured bacterium,definition=arsenite s-adenosylmethyltransferase	AIZ47922	0.935	0.0160
-coded_by=<1..>347,organism=uncultured bacterium,definition=arsenite s-adenosylmethyltransferase	AIZ48090	1.493	0.0255
-coded_by=complement(4048..>4709),organism=Anaerolineae bacterium CG1_02_58_13,definition=arsenite S-adenosylmethyltransferase	OIN95313	1.35	0.0230
-coded_by=<1..>324,organism=uncultured bacterium,definition=ArsM	AKN41568	2.485	0.0424
-coded_by=<1..>347,organism=uncultured bacterium,definition=arsenite s-adenosylmethyltransferase	AIZ48096	2.388	0.0408
-coded_by=<1..>347,organism=uncultured bacterium,definition=arsenite s-adenosylmethyltransferase	AIZ48070	2.851	0.0487
-coded_by=complement(2901154..2902023),organism=Candidatus Tenderia electrophaga,definition=arsenite S-adenosylmethyltransferase	ALP54027	1.444	0.0246
-coded_by=<1..>323,organism=uncultured bacterium,definition=ArsM	AKN41927	3.278	0.0560
-coded_by=<1..>323,organism=uncultured bacterium,definition=ArsM	AKN44161	11.984	0.2046
-coded_by=<1..>347,organism=uncultured bacterium,definition=arsenite s-adenosylmethyltransferase	AIZ48067	1.548	0.0264
-coded_by=<1..>347,organism=uncultured bacterium,definition=arsenite s-adenosylmethyltransferase	AIZ48255	4.596	0.0785
-coded_by=<1..>325,organism=uncultured bacterium,definition=ArsM	AKN44072	2.3520000000000003	0.0401
-coded_by=complement(7488..8321),organism=Zetaproteobacteria bacterium CG1_02_49_23,definition=arsenite S-adenosylmethyltransferase	OIO66169	1.225	0.0209
-coded_by=complement(28593..29381),organism=Acidobacteria bacterium RIFCSPLOWO2_02_FULL_61_28,definition=arsenite S-adenosylmethyltransferase	OFV98651	1.348	0.0230
-coded_by=3642..4457,organism=Planctomycetes bacterium GWC2_45_44,definition=arsenite S-adenosylmethyltransferase	OHB43282	1.377	0.0235
-coded_by=complement(1830..2645),organism=Planctomycetes bacterium RBG_19FT_COMBO_48_8,definition=arsenite S-adenosylmethyltransferase	OHB81137	2.402	0.0410
-coded_by=complement(<1..553),organism=marine sediment metagenome,definition=Marine sediment metagenome DNA, contig: S12H4_S18364, whole genome shotgun sequence	GAJ03244	1.676	0.0286
-coded_by=complement(1742..2608),organism=Anaerolineae bacterium SG8_19,definition=hypothetical protein	KPK05013	3.8899999999999997	0.0664
-coded_by=10554..11366,organism=Mariprofundus ferrooxydans PV-1,definition=hypothetical protein	EAU55846	4.753	0.0811
-coded_by=complement(4653..5456),organism=Acidithiobacillales bacterium SM23_46,definition=arsenite S-adenosylmethyltransferase	KPK71244	0.605	0.0103
-coded_by=3507..4244,organism=Candidatus Buchananbacteria bacterium RIFCSPLOWO2_01_FULL_46_12,definition=arsenite S-adenosylmethyltransferase	OGY54001	2.149	0.0367
-coded_by=27543..28343,organism=sediment metagenome,definition=protein containing Methyltransferase type 11 domain	EFK97401	1.238	0.0211

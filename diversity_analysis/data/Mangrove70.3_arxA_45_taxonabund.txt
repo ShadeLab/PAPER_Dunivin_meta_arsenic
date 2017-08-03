@@ -1,8 +1,3 @@
 Taxon	Abundance	Fraction Abundance
 coded_by=5490..7997,organism=Spirochaeta sp. JC202,definition=dehydrogenase	168.48699999999994	0.9465
 coded_by=41311..43977,organism=Halomonas daqiaonensis,definition=Tat (twin-arginine translocation) pathway signal sequence	9.519	0.0535
-
-
-Lineage	MatchName	Abundance	Fraction Abundance
-coded_by=41311..43977,organism=Halomonas daqiaonensis,definition=Tat (twin-arginine translocation) pathway signal sequence	SEL69453	9.519	0.0535
-coded_by=5490..7997,organism=Spirochaeta sp. JC202,definition=dehydrogenase	KGM43415	168.48699999999994	0.9465

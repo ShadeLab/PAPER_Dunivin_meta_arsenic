@@ -10,18 +10,3 @@ coded_by=complement(5751..6179),organism=Sphingomonas sp. RIT328,definition=Arse
 coded_by=<1..>350,organism=uncultured bacterium,definition=arsenate reductase	2.7800000000000002	0.0975
 coded_by=210944..211354,organism=Bradyrhizobium arachidis,definition=arsenate reductase	2.302	0.0808
 coded_by=88441..88842,organism=Bradyrhizobium sp. BR 10245,definition=arsenate reductase	1.821	0.0639
-
-
-Lineage	MatchName	Abundance	Fraction Abundance
-coded_by=33931..34332,organism=Bradyrhizobium sp. AS23.2,definition=arsenate reductase	OKO75242	3.238	0.1136
-coded_by=6870121..6870528,organism=Bradyrhizobium erythrophlei,definition=arsenate reductase	SIO51424	2.998	0.1052
-coded_by=<1..>350,organism=uncultured bacterium,definition=arsenate reductase	AKS30182	1.72	0.0603
-coded_by=complement(5751..6179),organism=Sphingomonas sp. RIT328,definition=Arsenate reductase	EZP51247	1.938	0.0680
-coded_by=4154..4591,organism=Methylobacterium sp. Leaf100,definition=arsenate reductase	KQP27065	1.902	0.0667
-coded_by=21497..21940,organism=Alphaproteobacteria bacterium 62-8,definition=arsenate reductase (glutaredoxin)	OJU58181	5.5729999999999995	0.1955
-coded_by=complement(879795..880217),organism=Mesorhizobium sp. WSM1497,definition=arsenate reductase (glutaredoxin)	OBQ89115	1.823	0.0640
-coded_by=88441..88842,organism=Bradyrhizobium sp. BR 10245,definition=arsenate reductase	OAF07780	1.821	0.0639
-coded_by=210944..211354,organism=Bradyrhizobium arachidis,definition=arsenate reductase	SFU96734	2.302	0.0808
-coded_by=complement(1887353..1887709),organism=Hahella chejuensis KCTC 2396,definition=arsenate reductase	ABC28695	1.456	0.0511
-coded_by=<1..>350,organism=uncultured bacterium,definition=arsenate reductase	AIZ47800	1.06	0.0372
-coded_by=83827..84252,organism=bacterium YEK0313,definition=Arsenate reductase	CEJ16142	2.673	0.0938

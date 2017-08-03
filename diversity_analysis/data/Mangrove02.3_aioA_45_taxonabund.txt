@@ -1,8 +1,3 @@
 Taxon	Abundance	Fraction Abundance
 coded_by=31646..34102,organism=Thalassobius gelatinovorus,definition=Arsenite oxidase subunit AioA	1.284	0.4766
 coded_by=87600..90059,organism=Amphritea atlantica,definition=arsenite oxidase large subunit	1.41	0.5234
-
-
-Lineage	MatchName	Abundance	Fraction Abundance
-coded_by=87600..90059,organism=Amphritea atlantica,definition=arsenite oxidase large subunit	SEQ37348	1.41	0.5234
-coded_by=31646..34102,organism=Thalassobius gelatinovorus,definition=Arsenite oxidase subunit AioA	CUH67124	1.284	0.4766

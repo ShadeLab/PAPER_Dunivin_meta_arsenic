@@ -11,18 +11,3 @@ coded_by=33070..33495,organism=Afipia sp. P52-10,definition=arsenate reductase	1
 coded_by=complement(33566..33973),organism=Bradyrhizobium lablabi,definition=arsenate reductase	0.835	0.0439
 coded_by=32519..32926,organism=Bradyrhizobium jicamae,definition=arsenate reductase	0.894	0.0470
 coded_by=<1..>350,organism=uncultured bacterium,definition=arsenate reductase	1.0	0.0526
-
-
-Lineage	MatchName	Abundance	Fraction Abundance
-coded_by=complement(33566..33973),organism=Bradyrhizobium lablabi,definition=arsenate reductase	SEB83657	0.835	0.0439
-coded_by=67950..68360,organism=Bradyrhizobium sp. cf659,definition=arsenate reductase	SFJ27075	2.495	0.1311
-coded_by=5115407..5115751,organism=Mycobacterium sp. JS623,definition=glutaredoxin-dependent arsenate reductase	AGB25366	1.403	0.0737
-coded_by=<1..>350,organism=uncultured bacterium,definition=arsenate reductase	AKS30152	1.0	0.0526
-coded_by=21497..21940,organism=Alphaproteobacteria bacterium 62-8,definition=arsenate reductase (glutaredoxin)	OJU58181	4.382	0.2303
-coded_by=33070..33495,organism=Afipia sp. P52-10,definition=arsenate reductase	ETR79372	1.945	0.1022
-coded_by=32519..32926,organism=Bradyrhizobium jicamae,definition=arsenate reductase	KRQ98516	0.894	0.0470
-coded_by=66858..67211,organism=Pseudomonas alcaligenes NBRC 14159,definition=putative oxidoreductase	GAD62604	1.223	0.0643
-coded_by=complement(49351..49728),organism=Mycobacterium sp. 1274761.0,definition=arsenate reductase (glutaredoxin)	OBK80087	1.0	0.0526
-coded_by=54311..54712,organism=Rhizobium freirei PRF 81,definition=arsenate reductase	ENN86364	1.696	0.0891
-coded_by=3373127..3373498,organism=Hyphomicrobium denitrificans 1NES1,definition=arsenate reductase	AGK59580	1.0	0.0526
-coded_by=<1..>353,organism=uncultured bacterium,definition=arsenate reductase	AKS30197	1.156	0.0607

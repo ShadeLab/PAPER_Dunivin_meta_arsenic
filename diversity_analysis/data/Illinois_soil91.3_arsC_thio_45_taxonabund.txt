@@ -4,11 +4,3 @@ coded_by=597908..598402,organism=Alicyclobacillus acidocaldarius subsp. acidocal
 coded_by=1698140..1698535,organism=Staphylococcus saprophyticus subsp. saprophyticus ATCC 15305,definition=arsenate reductase	1.0	0.1478
 coded_by=2383..2778,organism=Staphylococcus aureus,definition=ArsC	2.0	0.2956
 coded_by=complement(1031547..1031969),organism=Enterococcus faecium DO,definition=arsenate reductase (glutaredoxin)	1.0	0.1478
-
-
-Lineage	MatchName	Abundance	Fraction Abundance
-coded_by=2383..2778,organism=Staphylococcus aureus,definition=ArsC	AAP32334	2.0	0.2956
-coded_by=669278..669697,organism=Lactobacillus paraplantarum,definition=arsenate reductase	ALO03418	1.765	0.2609
-coded_by=1698140..1698535,organism=Staphylococcus saprophyticus subsp. saprophyticus ATCC 15305,definition=arsenate reductase	BAE18778	1.0	0.1478
-coded_by=597908..598402,organism=Alicyclobacillus acidocaldarius subsp. acidocaldarius DSM 446,definition=arsenate reductase (thioredoxin)	ACV57588	1.0	0.1478
-coded_by=complement(1031547..1031969),organism=Enterococcus faecium DO,definition=arsenate reductase (glutaredoxin)	AFK58669	1.0	0.1478
