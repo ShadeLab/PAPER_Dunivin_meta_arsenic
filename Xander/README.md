@@ -1,5 +1,5 @@
 I used [Xander](https://github.com/rdpstaff/Xander_assembler), a gene-targeted metagenome assembler, to assemble contigs from my genes of interest. 
-* [Xander results for AsRG](https://github.com/ShadeLab/meta_arsenic/blob/master/Xander/Xander_results)
+* [Xander results for AsRG](https://github.com/ShadeLab/meta_arsenic/blob/master/Xander/Xander_results.md)
 * Scripts used:
     * Location: /mnt/research/ShadeLab/WorkingSpace/Yeh/xander/SAMPLE
     * [`xander.qsub`](https://github.com/ShadeLab/meta_arsenic/blob/master/Xander/xander.qsub) builds, searches, and finds contigs of the gene of interest in the metagenome
