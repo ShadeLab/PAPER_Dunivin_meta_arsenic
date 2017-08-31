@@ -1,5 +1,6 @@
-#from Taylor's meta_arg_rplB.R: https://github.com/ShadeLab/Xander_arsenic/tree/master/diversity_analysis
-#read dependencies
+#from  https://github.com/ShadeLab/meta_arsenic/tree/master/diversity_analysis
+
+#load required packages
 library(phyloseq)
 library(vegan)
 library(tidyverse)
@@ -13,18 +14,13 @@ wd <- print(getwd())
 #read in metadata
 meta <- data.frame(read_delim(file = paste(wd, "/data/metadata.txt", sep = ""), delim = "\t"))
 
-#read in microbe census data
-census <- read_delim(file = paste(wd, "/microbe_census.txt", sep = ""),
-                     delim = "\t", col_types = list(col_character(), col_number(),
-                                                    col_number(), col_number()))
-
 #read in gene classification data
 gene <- read_delim(paste(wd, "/data/gene_classification.txt",  sep=""), 
                    delim = "\t", col_names = TRUE)
 
-####################################
+#########################
 #READ IN AND SET UP DATA#
-####################################
+#########################
 
 #temporarily change working directory to data to bulk load files
 setwd(paste(wd, "/data", sep = ""))
