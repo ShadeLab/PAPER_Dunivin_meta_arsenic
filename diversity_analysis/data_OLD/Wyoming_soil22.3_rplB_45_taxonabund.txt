@@ -1,7 +1,0 @@
-Taxon	Abundance	Fraction Abundance
-Chloroflexi	10.559	0.0494
-Acidobacteria	2.557	0.0120
-Deltaproteobacteria	1.33	0.0062
-Alphaproteobacteria	12.059000000000001	0.0564
-Actinobacteria	175.87499999999991	0.8231
-Firmicutes	11.298000000000002	0.0529

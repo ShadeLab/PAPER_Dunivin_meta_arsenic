@@ -1,3 +1,0 @@
-Taxon	Abundance	Fraction Abundance
-coded_by=complement(1928..2356),organism=Alicyclobacillus tengchongensis,definition=arsenate reductase	1.0	0.5000
-coded_by=complement(9922..10341),organism=Bacillus vireti LMG 21834,definition=arsenate reductase	1.0	0.5000

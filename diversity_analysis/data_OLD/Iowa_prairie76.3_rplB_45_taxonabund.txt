@@ -1,9 +1,0 @@
-Taxon	Abundance	Fraction Abundance
-Acidobacteria	5.486	0.0381
-Deltaproteobacteria	6.89	0.0478
-Aquificae	4.175	0.0290
-Verrucomicrobia	107.40199999999999	0.7451
-Actinobacteria	3.899	0.0270
-Alphaproteobacteria	7.024	0.0487
-Firmicutes	3.884	0.0269
-environmentalsamples	5.393	0.0374

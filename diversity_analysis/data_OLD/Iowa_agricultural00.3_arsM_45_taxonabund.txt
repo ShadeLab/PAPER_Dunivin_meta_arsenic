@@ -1,8 +1,0 @@
-Taxon	Abundance	Fraction Abundance
-coded_by=11162..11920,organism=Nitrosopumilus sp. BACL13 MAG-121220-bin23,definition=protein-L-isoaspartate(D-aspartate) O-methyltransferase	5.751	0.1262
-coded_by=<1..>347,organism=uncultured bacterium,definition=arsenite S-adenosylmethionine methyltransferase	6.403	0.1405
-coded_by=<1..>347,organism=uncultured bacterium,definition=arsenite S-adenosylmethyltransferase	3.333	0.0731
-coded_by=113701..114483,organism=Nakamurella multipartita DSM 44233,definition=Methyltransferase type 11	2.717	0.0596
-coded_by=79666..80523,organism=Humibacillus sp. DSM 29435,definition=arsenite S-adenosylmethyltransferase	1.61	0.0353
-coded_by=complement(3432375..3433205),organism=Pimelobacter simplex,definition=SAM-dependent methyltransferase DSY4148 (UbiE-like)	4.068	0.0892
-coded_by=<1..>347,organism=uncultured bacterium,definition=arsenite s-adenosylmethyltransferase	21.703999999999997	0.4761

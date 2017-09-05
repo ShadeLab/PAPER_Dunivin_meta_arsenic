@@ -1,4 +1,0 @@
-Taxon	Abundance	Fraction Abundance
-coded_by=complement(2846927..2847346),organism=Geobacillus sp. JS12,definition=arsenate reductase	1.033	0.2583
-coded_by=20684..21103,organism=Bacillus sp. MRMR6,definition=arsenate reductase (thioredoxin)	1.0	0.2501
-coded_by=30086..30505,organism=Bacillus sp. SA1-12,definition=arsenate reductase	1.966	0.4916

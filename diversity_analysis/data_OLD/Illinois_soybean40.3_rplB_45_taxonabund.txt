@@ -1,4 +1,0 @@
-Taxon	Abundance	Fraction Abundance
-Thermodesulfobacteria	4.043	0.3744
-Chloroflexi	2.793	0.2586
-Actinobacteria	3.964	0.3670

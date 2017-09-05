@@ -1,2 +1,0 @@
-Taxon	Abundance	Fraction Abundance
-coded_by=complement(58582..59877),organism=Methylobacterium pseudosasicola,definition=arsenite efflux membrane protein ArsB	3.173	1.0000

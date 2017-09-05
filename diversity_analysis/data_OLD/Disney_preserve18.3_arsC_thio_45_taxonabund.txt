@@ -1,2 +1,0 @@
-Taxon	Abundance	Fraction Abundance
-coded_by=complement(2846927..2847346),organism=Geobacillus sp. JS12,definition=arsenate reductase	1.017	1.0000

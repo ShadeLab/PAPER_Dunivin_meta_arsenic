@@ -1,2 +1,0 @@
-Taxon	Abundance	Fraction Abundance
-coded_by=complement(join(441004..441884,441940..442116,442174..442288)),organism=Stemphylium lycopersici,definition=arsenical-resistance protein	12.035	1.0000

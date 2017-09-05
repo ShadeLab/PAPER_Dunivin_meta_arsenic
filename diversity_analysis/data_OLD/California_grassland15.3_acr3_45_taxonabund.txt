@@ -1,5 +1,0 @@
-Taxon	Abundance	Fraction Abundance
-coded_by=6623065..6624171,organism=Actinoplanes sp. N902-109,definition=arsenical-resistance protein	1.151	0.0834
-coded_by=3231002..3232141,organism=Verrucosispora maris AB-18-032,definition=arsenical-resistance protein	1.207	0.0875
-coded_by=284023..285093,organism=Rhizobium sp. Leaf321,definition=arsenic resistance protein ArsB	7.035	0.5100
-coded_by=complement(join(441004..441884,441940..442116,442174..442288)),organism=Stemphylium lycopersici,definition=arsenical-resistance protein	4.402	0.3191

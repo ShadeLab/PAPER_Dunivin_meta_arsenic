@@ -1,4 +1,0 @@
-Taxon	Abundance	Fraction Abundance
-coded_by=21497..21940,organism=Alphaproteobacteria bacterium 62-8,definition=arsenate reductase (glutaredoxin)	1.293	0.3110
-coded_by=1666120..1666521,organism=Bradyrhizobium sp.,definition=Arsenate reductase EC 12041	1.574	0.3786
-coded_by=21059..21481,organism=Skermanella stibiiresistens SB22,definition=arsenate reductase	1.29	0.3103

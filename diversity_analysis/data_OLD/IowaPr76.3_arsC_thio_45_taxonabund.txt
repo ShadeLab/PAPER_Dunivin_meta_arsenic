@@ -1,2 +1,0 @@
-Taxon	Abundance	Fraction Abundance
-coded_by=complement(355133..355558),organism=Alicyclobacillus ferrooxydans,definition=arsenate reductase	2.043	1.0000

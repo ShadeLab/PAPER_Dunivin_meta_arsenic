@@ -1,3 +1,0 @@
-Taxon	Abundance	Fraction Abundance
-coded_by=<1..>347,organism=uncultured bacterium,definition=arsenite s-adenosylmethyltransferase	12.306000000000001	0.7138
-coded_by=<1..>324,organism=uncultured bacterium,definition=ArsM	4.9350000000000005	0.2862

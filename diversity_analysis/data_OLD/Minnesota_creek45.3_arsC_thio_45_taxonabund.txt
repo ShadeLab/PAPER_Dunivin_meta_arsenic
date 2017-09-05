@@ -1,2 +1,0 @@
-Taxon	Abundance	Fraction Abundance
-coded_by=1608651..1609046,organism=Macrococcus caseolyticus JCSC5402,definition=arsenate reductase	1.835	1.0000

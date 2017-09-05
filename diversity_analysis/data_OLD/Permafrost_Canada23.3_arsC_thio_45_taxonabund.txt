@@ -1,3 +1,0 @@
-Taxon	Abundance	Fraction Abundance
-coded_by=complement(2094..2510),organism=Lactobacillus mali KCTC 3596 = DSM 20444,definition=arsenate reductase	3.0	0.6436
-coded_by=2383..2778,organism=Staphylococcus aureus,definition=ArsC	1.661	0.3564

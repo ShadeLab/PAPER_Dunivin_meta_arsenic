@@ -1,3 +1,0 @@
-Taxon	Abundance	Fraction Abundance
-coded_by=23247..24341,organism=Deltaproteobacteria bacterium RIFCSPLOWO2_12_FULL_60_19,definition=arsenical-resistance protein	5.159	0.7138
-coded_by=7241..>8155,organism=Candidatus Fischerbacteria bacterium RBG_13_37_8,definition=arsenical-resistance protein	2.069	0.2862

@@ -1,8 +1,0 @@
-Taxon	Abundance	Fraction Abundance
-coded_by=complement(515787..516185),organism=Mesorhizobium sp. SOD10,definition=arsenate reductase	1.872	0.1717
-coded_by=complement(58978..59331),organism=Pseudomonas stutzeri,definition=arsenate reductase (glutaredoxin)	1.0	0.0917
-coded_by=65572..65991,organism=Afipia clevelandensis ATCC 49720,definition=arsenate reductase (glutaredoxin)	1.535	0.1408
-coded_by=5448..5882,organism=Acinetobacter ursingii ANC 3649,definition=arsenate reductase (glutaredoxin)	1.0	0.0917
-coded_by=50036..50473,organism=Acetobacteraceae bacterium AT-5844,definition=arsenate reductase	1.769	0.1623
-coded_by=<1..>350,organism=uncultured bacterium,definition=arsenate reductase	1.731	0.1588
-coded_by=3037590..3038012,organism=Burkholderia xenovorans LB400,definition=Arsenate reductase	1.995	0.1830

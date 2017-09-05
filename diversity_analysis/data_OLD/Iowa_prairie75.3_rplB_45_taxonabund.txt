@@ -1,6 +1,0 @@
-Taxon	Abundance	Fraction Abundance
-Acidobacteria	19.269	0.1258
-Verrucomicrobia	121.32800000000003	0.7919
-Betaproteobacteria	2.653	0.0173
-Alphaproteobacteria	5.269	0.0344
-Deferribacteres	4.701	0.0307

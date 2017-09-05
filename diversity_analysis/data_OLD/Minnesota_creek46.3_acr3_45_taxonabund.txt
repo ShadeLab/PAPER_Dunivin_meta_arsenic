@@ -1,2 +1,0 @@
-Taxon	Abundance	Fraction Abundance
-coded_by=3990825..3991868,organism=Acidobacterium capsulatum ATCC 51196,definition=arsenical-resistance protein	2.255	1.0000

@@ -1,2 +1,0 @@
-Taxon	Abundance	Fraction Abundance
-coded_by=1115228..1117714,organism=Ralstonia solanacearum PSI07,definition=Arsenite oxidase large subunit (AOI)	2.406	1.0000

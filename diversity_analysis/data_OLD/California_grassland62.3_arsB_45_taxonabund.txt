@@ -1,3 +1,0 @@
-Taxon	Abundance	Fraction Abundance
-coded_by=117024..118310,organism=Sphingomonas sp. Leaf226,definition=arsenic transporter	3.541	1.0000
-

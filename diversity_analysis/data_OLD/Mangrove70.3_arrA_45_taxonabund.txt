@@ -1,9 +1,0 @@
-Taxon	Abundance	Fraction Abundance
-coded_by=complement(2341..4887),organism=marine sediment metagenome,definition=hypothetical protein	1.015	0.0069
-coded_by=5490..7997,organism=Spirochaeta sp. JC202,definition=dehydrogenase	106.753	0.7280
-coded_by=complement(68886..71414),organism=Gracilibacter sp. BRH_c7a,definition=dehydrogenase	1.294	0.0088
-coded_by=41311..43977,organism=Halomonas daqiaonensis,definition=Tat (twin-arginine translocation) pathway signal sequence	6.731	0.0459
-coded_by=<1..>626,organism=uncultured bacterium,definition=arsenate respiratory reductase	1.421	0.0097
-coded_by=complement(333973..336567),organism=Halomonas sp. ALS9,definition=dehydrogenase	1.93	0.0132
-coded_by=5649..>7472,organism=Desulfobacterales bacterium RIFOXYA12_FULL_46_15,definition=dehydrogenase	2.835	0.0193
-coded_by=3816..6398,organism=Desulfobacterales bacterium S7086C20,definition=dehydrogenase	24.658	0.1682

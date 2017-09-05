@@ -1,3 +1,0 @@
-Taxon	Abundance	Fraction Abundance
-coded_by=413..2905,organism=Rhodospirillales bacterium RIFCSPLOWO2_12_FULL_67_15,definition=molybdopterin oxidoreductase	1.69	0.6092
-coded_by=87600..90059,organism=Amphritea atlantica,definition=arsenite oxidase large subunit	1.084	0.3908

@@ -1,2 +1,0 @@
-Taxon	Abundance	Fraction Abundance
-coded_by=403889..406426,organism=Desulfurispirillum indicum S5,definition=molybdopterin dinucleotide-binding region	5.391	1.0000

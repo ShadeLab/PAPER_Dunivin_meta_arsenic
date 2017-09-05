@@ -1,6 +1,0 @@
-Taxon	Abundance	Fraction Abundance
-Acidobacteria	3.209	0.0638
-Betaproteobacteria	8.27	0.1644
-Actinobacteria	22.169999999999995	0.4407
-Gammaproteobacteria	13.906	0.2764
-Nitrospirae	2.751	0.0547

@@ -1,9 +1,0 @@
-Taxon	Abundance	Fraction Abundance
-coded_by=complement(1300..2193),organism=Geodermatophilus sp. DSM 44208,definition=Methyltransferase domain-containing protein	2.915	0.0280
-coded_by=<1..>347,organism=uncultured bacterium,definition=arsenite S-adenosylmethionine methyltransferase	8.221	0.0789
-coded_by=complement(4058760..4059569),organism=Microlunatus phosphovorus NM-1,definition=putative methyltransferase	9.147	0.0878
-coded_by=<1..>347,organism=uncultured bacterium,definition=arsenite s-adenosylmethyltransferase	60.85600000000001	0.5841
-coded_by=complement(163201..163968),organism=Friedmanniella flava,definition=Methyltransferase domain-containing protein	0.487	0.0047
-coded_by=<1..>324,organism=uncultured bacterium,definition=ArsM	17.34	0.1664
-coded_by=complement(10773..11630),organism=Acidobacteriales bacterium 13_2_20CM_2_55_5,definition=arsenite S-adenosylmethyltransferase	2.142	0.0206
-coded_by=3746..4561,organism=Acidobacteria bacterium 13_1_40CM_4_58_4,definition=arsenite S-adenosylmethyltransferase	3.077	0.0295

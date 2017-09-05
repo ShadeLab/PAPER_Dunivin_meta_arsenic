@@ -1,9 +1,0 @@
-Taxon	Abundance	Fraction Abundance
-Acidobacteria	5.977	0.0407
-Deltaproteobacteria	2.726	0.0186
-Verrucomicrobia	9.239	0.0629
-Betaproteobacteria	3.6420000000000003	0.0248
-Alphaproteobacteria	20.204	0.1375
-Actinobacteria	90.10000000000004	0.6134
-Gammaproteobacteria	1.255	0.0085
-Firmicutes	13.750000000000002	0.0936

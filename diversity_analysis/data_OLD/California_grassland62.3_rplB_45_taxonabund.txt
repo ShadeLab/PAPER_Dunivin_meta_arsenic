@@ -1,4 +1,0 @@
-Taxon	Abundance	Fraction Abundance
-Alphaproteobacteria	7.404	0.1314
-Bacteroidetes	3.321	0.0590
-Actinobacteria	45.60699999999999	0.8096
