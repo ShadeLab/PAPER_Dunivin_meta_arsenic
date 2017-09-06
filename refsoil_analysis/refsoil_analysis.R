@@ -267,4 +267,4 @@ data.cog.comp$Phylum <- factor(data.cog.comp$Phylum,
     theme(axis.text.x = element_text(angle = 90, size = 12, hjust=0.95,vjust=0.2)))
 
 ggsave(asrg.logi.rel.phyla.bar, filename = paste(wd, "/figures/PA.phylumREL.COG.png", sep = ""), width = 10)
-
+ggsave(asrg.logi.rel.phyla.bar, filename = paste(wd, "/figures/PA.phylumREL.COG.eps", sep = ""), width = 10)
