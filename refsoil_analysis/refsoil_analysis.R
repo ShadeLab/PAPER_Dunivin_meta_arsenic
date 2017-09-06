@@ -150,9 +150,29 @@ color <- c("#FDB462", "#F4CAE4", "#DECBE4", "#6A3D9A", "black", "#B15928", "#1F7
   theme(axis.text.x = element_text(angle = 60, hjust = 1)))
 
 #save plot
-ggsave(asrg.phyla.bar, filename = paste(wd, "/figures/bar.gene.phylum.png", 
+ggsave(asrg.phyla.bar, filename = paste(wd, "/figures/numberhits.gene.png", 
                                         sep = ""), width = 10)
-ggsave(asrg.phyla.bar, filename = paste(wd, "/figures/bar.gene.phylum.eps", 
+ggsave(asrg.phyla.bar, filename = paste(wd, "/figures/numberhits.gene.png", 
+                                        sep = ""), width = 10)
+
+#calculate relative hits (gene/genome) for COG comparison
+data.taxREL <- data.tax %>%
+  group_by(Gene) %>%
+  summarise(Count = length(Gene)) %>%
+  mutate(RelCount = Count / 922)
+
+#plot bar chart with filled phyla RELATIVE
+(asrg.phyla.barREL <- ggplot(data = data.taxREL, aes(x = Gene, y = RelCount)) +
+    geom_bar(stat = "identity", color = "black", fill = "grey39") +
+    ylab("Count proportion (number per genome)") +
+    xlab("Gene") +
+    theme_bw(base_size = 12) +
+    theme(axis.text.x = element_text(angle = 60, hjust = 1)))
+
+#save plot
+ggsave(asrg.phyla.barREL, filename = paste(wd, "/figures/numberhits.geneREL.png", 
+                                        sep = ""), width = 10)
+ggsave(asrg.phyla.barREL, filename = paste(wd, "/figures/numberhits.geneREL.png", 
                                         sep = ""), width = 10)
 
 #summarise NCBI so that we know how many of each phyla are in the 922 
@@ -186,25 +206,29 @@ data.tax.uniq <- data.tax[!duplicated(data.tax[c(18,2)]),]
     theme(axis.text.x = element_text(angle = 60, hjust = 1)))
 
 #save plot
-ggsave(asrg.logi.phyla.bar, filename = paste(wd, "/figures/all.logi.phyla.90.bar.png", sep = ""), width = 10)
+ggsave(asrg.logi.phyla.bar, filename = paste(wd, "/figures/PA.gene.png", sep = ""), width = 10)
+
+#save plot
+ggsave(asrg.logi.phyla.bar, filename = paste(wd, "/figures/PA.gene.eps", sep = ""), width = 10)
 
 #plot bar chart with filled phyla (+/- gene)
 data.tax.uniqREL <- data.tax.uniq %>%
-  group_by(Gene) %>%
+  group_by(Gene, Phylum) %>%
   summarise(Count = length(Gene)) %>%
   mutate(RelCount = Count / 922)
 
 (asrg.logi.phyla.barREL <- ggplot(data = data.tax.uniqREL, aes(x = Gene, y = RelCount)) +
-    geom_bar(stat = "identity", color = "black", fill = "grey89") +
-    ylab("Gene proportion (count per genome)") +
+    geom_bar(stat = "identity", aes(fill = Phylum)) +
+    ylab("Proportion of genomes containing gene") +
     xlab("Gene") +
+    scale_fill_manual(values = color) +
     theme_bw(base_size = 12) +
     theme(axis.text.x = element_text(angle = 60, hjust = 1)))
 
 #save plot
-ggsave(asrg.logi.phyla.barREL, filename = paste(wd, "/figures/all.logi.rel.phyla.90.bar.png", sep = ""), width = 10)
+ggsave(asrg.logi.phyla.barREL, filename = paste(wd, "/figures/PA.geneREL.png", sep = ""), width = 10)
 
-ggsave(asrg.logi.phyla.barREL, filename = paste(wd, "/figures/all.logi.rel.phyla.90.bar.eps", sep = ""), width = 10)
+ggsave(asrg.logi.phyla.barREL, filename = paste(wd, "/figures/PA.geneREL.png.eps", sep = ""), width = 10)
 
 #join phy count information with data.tax
 data.tax.uniq.logi <- data.tax.uniq %>%
@@ -219,27 +243,28 @@ data.tax.uniq.logi$Phylum <- factor(data.tax.uniq.logi$Phylum,
                               levels = data.tax.uniq.logi$Phylum[order(data.tax.uniq.logi$phy.n, decreasing = TRUE)])
 
 #remove phyla with less than 3 representatives
-data.tax.uniq.logi.slim <- data.tax.uniq.logi[which(data.tax.uniq.logi$phy.n >3),]
+data.tax.uniq.logi.slim <- data.tax.uniq.logi[which(data.tax.uniq.logi$phy.n >10),]
 
 cog.comp <- c("acr3","arsA", "arsC_glut")
-others <- c("aioA", "arrA", "arsB", "arsC_thio", "arsD", "arsM", "arxA")
-data.cog.comp <- data.tax.uniq.logi.slim[which(data.tax.uniq.logi.slim$Gene %in% cog.comp),]
-data.others <- data.tax.uniq.logi.slim[which(data.tax.uniq.logi.slim$Gene %in% others),]
+cog.phyla <- c("Actinobacteria", "Proteobacteria", "Bacteroidetes", "Chlamydiae", 
+               "Chloroflexi", "Firmicutes", "Fusobacteria", "Planctomycetes", 
+               "Spirochaetes", "Tenericutes", "Verrucomicrobia", "Cyanobacteria")
+data.cog.comp <- data.tax.uniq.logi[which(data.tax.uniq.logi$Gene %in% cog.comp),]
+data.cog.comp <- data.cog.comp[which(data.cog.comp$Phylum %in% cog.phyla),]
+
 #order based on phylum abundance
 data.cog.comp$Phylum <- factor(data.cog.comp$Phylum, 
                                     levels = data.cog.comp$Phylum[order(data.cog.comp$phy.n, decreasing = TRUE)])
 
-data.others$Phylum <- factor(data.others$Phylum, 
-                                    levels = data.others$Phylum[order(data.others$phy.n, decreasing = TRUE)])
 
 #plot proportional bar chart (logical) with filled phyla
 (asrg.logi.rel.phyla.bar <- ggplot(data.cog.comp, aes(x = Phylum, y = rel.logi.count, fill = Gene)) +
     geom_bar(stat = "identity", color = "black", position = "dodge") +
-    scale_fill_manual(values = color) +
     ylab("Proportion of of genomes with gene (logical)") +
+    scale_fill_manual(values = c("#8DD3C7","#BC80BD","#80B1D3")) +
     xlab("Phylum") +
     theme_classic(base_size = 12) +
     theme(axis.text.x = element_text(angle = 90, size = 12, hjust=0.95,vjust=0.2)))
 
-ggsave(asrg.logi.rel.phyla.bar, filename = paste(wd, "/figures/all.logi.rel.phyla.90.bar.png", sep = ""), width = 10)
+ggsave(asrg.logi.rel.phyla.bar, filename = paste(wd, "/figures/PA.phylumREL.COG.png", sep = ""), width = 10)
 
