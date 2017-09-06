@@ -46,6 +46,7 @@ scg <- data[which(data$COG.ID %in% census),]
 
 #save plot for future reference/ discussion of scgs
 ggsave(scg.var, filename = paste(wd, "/figures/scg.variation.png", sep=""), width = 4, height = 3)
+ggsave(scg.var, filename = paste(wd, "/figures/scg.variation.eps", sep=""), width = 4, height = 3)
 
 #continue with microbe census single copy genes for normalization
 
@@ -112,6 +113,7 @@ abund <- melt(abund, id.vars = c("COG.ID", "COG.Name"), measure.vars = c("Genome
 #this is purposeful since we cannot know that for metaG. 
 #see files created later (perc.GENE) for +/- genome percentages
 ggsave(ars.plot, filename = paste(wd, "/figures/AsRG.proportions.png", sep=""))
+ggsave(ars.plot, filename = paste(wd, "/figures/AsRG.proportions.eps", sep=""))
 
 ############################################################
 #WHAT IS THE DISTRIBUTION OF acr3 IN EACH GENOME (#/GENOME)#
@@ -151,7 +153,8 @@ perc.acr3 <- count(acr3) / 51515
 #save bar chart of genes encoding As efflux pumps / genome
 ggsave(acr3.hist, filename = paste(wd, "/figures/acr3.genome.hist.png", sep = ""), 
        height = 3.51, width = 5.69)
-
+ggsave(acr3.hist, filename = paste(wd, "/figures/acr3.genome.hist.eps", sep = ""), 
+       height = 3.51, width = 5.69)
 ############################################################
 #WHAT IS THE DISTRIBUTION OF arsC IN EACH GENOME (#/GENOME)#
 ############################################################
@@ -187,6 +190,8 @@ perc.arsC <- count(taxa.arsC) / 51515
 #save bar chart of genes encoding As efflux pumps / genome
 ggsave(arsC.hist, filename = paste(wd, "/figures/arsC.genome.hist.png", sep = ""), 
        height = 3.51, width = 5.69)
+ggsave(arsC.hist, filename = paste(wd, "/figures/arsC.genome.hist.eps", sep = ""), 
+       height = 3.51, width = 5.69)
 
 ############################################################
 #WHAT IS THE DISTRIBUTION OF arsA IN EACH GENOME (#/GENOME)#
@@ -220,8 +225,10 @@ perc.arsA <- count(arsA) / 51515
     xlim(0,18) +
     theme_bw(base_size = 12))
 
-#save bar chart of genes encoding As efflux pumps / genome
+#save bar chart of genes encoding arsA
 ggsave(arsA.hist, filename = paste(wd, "/figures/arsA.genome.hist.png", sep = ""), 
+       height = 3.51, width = 5.69)
+ggsave(arsA.hist, filename = paste(wd, "/figures/arsA.genome.hist.eps", sep = ""), 
        height = 3.51, width = 5.69)
 
 ################################################
@@ -256,6 +263,7 @@ phyla.summary.top$Phylum <- factor(phyla.summary.top$Phylum, levels = phyla.summ
 (prop.asrg.phyla <- ggplot(phyla.summary.top, 
                            aes(x = Phylum, y = Proportion, fill = Gene)) +
     geom_bar(stat="identity", position = "dodge", color = "black") +
+    scale_fill_manual(values = c("#8DD3C7", "#BC80BD", "#80B1D3")) +
     xlab("Phylum") +
     ylab("Proportion of Genomes with Arsenic Resistance Gene") +
     theme_bw(base_size = 13) +
@@ -263,3 +271,4 @@ phyla.summary.top$Phylum <- factor(phyla.summary.top$Phylum, levels = phyla.summ
 
 #save plot
 ggsave(prop.asrg.phyla, filename = paste(wd, "/figures/AsRG.proportions.phyla.png", sep=""), width = 20, height = 12)
+ggsave(prop.asrg.phyla, filename = paste(wd, "/figures/AsRG.proportions.phyla.eps", sep=""), width = 20, height = 12)
