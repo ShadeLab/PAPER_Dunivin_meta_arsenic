@@ -8,12 +8,12 @@ library(zoo)
 ##############
 
 #print working directory
-wd=print(getwd())
+wd <- print(getwd())
 
-#read in data
+#read in data for isolate and metagenome COG counts
 data <- read.delim(file = paste(wd, "/data/coglist64105_01-may-2017.txt", sep = ""))
 
-#read in functional categories
+#read in COG functional categories
 func <- read.delim(file = paste(wd, "/data/cog.categories.txt", sep = ""))
 
 #add func data & column for total isolate genomes
@@ -31,52 +31,23 @@ data <- mutate(data,
 ########################
 #TEST SINGLE COPY GENES#
 ########################
-#list single copy genes (scgs) from tringe paper
-tringe <- c("COG0016","COG0048","COG0049","COG0051","COG0052","COG0072","COG0080","COG0081","COG0087","COG0088", "COG0090", "COG0091","COG0092","COG0093","COG0094","COG0096","COG0097","COG0098","COG0099","COG0100","COG0103","COG0127","COG0149","COG0164","COG0184","COG0185","COG0186","COG0197","COG0200","COG0244","COG0256","COG0343","COG0481","COG0504","COG0532","COG0533","COG0541")
-
 #list scgs used by microbe census
 census <- c("COG0052", "COG0081", "COG0532", "COG0091", 'COG0088', 'COG0090', "COG0103", 'COG0087', "COG0072", "COG0093", "COG0098", "COG0185", "COG0049", "COG0197", "COG0099", "COG0016", "COG0200", "COG0097", "COG0080", "COG0094", "COG0048", "COG0092", "COG0100", "COG0244", "COG0096", "COG0256", "COG0184", "COG0186", "COG0102", "COG0198")
 
-#look at COGs with tring and microbeCensus scgs
-tringe <- data[which(data$COG.ID %in% tringe),]
-census <- data[which(data$COG.ID %in% census),]
-
-#join tringe and census data to compare
-#but label which COGs are which
-tringe <- mutate(tringe, source = "tringe")
-census <- mutate(census, source = "census")
-scgs <- rbind(tringe, census)
+#extract COGs with microbeCensus scgs
+scg <- data[which(data$COG.ID %in% census),]
 
 #plot different scgs to compare
-(scg.var <- ggplot(scgs, aes(x = source, y= Genomes)) + 
+(scg.var <- ggplot(scg, aes(x = Catergory, y= Genomes)) + 
     geom_boxplot() +
-    geom_jitter(aes(color = Catergory)) + 
+    geom_jitter() + 
     xlab("Single copy gene source") +
     ylab("COG count per genome"))
 
 #save plot for future reference/ discussion of scgs
-ggsave(scg.var, filename = paste(wd, "/figures/scg.variation.png", sep=""), width = 7, height = 5)
+ggsave(scg.var, filename = paste(wd, "/figures/scg.variation.png", sep=""), width = 4, height = 3)
 
-#microbeCensus scg choices show less variation than Tringe's
-#Both sets average around 1.1 copies per genome, which is acceptable
-#microbeCensus uses all 1 func catergory while Tringe has several 
-
-
-####################################################
-#WHICH GENES ARE OVERREPRESENTED IN ISOLATE GENOMES#
-####################################################
-
-#view variation in COG genome representation by functional group
-(func.abund <- ggplot(data, aes(x = Catergory, y = Genomes)) +
-   geom_boxplot() + 
-   geom_jitter() + 
-   coord_flip())
-
-#not particularly useful plots
-#does show scg pattern of ~1 (translation, ribosomal struct &biogen)
-#lots of variation by COG
-
-
+#continue with microbe census single copy genes for normalization
 
 ###################################################
 #COMPARE ABUNDANCE IN GENOMES VS IN METAGENOME GEs#
@@ -96,27 +67,20 @@ setwd("../")
 #interested in metagenomes in this analysis
 metag <- metag[!grepl("transcriptome", metag$Genome),]
 
-##look at data overall
-#get COGID information separated out from JGI naming
-metag.lrg <- metag %>%
-  separate(id, into = c("id", "COG.ID", "end"), sep = c(13, -23)) 
-
-#plot data
-ggplot(metag.lrg, aes(x = COG.ID, y = Gene.Count)) +
-  geom_jitter()
-
 #get Gene.Count sums for each gene of interest
 metag.abund <- metag %>%
   separate(id, into = c("id", "COG.ID", "end"), sep = c(13, -23)) %>%
   group_by(COG.ID) %>%
   summarise(Abundance = sum(Gene.Count), StDev = sd(Gene.Count)) 
 
-#COG0052 count is 4616128
+#Extract COG0052 count for normalization is 4616128
+n <- metag.abund$Abundance[metag.abund$COG.ID == "COG0052"]
+
 #normalize abundance to abundance of single copy gene
 metag.abund <- metag.abund %>%
-  mutate(scg = 4616128, 
+  mutate(scg = n, 
          Metagenomes = Abundance / scg, 
-         StDeV = StDev / 4616128)
+         StDeV = StDev / n)
 
 ##prep isolate genome data
 #select AsRG COGs and chosen single copy gene (COG0052)
@@ -135,8 +99,9 @@ abund <- melt(abund, id.vars = c("COG.ID", "COG.Name"), measure.vars = c("Genome
 
 #plot AsRG COG proportions in genomes and metagenomes
 (ars.plot <- ggplot(abund, aes(x = COG.Name, y = Abundance, fill = Source)) +
-    geom_bar(stat = "identity", position = "dodge") +
+    geom_bar(stat = "identity", position = "dodge", color = "black") +
     guides(fill=guide_legend(title="Dataset")) +
+    scale_fill_manual(values = c("grey49", "grey89")) +
     ylab("COG Proportion (count per genome)") + 
     xlab("COG Name") +
     theme_bw(base_size = 12) +
@@ -148,68 +113,44 @@ abund <- melt(abund, id.vars = c("COG.ID", "COG.Name"), measure.vars = c("Genome
 #see files created later (perc.GENE) for +/- genome percentages
 ggsave(ars.plot, filename = paste(wd, "/figures/AsRG.proportions.png", sep=""))
 
-#Some AsRG appear underrepresented in isolate genomes while 
-#arsC-glut is over-represented; arsC_glut is in E.coli, which
-#may explain some of this discrepancy 
-#metaG data makes more sense since it has higher arsenite efflux pump 
-#abundance than arsenate redcutase; an arsenate reductase is not useful
-#without an arsenite efflux pump 
-#as always, I do not really trust arsR COG data
-
-
 ############################################################
-#WHAT IS THE DISTRIBUTION OF arsB IN EACH GENOME (#/GENOME)#
+#WHAT IS THE DISTRIBUTION OF acr3 IN EACH GENOME (#/GENOME)#
 ############################################################
 #It is known that multiple copies of AsRG can occur both
 #chromosomally and on plasmids. I need to see how frequent 
 #multiple AsRG copies is
 
-##COG0798: Arsenite efflux pump ArsB, ACR3 family
+##COG0798: Arsenite efflux pump arsB, ACR3 family
 
 #read in COG0798 data
-arsB <- read.delim(file = paste(wd, "/data/arsB_COG0798_01-may-2017.txt", sep = ""))
+acr3 <- read.delim(file = paste(wd, "/data/arsB_COG0798_01-may-2017.txt", sep = ""))
 
 #read in taxonomy data
 taxa <- read_delim(file = paste(wd, "/data/taxontable51515_04-may-2017.xls", sep = ""), col_names = TRUE, delim = "\t")
 
 #change sample name to genome
-taxa.arsB <- taxa %>%
+taxa.acr3 <- taxa %>%
   select(taxon_oid, Genome, Phylum:Species) %>%
-  right_join(arsB, by = "Genome") %>%
-  mutate(Gene = "arsB")
-
-#remove rows with no taxon ID
-taxa.arsB <- taxa.arsB[!is.na(taxa.arsB$taxon_oid),]
+  right_join(acr3, by = "Genome") %>%
+  mutate(Gene = "acr3")
 
 #remove any duplicate rows 
-taxa.arsB <- taxa.arsB[!duplicated(taxa.arsB$Genome),]
+taxa.acr3 <- taxa.acr3[!duplicated(taxa.acr3$Genome),]
 
-#calculate the actual percentage of genomes with >=1 copy of arsB
-perc.arsB <- count(arsB) / 51515
-#output: 0.3049209 have 1 copy of arsB
+#calculate the actual percentage of genomes with >=1 copy of acr3
+perc.acr3 <- count(acr3) / 51515
 
-#plot COG0798 data (arsB)
-(arsB.hist <- ggplot(arsB, aes(x = Gene.Count)) +
-    geom_bar(fill = "black") +
+#plot COG0798 data (acr3)
+(acr3.hist <- ggplot(acr3, aes(x = Gene.Count)) +
+    geom_bar(fill = "#8DD3C7", color= "black") +
     ylab("Genome count") +
     xlab("Arsenite efflux pump genes / genome") +
-    scale_x_continuous(breaks = c(0,1,2,3,4,5,6,7)) + 
+    xlim(0,18) +
     theme_bw(base_size = 12))
 
 #save bar chart of genes encoding As efflux pumps / genome
-ggsave(arsB.hist, filename = paste(wd, "/figures/arsB.genome.hist.png", sep = ""), 
+ggsave(acr3.hist, filename = paste(wd, "/figures/acr3.genome.hist.png", sep = ""), 
        height = 3.51, width = 5.69)
-
-#plot a histogram of isolates from different phyla with arsB
-(arsB.phyla <- ggplot(taxa.arsB, aes(x = reorder(Phylum, Phylum, function(x)-length(x)))) +
-    geom_histogram(stat="count") +
-    xlab("Phylum") +
-    ylab("Number of Isolate Genomes") +
-    theme_bw(base_size = 12) +
-    theme(axis.text.x = element_text(angle = 60, hjust = 1)))
-
-#save plot
-ggsave(arsB.phyla, filename = paste(wd, "/figures/arsB.isolates.phyla.png", sep=""), width = 8.5, height = 7)
 
 ############################################################
 #WHAT IS THE DISTRIBUTION OF arsC IN EACH GENOME (#/GENOME)#
@@ -229,37 +170,23 @@ taxa.arsC <- taxa %>%
   right_join(arsC, by = "Genome") %>%
   mutate(Gene = "arsC")
 
-#remove rows with no taxon ID
-taxa.arsC <- taxa.arsC[!is.na(taxa.arsC$taxon_oid),]
-
 #remove any duplicate genomes
 taxa.arsC <- taxa.arsC[!duplicated(taxa.arsC$Genome),]
 
 #calculate actual percent of orgs with >=1 copy arsC_glut
 perc.arsC <- count(taxa.arsC) / 51515
-#output = 0.7394545
 
 #plot COG1393 data (arsC)
 (arsC.hist <- ggplot(taxa.arsC, aes(x = Gene.Count)) +
-    geom_bar(fill = "black") +
+    geom_bar(fill = "#80B1D3", color = "black") +
     ylab("Genome count") +
     xlab("Arsenate reductase, glutaredoxin family / genome") +
+    xlim(0,18) +
     theme_bw(base_size = 12))
 
 #save bar chart of genes encoding As efflux pumps / genome
 ggsave(arsC.hist, filename = paste(wd, "/figures/arsC.genome.hist.png", sep = ""), 
        height = 3.51, width = 5.69)
-
-#plot a histogram of isolates from different phyla with arsB
-(arsC.phyla <- ggplot(taxa.arsC, aes(x = reorder(Phylum, Phylum, function(x)-length(x)))) +
-    geom_histogram(stat="count") +
-    xlab("Phylum") +
-    ylab("Number of Isolate Genomes") +
-    theme_bw(base_size = 13) +
-    theme(axis.text.x = element_text(angle = 60, hjust = 1)))
-
-#save plot
-ggsave(arsC.phyla, filename = paste(wd, "/figures/arsC.isolates.phyla.png", sep=""), width = 8.5, height = 7)
 
 ############################################################
 #WHAT IS THE DISTRIBUTION OF arsA IN EACH GENOME (#/GENOME)#
@@ -279,111 +206,23 @@ taxa.arsA <- taxa %>%
   right_join(arsA, by = "Genome") %>%
   mutate(Gene = "arsA")
 
-#remove rows with no taxon ID
-taxa.arsA <- taxa.arsA[!is.na(taxa.arsA$taxon_oid),]
-
 #remove duplicated rows
 taxa.arsA <- taxa.arsA[!duplicated(taxa.arsA$Genome),]
 
 #calculate actual percent of orgs with >=1 copy arsA
 perc.arsA <- count(arsA) / 51515
-#output = 0.1974765
 
 #plot COG0003 data (arsA)
 (arsA.hist <- ggplot(taxa.arsA, aes(x = Gene.Count)) +
-    geom_bar(fill = "black") +
+    geom_bar(fill = "#BC80BD", color = "black") +
     ylab("Genome count") +
     xlab("arsA / genome") +
+    xlim(0,18) +
     theme_bw(base_size = 12))
 
 #save bar chart of genes encoding As efflux pumps / genome
 ggsave(arsA.hist, filename = paste(wd, "/figures/arsA.genome.hist.png", sep = ""), 
        height = 3.51, width = 5.69)
-
-#plot a histogram of isolates from different phyla with arsA
-(arsA.phyla <- ggplot(taxa.arsA, aes(x = reorder(Phylum, Phylum, function(x)-length(x)))) +
-    geom_histogram(stat="count") +
-    xlab("Phylum") +
-    ylab("Number of Isolate Genomes") +
-    theme_bw(base_size = 13) +
-    theme(axis.text.x = element_text(angle = 60, hjust = 1)))
-
-#save plot
-ggsave(arsA.phyla, filename = paste(wd, "/figures/arsA.isolates.phyla.png", sep=""), width = 8.5, height = 7)
-
-#########################################################################
-#WHAT IS THE DISTRIBUTION OF arsnite premeases IN EACH GENOME (#/GENOME)#
-#########################################################################
-
-##COG1055: ArsB Na+/H+ antiporter NhaD and related arsenite permeases
-
-#read in COG1055 data
-asp <- read.delim(file = paste(wd, "/data/asp_COG1055_05-may-2017.txt", sep = ""))
-
-#change sample name to genome and join with arsA data
-taxa.asp <- taxa %>%
-  select(taxon_oid, Genome, Phylum:Species) %>%
-  right_join(asp, by = "Genome") %>%
-  mutate(Gene = "asp")
-
-#remove rows with no taxon ID
-taxa.asp <- taxa.asp[!is.na(taxa.asp$taxon_oid),]
-
-#remove duplicated rows
-taxa.asp <- taxa.asp[!duplicated(taxa.asp$Genome),]
-
-#calculate actual percent of orgs with >=1 copy arsA
-perc.asp <- count(asp) / 51515
-#output = 0.6037271
-
-#plot COG0003 data (asp)
-(asp.hist <- ggplot(taxa.asp, aes(x = Gene.Count)) +
-    geom_bar(fill = "black") +
-    ylab("Genome count") +
-    xlab("Arsenite permease COGs / genome") +
-    theme_bw(base_size = 12))
-
-#save bar chart of genes encoding As efflux pumps / genome
-ggsave(asp.hist, filename = paste(wd, "/figures/asp.genome.hist.png", sep = ""), 
-       height = 3.51, width = 5.69)
-
-#plot a histogram of isolates from different phyla with arsA
-(asp.phyla <- ggplot(taxa.asp, aes(x = reorder(Phylum, Phylum, function(x)-length(x)))) +
-    geom_histogram(stat="count") +
-    xlab("Phylum") +
-    ylab("Number of Isolate Genomes") +
-    theme_bw(base_size = 13) +
-    theme(axis.text.x = element_text(angle = 60, hjust = 1)))
-
-#save plot
-ggsave(asp.phyla, filename = paste(wd, "/figures/asp.isolates.phyla.png", sep=""), width = 8.5, height = 7)
-
-####################################################################
-#WHAT IS THE DISTRIBUTION OF arsA,B,C IN GENOMES OF DIFFERENT PHYLA#
-####################################################################
-
-#join together all AsRG phylum data
-taxa.asrg <- rbind(taxa.arsA, taxa.arsB, taxa.arsC, taxa.asp)
-
-#trim file so it only contains phyla with highest abundance
-taxa.asrg <- taxa.asrg %>%
-  group_by(Gene, Phylum) %>%
-  mutate(N = length(Phylum))
-
-#make a slim version of dataset (only abundant phyla for plotting)
-taxa.asrg.slim <- taxa.asrg[which(taxa.asrg$N > 100),]
-
-#plot a histogram of isolates from different phyla with arsA
-(asrg.phyla <- ggplot(taxa.asrg.slim, aes(x = reorder(Phylum, Phylum, function(x)-length(x)), fill = Gene)) +
-    geom_histogram(stat="count", position = "dodge", color = "black") +
-    xlab("Phylum") +
-    ylab("Number of Isolate Genomes") +
-    theme_bw(base_size = 13) +
-    theme(axis.text.x = element_text(angle = 60, hjust = 1)))
-
-#save plot
-ggsave(asrg.phyla, filename = paste(wd, "/figures/AsRG.isolates.abundant.phyla.png", sep=""), height = 5, width = 7)
-
 
 ################################################
 #IS THERE DATABASE BIAS IN THE PHYLA WITH ASRG?#
@@ -407,197 +246,20 @@ phyla.summary <- taxa.asrg %>%
 #remove duplicated values
 phyla.summary <- phyla.summary[!duplicated(phyla.summary),]
 
+#make a slim version of dataset (only abundant phyla for plotting)
+phyla.summary.top <- phyla.summary[which(phyla.summary$total > 100),]
+
+#order by number of phylum representatives
+phyla.summary.top$Phylum <- factor(phyla.summary.top$Phylum, levels = phyla.summary.top$Phylum[order(phyla.summary.top$total, decreasing = TRUE)])
+
 #Plot proportions of phyla with AsRGs
-(prop.asrg.phyla <- ggplot(phyla.summary, 
+(prop.asrg.phyla <- ggplot(phyla.summary.top, 
                            aes(x = Phylum, y = Proportion, fill = Gene)) +
-    geom_bar(stat="identity") +
+    geom_bar(stat="identity", position = "dodge", color = "black") +
     xlab("Phylum") +
     ylab("Proportion of Genomes with Arsenic Resistance Gene") +
-    facet_wrap(~Gene, ncol = 1) +
     theme_bw(base_size = 13) +
     theme(axis.text.x = element_text(angle = 60, hjust = 1)))
 
 #save plot
 ggsave(prop.asrg.phyla, filename = paste(wd, "/figures/AsRG.proportions.phyla.png", sep=""), width = 20, height = 12)
-
-
-###########################################
-#ARE ASRG COMMON IN THERMOPHILIC LINEAGES?#
-###########################################
-
-#Read in name of all thermophiles from JGI
-#only includes genomes with GOLD information
-thermo.all <- read_delim(file = paste(wd, "/data/taxontable.thermophiles.04-may-2017.txt", sep = ""), col_names = TRUE, delim = "\t")
-
-#count number of each phylum
-thermo.all <- thermo.all %>%
-  group_by(Phylum) %>%
-  mutate(Total = length(Phylum))
-
-#check how many thermophile genomes have arsA, B, C
-thermo.all.asrg <- thermo.all %>%
-  select(Genome, Total, Phylum) %>%
-  right_join(taxa.asrg, by = "Genome")
-thermo.all.asrg <- thermo.all.asrg[!is.na(thermo.all.asrg$Phylum.x),]
-
-#Plot number of thermophiles with AsRGs
-(thermo.all.asrg.phyla <- ggplot(thermo.all.asrg, aes(x = Phylum.x, fill = Gene)) +
-    geom_histogram(stat="count") +
-    xlab("Phylum") +
-    ylab("Thermophilic Genomes with Arsenic Resistance Gene") +
-    facet_wrap(~Gene, ncol = 1) +
-    theme_bw(base_size = 13) +
-    theme(axis.text.x = element_text(angle = 60, hjust = 1)))
-
-#save plot
-ggsave(thermo.all.asrg.phyla, filename = paste(wd, "/figures/thermo.AsRG.phyla.png", sep=""))
-
-#calculate the proportion of each phylum that has arsA, B, C
-thermo.all.asrg <- thermo.all.asrg %>%
-  group_by(Gene, Phylum.x) %>%
-  mutate(With = length(Phylum.x), Proportion = With/Total, 
-         Classification = "Thermophile") %>%
-  rename(Phylum = Phylum.x) %>%
-  select(Phylum, Gene, Total, With, Proportion, Classification) 
-
-thermo.all.asrg  <- thermo.all.asrg[!duplicated(thermo.all.asrg),]
-
-#plot proportion of thermophiles with AsRGs
-(prop.asrg.phyla.thermo.all <- ggplot(thermo.all.asrg, aes(x = Phylum, y = Proportion, fill = Gene)) +
-    geom_bar(stat="identity") +
-    xlab("Phylum") +
-    ylab("Thermophilic Genomes with AsRGs (%)") +
-    facet_wrap(~Gene, ncol = 1) +
-    theme_bw(base_size = 20) +
-    theme(axis.text.x = element_text(angle = 60, hjust = 1)))
-
-ggsave(prop.asrg.phyla.thermo.all, filename = paste(wd, "/figures/thermo.AsRG.proportions.phyla.png", sep=""), height = 15)
-
-#############################################################
-#ARE THERMOPHILES MORE LIKELY TO HAVE ASRGS THAN MESOPHILES?#
-#############################################################
-#read in data from thermophiles, mesophiles, and hyperthermophiles
-#GOLD database entries only
-thermo <- read_delim(file = paste(wd, "/data/thermo_gold_taxontable_05-may-2017.txt", sep = ""), col_names = TRUE, delim = "\t")
-
-hyperthermo <- read_delim(file = paste(wd, "/data/hyperthermo_gold_taxontable_05-may-2017.txt", sep = ""), col_names = TRUE, delim = "\t")
-
-meso <- read_delim(file = paste(wd, "/data/meso_gold_taxontable_05-may-2017.txt", sep = ""), col_names = TRUE, delim = "\t")
-
-#add naming column to each file before binding and calculate number of each phyla 
-thermo <- thermo %>%
-  group_by(Phylum) %>%
-  mutate(Classification = "Thermophile", phy.count = length(Phylum))
-
-
-hyperthermo <- hyperthermo %>%
-  group_by(Phylum) %>%
-  mutate(Classification = "Hyperthermophile", phy.count = length(Phylum)) 
-
-
-meso <- meso %>%
-  group_by(Phylum) %>%
-  mutate(Classification = "Mesophile", phy.count = length(Phylum))  
-
-
-#join together all three datasets
-thermo.group.c <- rbind(meso, thermo, hyperthermo)
-
-#double check that you have the appropriate # of genomes (should be 8165 (IMG))
-thermo.check <- thermo.group.c %>%
-  select(Phylum, Classification, phy.count) 
-thermo.check <- unique(thermo.check)
-sum(thermo.check$phy.count)
-################################################
-#IN PROGRESS...
-#select important columns only 
-thermo.group.c2 <- thermo.group.c %>%
-  left_join(taxa.asrg, by = "Genome") %>%
-  select(Phylum.x:Species.x, Classification, Gene, phy.count, Gene.Count) %>%
-  group_by(Classification, Phylum.x, Gene.Count) %>%
-  mutate(Gene.Logical = length(Gene.Count))
-
-
-#replace NAs for zeros
-thermo.group.c$Gene.Count[is.na(thermo.group.c$Gene.Count)] = 0
-
-
-#summarise data by getting number of genomes with an AsRG
-#avoids over-estimation from multiple copies in 1 genome
-thermo.group <- thermo.group.c %>%
-  summarise(Gene.logical = length(Gene.Count)) %>%
-  ungroup() 
-
-#replace NAs for "none" in gene column 
-thermo.group$Gene[is.na(thermo.group$Gene)] = "None"
-
-#add back phy.count information (so we can look at proportions
-#of genomes with AsRGs)
-thermo.group <- thermo.group %>%
-  right_join(thermo.group.c, by = "Phylum") %>%
-  select(Classification.x:Gene.logical, phy.count)
-
-#get unique rows
-thermo.group2 <- unique(thermo.group)
-
-#order classification levels
-thermo.group$Classification <- ordered(thermo.group$Classification, levels = c("Hyperthermophile", "Thermophile", "Mesophile"))
-
-#plot  
-(thermo.plot <- ggplot(thermo.group2, aes(x = Phylum, y = Gene.logical, fill = Classification)) +
-    geom_bar(stat="identity") +
-    xlab("Phylum") +
-    ylab("Number of Genomes with AsRGs") +
-    facet_wrap(~Gene, scales = "free_y") +
-    theme_bw(base_size = 13) +
-    theme(axis.text.x = element_text(angle = 60, hjust = 1)))
-
-
-
-
-
-
-#broken...
-thermo.group <- thermo.group.c %>%
-  select(Phylum, Phylum.count) %>%
-  right_join(thermo.group, by = "Phylum")
-
-thermo.group <- thermo.group[!duplicated(thermo.group),]
-
-#widen dataset to make appropriate zeros
-thermo.group.wide <- thermo.group %>%
-  spread(Gene, value = Count, fill = 0) %>%
-  rename(Classification = Classification.x)
-  group_by(Classification, Phylum) %>%
-  rename(None = `<NA>`)
-
-#tidy the data once again
-thermo.group.final <- melt(thermo.group.wide, id.vars = c("Classification", "Phylum", "Phylum.count"), measure.vars = c("arsA", "arsB", "arsC", "asp"), variable.name = "Gene", value.name = "Count")
-
-#add a true false variable
-thermo.group.final$Count <- gsub(0, NA, thermo.group.final$Count)
-thermo.group.final.tf <- thermo.group.final %>%
-  group_by(Classification, Phylum, Gene) %>%
-  mutate(Present = paste(is.na(Count)))
-
-thermo.group.final.tf$Present <- gsub("FALSE", "Present", thermo.group.final.tf$Present)
-thermo.group.final.tf$Present <- gsub("TRUE", "Absent", thermo.group.final.tf$Present)
-
-thermo.group.final.tf$Classification <- ordered(thermo.group.final.tf$Classification, levels = c("Hyperthermophile", "Thermophile", "Mesophile"))
-#plot  
-(thermo.group.plot <- ggplot(thermo.group.final.tf, aes(x = Present, fill = Classification)) +
-    geom_histogram(stat="count") +
-    scale_fill_manual(values=c("red", "orange", "khaki")) + 
-    xlab("Phylum") +
-    ylab("Thermophilic Genomes with AsRGs (%)") +
-    facet_wrap(~Gene) +
-    theme_bw(base_size = 13) +
-    theme(axis.text.x = element_text(angle = 60, hjust = 1)))
-  
-  
-  
-  
-  
-  
-  
-  
