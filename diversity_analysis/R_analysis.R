@@ -364,9 +364,8 @@ rare_rplB_rel.matrix = as(otu_table(rare_rplB_rel), "matrix")
 rare_AsRG_rel.matrix = as(otu_table(rare_AsRG_rel), "matrix")
 
 #calculate distance matrix
-otu_rplB.d <- dist(rare_rplB_rel.matrix, diag = TRUE, upper = TRUE)
-otu_AsRG.d <- dist(rare_AsRG_rel.matrix, diag = TRUE, upper = TRUE)
+otu_rplB.d <- vegdist(rare_rplB_rel.matrix, diag = TRUE, upper = TRUE)
+otu_AsRG.d <- vegdist(rare_AsRG_rel.matrix, diag = TRUE, upper = TRUE)
 
 #mantel test between rplB and AsRG
-mantel(otu_AsRG.d,otu_rplB.d)
-
+mantel(otu_AsRG.d,otu_rplB.d, method = "spear")
