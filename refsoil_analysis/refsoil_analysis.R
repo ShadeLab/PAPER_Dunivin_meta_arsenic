@@ -3,6 +3,11 @@ library(tidyverse)
 library(reshape2)
 library(RColorBrewer)
 
+
+########################################
+#READ IN AND PREPARE DATA FOR ANALYSIS#
+#######################################
+
 #print working directory for future references
 #note the GitHub directory for this script is as follows
 #https://github.com/ShadeLab/meta_arsenic/tree/master/refsoil_analysis
@@ -124,12 +129,16 @@ data.tax <- data.tax[!duplicated(data.tax$t.name),]
 #add back NAs
 data.tax <- rbind(data.tax, data.tax.na)
 
+#############################################
+#EXAMINE NUMBER OF MODEL HITS (not relative)#
+#############################################
+
 #make color scheme
 #n <- 25
 #qual_col_pals = brewer.pal.info[brewer.pal.info$category == 'qual',]
 #col_vector = unlist(mapply(brewer.pal, qual_col_pals$maxcolors, rownames(qual_col_pals)))
 #phy.color <- print(sample(col_vector, n))
-color <- c("#FDB462", "#F4CAE4", "#DECBE4", "#6A3D9A", "#E7298A", "#B15928", "#1F78B4", "#999999", "#E78AC3", "#B3CDE3", "#CCCCCC", "#E31A1C", "#FB9A99", "#66A61E", "#E6AB02", "#B3DE69", "#A6CEE3", "#1B9E77", "#7FC97F", "#F0027F", "#FF7F00", "#CCEBC5", "#A65628","#FFFFCC", "#666666")
+color <- c("#FDB462", "#F4CAE4", "#DECBE4", "#6A3D9A", "black", "#B15928", "#1F78B4", "#999999", "#E78AC3", "#B3CDE3", "#CCCCCC", "#E31A1C", "#FB9A99", "#E6AB02","#66A61E",  "#B3DE69", "#A6CEE3", "#1B9E77", "#7FC97F", "#F0027F", "#FF7F00", "#CCEBC5", "#A65628","#FFFFCC", "#666666")
 
 #plot bar chart with filled phyla
 (asrg.phyla.bar <- ggplot(data = data.tax, aes(x = Gene, fill = Phylum)) +
@@ -137,10 +146,13 @@ color <- c("#FDB462", "#F4CAE4", "#DECBE4", "#6A3D9A", "#E7298A", "#B15928", "#1
   scale_fill_manual(values = color) +
   ylab("Number of model hits") +
   xlab("Gene") +
-  theme_classic(base_size = 12))
+  theme_bw(base_size = 12) +
+  theme(axis.text.x = element_text(angle = 60, hjust = 1)))
 
 #save plot
-ggsave(asrg.phyla.bar, filename = paste(wd, "/figures/total.phyla.90.bar.png", 
+ggsave(asrg.phyla.bar, filename = paste(wd, "/figures/bar.gene.phylum.png", 
+                                        sep = ""), width = 10)
+ggsave(asrg.phyla.bar, filename = paste(wd, "/figures/bar.gene.phylum.eps", 
                                         sep = ""), width = 10)
 
 #summarise NCBI so that we know how many of each phyla are in the 922 
@@ -157,28 +169,9 @@ data.tax.sum <- data.tax %>%
   left_join(ncbi.sum, by = "Phylum") %>%
   mutate(rel.count = gene.count / phy.n)
   
-
-#order based on phylum abundance
-data.tax.sum$Phylum <- factor(data.tax.sum$Phylum, 
-                         levels = data.tax.sum$Phylum[order(data.tax.sum$rel.count)])
-
-#plot proportional bar chart with filled phyla
-(asrg.phyla.bar <- ggplot(data = data.tax.sum, aes(x = Phylum, y = rel.count, fill = Phylum)) +
-    geom_bar(stat = "identity", color = "black") +
-    scale_fill_manual(values = color) +
-    ylab("Proportion of Phyla with AsRG") +
-    xlab("Phylum") +
-    facet_wrap(~Gene) +
-    theme_classic(base_size = 12) +
-    theme(axis.text.x = element_text(angle = 90, size = 12, hjust=0.95,vjust=0.2), legend.position = "none"))
-
-#save plot
-ggsave(asrg.phyla.bar, filename = paste(wd, "/figures/total.rel.phyla.90.bar.png", sep = ""), width = 10)
-
-
-#############################
-#EXAMINE LOGICAL GENE COUNTS#
-#############################
+################################################
+#EXAMINE PRESENCE ABSENCE (LOGICAL) GENE COUNTS#
+################################################
 
 #remove rows resulting from more than one copy/ genome
 data.tax.uniq <- data.tax[!duplicated(data.tax[c(18,2)]),]
@@ -187,33 +180,66 @@ data.tax.uniq <- data.tax[!duplicated(data.tax[c(18,2)]),]
 (asrg.logi.phyla.bar <- ggplot(data = data.tax.uniq, aes(x = Gene, fill = Phylum)) +
     geom_bar(stat = "count") +
     scale_fill_manual(values = color) +
-    ylab("Number of genomes with gene (logical)") +
+    ylab("Number of genomes") +
     xlab("Gene") +
-    theme_classic(base_size = 12))
+    theme_classic(base_size = 12) +
+    theme(axis.text.x = element_text(angle = 60, hjust = 1)))
 
 #save plot
 ggsave(asrg.logi.phyla.bar, filename = paste(wd, "/figures/all.logi.phyla.90.bar.png", sep = ""), width = 10)
+
+#plot bar chart with filled phyla (+/- gene)
+data.tax.uniqREL <- data.tax.uniq %>%
+  group_by(Gene) %>%
+  summarise(Count = length(Gene)) %>%
+  mutate(RelCount = Count / 922)
+
+(asrg.logi.phyla.barREL <- ggplot(data = data.tax.uniqREL, aes(x = Gene, y = RelCount)) +
+    geom_bar(stat = "identity", color = "black", fill = "grey89") +
+    ylab("Gene proportion (count per genome)") +
+    xlab("Gene") +
+    theme_bw(base_size = 12) +
+    theme(axis.text.x = element_text(angle = 60, hjust = 1)))
+
+#save plot
+ggsave(asrg.logi.phyla.barREL, filename = paste(wd, "/figures/all.logi.rel.phyla.90.bar.png", sep = ""), width = 10)
+
+ggsave(asrg.logi.phyla.barREL, filename = paste(wd, "/figures/all.logi.rel.phyla.90.bar.eps", sep = ""), width = 10)
 
 #join phy count information with data.tax
 data.tax.uniq.logi <- data.tax.uniq %>%
   group_by(Gene, Phylum) %>%
   summarise(logi.count = length(Phylum)) %>%
   left_join(ncbi.sum, by = "Phylum") %>%
-  mutate(rel.logi.count = logi.count / phy.n)
+  mutate(rel.logi.count = logi.count / phy.n) %>%
+  ungroup()
 
 #order based on phylum abundance
 data.tax.uniq.logi$Phylum <- factor(data.tax.uniq.logi$Phylum, 
-                              levels = data.tax.uniq.logi$Phylum[order(data.tax.uniq.logi$rel.logi.count)])
+                              levels = data.tax.uniq.logi$Phylum[order(data.tax.uniq.logi$phy.n, decreasing = TRUE)])
+
+#remove phyla with less than 3 representatives
+data.tax.uniq.logi.slim <- data.tax.uniq.logi[which(data.tax.uniq.logi$phy.n >3),]
+
+cog.comp <- c("acr3","arsA", "arsC_glut")
+others <- c("aioA", "arrA", "arsB", "arsC_thio", "arsD", "arsM", "arxA")
+data.cog.comp <- data.tax.uniq.logi.slim[which(data.tax.uniq.logi.slim$Gene %in% cog.comp),]
+data.others <- data.tax.uniq.logi.slim[which(data.tax.uniq.logi.slim$Gene %in% others),]
+#order based on phylum abundance
+data.cog.comp$Phylum <- factor(data.cog.comp$Phylum, 
+                                    levels = data.cog.comp$Phylum[order(data.cog.comp$phy.n, decreasing = TRUE)])
+
+data.others$Phylum <- factor(data.others$Phylum, 
+                                    levels = data.others$Phylum[order(data.others$phy.n, decreasing = TRUE)])
 
 #plot proportional bar chart (logical) with filled phyla
-(asrg.logi.rel.phyla.bar <- ggplot(data = data.tax.uniq.logi, aes(x = Phylum, y = rel.logi.count, fill = Phylum)) +
-    geom_bar(stat = "identity", color = "black") +
+(asrg.logi.rel.phyla.bar <- ggplot(data.cog.comp, aes(x = Phylum, y = rel.logi.count, fill = Gene)) +
+    geom_bar(stat = "identity", color = "black", position = "dodge") +
     scale_fill_manual(values = color) +
     ylab("Proportion of of genomes with gene (logical)") +
     xlab("Phylum") +
-    facet_wrap(~Gene) +
     theme_classic(base_size = 12) +
-    theme(axis.text.x = element_text(angle = 90, size = 12, hjust=0.95,vjust=0.2), legend.position = "none"))
+    theme(axis.text.x = element_text(angle = 90, size = 12, hjust=0.95,vjust=0.2)))
 
 ggsave(asrg.logi.rel.phyla.bar, filename = paste(wd, "/figures/all.logi.rel.phyla.90.bar.png", sep = ""), width = 10)
 
