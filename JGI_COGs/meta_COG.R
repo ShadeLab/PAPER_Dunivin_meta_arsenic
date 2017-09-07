@@ -105,6 +105,7 @@ abund <- melt(abund, id.vars = c("COG.ID", "COG.Name"), measure.vars = c("Genome
     scale_fill_manual(values = c("grey49", "grey89")) +
     ylab("COG Proportion (count per genome)") + 
     xlab("COG Name") +
+    ylim(0,1.6) +
     theme_bw(base_size = 12) +
     scale_x_discrete(labels = function(x) stringr::str_wrap(x, width = 15)))
 

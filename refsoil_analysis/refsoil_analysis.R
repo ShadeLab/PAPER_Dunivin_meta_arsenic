@@ -162,17 +162,18 @@ data.taxREL <- data.tax %>%
   mutate(RelCount = Count / 922)
 
 #plot bar chart with filled phyla RELATIVE
-(asrg.phyla.barREL <- ggplot(data = data.taxREL, aes(x = Gene, y = RelCount)) +
-    geom_bar(stat = "identity", color = "black", fill = "grey39") +
+(asrg.phyla.barREL <- ggplot(data = subset(data.taxREL, Gene !="None"), aes(x = Gene, y = RelCount)) +
+    geom_bar(stat = "identity", color = "black", fill = "grey49") +
     ylab("Count proportion (number per genome)") +
     xlab("Gene") +
     theme_bw(base_size = 12) +
+    ylim(0,1.6) +
     theme(axis.text.x = element_text(angle = 60, hjust = 1)))
 
 #save plot
 ggsave(asrg.phyla.barREL, filename = paste(wd, "/figures/numberhits.geneREL.png", 
                                         sep = ""), width = 10)
-ggsave(asrg.phyla.barREL, filename = paste(wd, "/figures/numberhits.geneREL.png", 
+ggsave(asrg.phyla.barREL, filename = paste(wd, "/figures/numberhits.geneREL.eps", 
                                         sep = ""), width = 10)
 
 #summarise NCBI so that we know how many of each phyla are in the 922 
@@ -263,7 +264,7 @@ data.cog.comp$Phylum <- factor(data.cog.comp$Phylum,
     ylab("Proportion of of genomes with gene (logical)") +
     scale_fill_manual(values = c("#8DD3C7","#BC80BD","#80B1D3")) +
     xlab("Phylum") +
-    theme_classic(base_size = 12) +
+    theme_bw(base_size = 12) +
     theme(axis.text.x = element_text(angle = 90, size = 12, hjust=0.95,vjust=0.2)))
 
 ggsave(asrg.logi.rel.phyla.bar, filename = paste(wd, "/figures/PA.phylumREL.COG.png", sep = ""), width = 10)

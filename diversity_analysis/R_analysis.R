@@ -173,6 +173,7 @@ gene_abundance_summary$Gene <- factor(gene_abundance_summary$Gene,
 
 #save bar graph with SAMPLE means
 ggsave(barplot.sample, filename = paste(wd, "/figures/bar.sample.png", sep= ""))
+ggsave(barplot.sample, filename = paste(wd, "/figures/bar.sample.eps", sep= ""))
 
 #summarise based on sample
 gene_abundance_summary.site <- gene_abundance_summary %>%
@@ -192,6 +193,7 @@ gene_abundance_summary.site <- gene_abundance_summary %>%
 
 #save bar graph with SITE means
 ggsave(barplot.site, filename = paste(wd, "/figures/bar.site.png", sep= ""))
+ggsave(barplot.site, filename = paste(wd, "/figures/bar.site.eps", sep= ""))
 
 #######################################
 #COMMUNITY COMPOSITION ANALYSIS (rplB)#
@@ -254,7 +256,7 @@ history <- melt %>%
 
 #save full community structure
 ggsave(phylum.plot, filename = paste(wd, "/figures/community.structure.full.png", sep=""), width = 12, height = 6)
-
+ggsave(phylum.plot, filename = paste(wd, "/figures/community.structure.full.eps", sep=""), width = 12, height = 6)
 #extract 6 most abundant phyla
 #top 6 were chosen so that at least
 #70% of each community was represented
@@ -266,12 +268,13 @@ top.phyla <- c("Proteobacteria", "Actinobacteria", "Verrucomicrobia", "Firmicute
                     geom_bar(stat = "identity") +
                     scale_fill_brewer(palette = "Dark2") +
                     labs(x="Phylum", y="Mean relative abundance") +
-                    theme_bw(base_size = 10) +
+                    theme_bw(base_size = 11) +
                     theme(axis.text.x = element_text(angle = 45, size = 10, 
                                                      hjust=0.99,vjust=0.99))))
 
 #save plot of top phyla
 ggsave(phylum.plot.top, filename = paste(wd, "/figures/community.structure.top.png", sep=""))
+ggsave(phylum.plot.top, filename = paste(wd, "/figures/community.structure.top.eps", sep=""), units = "in", width = 6, height = 4)
 
 
 
