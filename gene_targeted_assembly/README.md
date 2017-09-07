@@ -1,6 +1,9 @@
+## Bin 
+* Includes scripts for quality control, site comparison, and phylogenetic analysis for gene-targeted assembly outputs
+
 ## Diversity Analysis:
 * Repository includes assembled sequence data post processing (contig table analysis)
-* R_analysis.R 
+* diversity_analysis.R 
     * Overarching goals
        1. Exmine alpha diversity of sequences
        2. Examine abundance/ distribution of arsenic resistance genes across diverse soil types
@@ -17,4 +20,7 @@
       * bar.site: arsenic resistance gene abundance by site (shows average per sample)
       * community.structure.full: Complete rplB relative abundance profile for each site      
       * community.structure.top: Truncated rplB relative abundance profile for each site; contains only top 6 phyla to include 70% of each community
+      
+## Phylogenetic Analysis: 
+* Repository contains .nwk files of maximum likelihood trees visualized in iTOL
  
