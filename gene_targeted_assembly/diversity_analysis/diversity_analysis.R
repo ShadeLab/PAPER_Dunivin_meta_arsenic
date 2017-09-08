@@ -98,6 +98,10 @@ rownames(rplB) <-  otu_table$Sample
 rplB_summary <- data.frame(rowSums(rplB)) %>%
   rename(sum.rplB = rowSums.rplB.)
 
+#save rplB summary for iTOL later in analysis
+rplB_summary_save <- rplB_summary
+rplB_summary_save$Sample <- rownames(rplB_summary_save)
+write.table(rplB_summary_save, file = paste(wd, "/output/rplB.summary.scg.txt", sep = ""))
 #make site a column in rplB
 rplB_summary$Sample <- rownames(rplB_summary) 
 

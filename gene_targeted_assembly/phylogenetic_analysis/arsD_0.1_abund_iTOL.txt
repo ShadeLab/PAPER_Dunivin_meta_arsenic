@@ -1,0 +1,57 @@
+DATASET_MULTIBAR
+SEPARATOR COMMA
+DATASET_LABEL, abundance
+
+#define colors for each individual field column (use hexadecimal, RGB or RGBA notation; if using RGB/RGBA, COMMA cannot be used as SEPARATOR)
+FIELD_COLORS,#63dbe8,#0000ff,#d3f7ef, #ff0000, #ff0000,#00ff00, #2e004c,#0000ff,#d3f7ef
+
+#field labels
+FIELD_LABELS,Permafrost_Russia13.3,Mangrove70.3,Permafrost_Canada45.3,Illinois_soil91.3,Illinois_soil88.3,Iowa_agricultural00.3,Mangrove02.3,Disney_preserve18.3,Permafrost_Canada23.3
+
+
+#dataset scale: you can simply set the values where the scale will be drawn
+DATASET_SCALE,0.000, 0.003, 0.005, 0.007, 0.009
+
+#or you can specify value, label and color for each scale line (dash separated, format: VALUE-LABEL-COLOR) 
+#DATASET_SCALE,2000-2k line-#0000ff,10000-line at 10k-#ff0000,20000-3rd line-#00ff00
+
+#each dataset can have a legend, which is defined below
+#for each row in the legend, there should be one shape, color and label
+#shape should be a number between 1 and 6:
+#1: square
+#2: circle
+#3: star
+#4: right pointing triangle
+#5: left pointing triangle
+#6: checkmark
+
+LEGEND_TITLE,Sample
+LEGEND_SHAPES,1,1,1,1,1,1,1,1,1
+LEGEND_COLORS,#63dbe8,#0000ff,#d3f7ef,#ff0000,#ff0000,#00ff00,#2e004c,#0000ff,#d3f7ef
+LEGEND_LABELS,Permafrost_Russia13.3,Mangrove70.3,Permafrost_Canada45.3,Illinois_soil91.3,Illinois_soil88.3,Iowa_agricultural00.3,Mangrove02.3,Disney_preserve18.3,Permafrost_Canada23.3
+
+
+DATA
+OTU_0001,0,0,0.0121654501216545,0,0,0,0,0,0
+OTU_0002,0,0.00290697674418605,0,0,0,0,0.00381679389312977,0,0
+OTU_0003,0,0,0.0072992700729927,0,0,0,0,0,0.00704225352112676
+OTU_0004,0,0,0.0145985401459854,0,0,0,0,0,0.00234741784037559
+OTU_0005,0,0,0.0389294403892944,0,0,0,0,0,0
+OTU_0006,0,0,0,0,0,0,0,0,0.00234741784037559
+OTU_0007,0,0,0,0,0,0,0,0.00401606425702811,0
+OTU_0008,0,0,0,0,0,0,0.00381679389312977,0,0
+OTU_0009,0,0.00290697674418605,0,0,0,0,0,0,0
+OTU_0010,0,0,0.0024330900243309,0,0,0,0,0,0
+OTU_0011,0,0,0,0.0357142857142857,0.0357142857142857,0,0,0,0
+OTU_0012,0,0,0,0,0,0,0,0,0.00704225352112676
+OTU_0013,0,0.00290697674418605,0,0,0,0,0,0,0
+OTU_0014,0,0,0,0,0,0,0,0,0.00234741784037559
+OTU_0015,0.00241545893719807,0,0,0,0,0,0,0,0
+OTU_0016,0,0,0,0,0,0.0167597765363128,0,0,0
+OTU_0017,0,0,0,0.0178571428571429,0.0178571428571429,0,0,0,0
+OTU_0018,0,0,0,0,0,0,0.00381679389312977,0,0
+OTU_0019,0,0.00581395348837209,0,0,0,0,0,0,0
+OTU_0020,0,0.00290697674418605,0,0,0,0,0,0,0
+OTU_0021,0,0,0.0072992700729927,0,0,0,0,0,0
+OTU_0022,0,0,0,0.0178571428571429,0.0178571428571429,0,0,0,0
+OTU_0023,0,0,0,0,0,0,0.00381679389312977,0,0
