@@ -3,14 +3,14 @@ SEPARATOR COMMA
 DATASET_LABEL, abundance
 
 #define colors for each individual field column (use hexadecimal, RGB or RGBA notation; if using RGB/RGBA, COMMA cannot be used as SEPARATOR)
-FIELD_COLORS,#63dbe8,#0000ff,#d3f7ef, #ff0000, #ff0000,#00ff00, #2e004c,#0000ff,#d3f7ef
+FIELD_COLORS,#46f0f0,#000080,#0082c8,#e6194b,#e6194b,#3cb44b,#000080,#911eb4,#0082c8
 
 #field labels
 FIELD_LABELS,Permafrost_Russia13.3,Mangrove70.3,Permafrost_Canada45.3,Illinois_soil91.3,Illinois_soil88.3,Iowa_agricultural00.3,Mangrove02.3,Disney_preserve18.3,Permafrost_Canada23.3
 
 
 #dataset scale: you can simply set the values where the scale will be drawn
-DATASET_SCALE,0.000, 0.003, 0.005, 0.007, 0.009
+DATASET_SCALE,0.000, 0.025, 0.5, 0.1
 
 #or you can specify value, label and color for each scale line (dash separated, format: VALUE-LABEL-COLOR) 
 #DATASET_SCALE,2000-2k line-#0000ff,10000-line at 10k-#ff0000,20000-3rd line-#00ff00
@@ -27,7 +27,7 @@ DATASET_SCALE,0.000, 0.003, 0.005, 0.007, 0.009
 
 LEGEND_TITLE,Sample
 LEGEND_SHAPES,1,1,1,1,1,1,1,1,1
-LEGEND_COLORS,#63dbe8,#0000ff,#d3f7ef,#ff0000,#ff0000,#00ff00,#2e004c,#0000ff,#d3f7ef
+LEGEND_COLORS,#46f0f0,#000080,#0082c8,#e6194b,#e6194b,#3cb44b,#000080,#911eb4,#0082c8
 LEGEND_LABELS,Permafrost_Russia13.3,Mangrove70.3,Permafrost_Canada45.3,Illinois_soil91.3,Illinois_soil88.3,Iowa_agricultural00.3,Mangrove02.3,Disney_preserve18.3,Permafrost_Canada23.3
 
 

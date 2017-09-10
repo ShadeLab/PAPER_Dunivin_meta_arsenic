@@ -176,6 +176,7 @@ ggsave(asrg.phyla.barREL, filename = paste(wd, "/figures/numberhits.geneREL.png"
 ggsave(asrg.phyla.barREL, filename = paste(wd, "/figures/numberhits.geneREL.eps", 
                                         sep = ""), width = 10)
 
+
 #summarise NCBI so that we know how many of each phyla are in the 922 
 #genomes from Refsoil
 ncbi.sum <- ncbi %>%
@@ -269,3 +270,28 @@ data.cog.comp$Phylum <- factor(data.cog.comp$Phylum,
 
 ggsave(asrg.logi.rel.phyla.bar, filename = paste(wd, "/figures/PA.phylumREL.COG.png", sep = ""), width = 10)
 ggsave(asrg.logi.rel.phyla.bar, filename = paste(wd, "/figures/PA.phylumREL.COG.eps", sep = ""), width = 10)
+
+#######################################################
+#HOW MANY COPIES OF ASRGS ARE PRESENT IN SOIL GENOMES?#
+#######################################################
+data.sum <- data.tax %>%
+  group_by(Phylum,`Taxon ID`, Gene) %>%
+  summarise(Gene.count = length(Gene))
+
+ggplot(data.sum, aes(x = Gene.count, fill = Gene)) +
+  geom_bar(color = "black") +
+  facet_wrap(~Gene, scales = "free_y") +
+  scale_fill_brewer(palette = "Set3") +
+  scale_x_continuous(breaks = c(1,3,5,7,9,11)) +
+  theme_bw(base_size = 12)
+
+data.sum.cast <- dcast(data.sum, Gene~`Taxon ID`, fill = 0, value.var = "Gene.count")
+data.sum.melt <- melt(data.sum.cast, id.vars = "Gene")
+
+data.sum.melt.summary <- data.sum.melt %>%
+  group_by(Gene) %>%
+  summarise(N = length(Gene), Mean = mean(value), StErr = sd(value)/sqrt(N))
+
+ggplot(subset(data.sum.melt, Gene !="None"), aes(x = Gene, y = value)) +
+  geom_boxplot() +
+  theme_bw()

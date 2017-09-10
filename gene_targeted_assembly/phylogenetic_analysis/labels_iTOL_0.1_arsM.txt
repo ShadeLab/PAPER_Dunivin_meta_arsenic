@@ -1,0 +1,15 @@
+LABELS
+SEPARATOR COMMA
+DATA
+#NODE_ID,LABEL
+ARSM_HALSA, (O52025) (ARSM_HALSA)
+Rhodopseudomonas_palustris, (WP_011159102.1) (Rhodopseudomonas_palustris)
+Gemmatimonas_aurantiaca, (YP_002760215.1) (Gemmatimonas_aurantiaca)
+Geobacillus_kaustophilus, (YP_146445.1) (Geobacillus_kaustophilus)
+Symbiobacterium, (YP_076198.1) (Symbiobacterium)
+Thiobacillus_denitrificans, (YP_315186.1) (Thiobacillus_denitrificans)
+Pelotomaculum_thermopropionicum, (YP_001210990.1) (Pelotomaculum_thermopropionicum)
+Candidatus_Solibacter_usitatus, (YP_825656.1) (Candidatus_Solibacter_usitatus)
+Desulfitobacterium_hafniense, (YP_520381.1) (Desulfitobacterium_hafniense)
+ROOT_Q9KCC4.1, methyltransferase (ROOT_Q9KCC4.1)
+ROOT_Q5WGT4.1, methyltransferase (ROOT_Q5WGT4.1)

@@ -199,6 +199,17 @@ gene_abundance_summary.site <- gene_abundance_summary %>%
 ggsave(barplot.site, filename = paste(wd, "/figures/bar.site.png", sep= ""))
 ggsave(barplot.site, filename = paste(wd, "/figures/bar.site.eps", sep= ""))
 
+#plot gene distribution
+(barplot.site <- ggplot(subset(gene_abundance_summary, subset = Gene !="rplB"),
+                        aes(x = Gene, y = Total)) +
+    geom_boxplot() +
+    scale_color_brewer(palette = "Set3") +
+    ylab("Total gene count (normalized to rplB)") +
+    theme_bw(base_size = 12) +
+    ylim(0,1.5) +
+    theme(axis.text.x = element_text(angle = 45, size = 12, 
+                                     hjust=0.99,vjust=0.99)))
+
 #######################################
 #COMMUNITY COMPOSITION ANALYSIS (rplB)#
 #######################################

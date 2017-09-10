@@ -109,6 +109,7 @@ abund <- melt(abund, id.vars = c("COG.ID", "COG.Name"), measure.vars = c("Genome
     theme_bw(base_size = 12) +
     scale_x_discrete(labels = function(x) stringr::str_wrap(x, width = 15)))
 
+
 #save comparison plot
 #note these comparisons do NOT account for multiple AsRG copies per genome
 #this is purposeful since we cannot know that for metaG. 
@@ -134,11 +135,11 @@ taxa <- read_delim(file = paste(wd, "/data/taxontable51515_04-may-2017.xls", sep
 #change sample name to genome
 taxa.acr3 <- taxa %>%
   select(taxon_oid, Genome, Phylum:Species) %>%
-  right_join(acr3, by = "Genome") %>%
+  left_join(acr3, by = "Genome") %>%
   mutate(Gene = "acr3")
 
 #remove any duplicate rows 
-taxa.acr3 <- taxa.acr3[!duplicated(taxa.acr3$Genome),]
+taxa.acr3 <- taxa.acr3[!duplicated(taxa.acr3$taxon_oid),]
 
 #calculate the actual percentage of genomes with >=1 copy of acr3
 perc.acr3 <- count(acr3) / 51515
@@ -156,6 +157,11 @@ ggsave(acr3.hist, filename = paste(wd, "/figures/acr3.genome.hist.png", sep = ""
        height = 3.51, width = 5.69)
 ggsave(acr3.hist, filename = paste(wd, "/figures/acr3.genome.hist.eps", sep = ""), 
        height = 3.51, width = 5.69)
+
+#replace all NA Gene.Count values with zeros 
+taxa.acr3$Gene.Count[is.na(taxa.acr3$Gene.Count)] <- 0
+
+
 ############################################################
 #WHAT IS THE DISTRIBUTION OF arsC IN EACH GENOME (#/GENOME)#
 ############################################################
