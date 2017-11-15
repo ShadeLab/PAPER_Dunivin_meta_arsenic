@@ -5,7 +5,8 @@
 #load required packages
 library(tidyverse)
 library(reshape2)
-library(zoo)
+library(fuzzyjoin)
+library(broom)
 
 #print working directory
 wd <- print(getwd())
@@ -139,9 +140,6 @@ taxa.arsA$Gene.Count[is.na(taxa.arsA$Gene.Count)] <- 0
 #read in COG1055 data
 arsB <- read.delim(file = paste(wd, "/data/asp_COG1055_05-may-2017.txt", sep = ""))
 
-#read in taxonomy data
-taxa <- read_delim(file = paste(wd, "/data/taxontable51515_04-may-2017.xls", sep = ""), col_names = TRUE, delim = "\t")
-
 #change sample name to genome
 taxa.arsB <- taxa %>%
   select(taxon_oid, Genome, Phylum:Species) %>%
@@ -237,7 +235,11 @@ ggsave(prop.asrg.phyla, filename = paste(wd, "/figures/AsRG.proportions.phyla.ep
 ggsave(prop.asrg.phylaPA, filename = paste(wd, "/figures/AsRG.proportions.phylaPA.png", sep=""), width = 20, height = 12)
 ggsave(prop.asrg.phylaPA, filename = paste(wd, "/figures/AsRG.proportions.phylaPA.eps", sep=""), width = 20, height = 12)
 
-
+################################################
+#ARE SOIL GENOMES DIFFERENT THAN OTHER GENOMES?#
+################################################
+taxa.asrg.soil <- taxa.asrg[]
+taxa.asrg.nonsoil <- 
 
 #####################
 #METAGENOME ANALYSIS#
@@ -312,12 +314,13 @@ metag_annotated <- metag_annotated[metag_annotated$`Genome Size   * assembled` >
 
 #tidy dataset
 metag_annotated_tidy <- metag_annotated %>%
-  melt(value.name = "Abundance", variable.name = "Func_id")
+  select(COG0003:SampleName.x, `Study Name`, `Ecosystem`, `Ecosystem Category`, `Ecosystem Subtype`, `Ecosystem Type`, Latitude, Longitude) %>%
+  melt(id.vars = c("SampleName.x", "Study Name", "Ecosystem", "Ecosystem Category", "Ecosystem Subtype", "Ecosystem Type", "Latitude", "Longitude"), variable.name = "Func_id", value.name = "Abundance")
 
 #extract and calc average of single copy gene abundance
 metag_scg <- metag_annotated_tidy[metag_annotated_tidy$Func_id %in% census,]
 metag_scg_summary <- metag_scg %>%
-  group_by(SampleName.x) %>%
+  group_by(SampleName.x, Latitude, Longitude) %>%
   summarise(scgMean = mean(Abundance), scgStDev = sd(Abundance))
 
 #remove strange sample with scg == 0 
@@ -326,21 +329,34 @@ metag_scg_summary <- metag_scg_summary[metag_scg_summary$scgMean > 0,]
 #join scg data with AsRG data, normalize by scg, and add COG functional information
 metag_asrg <- metag_annotated_tidy[metag_annotated_tidy$Func_id %in% ars,]
 metag_asrg_normalized <- metag_scg_summary %>%
+  ungroup() %>%
+  select(SampleName.x, scgMean) %>%
   left_join(metag_asrg, by = c("SampleName.x")) %>%
   mutate(RelAbund = Abundance/scgMean) %>%
-  left_join(cog_funct, by = "Func_id")
+  left_join(cog_funct, by = "Func_id") 
+
+#test whether gene abundance is correlated with latitude or longitude
+lat.cor <- metag_asrg_normalized %>% group_by(Func_id) %>% do(tidy(cor.test(abs(.$Latitude), .$RelAbund)))
+
+long.cor <- metag_asrg_normalized %>% group_by(Func_id) %>% do(tidy(cor.test(abs(.$Longitude), .$RelAbund)))
+#no strong relationship between latitude/longitude and AsRG COGs
+ggplot(metag_asrg_normalized, aes(x = Latitude, y = RelAbund)) +
+  geom_point() +
+  facet_wrap(~Func_id)
+ggplot(metag_asrg_normalized, aes(x = Longitude, y = RelAbund)) +
+  geom_point() +
+  facet_wrap(~Func_id)
 
 ##########################################
 #COMPARE JGI GENOMES AND SOIL METAGENOMES#
 ##########################################
 taxa.asrg.compare <- taxa.asrg %>%
-  mutate(Source = "Genome") %>%
-  rename(RelAbund = Gene.Count) %>%
-  select(Source, Gene, RelAbund) 
+  rename(RelAbundGENOME = Gene.Count) %>%
+  select(Gene, RelAbundGENOME) 
 
 metag_asrg_normalized_compare <- metag_asrg_normalized %>%
-  mutate(Source = "Metagenome") %>%
-  select(Source, Func_id, RelAbund) %>%
+  rename(RelAbundMETAG = RelAbund) %>%
+  select(Func_id, RelAbundMETAG) %>%
   rename(Gene = Func_id)
 
 metag_asrg_normalized_compare$Gene <- gsub("COG0003", "arsA", metag_asrg_normalized_compare$Gene)
@@ -350,15 +366,12 @@ metag_asrg_normalized_compare$Gene <- gsub("COG0798", "acr3", metag_asrg_normali
 
 gen_metag <- rbind(taxa.asrg.compare, metag_asrg_normalized_compare)
 
+
+gen_metag_stats <- gen_metag %>%
+  group_by(Gene) %>%
+  do(tidy(wilcox.test(.$RelAbund~.$Source, paired = FALSE)))
+
 #plot data based on COG
 ggplot(gen_metag, aes(x = Gene, y = RelAbund)) +
   geom_boxplot(aes(color = Source)) +
-  theme_bw()
-
-gen_metag_summarised <- gen_metag %>%
-  group_by(Gene, Source) %>%
-  summarise(N = length(Gene), Mean = mean(RelAbund), StdErr = sd(RelAbund)/sqrt(N))
-
-ggplot(gen_metag_summarised, aes(x = Gene, y = Mean)) +
-  geom_bar(stat = "identity", position = "dodge", aes(color = Source)) +
-  geom_errorbar(aes(ymin = Mean - StdErr, ymax = Mean + StdErr))
+  theme_bw() 

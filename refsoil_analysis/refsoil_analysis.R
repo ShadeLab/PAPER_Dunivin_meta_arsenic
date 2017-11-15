@@ -66,34 +66,25 @@ ncbi <- ncbi %>%
   separate(col = NCBI.ID2, into = c("NCBI.ID2", "Vs2"), sep = -3) %>%
   separate(col = NCBI.ID3, into = c("NCBI.ID3", "Vs3"), sep = -3) 
 
-
-#check that all AsRG hits match the first NCBI.ID
-check <- data.90 %>%
-  anti_join(ncbi, by = "NCBI.ID")
-#1201 hits do not match NCBI.ID #1
-
-
 #join AsRG information with taxanomic data that match NCBI.ID #1, 2, 3
 data.tax.ncbi1 <- ncbi %>%
-  left_join(data.90, by = "NCBI.ID") 
+  inner_join(data.90, by = "NCBI.ID") 
 
 data.tax.ncbi2 <- ncbi %>%
   rename(ncbi.id = NCBI.ID, NCBI.ID = NCBI.ID2) %>%
-  left_join(data.90, by = "NCBI.ID") 
+  inner_join(data.90, by = "NCBI.ID") 
 
 data.tax.ncbi3 <- ncbi %>%
   rename(ncbi.id = NCBI.ID, NCBI.ID = NCBI.ID3) %>%
-  left_join(data.90, by = "NCBI.ID") 
+  inner_join(data.90, by = "NCBI.ID")
 
-#remove NA t.name rows from ncbi data.frames 2 and 3
-#note do not officially remove NA from ncbi1 (need NAs downstream
-#to note which orgs do NOT have AsRG)
-data.tax.ncbi1.1 <- data.tax.ncbi1[!is.na(data.tax.ncbi1$t.name),]
-data.tax.ncbi2 <- data.tax.ncbi2[!is.na(data.tax.ncbi2$t.name),]
-data.tax.ncbi3 <- data.tax.ncbi3[!is.na(data.tax.ncbi3$t.name),]
-
-#make sure number of matches is equal to total number (19882)
-check <- nrow(data.tax.ncbi1.1) + nrow(data.tax.ncbi2) + nrow(data.tax.ncbi3)
+#extract genomes with NO AsRG 
+ncbi.NONE <- ncbi %>%
+  anti_join(data.90, by = "NCBI.ID")
+ncbi.NONE <- ncbi.NONE[!ncbi.NONE$NCBI.ID2 %in% data.90$NCBI.ID,]
+ncbi.NONE <- ncbi.NONE[!ncbi.NONE$NCBI.ID3 %in% data.90$NCBI.ID,]
+ncbi.NONE <- ncbi.NONE %>%
+  left_join(data.90, by = "NCBI.ID")
 
 #make colnames of all three datasets match
 colnames(data.tax.ncbi2) <- colnames(data.tax.ncbi1)
@@ -101,17 +92,6 @@ colnames(data.tax.ncbi3) <- colnames(data.tax.ncbi1)
 
 #combine all three datasets
 data.tax <- rbind(data.tax.ncbi1, data.tax.ncbi2, data.tax.ncbi3)
-
-#group data
-data.tax <- data.tax %>%
-  group_by(Gene, Phylum, Class, Order, Family, Genus)
-
-#change NA gene to "None"
-data.tax$Gene[is.na(data.tax$Gene)] <- "None"
-
-#remove NA's to protect them from duplicate removal step
-data.tax.na <- data.tax[is.na(data.tax$t.length),]
-data.tax <- data.tax[!is.na(data.tax$t.length),]
 
 #examine if any HMM hits apply to two genes
 duplicates <- data.tax[duplicated(data.tax$t.name),]
@@ -127,7 +107,10 @@ duplicates <- data.tax[duplicated(data.tax$t.name),]
 data.tax <- data.tax[!duplicated(data.tax$t.name),]
 
 #add back NAs
-data.tax <- rbind(data.tax, data.tax.na)
+data.tax <- rbind(data.tax, ncbi.NONE)
+
+#change NA gene to "None"
+data.tax$Gene[is.na(data.tax$Gene)] <- "None"
 
 #############################################
 #EXAMINE NUMBER OF MODEL HITS (not relative)#
@@ -247,7 +230,7 @@ data.tax.uniq.logi$Phylum <- factor(data.tax.uniq.logi$Phylum,
 #remove phyla with less than 3 representatives
 data.tax.uniq.logi.slim <- data.tax.uniq.logi[which(data.tax.uniq.logi$phy.n >10),]
 
-cog.comp <- c("acr3","arsA", "arsC_glut")
+cog.comp <- c("acr3","arsA", "arsC_glut", "arsB")
 cog.phyla <- c("Actinobacteria", "Proteobacteria", "Bacteroidetes", "Chlamydiae", 
                "Chloroflexi", "Firmicutes", "Fusobacteria", "Planctomycetes", 
                "Spirochaetes", "Tenericutes", "Verrucomicrobia", "Cyanobacteria")
@@ -263,7 +246,7 @@ data.cog.comp$Phylum <- factor(data.cog.comp$Phylum,
 (asrg.logi.rel.phyla.bar <- ggplot(data.cog.comp, aes(x = Phylum, y = rel.logi.count, fill = Gene)) +
     geom_bar(stat = "identity", color = "black", position = "dodge") +
     ylab("Proportion of of genomes with gene (logical)") +
-    scale_fill_manual(values = c("#8DD3C7","#BC80BD","#80B1D3")) +
+    scale_fill_manual(values = c("#8DD3C7","#BC80BD","#80B1D3", "grey")) +
     xlab("Phylum") +
     theme_bw(base_size = 12) +
     theme(axis.text.x = element_text(angle = 90, size = 12, hjust=0.95,vjust=0.2)))
