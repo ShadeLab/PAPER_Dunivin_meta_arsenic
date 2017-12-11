@@ -112,6 +112,10 @@ data.tax <- rbind(data.tax, ncbi.NONE)
 #change NA gene to "None"
 data.tax$Gene[is.na(data.tax$Gene)] <- "None"
 
+#export final names for tree
+dissim.data.tax <- data.tax %>% subset(Gene == c("aioA","arrA","arxA"))
+write(as.character(dissim.data.tax$t.name), file = paste(wd, "/output/dissim_target_names.txt", sep = ""))
+
 #############################################
 #EXAMINE NUMBER OF MODEL HITS (not relative)#
 #############################################
