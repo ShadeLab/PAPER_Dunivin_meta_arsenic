@@ -1,0 +1,17 @@
+#!/bin/bash -login
+ 
+### define resources needed:
+### walltime - how long you expect the job to run
+#PBS -l walltime=01:00:00
+ 
+### nodes:ppn - how many nodes & cores per node (ppn) that you require
+#PBS -l nodes=01:ppn=8
+ 
+### mem: amount of memory that the job will need
+#PBS -l mem=100gb
+ 
+### you can give your job a name for easier identification
+#PBS -N refsoil
+
+cd /mnt/research/ShadeLab/Dunivin/hmmsearch/bin
+./AsRG_hmmsearch.sh  search_setenv.sh "bacteria.protein.fa"

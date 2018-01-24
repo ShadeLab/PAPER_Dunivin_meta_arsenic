@@ -1,0 +1,17 @@
+DATASET_MULTIBAR
+SEPARATOR COMMA
+DATASET_LABEL, abundance
+
+#define colors for each individual field column (use hexadecimal, RGB or RGBA notation; if using RGB/RGBA, COMMA cannot be used as SEPARATOR)
+FIELD_COLORS,#ffe119,#3cb44b,#0082c8,#ffe119,#f58231,#ffe119,#911eb4,#d2f53c,#911eb4,#008080,#fabebe,#46f0f0,#aa6e28,#808000,#d2f53c,#3cb44b,#ffe119,#ffd8b1,#ffe119,#808080,#aaffc3,#aa6e28,#000080,#ffd8b1,#f58231,#f58231,#FFFFFF,#808080,#808000,#008080,#46f0f0,#000080,#808000,#e6194b,#fabebe,#f58231,#e6194b,#f58231,#808080
+FIELD_LABELS,cen04,Iowa_agricultural01.3,Permafrost_Russia13.3,cen05,cen06,cen07,Mangrove70.3,Illinois_soil91.3,Mangrove02.3,Illinois_soybean40.3,Disney_preserve18.3,Permafrost_Canada23.3,California_grassland62.3,Brazilian_forest39.3,Illinois_soil88.3,Iowa_agricultural00.3,cen01,Iowa_corn22.3,cen03,Iowa_prairie76.3,cen17,California_grassland15.3,Minnesota_creek45.3,Iowa_corn23.3,cen15,cen16,Wyoming_soil22.3,Iowa_prairie72.3,Brazilian_forest54.3,Illinois_soybean42.3,Permafrost_Canada45.3,Minnesota_creek46.3,Brazilian_forest95.3,cen10,Disney_preserve25.3,cen14,cen13,cen12,Iowa_prairie75.3
+
+#dataset scale: you can simply set the values where the scale will be drawn
+DATASET_SCALE,0.00,0.015,0.03,0.06
+
+LEGEND_TITLE,Sample
+LEGEND_SHAPES,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+LEGEND_COLORS,#808000,#aa6e28,#f58231,#e6194b,#ffe119,#aaffc3,#fabebe,#d2f53c,#008080,#3cb44b,#ffd8b1,#808080,#911eb4,#000080,#46f0f0,#0082c8,#FFFFFF
+LEGEND_LABELS,Brazilian forest,California grassland,Centralia active (<50C),Centralia active (>50C),Centralia recovered,Centralia reference,Disney preserve,Illinois soil,Illinois soybean,Iowa agricultural,Iowa corn,Iowa prairie,Mangrove,Minnesota creek,Permafrost Canada,Permafrost Russia,Wyoming soil
+
+DATA

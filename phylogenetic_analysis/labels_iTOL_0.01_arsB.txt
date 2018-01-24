@@ -1,0 +1,23 @@
+LABELS
+SEPARATOR COMMA
+DATA
+#NODE_ID,LABEL
+ARSB_ECOLI, Escherichia_coli_K12 (P0AB93)
+ARSB_STAAM, Staphylococcus_aureus_Mu50 (P63619)
+ARSB_STAAW, Staphylococcus_aureus_MW2 (Q8NW09)
+ARSB_STAAS, Staphylococcus_aureus_MSSA476 (Q6G8F6)
+ARSB_YEREN, Yersinia_enterocolitica (P74985)
+ARSB_STAXY, Staphylococcus_xylosus (Q01255)
+Acidiphilium_multivorum, Acidiphilium_multivorum (BAA24823.1) 
+ARSB2_ECOLX, Escherichia_coli (P52146)
+YDFA_BACSU, Bacillus_subtilis_168 (P96678)
+O68021_PSEAE, Pseudomonas_aeruginosa (O68021)
+ROOT|tr|C5A2J2|C5A2J2_THEGJ, Thermococcus_gammatolerans_EJ3 (C5A2J2_THEGJ)
+AEJ41862.1, Sulfobacillus_acidophilus_TPY (AEJ41862.1)
+AKS26045.1, uncultured_bacterium (AKS26045.1)
+WP_006448074.1, Alicyclobacillus_hesperidum (WP_006448074.1)
+WP_015799248.1, Acidimicrobium_ferrooxidans (WP_015799248.1)
+WP_043601986.1, Cellulomonas_carbonis (WP_043601986.1)
+WP_054967921.1, Alicyclobacillus_ferrooxydans (WP_054967921.1)
+WP_058093762.1, Alicyclobacillus_tengchongensis (WP_058093762.1)
+WP_092041607.1, Methylobacterium_pseudosasicola (WP_092041607.1)

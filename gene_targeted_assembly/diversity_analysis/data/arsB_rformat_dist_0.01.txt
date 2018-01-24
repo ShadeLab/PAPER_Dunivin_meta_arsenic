@@ -1,5 +1,5 @@
 	OTU_01	OTU_02	OTU_03	OTU_04	OTU_05	OTU_06	OTU_07	OTU_08	OTU_09	OTU_10 
-California_grassland15.3	0	0	0	0	0	0	0	0	0	3
-California_grassland62.3	0	0	0	3	0	0	0	0	0	0
-cen10	0	2	1	0	3	3	3	0	1	0
-Permafrost_Canada23.3	9	0	0	0	0	0	0	2	0	0
+California_grassland15.3	0	0	0	0	0	0	3	0	0	0
+California_grassland62.3	0	0	0	0	0	3	0	0	0	0
+cen10	0	2	0	1	3	0	0	1	3	3
+Permafrost_Canada23.3	9	0	2	0	0	0	0	0	0	0

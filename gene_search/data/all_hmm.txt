@@ -1,0 +1,11 @@
+Gene	hmm.length
+arsM	269
+arrA	846
+aioA	837
+arsB	430
+ACR3	363
+arsC_glut	117
+arsC_thio	133
+arsA	346
+arsD	123
+arxA	831

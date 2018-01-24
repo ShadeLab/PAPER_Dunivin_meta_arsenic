@@ -1,0 +1,15 @@
+Taxon	Abundance	Fraction Abundance
+Alphaproteobacteria	7.404	0.1314
+Bacteroidetes	3.321	0.0590
+Actinobacteria	45.60699999999999	0.8096
+
+
+Lineage	MatchName	Abundance	Fraction Abundance
+Bacteria;Actinobacteria;Actinobacteridae;Actinomycetales;Frankineae;Geodermatophilaceae;Blastococcus	378781357_Blastococcus_saxobsidens_DD2	1.331	0.0236
+Bacteria;Proteobacteria;Alphaproteobacteria;Sphingomonadales;Sphingomonadaceae;Novosphingobium	357600378_Novosphingobium_pentaromativorans_US6-1	1.943	0.0345
+Bacteria;Proteobacteria;Alphaproteobacteria;Sphingomonadales;Sphingomonadaceae;Sphingopyxis	98975575_Sphingopyxis_alaskensis_RB2256	3.907	0.0694
+Bacteria;Bacteroidetes;Cytophagia;Cytophagales;Cytophagaceae;Cytophaga	110279108_Cytophaga_hutchinsonii_ATCC_33406	3.321	0.0590
+Bacteria;Actinobacteria;Actinobacteridae;Actinomycetales;Micrococcineae;Microbacteriaceae;Microbacterium	380774527_Microbacterium_laevaniformans_OR221	41.14299999999999	0.7304
+Bacteria;Proteobacteria;Alphaproteobacteria;Sphingomonadales;Erythrobacteraceae;Erythrobacter	148831487_Erythrobacter_sp._SD-21	1.554	0.0276
+Bacteria;Actinobacteria;Actinobacteridae;Actinomycetales;Micrococcineae;Cellulomonadaceae;Cellulomonas	332337569_Cellulomonas_fimi_ATCC_484	2.2659999999999996	0.0402
+Bacteria;Actinobacteria;Actinobacteridae;Actinomycetales;Micrococcineae;Jonesiaceae;Jonesia	256684786_Jonesia_denitrificans_DSM_20603	0.867	0.0154

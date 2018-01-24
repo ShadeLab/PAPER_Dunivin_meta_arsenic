@@ -5,23 +5,23 @@ library(tidyverse)
 #set up environment
 wd <- paste(getwd())
 
-colnames(labels) <- c("Label", "OTU")
-labels$OTU <- gsub(" ", "", labels$OTU)
-
 #read in OTU table 
-arsD.table <- read.delim(paste(wd, "/data/arsD_rformat_dist_0.1.txt", sep = ""), header = TRUE)
-arsD.table <- rename(arsD.table, Sample = X)
+arsC_thio.table <- read.delim(paste(wd, "/data/arsC_thio_rformat_dist_0.1.txt", sep = ""), header = TRUE)
+arsC_thio.table <- rename(arsC_thio.table, Sample = X)
 
 #read in metadata
-meta <- data.frame(read.delim(paste(wd, "/data/metadata_map.txt", 
+meta <- data.frame(read.delim(paste(wd, "/data/sample_map.txt", 
                                     sep=""), sep="\t", header=TRUE))
 
 #read in rplB data
 rplB <- read.delim(paste(wd, "/output/rplB.summary.scg.txt", sep = ""), header = TRUE, sep = " ")
 
 #add census data for normalization purposes
-table.census <- arsD.table %>%
-  left_join(rplB, by = "Sample")
+table.census <- arsC_thio.table %>%
+  right_join(rplB, by = "Sample")
+
+#replace NA values with zero
+table.census[is.na(table.census)] <- 0
 
 #normalize data
 table.normalized <- cbind(table.census$Sample, 
@@ -39,11 +39,12 @@ table.normalized <- table.normalized %>%
 #transform otu table
 table.normalized.t = setNames(data.frame(t(table.normalized[,-ncol(table.normalized)])), 
                               table.normalized[,ncol(table.normalized)])
+
 #make OTUs a column
-table.normalized.t$OTU <- rownames(table.normalized.t)
+#table.normalized.t$OTU <- rownames(table.normalized.t)
 
 #add name to first column
-table.normalized.t$OTU <- gsub(" ", "", table.normalized.t$OTU)
+#table.normalized.t$OTU <- gsub(" ", "", table.normalized.t$OTU)
 
 #fix OTU names with weird # before them
 #table.normalized.t$OTU <- gsub(".OTU_", "OTU_", table.normalized.t$OTU)
@@ -58,15 +59,10 @@ library(stringr)
 rownames(table.normalized.t) <- gsub("OTU_", "", rownames(table.normalized.t))
 rownames(table.normalized.t) <- sprintf("%04s", rownames(table.normalized.t))
 rownames(table.normalized.t) <- paste("OTU_", rownames(table.normalized.t), sep="")
-table.normalized.t$OTU <- rownames(table.normalized.t)
-
-#remove OTU information
-label.abund <- select(label.abund, -OTU)
-m <- ncol(table.normalized.t) -1
-label.abund <- table.normalized.t[,c(ncol(table.normalized.t), 1:m)]
 
 #save file
-write.csv(label.abund, paste(wd, "/../phylogenetic_analysis/arsD_0.1_abund_label.csv", sep = ""), row.names = FALSE, quote = FALSE)
+write.csv(table.normalized.t, paste(wd, "/../../phylogenetic_analysis/arsC_thio_0.1_abund_label.csv", sep = ""), row.names = TRUE, quote = FALSE)
+
 
 
 
