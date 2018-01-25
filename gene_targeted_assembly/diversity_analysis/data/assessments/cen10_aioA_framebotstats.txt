@@ -1,0 +1,5 @@
+/mnt/research/ShadeLab/WorkingSpace/Dunivin/xander/analysis/cen10/k45/aioA/cluster/cen10_aioA_45_framebot.txt:STATS	EFH10338	cen10_aioA_contig_0_contig_1	1443	534	67.041	1864	0	false
+/mnt/research/ShadeLab/WorkingSpace/Dunivin/xander/analysis/cen10/k45/aioA/cluster/cen10_aioA_45_framebot.txt:STATS	OCK55889	cen10_aioA_contig_36_contig_37	2445	816	84.559	3762	0	false
+/mnt/research/ShadeLab/WorkingSpace/Dunivin/xander/analysis/cen10/k45/aioA/cluster/cen10_aioA_45_framebot.txt:STATS	EFH10338	cen10_aioA_contig_544_contig_545	459	154	75.325	637	0	false
+/mnt/research/ShadeLab/WorkingSpace/Dunivin/xander/analysis/cen10/k45/aioA/cluster/cen10_aioA_45_framebot.txt:STATS	OAF07781	cen10_aioA_contig_670_contig_671	1284	428	85.514	1992	0	false
+/mnt/research/ShadeLab/WorkingSpace/Dunivin/xander/analysis/cen10/k45/aioA/cluster/cen10_aioA_45_framebot.txt:STATS	EFH10338	cen10_aioA_contig_1186_contig_1187	645	215	77.674	906	0	false

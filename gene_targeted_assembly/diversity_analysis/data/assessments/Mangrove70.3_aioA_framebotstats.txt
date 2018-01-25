@@ -1,0 +1,2 @@
+/mnt/research/ShadeLab/WorkingSpace/Yeh/xander/Mangrove70.3/k45/aioA/cluster/Mangrove70.3_aioA_45_framebot.txt:STATS	OHC82914	Mangrove70.3_aioA_contig_1384_contig_1385	567	189	71.429	756	0	false
+/mnt/research/ShadeLab/WorkingSpace/Yeh/xander/Mangrove70.3/k45/aioA/cluster/Mangrove70.3_aioA_45_framebot.txt:STATS	SEQ37348	Mangrove70.3_aioA_contig_2790_contig_2791	654	218	78.440	928	0	false

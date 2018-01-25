@@ -1,0 +1,1 @@
+/mnt/research/ShadeLab/WorkingSpace/Dunivin/xander/analysis/cen12/k45/aioA/cluster/cen12_aioA_45_framebot.txt:STATS	EKE76334	cen12_aioA_contig_374_contig_375	501	167	87.425	779	0	false

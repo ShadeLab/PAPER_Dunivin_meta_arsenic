@@ -1,0 +1,1 @@
+/mnt/research/ShadeLab/WorkingSpace/Yeh/xander/Permafrost_Russia13.3/k45/arrA/cluster/Permafrost_Russia_13.3_arrA_45_framebot.txt:STATS	ADU65134	Permafrost_Russia_13.3_arrA_contig_716_contig_717	2181	729	75.857	2977	0	false

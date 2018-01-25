@@ -1,0 +1,3 @@
+/mnt/research/ShadeLab/WorkingSpace/Yeh/xander/Illinois_soil91.3/k45/arsD/cluster/Illinois_soil91.3_arsD_45_framebot.txt:STATS	AKU96244	Illinois_soil91.3_arsD_contig_10_contig_11	162	54	72.222	185	0	false
+/mnt/research/ShadeLab/WorkingSpace/Yeh/xander/Illinois_soil91.3/k45/arsD/cluster/Illinois_soil91.3_arsD_45_framebot.txt:STATS	AGP33845	Illinois_soil91.3_arsD_contig_42_contig_43	177	59	84.746	247	0	false
+/mnt/research/ShadeLab/WorkingSpace/Yeh/xander/Illinois_soil91.3/k45/arsD/cluster/Illinois_soil91.3_arsD_45_framebot.txt:STATS	CAZ89744	Illinois_soil91.3_arsD_contig_70_contig_71	165	55	85.455	246	0	false

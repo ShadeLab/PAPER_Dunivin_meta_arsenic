@@ -1,0 +1,2 @@
+/mnt/research/ShadeLab/WorkingSpace/Yeh/xander/Permafrost_Canada23.3/k45/arsC_thio/cluster/Permafrost_Canada23.3_arsC_thio_45_framebot.txt:STATS	EJE97629	Permafrost_Canada23.3_arsC_thio_contig_0_contig_1	159	54	79.630	199	0	false
+/mnt/research/ShadeLab/WorkingSpace/Yeh/xander/Permafrost_Canada23.3/k45/arsC_thio/cluster/Permafrost_Canada23.3_arsC_thio_45_framebot.txt:STATS	AAP32334	Permafrost_Canada23.3_arsC_thio_contig_10_contig_11	168	56	71.429	197	0	false

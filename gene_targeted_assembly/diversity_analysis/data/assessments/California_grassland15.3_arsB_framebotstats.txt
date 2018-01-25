@@ -1,0 +1,1 @@
+/mnt/research/ShadeLab/WorkingSpace/Yeh/xander/California_grassland15.3/k45/arsB/cluster/cen01_arsB_45_framebot.txt:STATS	SFL88686	cen01_arsB_contig_4060_contig_4061	780	260	92.692	1201	0	false

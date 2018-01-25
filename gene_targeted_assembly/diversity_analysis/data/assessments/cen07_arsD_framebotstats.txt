@@ -1,0 +1,5 @@
+/mnt/research/ShadeLab/WorkingSpace/Dunivin/xander/analysis/cen07/k45/arsD/cluster/cen07_arsD_45_framebot.txt:STATS	KYF56972	cen07_arsD_contig_2_contig_3	219	74	83.784	291	0	false
+/mnt/research/ShadeLab/WorkingSpace/Dunivin/xander/analysis/cen07/k45/arsD/cluster/cen07_arsD_45_framebot.txt:STATS	ABP77945	cen07_arsD_contig_28_contig_29	180	60	81.667	263	0	false
+/mnt/research/ShadeLab/WorkingSpace/Dunivin/xander/analysis/cen07/k45/arsD/cluster/cen07_arsD_45_framebot.txt:STATS	KLU07545	cen07_arsD_contig_40_contig_41	213	71	66.197	283	0	false
+/mnt/research/ShadeLab/WorkingSpace/Dunivin/xander/analysis/cen07/k45/arsD/cluster/cen07_arsD_45_framebot.txt:STATS	AGP33845	cen07_arsD_contig_42_contig_43	207	69	73.913	261	0	false
+/mnt/research/ShadeLab/WorkingSpace/Dunivin/xander/analysis/cen07/k45/arsD/cluster/cen07_arsD_45_framebot.txt:STATS	CAD76333	cen07_arsD_contig_66_contig_67	318	106	57.547	321	0	false

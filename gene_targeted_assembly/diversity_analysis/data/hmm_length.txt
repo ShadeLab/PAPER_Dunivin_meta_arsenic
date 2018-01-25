@@ -1,0 +1,11 @@
+Gene	HMMlength
+acr3	363
+arsB	430
+arsCglut	117
+arsCthio	133
+arsD	123
+arsM	269
+arrA	846
+arxA	831
+aioA	837
+rplB	277

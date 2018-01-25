@@ -1,0 +1,1 @@
+/mnt/research/ShadeLab/WorkingSpace/Yeh/xander/Minnesota_creek45.3/k45/arsC_thio/cluster/Minnesota_creek45.3_arsC_thio_45_framebot.txt:STATS	BAH18193	Minnesota_creek45.3_arsC_thio_contig_24_contig_25	159	53	75.472	202	0	false

@@ -1,0 +1,6 @@
+/mnt/research/ShadeLab/WorkingSpace/Yeh/xander/Disney_preserve25.3/k45/acr3/cluster/cen01_acr3_45_framebot.txt:STATS	OHB54828	cen01_acr3_contig_136_contig_137	477	159	83.648	681	0	false
+/mnt/research/ShadeLab/WorkingSpace/Yeh/xander/Disney_preserve25.3/k45/acr3/cluster/cen01_acr3_45_framebot.txt:STATS	OHB54828	cen01_acr3_contig_1160_contig_1161	522	174	82.184	713	0	false
+/mnt/research/ShadeLab/WorkingSpace/Yeh/xander/Disney_preserve25.3/k45/acr3/cluster/cen01_acr3_45_framebot.txt:STATS	KPL02528	cen01_acr3_contig_7048_contig_7049	477	159	82.390	672	0	false
+/mnt/research/ShadeLab/WorkingSpace/Yeh/xander/Disney_preserve25.3/k45/acr3/cluster/cen01_acr3_45_framebot.txt:STATS	ABF41959	cen01_acr3_contig_8480_contig_8481	681	227	82.819	1002	0	false
+/mnt/research/ShadeLab/WorkingSpace/Yeh/xander/Disney_preserve25.3/k45/acr3/cluster/cen01_acr3_45_framebot.txt:STATS	ACO33632	cen01_acr3_contig_9596_contig_9597	480	160	87.500	744	0	false
+/mnt/research/ShadeLab/WorkingSpace/Yeh/xander/Disney_preserve25.3/k45/acr3/cluster/cen01_acr3_45_framebot.txt:STATS	ACO33632	cen01_acr3_contig_10334_contig_10335	453	151	86.755	669	0	false

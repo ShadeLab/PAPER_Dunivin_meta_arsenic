@@ -1,0 +1,3 @@
+/mnt/research/ShadeLab/WorkingSpace/Yeh/xander/Iowa_agricultural01.3/k45/arsC_glut/cluster/Iowa_agricultural01.3_arsC_glut_45_framebot.txt:STATS	AHA93583	Iowa_agricultural01.3_arsC_glut_contig_26_contig_27	168	56	85.714	249	0	false
+/mnt/research/ShadeLab/WorkingSpace/Yeh/xander/Iowa_agricultural01.3/k45/arsC_glut/cluster/Iowa_agricultural01.3_arsC_glut_45_framebot.txt:STATS	EFI61188	Iowa_agricultural01.3_arsC_glut_contig_1514_contig_1515	153	51	72.549	177	0	false
+/mnt/research/ShadeLab/WorkingSpace/Yeh/xander/Iowa_agricultural01.3/k45/arsC_glut/cluster/Iowa_agricultural01.3_arsC_glut_45_framebot.txt:STATS	OAF07780	Iowa_agricultural01.3_arsC_glut_contig_1678_contig_1679	153	51	92.157	217	0	false

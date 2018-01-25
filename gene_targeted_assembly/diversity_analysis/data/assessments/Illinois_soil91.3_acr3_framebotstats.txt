@@ -1,0 +1,2 @@
+/mnt/research/ShadeLab/WorkingSpace/Yeh/xander/Illinois_soil91.3/k45/acr3/cluster/cen01_acr3_45_framebot.txt:STATS	OGF66395	cen01_acr3_contig_9484_contig_9485	579	193	85.492	884	0	false
+/mnt/research/ShadeLab/WorkingSpace/Yeh/xander/Illinois_soil91.3/k45/acr3/cluster/cen01_acr3_45_framebot.txt:STATS	OGQ78425	cen01_acr3_contig_10544_contig_10545	912	304	77.632	1193	0	false

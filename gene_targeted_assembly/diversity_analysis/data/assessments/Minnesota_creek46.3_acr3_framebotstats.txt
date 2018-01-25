@@ -1,0 +1,1 @@
+/mnt/research/ShadeLab/WorkingSpace/Yeh/xander/Minnesota_creek46.3/k45/acr3/cluster/cen01_acr3_45_framebot.txt:STATS	ACO33632	cen01_acr3_contig_318_contig_319	600	200	80.500	811	0	false

@@ -1,0 +1,1 @@
+/mnt/research/ShadeLab/WorkingSpace/Dunivin/xander/analysis/cen10/k45/arsD/cluster/cen10_arsD_45_framebot.txt:STATS	AEP01181	cen10_arsD_contig_36_contig_37	228	76	100.000	377	0	false

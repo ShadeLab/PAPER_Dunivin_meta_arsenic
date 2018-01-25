@@ -1,0 +1,13 @@
+/mnt/research/ShadeLab/WorkingSpace/Dunivin/xander/analysis/cen04/k45/arsD/cluster/cen04_arsD_45_framebot.txt:STATS	ACS61952	cen04_arsD_contig_8_contig_9	186	62	85.484	265	0	false
+/mnt/research/ShadeLab/WorkingSpace/Dunivin/xander/analysis/cen04/k45/arsD/cluster/cen04_arsD_45_framebot.txt:STATS	BAL26927	cen04_arsD_contig_12_contig_13	336	113	77.876	451	0	false
+/mnt/research/ShadeLab/WorkingSpace/Dunivin/xander/analysis/cen04/k45/arsD/cluster/cen04_arsD_45_framebot.txt:STATS	EFH01595	cen04_arsD_contig_26_contig_27	231	77	83.117	323	0	false
+/mnt/research/ShadeLab/WorkingSpace/Dunivin/xander/analysis/cen04/k45/arsD/cluster/cen04_arsD_45_framebot.txt:STATS	ALE58945	cen04_arsD_contig_30_contig_31	219	73	83.562	312	0	false
+/mnt/research/ShadeLab/WorkingSpace/Dunivin/xander/analysis/cen04/k45/arsD/cluster/cen04_arsD_45_framebot.txt:STATS	BAL26927	cen04_arsD_contig_54_contig_55	357	120	75.833	471	0	false
+/mnt/research/ShadeLab/WorkingSpace/Dunivin/xander/analysis/cen04/k45/arsD/cluster/cen04_arsD_45_framebot.txt:STATS	BAL26927	cen04_arsD_contig_60_contig_61	219	73	84.932	318	0	false
+/mnt/research/ShadeLab/WorkingSpace/Dunivin/xander/analysis/cen04/k45/arsD/cluster/cen04_arsD_45_framebot.txt:STATS	AAZ47368	cen04_arsD_contig_62_contig_63	213	71	85.915	305	0	false
+/mnt/research/ShadeLab/WorkingSpace/Dunivin/xander/analysis/cen04/k45/arsD/cluster/cen04_arsD_45_framebot.txt:STATS	AMV36362	cen04_arsD_contig_114_contig_115	165	55	72.727	229	0	false
+/mnt/research/ShadeLab/WorkingSpace/Dunivin/xander/analysis/cen04/k45/arsD/cluster/cen04_arsD_45_framebot.txt:STATS	AMV36362	cen04_arsD_contig_118_contig_119	288	96	63.542	337	0	false
+/mnt/research/ShadeLab/WorkingSpace/Dunivin/xander/analysis/cen04/k45/arsD/cluster/cen04_arsD_45_framebot.txt:STATS	GAO01458	cen04_arsD_contig_130_contig_131	195	65	70.769	227	0	false
+/mnt/research/ShadeLab/WorkingSpace/Dunivin/xander/analysis/cen04/k45/arsD/cluster/cen04_arsD_45_framebot.txt:STATS	AMV36362	cen04_arsD_contig_134_contig_135	153	51	74.510	212	0	false
+/mnt/research/ShadeLab/WorkingSpace/Dunivin/xander/analysis/cen04/k45/arsD/cluster/cen04_arsD_45_framebot.txt:STATS	ADG65999	cen04_arsD_contig_142_contig_143	210	70	62.857	234	0	false
+/mnt/research/ShadeLab/WorkingSpace/Dunivin/xander/analysis/cen04/k45/arsD/cluster/cen04_arsD_45_framebot.txt:STATS	GAO01458	cen04_arsD_contig_216_contig_217	153	51	74.510	201	0	false

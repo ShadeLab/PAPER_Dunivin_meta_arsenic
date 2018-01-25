@@ -1,0 +1,4 @@
+/mnt/research/ShadeLab/WorkingSpace/Yeh/xander/Illinois_soybean42.3/k45/arsC_glut/cluster/Illinois_soybean42.3_arsC_glut_45_framebot.txt:STATS	BAR60273	Illinois_soybean42.3_arsC_glut_contig_16_contig_17	348	116	100.000	585	0	false
+/mnt/research/ShadeLab/WorkingSpace/Yeh/xander/Illinois_soybean42.3/k45/arsC_glut/cluster/Illinois_soybean42.3_arsC_glut_45_framebot.txt:STATS	OJU58181	Illinois_soybean42.3_arsC_glut_contig_286_contig_287	213	71	85.915	298	0	false
+/mnt/research/ShadeLab/WorkingSpace/Yeh/xander/Illinois_soybean42.3/k45/arsC_glut/cluster/Illinois_soybean42.3_arsC_glut_45_framebot.txt:STATS	BAR60273	Illinois_soybean42.3_arsC_glut_contig_786_contig_787	294	98	98.980	492	0	false
+/mnt/research/ShadeLab/WorkingSpace/Yeh/xander/Illinois_soybean42.3/k45/arsC_glut/cluster/Illinois_soybean42.3_arsC_glut_45_framebot.txt:STATS	CVG61994	Illinois_soybean42.3_arsC_glut_contig_2720_contig_2721	180	61	65.574	193	0	false

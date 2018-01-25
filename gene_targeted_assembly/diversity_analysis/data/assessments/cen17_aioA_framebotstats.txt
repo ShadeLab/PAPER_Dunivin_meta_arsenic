@@ -1,0 +1,2 @@
+/mnt/research/ShadeLab/WorkingSpace/Dunivin/xander/analysis/cen17/k45/aioA/cluster/cen17_aioA_45_framebot.txt:STATS	ABE65011	cen17_aioA_contig_5384_contig_5385	570	190	94.211	977	0	false
+/mnt/research/ShadeLab/WorkingSpace/Dunivin/xander/analysis/cen17/k45/aioA/cluster/cen17_aioA_45_framebot.txt:STATS	OAF07781	cen17_aioA_contig_5458_contig_5459	513	171	90.058	854	0	false

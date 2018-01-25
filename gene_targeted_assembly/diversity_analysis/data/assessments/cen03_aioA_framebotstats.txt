@@ -1,0 +1,8 @@
+/mnt/research/ShadeLab/WorkingSpace/Dunivin/xander/analysis/cen03/k45/aioA/cluster/cen03_aioA_45_framebot.txt:STATS	KZD21214	cen03_aioA_contig_426_contig_427	699	237	78.059	943	0	false
+/mnt/research/ShadeLab/WorkingSpace/Dunivin/xander/analysis/cen03/k45/aioA/cluster/cen03_aioA_45_framebot.txt:STATS	ABE65011	cen03_aioA_contig_500_contig_501	588	196	86.735	935	0	false
+/mnt/research/ShadeLab/WorkingSpace/Dunivin/xander/analysis/cen03/k45/aioA/cluster/cen03_aioA_45_framebot.txt:STATS	EHK52648	cen03_aioA_contig_2034_contig_2035	585	196	80.612	818	0	false
+/mnt/research/ShadeLab/WorkingSpace/Dunivin/xander/analysis/cen03/k45/aioA/cluster/cen03_aioA_45_framebot.txt:STATS	ODT21655	cen03_aioA_contig_2240_contig_2241	561	187	83.422	849	0	false
+/mnt/research/ShadeLab/WorkingSpace/Dunivin/xander/analysis/cen03/k45/aioA/cluster/cen03_aioA_45_framebot.txt:STATS	ODT21655	cen03_aioA_contig_2504_contig_2505	561	187	82.353	843	0	false
+/mnt/research/ShadeLab/WorkingSpace/Dunivin/xander/analysis/cen03/k45/aioA/cluster/cen03_aioA_45_framebot.txt:STATS	ANY81278	cen03_aioA_contig_3198_contig_3199	462	155	83.871	686	0	false
+/mnt/research/ShadeLab/WorkingSpace/Dunivin/xander/analysis/cen03/k45/aioA/cluster/cen03_aioA_45_framebot.txt:STATS	EKE76334	cen03_aioA_contig_4010_contig_4011	522	174	81.034	753	0	false
+/mnt/research/ShadeLab/WorkingSpace/Dunivin/xander/analysis/cen03/k45/aioA/cluster/cen03_aioA_45_framebot.txt:STATS	KVK54193	cen03_aioA_contig_5014_contig_5015	534	178	75.281	748	0	false

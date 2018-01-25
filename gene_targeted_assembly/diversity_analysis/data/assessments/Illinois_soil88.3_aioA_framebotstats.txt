@@ -1,0 +1,1 @@
+/mnt/research/ShadeLab/WorkingSpace/Yeh/xander/Illinois_soil88.3/k45/aioA/cluster/Illinois_soil88.3_aioA_45_framebot.txt:STATS	OLU00914	Illinois_soil88.3_aioA_contig_934_contig_935	477	159	84.277	709	0	false

@@ -1,0 +1,2 @@
+/mnt/research/ShadeLab/WorkingSpace/Yeh/xander/California_grassland62.3/k45/acr3/cluster/California_grassland62.3_acr3_45_framebot.txt:STATS	KNG51968	California_grassland62.3_acr3_contig_250_contig_251	504	168	93.452	789	0	false
+/mnt/research/ShadeLab/WorkingSpace/Yeh/xander/California_grassland62.3/k45/acr3/cluster/California_grassland62.3_acr3_45_framebot.txt:STATS	KNG51968	California_grassland62.3_acr3_contig_21650_contig_21651	648	216	91.667	1021	0	false

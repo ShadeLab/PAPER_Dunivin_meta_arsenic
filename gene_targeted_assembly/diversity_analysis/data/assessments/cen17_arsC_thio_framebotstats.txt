@@ -1,0 +1,12 @@
+/mnt/research/ShadeLab/WorkingSpace/Dunivin/xander/analysis/cen17/k45/arsC_thio/cluster/cen17_arsC_thio_45_framebot.txt:STATS	KFN89100	cen17_arsC_thio_contig_40_contig_41	171	57	77.193	216	0	false
+/mnt/research/ShadeLab/WorkingSpace/Dunivin/xander/analysis/cen17/k45/arsC_thio/cluster/cen17_arsC_thio_45_framebot.txt:STATS	OIO69070	cen17_arsC_thio_contig_84_contig_85	162	54	72.222	195	0	false
+/mnt/research/ShadeLab/WorkingSpace/Dunivin/xander/analysis/cen17/k45/arsC_thio/cluster/cen17_arsC_thio_45_framebot.txt:STATS	ADP74658	cen17_arsC_thio_contig_100_contig_101	165	55	76.364	220	0	false
+/mnt/research/ShadeLab/WorkingSpace/Dunivin/xander/analysis/cen17/k45/arsC_thio/cluster/cen17_arsC_thio_45_framebot.txt:STATS	SFV05870	cen17_arsC_thio_contig_122_contig_123	165	55	76.364	210	0	false
+/mnt/research/ShadeLab/WorkingSpace/Dunivin/xander/analysis/cen17/k45/arsC_thio/cluster/cen17_arsC_thio_45_framebot.txt:STATS	GAE36786	cen17_arsC_thio_contig_124_contig_125	156	52	73.077	186	0	false
+/mnt/research/ShadeLab/WorkingSpace/Dunivin/xander/analysis/cen17/k45/arsC_thio/cluster/cen17_arsC_thio_45_framebot.txt:STATS	AMQ21798	cen17_arsC_thio_contig_154_contig_155	159	53	79.245	217	0	false
+/mnt/research/ShadeLab/WorkingSpace/Dunivin/xander/analysis/cen17/k45/arsC_thio/cluster/cen17_arsC_thio_45_framebot.txt:STATS	AMQ21798	cen17_arsC_thio_contig_166_contig_167	165	55	74.545	207	0	false
+/mnt/research/ShadeLab/WorkingSpace/Dunivin/xander/analysis/cen17/k45/arsC_thio/cluster/cen17_arsC_thio_45_framebot.txt:STATS	KPV45659	cen17_arsC_thio_contig_180_contig_181	165	55	80.000	222	0	false
+/mnt/research/ShadeLab/WorkingSpace/Dunivin/xander/analysis/cen17/k45/arsC_thio/cluster/cen17_arsC_thio_45_framebot.txt:STATS	AMQ21798	cen17_arsC_thio_contig_224_contig_225	165	55	80.000	227	0	false
+/mnt/research/ShadeLab/WorkingSpace/Dunivin/xander/analysis/cen17/k45/arsC_thio/cluster/cen17_arsC_thio_45_framebot.txt:STATS	KHL96781	cen17_arsC_thio_contig_650_contig_651	165	58	77.586	204	0	false
+/mnt/research/ShadeLab/WorkingSpace/Dunivin/xander/analysis/cen17/k45/arsC_thio/cluster/cen17_arsC_thio_45_framebot.txt:STATS	KPV45659	cen17_arsC_thio_contig_660_contig_661	165	55	74.545	200	0	false
+/mnt/research/ShadeLab/WorkingSpace/Dunivin/xander/analysis/cen17/k45/arsC_thio/cluster/cen17_arsC_thio_45_framebot.txt:STATS	OBS09304	cen17_arsC_thio_contig_670_contig_671	171	57	70.175	199	0	false

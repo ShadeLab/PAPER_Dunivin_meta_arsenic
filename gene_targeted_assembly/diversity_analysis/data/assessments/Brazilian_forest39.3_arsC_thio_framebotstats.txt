@@ -1,0 +1,4 @@
+/mnt/research/ShadeLab/WorkingSpace/Yeh/xander/Brazilian_forest39.3/k45/arsC_thio/cluster/Brazilian_forest39.3_arsC_thio_45_framebot.txt:STATS	EOP23659	Brazilian_forest39.3_arsC_thio_contig_0_contig_1	249	83	100.000	431	0	false
+/mnt/research/ShadeLab/WorkingSpace/Yeh/xander/Brazilian_forest39.3/k45/arsC_thio/cluster/Brazilian_forest39.3_arsC_thio_45_framebot.txt:STATS	OLS35265	Brazilian_forest39.3_arsC_thio_contig_44_contig_45	204	68	88.235	323	0	false
+/mnt/research/ShadeLab/WorkingSpace/Yeh/xander/Brazilian_forest39.3/k45/arsC_thio/cluster/Brazilian_forest39.3_arsC_thio_45_framebot.txt:STATS	EOS58034	Brazilian_forest39.3_arsC_thio_contig_118_contig_119	195	65	89.231	315	0	false
+/mnt/research/ShadeLab/WorkingSpace/Yeh/xander/Brazilian_forest39.3/k45/arsC_thio/cluster/Brazilian_forest39.3_arsC_thio_45_framebot.txt:STATS	KWX06849	Brazilian_forest39.3_arsC_thio_contig_214_contig_215	171	57	66.667	173	0	false

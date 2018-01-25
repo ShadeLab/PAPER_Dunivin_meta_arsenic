@@ -1,0 +1,2 @@
+/mnt/research/ShadeLab/WorkingSpace/Yeh/xander/Wyoming_soil22.3/k45/acr3/cluster/Wyoming_soil22.3_acr3_45_framebot.txt:STATS	SDB69081	Wyoming_soil22.3_acr3_contig_9906_contig_9907	477	159	94.969	777	0	false
+/mnt/research/ShadeLab/WorkingSpace/Yeh/xander/Wyoming_soil22.3/k45/acr3/cluster/Wyoming_soil22.3_acr3_45_framebot.txt:STATS	SDB69081	Wyoming_soil22.3_acr3_contig_10176_contig_10177	489	163	90.184	759	0	false

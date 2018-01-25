@@ -1,0 +1,4 @@
+/mnt/research/ShadeLab/WorkingSpace/Yeh/xander/Brazilian_forest95.3/k45/arsM/cluster/Brazilian_forest95.3_arsM_45_failed_framebot.txt:STATS	AIZ48180	Brazilian_forest95.3_arsM_contig_5656_contig_5657	363	121	89.256	465	0	false
+/mnt/research/ShadeLab/WorkingSpace/Yeh/xander/Brazilian_forest95.3/k45/arsM/cluster/Brazilian_forest95.3_arsM_45_framebot.txt:STATS	OFZ87088	Brazilian_forest95.3_arsM_contig_876_contig_877	516	172	83.140	727	0	false
+/mnt/research/ShadeLab/WorkingSpace/Yeh/xander/Brazilian_forest95.3/k45/arsM/cluster/Brazilian_forest95.3_arsM_45_framebot.txt:STATS	AIZ48180	Brazilian_forest95.3_arsM_contig_3368_contig_3369	546	182	59.341	404	0	false
+/mnt/research/ShadeLab/WorkingSpace/Yeh/xander/Brazilian_forest95.3/k45/arsM/cluster/Brazilian_forest95.3_arsM_45_framebot.txt:STATS	OGA12003	Brazilian_forest95.3_arsM_contig_21844_contig_21845	510	170	81.765	708	0	false

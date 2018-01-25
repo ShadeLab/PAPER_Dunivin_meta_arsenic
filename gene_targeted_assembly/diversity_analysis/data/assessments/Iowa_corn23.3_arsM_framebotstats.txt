@@ -1,0 +1,8 @@
+/mnt/research/ShadeLab/WorkingSpace/Yeh/xander/Iowa_corn23.3/k45/arsM/cluster/Iowa_corn23.3_arsM_45_failed_framebot.txt:STATS	AIZ47943	Iowa_corn23.3_arsM_contig_2126_contig_2127	387	129	82.946	441	0	false
+/mnt/research/ShadeLab/WorkingSpace/Yeh/xander/Iowa_corn23.3/k45/arsM/cluster/Iowa_corn23.3_arsM_45_framebot.txt:STATS	ODT04205	Iowa_corn23.3_arsM_contig_536_contig_537	501	167	92.216	774	0	false
+/mnt/research/ShadeLab/WorkingSpace/Yeh/xander/Iowa_corn23.3/k45/arsM/cluster/Iowa_corn23.3_arsM_45_framebot.txt:STATS	AIZ47943	Iowa_corn23.3_arsM_contig_1512_contig_1513	636	212	48.585	349	0	false
+/mnt/research/ShadeLab/WorkingSpace/Yeh/xander/Iowa_corn23.3/k45/arsM/cluster/Iowa_corn23.3_arsM_45_framebot.txt:STATS	AIZ48177	Iowa_corn23.3_arsM_contig_1616_contig_1617	636	212	50.000	415	0	false
+/mnt/research/ShadeLab/WorkingSpace/Yeh/xander/Iowa_corn23.3/k45/arsM/cluster/Iowa_corn23.3_arsM_45_framebot.txt:STATS	AIZ47943	Iowa_corn23.3_arsM_contig_2632_contig_2633	630	210	50.000	355	0	false
+/mnt/research/ShadeLab/WorkingSpace/Yeh/xander/Iowa_corn23.3/k45/arsM/cluster/Iowa_corn23.3_arsM_45_framebot.txt:STATS	AKN41490	Iowa_corn23.3_arsM_contig_3250_contig_3251	486	162	54.321	362	0	false
+/mnt/research/ShadeLab/WorkingSpace/Yeh/xander/Iowa_corn23.3/k45/arsM/cluster/Iowa_corn23.3_arsM_45_framebot.txt:STATS	OLD03445	Iowa_corn23.3_arsM_contig_10886_contig_10887	498	166	77.108	657	0	false
+/mnt/research/ShadeLab/WorkingSpace/Yeh/xander/Iowa_corn23.3/k45/arsM/cluster/Iowa_corn23.3_arsM_45_framebot.txt:STATS	AKN41490	Iowa_corn23.3_arsM_contig_20738_contig_20739	486	162	54.321	365	0	false

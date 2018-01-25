@@ -1,0 +1,1 @@
+/mnt/research/ShadeLab/WorkingSpace/Yeh/xander/Iowa_prairie76.3/k45/arsC_thio/cluster/IowaPr76.3_arsC_thio_45_framebot.txt:STATS	KPV45659	IowaPr76.3_arsC_thio_contig_28_contig_29	159	53	79.245	208	0	false

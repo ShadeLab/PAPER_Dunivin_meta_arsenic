@@ -1,0 +1,2 @@
+/mnt/research/ShadeLab/WorkingSpace/Yeh/xander/Iowa_agricultural00.3/k45/aioA/cluster/Iowa_agricultural00.3_aioA_45_framebot.txt:STATS	ABE65011	Iowa_agricultural00.3_aioA_contig_134_contig_135	546	182	80.769	805	0	false
+/mnt/research/ShadeLab/WorkingSpace/Yeh/xander/Iowa_agricultural00.3/k45/aioA/cluster/Iowa_agricultural00.3_aioA_45_framebot.txt:STATS	EHK52648	Iowa_agricultural00.3_aioA_contig_2370_contig_2371	984	328	82.927	1476	0	false

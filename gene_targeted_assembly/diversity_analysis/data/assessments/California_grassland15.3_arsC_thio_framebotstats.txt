@@ -1,0 +1,1 @@
+/mnt/research/ShadeLab/WorkingSpace/Yeh/xander/California_grassland15.3/k45/arsC_thio/cluster/California_grassland15.3_arsC_thio_45_framebot.txt:STATS	OAO11411	California_grassland15.3_arsC_thio_contig_10_contig_11	162	54	72.222	194	0	false

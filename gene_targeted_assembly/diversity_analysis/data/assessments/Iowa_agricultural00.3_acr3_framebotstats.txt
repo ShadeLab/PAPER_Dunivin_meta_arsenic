@@ -1,0 +1,10 @@
+/mnt/research/ShadeLab/WorkingSpace/Yeh/xander/Iowa_agricultural00.3/k45/acr3/cluster/cen01_acr3_45_framebot.txt:STATS	OHD67921	cen01_acr3_contig_376_contig_377	984	328	76.524	1302	0	false
+/mnt/research/ShadeLab/WorkingSpace/Yeh/xander/Iowa_agricultural00.3/k45/acr3/cluster/cen01_acr3_45_framebot.txt:STATS	OHB54828	cen01_acr3_contig_808_contig_809	486	162	85.802	703	0	false
+/mnt/research/ShadeLab/WorkingSpace/Yeh/xander/Iowa_agricultural00.3/k45/acr3/cluster/cen01_acr3_45_framebot.txt:STATS	OGW67641	cen01_acr3_contig_1590_contig_1591	501	167	83.832	709	0	false
+/mnt/research/ShadeLab/WorkingSpace/Yeh/xander/Iowa_agricultural00.3/k45/acr3/cluster/cen01_acr3_45_framebot.txt:STATS	OGW67641	cen01_acr3_contig_16724_contig_16725	456	152	78.289	616	0	false
+/mnt/research/ShadeLab/WorkingSpace/Yeh/xander/Iowa_agricultural00.3/k45/acr3/cluster/cen01_acr3_45_framebot.txt:STATS	OGW67641	cen01_acr3_contig_20898_contig_20899	501	167	82.635	704	0	false
+/mnt/research/ShadeLab/WorkingSpace/Yeh/xander/Iowa_agricultural00.3/k45/acr3/cluster/cen01_acr3_45_framebot.txt:STATS	OHB72509	cen01_acr3_contig_26760_contig_26761	576	192	79.688	794	0	false
+/mnt/research/ShadeLab/WorkingSpace/Yeh/xander/Iowa_agricultural00.3/k45/acr3/cluster/cen01_acr3_45_framebot.txt:STATS	OGP79408	cen01_acr3_contig_27652_contig_27653	495	165	77.576	639	0	false
+/mnt/research/ShadeLab/WorkingSpace/Yeh/xander/Iowa_agricultural00.3/k45/acr3/cluster/cen01_acr3_45_framebot.txt:STATS	OHD67921	cen01_acr3_contig_28198_contig_28199	459	153	81.046	641	0	false
+/mnt/research/ShadeLab/WorkingSpace/Yeh/xander/Iowa_agricultural00.3/k45/acr3/cluster/cen01_acr3_45_framebot.txt:STATS	ACO33632	cen01_acr3_contig_28452_contig_28453	495	165	83.030	734	0	false
+/mnt/research/ShadeLab/WorkingSpace/Yeh/xander/Iowa_agricultural00.3/k45/acr3/cluster/cen01_acr3_45_framebot.txt:STATS	ADZ10083	cen01_acr3_contig_50112_contig_50113	576	192	80.729	796	0	false

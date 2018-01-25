@@ -1,0 +1,2 @@
+/mnt/research/ShadeLab/WorkingSpace/Yeh/xander/Permafrost_Russia13.3/k45/arxA/cluster/Permafrost_Russia_13.3_arxA_45_framebot.txt:STATS	OGA33225	Permafrost_Russia_13.3_arxA_contig_668_contig_669	462	156	67.308	566	0	false
+/mnt/research/ShadeLab/WorkingSpace/Yeh/xander/Permafrost_Russia13.3/k45/arxA/cluster/Permafrost_Russia_13.3_arxA_45_framebot.txt:STATS	OGR29382	Permafrost_Russia_13.3_arxA_contig_1058_contig_1059	567	190	71.053	774	0	false

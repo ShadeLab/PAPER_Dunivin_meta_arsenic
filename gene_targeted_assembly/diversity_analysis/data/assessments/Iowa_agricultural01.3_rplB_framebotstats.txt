@@ -1,0 +1,2 @@
+/mnt/research/ShadeLab/WorkingSpace/Yeh/xander/Iowa_agricultural01.3/k45/rplB/cluster/Iowa_agricultural01.3_rplB_45_framebot.txt:STATS	119534933_Nocardioides_sp._JS614	Iowa_agricultural01.3_rplB_contig_30514_contig_30515	459	153	92.810	744	0	false
+/mnt/research/ShadeLab/WorkingSpace/Yeh/xander/Iowa_agricultural01.3/k45/rplB/cluster/Iowa_agricultural01.3_rplB_45_framebot.txt:STATS	196227372_Chthoniobacter_flavus_Ellin428	Iowa_agricultural01.3_rplB_contig_35180_contig_35181	477	159	70.440	577	0	false

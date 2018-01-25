@@ -1,0 +1,3 @@
+/mnt/research/ShadeLab/WorkingSpace/Yeh/xander/Permafrost_Canada23.3/k45/arsB/cluster/cen01_arsB_45_framebot.txt:STATS	KGM12777	cen01_arsB_contig_1070_contig_1071	798	266	81.955	1088	0	false
+/mnt/research/ShadeLab/WorkingSpace/Yeh/xander/Permafrost_Canada23.3/k45/arsB/cluster/cen01_arsB_45_framebot.txt:STATS	OMH25329	cen01_arsB_contig_1150_contig_1151	519	173	86.127	744	0	false
+/mnt/research/ShadeLab/WorkingSpace/Yeh/xander/Permafrost_Canada23.3/k45/arsB/cluster/cen01_arsB_45_framebot.txt:STATS	KGM17808	cen01_arsB_contig_1542_contig_1543	498	166	81.325	661	0	false

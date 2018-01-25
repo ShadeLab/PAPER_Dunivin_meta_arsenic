@@ -1,0 +1,1 @@
+/mnt/research/ShadeLab/WorkingSpace/Yeh/xander/Disney_preserve18.3/k45/arsD/cluster/Disney_preserve18.3_arsD_45_framebot.txt:STATS	AEW55290	Disney_preserve18.3_arsD_contig_22_contig_23	171	57	68.421	192	0	false

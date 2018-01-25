@@ -1,0 +1,1 @@
+/mnt/research/ShadeLab/WorkingSpace/Yeh/xander/Brazilian_forest54.3/k45/aioA/cluster/Brazilian_forest54.3_aioA_45_framebot.txt:STATS	SCY92917	Brazilian_forest54.3_aioA_contig_416_contig_417	582	194	86.082	893	0	false

@@ -1,0 +1,2 @@
+/mnt/research/ShadeLab/WorkingSpace/Yeh/xander/Disney_preserve25.3/k45/arsC_thio/cluster/Disney_preserve25.3_arsC_thio_45_framebot.txt:STATS	KRW90669	Disney_preserve25.3_arsC_thio_contig_0_contig_1	156	52	78.846	209	0	false
+/mnt/research/ShadeLab/WorkingSpace/Yeh/xander/Disney_preserve25.3/k45/arsC_thio/cluster/Disney_preserve25.3_arsC_thio_45_framebot.txt:STATS	ETI65939	Disney_preserve25.3_arsC_thio_contig_4_contig_5	153	51	88.235	236	0	false

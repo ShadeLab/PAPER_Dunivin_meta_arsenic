@@ -1,0 +1,5 @@
+/mnt/research/ShadeLab/WorkingSpace/Yeh/xander/California_grassland15.3/k45/acr3/cluster/California_grassland15.3_acr3_45_framebot.txt:STATS	AGL19239	California_grassland15.3_acr3_contig_202_contig_203	459	153	86.928	674	0	false
+/mnt/research/ShadeLab/WorkingSpace/Yeh/xander/California_grassland15.3/k45/acr3/cluster/California_grassland15.3_acr3_45_framebot.txt:STATS	KNG51968	California_grassland15.3_acr3_contig_464_contig_465	492	164	94.512	776	0	false
+/mnt/research/ShadeLab/WorkingSpace/Yeh/xander/California_grassland15.3/k45/acr3/cluster/California_grassland15.3_acr3_45_framebot.txt:STATS	AEB44909	California_grassland15.3_acr3_contig_876_contig_877	462	154	85.065	659	0	false
+/mnt/research/ShadeLab/WorkingSpace/Yeh/xander/California_grassland15.3/k45/acr3/cluster/California_grassland15.3_acr3_45_framebot.txt:STATS	KQQ75036	California_grassland15.3_acr3_contig_7890_contig_7891	480	160	100.000	800	0	false
+/mnt/research/ShadeLab/WorkingSpace/Yeh/xander/California_grassland15.3/k45/acr3/cluster/California_grassland15.3_acr3_45_framebot.txt:STATS	KQQ75036	California_grassland15.3_acr3_contig_23786_contig_23787	459	153	99.346	753	0	false

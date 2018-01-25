@@ -1,0 +1,1 @@
+/mnt/research/ShadeLab/WorkingSpace/Yeh/xander/Disney_preserve18.3/k45/arsC_thio/cluster/Disney_preserve18.3_arsC_thio_45_framebot.txt:STATS	AMQ21798	Disney_preserve18.3_arsC_thio_contig_46_contig_47	165	55	76.364	216	0	false

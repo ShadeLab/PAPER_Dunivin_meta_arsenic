@@ -1,0 +1,1 @@
+/mnt/research/ShadeLab/WorkingSpace/Yeh/xander/Iowa_prairie72.3/k45/acr3/cluster/Iowa_prairie72.3_acr3_45_framebot.txt:STATS	ACO33632	Iowa_prairie72.3_acr3_contig_6560_contig_6561	510	170	79.412	704	0	false

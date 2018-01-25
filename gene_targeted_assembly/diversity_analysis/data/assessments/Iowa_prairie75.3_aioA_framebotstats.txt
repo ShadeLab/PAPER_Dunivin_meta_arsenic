@@ -1,0 +1,4 @@
+/mnt/research/ShadeLab/WorkingSpace/Yeh/xander/Iowa_prairie75.3/k45/aioA/cluster/Iowa_prairie75.3_aioA_45_framebot.txt:STATS	EHK52648	Iowa_prairie75.3_aioA_contig_498_contig_499	516	172	86.047	788	0	false
+/mnt/research/ShadeLab/WorkingSpace/Yeh/xander/Iowa_prairie75.3/k45/aioA/cluster/Iowa_prairie75.3_aioA_45_framebot.txt:STATS	ABE65011	Iowa_prairie75.3_aioA_contig_1452_contig_1453	555	185	87.027	875	0	false
+/mnt/research/ShadeLab/WorkingSpace/Yeh/xander/Iowa_prairie75.3/k45/aioA/cluster/Iowa_prairie75.3_aioA_45_framebot.txt:STATS	OAF07781	Iowa_prairie75.3_aioA_contig_2652_contig_2653	516	172	93.605	861	0	false
+/mnt/research/ShadeLab/WorkingSpace/Yeh/xander/Iowa_prairie75.3/k45/aioA/cluster/Iowa_prairie75.3_aioA_45_framebot.txt:STATS	ABE65011	Iowa_prairie75.3_aioA_contig_3070_contig_3071	519	173	86.705	807	0	false

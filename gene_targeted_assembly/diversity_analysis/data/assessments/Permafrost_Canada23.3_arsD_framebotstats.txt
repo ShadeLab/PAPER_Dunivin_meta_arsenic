@@ -1,0 +1,5 @@
+/mnt/research/ShadeLab/WorkingSpace/Yeh/xander/Permafrost_Canada23.3/k45/arsD/cluster/Permafrost_Canada23.3_arsD_45_framebot.txt:STATS	CUJ38276	Permafrost_Canada23.3_arsD_contig_0_contig_1	222	74	100.000	370	0	false
+/mnt/research/ShadeLab/WorkingSpace/Yeh/xander/Permafrost_Canada23.3/k45/arsD/cluster/Permafrost_Canada23.3_arsD_45_framebot.txt:STATS	SBT03702	Permafrost_Canada23.3_arsD_contig_8_contig_9	189	63	82.540	271	0	false
+/mnt/research/ShadeLab/WorkingSpace/Yeh/xander/Permafrost_Canada23.3/k45/arsD/cluster/Permafrost_Canada23.3_arsD_45_framebot.txt:STATS	AEW55290	Permafrost_Canada23.3_arsD_contig_150_contig_151	282	94	52.128	242	0	false
+/mnt/research/ShadeLab/WorkingSpace/Yeh/xander/Permafrost_Canada23.3/k45/arsD/cluster/Permafrost_Canada23.3_arsD_45_framebot.txt:STATS	GAD83344	Permafrost_Canada23.3_arsD_contig_158_contig_159	183	61	70.492	226	0	false
+/mnt/research/ShadeLab/WorkingSpace/Yeh/xander/Permafrost_Canada23.3/k45/arsD/cluster/Permafrost_Canada23.3_arsD_45_framebot.txt:STATS	KGM17810	Permafrost_Canada23.3_arsD_contig_202_contig_203	372	126	61.905	398	0	false

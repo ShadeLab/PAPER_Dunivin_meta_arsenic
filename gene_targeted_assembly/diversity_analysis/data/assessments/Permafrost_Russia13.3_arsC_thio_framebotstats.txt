@@ -1,0 +1,4 @@
+/mnt/research/ShadeLab/WorkingSpace/Yeh/xander/Permafrost_Russia13.3/k45/arsC_thio/cluster/Permafrost_Russia_13.3_arsC_thio_45_framebot.txt:STATS	KPC71072	Permafrost_Russia_13.3_arsC_thio_contig_196_contig_197	189	63	84.127	258	0	false
+/mnt/research/ShadeLab/WorkingSpace/Yeh/xander/Permafrost_Russia13.3/k45/arsC_thio/cluster/Permafrost_Russia_13.3_arsC_thio_45_framebot.txt:STATS	AIE59975	Permafrost_Russia_13.3_arsC_thio_contig_386_contig_387	162	54	70.370	189	0	false
+/mnt/research/ShadeLab/WorkingSpace/Yeh/xander/Permafrost_Russia13.3/k45/arsC_thio/cluster/Permafrost_Russia_13.3_arsC_thio_45_framebot.txt:STATS	ADP74658	Permafrost_Russia_13.3_arsC_thio_contig_612_contig_613	165	55	76.364	205	0	false
+/mnt/research/ShadeLab/WorkingSpace/Yeh/xander/Permafrost_Russia13.3/k45/arsC_thio/cluster/Permafrost_Russia_13.3_arsC_thio_45_framebot.txt:STATS	SHJ74008	Permafrost_Russia_13.3_arsC_thio_contig_862_contig_863	171	57	82.456	236	0	false

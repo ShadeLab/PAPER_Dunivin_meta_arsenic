@@ -1,0 +1,2 @@
+/mnt/research/ShadeLab/WorkingSpace/Dunivin/xander/analysis/cen15/k45/arsD/cluster/cen15_arsD_45_framebot.txt:STATS	AMV36362	cen15_arsD_contig_8_contig_9	381	136	55.882	375	0	false
+/mnt/research/ShadeLab/WorkingSpace/Dunivin/xander/analysis/cen15/k45/arsD/cluster/cen15_arsD_45_framebot.txt:STATS	AMV36362	cen15_arsD_contig_14_contig_15	381	136	52.206	363	0	false

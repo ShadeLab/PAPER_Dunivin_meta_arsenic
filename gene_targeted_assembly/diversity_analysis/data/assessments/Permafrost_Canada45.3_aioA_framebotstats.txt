@@ -1,0 +1,1 @@
+/mnt/research/ShadeLab/WorkingSpace/Yeh/xander/Permafrost_Canada45.3/k45/aioA/cluster/Permafrost_Canada45.3_aioA_45_framebot.txt:STATS	CCA86643	Permafrost_Canada45.3_aioA_contig_230_contig_231	459	153	88.235	716	0	false

@@ -1,0 +1,12 @@
+/mnt/research/ShadeLab/WorkingSpace/Dunivin/xander/analysis/cen13/k45/arrA/cluster/cen13_arrA_45_failed_framebot.txt:STATS	BAM71906	cen13_arrA_contig_132_contig_133	1893	631	29.952	503	0	false
+/mnt/research/ShadeLab/WorkingSpace/Dunivin/xander/analysis/cen13/k45/arrA/cluster/cen13_arrA_45_failed_framebot.txt:STATS	AIZ48329	cen13_arrA_contig_3088_contig_3089	2178	726	25.895	417	0	false
+/mnt/research/ShadeLab/WorkingSpace/Dunivin/xander/analysis/cen13/k45/arrA/cluster/cen13_arrA_45_framebot.txt:STATS	OGI47522	cen13_arrA_contig_652_contig_653	531	177	75.141	718	0	false
+/mnt/research/ShadeLab/WorkingSpace/Dunivin/xander/analysis/cen13/k45/arrA/cluster/cen13_arrA_45_framebot.txt:STATS	OGI47522	cen13_arrA_contig_796_contig_797	570	190	82.105	858	0	false
+/mnt/research/ShadeLab/WorkingSpace/Dunivin/xander/analysis/cen13/k45/arrA/cluster/cen13_arrA_45_framebot.txt:STATS	OGI47522	cen13_arrA_contig_812_contig_813	564	188	86.170	864	0	false
+/mnt/research/ShadeLab/WorkingSpace/Dunivin/xander/analysis/cen13/k45/arrA/cluster/cen13_arrA_45_framebot.txt:STATS	KIM00421	cen13_arrA_contig_826_contig_827	537	179	70.950	696	0	false
+/mnt/research/ShadeLab/WorkingSpace/Dunivin/xander/analysis/cen13/k45/arrA/cluster/cen13_arrA_45_framebot.txt:STATS	OGA50751	cen13_arrA_contig_906_contig_907	546	182	78.571	777	0	false
+/mnt/research/ShadeLab/WorkingSpace/Dunivin/xander/analysis/cen13/k45/arrA/cluster/cen13_arrA_45_framebot.txt:STATS	OGA50751	cen13_arrA_contig_918_contig_919	546	182	77.473	771	0	false
+/mnt/research/ShadeLab/WorkingSpace/Dunivin/xander/analysis/cen13/k45/arrA/cluster/cen13_arrA_45_framebot.txt:STATS	OGI47522	cen13_arrA_contig_1056_contig_1057	564	188	84.043	861	0	false
+/mnt/research/ShadeLab/WorkingSpace/Dunivin/xander/analysis/cen13/k45/arrA/cluster/cen13_arrA_45_framebot.txt:STATS	OGI47522	cen13_arrA_contig_1586_contig_1587	570	190	82.632	860	0	false
+/mnt/research/ShadeLab/WorkingSpace/Dunivin/xander/analysis/cen13/k45/arrA/cluster/cen13_arrA_45_framebot.txt:STATS	OGA50751	cen13_arrA_contig_2012_contig_2013	558	186	75.269	788	0	false
+/mnt/research/ShadeLab/WorkingSpace/Dunivin/xander/analysis/cen13/k45/arrA/cluster/cen13_arrA_45_framebot.txt:STATS	OGA50751	cen13_arrA_contig_2068_contig_2069	1125	376	76.862	1587	0	false

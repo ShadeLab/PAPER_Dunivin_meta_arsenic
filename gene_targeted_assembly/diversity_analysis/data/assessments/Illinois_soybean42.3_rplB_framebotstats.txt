@@ -1,0 +1,3 @@
+/mnt/research/ShadeLab/WorkingSpace/Yeh/xander/Illinois_soybean42.3/k45/rplB/cluster/Illinois_soybean42.3_rplB_45_framebot.txt:STATS	354952622_Bradyrhizobium_japonicum_USDA_6	Illinois_soybean42.3_rplB_contig_470_contig_471	783	261	98.851	1361	0	false
+/mnt/research/ShadeLab/WorkingSpace/Yeh/xander/Illinois_soybean42.3/k45/rplB/cluster/Illinois_soybean42.3_rplB_45_framebot.txt:STATS	196227372_Chthoniobacter_flavus_Ellin428	Illinois_soybean42.3_rplB_contig_38160_contig_38161	831	277	75.451	1113	0	false
+/mnt/research/ShadeLab/WorkingSpace/Yeh/xander/Illinois_soybean42.3/k45/rplB/cluster/Illinois_soybean42.3_rplB_45_framebot.txt:STATS	354952622_Bradyrhizobium_japonicum_USDA_6	Illinois_soybean42.3_rplB_contig_60430_contig_60431	825	275	98.909	1428	0	false

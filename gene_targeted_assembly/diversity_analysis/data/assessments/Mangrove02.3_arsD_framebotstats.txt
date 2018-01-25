@@ -1,0 +1,4 @@
+/mnt/research/ShadeLab/WorkingSpace/Yeh/xander/Mangrove02.3/k45/arsD/cluster/Mangrove02.3_arsD_45_framebot.txt:STATS	ACD39061	Mangrove02.3_arsD_contig_0_contig_1	258	86	84.884	389	0	false
+/mnt/research/ShadeLab/WorkingSpace/Yeh/xander/Mangrove02.3/k45/arsD/cluster/Mangrove02.3_arsD_45_framebot.txt:STATS	OAI10639	Mangrove02.3_arsD_contig_28_contig_29	219	73	83.562	317	0	false
+/mnt/research/ShadeLab/WorkingSpace/Yeh/xander/Mangrove02.3/k45/arsD/cluster/Mangrove02.3_arsD_45_framebot.txt:STATS	CAD76333	Mangrove02.3_arsD_contig_42_contig_43	225	75	76.000	309	0	false
+/mnt/research/ShadeLab/WorkingSpace/Yeh/xander/Mangrove02.3/k45/arsD/cluster/Mangrove02.3_arsD_45_framebot.txt:STATS	ABX70696	Mangrove02.3_arsD_contig_82_contig_83	210	70	52.857	181	0	false

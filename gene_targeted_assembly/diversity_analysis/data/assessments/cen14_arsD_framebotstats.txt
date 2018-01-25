@@ -1,0 +1,1 @@
+/mnt/research/ShadeLab/WorkingSpace/Dunivin/xander/analysis/cen14/k45/arsD/cluster/cen14_arsD_45_framebot.txt:STATS	AMV36362	cen14_arsD_contig_2_contig_3	381	136	55.147	369	0	false

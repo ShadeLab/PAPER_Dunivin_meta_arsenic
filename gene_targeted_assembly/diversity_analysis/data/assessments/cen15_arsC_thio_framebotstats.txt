@@ -1,0 +1,2 @@
+/mnt/research/ShadeLab/WorkingSpace/Dunivin/xander/analysis/cen15/k45/arsC_thio/cluster/cen15_arsC_thio_45_framebot.txt:STATS	AAP32334	cen15_arsC_thio_contig_6_contig_7	171	57	70.175	208	0	false
+/mnt/research/ShadeLab/WorkingSpace/Dunivin/xander/analysis/cen15/k45/arsC_thio/cluster/cen15_arsC_thio_45_framebot.txt:STATS	OFR00673	cen15_arsC_thio_contig_8_contig_9	189	63	68.254	212	0	false

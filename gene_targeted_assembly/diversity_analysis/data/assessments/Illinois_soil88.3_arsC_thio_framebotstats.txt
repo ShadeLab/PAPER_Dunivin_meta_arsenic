@@ -1,0 +1,5 @@
+/mnt/research/ShadeLab/WorkingSpace/Yeh/xander/Illinois_soil88.3/k45/arsC_thio/cluster/Illinois_soil88.3_arsC_thio_45_framebot.txt:STATS	AAP32334	Illinois_soil88.3_arsC_thio_contig_0_contig_1	171	57	64.912	182	0	false
+/mnt/research/ShadeLab/WorkingSpace/Yeh/xander/Illinois_soil88.3/k45/arsC_thio/cluster/Illinois_soil88.3_arsC_thio_45_framebot.txt:STATS	BAE18778	Illinois_soil88.3_arsC_thio_contig_4_contig_5	165	55	65.455	162	0	false
+/mnt/research/ShadeLab/WorkingSpace/Yeh/xander/Illinois_soil88.3/k45/arsC_thio/cluster/Illinois_soil88.3_arsC_thio_45_framebot.txt:STATS	AFK58669	Illinois_soil88.3_arsC_thio_contig_6_contig_7	162	55	70.909	175	0	false
+/mnt/research/ShadeLab/WorkingSpace/Yeh/xander/Illinois_soil88.3/k45/arsC_thio/cluster/Illinois_soil88.3_arsC_thio_45_framebot.txt:STATS	ALO03418	Illinois_soil88.3_arsC_thio_contig_74_contig_75	159	53	75.472	194	0	false
+/mnt/research/ShadeLab/WorkingSpace/Yeh/xander/Illinois_soil88.3/k45/arsC_thio/cluster/Illinois_soil88.3_arsC_thio_45_framebot.txt:STATS	ACV57588	Illinois_soil88.3_arsC_thio_contig_204_contig_205	165	55	74.545	205	0	false

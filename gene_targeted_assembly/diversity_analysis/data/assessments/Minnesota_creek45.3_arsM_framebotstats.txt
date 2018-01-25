@@ -1,0 +1,7 @@
+/mnt/research/ShadeLab/WorkingSpace/Yeh/xander/Minnesota_creek45.3/k45/arsM/cluster/Minnesota_creek45.3_arsM_45_failed_framebot.txt:STATS	AIZ48184	Minnesota_creek45.3_arsM_contig_3650_contig_3651	366	122	90.164	472	0	false
+/mnt/research/ShadeLab/WorkingSpace/Yeh/xander/Minnesota_creek45.3/k45/arsM/cluster/Minnesota_creek45.3_arsM_45_framebot.txt:STATS	OLE13587	Minnesota_creek45.3_arsM_contig_6464_contig_6465	642	214	93.458	1001	0	false
+/mnt/research/ShadeLab/WorkingSpace/Yeh/xander/Minnesota_creek45.3/k45/arsM/cluster/Minnesota_creek45.3_arsM_45_framebot.txt:STATS	ADB49026	Minnesota_creek45.3_arsM_contig_12784_contig_12785	552	184	77.717	688	0	false
+/mnt/research/ShadeLab/WorkingSpace/Yeh/xander/Minnesota_creek45.3/k45/arsM/cluster/Minnesota_creek45.3_arsM_45_framebot.txt:STATS	OLE13587	Minnesota_creek45.3_arsM_contig_22262_contig_22263	531	177	92.090	822	0	false
+/mnt/research/ShadeLab/WorkingSpace/Yeh/xander/Minnesota_creek45.3/k45/arsM/cluster/Minnesota_creek45.3_arsM_45_framebot.txt:STATS	OLE13587	Minnesota_creek45.3_arsM_contig_24966_contig_24967	693	231	90.476	1045	0	false
+/mnt/research/ShadeLab/WorkingSpace/Yeh/xander/Minnesota_creek45.3/k45/arsM/cluster/Minnesota_creek45.3_arsM_45_framebot.txt:STATS	ADB49026	Minnesota_creek45.3_arsM_contig_33048_contig_33049	504	168	80.357	663	0	false
+/mnt/research/ShadeLab/WorkingSpace/Yeh/xander/Minnesota_creek45.3/k45/arsM/cluster/Minnesota_creek45.3_arsM_45_framebot.txt:STATS	ADB49026	Minnesota_creek45.3_arsM_contig_34240_contig_34241	504	168	78.571	646	0	false

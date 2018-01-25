@@ -1,0 +1,3 @@
+/mnt/research/ShadeLab/WorkingSpace/Dunivin/xander/analysis/cen17/k45/arsD/cluster/cen17_arsD_45_framebot.txt:STATS	AAZ47368	cen17_arsD_contig_12_contig_13	213	71	85.915	307	0	false
+/mnt/research/ShadeLab/WorkingSpace/Dunivin/xander/analysis/cen17/k45/arsD/cluster/cen17_arsD_45_framebot.txt:STATS	BAL26927	cen17_arsD_contig_52_contig_53	183	61	78.689	257	0	false
+/mnt/research/ShadeLab/WorkingSpace/Dunivin/xander/analysis/cen17/k45/arsD/cluster/cen17_arsD_45_framebot.txt:STATS	GAO01458	cen17_arsD_contig_92_contig_93	168	56	73.214	226	0	false

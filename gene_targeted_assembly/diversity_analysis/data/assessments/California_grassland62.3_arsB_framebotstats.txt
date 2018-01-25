@@ -1,0 +1,1 @@
+/mnt/research/ShadeLab/WorkingSpace/Yeh/xander/California_grassland62.3/k45/arsB/cluster/California_grassland62.3_arsB_45_framebot.txt:STATS	KQM99020	California_grassland62.3_arsB_contig_7012_contig_7013	510	170	100.000	799	0	false

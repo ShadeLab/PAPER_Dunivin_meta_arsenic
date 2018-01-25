@@ -1,0 +1,2 @@
+/mnt/research/ShadeLab/WorkingSpace/Yeh/xander/Iowa_corn22.3/k45/acr3/cluster/Iowa_corn22.3_acr3_45_framebot.txt:STATS	ODT04227	cen01_acr3_contig_174_contig_175	660	220	76.818	832	1	false
+/mnt/research/ShadeLab/WorkingSpace/Yeh/xander/Iowa_corn22.3/k45/acr3/cluster/Iowa_corn22.3_acr3_45_framebot.txt:STATS	EWT06622	cen01_acr3_contig_194_contig_195	774	258	91.473	1214	0	false
