@@ -1,0 +1,27 @@
+#                                                                            --- full sequence --- -------------- this domain -------------   hmm coord   ali coord   env coord
+# target name        accession   tlen query name           accession   qlen   E-value  score  bias   #  of  c-Evalue  i-Evalue  score  bias  from    to  from    to  from    to  acc description of target
+#------------------- ---------- ----- -------------------- ---------- ----- --------- ------ ----- --- --- --------- --------- ------ ----- ----- ----- ----- ----- ----- ----- ---- ---------------------
+FACI_RS04495         -            429 arsB                 -            430  5.2e-142  476.0  43.3   1   1  9.9e-146  5.8e-142  475.8  43.3     4   429     6   428     1   429 0.98 from NC_021592
+PTO_RS00425          -            427 arsB                 -            430  9.4e-137  458.7  45.8   1   1  1.8e-140    1e-136  458.5  45.8     7   429     9   427     1   427 0.98 from NC_005877
+TVG_RS01495          -            431 arsB                 -            430    1e-131  442.0  42.5   1   1  2.3e-135  1.3e-131  441.7  42.5     4   427     7   427     4   429 0.98 from NC_002689
+RCI_RS00520          -            431 arsB                 -            430   3.4e-58  199.8  42.7   1   1   7.3e-62   4.3e-58  199.5  42.7     4   429     5   430     2   431 0.89 from NC_009464
+MTC_RS12075          -            427 arsB                 -            430   5.3e-56  192.6  34.7   1   1   1.1e-59   6.1e-56  192.4  34.7     6   429     4   427     1   427 0.89 from NC_017034
+PNA2_RS04555         -            420 arsB                 -            430   2.1e-35  124.7  33.1   1   1   4.4e-39   2.6e-35  124.4  33.1     9   421    11   413     3   418 0.87 from NC_015474
+TK_RS04340           -            426 arsB                 -            430   4.3e-29  103.9  28.5   1   1   9.4e-33   5.5e-29  103.6  28.5     5   423     7   419     4   424 0.85 from NC_006624
+MPET_RS11355         -            442 arsB                 -            430   1.1e-16   63.1  45.1   1   1   3.6e-20   2.1e-16   62.1  45.1     4   426     7   441     4   442 0.83 from NC_014507
+VMUT_RS00690         -            425 arsB                 -            430   1.2e-13   53.1  22.6   1   1   3.1e-17   1.8e-13   52.5  22.6    28   350    33   342    10   421 0.76 from NC_015151
+M1627_RS10430        -            411 arsB                 -            430   4.4e-11   44.6  31.4   1   1   8.9e-15   5.2e-11   44.4  31.4     7   423     6   406     1   411 0.77 from NC_012632
+SIH_RS10190          -            411 arsB                 -            430   7.2e-11   43.9  31.8   1   1   1.5e-14     9e-11   43.6  31.8     7   428     6   407     1   409 0.76 from NC_017275
+SIL_RS09300          -            411 arsB                 -            430   7.2e-11   43.9  31.8   1   1   1.5e-14     9e-11   43.6  31.8     7   428     6   407     1   409 0.76 from NC_021058
+SIRE_RS09500         -            411 arsB                 -            430   7.2e-11   43.9  31.8   1   1   1.5e-14     9e-11   43.6  31.8     7   428     6   407     1   409 0.76 from NC_017276
+M164_RS10025         -            411 arsB                 -            430   9.5e-11   43.5  31.9   1   1   2.1e-14   1.2e-10   43.1  31.9     7   428     6   407     1   409 0.76 from NC_012726
+#
+# Program:         hmmsearch
+# Version:         3.1b2 (February 2015)
+# Pipeline mode:   SEARCH
+# Query file:      /mnt/research/ShadeLab/Dunivin/gene_targeted_assembly/RDPTools/Xander_assembler/gene_resource/arsB/originaldata/arsB.hmm
+# Target file:     /mnt/research/ShadeLab/WorkingSpace/Dunivin/as_ncbi/refsoil/archaea.protein.fa
+# Option settings: /opt/software/HMMER/3.1b2--GCC-4.8.3/bin/hmmsearch -o /mnt/research/ShadeLab/Dunivin/hmmsearch/refsoil_data/arsB.archaea.protein.fa.stdout.txt -A /mnt/research/ShadeLab/Dunivin/hmmsearch/refsoil_data/arsB.archaea.protein.fa.alignment.0.0000000001.txt --domtblout /mnt/research/ShadeLab/Dunivin/hmmsearch/refsoil_data/arsB.archaea.protein.fa.0.0000000001.tbl.txt -E 0.0000000001 --cpu 8 /mnt/research/ShadeLab/Dunivin/gene_targeted_assembly/RDPTools/Xander_assembler/gene_resource/arsB/originaldata/arsB.hmm /mnt/research/ShadeLab/WorkingSpace/Dunivin/as_ncbi/refsoil/archaea.protein.fa 
+# Current dir:     /mnt/research/ShadeLab/Dunivin/hmmsearch/bin
+# Date:            Thu Jan 25 15:42:07 2018
+# [ok]

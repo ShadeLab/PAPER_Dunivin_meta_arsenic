@@ -2,6 +2,7 @@
 library(tidyverse)
 library(reshape2)
 library(RColorBrewer)
+library(psych)
 
 
 #######################################
@@ -88,7 +89,7 @@ color <- c("#FDB462", "#F4CAE4", "#DECBE4", "#6A3D9A", "black", "#B15928", "#1F7
   ylab("Number of model hits") +
   xlab("Gene") +
   theme_bw(base_size = 12) +
-  ylim(0, 461) +
+  ylim(0, NA) +
   theme(axis.text.x = element_text(angle = 60, hjust = 1)))
 
 #save plot

@@ -1,0 +1,30 @@
+#                                                                            --- full sequence --- -------------- this domain -------------   hmm coord   ali coord   env coord
+# target name        accession   tlen query name           accession   qlen   E-value  score  bias   #  of  c-Evalue  i-Evalue  score  bias  from    to  from    to  from    to  acc description of target
+#------------------- ---------- ----- -------------------- ---------- ----- --------- ------ ----- --- --- --------- --------- ------ ----- ----- ----- ----- ----- ----- ----- ---- ---------------------
+RCI_RS06860          -            350 ACR3                 -            363  2.5e-148  496.2  31.0   1   1  6.3e-152    3e-148  496.0  31.0    12   353     6   347     2   350 0.99 from NC_009464
+MBAR_RS09050         -            352 ACR3                 -            363  1.3e-147  493.8  31.5   1   1  3.3e-151  1.6e-147  493.6  31.5    10   355     6   351     3   352 0.99 from NC_007355
+METBO_RS09205        -            358 ACR3                 -            363  1.2e-146  490.7  33.1   1   1  2.8e-150  1.4e-146  490.5  33.1     5   353     9   357     5   358 0.99 from NC_015216
+MPAL_RS12845         -            361 ACR3                 -            363  6.9e-143  478.3  27.1   1   1  1.7e-146  8.2e-143  478.1  27.1    10   354     3   348     1   353 0.98 from NC_011832
+MTC_RS04795          -            374 ACR3                 -            363    5e-139  465.6  23.2   1   1  1.3e-142  6.4e-139  465.3  23.2    11   353    12   357     3   362 0.97 from NC_017034
+TK_RS04160           -            365 ACR3                 -            363  4.7e-130  436.1  26.2   1   1  1.2e-133  5.6e-130  435.9  26.2    11   354     3   352     1   359 0.98 from NC_006624
+HMUK_RS08665         -            384 ACR3                 -            363  3.5e-121  406.9  18.0   1   1  9.5e-125  4.6e-121  406.5  18.0    12   352    20   366    12   376 0.94 from NC_013202
+HTUR_RS16955         -            386 ACR3                 -            363  3.6e-121  406.9  15.8   1   1  9.7e-125  4.7e-121  406.5  15.8    11   351    19   365    11   373 0.94 from NC_013743
+MA_RS20585           -            354 ACR3                 -            363  1.6e-120  404.7  28.8   1   1  4.1e-124    2e-120  404.5  28.8    10   351     9   352     2   354 0.98 from NC_003552
+MZHIL_RS00900        -            351 ACR3                 -            363  3.9e-120  403.5  30.2   1   1    1e-123  4.9e-120  403.2  30.2    10   352     2   346     1   350 0.98 from NC_015676
+MM_RS03880           -            350 ACR3                 -            363  1.2e-119  401.8  33.8   1   1  3.2e-123  1.5e-119  401.5  33.8    11   351     6   348     3   350 0.99 from NC_003901
+MMAH_RS06385         -            351 ACR3                 -            363  5.5e-119  399.7  33.4   1   1  1.3e-122  6.1e-119  399.5  33.4    10   353     2   347     1   351 0.98 from NC_014002
+MPSY_RS09260         -            325 ACR3                 -            363     1e-40  142.2  24.0   1   1   2.9e-44   1.4e-40  141.7  24.0    17   354     3   321     1   325 0.93 from NC_018876
+MMAH_RS05290         -            326 ACR3                 -            363     3e-39  137.4  22.7   1   1   8.3e-43     4e-39  137.0  22.7    19   350     5   317     1   325 0.91 from NC_014002
+HTUR_RS11980         -            327 ACR3                 -            363   2.7e-36  127.6  19.6   1   1   1.2e-39   5.7e-36  126.6  19.6    15   340     1   307     1   317 0.93 from NC_013743
+MSM_RS05420          -            273 ACR3                 -            363   1.1e-30  109.2  24.1   1   1   2.6e-34   1.2e-30  109.0  24.1    66   351     1   273     1   273 0.95 from NC_009515
+MSP_RS06630          -            315 ACR3                 -            363   2.1e-28  101.7  24.5   1   1   5.3e-32   2.5e-28  101.4  24.5    55   351    31   315     2   315 0.91 from NC_007681
+#
+# Program:         hmmsearch
+# Version:         3.1b2 (February 2015)
+# Pipeline mode:   SEARCH
+# Query file:      /mnt/research/ShadeLab/Dunivin/gene_targeted_assembly/RDPTools/Xander_assembler/gene_resource/acr3/originaldata/acr3.hmm
+# Target file:     /mnt/research/ShadeLab/WorkingSpace/Dunivin/as_ncbi/refsoil/archaea.protein.fa
+# Option settings: /opt/software/HMMER/3.1b2--GCC-4.8.3/bin/hmmsearch -o /mnt/research/ShadeLab/Dunivin/hmmsearch/refsoil_data/acr3.archaea.protein.fa.stdout.txt -A /mnt/research/ShadeLab/Dunivin/hmmsearch/refsoil_data/acr3.archaea.protein.fa.alignment.0.0000000001.txt --domtblout /mnt/research/ShadeLab/Dunivin/hmmsearch/refsoil_data/acr3.archaea.protein.fa.0.0000000001.tbl.txt -E 0.0000000001 --cpu 8 /mnt/research/ShadeLab/Dunivin/gene_targeted_assembly/RDPTools/Xander_assembler/gene_resource/acr3/originaldata/acr3.hmm /mnt/research/ShadeLab/WorkingSpace/Dunivin/as_ncbi/refsoil/archaea.protein.fa 
+# Current dir:     /mnt/research/ShadeLab/Dunivin/hmmsearch/bin
+# Date:            Thu Jan 25 15:42:05 2018
+# [ok]

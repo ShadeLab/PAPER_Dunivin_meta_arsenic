@@ -1,0 +1,28 @@
+#                                                                            --- full sequence --- -------------- this domain -------------   hmm coord   ali coord   env coord
+# target name        accession   tlen query name           accession   qlen   E-value  score  bias   #  of  c-Evalue  i-Evalue  score  bias  from    to  from    to  from    to  acc description of target
+#------------------- ---------- ----- -------------------- ---------- ----- --------- ------ ----- --- --- --------- --------- ------ ----- ----- ----- ----- ----- ----- ----- ---- ---------------------
+MPET_RS04505         -            135 arsC_thio            -            133   3.1e-33  116.8   0.0   1   1   6.7e-37   3.6e-33  116.6   0.0     3   126     2   131     1   134 0.96 from NC_014507
+MA_RS16240           -            154 arsC_thio            -            133   5.8e-32  112.7   0.3   1   1     2e-35   1.1e-31  111.8   0.3     2   127     9   150     8   154 0.86 from NC_003552
+MPAL_RS12850         -            137 arsC_thio            -            133   6.6e-31  109.3   0.0   1   1   1.4e-34   7.7e-31  109.1   0.0     3   126     2   131     1   135 0.96 from NC_011832
+MPSY_RS01095         -            157 arsC_thio            -            133     2e-30  107.7   1.5   1   1   3.1e-33   1.7e-29  104.7   1.5     2   125     8   151     7   157 0.83 from NC_018876
+MBOO_RS01095         -            143 arsC_thio            -            133     3e-30  107.2   0.0   1   1   6.6e-34   3.6e-30  106.9   0.0     4   126     5   134     2   140 0.92 from NC_009712
+MM_RS03010           -            150 arsC_thio            -            133   5.3e-30  106.4   0.2   1   1     2e-33   1.1e-29  105.4   0.2     2   125     5   144     4   150 0.83 from NC_003901
+MPSY_RS01745         -            153 arsC_thio            -            133   1.2e-23   85.8   0.0   1   1   2.6e-27   1.4e-23   85.5   0.0     4   131     8   144     4   146 0.84 from NC_018876
+TK_RS04165           -            154 arsC_thio            -            133   2.8e-23   84.6   0.0   1   1     6e-27   3.3e-23   84.4   0.0     1   128     1   127     1   132 0.92 from NC_006624
+MBOO_RS12540         -            169 arsC_thio            -            133     4e-20   74.4   0.0   1   1     1e-23   5.7e-20   73.9   0.0     3   127     7   138     5   143 0.89 from NC_009712
+MM_RS11625           -            119 arsC_thio            -            133   1.9e-19   72.2   0.1   1   1   8.7e-23   4.7e-19   70.9   0.1    19   121     1   119     1   119 0.83 from NC_003901
+HVO_RS05565          -            153 arsC_thio            -            133   1.9e-18   69.0   0.1   1   1   4.4e-22   2.4e-18   68.6   0.1     6   127    20   146    15   151 0.90 from NC_013967
+GYY_RS04045          -            135 arsC_thio            -            133   3.3e-18   68.2   0.1   1   1   7.3e-22     4e-18   67.9   0.1     4   129    10   131     7   134 0.88 from NC_015847
+HMUK_RS08670         -            140 arsC_thio            -            133   1.6e-14   56.3   0.2   1   1   3.6e-18   1.9e-14   56.0   0.2     6   128     6   130     1   135 0.85 from NC_013202
+HTUR_RS16960         -            150 arsC_thio            -            133   2.1e-12   49.4   0.0   1   1   4.8e-16   2.6e-12   49.1   0.0     6   127    16   142    12   148 0.87 from NC_013743
+MPET_RS01585         -            139 arsC_thio            -            133   2.8e-12   49.0   0.0   1   1   5.9e-16   3.2e-12   48.8   0.0     3   131     7   136     5   138 0.94 from NC_014507
+#
+# Program:         hmmsearch
+# Version:         3.1b2 (February 2015)
+# Pipeline mode:   SEARCH
+# Query file:      /mnt/research/ShadeLab/Dunivin/gene_targeted_assembly/RDPTools/Xander_assembler/gene_resource/arsC_thio/originaldata/arsC_thio.hmm
+# Target file:     /mnt/research/ShadeLab/WorkingSpace/Dunivin/as_ncbi/refsoil/archaea.protein.fa
+# Option settings: /opt/software/HMMER/3.1b2--GCC-4.8.3/bin/hmmsearch -o /mnt/research/ShadeLab/Dunivin/hmmsearch/refsoil_data/arsC_thio.archaea.protein.fa.stdout.txt -A /mnt/research/ShadeLab/Dunivin/hmmsearch/refsoil_data/arsC_thio.archaea.protein.fa.alignment.0.0000000001.txt --domtblout /mnt/research/ShadeLab/Dunivin/hmmsearch/refsoil_data/arsC_thio.archaea.protein.fa.0.0000000001.tbl.txt -E 0.0000000001 --cpu 8 /mnt/research/ShadeLab/Dunivin/gene_targeted_assembly/RDPTools/Xander_assembler/gene_resource/arsC_thio/originaldata/arsC_thio.hmm /mnt/research/ShadeLab/WorkingSpace/Dunivin/as_ncbi/refsoil/archaea.protein.fa 
+# Current dir:     /mnt/research/ShadeLab/Dunivin/hmmsearch/bin
+# Date:            Thu Jan 25 15:42:08 2018
+# [ok]
