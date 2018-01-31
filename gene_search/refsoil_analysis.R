@@ -96,6 +96,9 @@ color <- c("#FDB462", "#F4CAE4", "#DECBE4", "#6A3D9A", "black", "#B15928", "#1F7
 ggsave(asrg.phyla.bar, filename = paste(wd, "/figures/numberhits.gene.eps", 
                                         sep = ""), width = 10)
 
+#save file with count information (to compare with metaG)
+write.table(data.tax, file = paste(wd, "/output/RefSoil_count.txt", sep = ""), row.names = FALSE, col.names = TRUE, quote = FALSE, sep = "\t")
+
 #calculate relative hits (gene/genome) for COG comparison
 data.taxREL <- data.tax %>%
   group_by(Gene) %>%

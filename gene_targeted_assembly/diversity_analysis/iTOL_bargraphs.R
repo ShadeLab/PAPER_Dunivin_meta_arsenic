@@ -6,8 +6,8 @@ library(tidyverse)
 wd <- paste(getwd())
 
 #read in OTU table 
-arsC_thio.table <- read.delim(paste(wd, "/data/arsC_thio_rformat_dist_0.1.txt", sep = ""), header = TRUE)
-arsC_thio.table <- rename(arsC_thio.table, Sample = X)
+acr3.table <- read.delim(paste(wd, "/data/acr3_rformat_dist_0.1.txt", sep = ""), header = TRUE)
+acr3.table <- rename(acr3.table, Sample = X)
 
 #read in metadata
 meta <- data.frame(read.delim(paste(wd, "/data/sample_map.txt", 
@@ -17,7 +17,7 @@ meta <- data.frame(read.delim(paste(wd, "/data/sample_map.txt",
 rplB <- read.delim(paste(wd, "/output/rplB.summary.scg.txt", sep = ""), header = TRUE, sep = " ")
 
 #add census data for normalization purposes
-table.census <- arsC_thio.table %>%
+table.census <- acr3.table %>%
   right_join(rplB, by = "Sample")
 
 #replace NA values with zero
@@ -61,7 +61,7 @@ rownames(table.normalized.t) <- sprintf("%04s", rownames(table.normalized.t))
 rownames(table.normalized.t) <- paste("OTU_", rownames(table.normalized.t), sep="")
 
 #save file
-write.csv(table.normalized.t, paste(wd, "/../../phylogenetic_analysis/arsC_thio_0.1_abund_label.csv", sep = ""), row.names = TRUE, quote = FALSE)
+write.csv(table.normalized.t, paste(wd, "/../../phylogenetic_analysis/acr3_0.1_abund_label.csv", sep = ""), row.names = TRUE, quote = FALSE)
 
 
 

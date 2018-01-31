@@ -8,7 +8,7 @@ library(tidyverse)
 library(phyloseq)
 library(reshape2)
 library(data.table)
-library(taxize)
+#library(taxize)
 
 #print working directory for future references
 #note the GitHub directory for this script is as follows
@@ -149,6 +149,9 @@ gene_abundance$Gene <- gsub("arsC", "arsC_", gene_abundance$Gene)
 gene_abundance_annotated <- gene_abundance %>%
   left_join(meta, by = "Sample") %>%
   unique()
+
+#save annotated gene abund file for RefSoil comparison
+write.table(gene_abundance_annotated, file = paste(wd, "/output/metaG_normAbund.txt", sep = ""), row.names = FALSE, col.names = TRUE, quote = FALSE, sep = "\t")
 
 ###################
 #Centralia heatmap#
