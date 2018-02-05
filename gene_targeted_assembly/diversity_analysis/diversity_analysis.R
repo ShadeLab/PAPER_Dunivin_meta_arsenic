@@ -16,10 +16,10 @@ library(data.table)
 wd <- print(getwd())
 
 #read in metadata
-meta <- data.frame(read.delim(paste(wd, "/data_old2/sample_map.txt", sep=""), sep="\t", header=TRUE))
+meta <- data.frame(read.delim(paste(wd, "/data/sample_map.txt", sep=""), sep="\t", header=TRUE))
 
 #temporarily change working directories
-setwd(paste(wd, "/data_old2", sep = ""))
+setwd(paste(wd, "/data", sep = ""))
 
 #list filenames of interest
 filenames <- list.files(pattern="*_rformat_dist_0.1.txt")
@@ -29,7 +29,7 @@ setwd(wd)
 
 #make dataframes of all OTU tables
 for(i in filenames){
-  filepath <- file.path(paste(wd, "/data_old2", sep = ""),paste(i,sep=""))
+  filepath <- file.path(paste(wd, "/data", sep = ""),paste(i,sep=""))
   assign(gsub("_rformat_dist_0.1.txt", "", i), read.delim(filepath,sep = "\t"))
 }
 
@@ -67,14 +67,44 @@ otu_table <- rplB %>%
   rename(Sample = X) 
 
 #list otus that are gene matches
-#mixed.1 <- c("aioA_13", "aioA_31", "aioA_34", "aioA_36", "aioA_37", "aioA_42", "aioA_43", "aioA_49", "aioA_51", "arrA_1", "arrA_2", "arrA_3", "arrA_4", "arrA_5", "arrA_6", "arrA_8","arxA_11", "arxA_04")
+mixed.1 <- c("aioA_59", "arrA_44", "aioA_57", "arrA_41", "aioA_63", "arrA_40", "aioA_34", "arrA_31", "aioA_41", "arrA_49", "arrA_04", "aioA_20", "arrA_53", "aioA_65", "arxA_23", "arxA_13", "arxA_40", "arxA_39", "arxA_37", "arxA_19", "arxA_16", "arxA_24", "arxA_34", "arxA_02", "arxA_21", "arxA_15", "arxA_20", "arxA_24", "arxA_16", "arxA_19", "arxA_28")
 
 #remove OTUs that are gene matches
-#otu_table <- otu_table[,!names(otu_table) %in% mixed.1]
+otu_table <- otu_table[,!names(otu_table) %in% mixed.1]
 
-#rename arxA column that is actually arrA (with no match)
-#otu_table <- otu_table %>%
-#  rename(arrA_3 = arxA_03)
+#rename arrA column that is actually arxA (with no match)
+#rename OTU with same number plus .# (1 = aioA, 2 = arrA, 3 = arxA)
+#of the original otu call
+otu_table <- otu_table %>%
+  rename(arxA_30.2 = arrA_30,
+         arxA_32.2 = arrA_32, 
+         arxA_67.1 = aioA_67,
+         arxA_45.1 = aioA_45)
+
+#repeat for arrA misnames
+otu_table <- otu_table %>%
+  rename(arrA_31.3 = arxA_31, 
+         arrA_12.3 = arxA_12,
+         arrA_01.3 = arxA_01,
+         arrA_07.3 = arxA_07,
+         arrA_06.3 = arxA_06,
+         arrA_14.3 = arxA_14,
+         arrA_30.3 = arxA_30,
+         arrA_38.3 = arxA_38,
+         arrA_32.3 = arxA_32,
+         arrA_33.3 = arxA_33,
+         arrA_17.3 = arxA_17,
+         arrA_03.3 = arxA_03,
+         arrA_42.3 = arxA_42,
+         arrA_09.3 = arxA_09,
+         arrA_25.3 = arxA_25,
+         arrA_08.3 = arxA_08,
+         arrA_11.3 = arxA_11,
+         arrA_18.3 = arxA_18,
+         arrA_04.3 = arxA_04,
+         arrA_10.3 = arxA_10,
+         arrA_36.3 = arxA_36)
+
 
 #replace all NAs (from join) with zeros
 otu_table[is.na(otu_table)] <- 0
