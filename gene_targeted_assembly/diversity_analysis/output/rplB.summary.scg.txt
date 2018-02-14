@@ -13,7 +13,6 @@
 "Permafrost_Canada23.3" 427 "Permafrost_Canada23.3"
 "California_grassland62.3" 52 "California_grassland62.3"
 "Brazilian_forest39.3" 42 "Brazilian_forest39.3"
-"Illinois_soil88.3" 55 "Illinois_soil88.3"
 "Iowa_agricultural00.3" 178 "Iowa_agricultural00.3"
 "cen01" 1039 "cen01"
 "Iowa_corn22.3" 53 "Iowa_corn22.3"

@@ -8,7 +8,6 @@ library(tidyverse)
 library(phyloseq)
 library(reshape2)
 library(data.table)
-#library(taxize)
 
 #print working directory for future references
 #note the GitHub directory for this script is as follows
@@ -109,6 +108,9 @@ otu_table <- otu_table %>%
 #replace all NAs (from join) with zeros
 otu_table[is.na(otu_table)] <- 0
 
+#remove duplicate switchgrass metagenome
+otu_table <- otu_table[-which(otu_table$Sample == "Illinois_soil88.3"),]
+
 #write file to save OTU table
 write.table(otu_table, paste(wd, "/output/otu_table_full.txt", sep = ""), sep = "\t", quote = FALSE, row.names = FALSE)
 
@@ -158,10 +160,6 @@ otu_table_norm_annotated <- data.matrix(otu_table_norm_annotated)
 #transpose data
 otu_table_norm_annotated.t <- t(otu_table_norm_annotated)
 
-
-#read in gene classification data
-#gene <- read_delim(paste(wd, "/data/gene_classification.txt",  sep=""), delim = "\t", col_names = TRUE)
-
 #melt data to separate otu and abundance per site
 gene_abundance <- otu_table_norm %>%
   select(-sum.rplB) %>%
@@ -187,108 +185,131 @@ write.table(gene_abundance_annotated, file = paste(wd, "/output/metaG_normAbund.
 #Centralia heatmap#
 ###################
 #list OTUs present in 2 or more samples
-rownames(otu_table_norm) <- otu_table_norm$Sample
-otu_table_normPA <- t((otu_table_norm[3:ncol(otu_table_norm)]>0)*1)
-abund_2 <- t(otu_table_normPA[which(rowSums(otu_table_normPA) > 2),])
+#rownames(otu_table_norm) <- otu_table_norm$Sample
+#otu_table_normPA <- t((otu_table_norm[3:ncol(otu_table_norm)]>0)*1)
+#abund_2 <- t(otu_table_normPA[which(rowSums(otu_table_normPA) > 2),])
 
 #remove OTUs with presence in 2 or less samples
-otu_table_norm.slim_2 <- data.frame(otu_table_norm[which(colnames(otu_table_norm) %in% colnames(abund_2))])
-otu_table_norm.slim_2 <- otu_table_norm.slim_2[grep("cen", rownames(otu_table_norm.slim_2)),]
-otu_table_norm.slim_2 <- t(otu_table_norm.slim_2[,-grep("rplB", colnames(otu_table_norm.slim_2))])
+#otu_table_norm.slim_2 <- data.frame(otu_table_norm[which(colnames(otu_table_norm) %in% colnames(abund_2))])
+#otu_table_norm.slim_2 <- otu_table_norm.slim_2[grep("cen", rownames(otu_table_norm.slim_2)),]
+#otu_table_norm.slim_2 <- t(otu_table_norm.slim_2[,-grep("rplB", colnames(otu_table_norm.slim_2))])
 
-library(pheatmap)
-callback = function(hc, mat){
-  sv = svd(t(mat))$v[,1]
-  dend = reorder(as.dendrogram(hc), wts = sv)
-  as.hclust(dend)
-}
+#library(pheatmap)
+#callback = function(hc, mat){
+#  sv = svd(t(mat))$v[,1]
+#  dend = reorder(as.dendrogram(hc), wts = sv)
+#  as.hclust(dend)
+#}
 
 
 #get heatmap colors
-hc=colorRampPalette(c("white", "#91bfdb", "midnightblue"), interpolate="linear", bias = 3)
+#hc=colorRampPalette(c("white", "#91bfdb", "midnightblue"), interpolate="linear", bias = 3)
 
 #prep data for gene annotation on heatmap
-colors.otu.2 <- data.frame(otu_table_norm.slim_2)
-colors.otu.2_annotated <- colors.otu.2 %>%
-  rownames_to_column(var = "OTU") %>%
-  mutate(OTU = gsub("arsC_glut", "arsCgrx", OTU)) %>%
-  mutate(OTU = gsub("arsC_thio", "arsCtrx", OTU)) %>%
-  separate(col = OTU, into = c("Gene", "OTU"), sep = "_") %>%
-  mutate(Max = apply(colors.otu.2, 1, max)) %>%
-  select(Gene)
-rownames(colors.otu.2_annotated) <- rownames(colors.otu.2)
+#colors.otu.2 <- data.frame(otu_table_norm.slim_2)
+#colors.otu.2_annotated <- colors.otu.2 %>%
+#  rownames_to_column(var = "OTU") %>%
+#  mutate(OTU = gsub("arsC_glut", "arsCgrx", OTU)) %>%
+#  mutate(OTU = gsub("arsC_thio", "arsCtrx", OTU)) %>%
+#  separate(col = OTU, into = c("Gene", "OTU"), sep = "_") %>%
+#  mutate(Max = apply(colors.otu.2, 1, max)) %>%
+#  select(Gene)
+#rownames(colors.otu.2_annotated) <- rownames(colors.otu.2)
 
 
 #set gene colors for plotting
-ann_colors = list(
-  Gene = c(acr3 = "#8DD3C7", aioA = "#FFFFB3", arrA = "#BEBADA", arsB = "#FB8072", arsCgrx = "#80B1D3", arsCtrx = "#FDB462", arsD = "#B3DE69", arsM = "#FCCDE5", arxA = "#D9D9D9"))
+#ann_colors = list(
+#  Gene = c(acr3 = "#8DD3C7", aioA = "#FFFFB3", arrA = "#BEBADA", arsB = "#FB8072", arsCgrx = "#80B1D3", arsCtrx = "#FDB462", arsD = "#B3DE69", arsM = "#FCCDE5", arxA = "#D9D9D9"))
 
 #order samples by temperature
-otu_table_norm.slim_2 <- data.frame(otu_table_norm.slim_2) %>% select(cen17, cen04, cen07, cen05, cen01, cen03, cen16, cen06, cen12, cen14, cen15, cen10, cen13)
+#otu_table_norm.slim_2 <- data.frame(otu_table_norm.slim_2) %>% select(cen17, cen04, cen07, cen05, cen01, cen03, cen16, cen06, cen12, cen14, cen15, cen10, cen13)
 
 #plot heatmap
-(heatmap <- pheatmap(otu_table_norm.slim_2, cluster_rows = TRUE, cluster_cols = FALSE, clustering_method = "complete", dendrogram = "row", scale = "none", trace = "none", legend = TRUE, cellheight = 6, color = hc(500), cellwidth = 12, treeheight_row = 50, fontsize = 8, border_color = NA, show_rownames = FALSE, annotation_colors = ann_colors,  annotation_row = colors.otu.2_annotated, clustering_callback = callback, width = 12, height = 16))
+#(heatmap <- pheatmap(otu_table_norm.slim_2, cluster_rows = TRUE, cluster_cols = FALSE, clustering_method = "complete", dendrogram = "row", scale = "none", trace = "none", legend = TRUE, cellheight = 6, color = hc(500), cellwidth = 12, treeheight_row = 50, fontsize = 8, border_color = NA, show_rownames = FALSE, annotation_colors = ann_colors,  annotation_row = colors.otu.2_annotated, clustering_callback = callback, width = 12, height = 16))
 
 ############################
 #MAKE GENE ABUNDANCE GRAPHS#
 ############################
 #summarise normalized data (aka annotated gene abundance data)
 gene_abundance_summary <- gene_abundance_annotated %>%
-  group_by(Gene, Site, Sample) %>%
-  summarise(Total = sum(RelativeAbundance))
-
-#REMOVE??????
-#plot bar graph by SAMPLE
-#(barplot.sample <- ggplot(subset(gene_abundance_summary, subset = Gene !="rplB"),
-#                          aes(x = Sample, y = 100*Total)) +
-#    geom_bar(stat = "identity", aes(fill = Gene)) +
-#    scale_fill_brewer(palette = "Set3") +
-#    ylab("Total gene count (normalized to rplB)") +
-#   theme_bw(base_size = 12) +
-#    theme(axis.text.x = element_text(angle = 45, size = 12, 
-#                                    hjust=0.99,vjust=0.99)))
-
-#save bar graph with SAMPLE means
-#ggsave(barplot.sample, filename = paste(wd, "/figures/bar.sample.png", sep= ""))
-#ggsave(barplot.sample, filename = paste(wd, "/figures/bar.sample.eps", sep= ""))
-
-#summarise based on sample
-gene_abundance_summary.site <- gene_abundance_summary %>%
+  group_by(Gene, Biome, Site, Sample) %>%
+  summarise(Total = sum(RelativeAbundance)) %>%
   ungroup() %>%
   group_by(Gene, Site) %>%
-  summarise(Mean = mean(Total), 
-            N = length(Site),
-            se = sd(Total)/length(Site))
+  mutate(Mean = mean(Total))
+
+gene_abundance_order <- gene_abundance_summary %>%
+  group_by(Gene, Biome, Site) %>%
+  summarise(Mean = mean(Total)) %>%
+  arrange(Gene, Mean) %>%
+  ungroup() %>%
+  mutate(order = as.factor(row_number())) %>%
+  select(-Mean)
+
+gene_abundance_summary_order <- gene_abundance_order %>%
+  left_join(gene_abundance_summary, by = c("Gene", "Biome", "Site")) %>%
+  mutate(Gene = gsub("arsC_glut", "arsC (grx)", Gene)) %>%
+  mutate(Gene = gsub("arsC_thio", "arsC (trx)", Gene))
+
+gene_abundance_summary_order$gene_f = factor(gene_abundance_summary_order$Gene, levels=c("acr3", "arsB", "arsC (trx)", "arsC (grx)", "arsD", "arsM", "aioA", "arrA", "arxA"))
 
 #plot bar graph with SITE means
-(barplot.site <- ggplot(subset(gene_abundance_summary.site, subset = Gene !="rplB"),
-                        aes(x = Site, y = Mean)) +
-    geom_bar(stat = "identity", aes(fill = Site)) +
-    geom_errorbar(aes(ymin = Mean - se, ymax = Mean + se), color = "grey25") +
-    #scale_fill_brewer(palette = "Set3") +
-    ylab("Total gene count (normalized to rplB)") +
-    #coord_flip() +
-    theme_bw(base_size = 11) +
-    facet_wrap(~Gene, ncol = 2, scales = "free_y") +
-    scale_fill_manual(values = c("#808000", "#aa6e28", "#ffe119", "#f58231", "#aaffc3", "#fabebe", "#d2f53c", "#008080", "#3cb44b", "#ffd8b1", "#808080", "#911eb4", "#000080", "#46f0f0", "#0082c8", "grey75")) +
-    theme(axis.text.x = element_text(angle = 45, size = 10, 
-                                     hjust=0.99,vjust=0.99)))
+(pointplot.site <- ggplot(subset(gene_abundance_summary_order, subset = Gene !="rplB")) +
+    geom_jitter(height = 0, size = 2.5,alpha = 0.7, aes(x = order, y = Total, color = Site)) +
+    facet_wrap(~gene_f, ncol = 2, scales = "free") +
+    ylab("rplB-normalized abundance") +
+    theme_bw(base_size = 12) +
+    xlab("Site")+
+    scale_color_manual(values = c("#808000", "#aa6e28", "#ffe119", "#f58231", "#aaffc3", "#fabebe", "#d2f53c", "#008080", "#3cb44b", "#ffd8b1", "#808080", "#911eb4", "#000080", "#46f0f0", "#0082c8", "grey75")) +
+    theme(axis.text.x=element_blank(),
+          axis.ticks.x=element_blank(),
+          strip.text.x = element_blank()))
 
 #save bar graph with SITE means
-ggsave(barplot.site, filename = paste(wd, "/figures/bar.site.png", sep= ""), height = 15, units = "in")
-ggsave(barplot.site, filename = paste(wd, "/figures/bar.site.eps", sep= ""),  height = 7, width = 7.5, units = "in")
+ggsave(pointplot.site, filename = paste(wd, "/figures/ordered.point.site2.png", sep= ""), height = 5, units = "in")
+ggsave(pointplot.site, filename = paste(wd, "/figures/ordered.point.site.eps", sep= ""),  height = 7, width = 7.5, units = "in")
+
+gene_abundance_biome <- gene_abundance_summary %>%
+  ungroup() %>%
+  mutate(Gene = gsub("arsC_glut", "arsC (grx)", Gene)) %>%
+  mutate(Gene = gsub("arsC_thio", "arsC (trx)", Gene)) %>%
+  group_by(Gene, Biome, Site, Sample) %>%
+  summarise(Mean = mean(Total)) %>%
+  arrange(Biome, Site) %>%
+  mutate(order = as.factor(row_number())) 
+
+
+gene_abundance_biome$Gene = factor(gene_abundance_biome$Gene, levels=c("acr3", "arsB", "arsC (trx)", "arsC (grx)", "arsD", "arsM", "aioA", "arrA", "arxA"))
+
+gene_abundance_biome$Biome <- factor(gene_abundance_biome$Biome, levels = c("non-agricultural", "disturbance","agricultural","permafrost", "mangrove"))
+
+gene_abundance_biome$Site <- factor(gene_abundance_biome$Site, levels = gene_abundance_biome$Site[order(gene_abundance_biome$Biome)])
+
+ggplot(subset(gene_abundance_biome, subset = Gene !="rplB"), aes(x = Site, y = Mean, fill = Gene)) +
+  geom_bar(stat = "identity", position = "fill") +
+  scale_fill_brewer(palette = "Set3") +
+  ylab("Relative Abundance") +
+  theme_bw(base_size = 12) +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1, vjust = 1))
 
 #plot gene distribution
-(barplot.site <- ggplot(subset(gene_abundance_summary, subset = Gene !="rplB"),
-                        aes(x = Gene, y = Total)) +
+gene_abundance_summary_tot <- gene_abundance_summary %>%
+  subset(Gene != "rplB") %>%
+  group_by(Biome, Site, Sample) %>%
+  summarise(SiteTotal = sum(Total)) 
+
+gene_abundance_summary_tot$Biome_f <- factor(gene_abundance_summary_tot$Biome, levels = c("non-agricultural", "disturbance","agricultural","permafrost", "mangrove"))
+
+(barplot.site <- ggplot(gene_abundance_summary_tot,
+                        aes(x = Biome_f, y = SiteTotal)) +
     geom_boxplot() +
-    scale_color_brewer(palette = "Set3") +
+    geom_jitter(height = 0, aes(color = Site), size = 3) +
+    scale_color_manual(values = c("#808000", "#aa6e28", "#ffe119", "#f58231", "#aaffc3", "#fabebe", "#d2f53c", "#008080", "#3cb44b", "#ffd8b1", "#808080", "#911eb4", "#000080", "#46f0f0", "#0082c8", "grey75")) +
     ylab("Total gene count (normalized to rplB)") +
     theme_bw(base_size = 12) +
-    ylim(0,1.5) +
+    #facet_wrap(~Gene, scales = "free_y") +
     theme(axis.text.x = element_text(angle = 45, size = 12, 
                                      hjust=0.99,vjust=0.99)))
-
 
 #######################################
 #COMMUNITY COMPOSITION ANALYSIS (rplB)#
@@ -371,13 +392,47 @@ top.phyla <- c("Proteobacteria", "Actinobacteria", "Verrucomicrobia", "Firmicute
 ggsave(phylum.plot.top, filename = paste(wd, "/figures/community.structure.top.png", sep=""))
 ggsave(phylum.plot.top, filename = paste(wd, "/figures/community.structure.top.eps", sep=""), units = "in", width = 6, height = 4)
 
+################################
+#HEATMAP ANALYSIS OF ASRG ABUND#
+################################
+
+library(reshape2)
+heatmap.cast <- dcast(gene_abundance_summary, Gene~Sample, value.var = "Total")
+rownames(heatmap.cast) <- heatmap.cast$Gene
+heatmap.cast <- heatmap.cast[-10,-1]
+
+#set up environment to run heatmap
+library(pheatmap)
+callback = function(hc, mat){
+  sv = svd(t(mat))$v[,1]
+  dend = reorder(as.dendrogram(hc), wts = sv)
+  as.hclust(dend)
+}
+
+#get heatmap colors
+hc=colorRampPalette(c("white", "#91bfdb", "midnightblue"), interpolate="linear", bias = 3)
 
 
+#prep data for gene annotation on heatmap
+colors.otu.2 <- data.frame(t(heatmap.cast))
+colors.otu.2_annotated <- colors.otu.2 %>%
+  rownames_to_column(var = "Sample") %>%
+  left_join(meta, by = c("Sample")) %>%
+  select(Site, Biome)
+rownames(colors.otu.2_annotated) <- rownames(colors.otu.2)
+
+#set gene colors for plotting
+ann_colors = list(
+  Site = c(Brazilian_forest = "#808000", California_grassland = "#aa6e28", Centralia_recovered = "#ffe119", Centralia_active = "#f58231", Centralia_reference = "#aaffc3", Disney_preserve = "#fabebe", Illinois_switchgrass = "#d2f53c", Illinois_soybean = "#008080", Iowa_agricultural = "#3cb44b", Iowa_corn = "#ffd8b1", Iowa_prairie = "#808080", Mangrove = "#911eb4", Minnesota_grassland = "#000080", Permafrost_Canada = "#46f0f0", Permafrost_Russia = "#0082c8", Wyoming_soil ="#FFFFFF"), 
+  Biome = c(permafrost = "white", mangrove = "black",agricultural = "#cb181d", `non-agricultural` = "#fb6a4a", coal_seam_fire = "#fcae91", recovered = "#fee5d9"))
+
+
+pheatmap(t(heatmap.cast), cluster_rows = TRUE, cluster_cols = FALSE, clustering_method = "complete", color = hc(100), dendrogram = "row", scale = "none", trace = "none", legend = TRUE, clustering_callback = callback, annotation_row = colors.otu.2_annotated, annotation_colors = ann_colors, show_rownames = FALSE)
+
 ##############################
-#Community membership v. AsRG#
+#Community membership v. AsRG OLDDDDDDDDD#
 ##############################
-#remove sites with low rplB (ie low seq depth/ confidence)
-otu_table_slim <- otu_table[grepl("cen01|cen03|cen04|cen05|cen06|cen07|cen10|cen12|cen13|cen14|cen15|cen16", otu_table$Sample),]
+otu_table_slim <- otu_table
 
 #make sample the row names
 rownames(otu_table_slim) <- otu_table_slim$Sample
@@ -385,93 +440,27 @@ otu_table_slim <- otu_table_slim[,-1]
 
 #separate OTU table into 2: rplB and AsRG
 otu_table.rplB <- otu_table_slim[, grep("rplB", colnames(otu_table_slim))]
+otu_table.rplB <- otu_table.rplB[, -which(colSums(otu_table.rplB) < 2)]
+
 otu_table.AsRG <- otu_table_slim[, grep("ars|aio|arx|arr|acr", colnames(otu_table_slim))]
+otu_table.AsRG <- otu_table.AsRG[, -which(colSums(otu_table.AsRG) < 2)]
+otu_table.AsRG <- otu_table.AsRG[-which(rowSums(otu_table.AsRG) == 0),]
 
-#check sampling depth of each matrix
-otu_table.rplB <- otu_table(otu_table.rplB, taxa_are_rows = FALSE)
-rarecurve(otu_table.rplB, step=1, label = FALSE)
+otu_table.rplB <- otu_table.rplB[which(rownames(otu_table.rplB) %in% rownames(otu_table.AsRG)),]
 
-otu_table.AsRG <- otu_table(otu_table.AsRG, taxa_are_rows = FALSE)
-rarecurve(otu_table.AsRG, step=1, label = FALSE)
-
-#rarefy to even sampling depth 
-rare_rplB <- rarefy_even_depth(otu_table.rplB, rngseed = TRUE)
-rarecurve(rare_rplB, step=1, label = FALSE)
-
-rare_AsRG <- rarefy_even_depth(otu_table.AsRG, rngseed = TRUE)
-rarecurve(rare_AsRG, step=1, label = FALSE)
-
-#read in centralia specific meta data
-cen_meta <- read.delim(paste(wd, "/data_old2/Centralia_full_map.txt", sep = ""), sep = " ")
-cen_meta$Site <- gsub("Cen", "cen", cen_meta$Site)
-rownames(cen_meta) <- cen_meta$Site
-
-#calculate evenness
-plieou.rplB <- data.frame(group = "rplB", Site = rownames(rare_rplB), plieou = vegan::diversity(rare_rplB, index = "shannon")/log(specnumber(rare_rplB)))
-
-plieou.ARG <- data.frame(group = "AsRG", Site = rownames(rare_AsRG), plieou = vegan::diversity(rare_AsRG, index = "shannon")/log(specnumber(rare_AsRG)))
-
-
-#join all evenness information and add metadata
-plieou.full <- rbind(plieou.ARG, plieou.rplB)
-plieou.full$Site <- gsub("cen", "Cen", plieou.full$Site)
-plieou.full <- plieou.full %>%
-  mutate(Site = gsub("Cen", "cen", Site)) %>%
-  left_join(cen_meta, by = "Site")
-
-#plot rplB evenness
-(plieou.rplb.plot <- ggplot(subset(plieou.full, group == "rplB"), aes(x = Classification, y = plieou)) +
-    geom_boxplot() +
-    geom_jitter(aes(color = SoilTemperature_to10cm)) +
-    ylab(label = "Evenness") +
-    theme_bw(base_size = 8) +
-    facet_wrap(~group) +
-    scale_color_gradientn(colours=GnYlOrRd(5), guide="colorbar", guide_legend(title="Temperature (°C)")))
-
-#save rplB evennes plots
-ggsave(plieou.rplb.plot, filename = paste(wd, "/figures/evenness.rplB.eps", sep = ""), width = 3, height = 1.6, units = "in")
-
-#plot AsRG evenness
-(plieou.AsRG.plot <- ggplot(subset(plieou.full, group == "AsRG"), aes(x = Classification, y = plieou)) +
-    geom_boxplot() +
-    geom_jitter(aes(color = SoilTemperature_to10cm)) +
-    ylab(label = "Evenness") +
-    theme_bw(base_size = 8) +
-    facet_wrap(~group) +
-    scale_color_gradientn(colours=GnYlOrRd(5), guide="colorbar", guide_legend(title="Temperature (°C)")))
-
-#save evenness AsRG plots
-ggsave(plieou.AsRG.plot, filename = paste(wd, "/figures/evenness.AsRG.eps", sep = ""), width = 3, height = 1.6, units = "in")
 
 #make metadata a phyloseq class object
-meta.phylo <- sample_data(cen_meta)
+#meta.phylo <- sample_data(cen_meta)
+row.names(meta) <- meta$Sample
+meta.phylo <- sample_data(meta)
 
 ##make biom for phyloseq
-rare_rplB <- merge_phyloseq(otu_table.rplB, meta.phylo)
-rare_AsRG <- merge_phyloseq(otu_table.AsRG, meta.phylo)
-
-#plot & save richness of rplB
-(richness.rplB <- plot_richness(rare_rplB, x = "Classification", measures = "Observed") +
-    geom_point(color = "blue") +
-    geom_boxplot() +
-    geom_jitter(aes(color = SoilTemperature_to10cm)) +
-    theme_bw(base_size = 8) +
-    scale_color_gradientn(colours=GnYlOrRd(5), guide="colorbar", guide_legend(title="Temperature (°C)")))
-
-ggsave(richness.rplB, filename = paste(wd, "/figures/rplB_richness.eps", sep = ""), width = 3, height = 1.6, units = "in")
-
-#... and AsRGs
-(richness.AsRG <- plot_richness(rare_AsRG, x = "Classification", measures = "Observed") +
-    geom_point(color = "blue") +
-    geom_boxplot() +
-    geom_jitter(aes(color = SoilTemperature_to10cm)) +
-    theme_bw(base_size = 8) +
-    scale_color_gradientn(colours=GnYlOrRd(5), guide="colorbar", guide_legend(title="Temperature (°C)")))
-
-ggsave(richness.AsRG, filename = paste(wd, "/figures/AsRG_richness.eps", sep = ""), width = 3, height = 1.6, units = "in")
+rare_rplB <- merge_phyloseq(otu_table(otu_table.rplB, taxa_are_rows = FALSE), meta.phylo)
+rare_AsRG <- merge_phyloseq(otu_table(otu_table.AsRG, taxa_are_rows = FALSE), meta.phylo)
 
 #relativize rarefied datasets
 rare_rplB_rel = transform_sample_counts(rare_rplB, function(x) x/sum(x))
+
 rare_AsRG_rel = transform_sample_counts(rare_AsRG, function(x) x/sum(x))
 
 #plot Bray Curtis ordination for rplB

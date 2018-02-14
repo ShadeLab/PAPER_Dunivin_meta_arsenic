@@ -15,6 +15,10 @@ wd <- print(getwd())
 #read in quality data from data_preparation.R
 data <- read_delim(file = paste(wd, "/output/AsRG_summary.txt", sep = ""), delim = "\t")
 
+#arxA must have a score > 1000 so it doesnt
+#pick up thiosulfate reductases
+data <- data[-which(data$Gene == "arxA" & data$score1 < 1000),]
+
 #read in taxanomic information
 ncbi <- read_delim(file = paste(wd, "/data/ismej2016168x6.csv", sep = ""), delim = ",")
 
@@ -59,9 +63,7 @@ data.tax <- rbind(data.tax, ncbi.NONE)
 #change NA gene to "None"
 data.tax$Gene[is.na(data.tax$Gene)] <- "None"
 
-#arxA must have a score > 1000 so it doesnt
-#pick up thiosulfate reductases
-data.tax <- data.tax[-which(data.tax$Gene == "arxA" & data.tax$score1 < 1000),]
+
 
 #export final names for tree
 #dissim.data.tax <- data.tax %>% subset(Gene == c("aioA","arrA","arxA"))
@@ -158,15 +160,15 @@ data.tax.uniqREL <- data.tax.uniq %>%
   mutate(RelCount = Count / nrow(ncbi))
 
 (asrg.logi.phyla.barREL <- ggplot(data = subset(data.tax.uniqREL, Gene != "arsA"), aes(x = Gene, y = RelCount)) +
-    geom_bar(stat = "identity", aes(fill = Phylum)) +
+    geom_bar(stat = "identity") +
     ylab("Proportion of genomes containing gene") +
     xlab("Gene") +
-    scale_fill_manual(values = color) +
+    #scale_fill_manual(values = color) +
     theme_bw(base_size = 12) +
     theme(axis.text.x = element_text(angle = 60, hjust = 1)))
 
 #save plot
-ggsave(asrg.logi.phyla.barREL, filename = paste(wd, "/figures/PA.geneREL.eps", sep = ""), width = 10)
+ggsave(asrg.logi.phyla.barREL, filename = paste(wd, "/figures/PA.geneREL_grey.eps", sep = ""), width = 6.4, height = 4.3)
 
 #plot RefSoil database phylum-level distribution
 ncbi.sum <- ncbi %>%
@@ -207,11 +209,12 @@ ggsave(gene.hist, filename = paste(wd, "/figures/gene.historgram.eps", sep = "")
 #WHAT IS THE CO-OCCURRENCE OF AsRGs IN SOIL GENOMES?#
 #####################################################
 library(qgraph)
+#####retry
 
 #make matrix of information
 data.tax.sum <- data.tax %>%
   group_by(Gene, Kingdom, Phylum, Class, Order, Family, Genus, `RefSoil ID`) %>%
-  summarise(Occurrence = (length(Gene) > 1)*1)
+  summarise(Occurrence = (length(Gene) > 0)*1)
 
 #cast data
 data.tax.cast <- dcast(data.tax.sum, `RefSoil ID`~Gene+Phylum, value.var = "Occurrence")
@@ -220,12 +223,78 @@ data.tax.cast[is.na(data.tax.cast)] = 0
 data.tax.cast <- data.tax.cast[,-1]
 
 #remove all columns (RefSoil genomes) with only one gene
-data.tax.cast.2 <- data.tax.cast[,which(colSums(data.tax.cast) > 1)]
+#data.tax.cast.2 <- data.tax.cast[which(colSums(data.tax.cast) > 0),]
 
 #test pairwise correlations
-data.tax.corr <- corr.test(data.tax.cast.2[!rownames(data.tax.cast.2) == "None",], method = "spearman", adjust = "fdr", alpha = 0.01)
+data.tax.corr <- corr.test(data.tax.cast, method = "spearman", adjust = "fdr", alpha = 0.01)
+
+#label shapes
+shape = c(rep("circle", 17), rep("square", 4), rep("star", 9), rep("circle", 13), rep("triangle", 23), rep("star", 6), rep("diamond", 12), "square", rep("heart", 11))
 
 #make network of AsRGs
-qgraph(data.tax.corr$r, minimum = "sig", sampleSize = 922, alpha = 0.05, layout = "spring", threshold = "fdr", labels = colnames(data.tax.cast.2), posCol = "black", negCol = "red", label.cex = 1, label.scale = FALSE, fade = FALSE, filetype = "eps", filename = "AsRG_network", width = 5, height = 5, vsize = 10)
+qgraph(data.tax.corr$r, minimum = "sig", sampleSize = 922, alpha = 0.05, layout = "spring",  threshold = "fdr",  labels = rownames(data.tax.cast$r),shape = shape, color = color, posCol = "black", negCol = "red", label.cex = 0.5, label.scale = FALSE, fade = FALSE,  vsize = log(colSums(data.tax.cast)+1), node.width = 1, node.height = 1, width = 7, height = 5, normalize = FALSE, legend.cex = 0.5, filetype = "eps", filename = "AsRG_network", esize = 2, border.color = "grey30")
 
 
+
+
+############################
+#EXTRACT GENE INFO FOR iTOL#
+############################
+
+#read in iTOL labels
+itol <- read_delim(paste(wd, "/iTOL_labels.txt", sep = ""), delim = ",", col_names = c("NCBI.ID", "Name"))
+
+#set up taxonomy data
+data.sum.ncbi <- data.tax %>%
+  group_by(Phylum,`RefSoil ID`, NCBI.ID, NCBI.ID2, NCBI.ID3, Gene) %>%
+  summarise(Gene.count = length(Gene)) %>%
+  dcast(`RefSoil ID` + NCBI.ID + NCBI.ID2 + NCBI.ID3 ~ Gene, value.var = "Gene.count")
+
+
+#annotate itol data
+#need to join based on three chromosomes 
+itol.ncbi1 <- itol %>%
+  left_join(data.sum.ncbi, by = "NCBI.ID") %>%
+  select(NCBI.ID, `RefSoil ID`, acr3:None)
+itol.ncbi1 <- itol.ncbi1[-which(is.na(itol.ncbi1$`RefSoil ID`)),]
+
+itol.ncbi2 <- itol %>%
+  rename(NCBI.ID2 = NCBI.ID) %>%
+  left_join(data.sum.ncbi, by = "NCBI.ID2") %>%
+  select(NCBI.ID2, `RefSoil ID`, acr3:None) %>%
+  rename(NCBI.ID = NCBI.ID2)
+itol.ncbi2 <- itol.ncbi2[-which(is.na(itol.ncbi2$`RefSoil ID`)),]
+
+itol.ncbi3 <- itol %>%
+  rename(NCBI.ID3 = NCBI.ID) %>%
+  left_join(data.sum.ncbi, by = "NCBI.ID3") %>%
+  select(NCBI.ID3, `RefSoil ID`, acr3:None) %>%
+  rename(NCBI.ID = NCBI.ID3)
+itol.ncbi3 <- itol.ncbi3[-which(is.na(itol.ncbi3$`RefSoil ID`)),]
+
+itol.annotated <- rbind(itol.ncbi1, itol.ncbi2, itol.ncbi3)
+
+#replace NA values 
+itol.annotated[is.na(itol.annotated)] <- -1
+
+#replace values for iTOL
+#0 = open shape, 1 = closed shape; -1 = nothing
+#open shapes
+itol.annotated$acr3 <- replace(itol.annotated$acr3, itol.annotated$acr3 > 0, 0)
+itol.annotated$arsC_thio <- replace(itol.annotated$arsC_thio, itol.annotated$arsC_thio > 0, 0)
+itol.annotated$aioA <- replace(itol.annotated$aioA, itol.annotated$aioA > 0, 0)
+
+#closed shapes
+itol.annotated$arsB <- replace(itol.annotated$arsB, itol.annotated$arsB > 0, 1)
+itol.annotated$arsM <- replace(itol.annotated$arsM, itol.annotated$arsM > 0, 1)
+itol.annotated$arxA <- replace(itol.annotated$arxA, itol.annotated$arxA > 0, 1)
+itol.annotated$arsC_glut <- replace(itol.annotated$arsC_glut, itol.annotated$arsC_glut > 0, 1)
+itol.annotated$arrA <- replace(itol.annotated$arrA, itol.annotated$arrA > 0, 1)
+
+#trim dataframe
+itol.annotated <- itol.annotated %>%
+  select(-c(None, arsD, `RefSoil ID`,arsA)) %>%
+  select(NCBI.ID, arsB, acr3, arsC_glut, arsC_thio, arsM, aioA, arxA, arrA)
+
+#save as output
+write.table(itol.annotated, paste(wd, "/output/iTOL_shapes.csv", sep = ""), quote = FALSE, row.names = FALSE, col.names = TRUE, sep = ",")
