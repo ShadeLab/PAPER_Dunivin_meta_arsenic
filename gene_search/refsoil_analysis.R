@@ -19,6 +19,11 @@ data <- read_delim(file = paste(wd, "/output/AsRG_summary.txt", sep = ""), delim
 #pick up thiosulfate reductases
 data <- data[-which(data$Gene == "arxA" & data$score1 < 1000),]
 
+#remove plasmid data
+#this will be added back later
+plasmid <- data[which(data$Sample == "refseq.plasmid2.fa"),]
+data <- data[-which(data$Sample == "refseq.plasmid2.fa"),]
+
 #read in taxanomic information
 ncbi <- read_delim(file = paste(wd, "/data/ismej2016168x6.csv", sep = ""), delim = ",")
 
@@ -63,16 +68,24 @@ data.tax <- rbind(data.tax, ncbi.NONE)
 #change NA gene to "None"
 data.tax$Gene[is.na(data.tax$Gene)] <- "None"
 
+#read in plasmid taxanomic information
+plasmid.tax <- read_delim(paste(wd, "/data/plasmid.tax.txt", sep = ""), delim = "\t", col_names = c("NCBI.ID4", "Taxon ID"), trim_ws = TRUE)
 
+#trim plasmid info based on hmm 
+plasmid.tax <- plasmid.tax[plasmid.tax$NCBI.ID4 %in% plasmid$t.name,]
 
-#export final names for tree
-#dissim.data.tax <- data.tax %>% subset(Gene == c("aioA","arrA","arxA"))
-#write(as.character(dissim.data.tax$t.name), file = paste(wd, "/output/dissim_target_names.txt", sep = ""))
-#asrgenes <- c("acr3", "arsD", "arsB", "arsC_glut", "arsC_thio", "arsM")
+#trim plasmid info based on taxonomy
+plasmid.tax <- plasmid.tax[plasmid.tax$`Taxon ID` %in% ncbi$`Taxon ID`,]
 
-#arsD <- data.tax %>% subset(Gene == "arsB")
-#write(as.character(arsD$t.name), file = paste(wd, "/output/arsB_target_names.txt", sep = ""))
+#export plasmid taxonomy information and add refsoil info manually
+write.table(plasmid.tax, paste(wd, "/output/plasmid.tax.trimmed.txt", sep = ""), quote = FALSE, row.names = FALSE, col.names = TRUE)
 
+#merge plasmid information with plasmid
+#hmm search data
+ncbi.plasmid.annotated <- plasmid.tax %>%
+  dcast(`Taxon ID`, value.var = "NCBI.ID4")
+
+  merge(plasmid.tax, by = "Taxon ID")
 #############################################
 #EXAMINE NUMBER OF MODEL HITS (not relative)#
 #############################################
@@ -229,10 +242,12 @@ data.tax.cast <- data.tax.cast[,-1]
 data.tax.corr <- corr.test(data.tax.cast, method = "spearman", adjust = "fdr", alpha = 0.01)
 
 #label shapes
-shape = c(rep("circle", 17), rep("square", 4), rep("star", 9), rep("circle", 13), rep("triangle", 23), rep("star", 6), rep("diamond", 12), "square", rep("heart", 11))
+#shape = c(rep("circle", 17), rep("square", 4), rep("star", 9), rep("circle", 13), rep("triangle", 23), rep("star", 6), rep("diamond", 12), "square", rep("heart", 11))
 
 #make network of AsRGs
-qgraph(data.tax.corr$r, minimum = "sig", sampleSize = 922, alpha = 0.05, layout = "spring",  threshold = "fdr",  labels = rownames(data.tax.cast$r),shape = shape, color = color, posCol = "black", negCol = "red", label.cex = 0.5, label.scale = FALSE, fade = FALSE,  vsize = log(colSums(data.tax.cast)+1), node.width = 1, node.height = 1, width = 7, height = 5, normalize = FALSE, legend.cex = 0.5, filetype = "eps", filename = "AsRG_network", esize = 2, border.color = "grey30")
+data.tax.corr$r <- ifelse(data.tax.corr$r<0,0,data.tax.corr$r)
+
+qgraph(data.tax.corr$r, minimum = "sig", graph = "cor", sampleSize = 922, alpha = 0.05, layout = "spring",  threshold = "fdr",  labels = rownames(data.tax.cast$r), posCol = "black", negCol = "red", label.cex = 0.5, label.scale = FALSE, fade = FALSE,  vsize = log(colSums(data.tax.cast)+1), node.width = 1, node.height = 1, width = 7, height = 5, border.color = "grey30")
 
 
 
@@ -255,20 +270,20 @@ data.sum.ncbi <- data.tax %>%
 #need to join based on three chromosomes 
 itol.ncbi1 <- itol %>%
   left_join(data.sum.ncbi, by = "NCBI.ID") %>%
-  select(NCBI.ID, `RefSoil ID`, acr3:None)
+  select(NCBI.ID, Name, `RefSoil ID`, acr3:None)
 itol.ncbi1 <- itol.ncbi1[-which(is.na(itol.ncbi1$`RefSoil ID`)),]
 
 itol.ncbi2 <- itol %>%
   rename(NCBI.ID2 = NCBI.ID) %>%
   left_join(data.sum.ncbi, by = "NCBI.ID2") %>%
-  select(NCBI.ID2, `RefSoil ID`, acr3:None) %>%
+  select(NCBI.ID2, Name, `RefSoil ID`, acr3:None) %>%
   rename(NCBI.ID = NCBI.ID2)
 itol.ncbi2 <- itol.ncbi2[-which(is.na(itol.ncbi2$`RefSoil ID`)),]
 
 itol.ncbi3 <- itol %>%
   rename(NCBI.ID3 = NCBI.ID) %>%
   left_join(data.sum.ncbi, by = "NCBI.ID3") %>%
-  select(NCBI.ID3, `RefSoil ID`, acr3:None) %>%
+  select(NCBI.ID3, Name, `RefSoil ID`, acr3:None) %>%
   rename(NCBI.ID = NCBI.ID3)
 itol.ncbi3 <- itol.ncbi3[-which(is.na(itol.ncbi3$`RefSoil ID`)),]
 
@@ -280,9 +295,9 @@ itol.annotated[is.na(itol.annotated)] <- -1
 #replace values for iTOL
 #0 = open shape, 1 = closed shape; -1 = nothing
 #open shapes
-itol.annotated$acr3 <- replace(itol.annotated$acr3, itol.annotated$acr3 > 0, 0)
-itol.annotated$arsC_thio <- replace(itol.annotated$arsC_thio, itol.annotated$arsC_thio > 0, 0)
-itol.annotated$aioA <- replace(itol.annotated$aioA, itol.annotated$aioA > 0, 0)
+itol.annotated$acr3 <- replace(itol.annotated$acr3, itol.annotated$acr3 > 0, 1)
+itol.annotated$arsC_thio <- replace(itol.annotated$arsC_thio, itol.annotated$arsC_thio > 0, 1)
+itol.annotated$aioA <- replace(itol.annotated$aioA, itol.annotated$aioA > 0, 1)
 
 #closed shapes
 itol.annotated$arsB <- replace(itol.annotated$arsB, itol.annotated$arsB > 0, 1)
@@ -292,9 +307,24 @@ itol.annotated$arsC_glut <- replace(itol.annotated$arsC_glut, itol.annotated$ars
 itol.annotated$arrA <- replace(itol.annotated$arrA, itol.annotated$arrA > 0, 1)
 
 #trim dataframe
-itol.annotated <- itol.annotated %>%
+itol.annotated.shapes <- itol.annotated %>%
   select(-c(None, arsD, `RefSoil ID`,arsA)) %>%
   select(NCBI.ID, arsB, acr3, arsC_glut, arsC_thio, arsM, aioA, arxA, arrA)
 
 #save as output
-write.table(itol.annotated, paste(wd, "/output/iTOL_shapes.csv", sep = ""), quote = FALSE, row.names = FALSE, col.names = TRUE, sep = ",")
+write.table(itol.annotated.shapes, paste(wd, "/output/iTOL_shapes.csv", sep = ""), quote = FALSE, row.names = FALSE, col.names = TRUE, sep = ",")
+
+#read in phylum colors
+colors.phy <- read_delim(paste(wd, "/data/colors_phylum.txt", sep = ""), delim = "\t", col_names = c("Color", "Phylum"))
+
+#make itol dataframe for leaf colors
+itol.annotated.color <- itol.annotated %>%
+  select(-c(acr3:None)) %>%
+  left_join(data.tax, by = "RefSoil ID") %>%
+  select(NCBI.ID.x, Phylum) %>%
+  left_join(colors.phy, by = "Phylum") %>%
+  mutate(Type = "label") %>%
+  select(NCBI.ID.x,Type,Color)
+  
+#save as output
+write.table(itol.annotated.color, paste(wd, "/output/iTOL_node_color.csv", sep = ""), quote = FALSE, row.names = FALSE, col.names = TRUE, sep = ",")

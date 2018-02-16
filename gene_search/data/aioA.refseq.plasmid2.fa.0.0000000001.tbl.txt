@@ -1,0 +1,35 @@
+#                                                                            --- full sequence --- -------------- this domain -------------   hmm coord   ali coord   env coord
+# target name        accession   tlen query name           accession   qlen   E-value  score  bias   #  of  c-Evalue  i-Evalue  score  bias  from    to  from    to  from    to  acc description of target
+#------------------- ---------- ----- -------------------- ---------- ----- --------- ------ ----- --- --- --------- --------- ------ ----- ----- ----- ----- ----- ----- ----- ---- ---------------------
+YP_007974270         -            845 aioA                 -            837         0 1406.2   5.8   1   1         0         0 1406.0   5.8     1   836     3   842     3   843 1.00 from plasmid
+YP_145366            -            861 aioA                 -            837  6.7e-192  641.9   0.0   1   1    1e-195  8.3e-192  641.6   0.0     5   831     7   854     4   861 0.90 from plasmid
+YP_003748515         -            918 aioA                 -            837   5.5e-37  129.5   0.0   1   1   6.4e-39   5.2e-35  122.9   0.0    63   789    18   693     8   711 0.78 from plasmid
+NP_437651            -            885 aioA                 -            837   8.1e-34  119.0   0.0   1   2   3.4e-28   2.8e-24   87.4   0.0    59   586     4   484     1   500 0.81 from plasmid
+NP_437651            -            885 aioA                 -            837   8.1e-34  119.0   0.0   2   2   6.7e-10   5.4e-06   26.9   0.0   671   790   549   663   536   685 0.89 from plasmid
+YP_001313890         -            834 aioA                 -            837   9.3e-34  118.8   0.5   1   2     2e-19   1.6e-15   58.4   0.1    57   239    43   222    17   226 0.85 from plasmid
+YP_001313890         -            834 aioA                 -            837   9.3e-34  118.8   0.5   2   2   6.6e-18   5.3e-14   53.4   0.0   301   773   261   784   242   821 0.75 from plasmid
+NP_435920            -            834 aioA                 -            837     4e-33  116.7   0.3   1   3   1.4e-19   1.1e-15   59.0   0.1    56   239    42   222    16   226 0.85 from plasmid
+NP_435920            -            834 aioA                 -            837     4e-33  116.7   0.3   2   3   6.2e-12     5e-08   33.7   0.0   301   574   261   563   242   575 0.77 from plasmid
+NP_435920            -            834 aioA                 -            837     4e-33  116.7   0.3   3   3   3.7e-07     0.003   17.9   0.0   682   773   697   784   675   823 0.83 from plasmid
+YP_001313256         -            885 aioA                 -            837   1.5e-32  114.8   0.0   1   1   2.3e-35   1.8e-31  111.2   0.0    61   790     6   663     2   685 0.82 from plasmid
+YP_003748223         -            892 aioA                 -            837   7.5e-31  109.2   0.7   1   2   2.6e-30   2.1e-26   94.4   1.6    57   587   210   691   173   694 0.83 from plasmid
+YP_003748223         -            892 aioA                 -            837   7.5e-31  109.2   0.7   2   2   0.00031       2.5    8.2   0.0   736   804   800   868   764   886 0.82 from plasmid
+YP_345332            -            831 aioA                 -            837   8.8e-31  108.9   0.0   1   3   5.8e-20   4.7e-16   60.2   0.2    59   239    43   220    29   223 0.85 from plasmid
+YP_345332            -            831 aioA                 -            837   8.8e-31  108.9   0.0   2   3   9.9e-11     8e-07   29.7   0.0   301   574   259   561   240   568 0.78 from plasmid
+YP_345332            -            831 aioA                 -            837   8.8e-31  108.9   0.0   3   3   6.7e-06     0.054   13.7   0.0   703   769   712   778   690   803 0.88 from plasmid
+YP_002823343         -            885 aioA                 -            837   9.8e-31  108.8   0.0   1   1   2.8e-33   2.3e-29  104.3   0.0    61   790     6   663     2   685 0.80 from plasmid
+YP_001314178         -            973 aioA                 -            837   1.3e-19   72.0   5.2   1   2   4.5e-16   3.7e-12   47.3   2.9    57   435    69   398    25   402 0.76 from plasmid
+YP_001314178         -            973 aioA                 -            837   1.3e-19   72.0   5.2   2   2   7.9e-08   0.00064   20.1   0.0   736   813   866   945   835   953 0.84 from plasmid
+NP_435247            -           1034 aioA                 -            837   3.3e-15   57.4   0.0   1   3   4.6e-13   3.7e-09   37.4   0.1    56   434    51   457    42   460 0.63 from plasmid
+NP_435247            -           1034 aioA                 -            837   3.3e-15   57.4   0.0   2   3     0.016   1.3e+02    2.5   0.0   566   594   651   679   624   682 0.91 from plasmid
+NP_435247            -           1034 aioA                 -            837   3.3e-15   57.4   0.0   3   3     5e-05      0.41   10.8   0.0   726   779   920   970   906   982 0.87 from plasmid
+#
+# Program:         hmmsearch
+# Version:         3.1b2 (February 2015)
+# Pipeline mode:   SEARCH
+# Query file:      /mnt/research/ShadeLab/Dunivin/gene_targeted_assembly/RDPTools/Xander_assembler/gene_resource/aioA/originaldata/aioA.hmm
+# Target file:     /mnt/research/ShadeLab/WorkingSpace/Dunivin/as_ncbi/refsoil/refseq.plasmid2.fa
+# Option settings: /opt/software/HMMER/3.1b2--GCC-4.8.3/bin/hmmsearch -o /mnt/research/ShadeLab/Dunivin/hmmsearch/refsoil_data/aioA.refseq.plasmid2.fa.stdout.txt -A /mnt/research/ShadeLab/Dunivin/hmmsearch/refsoil_data/aioA.refseq.plasmid2.fa.alignment.0.0000000001.txt --domtblout /mnt/research/ShadeLab/Dunivin/hmmsearch/refsoil_data/aioA.refseq.plasmid2.fa.0.0000000001.tbl.txt -E 0.0000000001 --cpu 8 /mnt/research/ShadeLab/Dunivin/gene_targeted_assembly/RDPTools/Xander_assembler/gene_resource/aioA/originaldata/aioA.hmm /mnt/research/ShadeLab/WorkingSpace/Dunivin/as_ncbi/refsoil/refseq.plasmid2.fa 
+# Current dir:     /mnt/research/ShadeLab/Dunivin/hmmsearch/bin
+# Date:            Thu Feb 15 14:59:38 2018
+# [ok]

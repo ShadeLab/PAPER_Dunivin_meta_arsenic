@@ -16,6 +16,9 @@ names=list.files(pattern="*.tbl.txt")
 data <- do.call(rbind, lapply(names, function(X) {
   data.frame(id = basename(X), read.table(X))}))
 
+#fix working directory
+setwd(wd)
+
 #remove unnecessary columns
 data <- data %>%
   mutate(id = gsub(".0.0000000001.tbl.txt", "", id)) %>%
@@ -32,12 +35,12 @@ data <- data %>%
   mutate(perc.ali = length / q.length)
 
 #remove rows that do not have at least 70% of hmm length (std)
-data.90 <- data[which(data$perc.ali > 0.90 & data$score1 > 90 & data$acc > 0.80),]
+data.90 <- data[which(data$perc.ali > 0.70 & data$score1 > 50 & data$acc > 0.70),]
 
 
 #examine if any HMM hits apply to two genes
 duplicates <- data.90[duplicated(data.90$t.name),]
-#12 hits are duplicates
+#50 hits are duplicates
 
 #of the duplicates, all are arrA/aioA mixed hits
 #we will accept the one with a higher score

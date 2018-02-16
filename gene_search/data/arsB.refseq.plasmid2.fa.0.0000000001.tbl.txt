@@ -1,0 +1,60 @@
+#                                                                            --- full sequence --- -------------- this domain -------------   hmm coord   ali coord   env coord
+# target name        accession   tlen query name           accession   qlen   E-value  score  bias   #  of  c-Evalue  i-Evalue  score  bias  from    to  from    to  from    to  acc description of target
+#------------------- ---------- ----- -------------------- ---------- ----- --------- ------ ----- --- --- --------- --------- ------ ----- ----- ----- ----- ----- ----- ----- ---- ---------------------
+YP_006954041         -            429 arsB                 -            430  1.1e-236  788.2  42.9   1   1    6e-240  1.2e-236  788.0  42.9     3   429     1   427     1   428 1.00 from plasmid
+YP_002287001         -            429 arsB                 -            430  1.5e-236  787.8  42.7   1   1  8.1e-240  1.7e-236  787.6  42.7     3   429     1   427     1   428 1.00 from plasmid
+YP_005351270         -            429 arsB                 -            430  1.9e-236  787.4  42.1   1   1    1e-239  2.1e-236  787.3  42.1     3   429     1   427     1   428 1.00 from plasmid
+YP_007366512         -            429 arsB                 -            430  1.9e-236  787.4  42.1   1   1    1e-239  2.1e-236  787.3  42.1     3   429     1   427     1   428 1.00 from plasmid
+YP_007969530         -            429 arsB                 -            430  1.9e-236  787.4  42.1   1   1    1e-239  2.1e-236  787.3  42.1     3   429     1   427     1   428 1.00 from plasmid
+YP_008146287         -            429 arsB                 -            430  1.9e-236  787.4  42.1   1   1    1e-239  2.1e-236  787.3  42.1     3   429     1   427     1   428 1.00 from plasmid
+YP_008998940         -            429 arsB                 -            430  1.9e-236  787.4  42.1   1   1    1e-239  2.1e-236  787.3  42.1     3   429     1   427     1   428 1.00 from plasmid
+YP_008999142         -            429 arsB                 -            430  1.9e-236  787.4  42.1   1   1    1e-239  2.1e-236  787.3  42.1     3   429     1   427     1   428 1.00 from plasmid
+YP_008999357         -            429 arsB                 -            430  1.9e-236  787.4  42.1   1   1    1e-239  2.1e-236  787.3  42.1     3   429     1   427     1   428 1.00 from plasmid
+YP_009062310         -            429 arsB                 -            430  1.9e-236  787.4  42.1   1   1    1e-239  2.1e-236  787.3  42.1     3   429     1   427     1   428 1.00 from plasmid
+YP_003602594         -            429 arsB                 -            430    2e-236  787.4  40.8   1   1  1.1e-239  2.2e-236  787.2  40.8     3   429     1   427     1   428 1.00 from plasmid
+NP_511239            -            429 arsB                 -            430  5.6e-236  785.8  43.2   1   1  3.1e-239  6.4e-236  785.7  43.2     3   429     1   427     1   428 1.00 from plasmid
+NP_863378            -            429 arsB                 -            430  5.6e-235  782.6  39.9   1   1  3.1e-238  6.4e-235  782.4  39.9     3   429     1   427     1   428 1.00 from plasmid
+NP_052439            -            429 arsB                 -            430    4e-233  776.4  39.6   1   1  2.2e-236  4.5e-233  776.3  39.6     3   429     1   427     1   428 1.00 from plasmid
+YP_004209950         -            429 arsB                 -            430  4.2e-233  776.4  36.7   1   1  2.3e-236  4.7e-233  776.2  36.7     3   429     1   427     1   428 1.00 from plasmid
+YP_004209969         -            429 arsB                 -            430  4.2e-233  776.4  36.7   1   1  2.3e-236  4.7e-233  776.2  36.7     3   429     1   427     1   428 1.00 from plasmid
+YP_004210097         -            429 arsB                 -            430  4.2e-233  776.4  36.7   1   1  2.3e-236  4.7e-233  776.2  36.7     3   429     1   427     1   428 1.00 from plasmid
+YP_004221715         -            429 arsB                 -            430  4.2e-233  776.4  36.7   1   1  2.3e-236  4.7e-233  776.2  36.7     3   429     1   427     1   428 1.00 from plasmid
+YP_006937608         -            429 arsB                 -            430  2.3e-232  774.0  52.5   1   1  1.2e-235  2.5e-232  773.8  52.5     1   430     1   429     1   429 1.00 from plasmid
+YP_006938162         -            429 arsB                 -            430  2.3e-232  774.0  52.5   1   1  1.2e-235  2.5e-232  773.8  52.5     1   430     1   429     1   429 1.00 from plasmid
+YP_006938642         -            429 arsB                 -            430  2.3e-232  774.0  52.5   1   1  1.2e-235  2.5e-232  773.8  52.5     1   430     1   429     1   429 1.00 from plasmid
+YP_006938776         -            429 arsB                 -            430  2.3e-232  774.0  52.5   1   1  1.2e-235  2.5e-232  773.8  52.5     1   430     1   429     1   429 1.00 from plasmid
+YP_001715972         -            429 arsB                 -            430  2.8e-232  773.7  52.5   1   1  1.5e-235  3.1e-232  773.5  52.5     1   430     1   429     1   429 1.00 from plasmid
+YP_006937216         -            429 arsB                 -            430  2.8e-232  773.7  52.5   1   1  1.5e-235  3.1e-232  773.5  52.5     1   430     1   429     1   429 1.00 from plasmid
+YP_006937754         -            430 arsB                 -            430  2.8e-232  773.6  52.8   1   1  1.5e-235  3.2e-232  773.5  52.8     3   430     3   430     1   430 0.99 from plasmid
+YP_536861            -            429 arsB                 -            430  9.9e-232  771.9  52.0   1   1  5.3e-235  1.1e-231  771.7  52.0     1   430     1   429     1   429 1.00 from plasmid
+YP_001573917         -            429 arsB                 -            430  9.9e-232  771.9  52.3   1   1  5.4e-235  1.1e-231  771.7  52.3     1   430     1   429     1   429 1.00 from plasmid
+YP_006937726         -            429 arsB                 -            430    1e-231  771.8  52.7   1   1  5.6e-235  1.2e-231  771.6  52.7     1   430     1   429     1   429 1.00 from plasmid
+YP_006938434         -            429 arsB                 -            430    1e-231  771.8  52.7   1   1  5.6e-235  1.2e-231  771.6  52.7     1   430     1   429     1   429 1.00 from plasmid
+YP_006939394         -            429 arsB                 -            430    1e-231  771.8  52.7   1   1  5.6e-235  1.2e-231  771.6  52.7     1   430     1   429     1   429 1.00 from plasmid
+YP_006940872         -            429 arsB                 -            430    1e-231  771.8  52.7   1   1  5.6e-235  1.2e-231  771.6  52.7     1   430     1   429     1   429 1.00 from plasmid
+YP_006938711         -            429 arsB                 -            430  3.8e-231  769.9  52.0   1   1  2.1e-234  4.3e-231  769.8  52.0     1   430     1   429     1   429 1.00 from plasmid
+YP_002791433         -            433 arsB                 -            430  1.1e-229  765.1  40.2   1   1  6.4e-233  1.3e-229  764.9  40.2     3   429     5   431     3   432 1.00 from plasmid
+YP_002791746         -            433 arsB                 -            430  1.1e-229  765.1  40.2   1   1  6.4e-233  1.3e-229  764.9  40.2     3   429     5   431     3   432 1.00 from plasmid
+YP_006964923         -            433 arsB                 -            430  1.1e-229  765.1  40.2   1   1  6.4e-233  1.3e-229  764.9  40.2     3   429     5   431     3   432 1.00 from plasmid
+NP_941246            -            429 arsB                 -            430  1.5e-229  764.7  39.8   1   1  8.2e-233  1.7e-229  764.5  39.8     3   429     1   427     1   428 1.00 from plasmid
+YP_001965823         -            429 arsB                 -            430  1.5e-229  764.7  39.8   1   1  8.2e-233  1.7e-229  764.5  39.8     3   429     1   427     1   428 1.00 from plasmid
+YP_009061998         -            429 arsB                 -            430  1.5e-229  764.7  39.8   1   1  8.2e-233  1.7e-229  764.5  39.8     3   429     1   427     1   428 1.00 from plasmid
+YP_004400664         -            429 arsB                 -            430  9.4e-229  762.1  52.1   1   1  5.1e-232    1e-228  761.9  52.1     3   430     2   429     1   429 1.00 from plasmid
+YP_001096303         -            430 arsB                 -            430    8e-228  759.0  51.8   1   1  4.3e-231    9e-228  758.8  51.8     2   430     2   430     1   430 0.99 from plasmid
+YP_008567665         -            432 arsB                 -            430  1.2e-217  725.4  47.9   1   1  6.7e-221  1.4e-217  725.2  47.9     3   430     4   431     1   431 0.99 from plasmid
+YP_008864470         -            428 arsB                 -            430  3.5e-211  704.2  40.6   1   1  1.9e-214  3.9e-211  704.0  40.6     3   429     1   427     1   428 1.00 from plasmid
+YP_001967722         -            429 arsB                 -            430    4e-211  704.0  38.3   1   1  2.2e-214  4.5e-211  703.8  38.3     3   429     1   427     1   428 1.00 from plasmid
+YP_009023403         -            401 arsB                 -            430    2e-209  698.4  33.9   1   1  1.1e-212  2.2e-209  698.2  33.9     3   403     1   401     1   401 1.00 from plasmid
+YP_133727            -            431 arsB                 -            430  5.8e-202  673.8  44.0   1   1  3.1e-205  6.4e-202  673.6  44.0     2   429     2   429     1   430 0.99 from plasmid
+YP_003377702         -            396 arsB                 -            430   6.2e-16   60.8  26.2   1   1   4.1e-19   8.5e-16   60.4  26.2    64   425    44   389     7   394 0.72 from plasmid
+YP_008996638         -             37 arsB                 -            430   8.1e-12   47.3   0.0   1   1     4e-15   8.3e-12   47.2   0.0   364   399     1    36     1    37 0.96 from plasmid
+#
+# Program:         hmmsearch
+# Version:         3.1b2 (February 2015)
+# Pipeline mode:   SEARCH
+# Query file:      /mnt/research/ShadeLab/Dunivin/gene_targeted_assembly/RDPTools/Xander_assembler/gene_resource/arsB/originaldata/arsB.hmm
+# Target file:     /mnt/research/ShadeLab/WorkingSpace/Dunivin/as_ncbi/refsoil/refseq.plasmid2.fa
+# Option settings: /opt/software/HMMER/3.1b2--GCC-4.8.3/bin/hmmsearch -o /mnt/research/ShadeLab/Dunivin/hmmsearch/refsoil_data/arsB.refseq.plasmid2.fa.stdout.txt -A /mnt/research/ShadeLab/Dunivin/hmmsearch/refsoil_data/arsB.refseq.plasmid2.fa.alignment.0.0000000001.txt --domtblout /mnt/research/ShadeLab/Dunivin/hmmsearch/refsoil_data/arsB.refseq.plasmid2.fa.0.0000000001.tbl.txt -E 0.0000000001 --cpu 8 /mnt/research/ShadeLab/Dunivin/gene_targeted_assembly/RDPTools/Xander_assembler/gene_resource/arsB/originaldata/arsB.hmm /mnt/research/ShadeLab/WorkingSpace/Dunivin/as_ncbi/refsoil/refseq.plasmid2.fa 
+# Current dir:     /mnt/research/ShadeLab/Dunivin/hmmsearch/bin
+# Date:            Thu Feb 15 14:59:39 2018
+# [ok]
