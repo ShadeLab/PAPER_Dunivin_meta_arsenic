@@ -1,0 +1,18 @@
+#obtain plasmid sequences and compile
+#into one file listing all accession numbers
+#then get CDS from NCBI
+python /mnt/research/ShadeLab/Dunivin/hmmsearch/refsoil_tree/ref_soil/script_download_refsoil/fetch_fasta_cds.py /mnt/research/ShadeLab/Dunivin/hmmsearch/refsoil_tree/plasmids/refsoil_plasmids.txt refsoil_plasmid_cds_fasta
+
+#combine sequences
+cat refsoil_plasmid_cds_fasta/* > refsoil_plasmid_cds.fasta
+
+#remove sequence descriptor from final fasta
+awk '/^>/{print $1;next}{print}' refsoil_plasmid_cds.fasta > cleaned_refsoil_plasmid_cds.fasta
+sed -i 's/lcl|//g' cleaned_refsoil_plasmid_cds.fasta
+sed -i 's/_prot_/ from /g' cleaned_refsoil_plasmid_cds.fasta
+sed -i 's/>/> /g' cleaned_refsoil_plasmid_cds.fasta
+awk '/^>/{print ">" $4 " from " $2;next}{print}' cleaned_refsoil_plasmid_cds.fasta > plasmid.protein.fa
+
+#run refsoil
+./AsRG_hmmsearch.sh  search_setenv.sh "plasmid.protein.fa"
+

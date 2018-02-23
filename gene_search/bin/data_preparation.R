@@ -40,7 +40,6 @@ data.90 <- data[which(data$perc.ali > 0.70 & data$score1 > 50 & data$acc > 0.70)
 
 #examine if any HMM hits apply to two genes
 duplicates <- data.90[duplicated(data.90$t.name),]
-#50 hits are duplicates
 
 #of the duplicates, all are arrA/aioA mixed hits
 #we will accept the one with a higher score
@@ -49,6 +48,12 @@ data.90 <- data.90[order(data.90$t.name, abs(data.90$score1), decreasing = TRUE)
 
 #remove duplicates that have the lower score
 data.90 <- data.90[!duplicated(data.90$t.name),]
+
+#dissim must have a score > 1000 so it doesnt
+#pick up thiosulfate reductases
+data.90 <- data.90[-which(data.90$Gene == "arxA" & data.90$score1 < 1000),]
+data.90 <- data.90[-which(data.90$Gene == "aioA" & data.90$score1 < 1000),]
+data.90 <- data.90[-which(data.90$Gene == "arrA" & data.90$score1 < 1000),]
 
 #save table to output
 write.table(data.90, paste(wd, "/output/AsRG_summary.txt", sep = ""), sep = "\t", quote = FALSE, row.names = FALSE)

@@ -1,0 +1,53 @@
+#                                                                            --- full sequence --- -------------- this domain -------------   hmm coord   ali coord   env coord
+# target name        accession   tlen query name           accession   qlen   E-value  score  bias   #  of  c-Evalue  i-Evalue  score  bias  from    to  from    to  from    to  acc description of target
+#------------------- ---------- ----- -------------------- ---------- ----- --------- ------ ----- --- --- --------- --------- ------ ----- ----- ----- ----- ----- ----- ----- ---- ---------------------
+WP_000065758.1_181   -            141 arsC_glut            -            117   1.4e-53  183.5   0.0   1   1   3.3e-57   1.6e-53  183.3   0.0     1   116     1   116     1   117 0.99 from NZ_CP008842.1
+WP_000065758.1_45    -            141 arsC_glut            -            117   1.4e-53  183.5   0.0   1   1   3.3e-57   1.6e-53  183.3   0.0     1   116     1   116     1   117 0.99 from NC_013356.1
+WP_004152097.1_74    -            141 arsC_glut            -            117   3.9e-53  182.1   0.0   1   1   9.3e-57   4.5e-53  181.9   0.0     1   116     1   116     1   117 0.99 from NC_009649.1
+WP_007688073.1_147   -            146 arsC_glut            -            117   5.8e-50  171.8   0.0   1   1   1.4e-53   6.9e-50  171.6   0.0     3   116     7   120     5   121 0.98 from NC_015974.1
+WP_007688073.1_56    -            146 arsC_glut            -            117   5.8e-50  171.8   0.0   1   1   1.4e-53   6.9e-50  171.6   0.0     3   116     7   120     5   121 0.98 from NC_015595.1
+WP_011906532.1_75    -            141 arsC_glut            -            117   5.9e-50  171.8   0.0   1   1   1.4e-53   6.9e-50  171.6   0.0     1   116     1   116     1   117 0.99 from NC_009425.1
+WP_012564869.1_65    -            134 arsC_glut            -            117   6.1e-49  168.5   0.0   1   1   1.4e-52     7e-49  168.3   0.0     3   116     2   115     1   116 0.99 from NC_015685.1
+WP_013578299.1_531   -            143 arsC_glut            -            117   1.9e-48  167.0   0.0   1   1   4.5e-52   2.2e-48  166.7   0.0     1   116     1   116     1   117 0.99 from NC_017060.1
+WP_013578299.1_600   -            143 arsC_glut            -            117   1.9e-48  167.0   0.0   1   1   4.5e-52   2.2e-48  166.7   0.0     1   116     1   116     1   117 0.99 from NC_015062.1
+WP_014189331.1_64    -            144 arsC_glut            -            117   5.7e-48  165.4   0.0   1   1   1.4e-51   6.6e-48  165.2   0.0     2   116     2   116     1   117 0.98 from NC_016587.1
+WP_006115730.1_54    -            140 arsC_glut            -            117   6.4e-48  165.2   0.0   1   1   1.5e-51   7.4e-48  165.0   0.0     3   116     2   115     1   116 0.99 from NC_017149.1
+WP_006115730.1_54    -            140 arsC_glut            -            117   6.4e-48  165.2   0.0   1   1   1.5e-51   7.4e-48  165.0   0.0     3   116     2   115     1   116 0.99 from NC_017118.1
+WP_006115730.1_54    -            140 arsC_glut            -            117   6.4e-48  165.2   0.0   1   1   1.5e-51   7.4e-48  165.0   0.0     3   116     2   115     1   116 0.99 from NC_017122.1
+WP_006115730.1_54    -            140 arsC_glut            -            117   6.4e-48  165.2   0.0   1   1   1.5e-51   7.4e-48  165.0   0.0     3   116     2   115     1   116 0.99 from NC_017126.1
+WP_006115730.1_54    -            140 arsC_glut            -            117   6.4e-48  165.2   0.0   1   1   1.5e-51   7.4e-48  165.0   0.0     3   116     2   115     1   116 0.99 from NC_017131.1
+WP_006115730.1_54    -            140 arsC_glut            -            117   6.4e-48  165.2   0.0   1   1   1.5e-51   7.4e-48  165.0   0.0     3   116     2   115     1   116 0.99 from NC_013211.1
+WP_006115730.1_54    -            140 arsC_glut            -            117   6.4e-48  165.2   0.0   1   1   1.5e-51   7.4e-48  165.0   0.0     3   116     2   115     1   116 0.99 from NC_017105.1
+WP_006115730.1_54    -            140 arsC_glut            -            117   6.4e-48  165.2   0.0   1   1   1.5e-51   7.4e-48  165.0   0.0     3   116     2   115     1   116 0.99 from NC_017113.1
+WP_006115730.1_64    -            140 arsC_glut            -            117   6.4e-48  165.2   0.0   1   1   1.5e-51   7.4e-48  165.0   0.0     3   116     2   115     1   116 0.99 from NC_017149.1
+WP_006115730.1_64    -            140 arsC_glut            -            117   6.4e-48  165.2   0.0   1   1   1.5e-51   7.4e-48  165.0   0.0     3   116     2   115     1   116 0.99 from NC_017118.1
+WP_006115730.1_64    -            140 arsC_glut            -            117   6.4e-48  165.2   0.0   1   1   1.5e-51   7.4e-48  165.0   0.0     3   116     2   115     1   116 0.99 from NC_017122.1
+WP_006115730.1_64    -            140 arsC_glut            -            117   6.4e-48  165.2   0.0   1   1   1.5e-51   7.4e-48  165.0   0.0     3   116     2   115     1   116 0.99 from NC_017126.1
+WP_006115730.1_64    -            140 arsC_glut            -            117   6.4e-48  165.2   0.0   1   1   1.5e-51   7.4e-48  165.0   0.0     3   116     2   115     1   116 0.99 from NC_017131.1
+WP_006115730.1_64    -            140 arsC_glut            -            117   6.4e-48  165.2   0.0   1   1   1.5e-51   7.4e-48  165.0   0.0     3   116     2   115     1   116 0.99 from NC_013211.1
+WP_006115730.1_64    -            140 arsC_glut            -            117   6.4e-48  165.2   0.0   1   1   1.5e-51   7.4e-48  165.0   0.0     3   116     2   115     1   116 0.99 from NC_017105.1
+WP_006115730.1_64    -            140 arsC_glut            -            117   6.4e-48  165.2   0.0   1   1   1.5e-51   7.4e-48  165.0   0.0     3   116     2   115     1   116 0.99 from NC_017113.1
+WP_011505133.1_75    -            134 arsC_glut            -            117     1e-47  164.6   0.0   1   1   2.4e-51   1.2e-47  164.4   0.0     3   116     2   115     1   116 0.99 from NC_007960.1
+WP_015452257.1_605   -            120 arsC_glut            -            117   5.6e-47  162.2   0.0   1   1   1.3e-50   6.2e-47  162.1   0.0     1   116     1   116     1   117 0.99 from NC_020548.1
+WP_040137736.1_120   -            148 arsC_glut            -            117     8e-47  161.7   0.0   1   1     2e-50   9.9e-47  161.4   0.0     4   116     8   120     6   121 0.99 from NZ_CP007796.1
+WP_012354846.1_524   -            140 arsC_glut            -            117   4.9e-46  159.2   0.0   1   1   1.2e-49   5.6e-46  159.0   0.0     3   116     2   115     1   116 0.99 from NC_010529.1
+WP_009693508.1_165   -            140 arsC_glut            -            117   1.1e-45  158.0   0.0   1   1   2.7e-49   1.3e-45  157.8   0.0     1   116     1   116     1   117 0.99 from NC_010070.1
+WP_011578665.1_100   -            138 arsC_glut            -            117   1.5e-45  157.6   0.0   1   1   3.4e-49   1.7e-45  157.5   0.0     3   116     2   115     1   116 0.99 from NC_008242.1
+WP_047100425.1_353   -            141 arsC_glut            -            117   1.6e-45  157.5   0.0   1   1   3.9e-49   1.9e-45  157.3   0.0     2   116     2   116     1   117 0.98 from NZ_CP011450.1
+WP_012779295.1_26    -            141 arsC_glut            -            117   1.1e-44  154.8   0.0   1   1   2.6e-48   1.3e-44  154.6   0.0     3   116     2   115     1   116 0.99 from NC_012989.1
+WP_037434939.1_184   -            140 arsC_glut            -            117   2.9e-44  153.4   0.0   1   1     7e-48   3.4e-44  153.2   0.0     3   116     2   115     1   116 0.99 from NC_016815.1
+WP_020953016.1_182   -            145 arsC_glut            -            117     5e-43  149.5   0.0   1   1   1.2e-46   5.8e-43  149.3   0.0     3   116     2   115     1   116 0.98 from NC_022043.1
+WP_012735324.1_85    -            275 arsC_glut            -            117   1.9e-40  141.2   0.0   1   2     1e-43     5e-40  139.8   0.0     3   116     2   115     1   116 0.98 from NC_012725.2
+WP_012735324.1_85    -            275 arsC_glut            -            117   1.9e-40  141.2   0.0   2   2       8.2     4e+04   -1.8   0.0    78    97   255   274   250   275 0.76 from NC_012725.2
+WP_013481244.1_112   -            376 arsC_glut            -            117   5.2e-39  136.5   0.0   1   1   2.2e-42   1.1e-38  135.5   0.0     5   116     4   115     1   116 0.98 from NC_014819.1
+WP_013429002.1_622   -            118 arsC_glut            -            117     2e-33  118.5   0.0   1   1   4.6e-37   2.2e-33  118.4   0.0     3   116     1   117     1   118 0.92 from NC_014718.1
+#
+# Program:         hmmsearch
+# Version:         3.1b2 (February 2015)
+# Pipeline mode:   SEARCH
+# Query file:      /mnt/research/ShadeLab/Dunivin/gene_targeted_assembly/RDPTools/Xander_assembler/gene_resource/arsC_glut/originaldata/arsC_glut.hmm
+# Target file:     /mnt/research/ShadeLab/WorkingSpace/Dunivin/as_ncbi/refsoil/plasmid.protein.fa
+# Option settings: /opt/software/HMMER/3.1b2--GCC-4.8.3/bin/hmmsearch -o /mnt/research/ShadeLab/Dunivin/hmmsearch/refsoil_data/arsC_glut.plasmid.protein.fa.stdout.txt -A /mnt/research/ShadeLab/Dunivin/hmmsearch/refsoil_data/arsC_glut.plasmid.protein.fa.alignment.0.0000000001.txt --domtblout /mnt/research/ShadeLab/Dunivin/hmmsearch/refsoil_data/arsC_glut.plasmid.protein.fa.0.0000000001.tbl.txt -E 0.0000000001 --cpu 8 /mnt/research/ShadeLab/Dunivin/gene_targeted_assembly/RDPTools/Xander_assembler/gene_resource/arsC_glut/originaldata/arsC_glut.hmm /mnt/research/ShadeLab/WorkingSpace/Dunivin/as_ncbi/refsoil/plasmid.protein.fa 
+# Current dir:     /mnt/research/ShadeLab/Dunivin/hmmsearch/bin
+# Date:            Tue Feb 20 14:43:45 2018
+# [ok]

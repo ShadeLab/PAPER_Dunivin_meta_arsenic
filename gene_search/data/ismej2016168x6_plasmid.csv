@@ -3,7 +3,7 @@ RefSoil_1,NC_000913.3,511145,Bacteria,Proteobacteria,Gammaproteobacteria,Enterob
 RefSoil_2,NC_000963.1,272947,Bacteria,Proteobacteria,Alphaproteobacteria,Rickettsiales,Rickettsiaceae,Rickettsia,Rickettsia prowazekii,Rickettsia prowazekii str. Madrid E,272947.13,NA
 RefSoil_3,NC_000964.3,224308,Bacteria,Firmicutes,Bacilli,Bacillales,Bacillaceae,Bacillus,Bacillus subtilis,Bacillus subtilis subsp. subtilis str. 168,224308.192,NA
 RefSoil_4,"NC_001263.1,NC_001264.1",243230,Bacteria,Deinococcus-Thermus,Deinococci,Deinococcales,Deinococcaceae,Deinococcus,Deinococcus radiodurans,Deinococcus radiodurans R1,"243230.54,243230.53","NC_000959.1,NC_000958.1"
-RefSoil_5,NC_002488.3,160492,Bacteria,Proteobacteria,Gammaproteobacteria,Xanthomonadales,Xanthomonadaceae,Xylella,Xylella fastidiosa,Xylella fastidiosa 9a5c,160492.35,"NC_002489.3, NC_002490.1"
+RefSoil_5,NC_002488.3,160492,Bacteria,Proteobacteria,Gammaproteobacteria,Xanthomonadales,Xanthomonadaceae,Xylella,Xylella fastidiosa,Xylella fastidiosa 9a5c,160492.35,"NC_002489.3,NC_002490.1"
 RefSoil_6,NC_002516.2,208964,Bacteria,Proteobacteria,Gammaproteobacteria,Pseudomonadales,Pseudomonadaceae,Pseudomonas,Pseudomonas aeruginosa,Pseudomonas aeruginosa PAO1,208964.96,NA
 RefSoil_7,NC_002570.2,272558,Bacteria,Firmicutes,Bacilli,Bacillales,Bacillaceae,Bacillus,Bacillus halodurans,Bacillus halodurans C-125,272558.18,NA
 RefSoil_8,NC_002578.1,273075,Archaea,Euryarchaeota,Thermoplasmata,Thermoplasmatales,Thermoplasmataceae,Thermoplasma,Thermoplasma acidophilum,Thermoplasma acidophilum DSM 1728,273075.14,NA
@@ -11,19 +11,19 @@ RefSoil_9,NC_002678.2,266835,Bacteria,Proteobacteria,Alphaproteobacteria,Rhizobi
 RefSoil_10,NC_002689.2,273116,Archaea,Euryarchaeota,Thermoplasmata,Thermoplasmatales,Thermoplasmataceae,Thermoplasma,Thermoplasma volcanium,Thermoplasma volcanium GSS1,273116.12,NA
 RefSoil_11,NC_002927.3,257310,Bacteria,Proteobacteria,Betaproteobacteria,Burkholderiales,Alcaligenaceae,Bordetella,Bordetella bronchiseptica,Bordetella bronchiseptica RB50,257310.21,NA
 RefSoil_12,NC_002936.3,243164,Bacteria,Chloroflexi,Dehalococcoidia,Dehalococcoidales,Dehalococcoidaceae,Dehalococcoides,Dehalococcoides mccartyi,Dehalococcoides mccartyi 195,243164.22,NA
-RefSoil_13,NC_002937.3,882,Bacteria,Proteobacteria,Deltaproteobacteria,Desulfovibrionales,Desulfovibrionaceae,Desulfovibrio,Desulfovibrio vulgaris,Desulfovibrio vulgaris str. Hildenborough,882.26, NC_005863.1
+RefSoil_13,NC_002937.3,882,Bacteria,Proteobacteria,Deltaproteobacteria,Desulfovibrionales,Desulfovibrionaceae,Desulfovibrio,Desulfovibrio vulgaris,Desulfovibrio vulgaris str. Hildenborough,882.26,NC_005863.1
 RefSoil_14,NC_002939.5,243231,Bacteria,Proteobacteria,Deltaproteobacteria,Desulfuromonadales,Geobacteraceae,Geobacter,Geobacter sulfurreducens,Geobacter sulfurreducens PCA,243231.21,NA
 RefSoil_15,NC_002944.2,262316,Bacteria,Actinobacteria,Actinobacteria,Corynebacteriales,Mycobacteriaceae,Mycobacterium,Mycobacterium avium,Mycobacterium avium subsp. paratuberculosi,262316.32,NA
-RefSoil_16,NC_002971.3,227377,Bacteria,Proteobacteria,Gammaproteobacteria,Legionellales,Coxiellaceae,Coxiella,Coxiella burnetii,Coxiella burnetii RSA 493,227377.19, NC_004704.1
+RefSoil_16,NC_002971.3,227377,Bacteria,Proteobacteria,Gammaproteobacteria,Legionellales,Coxiellaceae,Coxiella,Coxiella burnetii,Coxiella burnetii RSA 493,227377.19,NC_004704.1
 RefSoil_17,NC_002973.6,265669,Bacteria,Firmicutes,Bacilli,Bacillales,Listeriaceae,Listeria,Listeria monocytogenes,Listeria monocytogenes serotype 4b str. F2365,265669.21,NA
 RefSoil_18,NC_003030.1,272562,Bacteria,Firmicutes,Clostridia,Clostridiales,Clostridiaceae,Clostridium,Clostridium acetobutylicum,Clostridium acetobutylicum ATCC 824,272562.49,NC_001988.2
 RefSoil_19,"NC_003062.2,NC_003063.2",176299,Bacteria,Proteobacteria,Alphaproteobacteria,Rhizobiales,Rhizobiaceae,Agrobacterium,Agrobacterium fabrum,Agrobacterium fabrum str. C58,"176299.29,176299.28","NC_003064.2,NC_003065.3"
-RefSoil_20,NC_003155.4,227882,Bacteria,Actinobacteria,Actinobacteria,Streptomycetales,Streptomycetaceae,Streptomyces,Streptomyces avermitilis,Streptomyces avermitilis MA-4680,227882.42, NC_004719.1
+RefSoil_20,NC_003155.4,227882,Bacteria,Actinobacteria,Actinobacteria,Streptomycetales,Streptomycetaceae,Streptomyces,Streptomyces avermitilis,Streptomyces avermitilis MA-4680,227882.42,NC_004719.1
 RefSoil_21,NC_003197.1,99287,Bacteria,Proteobacteria,Gammaproteobacteria,Enterobacteriales,Enterobacteriaceae,Salmonella,Salmonella enterica,Salmonella enterica subsp. enterica serova,99287.126,NC_003277.1
 RefSoil_22,NC_003212.1,272626,Bacteria,Firmicutes,Bacilli,Bacillales,Listeriaceae,Listeria,Listeria innocua,Listeria innocua Clip11262,272626.18,NC_003383.1
-RefSoil_23,NC_003272.1,103690,Bacteria,Cyanobacteria,,Nostocales,Nostocaceae,Nostoc,,Nostoc sp. PCC 7120,103690.28,"NC_003276.1, NC_003240.1,NC_003273.1, NC_003270.1,NC_003267.1,NC_003241.1"
+RefSoil_23,NC_003272.1,103690,Bacteria,Cyanobacteria,,Nostocales,Nostocaceae,Nostoc,,Nostoc sp. PCC 7120,103690.28,"NC_003276.1,NC_003240.1,NC_003273.1,NC_003270.1,NC_003267.1,NC_003241.1"
 RefSoil_24,NC_003295.1,267608,Bacteria,Proteobacteria,Betaproteobacteria,Burkholderiales,Burkholderiaceae,Ralstonia,Ralstonia solanacearum,Ralstonia solanacearum GMI1000,267608.24,NC_003296.1
-RefSoil_25,NC_003361.3,227941,Bacteria,Chlamydiae,Chlamydiia,Chlamydiales,Chlamydiaceae,Chlamydophila,Chlamydophila caviae,Chlamydophila caviae GPIC,227941.15, NC_004720.1
+RefSoil_25,NC_003361.3,227941,Bacteria,Chlamydiae,Chlamydiia,Chlamydiales,Chlamydiaceae,Chlamydophila,Chlamydophila caviae,Chlamydophila caviae GPIC,227941.15,NC_004720.1
 RefSoil_26,NC_003366.1,195102,Bacteria,Firmicutes,Clostridia,Clostridiales,Clostridiaceae,Clostridium,Clostridium perfringens,Clostridium perfringens str. 13,195102.28,NC_003042.1
 RefSoil_27,NC_003552.1,188937,Archaea,Euryarchaeota,Methanomicrobia,Methanosarcinales,Methanosarcinaceae,Methanosarcina,Methanosarcina acetivorans,Methanosarcina acetivorans C2A,188937.29,NA
 RefSoil_28,NC_003901.1,192952,Archaea,Euryarchaeota,Methanomicrobia,Methanosarcinales,Methanosarcinaceae,Methanosarcina,Methanosarcina mazei,Methanosarcina mazei Go1,192952.26,NA
@@ -49,7 +49,7 @@ RefSoil_47,NC_005085.1,243365,Bacteria,Proteobacteria,Betaproteobacteria,Neisser
 RefSoil_48,NC_005125.1,251221,Bacteria,Cyanobacteria,Gloeobacteria,Gloeobacterales,,Gloeobacter,Gloeobacter violaceus,Gloeobacter violaceus PCC 7421,251221.1,NA
 RefSoil_49,NC_005296.1,258594,Bacteria,Proteobacteria,Alphaproteobacteria,Rhizobiales,Bradyrhizobiaceae,Rhodopseudomonas,Rhodopseudomonas palustris,Rhodopseudomonas palustris CGA009,258594.21,NC_005297.1
 RefSoil_50,NC_005363.1,264462,Bacteria,Proteobacteria,Deltaproteobacteria,Bdellovibrionales,Bdellovibrionaceae,Bdellovibrio,Bdellovibrio bacteriovorus,Bdellovibrio bacteriovorus HD100,264462.23,NA
-RefSoil_51,NC_005773.3,264730,Bacteria,Proteobacteria,Gammaproteobacteria,Pseudomonadales,Pseudomonadaceae,Pseudomonas,Pseudomonas savastanoi,Pseudomonas savastanoi pv. phaseolicola 1448A,264730.28,"NC_007274.1, NC_007275.1"
+RefSoil_51,NC_005773.3,264730,Bacteria,Proteobacteria,Gammaproteobacteria,Pseudomonadales,Pseudomonadaceae,Pseudomonas,Pseudomonas savastanoi,Pseudomonas savastanoi pv. phaseolicola 1448A,264730.28,"NC_007274.1,NC_007275.1"
 RefSoil_52,"NC_005823.1,NC_005824.1",267671,Bacteria,Spirochaetes,Spirochaetia,,Leptospiraceae,Leptospira,Leptospira interrogans,Leptospira interrogans serovar Copenhageni str,"267671.23,267671.22",NA
 RefSoil_53,NC_005861.1,264201,Bacteria,Chlamydiae,Chlamydiia,Chlamydiales,Parachlamydiaceae,Candidatus Protochlamydia,Candidatus Protochlamydia amoebophila,Candidatus Protochlamydia amoebophila UWE25,264201.25,NA
 RefSoil_54,NC_005877.1,263820,Archaea,Euryarchaeota,Thermoplasmata,Thermoplasmatales,Picrophilaceae,Picrophilus,Picrophilus torridus,Picrophilus torridus DSM 9790,263820.13,NA
@@ -57,7 +57,7 @@ RefSoil_55,NC_005945.1,260799,Bacteria,Firmicutes,Bacilli,Bacillales,Bacillaceae
 RefSoil_56,NC_005966.1,62977,Bacteria,Proteobacteria,Gammaproteobacteria,Pseudomonadales,Moraxellaceae,Acinetobacter,,Acinetobacter sp. ADP1,62977.17,NA
 RefSoil_60,NC_006155.1,273123,Bacteria,Proteobacteria,Gammaproteobacteria,Enterobacteriales,Enterobacteriaceae,Yersinia,Yersinia pseudotuberculosis,Yersinia pseudotuberculosis IP 32953,273123.15,"NC_006153.2,NC_006154.1"
 RefSoil_61,NC_006177.1,292459,Bacteria,Firmicutes,Clostridia,Clostridiales,Symbiobacteriaceae,Symbiobacterium,Symbiobacterium thermophilum,Symbiobacterium thermophilum IAM 14863,292459.1,NA
-RefSoil_62,NC_006274.1,288681,Bacteria,Firmicutes,Bacilli,Bacillales,Bacillaceae,Bacillus,Bacillus cereus,Bacillus cereus E33L,288681.23,"NC_007103.1,NC_007104.1, NC_007105.1,NC_007106.1, NC_007107.1"
+RefSoil_62,NC_006274.1,288681,Bacteria,Firmicutes,Bacilli,Bacillales,Bacillaceae,Bacillus,Bacillus cereus,Bacillus cereus E33L,288681.23,"NC_007103.1,NC_007104.1,NC_007105.1,NC_007106.1,NC_007107.1"
 RefSoil_63,NC_006322.1,279010,Bacteria,Firmicutes,Bacilli,Bacillales,Bacillaceae,Bacillus,Bacillus licheniformis,Bacillus licheniformis DSM 13,279010.43,NA
 RefSoil_64,"NC_006350.1,NC_006351.1",272560,Bacteria,Proteobacteria,Betaproteobacteria,Burkholderiales,Burkholderiaceae,Burkholderia,Burkholderia pseudomallei,Burkholderia pseudomallei K96243,"272560.55,272560.56",NA
 RefSoil_65,NC_006361.1,247156,Bacteria,Actinobacteria,Actinobacteria,Corynebacteriales,Nocardiaceae,Nocardia,Nocardia farcinica,Nocardia farcinica IFM 10152,247156.16,"NC_006362.1,NC_006363.1"
@@ -74,7 +74,7 @@ RefSoil_76,"NC_006932.1,NC_006933.1",262698,Bacteria,Proteobacteria,Alphaproteob
 RefSoil_77,NC_006958.1,196627,Bacteria,Actinobacteria,Actinobacteria,Corynebacteriales,Corynebacteriaceae,Corynebacterium,Corynebacterium glutamicum,Corynebacterium glutamicum ATCC 13032,196627.36,NA
 RefSoil_78,NC_007086.1,314565,Bacteria,Proteobacteria,Gammaproteobacteria,Xanthomonadales,Xanthomonadaceae,Xanthomonas,Xanthomonas campestris,Xanthomonas campestris pv. campestris str,314565.11,NA
 RefSoil_79,NC_007164.1,306537,Bacteria,Actinobacteria,Actinobacteria,Corynebacteriales,Corynebacteriaceae,Corynebacterium,Corynebacterium jeikeium,Corynebacterium jeikeium K411,306537.17,NC_003080.1
-RefSoil_80,NC_007168.1,279808,Bacteria,Firmicutes,Bacilli,Bacillales,Staphylococcaceae,Staphylococcus,Staphylococcus haemolyticus,Staphylococcus haemolyticus JCSC1435,279808.15,"NC_007169.1, NC_007170.1,NC_007171.1"
+RefSoil_80,NC_007168.1,279808,Bacteria,Firmicutes,Bacilli,Bacillales,Staphylococcaceae,Staphylococcus,Staphylococcus haemolyticus,Staphylococcus haemolyticus JCSC1435,279808.15,"NC_007169.1,NC_007170.1,NC_007171.1"
 RefSoil_81,NC_007204.1,259536,Bacteria,Proteobacteria,Gammaproteobacteria,Pseudomonadales,Moraxellaceae,Psychrobacter,Psychrobacter arcticus,Psychrobacter arcticus 273-4,259536.26,NA
 RefSoil_82,NC_007298.1,159087,Bacteria,Proteobacteria,Betaproteobacteria,Rhodocyclales,Rhodocyclaceae,Dechloromonas,Dechloromonas aromatica,Dechloromonas aromatica RCB,159087.13,NA
 RefSoil_83,NC_007333.1,269800,Bacteria,Actinobacteria,Actinobacteria,Streptosporangiales,Nocardiopsaceae,Thermobifida,Thermobifida fusca,Thermobifida fusca YX,269800.11,NA
@@ -84,27 +84,27 @@ RefSoil_86,NC_007404.1,292415,Bacteria,Proteobacteria,Betaproteobacteria,Hydroge
 RefSoil_87,NC_007406.1,323098,Bacteria,Proteobacteria,Alphaproteobacteria,Rhizobiales,Bradyrhizobiaceae,Nitrobacter,Nitrobacter winogradskyi,Nitrobacter winogradskyi Nb-255,323098.1,NA
 RefSoil_88,"NC_007434.1,NC_007435.1",320372,Bacteria,Proteobacteria,Betaproteobacteria,Burkholderiales,Burkholderiaceae,Burkholderia,Burkholderia pseudomallei,Burkholderia pseudomallei 1710b,"320372.14,320372.13",NA
 RefSoil_89,NC_007492.2,205922,Bacteria,Proteobacteria,Gammaproteobacteria,Pseudomonadales,Pseudomonadaceae,Pseudomonas,Pseudomonas fluorescens,Pseudomonas fluorescens Pf0-1,205922.22,NA
-RefSoil_90,"NC_007493.2,NC_007494.2",272943,Bacteria,Proteobacteria,Alphaproteobacteria,Rhodobacterales,Rhodobacteraceae,Rhodobacter,Rhodobacter sphaeroides,Rhodobacter sphaeroides 2.4.1,"272943.35,272943.34"," NC_009007.1,NC_007488.2,NC_007489.1, NC_007490.2,NC_009008.1"
+RefSoil_90,"NC_007493.2,NC_007494.2",272943,Bacteria,Proteobacteria,Alphaproteobacteria,Rhodobacterales,Rhodobacteraceae,Rhodobacter,Rhodobacter sphaeroides,Rhodobacter sphaeroides 2.4.1,"272943.35,272943.34"," NC_009007.1,NC_007488.2,NC_007489.1,NC_007490.2,NC_009008.1"
 RefSoil_91,NC_007498.2,338963,Bacteria,Proteobacteria,Deltaproteobacteria,Desulfuromonadales,Pelobacteraceae,Pelobacter,Pelobacter carbinolicus,Pelobacter carbinolicus DSM 2380,338963.13,NA
-RefSoil_92,NC_007508.1,316273,Bacteria,Proteobacteria,Gammaproteobacteria,Xanthomonadales,Xanthomonadaceae,Xanthomonas,Xanthomonas euvesicatoria,Xanthomonas campestris pv. vesicatoria str,316273.15,"NC_007507.1, NC_007505.1,NC_007504.1, NC_007506.1"
+RefSoil_92,NC_007508.1,316273,Bacteria,Proteobacteria,Gammaproteobacteria,Xanthomonadales,Xanthomonadaceae,Xanthomonas,Xanthomonas euvesicatoria,Xanthomonas campestris pv. vesicatoria str,316273.15,"NC_007507.1,NC_007505.1,NC_007504.1,NC_007506.1"
 RefSoil_93,"NC_007510.1,NC_007511.1,NC_007509.1",482957,Bacteria,Proteobacteria,Betaproteobacteria,Burkholderiales,Burkholderiaceae,Burkholderia,,Burkholderia lata,"482957.27,482957.28,482957.29",NA
 RefSoil_94,NC_007512.1,319225,Bacteria,Chlorobi,Chlorobia,Chlorobiales,Chlorobiaceae,Pelodictyon,Pelodictyon luteolum,Chlorobium luteolum DSM 273,319225.14,NA
 RefSoil_95,NC_007514.1,340177,Bacteria,Chlorobi,Chlorobia,Chlorobiales,Chlorobiaceae,Chlorobium,Chlorobium chlorochromatii,Chlorobium chlorochromatii CaD3,340177.15,NA
 RefSoil_96,NC_007517.1,269799,Bacteria,Proteobacteria,Deltaproteobacteria,Desulfuromonadales,Geobacteraceae,Geobacter,Geobacter metallireducens,Geobacter metallireducens GS-15,269799.15,NC_007515.1
 RefSoil_97,NC_007519.1,207559,Bacteria,Proteobacteria,Deltaproteobacteria,Desulfovibrionales,Desulfovibrionaceae,Desulfovibrio,Desulfovibrio alaskensis,Desulfovibrio alaskensis G20,207559.18,NA
 RefSoil_98,NC_007530.2,261594,Bacteria,Firmicutes,Bacilli,Bacillales,Bacillaceae,Bacillus,Bacillus anthracis,Bacillus anthracis str. 'Ames Ancestor',261594.63,"NC_007322.2,NC_007323.3"
-RefSoil_99,NC_007613.1,300268,Bacteria,Proteobacteria,Gammaproteobacteria,Enterobacteriales,Enterobacteriaceae,Shigella,Shigella boydii,Shigella boydii Sb227,300268.2, NC_007608.1
+RefSoil_99,NC_007613.1,300268,Bacteria,Proteobacteria,Gammaproteobacteria,Enterobacteriales,Enterobacteriaceae,Shigella,Shigella boydii,Shigella boydii Sb227,300268.2,NC_007608.1
 RefSoil_100,NC_007614.1,323848,Bacteria,Proteobacteria,Betaproteobacteria,Nitrosomonadales,Nitrosomonadaceae,Nitrosospira,Nitrosospira multiformis,Nitrosospira multiformis ATCC 25196,323848.11,"NC_007615.1,NC_007616.1,NC_007617.1"
 RefSoil_101,"NC_007618.1,NC_007624.1",359391,Bacteria,Proteobacteria,Alphaproteobacteria,Rhizobiales,Brucellaceae,Brucella,Brucella abortus,Brucella abortus 2308,"359391.2,359391.21",NA
 RefSoil_102,NC_007644.1,264732,Bacteria,Firmicutes,Clostridia,Thermoanaerobacterales,Thermoanaerobacteraceae,Moorella,Moorella thermoacetica,Moorella thermoacetica ATCC 39073,264732.2,NA
 RefSoil_103,"NC_007651.1,NC_007650.1",271848,Bacteria,Proteobacteria,Betaproteobacteria,Burkholderiales,Burkholderiaceae,Burkholderia,Burkholderia thailandensis,Burkholderia thailandensis E264,"271848.43,271848.44",NA
 RefSoil_104,NC_007681.1,339860,Archaea,Euryarchaeota,Methanobacteria,Methanobacteriales,Methanobacteriaceae,Methanosphaera,Methanosphaera stadtmanae,Methanosphaera stadtmanae DSM 3091,339860.23,NA
 RefSoil_105,NC_007760.1,290397,Bacteria,Proteobacteria,Deltaproteobacteria,Myxococcales,Anaeromyxobacteraceae,Anaeromyxobacter,Anaeromyxobacter dehalogenans,Anaeromyxobacter dehalogenans 2CP-C,290397.3,NA
-RefSoil_106,NC_007761.1,347834,Bacteria,Proteobacteria,Alphaproteobacteria,Rhizobiales,Rhizobiaceae,Rhizobium,Rhizobium etli,Rhizobium etli CFN 42,347834.51,"NC_007762.1,NC_007763.1,NC_007764.1,NC_007765.1,NC_007766.1, NC_004041.2"
+RefSoil_106,NC_007761.1,347834,Bacteria,Proteobacteria,Alphaproteobacteria,Rhizobiales,Rhizobiaceae,Rhizobium,Rhizobium etli,Rhizobium etli CFN 42,347834.51,"NC_007762.1,NC_007763.1,NC_007764.1,NC_007765.1,NC_007766.1,NC_004041.2"
 RefSoil_107,NC_007775.1,321327,Bacteria,Cyanobacteria,,Chroococcales,,Synechococcus,,Synechococcus sp. JA-3-3Ab,321327.31,NA
 RefSoil_108,NC_007777.1,106370,Bacteria,Actinobacteria,Actinobacteria,Frankiales,Frankiaceae,Frankia,,Frankia sp. CcI3,106370.23,NA
 RefSoil_109,NC_007778.1,316058,Bacteria,Proteobacteria,Alphaproteobacteria,Rhizobiales,Bradyrhizobiaceae,Rhodopseudomonas,Rhodopseudomonas palustris,Rhodopseudomonas palustris HaA2,316058.16,NA
-RefSoil_110,NC_007794.1,279238,Bacteria,Proteobacteria,Alphaproteobacteria,Sphingomonadales,Sphingomonadaceae,Novosphingobium,Novosphingobium aromaticivorans,Novosphingobium aromaticivorans DSM 12444,279238.28,"NC_009426.1, NC_009427.1"
+RefSoil_110,NC_007794.1,279238,Bacteria,Proteobacteria,Alphaproteobacteria,Sphingomonadales,Sphingomonadaceae,Novosphingobium,Novosphingobium aromaticivorans,Novosphingobium aromaticivorans DSM 12444,279238.28,"NC_009426.1,NC_009427.1"
 RefSoil_111,NC_007798.1,222891,Bacteria,Proteobacteria,Alphaproteobacteria,Rickettsiales,Anaplasmataceae,Neorickettsia,Neorickettsia sennetsu,Neorickettsia sennetsu str. Miyayama,222891.12,NA
 RefSoil_112,NC_007880.1,376619,Bacteria,Proteobacteria,Gammaproteobacteria,Thiotrichales,Francisellaceae,Francisella,Francisella tularensis,Francisella tularensis subsp. holarctica LVS,376619.13,NA
 RefSoil_113,NC_007907.1,138119,Bacteria,Firmicutes,Clostridia,Clostridiales,Peptococcaceae,Desulfitobacterium,Desulfitobacterium hafniense,Desulfitobacterium hafniense Y51,138119.51,NA
@@ -113,7 +113,7 @@ RefSoil_115,NC_007947.1,265072,Bacteria,Proteobacteria,Betaproteobacteria,Methyl
 RefSoil_116,NC_007948.1,296591,Bacteria,Proteobacteria,Betaproteobacteria,Burkholderiales,Comamonadaceae,Polaromonas,,Polaromonas sp. JS666,296591.19,"NC_007949.1,NC_007950.1"
 RefSoil_117,NC_007958.1,316057,Bacteria,Proteobacteria,Alphaproteobacteria,Rhizobiales,Bradyrhizobiaceae,Rhodopseudomonas,Rhodopseudomonas palustris,Rhodopseudomonas palustris BisB5,316057.11,NA
 RefSoil_118,NC_007963.1,290398,Bacteria,Proteobacteria,Gammaproteobacteria,Oceanospirillales,Halomonadaceae,Chromohalobacter,Chromohalobacter salexigens,Chromohalobacter salexigens DSM 3043,290398.2,NA
-RefSoil_119,NC_007964.1,323097,Bacteria,Proteobacteria,Alphaproteobacteria,Rhizobiales,Bradyrhizobiaceae,Nitrobacter,Nitrobacter hamburgensis,Nitrobacter hamburgensis X14,323097.15,"NC_007959.1, NC_007960.1, NC_007961.1"
+RefSoil_119,NC_007964.1,323097,Bacteria,Proteobacteria,Alphaproteobacteria,Rhizobiales,Bradyrhizobiaceae,Nitrobacter,Nitrobacter hamburgensis,Nitrobacter hamburgensis X14,323097.15,"NC_007959.1,NC_007960.1,NC_007961.1"
 RefSoil_120,NC_007969.1,335284,Bacteria,Proteobacteria,Gammaproteobacteria,Pseudomonadales,Moraxellaceae,Psychrobacter,Psychrobacter cryohalolentis,Psychrobacter cryohalolentis K5,335284.12,NC_007968.1
 RefSoil_121,NC_007973.1,266264,Bacteria,Proteobacteria,Betaproteobacteria,Burkholderiales,Burkholderiaceae,Cupriavidus,Cupriavidus metallidurans,Cupriavidus metallidurans CH34,266264.31,"NC_007974.2,NC_007972.2,NC_007971.2"
 RefSoil_122,NC_008009.1,204669,Bacteria,Acidobacteria,Acidobacteriia,Acidobacteriales,Acidobacteriaceae,Candidatus Koribacter,Candidatus Koribacter versatilis,Candidatus Koribacter versatilis Ellin345,204669.18,NA
@@ -122,7 +122,7 @@ RefSoil_124,NC_008095.1,246197,Bacteria,Proteobacteria,Deltaproteobacteria,Myxoc
 RefSoil_125,NC_008146.1,164756,Bacteria,Actinobacteria,Actinobacteria,Corynebacteriales,Mycobacteriaceae,Mycobacterium,,Mycobacterium sp. MCS,164756.25,NC_008147.1
 RefSoil_126,NC_008148.1,266117,Bacteria,Actinobacteria,Rubrobacteria,Rubrobacterales,Rubrobacteraceae,Rubrobacter,Rubrobacter xylanophilus,Rubrobacter xylanophilus DSM 9941,266117.16,NA
 RefSoil_127,NC_008149.1,377628,Bacteria,Proteobacteria,Gammaproteobacteria,Enterobacteriales,Enterobacteriaceae,Yersinia,Yersinia pestis,Yersinia pestis Nepal516,377628.16,"NC_008118.1,NC_008119.1"
-RefSoil_128,NC_008150.1,360102,Bacteria,Proteobacteria,Gammaproteobacteria,Enterobacteriales,Enterobacteriaceae,Yersinia,Yersinia pestis,Yersinia pestis Antiqua,360102.16," NC_008122.1,NC_008120.1, NC_008121.1"
+RefSoil_128,NC_008150.1,360102,Bacteria,Proteobacteria,Gammaproteobacteria,Enterobacteriales,Enterobacteriaceae,Yersinia,Yersinia pestis,Yersinia pestis Antiqua,360102.16," NC_008122.1,NC_008120.1,NC_008121.1"
 RefSoil_129,NC_008245.1,393115,Bacteria,Proteobacteria,Gammaproteobacteria,Thiotrichales,Francisellaceae,Francisella,Francisella tularensis,Francisella tularensis subsp. tularensi,393115.18,NA
 RefSoil_130,NC_008254.1,266779,Bacteria,Proteobacteria,Alphaproteobacteria,Rhizobiales,Phyllobacteriaceae,Chelativorans,,Chelativorans sp. BNC1,266779.15,"NC_008242.1,NC_008243.1,NC_008244.1"
 RefSoil_131,NC_008255.1,269798,Bacteria,Bacteroidetes,Cytophagia,Cytophagales,Cytophagaceae,Cytophaga,Cytophaga hutchinsonii,Cytophaga hutchinsonii ATCC 33406,269798.24,NA
@@ -131,7 +131,7 @@ RefSoil_133,NC_008268.1,101510,Bacteria,Actinobacteria,Actinobacteria,Corynebact
 RefSoil_134,NC_008278.1,326424,Bacteria,Actinobacteria,Actinobacteria,Frankiales,Frankiaceae,Frankia,Frankia alni,Frankia alni ACN14a,326424.23,NA
 RefSoil_135,"NC_008313.1,NC_008314.1",381666,Bacteria,Proteobacteria,Betaproteobacteria,Burkholderiales,Burkholderiaceae,Cupriavidus,Cupriavidus necator,Ralstonia eutropha H16,"381666.29,381666.28",NC_005241.1
 RefSoil_136,NC_008343.1,391165,Bacteria,Proteobacteria,Alphaproteobacteria,Rhodospirillales,Acetobacteraceae,Granulibacter,Granulibacter bethesdensis,Granulibacter bethesdensis CGDNIH1,391165.12,NA
-RefSoil_137,NC_008380.1,216596,Bacteria,Proteobacteria,Alphaproteobacteria,Rhizobiales,Rhizobiaceae,Rhizobium,Rhizobium leguminosarum,Rhizobium leguminosarum bv. viciae 3841,216596.38,"NC_008381.1,NC_008384.1, NC_008378.1,NC_008382.1,NC_008383.1,NC_008379.1"
+RefSoil_137,NC_008380.1,216596,Bacteria,Proteobacteria,Alphaproteobacteria,Rhizobiales,Rhizobiaceae,Rhizobium,Rhizobium leguminosarum,Rhizobium leguminosarum bv. viciae 3841,216596.38,"NC_008381.1,NC_008384.1,NC_008378.1,NC_008382.1,NC_008383.1,NC_008379.1"
 RefSoil_138,"NC_008390.1,NC_008391.1,NC_008392.1",339670,Bacteria,Proteobacteria,Betaproteobacteria,Burkholderiales,Burkholderiaceae,Burkholderia,Burkholderia ambifaria,Burkholderia ambifaria AMMD,"339670.24,339670.25,339670.26",NC_008385.1
 RefSoil_139,NC_008435.1,316055,Bacteria,Proteobacteria,Alphaproteobacteria,Rhizobiales,Bradyrhizobiaceae,Rhodopseudomonas,Rhodopseudomonas palustris,Rhodopseudomonas palustris BisA53,316055.22,NA
 RefSoil_140,NC_008463.1,208963,Bacteria,Proteobacteria,Gammaproteobacteria,Pseudomonadales,Pseudomonadaceae,Pseudomonas,Pseudomonas aeruginosa,Pseudomonas aeruginosa UCBPP-PA14,208963.21,NA
@@ -164,7 +164,7 @@ RefSoil_166,"NC_009074.1,NC_009075.1",320373,Bacteria,Proteobacteria,Betaproteob
 RefSoil_168,"NC_009076.1,NC_009078.1",357348,Bacteria,Proteobacteria,Betaproteobacteria,Burkholderiales,Burkholderiaceae,Burkholderia,Burkholderia pseudomallei,Burkholderia pseudomallei 1106a,"357348.22,357348.23",NA
 RefSoil_167,NC_009077.1,164757,Bacteria,Actinobacteria,Actinobacteria,Corynebacteriales,Mycobacteriaceae,Mycobacterium,,Mycobacterium sp. JLS,164757.17,NA
 RefSoil_169,NC_009142.1,405948,Bacteria,Actinobacteria,Actinobacteria,Pseudonocardiales,Pseudonocardiaceae,Saccharopolyspora,Saccharopolyspora erythraea,Saccharopolyspora erythraea NRRL 2338,405948.22,NA
-RefSoil_170,"NC_009256.1,NC_009255.1,NC_009254.1",269482,Bacteria,Proteobacteria,Betaproteobacteria,Burkholderiales,Burkholderiaceae,Burkholderia,Burkholderia vietnamiensis,Burkholderia vietnamiensis G4,"269482.34,269482.36,269482.35","NC_009230.1,NC_009227.1,NC_009229.1,NC_009228.1, NC_009226.1"
+RefSoil_170,"NC_009256.1,NC_009255.1,NC_009254.1",269482,Bacteria,Proteobacteria,Betaproteobacteria,Burkholderiales,Burkholderiaceae,Burkholderia,Burkholderia vietnamiensis,Burkholderia vietnamiensis G4,"269482.34,269482.36,269482.35","NC_009230.1,NC_009227.1,NC_009229.1,NC_009228.1,NC_009226.1"
 RefSoil_171,NC_009328.1,420246,Bacteria,Firmicutes,Bacilli,Bacillales,Bacillaceae,Geobacillus,Geobacillus thermodenitrificans,Geobacillus thermodenitrificans NG80-2,420246.14,NC_009329.1
 RefSoil_172,NC_009338.1,350054,Bacteria,Actinobacteria,Actinobacteria,Corynebacteriales,Mycobacteriaceae,Mycobacterium,Mycobacterium gilvum,Mycobacterium gilvum PYR-GCK,350054.27,"NC_009339.1,NC_009340.1,NC_009341.1"
 RefSoil_173,NC_009342.1,340322,Bacteria,Actinobacteria,Actinobacteria,Corynebacteriales,Corynebacteriaceae,Corynebacterium,Corynebacterium glutamicum,Corynebacterium glutamicum R,340322.13,NC_009343.1
@@ -382,7 +382,7 @@ RefSoil_385,NC_013971.1,716540,Bacteria,Proteobacteria,Gammaproteobacteria,Enter
 RefSoil_386,NC_014000.1,240292,Bacteria,Cyanobacteria,,Nostocales,Nostocaceae,Anabaena,Anabaena variabilis,Anabaena variabilis ATCC 29413,240292.39,"NC_007410.1,NC_007411.1,NC_007412.1,NC_014000.1"
 RefSoil_387,NC_014002.1,547558,Archaea,Euryarchaeota,Methanomicrobia,Methanosarcinales,Methanosarcinaceae,Methanohalophilus,Methanohalophilus mahii,Methanohalophilus mahii DSM 5219,547558.22,NA
 RefSoil_388,"NC_014006.1,NC_014013.1",452662,Bacteria,Proteobacteria,Alphaproteobacteria,Sphingomonadales,Sphingomonadaceae,Sphingobium,Sphingobium japonicum,Sphingobium japonicum UT26S,"452662.28,452662.27","NC_014007.1,NC_014005.1,NC_014009.1"
-RefSoil_389,NC_014019.1,545693,Bacteria,Firmicutes,Bacilli,Bacillales,Bacillaceae,Bacillus,Bacillus megaterium,Bacillus megaterium QM B1551,545693.18,"NC_010008.2,NC_010009.2,NC_010010.2,NC_004604.2,NC_014025.1, NC_014031.1,NC_014023.1"
+RefSoil_389,NC_014019.1,545693,Bacteria,Firmicutes,Bacilli,Bacillales,Bacillaceae,Bacillus,Bacillus megaterium,Bacillus megaterium QM B1551,545693.18,"NC_010008.2,NC_010009.2,NC_010010.2,NC_004604.2,NC_014025.1,NC_014031.1,NC_014023.1"
 RefSoil_390,NC_014034.1,272942,Bacteria,Proteobacteria,Alphaproteobacteria,Rhodobacterales,Rhodobacteraceae,Rhodobacter,Rhodobacter capsulatus,Rhodobacter capsulatus SB 1003,272942.26,NC_014035.1
 RefSoil_391,NC_014100.1,509190,Bacteria,Proteobacteria,Alphaproteobacteria,Caulobacterales,Caulobacteraceae,Caulobacter,Caulobacter segnis,Caulobacter segnis ATCC 21756,509190.1,NA
 RefSoil_392,NC_014103.1,592022,Bacteria,Firmicutes,Bacilli,Bacillales,Bacillaceae,Bacillus,Bacillus megaterium,Bacillus megaterium DSM 319,592022.21,NA
@@ -575,17 +575,17 @@ RefSoil_579,NC_017108.1,634459,Bacteria,Proteobacteria,Alphaproteobacteria,Rhodo
 RefSoil_580,NC_017111.1,634457,Bacteria,Proteobacteria,Alphaproteobacteria,Rhodospirillales,Acetobacteraceae,Acetobacter,Acetobacter pasteurianus,Acetobacter pasteurianus IFO 3283-32,634457.6,"NC_017134.1,NC_017149.1,NC_017135.1,NC_017102.1,NC_017103.1,NC_017112.1"
 RefSoil_581,NC_017121.1,634454,Bacteria,Proteobacteria,Alphaproteobacteria,Rhodospirillales,Acetobacteraceae,Acetobacter,Acetobacter pasteurianus,Acetobacter pasteurianus IFO 3283-07,634454.8,"NC_017143.1,NC_017122.1,NC_017110.1,NC_017123.1,NC_017144.1,NC_017124.1"
 RefSoil_582,NC_017125.1,634455,Bacteria,Proteobacteria,Alphaproteobacteria,Rhodospirillales,Acetobacteraceae,Acetobacter,Acetobacter pasteurianus,Acetobacter pasteurianus IFO 3283-22,634455.7,"NC_017117.1,NC_017126.1,NC_017127.1,NC_017145.1,NC_017128.1,NC_017129.1"
-RefSoil_583,NC_017146.1,634456,Bacteria,Proteobacteria,Alphaproteobacteria,Rhodospirillales,Acetobacteraceae,Acetobacter,Acetobacter pasteurianus,Acetobacter pasteurianus IFO 3283-26,634456.6,"NC_017130.1,NC_017131.1,NC_017147.1,NC_017132.1,NC_017148.1, NC_017133.1"
+RefSoil_583,NC_017146.1,634456,Bacteria,Proteobacteria,Alphaproteobacteria,Rhodospirillales,Acetobacteraceae,Acetobacter,Acetobacter pasteurianus,Acetobacter pasteurianus IFO 3283-26,634456.6,"NC_017130.1,NC_017131.1,NC_017147.1,NC_017132.1,NC_017148.1,NC_017133.1"
 RefSoil_584,NC_017150.1,634458,Bacteria,Proteobacteria,Alphaproteobacteria,Rhodospirillales,Acetobacteraceae,Acetobacter,Acetobacter pasteurianus,Acetobacter pasteurianus IFO 3283-01-42C,634458.7,"NC_017104.1,NC_017105.1,NC_017151.1,NC_017106.1,NC_017107.1,NC_017152.1"
 RefSoil_585,NC_017161.1,608538,Bacteria,Aquificae,Aquificae,Aquificales,Aquificaceae,Hydrogenobacter,Hydrogenobacter thermophilus,Hydrogenobacter thermophilus TK-6,608538.12,NA
 RefSoil_586,NC_017168.1,1035377,Bacteria,Proteobacteria,Gammaproteobacteria,Enterobacteriales,Enterobacteriaceae,Yersinia,Yersinia pestis,Yersinia pestis A1122,1035377.1,"NC_017169.1,NC_017170.1"
 RefSoil_587,NC_017188.1,999891,Bacteria,Firmicutes,Bacilli,Bacillales,Bacillaceae,Bacillus,Bacillus amyloliquefaciens,Bacillus amyloliquefaciens TA208,999891.7,NA
-RefSoil_588,NC_017190.1,1001582,Bacteria,Firmicutes,Bacilli,Bacillales,Bacillaceae,Bacillus,Bacillus amyloliquefaciens,Bacillus amyloliquefaciens LL3,1001582.7, NC_017189.1
+RefSoil_588,NC_017190.1,1001582,Bacteria,Firmicutes,Bacilli,Bacillales,Bacillaceae,Bacillus,Bacillus amyloliquefaciens,Bacillus amyloliquefaciens LL3,1001582.7,NC_017189.1
 RefSoil_589,NC_017191.1,1034836,Bacteria,Firmicutes,Bacilli,Bacillales,Bacillaceae,Bacillus,Bacillus amyloliquefaciens,Bacillus amyloliquefaciens XH7,1034836.9,NA
 RefSoil_590,NC_017195.1,1052588,Bacteria,Firmicutes,Bacilli,Bacillales,Bacillaceae,Bacillus,Bacillus subtilis,Bacillus subtilis subsp. subtilis str. RO-NN-1,1052588.1,NA
 RefSoil_591,NC_017196.2,645657,Bacteria,Firmicutes,Bacilli,Bacillales,Bacillaceae,Bacillus,Bacillus subtilis,Bacillus subtilis subsp. natto BEST195,645657.14,NC_017194.1
 RefSoil_592,NC_017200.1,930170,Bacteria,Firmicutes,Bacilli,Bacillales,Bacillaceae,Bacillus,Bacillus thuringiensis,Bacillus thuringiensis serovar finitimu,930170.7,"NC_017201.1,NC_017199.1"
-RefSoil_593,NC_017208.1,541229,Bacteria,Firmicutes,Bacilli,Bacillales,Bacillaceae,Bacillus,Bacillus thuringiensis,Bacillus thuringiensis serovar chinensis CT-43,541229.1,"NC_017202.1,NC_017209.1,NC_017203.1, NC_017204.1,NC_017210.1,NC_017205.1,NC_017211.1,NC_017206.1,NC_017207.1,NC_017212.1"
+RefSoil_593,NC_017208.1,541229,Bacteria,Firmicutes,Bacilli,Bacillales,Bacillaceae,Bacillus,Bacillus thuringiensis,Bacillus thuringiensis serovar chinensis CT-43,541229.1,"NC_017202.1,NC_017209.1,NC_017203.1,NC_017204.1,NC_017210.1,NC_017205.1,NC_017211.1,NC_017206.1,NC_017207.1,NC_017212.1"
 RefSoil_594,"NC_017246.1,NC_017247.1",703352,Bacteria,Proteobacteria,Alphaproteobacteria,Rhizobiales,Brucellaceae,Brucella,Brucella melitensis,Brucella melitensis M5-90,"703352.11,703352.1",NA
 RefSoil_595,NC_017249.1,1037409,Bacteria,Proteobacteria,Alphaproteobacteria,Rhizobiales,Bradyrhizobiaceae,Bradyrhizobium,Bradyrhizobium japonicum,Bradyrhizobium japonicum USDA 6,1037409.19,NA
 RefSoil_596,NC_017275.1,930943,Archaea,Crenarchaeota,Thermoprotei,Sulfolobales,Sulfolobaceae,Sulfolobus,Sulfolobus islandicus,Sulfolobus islandicus HVE10/4,930943.8,NA
@@ -687,7 +687,7 @@ RefSoil_691,NC_018750.1,953739,Bacteria,Actinobacteria,Actinobacteria,Streptomyc
 RefSoil_692,NC_018866.1,1147129,Bacteria,Firmicutes,Clostridia,Clostridiales,Peptococcaceae,Dehalobacter,,Dehalobacter sp. DCA,1147129.12,NA
 RefSoil_693,NC_018867.1,1131462,Bacteria,Firmicutes,Clostridia,Clostridiales,Peptococcaceae,Dehalobacter,,Dehalobacter sp. CF,1131462.12,NA
 RefSoil_694,NC_018876.1,1094980,Archaea,Euryarchaeota,Methanomicrobia,Methanosarcinales,Methanosarcinaceae,Methanolobus,Methanolobus psychrophilus,Methanolobus psychrophilus R15,1094980.9,NA
-RefSoil_695,NC_018877.1,527021,Bacteria,Firmicutes,Bacilli,Bacillales,Bacillaceae,Bacillus,Bacillus thuringiensis,Bacillus thuringiensis Bt407,527021.11,"NC_018880.1,NC_018885.1,NC_018878.1,NC_018884.1,NC_018883.1,NC_018879.1,NC_018882.1,NC_018881.1, NC_018886.1"
+RefSoil_695,NC_018877.1,527021,Bacteria,Firmicutes,Bacilli,Bacillales,Bacillaceae,Bacillus,Bacillus thuringiensis,Bacillus thuringiensis Bt407,527021.11,"NC_018880.1,NC_018885.1,NC_018878.1,NC_018884.1,NC_018883.1,NC_018879.1,NC_018882.1,NC_018881.1,NC_018886.1"
 RefSoil_696,NC_019382.1,568707,Bacteria,Proteobacteria,Betaproteobacteria,Burkholderiales,Alcaligenaceae,Bordetella,Bordetella bronchiseptica,Bordetella bronchiseptica 253,568707.9,NA
 RefSoil_697,NC_019567.1,1069642,Bacteria,Proteobacteria,Deltaproteobacteria,Bdellovibrionales,Bdellovibrionaceae,Bdellovibrio,Bdellovibrio bacteriovorus,Bdellovibrio bacteriovorus str. Tiberius,1069642.8,NA
 RefSoil_698,NC_019670.1,1207075,Bacteria,Proteobacteria,Gammaproteobacteria,Pseudomonadales,Pseudomonadaceae,Pseudomonas,,Pseudomonas sp. UW4,1207075.7,NA
@@ -721,203 +721,203 @@ RefSoil_725,NC_020059.1,698761,Bacteria,Proteobacteria,Alphaproteobacteria,Rhizo
 RefSoil_726,NC_020089.1,1138877,Bacteria,Actinobacteria,Actinobacteria,Corynebacteriales,Mycobacteriaceae,Mycobacterium,Mycobacterium tuberculosis,Mycobacterium tuberculosis 7199-99,1138877.7,NA
 RefSoil_727,NC_020126.1,1278073,Bacteria,Proteobacteria,Deltaproteobacteria,Myxococcales,Myxococcaceae,Myxococcus,Myxococcus stipitatus,Myxococcus stipitatus DSM 14675,1278073.7,NA
 RefSoil_728,NC_020164.1,1194526,Bacteria,Firmicutes,Bacilli,Bacillales,Staphylococcaceae,Staphylococcus,Staphylococcus warneri,Staphylococcus warneri SG1,1194526.9,"NC_020165.1,NC_020274.1,NC_020264.1,NC_020265.1,NC_020266.1,NC_020267.1,NC_020268.1,NC_020269.1"
-RefSoil_729,NC_020207.1,1104325,Bacteria,Firmicutes,Bacilli,Lactobacillales,Enterococcaceae,Enterococcus,Enterococcus faecium,Enterococcus faecium NRRL B-2354,1104325.12,
-RefSoil_730,NC_020209.1,1282356,Bacteria,Proteobacteria,Gammaproteobacteria,Pseudomonadales,Pseudomonadaceae,Pseudomonas,Pseudomonas poae,Pseudomonas poae RE*1-1-14,1282356.11,
-RefSoil_731,NC_020210.1,1233873,Bacteria,Firmicutes,Bacilli,Bacillales,Bacillaceae,Geobacillus,,Geobacillus sp. GHH01,1233873.8,
-RefSoil_732,NC_020211.1,435998,Bacteria,Proteobacteria,Gammaproteobacteria,Enterobacteriales,Enterobacteriaceae,Serratia,Serratia marcescens,Serratia marcescens WW4,435998.15,
-RefSoil_733,NC_020238.1,1279365,Bacteria,Firmicutes,Bacilli,Bacillales,Bacillaceae,Bacillus,Bacillus thuringiensis,Bacillus thuringiensis serovar kurstaki str,1279365.8,
-RefSoil_734,NC_020244.1,1233100,Bacteria,Firmicutes,Bacilli,Bacillales,Bacillaceae,Bacillus,Bacillus subtilis,Bacillus subtilis XF-1,1233100.1,
-RefSoil_735,NC_020272.1,1091041,Bacteria,Firmicutes,Bacilli,Bacillales,Bacillaceae,Bacillus,Bacillus amyloliquefaciens,Bacillus amyloliquefaciens IT-45,1091041.13,
-RefSoil_736,NC_020291.1,931276,Bacteria,Firmicutes,Clostridia,Clostridiales,Clostridiaceae,Clostridium,Clostridium saccharoperbutylacetonicum,Clostridium saccharoperbutylacetonicu,931276.17,
-RefSoil_737,NC_020302.1,1121362,Bacteria,Actinobacteria,Actinobacteria,Corynebacteriales,Corynebacteriaceae,Corynebacterium,Corynebacterium halotolerans,Corynebacterium halotolerans YIM 70093,1121362.7,
-RefSoil_738,NC_020376.1,1286404,Bacteria,Firmicutes,Bacilli,Bacillales,Bacillaceae,Bacillus,Bacillus thuringiensis,Bacillus thuringiensis serovar thuringiensi,1286404.7,
-RefSoil_739,NC_020386.1,1193807,Bacteria,Chloroflexi,Dehalococcoidia,Dehalococcoidales,Dehalococcoidaceae,Dehalococcoides,Dehalococcoides mccartyi,Dehalococcoides mccartyi DCMB5,1193807.8,
-RefSoil_740,NC_020387.1,1193806,Bacteria,Chloroflexi,Dehalococcoidia,Dehalococcoidales,Dehalococcoidaceae,Dehalococcoides,Dehalococcoides mccartyi,Dehalococcoides mccartyi BTF08,1193806.7,
-RefSoil_741,NC_020417.1,543913,Bacteria,Proteobacteria,Betaproteobacteria,,,,,beta proteobacterium CB,543913.6,
-RefSoil_742,NC_020418.1,1124991,Bacteria,Proteobacteria,Gammaproteobacteria,Enterobacteriales,Enterobacteriaceae,Morganella,Morganella morganii,Morganella morganii subsp. morganii KT,1124991.9,
-RefSoil_743,NC_020453.1,1245469,Bacteria,Proteobacteria,Alphaproteobacteria,Rhizobiales,Bradyrhizobiaceae,Bradyrhizobium,Bradyrhizobium oligotrophicum,Bradyrhizobium oligotrophicum S58,1245469.1,
-RefSoil_744,NC_020504.1,1214101,Bacteria,Actinobacteria,Actinobacteria,Streptomycetales,Streptomycetaceae,Streptomyces,Streptomyces davawensis,Streptomyces davawensis JCM 4913,1214101.14,
-RefSoil_745,NC_020506.1,1121353,Bacteria,Actinobacteria,Actinobacteria,Corynebacteriales,Corynebacteriaceae,Corynebacterium,Corynebacterium callunae,Corynebacterium callunae DSM 20147,1121353.9,
-RefSoil_746,NC_020507.1,1147161,Bacteria,Firmicutes,Bacilli,Bacillales,Bacillaceae,Bacillus,Bacillus subtilis,Bacillus subtilis subsp. subtilis 6051-HGW,1147161.11,
-RefSoil_747,NC_020516.1,748247,Bacteria,Proteobacteria,Betaproteobacteria,Rhodocyclales,Rhodocyclaceae,Azoarcus,,Azoarcus sp. KH32C,748247.17,
-RefSoil_748,NC_020519.1,1204414,Bacteria,Actinobacteria,Actinobacteria,Corynebacteriales,Corynebacteriaceae,Corynebacterium,Corynebacterium glutamicum,Corynebacterium glutamicum K051,1204414.6,
-RefSoil_749,NC_020520.1,1313172,Bacteria,Actinobacteria,Acidimicrobiia,Acidimicrobiales,Acidimicrobiaceae,Ilumatobacter,Ilumatobacter coccineus,Ilumatobacter coccineus YM16-304,1313172.7,
-RefSoil_750,NC_020528.1,1286640,Bacteria,Proteobacteria,Alphaproteobacteria,Rhizobiales,Rhizobiaceae,Sinorhizobium,Sinorhizobium meliloti,Sinorhizobium meliloti 2011,1286640.11,
-RefSoil_751,NC_020541.1,666685,Bacteria,Proteobacteria,Gammaproteobacteria,Xanthomonadales,Rhodanobacteraceae,Rhodanobacter,,Rhodanobacter denitrificans,666685.1,
-RefSoil_752,NC_020561.1,745310,Bacteria,Proteobacteria,Alphaproteobacteria,Sphingomonadales,Sphingomonadaceae,Sphingomonas,,Sphingomonas sp. MM-1,745310.15,
-RefSoil_753,NC_020799.1,1262456,Bacteria,Proteobacteria,Betaproteobacteria,Burkholderiales,Burkholderiaceae,Ralstonia,Ralstonia solanacearum,Ralstonia solanacearum FQY_4,1262456.6,
-RefSoil_754,NC_020812.1,349215,Bacteria,Proteobacteria,Alphaproteobacteria,,,Micavibrio,Micavibrio aeruginosavorus,Micavibrio aeruginosavorus EPB,349215.12,
-RefSoil_755,NC_020813.1,1184267,Bacteria,Proteobacteria,Deltaproteobacteria,Bdellovibrionales,Bdellovibrionaceae,Bdellovibrio,Bdellovibrio exovorus,Bdellovibrio exovorus JSS,1184267.1,
-RefSoil_756,NC_020829.1,1294143,Bacteria,Proteobacteria,Gammaproteobacteria,Pseudomonadales,Pseudomonadaceae,Pseudomonas,Pseudomonas denitrificans,Pseudomonas denitrificans ATCC 13867,1294143.9,
-RefSoil_757,NC_020832.1,1302650,Bacteria,Firmicutes,Bacilli,Bacillales,Bacillaceae,Bacillus,Bacillus subtilis,Bacillus subtilis subsp. subtilis str. BAB-1,1302650.8,
-RefSoil_758,NC_020887.2,1121335,Bacteria,Firmicutes,Clostridia,Clostridiales,Ruminococcaceae,Ruminiclostridium,[Clostridium] stercorarium,[Clostridium] stercorarium subsp. stercorariu,1121335.12,
-RefSoil_759,NC_020895.1,1203460,Bacteria,Actinobacteria,Actinobacteria,Streptomycetales,Streptomycetaceae,Streptomyces,Streptomyces hygroscopicus,Streptomyces hygroscopicus subsp. jinggangensi,1203460.14,
-RefSoil_760,NC_020912.1,1280938,Bacteria,Proteobacteria,Gammaproteobacteria,Pseudomonadales,Pseudomonadaceae,Pseudomonas,Pseudomonas aeruginosa,Pseudomonas aeruginosa B136-33,1280938.8,
-RefSoil_761,NC_020990.1,457425,Bacteria,Actinobacteria,Actinobacteria,Streptomycetales,Streptomycetaceae,Streptomyces,Streptomyces albus,Streptomyces albus J1074,457425.33,
-RefSoil_762,NC_021055.1,1265601,Bacteria,Actinobacteria,Actinobacteria,Streptomycetales,Streptomycetaceae,Streptomyces,,Streptomyces sp. PAMC26508,1265601.14,
-RefSoil_763,NC_021058.1,1241935,Archaea,Crenarchaeota,Thermoprotei,Sulfolobales,Sulfolobaceae,Sulfolobus,Sulfolobus islandicus,Sulfolobus islandicus LAL14/1,1241935.9,
-RefSoil_764,NC_021066.1,1286170,Bacteria,Proteobacteria,Gammaproteobacteria,Enterobacteriales,Enterobacteriaceae,Raoultella,Raoultella ornithinolytica,Raoultella ornithinolytica B6,1286170.1,
-RefSoil_765,NC_021149.1,1283330,Bacteria,Proteobacteria,Gammaproteobacteria,Pseudomonadales,Pseudomonadaceae,Azotobacter,Azotobacter vinelandii,Azotobacter vinelandii CA,1283330.9,
-RefSoil_766,NC_021150.1,1283331,Bacteria,Proteobacteria,Gammaproteobacteria,Pseudomonadales,Pseudomonadaceae,Azotobacter,Azotobacter vinelandii,Azotobacter vinelandii CA6,1283331.6,
-RefSoil_767,NC_021171.1,666686,Bacteria,Firmicutes,Bacilli,Bacillales,Bacillaceae,Bacillus,,Bacillus sp. 1NLA3E,666686.6,
-RefSoil_768,NC_021172.1,670307,Bacteria,Proteobacteria,Alphaproteobacteria,Rhizobiales,Hyphomicrobiaceae,Hyphomicrobium,Hyphomicrobium denitrificans,Hyphomicrobium denitrificans 1NES1,670307.7,
-RefSoil_769,"NC_021173.1,NC_021174.1",1249661,Bacteria,Proteobacteria,Betaproteobacteria,Burkholderiales,Burkholderiaceae,Burkholderia,Burkholderia thailandensis,Burkholderia thailandensis MSMB121,"1249661.1,1249661.9",
-RefSoil_770,NC_021176.1,527001,Bacteria,Proteobacteria,Gammaproteobacteria,Enterobacteriales,Enterobacteriaceae,Salmonella,Salmonella enterica,Salmonella enterica subsp. enterica serova,527001.7,
-RefSoil_771,NC_021177.1,1303692,Bacteria,Actinobacteria,Actinobacteria,Streptomycetales,Streptomycetaceae,Streptomyces,Streptomyces fulvissimus,Streptomyces fulvissimus DSM 40593,1303692.16,
-RefSoil_772,NC_021182.1,86416,Bacteria,Firmicutes,Clostridia,Clostridiales,Clostridiaceae,Clostridium,Clostridium pasteurianum,Clostridium pasteurianum BC1,86416.8,
-RefSoil_773,NC_021184.1,767817,Bacteria,Firmicutes,Clostridia,Clostridiales,Peptococcaceae,Desulfotomaculum,Desulfotomaculum gibsoniae,Desulfotomaculum gibsoniae DSM 7213,767817.8,
-RefSoil_774,NC_021191.1,649831,Bacteria,Actinobacteria,Actinobacteria,Micromonosporales,Micromonosporaceae,Actinoplanes,,Actinoplanes sp. N902-109,649831.9,
-RefSoil_775,NC_021200.1,1199187,Bacteria,Actinobacteria,Actinobacteria,Corynebacteriales,Mycobacteriaceae,Mycobacterium,Mycobacterium avium,Mycobacterium avium subsp. paratuberculosi,1199187.9,
-RefSoil_776,NC_021237.1,1124983,Bacteria,Proteobacteria,Gammaproteobacteria,Pseudomonadales,Pseudomonadaceae,Pseudomonas,Pseudomonas protegens,Pseudomonas protegens CHA0,1124983.25,
-RefSoil_777,NC_021362.1,766760,Bacteria,Firmicutes,Bacilli,Bacillales,Bacillaceae,Bacillus,Bacillus paralicheniformis,Bacillus paralicheniformis ATCC 9945a,766760.1,
-RefSoil_778,NC_021487.1,1303518,Bacteria,Armatimonadetes,Chthonomonadetes,Chthonomonadales,Chthonomonadaceae,Chthonomonas,Chthonomonas calidirosea,Chthonomonas calidirosea T49,1303518.9,
-RefSoil_779,NC_021491.1,1331671,Bacteria,Proteobacteria,Gammaproteobacteria,Pseudomonadales,Pseudomonadaceae,Pseudomonas,Pseudomonas putida,Pseudomonas putida H8234,1331671.8,
-RefSoil_780,NC_021500.1,1166130,Bacteria,Proteobacteria,Gammaproteobacteria,Enterobacteriales,Enterobacteriaceae,Enterobacter,,Enterobacter sp. R4-368,1166130.12,
-RefSoil_781,NC_021577.1,1340851,Bacteria,Proteobacteria,Gammaproteobacteria,Pseudomonadales,Pseudomonadaceae,Pseudomonas,Pseudomonas aeruginosa,Pseudomonas aeruginosa RP73,1340851.9,
-RefSoil_782,NC_021591.1,682634,Bacteria,Proteobacteria,Gammaproteobacteria,Enterobacteriales,Enterobacteriaceae,Serratia,Serratia plymuthica,Serratia plymuthica 4Rx13,682634.9,
-RefSoil_783,NC_021592.1,333146,Archaea,Euryarchaeota,Thermoplasmata,Thermoplasmatales,Ferroplasmaceae,Ferroplasma,Ferroplasma acidarmanus,Ferroplasma acidarmanus fer1,333146.17,
-RefSoil_784,NC_021658.1,1254432,Bacteria,Proteobacteria,Deltaproteobacteria,Myxococcales,Polyangiaceae,Sorangium,Sorangium cellulosum,Sorangium cellulosum So0157-2,1254432.8,
-RefSoil_785,NC_021659.1,1348660,Bacteria,Proteobacteria,Gammaproteobacteria,Enterobacteriales,Enterobacteriaceae,Serratia,Serratia plymuthica,Serratia plymuthica S13,1348660.9,
-RefSoil_786,NC_021663.1,1200352,Bacteria,Actinobacteria,Actinobacteria,Corynebacteriales,Corynebacteriaceae,Corynebacterium,Corynebacterium terpenotabidum,Corynebacterium terpenotabidum Y-11,1200352.8,
-RefSoil_787,NC_021726.1,1096995,Bacteria,Proteobacteria,Gammaproteobacteria,Pseudomonadales,Moraxellaceae,Acinetobacter,Acinetobacter baumannii,Acinetobacter baumannii BJAB07104,1096995.8,
-RefSoil_788,NC_021729.1,1096997,Bacteria,Proteobacteria,Gammaproteobacteria,Pseudomonadales,Moraxellaceae,Acinetobacter,Acinetobacter baumannii,Acinetobacter baumannii BJAB0868,1096997.8,
-RefSoil_789,NC_021733.1,1096996,Bacteria,Proteobacteria,Gammaproteobacteria,Pseudomonadales,Moraxellaceae,Acinetobacter,Acinetobacter baumannii,Acinetobacter baumannii BJAB0715,1096996.7,
-RefSoil_790,NC_021741.1,1346614,Bacteria,Proteobacteria,Gammaproteobacteria,Enterobacteriales,Enterobacteriaceae,Serratia,Serratia liquefaciens,Serratia liquefaciens ATCC 27592,1346614.11,
-RefSoil_791,NC_021831.1,754503,Bacteria,Tenericutes,Mollicutes,Mycoplasmatales,Mycoplasmataceae,Mycoplasma,Mycoplasma hyopneumoniae,Mycoplasma hyopneumoniae 7422,754503.8,
-RefSoil_792,NC_021902.1,877468,Bacteria,Proteobacteria,Gammaproteobacteria,Enterobacteriales,Enterobacteriaceae,Salmonella,Salmonella enterica,Salmonella enterica subsp. enterica serova,877468.7,
-RefSoil_793,NC_021905.1,1328306,Bacteria,Proteobacteria,Alphaproteobacteria,Rhizobiales,Rhizobiaceae,Rhizobium,Rhizobium etli,Rhizobium etli bv. mimosae str. Mim1,1328306.1,
-RefSoil_794,NC_021985.1,1214242,Bacteria,Actinobacteria,Actinobacteria,Streptomycetales,Streptomycetaceae,Streptomyces,Streptomyces collinus,Streptomyces collinus Tu 365,1214242.14,
-RefSoil_795,NC_021991.1,1266844,Bacteria,Proteobacteria,Alphaproteobacteria,Rhodospirillales,Acetobacteraceae,Acetobacter,Acetobacter pasteurianus,Acetobacter pasteurianus 386B,1266844.13,
-RefSoil_796,NC_022000.1,1266738,Bacteria,Proteobacteria,Gammaproteobacteria,Enterobacteriales,Enterobacteriaceae,Proteus,Proteus mirabilis,Proteus mirabilis BB2000,1266738.1,
-RefSoil_797,NC_022041.1,1367847,Bacteria,Proteobacteria,Alphaproteobacteria,Rhodobacterales,Rhodobacteraceae,Paracoccus,Paracoccus aminophilus,Paracoccus aminophilus JCM 7686,1367847.9,
-RefSoil_798,NC_022080.4,1345697,Bacteria,Firmicutes,Bacilli,Bacillales,Bacillaceae,Geobacillus,,Geobacillus sp. JF8,1345697.8,
-RefSoil_799,NC_022081.1,1150476,Bacteria,Firmicutes,Bacilli,Bacillales,Bacillaceae,Bacillus,Bacillus methylotrophicus,Bacillus methylotrophicus UCMB5113,1150476.9,
-RefSoil_800,NC_022115.1,1136179,Bacteria,Actinobacteria,Actinobacteria,Corynebacteriales,Nocardiaceae,Rhodococcus,Rhodococcus erythropolis,Rhodococcus erythropolis CCM2595,1136179.12,
-RefSoil_801,"NC_022247.1,NC_022234.1",1246301,Bacteria,Proteobacteria,Betaproteobacteria,Burkholderiales,Comamonadaceae,Variovorax,Variovorax paradoxus,Variovorax paradoxus B4,"1246301.1,1246301.11",
-RefSoil_802,NC_022443.1,1194085,Bacteria,Firmicutes,Bacilli,Bacillales,Staphylococcaceae,Staphylococcus,Staphylococcus aureus,Staphylococcus aureus subsp. aureus SA40,1194085.6,
-RefSoil_803,"NC_022513.1,NC_022514.1,NC_022515.1",1366050,Bacteria,Proteobacteria,Betaproteobacteria,Burkholderiales,Burkholderiaceae,Ralstonia,Ralstonia pickettii,Ralstonia pickettii DTP0602,"1366050.14,1366050.16,1366050.15",
-RefSoil_804,NC_022566.1,1244085,Bacteria,Proteobacteria,Gammaproteobacteria,Enterobacteriales,Enterobacteriaceae,Klebsiella,Klebsiella pneumoniae,Klebsiella pneumoniae CG43,1244085.15,
-RefSoil_805,NC_022571.1,1345695,Bacteria,Firmicutes,Clostridia,Clostridiales,Clostridiaceae,Clostridium,Clostridium saccharobutylicum,Clostridium saccharobutylicum DSM 13864,1345695.7,
-RefSoil_806,NC_022653.1,1412898,Bacteria,Firmicutes,Bacilli,Bacillales,Bacillaceae,Bacillus,Bacillus amyloliquefaciens,Bacillus amyloliquefaciens CC178,1412898.1,
-RefSoil_807,NC_022657.1,1246995,Bacteria,Actinobacteria,Actinobacteria,Micromonosporales,Micromonosporaceae,Actinoplanes,Actinoplanes friuliensis,Actinoplanes friuliensis DSM 7358,1246995.9,
-RefSoil_808,NC_022660.1,1358410,Bacteria,Proteobacteria,Epsilonproteobacteria,Campylobacterales,Campylobacteraceae,Campylobacter,Campylobacter coli,Campylobacter coli 15-537360,1358410.8,
-RefSoil_809,NC_022663.1,557599,Bacteria,Actinobacteria,Actinobacteria,Corynebacteriales,Mycobacteriaceae,Mycobacterium,Mycobacterium kansasii,Mycobacterium kansasii ATCC 12478,557599.54,
-RefSoil_810,NC_022738.1,69328,Bacteria,Proteobacteria,Gammaproteobacteria,Pseudomonadales,Pseudomonadaceae,Pseudomonas,,Pseudomonas sp. VLB120,69328.8,
-RefSoil_811,NC_022781.1,1415784,Bacteria,Firmicutes,Bacilli,Bacillales,Bacillaceae,Bacillus,Bacillus toyonensis,Bacillus toyonensis BCT-7112,1415784.9,
-RefSoil_812,NC_022794.1,1399115,Bacteria,Firmicutes,Bacilli,Bacillales,,Exiguobacterium,,Exiguobacterium sp. MH3,1399115.9,
-RefSoil_813,NC_022795.1,1123384,Bacteria,Thermotogae,Thermotogae,Thermotogales,Thermotogaceae,Pseudothermotoga,Pseudothermotoga hypogea,Pseudothermotoga hypogea DSM 11164,1123384.5,
-RefSoil_814,NC_022873.1,529122,Bacteria,Firmicutes,Bacilli,Bacillales,Bacillaceae,Bacillus,Bacillus thuringiensis,Bacillus thuringiensis YBT-1518,529122.8,
-RefSoil_815,NC_022904.2,1416914,Bacteria,Proteobacteria,Betaproteobacteria,Burkholderiales,Burkholderiaceae,Pandoraea,Pandoraea pnomenusa,Pandoraea pnomenusa 3kgm,1416914.1,
-RefSoil_816,NC_022964.1,1388758,Bacteria,Chloroflexi,Dehalococcoidia,Dehalococcoidales,Dehalococcoidaceae,Dehalococcoides,Dehalococcoides mccartyi,Dehalococcoides mccartyi GY50,1388758.6,
-RefSoil_817,NC_022997.1,1029756,Bacteria,Proteobacteria,Alphaproteobacteria,Rhizobiales,Hyphomicrobiaceae,Hyphomicrobium,Hyphomicrobium nitrativorans,Hyphomicrobium nitrativorans NL23,1029756.9,
-RefSoil_818,NC_023019.1,1415629,Bacteria,Proteobacteria,Gammaproteobacteria,Pseudomonadales,Pseudomonadaceae,Pseudomonas,Pseudomonas aeruginosa,Pseudomonas aeruginosa MTB-1,1415629.9,
-RefSoil_819,NC_023037.2,1429244,Bacteria,Firmicutes,Bacilli,Bacillales,Paenibacillaceae,Paenibacillus,Paenibacillus polymyxa,Paenibacillus polymyxa CR1,1429244.8,
-RefSoil_820,NC_023064.1,1415630,Bacteria,Proteobacteria,Gammaproteobacteria,Pseudomonadales,Pseudomonadaceae,Pseudomonas,,Pseudomonas sp. TKP,1415630.8,
-RefSoil_821,NC_023073.1,1415165,Bacteria,Firmicutes,Bacilli,Bacillales,Bacillaceae,Bacillus,Bacillus amyloliquefaciens,Bacillus amyloliquefaciens LFB112,1415165.9,
-RefSoil_822,NC_023075.1,1435044,Bacteria,Proteobacteria,Gammaproteobacteria,Pseudomonadales,Pseudomonadaceae,Pseudomonas,Pseudomonas monteilii,Pseudomonas monteilii SB3078,1435044.7,
-RefSoil_823,NC_023076.1,1435058,Bacteria,Proteobacteria,Gammaproteobacteria,Pseudomonadales,Pseudomonadaceae,Pseudomonas,Pseudomonas monteilii,Pseudomonas monteilii SB3101,1435058.7,
-RefSoil_824,NC_023149.1,1427342,Bacteria,Proteobacteria,Gammaproteobacteria,Pseudomonadales,Pseudomonadaceae,Pseudomonas,Pseudomonas aeruginosa,Pseudomonas aeruginosa SCV20265,1427342.8,
-RefSoil_825,NZ_CM001165.1,355249,Bacteria,Actinobacteria,Actinobacteria,Streptomycetales,Streptomycetaceae,Streptomyces,,Streptomyces sp. Tu6071,355249.18,
-RefSoil_826,NZ_CM001763.1,1260626,Bacteria,Proteobacteria,Gammaproteobacteria,Pseudomonadales,Pseudomonadaceae,Pseudomonas,Pseudomonas syringae,Pseudomonas syringae pv. syringae B64,1260626.9,
-RefSoil_827,"NZ_CM002024.1,NZ_CM002025.1",1300225,Bacteria,Proteobacteria,Alphaproteobacteria,Rhizobiales,Rhizobiaceae,Agrobacterium,Agrobacterium tumefaciens,Agrobacterium tumefaciens WRT31,"1300225.12,1300225.11",
-RefSoil_828,NZ_CM002139.1,1219375,Bacteria,Proteobacteria,Gammaproteobacteria,Xanthomonadales,Xanthomonadaceae,Xanthomonas,Xanthomonas cassavae,Xanthomonas cassavae CFBP 4642,1219375.6,
-RefSoil_829,NZ_CM002177.1,191292,Bacteria,Actinobacteria,Actinobacteria,Corynebacteriales,Nocardiaceae,Rhodococcus,,Rhodococcus aetherivorans,191292.18,
-RefSoil_830,NZ_CM002330.1,1395516,Bacteria,Proteobacteria,Gammaproteobacteria,Pseudomonadales,Pseudomonadaceae,Pseudomonas,Pseudomonas moraviensis,Pseudomonas moraviensis R28-S,1395516.6,
-RefSoil_831,NZ_CM002395.1,1412844,Bacteria,Firmicutes,Bacilli,Bacillales,Bacillaceae,Bacillus,Bacillus anthracis,Bacillus anthracis 52-G,1412844.6,
-RefSoil_832,NZ_CM002398.1,1412842,Bacteria,Firmicutes,Bacilli,Bacillales,Bacillaceae,Bacillus,Bacillus anthracis,Bacillus anthracis 9080-G,1412842.6,
-RefSoil_833,NZ_CM002401.1,1412843,Bacteria,Firmicutes,Bacilli,Bacillales,Bacillaceae,Bacillus,Bacillus anthracis,Bacillus anthracis 8903-G,1412843.6,
-RefSoil_834,NZ_CM002755.1,1457195,Bacteria,Proteobacteria,Betaproteobacteria,Burkholderiales,Burkholderiaceae,Ralstonia,Ralstonia solanacearum,Ralstonia solanacearum Rs-10-244,1457195.9,
-RefSoil_835,NZ_CM002757.1,1394180,Bacteria,Proteobacteria,Betaproteobacteria,Burkholderiales,Burkholderiaceae,Ralstonia,Ralstonia solanacearum,Ralstonia solanacearum Rs-09-161,1394180.1,
-RefSoil_836,NZ_CM002796.1,682633,Bacteria,Proteobacteria,Alphaproteobacteria,Rhizobiales,Phyllobacteriaceae,Mesorhizobium,Mesorhizobium ciceri,Mesorhizobium ciceri ca181,682633.6,
-RefSoil_837,NZ_CP001970.1,743835,Bacteria,Firmicutes,Bacilli,Bacillales,Bacillaceae,Bacillus,Bacillus anthracis,Bacillus anthracis str. A16,743835.6,
-RefSoil_838,NZ_CP001974.1,673518,Bacteria,Firmicutes,Bacilli,Bacillales,Bacillaceae,Bacillus,Bacillus anthracis,Bacillus anthracis str. A16R,673518.11,
-RefSoil_839,NZ_CP002190.1,765869,Bacteria,Proteobacteria,Deltaproteobacteria,Bdellovibrionales,Bdellovibrionaceae,Bdellovibrio,Bdellovibrio bacteriovorus,Bdellovibrio bacteriovorus W,765869.8,
-RefSoil_840,NZ_CP002871.1,1010834,Bacteria,Actinobacteria,Actinobacteria,Corynebacteriales,Mycobacteriaceae,Mycobacterium,Mycobacterium tuberculosis,Mycobacterium tuberculosis HKBS1,1010834.6,
-RefSoil_841,NZ_CP003181.1,1052004,Bacteria,Proteobacteria,Alphaproteobacteria,Rhodospirillales,Acetobacteraceae,Granulibacter,Granulibacter bethesdensis,Granulibacter bethesdensis CGDNIH3,1052004.6,
-RefSoil_842,NZ_CP003915.1,1247726,Bacteria,Proteobacteria,Betaproteobacteria,Burkholderiales,Alcaligenaceae,Advenella,Advenella mimigardefordensis,Advenella mimigardefordensis DPN7,1247726.7,
-RefSoil_843,NZ_CP003923.1,1246626,Bacteria,Firmicutes,Bacilli,Bacillales,Bacillaceae,Bacillus,Bacillus lehensis,Bacillus lehensis G1,1246626.6,
-RefSoil_844,NZ_CP003949.1,543736,Bacteria,Actinobacteria,Actinobacteria,Corynebacteriales,Nocardiaceae,Rhodococcus,Rhodococcus opacus,Rhodococcus opacus PD630,543736.11,
-RefSoil_845,NZ_CP003999.1,1123862,Bacteria,Proteobacteria,Gammaproteobacteria,Enterobacteriales,Enterobacteriaceae,Klebsiella,Klebsiella pneumoniae,Klebsiella pneumoniae subsp. pneumoniae Kp13,1123862.13,
-RefSoil_846,NZ_CP004078.1,1268072,Bacteria,Firmicutes,Bacilli,Bacillales,Paenibacillaceae,Paenibacillus,Paenibacillus sabinae,Paenibacillus sabinae T27,1268072.6,
-RefSoil_847,"NZ_CP004383.1,NZ_CP004384.1",1249667,Bacteria,Proteobacteria,Betaproteobacteria,Burkholderiales,Burkholderiaceae,Burkholderia,Burkholderia thailandensis,Burkholderia thailandensis USAMRU Malaysia #20,"1249667.8,1249667.9",
-RefSoil_848,NZ_CP004870.1,1261129,Bacteria,Firmicutes,Bacilli,Bacillales,Bacillaceae,Bacillus,Bacillus thuringiensis,Bacillus thuringiensis serovar kurstaki str,1261129.8,
-RefSoil_849,NZ_CP006581.1,763057,Bacteria,Proteobacteria,Alphaproteobacteria,Rhizobiales,Phyllobacteriaceae,Mesorhizobium,Mesorhizobium huakuii,Mesorhizobium huakuii 7653R,763057.17,
-RefSoil_850,NZ_CP006587.1,1356852,Bacteria,Bacteroidetes,Cytophagia,Cytophagales,Cytophagaceae,Hymenobacter,,Hymenobacter sp. APR13,1356852.7,
-RefSoil_851,NZ_CP006644.1,1123269,Bacteria,Proteobacteria,Alphaproteobacteria,Sphingomonadales,Sphingomonadaceae,Sphingomonas,Sphingomonas sanxanigenens,Sphingomonas sanxanigenens DSM 19645,1123269.12,
-RefSoil_852,NZ_CP006696.1,155920,Bacteria,Proteobacteria,Gammaproteobacteria,Xanthomonadales,Xanthomonadaceae,Xylella,Xylella fastidiosa,Xylella fastidiosa subsp. sandyi Ann-1,155920.1,
-RefSoil_853,NZ_CP006742.1,1392837,Bacteria,Firmicutes,Bacilli,Bacillales,Bacillaceae,Bacillus,Bacillus anthracis,Bacillus anthracis str. SVA11,1392837.6,
-RefSoil_854,NZ_CP006772.1,1400053,Bacteria,Bacteroidetes,Bacteroidia,Bacteroidales,,,,Bacteroidales bacterium CF,1400053.7,
-RefSoil_855,NZ_CP006850.1,1415166,Bacteria,Actinobacteria,Actinobacteria,Corynebacteriales,Nocardiaceae,Nocardia,Nocardia nova,Nocardia nova SH22a,1415166.9,
-RefSoil_856,NZ_CP006872.1,1413214,Bacteria,Firmicutes,Bacilli,Bacillales,Paenibacillaceae,Paenibacillus,Paenibacillus polymyxa,Paenibacillus polymyxa SQR-21,1413214.8,
-RefSoil_857,NZ_CP006890.1,1423138,Bacteria,Firmicutes,Bacilli,Bacillales,Bacillaceae,Bacillus,Bacillus methylotrophicus,Bacillus methylotrophicus SQR9,1423138.6,
-RefSoil_858,"NZ_CP006961.1,NZ_CP006962.1",1004954,Bacteria,Proteobacteria,Alphaproteobacteria,Rhizobiales,Brucellaceae,Brucella,Brucella suis,Brucella suis bv. 1 str. S2,"1004954.9,1004954.1",
-RefSoil_859,NZ_CP006983.1,1408273,Bacteria,Proteobacteria,Gammaproteobacteria,Pseudomonadales,Pseudomonadaceae,Pseudomonas,Pseudomonas aeruginosa,Pseudomonas aeruginosa LESB65,1408273.6,
-RefSoil_860,NZ_CP006986.1,1432050,Bacteria,Proteobacteria,Alphaproteobacteria,Rhizobiales,Rhizobiaceae,Rhizobium,Rhizobium etli,Rhizobium etli bv. mimosae str. IE4771,1432050.11,
-RefSoil_861,NZ_CP007033.1,871738,Bacteria,Firmicutes,Clostridia,Clostridiales,Peptococcaceae,Dehalobacter,Dehalobacter restrictus,Dehalobacter restrictus DSM 9455,871738.7,
-RefSoil_862,NZ_CP007039.1,1441629,Bacteria,Proteobacteria,Gammaproteobacteria,Pseudomonadales,Pseudomonadaceae,Pseudomonas,Pseudomonas cichorii,Pseudomonas cichorii JBC1,1441629.7,
-RefSoil_863,NZ_CP007044.2,1441930,Bacteria,Proteobacteria,Gammaproteobacteria,Enterobacteriales,Enterobacteriaceae,Chania,Chania multitudinisentens,Chania multitudinisentens RB-25,1441930.11,
-RefSoil_864,NZ_CP007045.1,754523,Bacteria,Proteobacteria,Alphaproteobacteria,Rhizobiales,Rhizobiaceae,Rhizobium,Rhizobium leguminosarum,Rhizobium leguminosarum bv. trifolii WSM1689,754523.1,
-RefSoil_865,NZ_CP007067.1,1033991,Bacteria,Proteobacteria,Alphaproteobacteria,Rhizobiales,Rhizobiaceae,Rhizobium,Rhizobium leguminosarum,Rhizobium leguminosarum bv. trifolii CB782,1033991.1,
-RefSoil_866,NZ_CP007139.1,661478,Bacteria,Armatimonadetes,Fimbriimonadia,Fimbriimonadales,Fimbriimonadaceae,Fimbriimonas,Fimbriimonas ginsengisoli,Fimbriimonas ginsengisoli Gsoil 348,661478.7,
-RefSoil_867,NZ_CP007155.1,1449976,Bacteria,Actinobacteria,Actinobacteria,Pseudonocardiales,Pseudonocardiaceae,Kutzneria,Kutzneria albida,Kutzneria albida DSM 43870,1449976.8,
-RefSoil_868,NZ_CP007172.1,1457190,Bacteria,Firmicutes,Bacilli,Bacillales,Listeriaceae,Listeria,Listeria ivanovii,Listeria ivanovii WSLC3009,1457190.6,
-RefSoil_869,NZ_CP007201.1,1150621,Bacteria,Proteobacteria,Epsilonproteobacteria,Campylobacterales,Campylobacteraceae,Sulfurospirillum,Sulfurospirillum multivorans,Sulfurospirillum multivorans DSM 12446,1150621.25,
-RefSoil_870,NZ_CP007208.1,1288,Bacteria,Firmicutes,Bacilli,Bacillales,Staphylococcaceae,Staphylococcus,,Staphylococcus xylosus,1288.91,
-RefSoil_871,"NZ_CP007225.1,NZ_CP007226.1",1435057,Bacteria,Proteobacteria,Alphaproteobacteria,Rhizobiales,Rhizobiaceae,Agrobacterium,Agrobacterium tumefaciens,Agrobacterium tumefaciens LBA4213 (Ach5),"1435057.12,1435057.11",
-RefSoil_872,NZ_CP007230.1,367190,Bacteria,Proteobacteria,Gammaproteobacteria,Enterobacteriales,Enterobacteriaceae,Yersinia,,Yersinia similis,367190.1,
-RefSoil_873,"NZ_CP007236.1,NZ_CP007237.1",1416753,Bacteria,Proteobacteria,Alphaproteobacteria,Rhizobiales,Rhizobiaceae,Ensifer,Ensifer adhaerens,Ensifer adhaerens OV14,"1416753.9,1416753.8",
-RefSoil_874,NZ_CP007243.1,1441628,Bacteria,Nitrospirae,Nitrospira,Nitrospirales,Nitrospiraceae,Leptospirillum,Leptospirillum ferriphilum,Leptospirillum ferriphilum YSK,1441628.8,
-RefSoil_875,NZ_CP007409.1,1404258,Bacteria,Firmicutes,Bacilli,Bacillales,Bacillaceae,Bacillus,Bacillus subtilis,Bacillus subtilis subsp. subtilis str. O,1404258.7,
-RefSoil_876,NZ_CP007410.1,930166,Bacteria,Proteobacteria,Gammaproteobacteria,Pseudomonadales,Pseudomonadaceae,Pseudomonas,,Pseudomonas brassicacearum,930166.16,
-RefSoil_877,NZ_CP007441.1,316,Bacteria,Proteobacteria,Gammaproteobacteria,Pseudomonadales,Pseudomonadaceae,Pseudomonas,,Pseudomonas stutzeri,316.114,
-RefSoil_878,NZ_CP007452.1,1286171,Bacteria,Firmicutes,Clostridia,Clostridiales,Eubacteriaceae,Eubacterium,Eubacterium acidaminophilum,Eubacterium acidaminophilum DSM 3953,1286171.6,
-RefSoil_879,NZ_CP007481.1,1286528,Bacteria,Proteobacteria,Alphaproteobacteria,Rickettsiales,Anaplasmataceae,Neorickettsia,Neorickettsia helminthoeca,Neorickettsia helminthoeca str. Oregon,1286528.8,
-RefSoil_880,NZ_CP007492.1,1639,Bacteria,Firmicutes,Bacilli,Bacillales,Listeriaceae,Listeria,,Listeria monocytogenes,1639.1298,
-RefSoil_881,NZ_CP007499.1,1280,Bacteria,Firmicutes,Bacilli,Bacillales,Staphylococcaceae,Staphylococcus,,Staphylococcus aureus,1280.5054,
-RefSoil_882,NZ_CP007506.2,93220,Bacteria,Proteobacteria,Betaproteobacteria,Burkholderiales,Burkholderiaceae,Pandoraea,,Pandoraea pnomenusa,93220.31,
-RefSoil_883,NZ_CP007514.1,42256,Bacteria,Actinobacteria,Rubrobacteria,Rubrobacterales,Rubrobacteraceae,Rubrobacter,,Rubrobacter radiotolerans,42256.6,
-RefSoil_884,NZ_CP007546.1,1421338,Bacteria,Proteobacteria,Gammaproteobacteria,Enterobacteriales,Enterobacteriaceae,Enterobacter,Enterobacter asburiae,Enterobacter asburiae L1,1421338.1,
-RefSoil_885,NZ_CP007557.1,1333848,Bacteria,Proteobacteria,Gammaproteobacteria,Enterobacteriales,Enterobacteriaceae,Citrobacter,Citrobacter freundii,Citrobacter freundii CFNIH1,1333848.9,
-RefSoil_886,NZ_CP007569.1,476282,Bacteria,Proteobacteria,Alphaproteobacteria,Rhizobiales,Bradyrhizobiaceae,Bradyrhizobium,Bradyrhizobium japonicum,Bradyrhizobium japonicum SEMIA 5079,476282.1,
-RefSoil_887,NZ_CP007574.1,68570,Bacteria,Actinobacteria,Actinobacteria,Streptomycetales,Streptomycetaceae,Streptomyces,,Streptomyces albulus,68570.12,
-RefSoil_888,NZ_CP007597.1,216778,Bacteria,Proteobacteria,Gammaproteobacteria,Xanthomonadales,Xanthomonadaceae,Stenotrophomonas,,Stenotrophomonas rhizophila,216778.15,
-RefSoil_889,NZ_CP007600.1,1639,Bacteria,Firmicutes,Bacilli,Bacillales,Listeriaceae,Listeria,,Listeria monocytogenes,1639.1299,
-RefSoil_890,NZ_CP007607.1,570416,Bacteria,Firmicutes,Bacilli,Bacillales,Bacillaceae,Bacillus,Bacillus thuringiensis,Bacillus thuringiensis serovar kurstaki str,570416.13,
-RefSoil_891,NZ_CP007618.1,1392,Bacteria,Firmicutes,Bacilli,Bacillales,Bacillaceae,Bacillus,,Bacillus anthracis,1392.27,
-RefSoil_892,NZ_CP007620.1,303,Bacteria,Proteobacteria,Gammaproteobacteria,Pseudomonadales,Pseudomonadaceae,Pseudomonas,,Pseudomonas putida,303.193,
-RefSoil_893,NZ_CP007627.1,96345,Bacteria,Bacteroidetes,Flavobacteriia,Flavobacteriales,Flavobacteriaceae,Flavobacterium,,Flavobacterium psychrophilum,96345.74,
-RefSoil_894,NZ_CP007638.1,1495331,Bacteria,Proteobacteria,Gammaproteobacteria,Pseudomonadales,Pseudomonadaceae,Pseudomonas,,Pseudomonas sp. WCS374,1495331.7,
-RefSoil_895,NZ_CP007656.1,959,Bacteria,Proteobacteria,Deltaproteobacteria,Bdellovibrionales,Bdellovibrionaceae,Bdellovibrio,,Bdellovibrio bacteriovorus,959.13,
-RefSoil_896,"NZ_CP007663.1,NZ_CP007662.1",235,Bacteria,Proteobacteria,Alphaproteobacteria,Rhizobiales,Brucellaceae,Brucella,,Brucella abortus,"235.47,235.46",
-RefSoil_897,NZ_CP007666.1,261591,Bacteria,Firmicutes,Bacilli,Bacillales,Bacillaceae,Bacillus,Bacillus anthracis,Bacillus anthracis str. Vollum,261591.14,
-RefSoil_898,"NZ_CP007681.1,NZ_CP007680.1",235,Bacteria,Proteobacteria,Alphaproteobacteria,Rhizobiales,Brucellaceae,Brucella,,Brucella abortus,"235.48,235.49",
-RefSoil_899,NZ_CP007704.1,1392,Bacteria,Firmicutes,Bacilli,Bacillales,Bacillaceae,Bacillus,,Bacillus anthracis,1392.271,
-RefSoil_900,"NZ_CP007705.1,NZ_CP007706.1",520455,Bacteria,Proteobacteria,Alphaproteobacteria,Rhizobiales,Brucellaceae,Brucella,Brucella abortus,Brucella abortus bv. 9 str. C68,"520455.11,520455.1",
-RefSoil_901,NZ_CP007739.1,796606,Bacteria,Firmicutes,Bacilli,Bacillales,Bacillaceae,Bacillus,Bacillus methanolicus,Bacillus methanolicus MGA3,796606.7,
-RefSoil_902,"NZ_CP007765.1,NZ_CP007764.1",520450,Bacteria,Proteobacteria,Alphaproteobacteria,Rhizobiales,Brucellaceae,Brucella,Brucella abortus,Brucella abortus bv. 2 str. 86/8/59,"520450.1,520450.11",
-RefSoil_903,"NZ_CP007783.1,NZ_CP007784.1,NZ_CP007782.1",95486,Bacteria,Proteobacteria,Betaproteobacteria,Burkholderiales,Burkholderiaceae,Burkholderia,,Burkholderia cenocepacia,"95486.82,95486.83,95486.84",
-RefSoil_904,"NZ_CP007787.1,NZ_CP007786.1,NZ_CP007785.1",292,Bacteria,Proteobacteria,Betaproteobacteria,Burkholderiales,Burkholderiaceae,Burkholderia,,Burkholderia cepacia,"292.11,292.111,292.109",
-RefSoil_905,"NZ_CP007789.1,NZ_CP007788.1",520465,Bacteria,Proteobacteria,Alphaproteobacteria,Rhizobiales,Brucellaceae,Brucella,Brucella melitensis,Brucella melitensis bv. 2 str. 63/9,"520465.1,520465.9",
-RefSoil_906,NZ_CP007793.1,192,Bacteria,Proteobacteria,Alphaproteobacteria,Rhodospirillales,Rhodospirillaceae,Azospirillum,,Azospirillum brasilense,192.52,
-RefSoil_907,NZ_CP007800.1,1232554,Bacteria,Firmicutes,Bacilli,Bacillales,Bacillaceae,Bacillus,Bacillus subtilis,Bacillus subtilis subsp. subtilis str. JH64,1232554.5,
-RefSoil_908,NZ_CP007803.1,1249615,Bacteria,Actinobacteria,Actinobacteria,Corynebacteriales,Mycobacteriaceae,Mycobacterium,Mycobacterium tuberculosis,Mycobacterium tuberculosis K,1249615.7,
-RefSoil_909,NZ_CP008696.1,587753,Bacteria,Proteobacteria,Gammaproteobacteria,Pseudomonadales,Pseudomonadaceae,Pseudomonas,,Pseudomonas chlororaphis,587753.16,
-RefSoil_910,NZ_CP008698.1,1221328,Bacteria,Firmicutes,Bacilli,Bacillales,Bacillaceae,Bacillus,Bacillus subtilis,Bacillus subtilis subsp. subtilis str. AG1839,1221328.7,
-RefSoil_911,"NZ_CP008730.1,NZ_CP008729.1,NZ_CP008728.1",87883,Bacteria,Proteobacteria,Betaproteobacteria,Burkholderiales,Burkholderiaceae,Burkholderia,,Burkholderia multivorans,"87883.75,87883.74,87883.73",
-RefSoil_912,NZ_CP008752.1,1392,Bacteria,Firmicutes,Bacilli,Bacillales,Bacillaceae,Bacillus,,Bacillus anthracis,1392.272,
-RefSoil_913,"NZ_CP008760.1,NZ_CP008762.1,NZ_CP008761.1",266265,Bacteria,Proteobacteria,Betaproteobacteria,Burkholderiales,Burkholderiaceae,Burkholderia,Burkholderia xenovorans,Burkholderia xenovorans LB400,"266265.29,266265.27,266265.28",
-RefSoil_914,NZ_CP008841.1,571,Bacteria,Proteobacteria,Gammaproteobacteria,Enterobacteriales,Enterobacteriaceae,Klebsiella,,Klebsiella oxytoca,571.119,
-RefSoil_915,NZ_CP008846.1,1392,Bacteria,Firmicutes,Bacilli,Bacillales,Bacillaceae,Bacillus,,Bacillus anthracis,1392.273,
-RefSoil_916,NZ_CP008852.1,484770,Bacteria,Firmicutes,Negativicutes,Selenomonadales,Veillonellaceae,Pelosinus,,Pelosinus sp. UFO1,484770.6,
-RefSoil_917,NZ_CP008884.1,1217721,Bacteria,Proteobacteria,Gammaproteobacteria,Xanthomonadales,Rhodanobacteraceae,Dyella,Dyella japonica,Dyella japonica A8,1217721.9,
-RefSoil_918,NZ_CP008896.1,294,Bacteria,Proteobacteria,Gammaproteobacteria,Pseudomonadales,Pseudomonadaceae,Pseudomonas,,Pseudomonas fluorescens,294.196,
-RefSoil_919,NZ_CP008920.1,588,Bacteria,Proteobacteria,Gammaproteobacteria,Enterobacteriales,Enterobacteriaceae,Providencia,,Providencia stuartii,588.15,
-RefSoil_920,NZ_CP008923.1,1719,Bacteria,Actinobacteria,Actinobacteria,Corynebacteriales,Corynebacteriaceae,Corynebacterium,,Corynebacterium pseudotuberculosis,1719.615,
-RefSoil_921,NZ_CP008926.1,1314,Bacteria,Firmicutes,Bacilli,Lactobacillales,Streptococcaceae,Streptococcus,,Streptococcus pyogenes,1314.215,
-RefSoil_922,NZ_CP008943.1,633,Bacteria,Proteobacteria,Gammaproteobacteria,Enterobacteriales,Enterobacteriaceae,Yersinia,,Yersinia pseudotuberculosis,633.72,
-RefSoil_923,NZ_CP008957.1,155864,Bacteria,Proteobacteria,Gammaproteobacteria,Enterobacteriales,Enterobacteriaceae,Escherichia,Escherichia coli,Escherichia coli O157:H7 str. EDL933,155864.48,
-RefSoil_924,"NZ_HF545616.1,NZ_HF545617.1",1160721,Bacteria,Firmicutes,Clostridia,Clostridiales,Ruminococcaceae,Ruminococcus,,Ruminococcus bicirculans,"1160721.14,1160721.15",
-RefSoil_925,NZ_HG326223.1,273526,Bacteria,Proteobacteria,Gammaproteobacteria,Enterobacteriales,Enterobacteriaceae,Serratia,Serratia marcescens,Serratia marcescens subsp. marcescens Db11,273526.17,
-RefSoil_926,NZ_HG916852.1,348824,Bacteria,Proteobacteria,Alphaproteobacteria,Rhizobiales,Rhizobiaceae,Rhizobium,,Rhizobium sp. LPU83,348824.8,
-RefSoil_927,NZ_HG938353.1,1028800,Bacteria,Proteobacteria,Alphaproteobacteria,Rhizobiales,Rhizobiaceae,Neorhizobium,Neorhizobium galegae,Neorhizobium galegae bv. orientalis str. HAMB,1028800.8,
-RefSoil_928,NZ_HG938355.1,1028801,Bacteria,Proteobacteria,Alphaproteobacteria,Rhizobiales,Rhizobiaceae,Neorhizobium,Neorhizobium galegae,Neorhizobium galegae bv. officinalis bv,1028801.7,
+RefSoil_729,NC_020207.1,1104325,Bacteria,Firmicutes,Bacilli,Lactobacillales,Enterococcaceae,Enterococcus,Enterococcus faecium,Enterococcus faecium NRRL B-2354,1104325.12,NC_020208.1
+RefSoil_730,NC_020209.1,1282356,Bacteria,Proteobacteria,Gammaproteobacteria,Pseudomonadales,Pseudomonadaceae,Pseudomonas,Pseudomonas poae,Pseudomonas poae RE*1-1-14,1282356.11,NA
+RefSoil_731,NC_020210.1,1233873,Bacteria,Firmicutes,Bacilli,Bacillales,Bacillaceae,Geobacillus,,Geobacillus sp. GHH01,1233873.8,NA
+RefSoil_732,NC_020211.1,435998,Bacteria,Proteobacteria,Gammaproteobacteria,Enterobacteriales,Enterobacteriaceae,Serratia,Serratia marcescens,Serratia marcescens WW4,435998.15,NC_020212.1
+RefSoil_733,NC_020238.1,1279365,Bacteria,Firmicutes,Bacilli,Bacillales,Bacillaceae,Bacillus,Bacillus thuringiensis,Bacillus thuringiensis serovar kurstaki str,1279365.8,"NC_020240.1,NC_020250.1,NC_020243.1,NC_020249.1,NC_020239.1,NC_020241.1,NC_020242.1"
+RefSoil_734,NC_020244.1,1233100,Bacteria,Firmicutes,Bacilli,Bacillales,Bacillaceae,Bacillus,Bacillus subtilis,Bacillus subtilis XF-1,1233100.1,NA
+RefSoil_735,NC_020272.1,1091041,Bacteria,Firmicutes,Bacilli,Bacillales,Bacillaceae,Bacillus,Bacillus amyloliquefaciens,Bacillus amyloliquefaciens IT-45,1091041.13,NC_020273.1
+RefSoil_736,NC_020291.1,931276,Bacteria,Firmicutes,Clostridia,Clostridiales,Clostridiaceae,Clostridium,Clostridium saccharoperbutylacetonicum,Clostridium saccharoperbutylacetonicu,931276.17,NC_020292.1
+RefSoil_737,NC_020302.1,1121362,Bacteria,Actinobacteria,Actinobacteria,Corynebacteriales,Corynebacteriaceae,Corynebacterium,Corynebacterium halotolerans,Corynebacterium halotolerans YIM 70093,1121362.7,NC_020303.1
+RefSoil_738,NC_020376.1,1286404,Bacteria,Firmicutes,Bacilli,Bacillales,Bacillaceae,Bacillus,Bacillus thuringiensis,Bacillus thuringiensis serovar thuringiensi,1286404.7,"NC_020393.1,NC_020391.1,NC_020379.1,NC_020380.1,NC_020394.1,NC_020384.1,NC_020385.1,NC_020381.1,NC_020390.1,NC_020392.1,NC_020382.1,NC_020377.1,NC_020383.1,NC_020378.1"
+RefSoil_739,NC_020386.1,1193807,Bacteria,Chloroflexi,Dehalococcoidia,Dehalococcoidales,Dehalococcoidaceae,Dehalococcoides,Dehalococcoides mccartyi,Dehalococcoides mccartyi DCMB5,1193807.8,NA
+RefSoil_740,NC_020387.1,1193806,Bacteria,Chloroflexi,Dehalococcoidia,Dehalococcoidales,Dehalococcoidaceae,Dehalococcoides,Dehalococcoides mccartyi,Dehalococcoides mccartyi BTF08,1193806.7,NA
+RefSoil_741,NC_020417.1,543913,Bacteria,Proteobacteria,Betaproteobacteria,,,,,beta proteobacterium CB,543913.6,NA
+RefSoil_742,NC_020418.1,1124991,Bacteria,Proteobacteria,Gammaproteobacteria,Enterobacteriales,Enterobacteriaceae,Morganella,Morganella morganii,Morganella morganii subsp. morganii KT,1124991.9,NA
+RefSoil_743,NC_020453.1,1245469,Bacteria,Proteobacteria,Alphaproteobacteria,Rhizobiales,Bradyrhizobiaceae,Bradyrhizobium,Bradyrhizobium oligotrophicum,Bradyrhizobium oligotrophicum S58,1245469.1,NA
+RefSoil_744,NC_020504.1,1214101,Bacteria,Actinobacteria,Actinobacteria,Streptomycetales,Streptomycetaceae,Streptomyces,Streptomyces davawensis,Streptomyces davawensis JCM 4913,1214101.14,NC_020545.1
+RefSoil_745,NC_020506.1,1121353,Bacteria,Actinobacteria,Actinobacteria,Corynebacteriales,Corynebacteriaceae,Corynebacterium,Corynebacterium callunae,Corynebacterium callunae DSM 20147,1121353.9,"NC_020523.1,NC_020553.1"
+RefSoil_746,NC_020507.1,1147161,Bacteria,Firmicutes,Bacilli,Bacillales,Bacillaceae,Bacillus,Bacillus subtilis,Bacillus subtilis subsp. subtilis 6051-HGW,1147161.11,NA
+RefSoil_747,NC_020516.1,748247,Bacteria,Proteobacteria,Betaproteobacteria,Rhodocyclales,Rhodocyclaceae,Azoarcus,,Azoarcus sp. KH32C,748247.17,NC_020548.1
+RefSoil_748,NC_020519.1,1204414,Bacteria,Actinobacteria,Actinobacteria,Corynebacteriales,Corynebacteriaceae,Corynebacterium,Corynebacterium glutamicum,Corynebacterium glutamicum K051,1204414.6,NA
+RefSoil_749,NC_020520.1,1313172,Bacteria,Actinobacteria,Acidimicrobiia,Acidimicrobiales,Acidimicrobiaceae,Ilumatobacter,Ilumatobacter coccineus,Ilumatobacter coccineus YM16-304,1313172.7,NA
+RefSoil_750,NC_020528.1,1286640,Bacteria,Proteobacteria,Alphaproteobacteria,Rhizobiales,Rhizobiaceae,Sinorhizobium,Sinorhizobium meliloti,Sinorhizobium meliloti 2011,1286640.11,"NC_020527.1,NC_020560.1"
+RefSoil_751,NC_020541.1,666685,Bacteria,Proteobacteria,Gammaproteobacteria,Xanthomonadales,Rhodanobacteraceae,Rhodanobacter,,Rhodanobacter denitrificans,666685.1,NA
+RefSoil_752,NC_020561.1,745310,Bacteria,Proteobacteria,Alphaproteobacteria,Sphingomonadales,Sphingomonadaceae,Sphingomonas,,Sphingomonas sp. MM-1,745310.15,"NC_020542.1,NC_020562.1,NC_020543.1,NC_020544.1,NC_020563.2"
+RefSoil_753,NC_020799.1,1262456,Bacteria,Proteobacteria,Betaproteobacteria,Burkholderiales,Burkholderiaceae,Ralstonia,Ralstonia solanacearum,Ralstonia solanacearum FQY_4,1262456.6,NC_021745.1
+RefSoil_754,NC_020812.1,349215,Bacteria,Proteobacteria,Alphaproteobacteria,,,Micavibrio,Micavibrio aeruginosavorus,Micavibrio aeruginosavorus EPB,349215.12,NA
+RefSoil_755,NC_020813.1,1184267,Bacteria,Proteobacteria,Deltaproteobacteria,Bdellovibrionales,Bdellovibrionaceae,Bdellovibrio,Bdellovibrio exovorus,Bdellovibrio exovorus JSS,1184267.1,NA
+RefSoil_756,NC_020829.1,1294143,Bacteria,Proteobacteria,Gammaproteobacteria,Pseudomonadales,Pseudomonadaceae,Pseudomonas,Pseudomonas denitrificans,Pseudomonas denitrificans ATCC 13867,1294143.9,NA
+RefSoil_757,NC_020832.1,1302650,Bacteria,Firmicutes,Bacilli,Bacillales,Bacillaceae,Bacillus,Bacillus subtilis,Bacillus subtilis subsp. subtilis str. BAB-1,1302650.8,NA
+RefSoil_758,NC_020887.2,1121335,Bacteria,Firmicutes,Clostridia,Clostridiales,Ruminococcaceae,Ruminiclostridium,[Clostridium] stercorarium,[Clostridium] stercorarium subsp. stercorariu,1121335.12,NA
+RefSoil_759,NC_020895.1,1203460,Bacteria,Actinobacteria,Actinobacteria,Streptomycetales,Streptomycetaceae,Streptomyces,Streptomyces hygroscopicus,Streptomyces hygroscopicus subsp. jinggangensi,1203460.14,"NC_020894.1,NC_020893.1"
+RefSoil_760,NC_020912.1,1280938,Bacteria,Proteobacteria,Gammaproteobacteria,Pseudomonadales,Pseudomonadaceae,Pseudomonas,Pseudomonas aeruginosa,Pseudomonas aeruginosa B136-33,1280938.8,NA
+RefSoil_761,NC_020990.1,457425,Bacteria,Actinobacteria,Actinobacteria,Streptomycetales,Streptomycetaceae,Streptomyces,Streptomyces albus,Streptomyces albus J1074,457425.33,NA
+RefSoil_762,NC_021055.1,1265601,Bacteria,Actinobacteria,Actinobacteria,Streptomycetales,Streptomycetaceae,Streptomyces,,Streptomyces sp. PAMC26508,1265601.14,NC_021056.1
+RefSoil_763,NC_021058.1,1241935,Archaea,Crenarchaeota,Thermoprotei,Sulfolobales,Sulfolobaceae,Sulfolobus,Sulfolobus islandicus,Sulfolobus islandicus LAL14/1,1241935.9,NA
+RefSoil_764,NC_021066.1,1286170,Bacteria,Proteobacteria,Gammaproteobacteria,Enterobacteriales,Enterobacteriaceae,Raoultella,Raoultella ornithinolytica,Raoultella ornithinolytica B6,1286170.1,NA
+RefSoil_765,NC_021149.1,1283330,Bacteria,Proteobacteria,Gammaproteobacteria,Pseudomonadales,Pseudomonadaceae,Azotobacter,Azotobacter vinelandii,Azotobacter vinelandii CA,1283330.9,NA
+RefSoil_766,NC_021150.1,1283331,Bacteria,Proteobacteria,Gammaproteobacteria,Pseudomonadales,Pseudomonadaceae,Azotobacter,Azotobacter vinelandii,Azotobacter vinelandii CA6,1283331.6,NA
+RefSoil_767,NC_021171.1,666686,Bacteria,Firmicutes,Bacilli,Bacillales,Bacillaceae,Bacillus,,Bacillus sp. 1NLA3E,666686.6,NA
+RefSoil_768,NC_021172.1,670307,Bacteria,Proteobacteria,Alphaproteobacteria,Rhizobiales,Hyphomicrobiaceae,Hyphomicrobium,Hyphomicrobium denitrificans,Hyphomicrobium denitrificans 1NES1,670307.7,NA
+RefSoil_769,"NC_021173.1,NC_021174.1",1249661,Bacteria,Proteobacteria,Betaproteobacteria,Burkholderiales,Burkholderiaceae,Burkholderia,Burkholderia thailandensis,Burkholderia thailandensis MSMB121,"1249661.1,1249661.9",NA
+RefSoil_770,NC_021176.1,527001,Bacteria,Proteobacteria,Gammaproteobacteria,Enterobacteriales,Enterobacteriaceae,Salmonella,Salmonella enterica,Salmonella enterica subsp. enterica serova,527001.7,NA
+RefSoil_771,NC_021177.1,1303692,Bacteria,Actinobacteria,Actinobacteria,Streptomycetales,Streptomycetaceae,Streptomyces,Streptomyces fulvissimus,Streptomyces fulvissimus DSM 40593,1303692.16,NA
+RefSoil_772,NC_021182.1,86416,Bacteria,Firmicutes,Clostridia,Clostridiales,Clostridiaceae,Clostridium,Clostridium pasteurianum,Clostridium pasteurianum BC1,86416.8,NC_021183.1
+RefSoil_773,NC_021184.1,767817,Bacteria,Firmicutes,Clostridia,Clostridiales,Peptococcaceae,Desulfotomaculum,Desulfotomaculum gibsoniae,Desulfotomaculum gibsoniae DSM 7213,767817.8,NA
+RefSoil_774,NC_021191.1,649831,Bacteria,Actinobacteria,Actinobacteria,Micromonosporales,Micromonosporaceae,Actinoplanes,,Actinoplanes sp. N902-109,649831.9,NA
+RefSoil_775,NC_021200.1,1199187,Bacteria,Actinobacteria,Actinobacteria,Corynebacteriales,Mycobacteriaceae,Mycobacterium,Mycobacterium avium,Mycobacterium avium subsp. paratuberculosi,1199187.9,NA
+RefSoil_776,NC_021237.1,1124983,Bacteria,Proteobacteria,Gammaproteobacteria,Pseudomonadales,Pseudomonadaceae,Pseudomonas,Pseudomonas protegens,Pseudomonas protegens CHA0,1124983.25,NA
+RefSoil_777,NC_021362.1,766760,Bacteria,Firmicutes,Bacilli,Bacillales,Bacillaceae,Bacillus,Bacillus paralicheniformis,Bacillus paralicheniformis ATCC 9945a,766760.1,NA
+RefSoil_778,NC_021487.1,1303518,Bacteria,Armatimonadetes,Chthonomonadetes,Chthonomonadales,Chthonomonadaceae,Chthonomonas,Chthonomonas calidirosea,Chthonomonas calidirosea T49,1303518.9,NA
+RefSoil_779,NC_021491.1,1331671,Bacteria,Proteobacteria,Gammaproteobacteria,Pseudomonadales,Pseudomonadaceae,Pseudomonas,Pseudomonas putida,Pseudomonas putida H8234,1331671.8,NA
+RefSoil_780,NC_021500.1,1166130,Bacteria,Proteobacteria,Gammaproteobacteria,Enterobacteriales,Enterobacteriaceae,Enterobacter,,Enterobacter sp. R4-368,1166130.12,NC_021492.1
+RefSoil_781,NC_021577.1,1340851,Bacteria,Proteobacteria,Gammaproteobacteria,Pseudomonadales,Pseudomonadaceae,Pseudomonas,Pseudomonas aeruginosa,Pseudomonas aeruginosa RP73,1340851.9,NA
+RefSoil_782,NC_021591.1,682634,Bacteria,Proteobacteria,Gammaproteobacteria,Enterobacteriales,Enterobacteriaceae,Serratia,Serratia plymuthica,Serratia plymuthica 4Rx13,682634.9,NC_021594.1
+RefSoil_783,NC_021592.1,333146,Archaea,Euryarchaeota,Thermoplasmata,Thermoplasmatales,Ferroplasmaceae,Ferroplasma,Ferroplasma acidarmanus,Ferroplasma acidarmanus fer1,333146.17,NA
+RefSoil_784,NC_021658.1,1254432,Bacteria,Proteobacteria,Deltaproteobacteria,Myxococcales,Polyangiaceae,Sorangium,Sorangium cellulosum,Sorangium cellulosum So0157-2,1254432.8,NA
+RefSoil_785,NC_021659.1,1348660,Bacteria,Proteobacteria,Gammaproteobacteria,Enterobacteriales,Enterobacteriaceae,Serratia,Serratia plymuthica,Serratia plymuthica S13,1348660.9,NA
+RefSoil_786,NC_021663.1,1200352,Bacteria,Actinobacteria,Actinobacteria,Corynebacteriales,Corynebacteriaceae,Corynebacterium,Corynebacterium terpenotabidum,Corynebacterium terpenotabidum Y-11,1200352.8,NA
+RefSoil_787,NC_021726.1,1096995,Bacteria,Proteobacteria,Gammaproteobacteria,Pseudomonadales,Moraxellaceae,Acinetobacter,Acinetobacter baumannii,Acinetobacter baumannii BJAB07104,1096995.8,"NC_021727.1,NC_021728.1"
+RefSoil_788,NC_021729.1,1096997,Bacteria,Proteobacteria,Gammaproteobacteria,Pseudomonadales,Moraxellaceae,Acinetobacter,Acinetobacter baumannii,Acinetobacter baumannii BJAB0868,1096997.8,"NC_021730.1,NC_021731.1,NC_021732.1"
+RefSoil_789,NC_021733.1,1096996,Bacteria,Proteobacteria,Gammaproteobacteria,Pseudomonadales,Moraxellaceae,Acinetobacter,Acinetobacter baumannii,Acinetobacter baumannii BJAB0715,1096996.7,NC_021734.1
+RefSoil_790,NC_021741.1,1346614,Bacteria,Proteobacteria,Gammaproteobacteria,Enterobacteriales,Enterobacteriaceae,Serratia,Serratia liquefaciens,Serratia liquefaciens ATCC 27592,1346614.11,NC_021742.1
+RefSoil_791,NC_021831.1,754503,Bacteria,Tenericutes,Mollicutes,Mycoplasmatales,Mycoplasmataceae,Mycoplasma,Mycoplasma hyopneumoniae,Mycoplasma hyopneumoniae 7422,754503.8,NA
+RefSoil_792,NC_021902.1,877468,Bacteria,Proteobacteria,Gammaproteobacteria,Enterobacteriales,Enterobacteriaceae,Salmonella,Salmonella enterica,Salmonella enterica subsp. enterica serova,877468.7,NA
+RefSoil_793,NC_021905.1,1328306,Bacteria,Proteobacteria,Alphaproteobacteria,Rhizobiales,Rhizobiaceae,Rhizobium,Rhizobium etli,Rhizobium etli bv. mimosae str. Mim1,1328306.1,"NC_021906.1,NC_021907.1,NC_021908.1,NC_021909.1,NC_021910.1,NC_021911.1"
+RefSoil_794,NC_021985.1,1214242,Bacteria,Actinobacteria,Actinobacteria,Streptomycetales,Streptomycetaceae,Streptomyces,Streptomyces collinus,Streptomyces collinus Tu 365,1214242.14,"NC_022001.1,NC_021986.1"
+RefSoil_795,NC_021991.1,1266844,Bacteria,Proteobacteria,Alphaproteobacteria,Rhodospirillales,Acetobacteraceae,Acetobacter,Acetobacter pasteurianus,Acetobacter pasteurianus 386B,1266844.13,"NC_021976.1,NZ_HF677572.1,NC_021992.1,NC_021977.1,NC_021993.1,NC_021978.1,NC_021979.1"
+RefSoil_796,NC_022000.1,1266738,Bacteria,Proteobacteria,Gammaproteobacteria,Enterobacteriales,Enterobacteriaceae,Proteus,Proteus mirabilis,Proteus mirabilis BB2000,1266738.1,NA
+RefSoil_797,NC_022041.1,1367847,Bacteria,Proteobacteria,Alphaproteobacteria,Rhodobacterales,Rhodobacteraceae,Paracoccus,Paracoccus aminophilus,Paracoccus aminophilus JCM 7686,1367847.9,"NC_022042.1,NC_022049.1,NC_022043.1,NC_022044.1,NC_022050.1"
+RefSoil_798,NC_022080.4,1345697,Bacteria,Firmicutes,Bacilli,Bacillales,Bacillaceae,Geobacillus,,Geobacillus sp. JF8,1345697.8,NC_022092.1
+RefSoil_799,NC_022081.1,1150476,Bacteria,Firmicutes,Bacilli,Bacillales,Bacillaceae,Bacillus,Bacillus methylotrophicus,Bacillus methylotrophicus UCMB5113,1150476.9,NA
+RefSoil_800,NC_022115.1,1136179,Bacteria,Actinobacteria,Actinobacteria,Corynebacteriales,Nocardiaceae,Rhodococcus,Rhodococcus erythropolis,Rhodococcus erythropolis CCM2595,1136179.12,NC_022125.1
+RefSoil_801,"NC_022247.1,NC_022234.1",1246301,Bacteria,Proteobacteria,Betaproteobacteria,Burkholderiales,Comamonadaceae,Variovorax,Variovorax paradoxus,Variovorax paradoxus B4,"1246301.1,1246301.11",NA
+RefSoil_802,NC_022443.1,1194085,Bacteria,Firmicutes,Bacilli,Bacillales,Staphylococcaceae,Staphylococcus,Staphylococcus aureus,Staphylococcus aureus subsp. aureus SA40,1194085.6,NA
+RefSoil_803,"NC_022513.1,NC_022514.1,NC_022515.1",1366050,Bacteria,Proteobacteria,Betaproteobacteria,Burkholderiales,Burkholderiaceae,Ralstonia,Ralstonia pickettii,Ralstonia pickettii DTP0602,"1366050.14,1366050.16,1366050.15",NA
+RefSoil_804,NC_022566.1,1244085,Bacteria,Proteobacteria,Gammaproteobacteria,Enterobacteriales,Enterobacteriaceae,Klebsiella,Klebsiella pneumoniae,Klebsiella pneumoniae CG43,1244085.15,NA
+RefSoil_805,NC_022571.1,1345695,Bacteria,Firmicutes,Clostridia,Clostridiales,Clostridiaceae,Clostridium,Clostridium saccharobutylicum,Clostridium saccharobutylicum DSM 13864,1345695.7,NA
+RefSoil_806,NC_022653.1,1412898,Bacteria,Firmicutes,Bacilli,Bacillales,Bacillaceae,Bacillus,Bacillus amyloliquefaciens,Bacillus amyloliquefaciens CC178,1412898.1,NA
+RefSoil_807,NC_022657.1,1246995,Bacteria,Actinobacteria,Actinobacteria,Micromonosporales,Micromonosporaceae,Actinoplanes,Actinoplanes friuliensis,Actinoplanes friuliensis DSM 7358,1246995.9,NA
+RefSoil_808,NC_022660.1,1358410,Bacteria,Proteobacteria,Epsilonproteobacteria,Campylobacterales,Campylobacteraceae,Campylobacter,Campylobacter coli,Campylobacter coli 15-537360,1358410.8,NC_022656.1
+RefSoil_809,NC_022663.1,557599,Bacteria,Actinobacteria,Actinobacteria,Corynebacteriales,Mycobacteriaceae,Mycobacterium,Mycobacterium kansasii,Mycobacterium kansasii ATCC 12478,557599.54,NC_022654.1
+RefSoil_810,NC_022738.1,69328,Bacteria,Proteobacteria,Gammaproteobacteria,Pseudomonadales,Pseudomonadaceae,Pseudomonas,,Pseudomonas sp. VLB120,69328.8,NC_022739.1
+RefSoil_811,NC_022781.1,1415784,Bacteria,Firmicutes,Bacilli,Bacillales,Bacillaceae,Bacillus,Bacillus toyonensis,Bacillus toyonensis BCT-7112,1415784.9,"NC_022782.1,NC_022783.1"
+RefSoil_812,NC_022794.1,1399115,Bacteria,Firmicutes,Bacilli,Bacillales,,Exiguobacterium,,Exiguobacterium sp. MH3,1399115.9,NA
+RefSoil_813,NC_022795.1,1123384,Bacteria,Thermotogae,Thermotogae,Thermotogales,Thermotogaceae,Pseudothermotoga,Pseudothermotoga hypogea,Pseudothermotoga hypogea DSM 11164,1123384.5,NA
+RefSoil_814,NC_022873.1,529122,Bacteria,Firmicutes,Bacilli,Bacillales,Bacillaceae,Bacillus,Bacillus thuringiensis,Bacillus thuringiensis YBT-1518,529122.8,"NC_020124.1,NC_022874.1,NC_022875.1,NC_022876.1,NC_022877.1,NC_022882.1"
+RefSoil_815,NC_022904.2,1416914,Bacteria,Proteobacteria,Betaproteobacteria,Burkholderiales,Burkholderiaceae,Pandoraea,Pandoraea pnomenusa,Pandoraea pnomenusa 3kgm,1416914.1,NA
+RefSoil_816,NC_022964.1,1388758,Bacteria,Chloroflexi,Dehalococcoidia,Dehalococcoidales,Dehalococcoidaceae,Dehalococcoides,Dehalococcoides mccartyi,Dehalococcoides mccartyi GY50,1388758.6,NA
+RefSoil_817,NC_022997.1,1029756,Bacteria,Proteobacteria,Alphaproteobacteria,Rhizobiales,Hyphomicrobiaceae,Hyphomicrobium,Hyphomicrobium nitrativorans,Hyphomicrobium nitrativorans NL23,1029756.9,NA
+RefSoil_818,NC_023019.1,1415629,Bacteria,Proteobacteria,Gammaproteobacteria,Pseudomonadales,Pseudomonadaceae,Pseudomonas,Pseudomonas aeruginosa,Pseudomonas aeruginosa MTB-1,1415629.9,NA
+RefSoil_819,NC_023037.2,1429244,Bacteria,Firmicutes,Bacilli,Bacillales,Paenibacillaceae,Paenibacillus,Paenibacillus polymyxa,Paenibacillus polymyxa CR1,1429244.8,NA
+RefSoil_820,NC_023064.1,1415630,Bacteria,Proteobacteria,Gammaproteobacteria,Pseudomonadales,Pseudomonadaceae,Pseudomonas,,Pseudomonas sp. TKP,1415630.8,NA
+RefSoil_821,NC_023073.1,1415165,Bacteria,Firmicutes,Bacilli,Bacillales,Bacillaceae,Bacillus,Bacillus amyloliquefaciens,Bacillus amyloliquefaciens LFB112,1415165.9,NA
+RefSoil_822,NC_023075.1,1435044,Bacteria,Proteobacteria,Gammaproteobacteria,Pseudomonadales,Pseudomonadaceae,Pseudomonas,Pseudomonas monteilii,Pseudomonas monteilii SB3078,1435044.7,NA
+RefSoil_823,NC_023076.1,1435058,Bacteria,Proteobacteria,Gammaproteobacteria,Pseudomonadales,Pseudomonadaceae,Pseudomonas,Pseudomonas monteilii,Pseudomonas monteilii SB3101,1435058.7,NA
+RefSoil_824,NC_023149.1,1427342,Bacteria,Proteobacteria,Gammaproteobacteria,Pseudomonadales,Pseudomonadaceae,Pseudomonas,Pseudomonas aeruginosa,Pseudomonas aeruginosa SCV20265,1427342.8,NA
+RefSoil_825,NZ_CM001165.1,355249,Bacteria,Actinobacteria,Actinobacteria,Streptomycetales,Streptomycetaceae,Streptomyces,,Streptomyces sp. Tu6071,355249.18,NZ_CM001166.1
+RefSoil_826,NZ_CM001763.1,1260626,Bacteria,Proteobacteria,Gammaproteobacteria,Pseudomonadales,Pseudomonadaceae,Pseudomonas,Pseudomonas syringae,Pseudomonas syringae pv. syringae B64,1260626.9,NA
+RefSoil_827,"NZ_CM002024.1,NZ_CM002025.1",1300225,Bacteria,Proteobacteria,Alphaproteobacteria,Rhizobiales,Rhizobiaceae,Agrobacterium,Agrobacterium tumefaciens,Agrobacterium tumefaciens WRT31,"1300225.12,1300225.11",NA
+RefSoil_828,NZ_CM002139.1,1219375,Bacteria,Proteobacteria,Gammaproteobacteria,Xanthomonadales,Xanthomonadaceae,Xanthomonas,Xanthomonas cassavae,Xanthomonas cassavae CFBP 4642,1219375.6,NZ_CM002140.1
+RefSoil_829,NZ_CM002177.1,191292,Bacteria,Actinobacteria,Actinobacteria,Corynebacteriales,Nocardiaceae,Rhodococcus,,Rhodococcus aetherivorans,191292.18,"NZ_CM002178.1,NZ_CM002179.1"
+RefSoil_830,NZ_CM002330.1,1395516,Bacteria,Proteobacteria,Gammaproteobacteria,Pseudomonadales,Pseudomonadaceae,Pseudomonas,Pseudomonas moraviensis,Pseudomonas moraviensis R28-S,1395516.6,NZ_CM002331.1
+RefSoil_831,NZ_CM002395.1,1412844,Bacteria,Firmicutes,Bacilli,Bacillales,Bacillaceae,Bacillus,Bacillus anthracis,Bacillus anthracis 52-G,1412844.6," NZ_CM002396.1,NZ_CM002397.1"
+RefSoil_832,NZ_CM002398.1,1412842,Bacteria,Firmicutes,Bacilli,Bacillales,Bacillaceae,Bacillus,Bacillus anthracis,Bacillus anthracis 9080-G,1412842.6," NZ_CM002399.1,NZ_CM002400.1"
+RefSoil_833,NZ_CM002401.1,1412843,Bacteria,Firmicutes,Bacilli,Bacillales,Bacillaceae,Bacillus,Bacillus anthracis,Bacillus anthracis 8903-G,1412843.6,"NZ_CM002402.1,NZ_CM002403.1"
+RefSoil_834,NZ_CM002755.1,1457195,Bacteria,Proteobacteria,Betaproteobacteria,Burkholderiales,Burkholderiaceae,Ralstonia,Ralstonia solanacearum,Ralstonia solanacearum Rs-10-244,1457195.9,NZ_CM002756.1
+RefSoil_835,NZ_CM002757.1,1394180,Bacteria,Proteobacteria,Betaproteobacteria,Burkholderiales,Burkholderiaceae,Ralstonia,Ralstonia solanacearum,Ralstonia solanacearum Rs-09-161,1394180.1,NZ_CM002758.1
+RefSoil_836,NZ_CM002796.1,682633,Bacteria,Proteobacteria,Alphaproteobacteria,Rhizobiales,Phyllobacteriaceae,Mesorhizobium,Mesorhizobium ciceri,Mesorhizobium ciceri ca181,682633.6,NA
+RefSoil_837,NZ_CP001970.1,743835,Bacteria,Firmicutes,Bacilli,Bacillales,Bacillaceae,Bacillus,Bacillus anthracis,Bacillus anthracis str. A16,743835.6,"NZ_CP001971.1,NZ_CP001972.1"
+RefSoil_838,NZ_CP001974.1,673518,Bacteria,Firmicutes,Bacilli,Bacillales,Bacillaceae,Bacillus,Bacillus anthracis,Bacillus anthracis str. A16R,673518.11,NZ_CP001975.1
+RefSoil_839,NZ_CP002190.1,765869,Bacteria,Proteobacteria,Deltaproteobacteria,Bdellovibrionales,Bdellovibrionaceae,Bdellovibrio,Bdellovibrio bacteriovorus,Bdellovibrio bacteriovorus W,765869.8,NA
+RefSoil_840,NZ_CP002871.1,1010834,Bacteria,Actinobacteria,Actinobacteria,Corynebacteriales,Mycobacteriaceae,Mycobacterium,Mycobacterium tuberculosis,Mycobacterium tuberculosis HKBS1,1010834.6,NA
+RefSoil_841,NZ_CP003181.1,1052004,Bacteria,Proteobacteria,Alphaproteobacteria,Rhodospirillales,Acetobacteraceae,Granulibacter,Granulibacter bethesdensis,Granulibacter bethesdensis CGDNIH3,1052004.6,NA
+RefSoil_842,NZ_CP003915.1,1247726,Bacteria,Proteobacteria,Betaproteobacteria,Burkholderiales,Alcaligenaceae,Advenella,Advenella mimigardefordensis,Advenella mimigardefordensis DPN7,1247726.7,NZ_CP003916.1
+RefSoil_843,NZ_CP003923.1,1246626,Bacteria,Firmicutes,Bacilli,Bacillales,Bacillaceae,Bacillus,Bacillus lehensis,Bacillus lehensis G1,1246626.6,NA
+RefSoil_844,NZ_CP003949.1,543736,Bacteria,Actinobacteria,Actinobacteria,Corynebacteriales,Nocardiaceae,Rhodococcus,Rhodococcus opacus,Rhodococcus opacus PD630,543736.11,"NZ_CP003950.1,NZ_CP003951.1,NZ_CP003952.1,NZ_CP003953.1,NZ_CP003954.1,NZ_CP003955.1,NZ_CP003956.1,NZ_CP003957.1,NZ_CP003958.1"
+RefSoil_845,NZ_CP003999.1,1123862,Bacteria,Proteobacteria,Gammaproteobacteria,Enterobacteriales,Enterobacteriaceae,Klebsiella,Klebsiella pneumoniae,Klebsiella pneumoniae subsp. pneumoniae Kp13,1123862.13,"NZ_CP003996.1,NZ_CP003994.1,NZ_CP003995.1,NZ_CP003997.1,NZ_CP003998.1,NZ_CP004000.1"
+RefSoil_846,NZ_CP004078.1,1268072,Bacteria,Firmicutes,Bacilli,Bacillales,Paenibacillaceae,Paenibacillus,Paenibacillus sabinae,Paenibacillus sabinae T27,1268072.6,NA
+RefSoil_847,"NZ_CP004383.1,NZ_CP004384.1",1249667,Bacteria,Proteobacteria,Betaproteobacteria,Burkholderiales,Burkholderiaceae,Burkholderia,Burkholderia thailandensis,Burkholderia thailandensis USAMRU Malaysia #20,"1249667.8,1249667.9",NA
+RefSoil_848,NZ_CP004870.1,1261129,Bacteria,Firmicutes,Bacilli,Bacillales,Bacillaceae,Bacillus,Bacillus thuringiensis,Bacillus thuringiensis serovar kurstaki str,1261129.8,"NZ_CP004883.1,NZ_CP004878.1,NZ_CP004876.1,NZ_CP004877.1,NZ_CP004871.1,NZ_CP004872.1,NZ_CP004873.1,NZ_CP004874.1,NZ_CP004879.1,NZ_CP004880.1,NZ_CP004881.1,NZ_CP004875.1,NZ_CP004882.1"
+RefSoil_849,NZ_CP006581.1,763057,Bacteria,Proteobacteria,Alphaproteobacteria,Rhizobiales,Phyllobacteriaceae,Mesorhizobium,Mesorhizobium huakuii,Mesorhizobium huakuii 7653R,763057.17,"NZ_CP006582.1,NZ_CP006583.1"
+RefSoil_850,NZ_CP006587.1,1356852,Bacteria,Bacteroidetes,Cytophagia,Cytophagales,Cytophagaceae,Hymenobacter,,Hymenobacter sp. APR13,1356852.7,"NZ_CP006588.1,NZ_CP006589.1,NZ_CP006590.1"
+RefSoil_851,NZ_CP006644.1,1123269,Bacteria,Proteobacteria,Alphaproteobacteria,Sphingomonadales,Sphingomonadaceae,Sphingomonas,Sphingomonas sanxanigenens,Sphingomonas sanxanigenens DSM 19645,1123269.12,NZ_CP011450.1
+RefSoil_852,NZ_CP006696.1,155920,Bacteria,Proteobacteria,Gammaproteobacteria,Xanthomonadales,Xanthomonadaceae,Xylella,Xylella fastidiosa,Xylella fastidiosa subsp. sandyi Ann-1,155920.1,NZ_CP006697.1
+RefSoil_853,NZ_CP006742.1,1392837,Bacteria,Firmicutes,Bacilli,Bacillales,Bacillaceae,Bacillus,Bacillus anthracis,Bacillus anthracis str. SVA11,1392837.6,"NZ_CP006743.1,NZ_CP006744.1"
+RefSoil_854,NZ_CP006772.1,1400053,Bacteria,Bacteroidetes,Bacteroidia,Bacteroidales,,,,Bacteroidales bacterium CF,1400053.7,NA
+RefSoil_855,NZ_CP006850.1,1415166,Bacteria,Actinobacteria,Actinobacteria,Corynebacteriales,Nocardiaceae,Nocardia,Nocardia nova,Nocardia nova SH22a,1415166.9,NA
+RefSoil_856,NZ_CP006872.1,1413214,Bacteria,Firmicutes,Bacilli,Bacillales,Paenibacillaceae,Paenibacillus,Paenibacillus polymyxa,Paenibacillus polymyxa SQR-21,1413214.8,NA
+RefSoil_857,NZ_CP006890.1,1423138,Bacteria,Firmicutes,Bacilli,Bacillales,Bacillaceae,Bacillus,Bacillus methylotrophicus,Bacillus methylotrophicus SQR9,1423138.6,NA
+RefSoil_858,"NZ_CP006961.1,NZ_CP006962.1",1004954,Bacteria,Proteobacteria,Alphaproteobacteria,Rhizobiales,Brucellaceae,Brucella,Brucella suis,Brucella suis bv. 1 str. S2,"1004954.9,1004954.1",NA
+RefSoil_859,NZ_CP006983.1,1408273,Bacteria,Proteobacteria,Gammaproteobacteria,Pseudomonadales,Pseudomonadaceae,Pseudomonas,Pseudomonas aeruginosa,Pseudomonas aeruginosa LESB65,1408273.6,NA
+RefSoil_860,NZ_CP006986.1,1432050,Bacteria,Proteobacteria,Alphaproteobacteria,Rhizobiales,Rhizobiaceae,Rhizobium,Rhizobium etli,Rhizobium etli bv. mimosae str. IE4771,1432050.11,"NZ_CP006987.1,NZ_CP006988.1,NZ_CP006989.1,NZ_CP006990.1,NZ_CP006991.1"
+RefSoil_861,NZ_CP007033.1,871738,Bacteria,Firmicutes,Clostridia,Clostridiales,Peptococcaceae,Dehalobacter,Dehalobacter restrictus,Dehalobacter restrictus DSM 9455,871738.7,NA
+RefSoil_862,NZ_CP007039.1,1441629,Bacteria,Proteobacteria,Gammaproteobacteria,Pseudomonadales,Pseudomonadaceae,Pseudomonas,Pseudomonas cichorii,Pseudomonas cichorii JBC1,1441629.7,NA
+RefSoil_863,NZ_CP007044.2,1441930,Bacteria,Proteobacteria,Gammaproteobacteria,Enterobacteriales,Enterobacteriaceae,Chania,Chania multitudinisentens,Chania multitudinisentens RB-25,1441930.11,NA
+RefSoil_864,NZ_CP007045.1,754523,Bacteria,Proteobacteria,Alphaproteobacteria,Rhizobiales,Rhizobiaceae,Rhizobium,Rhizobium leguminosarum,Rhizobium leguminosarum bv. trifolii WSM1689,754523.1," NZ_CP007046.1,NZ_CP007047.1,NZ_CP007048.1,NZ_CP007049.1,NZ_CP007050.1"
+RefSoil_865,NZ_CP007067.1,1033991,Bacteria,Proteobacteria,Alphaproteobacteria,Rhizobiales,Rhizobiaceae,Rhizobium,Rhizobium leguminosarum,Rhizobium leguminosarum bv. trifolii CB782,1033991.1,"NZ_CP007068.1,NZ_CP007069.1,NZ_CP007070.1"
+RefSoil_866,NZ_CP007139.1,661478,Bacteria,Armatimonadetes,Fimbriimonadia,Fimbriimonadales,Fimbriimonadaceae,Fimbriimonas,Fimbriimonas ginsengisoli,Fimbriimonas ginsengisoli Gsoil 348,661478.7,NA
+RefSoil_867,NZ_CP007155.1,1449976,Bacteria,Actinobacteria,Actinobacteria,Pseudonocardiales,Pseudonocardiaceae,Kutzneria,Kutzneria albida,Kutzneria albida DSM 43870,1449976.8,NA
+RefSoil_868,NZ_CP007172.1,1457190,Bacteria,Firmicutes,Bacilli,Bacillales,Listeriaceae,Listeria,Listeria ivanovii,Listeria ivanovii WSLC3009,1457190.6,NA
+RefSoil_869,NZ_CP007201.1,1150621,Bacteria,Proteobacteria,Epsilonproteobacteria,Campylobacterales,Campylobacteraceae,Sulfurospirillum,Sulfurospirillum multivorans,Sulfurospirillum multivorans DSM 12446,1150621.25,NA
+RefSoil_870,NZ_CP007208.1,1288,Bacteria,Firmicutes,Bacilli,Bacillales,Staphylococcaceae,Staphylococcus,,Staphylococcus xylosus,1288.91,NZ_CP007209.1
+RefSoil_871,"NZ_CP007225.1,NZ_CP007226.1",1435057,Bacteria,Proteobacteria,Alphaproteobacteria,Rhizobiales,Rhizobiaceae,Agrobacterium,Agrobacterium tumefaciens,Agrobacterium tumefaciens LBA4213 (Ach5),"1435057.12,1435057.11","NZ_CP007227.1,NZ_CP007228.1"
+RefSoil_872,NZ_CP007230.1,367190,Bacteria,Proteobacteria,Gammaproteobacteria,Enterobacteriales,Enterobacteriaceae,Yersinia,,Yersinia similis,367190.1,NZ_CP007231.1
+RefSoil_873,"NZ_CP007236.1,NZ_CP007237.1",1416753,Bacteria,Proteobacteria,Alphaproteobacteria,Rhizobiales,Rhizobiaceae,Ensifer,Ensifer adhaerens,Ensifer adhaerens OV14,"1416753.9,1416753.8","NZ_CP007239.1,NZ_CP007238.1"
+RefSoil_874,NZ_CP007243.1,1441628,Bacteria,Nitrospirae,Nitrospira,Nitrospirales,Nitrospiraceae,Leptospirillum,Leptospirillum ferriphilum,Leptospirillum ferriphilum YSK,1441628.8,NA
+RefSoil_875,NZ_CP007409.1,1404258,Bacteria,Firmicutes,Bacilli,Bacillales,Bacillaceae,Bacillus,Bacillus subtilis,Bacillus subtilis subsp. subtilis str. O,1404258.7,NA
+RefSoil_876,NZ_CP007410.1,930166,Bacteria,Proteobacteria,Gammaproteobacteria,Pseudomonadales,Pseudomonadaceae,Pseudomonas,,Pseudomonas brassicacearum,930166.16,NA
+RefSoil_877,NZ_CP007441.1,316,Bacteria,Proteobacteria,Gammaproteobacteria,Pseudomonadales,Pseudomonadaceae,Pseudomonas,,Pseudomonas stutzeri,316.114,NA
+RefSoil_878,NZ_CP007452.1,1286171,Bacteria,Firmicutes,Clostridia,Clostridiales,Eubacteriaceae,Eubacterium,Eubacterium acidaminophilum,Eubacterium acidaminophilum DSM 3953,1286171.6,NZ_CP007453.1
+RefSoil_879,NZ_CP007481.1,1286528,Bacteria,Proteobacteria,Alphaproteobacteria,Rickettsiales,Anaplasmataceae,Neorickettsia,Neorickettsia helminthoeca,Neorickettsia helminthoeca str. Oregon,1286528.8,NA
+RefSoil_880,NZ_CP007492.1,1639,Bacteria,Firmicutes,Bacilli,Bacillales,Listeriaceae,Listeria,,Listeria monocytogenes,1639.1298,NA
+RefSoil_881,NZ_CP007499.1,1280,Bacteria,Firmicutes,Bacilli,Bacillales,Staphylococcaceae,Staphylococcus,,Staphylococcus aureus,1280.5054,NZ_CP007500.1
+RefSoil_882,NZ_CP007506.2,93220,Bacteria,Proteobacteria,Betaproteobacteria,Burkholderiales,Burkholderiaceae,Pandoraea,,Pandoraea pnomenusa,93220.31,NA
+RefSoil_883,NZ_CP007514.1,42256,Bacteria,Actinobacteria,Rubrobacteria,Rubrobacterales,Rubrobacteraceae,Rubrobacter,,Rubrobacter radiotolerans,42256.6,"NZ_CP007515.1,NZ_CP007516.1,NZ_CP007517.1"
+RefSoil_884,NZ_CP007546.1,1421338,Bacteria,Proteobacteria,Gammaproteobacteria,Enterobacteriales,Enterobacteriaceae,Enterobacter,Enterobacter asburiae,Enterobacter asburiae L1,1421338.1,NA
+RefSoil_885,NZ_CP007557.1,1333848,Bacteria,Proteobacteria,Gammaproteobacteria,Enterobacteriales,Enterobacteriaceae,Citrobacter,Citrobacter freundii,Citrobacter freundii CFNIH1,1333848.9,NZ_CP007558.1
+RefSoil_886,NZ_CP007569.1,476282,Bacteria,Proteobacteria,Alphaproteobacteria,Rhizobiales,Bradyrhizobiaceae,Bradyrhizobium,Bradyrhizobium japonicum,Bradyrhizobium japonicum SEMIA 5079,476282.1,NA
+RefSoil_887,NZ_CP007574.1,68570,Bacteria,Actinobacteria,Actinobacteria,Streptomycetales,Streptomycetaceae,Streptomyces,,Streptomyces albulus,68570.12,NZ_CP007575.1
+RefSoil_888,NZ_CP007597.1,216778,Bacteria,Proteobacteria,Gammaproteobacteria,Xanthomonadales,Xanthomonadaceae,Stenotrophomonas,,Stenotrophomonas rhizophila,216778.15,NA
+RefSoil_889,NZ_CP007600.1,1639,Bacteria,Firmicutes,Bacilli,Bacillales,Listeriaceae,Listeria,,Listeria monocytogenes,1639.1299,NA
+RefSoil_890,NZ_CP007607.1,570416,Bacteria,Firmicutes,Bacilli,Bacillales,Bacillaceae,Bacillus,Bacillus thuringiensis,Bacillus thuringiensis serovar kurstaki str,570416.13,"NZ_CP007612.1,NZ_CP007608.1,NZ_CP007615.1,NZ_CP007616.1,NZ_CP007613.1,NZ_CP007609.1,NZ_CP007610.1,NZ_CP007611.1,NZ_CP007614.1"
+RefSoil_891,NZ_CP007618.1,1392,Bacteria,Firmicutes,Bacilli,Bacillales,Bacillaceae,Bacillus,,Bacillus anthracis,1392.27,NZ_CP007617.1
+RefSoil_892,NZ_CP007620.1,303,Bacteria,Proteobacteria,Gammaproteobacteria,Pseudomonadales,Pseudomonadaceae,Pseudomonas,,Pseudomonas putida,303.193,NA
+RefSoil_893,NZ_CP007627.1,96345,Bacteria,Bacteroidetes,Flavobacteriia,Flavobacteriales,Flavobacteriaceae,Flavobacterium,,Flavobacterium psychrophilum,96345.74,NA
+RefSoil_894,NZ_CP007638.1,1495331,Bacteria,Proteobacteria,Gammaproteobacteria,Pseudomonadales,Pseudomonadaceae,Pseudomonas,,Pseudomonas sp. WCS374,1495331.7,NA
+RefSoil_895,NZ_CP007656.1,959,Bacteria,Proteobacteria,Deltaproteobacteria,Bdellovibrionales,Bdellovibrionaceae,Bdellovibrio,,Bdellovibrio bacteriovorus,959.13,NA
+RefSoil_896,"NZ_CP007663.1,NZ_CP007662.1",235,Bacteria,Proteobacteria,Alphaproteobacteria,Rhizobiales,Brucellaceae,Brucella,,Brucella abortus,"235.47,235.46",NA
+RefSoil_897,NZ_CP007666.1,261591,Bacteria,Firmicutes,Bacilli,Bacillales,Bacillaceae,Bacillus,Bacillus anthracis,Bacillus anthracis str. Vollum,261591.14,"NZ_CP007664.1,NZ_CP007665.1"
+RefSoil_898,"NZ_CP007681.1,NZ_CP007680.1",235,Bacteria,Proteobacteria,Alphaproteobacteria,Rhizobiales,Brucellaceae,Brucella,,Brucella abortus,"235.48,235.49",NA
+RefSoil_899,NZ_CP007704.1,1392,Bacteria,Firmicutes,Bacilli,Bacillales,Bacillaceae,Bacillus,,Bacillus anthracis,1392.271,"NZ_CP007702.1,NZ_CP007703.1"
+RefSoil_900,"NZ_CP007705.1,NZ_CP007706.1",520455,Bacteria,Proteobacteria,Alphaproteobacteria,Rhizobiales,Brucellaceae,Brucella,Brucella abortus,Brucella abortus bv. 9 str. C68,"520455.11,520455.1",NA
+RefSoil_901,NZ_CP007739.1,796606,Bacteria,Firmicutes,Bacilli,Bacillales,Bacillaceae,Bacillus,Bacillus methanolicus,Bacillus methanolicus MGA3,796606.7,"NZ_CP007741.1,NZ_CP007740.1"
+RefSoil_902,"NZ_CP007765.1,NZ_CP007764.1",520450,Bacteria,Proteobacteria,Alphaproteobacteria,Rhizobiales,Brucellaceae,Brucella,Brucella abortus,Brucella abortus bv. 2 str. 86/8/59,"520450.1,520450.11",NA
+RefSoil_903,"NZ_CP007783.1,NZ_CP007784.1,NZ_CP007782.1",95486,Bacteria,Proteobacteria,Betaproteobacteria,Burkholderiales,Burkholderiaceae,Burkholderia,,Burkholderia cenocepacia,"95486.82,95486.83,95486.84",NA
+RefSoil_904,"NZ_CP007787.1,NZ_CP007786.1,NZ_CP007785.1",292,Bacteria,Proteobacteria,Betaproteobacteria,Burkholderiales,Burkholderiaceae,Burkholderia,,Burkholderia cepacia,"292.11,292.111,292.109",NA
+RefSoil_905,"NZ_CP007789.1,NZ_CP007788.1",520465,Bacteria,Proteobacteria,Alphaproteobacteria,Rhizobiales,Brucellaceae,Brucella,Brucella melitensis,Brucella melitensis bv. 2 str. 63/9,"520465.1,520465.9",NA
+RefSoil_906,NZ_CP007793.1,192,Bacteria,Proteobacteria,Alphaproteobacteria,Rhodospirillales,Rhodospirillaceae,Azospirillum,,Azospirillum brasilense,192.52,"NZ_CP007794.1,NZ_CP007795.1,NZ_CP007796.1,NZ_CP007797.1,NZ_CP007798.1"
+RefSoil_907,NZ_CP007800.1,1232554,Bacteria,Firmicutes,Bacilli,Bacillales,Bacillaceae,Bacillus,Bacillus subtilis,Bacillus subtilis subsp. subtilis str. JH64,1232554.5,NA
+RefSoil_908,NZ_CP007803.1,1249615,Bacteria,Actinobacteria,Actinobacteria,Corynebacteriales,Mycobacteriaceae,Mycobacterium,Mycobacterium tuberculosis,Mycobacterium tuberculosis K,1249615.7,NA
+RefSoil_909,NZ_CP008696.1,587753,Bacteria,Proteobacteria,Gammaproteobacteria,Pseudomonadales,Pseudomonadaceae,Pseudomonas,,Pseudomonas chlororaphis,587753.16,NA
+RefSoil_910,NZ_CP008698.1,1221328,Bacteria,Firmicutes,Bacilli,Bacillales,Bacillaceae,Bacillus,Bacillus subtilis,Bacillus subtilis subsp. subtilis str. AG1839,1221328.7,NA
+RefSoil_911,"NZ_CP008730.1,NZ_CP008729.1,NZ_CP008728.1",87883,Bacteria,Proteobacteria,Betaproteobacteria,Burkholderiales,Burkholderiaceae,Burkholderia,,Burkholderia multivorans,"87883.75,87883.74,87883.73",NA
+RefSoil_912,NZ_CP008752.1,1392,Bacteria,Firmicutes,Bacilli,Bacillales,Bacillaceae,Bacillus,,Bacillus anthracis,1392.272,NA
+RefSoil_913,"NZ_CP008760.1,NZ_CP008762.1,NZ_CP008761.1",266265,Bacteria,Proteobacteria,Betaproteobacteria,Burkholderiales,Burkholderiaceae,Burkholderia,Burkholderia xenovorans,Burkholderia xenovorans LB400,"266265.29,266265.27,266265.28",NA
+RefSoil_914,NZ_CP008841.1,571,Bacteria,Proteobacteria,Gammaproteobacteria,Enterobacteriales,Enterobacteriaceae,Klebsiella,,Klebsiella oxytoca,571.119,"NZ_CP008842.1,NZ_CP008843.1,NZ_CP008844.1,NZ_CP008845.1"
+RefSoil_915,NZ_CP008846.1,1392,Bacteria,Firmicutes,Bacilli,Bacillales,Bacillaceae,Bacillus,,Bacillus anthracis,1392.273,"NZ_CP008847.1,NZ_CP008848.1"
+RefSoil_916,NZ_CP008852.1,484770,Bacteria,Firmicutes,Negativicutes,Selenomonadales,Veillonellaceae,Pelosinus,,Pelosinus sp. UFO1,484770.6,NA
+RefSoil_917,NZ_CP008884.1,1217721,Bacteria,Proteobacteria,Gammaproteobacteria,Xanthomonadales,Rhodanobacteraceae,Dyella,Dyella japonica,Dyella japonica A8,1217721.9,NA
+RefSoil_918,NZ_CP008896.1,294,Bacteria,Proteobacteria,Gammaproteobacteria,Pseudomonadales,Pseudomonadaceae,Pseudomonas,,Pseudomonas fluorescens,294.196,NA
+RefSoil_919,NZ_CP008920.1,588,Bacteria,Proteobacteria,Gammaproteobacteria,Enterobacteriales,Enterobacteriaceae,Providencia,,Providencia stuartii,588.15,NZ_CP008919.1
+RefSoil_920,NZ_CP008923.1,1719,Bacteria,Actinobacteria,Actinobacteria,Corynebacteriales,Corynebacteriaceae,Corynebacterium,,Corynebacterium pseudotuberculosis,1719.615,NA
+RefSoil_921,NZ_CP008926.1,1314,Bacteria,Firmicutes,Bacilli,Lactobacillales,Streptococcaceae,Streptococcus,,Streptococcus pyogenes,1314.215,NA
+RefSoil_922,NZ_CP008943.1,633,Bacteria,Proteobacteria,Gammaproteobacteria,Enterobacteriales,Enterobacteriaceae,Yersinia,,Yersinia pseudotuberculosis,633.72,NA
+RefSoil_923,NZ_CP008957.1,155864,Bacteria,Proteobacteria,Gammaproteobacteria,Enterobacteriales,Enterobacteriaceae,Escherichia,Escherichia coli,Escherichia coli O157:H7 str. EDL933,155864.48,NZ_CP008958.1
+RefSoil_924,"NZ_HF545616.1,NZ_HF545617.1",1160721,Bacteria,Firmicutes,Clostridia,Clostridiales,Ruminococcaceae,Ruminococcus,,Ruminococcus bicirculans,"1160721.14,1160721.15",NA
+RefSoil_925,NZ_HG326223.1,273526,Bacteria,Proteobacteria,Gammaproteobacteria,Enterobacteriales,Enterobacteriaceae,Serratia,Serratia marcescens,Serratia marcescens subsp. marcescens Db11,273526.17,NA
+RefSoil_926,NZ_HG916852.1,348824,Bacteria,Proteobacteria,Alphaproteobacteria,Rhizobiales,Rhizobiaceae,Rhizobium,,Rhizobium sp. LPU83,348824.8,"NZ_HG916853.1,NZ_HG916854.1,NZ_HG916855.1"
+RefSoil_927,NZ_HG938353.1,1028800,Bacteria,Proteobacteria,Alphaproteobacteria,Rhizobiales,Rhizobiaceae,Neorhizobium,Neorhizobium galegae,Neorhizobium galegae bv. orientalis str. HAMB,1028800.8,NZ_HG938354.1
+RefSoil_928,NZ_HG938355.1,1028801,Bacteria,Proteobacteria,Alphaproteobacteria,Rhizobiales,Rhizobiaceae,Neorhizobium,Neorhizobium galegae,Neorhizobium galegae bv. officinalis bv,1028801.7,"NZ_HG938356.1,NZ_HG938357.1"
