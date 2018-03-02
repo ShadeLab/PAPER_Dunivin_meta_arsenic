@@ -121,6 +121,8 @@ no <- c("arsA (1)", "None (1)", "rplB (38)")
     geom_point(data = subset(refsoil.tidy.annotated.n, !Gene_n %in% no), aes(x = Gene_n, y = total.abund), color = "springgreen3", shape = 23, size = 4) +
     ylab("Normalized abundance") +
     theme_bw(base_size = 16) +
+    xlab("Gene") + 
     theme(axis.text.x = element_text(angle = 45,
                                      hjust=0.99,vjust=0.99)))
 ggsave(comp.plot.refsoil.outlier, filename = paste(wd, "/figures/refsoil_metaG_comparison_outlier.eps", sep = ""))
+

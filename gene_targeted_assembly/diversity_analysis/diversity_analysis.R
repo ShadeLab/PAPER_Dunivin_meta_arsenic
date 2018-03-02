@@ -255,15 +255,14 @@ gene_abundance_summary_order$gene_f = factor(gene_abundance_summary_order$Gene, 
 
 #plot bar graph with SITE means
 (pointplot.site <- ggplot(subset(gene_abundance_summary_order, subset = Gene !="rplB")) +
-    geom_jitter(height = 0, size = 2.5,alpha = 0.7, aes(x = order, y = Total, color = Site)) +
+    geom_jitter(height = 0, size = 2.5, aes(x = order, y = Total, color = Site)) +
     facet_wrap(~gene_f, ncol = 2, scales = "free") +
     ylab("rplB-normalized abundance") +
     theme_bw(base_size = 12) +
     xlab("Site")+
     scale_color_manual(values = c("#808000", "#aa6e28", "#ffe119", "#f58231", "#aaffc3", "#fabebe", "#d2f53c", "#008080", "#3cb44b", "#ffd8b1", "#808080", "#911eb4", "#000080", "#46f0f0", "#0082c8", "grey75")) +
     theme(axis.text.x=element_blank(),
-          axis.ticks.x=element_blank(),
-          strip.text.x = element_blank()))
+          axis.ticks.x=element_blank()))
 
 #save bar graph with SITE means
 ggsave(pointplot.site, filename = paste(wd, "/figures/ordered.point.site2.png", sep= ""), height = 5, units = "in")
@@ -281,35 +280,18 @@ gene_abundance_biome <- gene_abundance_summary %>%
 
 gene_abundance_biome$Gene = factor(gene_abundance_biome$Gene, levels=c("acr3", "arsB", "arsC (trx)", "arsC (grx)", "arsD", "arsM", "aioA", "arrA", "arxA"))
 
-gene_abundance_biome$Biome <- factor(gene_abundance_biome$Biome, levels = c("non-agricultural", "disturbance","agricultural","permafrost", "mangrove"))
+#gene_abundance_biome$Biome <- factor(gene_abundance_biome$Biome, levels = c("non-agricultural", "disturbance","agricultural","permafrost", "mangrove"))
 
-gene_abundance_biome$Site <- factor(gene_abundance_biome$Site, levels = gene_abundance_biome$Site[order(gene_abundance_biome$Biome)])
+#gene_abundance_biome$Site <- factor(gene_abundance_biome$Site, levels = gene_abundance_biome$Site[order(gene_abundance_biome$Biome)])
 
-ggplot(subset(gene_abundance_biome, subset = Gene !="rplB"), aes(x = Site, y = Mean, fill = Gene)) +
+(relabund.plot <- ggplot(subset(gene_abundance_biome, subset = Gene !="rplB"), aes(x = Site, y = Mean, fill = Gene)) +
   geom_bar(stat = "identity", position = "fill") +
-  scale_fill_brewer(palette = "Set3") +
+  scale_fill_manual(values = c("#8BD1C4", "#F98072", "#F3A955", "#80B1D3", "#FFFFB3", "#B9E563", "#919191", "#C58CDC", "#FBB8DA")) +
   ylab("Relative Abundance") +
   theme_bw(base_size = 12) +
-  theme(axis.text.x = element_text(angle = 45, hjust = 1, vjust = 1))
+  theme(axis.text.x = element_text(angle = 45, hjust = 1, vjust = 1)))
 
-#plot gene distribution
-gene_abundance_summary_tot <- gene_abundance_summary %>%
-  subset(Gene != "rplB") %>%
-  group_by(Biome, Site, Sample) %>%
-  summarise(SiteTotal = sum(Total)) 
-
-gene_abundance_summary_tot$Biome_f <- factor(gene_abundance_summary_tot$Biome, levels = c("non-agricultural", "disturbance","agricultural","permafrost", "mangrove"))
-
-(barplot.site <- ggplot(gene_abundance_summary_tot,
-                        aes(x = Biome_f, y = SiteTotal)) +
-    geom_boxplot() +
-    geom_jitter(height = 0, aes(color = Site), size = 3) +
-    scale_color_manual(values = c("#808000", "#aa6e28", "#ffe119", "#f58231", "#aaffc3", "#fabebe", "#d2f53c", "#008080", "#3cb44b", "#ffd8b1", "#808080", "#911eb4", "#000080", "#46f0f0", "#0082c8", "grey75")) +
-    ylab("Total gene count (normalized to rplB)") +
-    theme_bw(base_size = 12) +
-    #facet_wrap(~Gene, scales = "free_y") +
-    theme(axis.text.x = element_text(angle = 45, size = 12, 
-                                     hjust=0.99,vjust=0.99)))
+ggsave(relabund.plot, filename = paste(wd, "/figures/relative_abundance.eps", sep = ""), width = 5.5, height = 4, units = "in")
 
 #######################################
 #COMMUNITY COMPOSITION ANALYSIS (rplB)#
@@ -371,7 +353,6 @@ history <- melt %>%
                                                  hjust=0.99,vjust=0.99))))
 
 #save full community structure
-ggsave(phylum.plot, filename = paste(wd, "/figures/community.structure.full.png", sep=""), width = 12, height = 6)
 ggsave(phylum.plot, filename = paste(wd, "/figures/community.structure.full.eps", sep=""), width = 12, height = 6)
 
 #extract 6 most abundant phyla
@@ -383,14 +364,13 @@ top.phyla <- c("Proteobacteria", "Actinobacteria", "Verrucomicrobia", "Firmicute
 (phylum.plot.top=(ggplot(subset(history, subset = Phylum %in% top.phyla),
                          aes(x=Site, y=Average, fill = Phylum)) +
                     geom_bar(stat = "identity") +
-                    scale_fill_brewer(palette = "Dark2") +
+                    scale_fill_manual(values = c("#FDB462", "#F4CAE4", "#999999", "#E6AB02", "#7FC97F", "#666666")) +
                     labs(x="Phylum", y="Mean relative abundance") +
-                    theme_bw(base_size = 11) +
+                    theme_bw(base_size = 12) +
                     theme(axis.text.x = element_text(angle = 45, size = 10, 
                                                      hjust=0.99,vjust=0.99))))
 
 #save plot of top phyla
-ggsave(phylum.plot.top, filename = paste(wd, "/figures/community.structure.top.png", sep=""))
 ggsave(phylum.plot.top, filename = paste(wd, "/figures/community.structure.top.eps", sep=""), units = "in", width = 6, height = 4)
 
 ################################
@@ -463,15 +443,20 @@ gene_abundance_cast_2_melt <- gene_abundance_cast_2 %>%
   mutate(Sample = rownames(.)) %>%
   melt(id.vars = "Sample", variable.name = "OTU", value.name = "NormalizedAbundance") %>%
   separate(OTU, into = "Gene", by = "_", remove = FALSE) %>%
-  mutate(NormalizedAbundance = ifelse(NormalizedAbundance == 0, NA, NormalizedAbundance))
+  mutate(NormalizedAbundance = ifelse(NormalizedAbundance == 0, NA, NormalizedAbundance)) %>%
+  mutate(OTU = gsub("arsCglut", "arsC (grx)", OTU), 
+         OTU = gsub("arsCthio", "arsC (trx)", OTU), 
+         OTU = gsub("_", " - ", OTU))
 
 #plot data
-ggplot(gene_abundance_cast_2_melt, aes(y = OTU, x = Sample)) +
+(otu.shared <- ggplot(gene_abundance_cast_2_melt, aes(y = OTU, x = Sample)) +
   geom_point(aes(size = NormalizedAbundance, color = Sample)) +
   #facet_wrap(~Gene, scales = "free_x") +
   theme_light() +
   theme(axis.text.x = element_blank()) +
-  scale_color_manual(values = c("#808000", "#ffe119", "#f58231", "#aaffc3", "#fabebe", "#d2f53c", "#008080", "#3cb44b", "#ffd8b1", "#808080", "#911eb4", "#000080", "#46f0f0", "#0082c8", "grey75"))
+  scale_color_manual(values = c("#808000", "#ffe119", "#f58231", "#aaffc3", "#fabebe", "#d2f53c", "#008080", "#3cb44b", "#ffd8b1", "#808080", "#911eb4", "#000080", "#46f0f0", "#0082c8", "grey75")))
+
+ggsave(otu.shared, filename = paste(wd, "/figures/shared.otus.eps", sep = ""), height = 5.5, width = 5, units = "in")
 
 ##############################
 #Community membership v. AsRG OLDDDDDDDDD#

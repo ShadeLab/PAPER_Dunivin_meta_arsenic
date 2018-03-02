@@ -130,12 +130,12 @@ ncbi.sum <- ncbi %>%
                                      y = phy.n/922)) +
   geom_bar(stat = "identity", aes(fill = Phylum)) +
   scale_fill_manual(values = color) +
-  theme_bw(base_size = 12) +
+  theme_bw(base_size = 10) +
   ylab("Proportion of Genomes") +
   theme(axis.text.x = element_text(angle = 60, hjust = 1)))
 
 #save plot
-ggsave(refsoil.tot, filename = paste(wd, "/figures/RefSoil.comp.eps", sep = ""), width = 5)
+ggsave(refsoil.tot, filename = paste(wd, "/figures/RefSoil.comp.eps", sep = ""), width = 4.5, height = 4)
 
 #######################################################
 #HOW MANY COPIES OF ASRGS ARE PRESENT IN SOIL GENOMES?#
@@ -144,28 +144,25 @@ data.sum <- data.tax %>%
   group_by(Phylum,`RefSoil ID`, Gene) %>%
   summarise(Gene.count = length(Gene))
 
-(gene.hist <- ggplot(subset(data.sum, Gene !="None"), aes(x = Gene.count, fill = Gene)) +
-  geom_bar(color = "black") +
+(gene.hist <- ggplot(subset(data.sum, Gene !="None"), aes(x = Gene.count)) +
+  geom_bar(fill = "black") +
   facet_wrap(~Gene, scales = "free_y") +
-  scale_fill_brewer(palette = "Set3") +
   scale_x_continuous(breaks = c(1,3,5,7,9,11)) +
   ylab("Number of genomes") +
   xlab("Number of gene copies") +
   theme_bw(base_size = 12))
 
 #save plot
-ggsave(gene.hist, filename = paste(wd, "/figures/gene.historgram.eps", sep = ""), width = 10)
+ggsave(gene.hist, filename = paste(wd, "/figures/gene.historgram.eps", sep = ""), width = 5.5, height = 4, units = "in")
 
 #check number with just plasmids
 (plasmid.hist <- ggplot(subset(data.taxREL, Gene !="None"), aes(x = plasmid, fill = Gene)) +
     geom_bar(color = "black") +
     facet_wrap(~Gene, scales = "free_y") +
     scale_fill_brewer(palette = "Set3") +
-    scale_x_continuous(breaks = c(1,3,5,7,9,11)) +
+    scale_x_continuous(breaks = c(1,2,3),limits = c(0.5,3.5)) +
     ylab("Number of genomes") +
     xlab("Number of gene copies") +
-    xlim(0, NA) +
-    ylim(0,35) +
     theme_bw(base_size = 12))
 
 #save plot
@@ -240,11 +237,31 @@ data.sum.ncbi <- data.taxREL %>%
   dcast(`RefSoil ID` ~ Gene+Element, value.var = "Gene.count")
 
 #get refsoil ids for all itol leaves
-ncbi.itol <- ncbi[ncbi$NCBI.ID %in% itol$NCBI.ID,]
+ncbi.itol <- ncbi.tidy[ncbi.tidy$NCBI.ID %in% itol$NCBI.ID,]
 
 itol.annotated <- itol %>%
   left_join(ncbi.itol, by = "NCBI.ID") %>%
   left_join(data.sum.ncbi, by = "RefSoil ID")
+
+#summarise for table export to go along with tree
+itol.phy.summary <- itol.annotated %>%
+  group_by(Phylum) %>%
+  summarise(phy.n = length(Phylum))
+
+itol.summary <- itol.annotated %>%
+  left_join(itol.phy.summary, by = "Phylum") %>%
+  select(Phylum, phy.n, acr3_chromosome:None_plasmid) %>%
+  melt(id.vars = c("Phylum", "phy.n")) %>%
+  mutate(value = ifelse(is.na(value), 0, value),
+         value= ifelse(value > 0, 1, value)) %>%
+  group_by(Phylum, phy.n, variable) %>%
+  summarise(Total = sum(value)) %>%
+  ungroup() %>%
+  mutate(Proportion = Total/phy.n * 100,
+         Phylum = paste(Phylum, " (", phy.n, ")", sep = "")) %>%
+  dcast(Phylum ~ variable)
+
+write.table(itol.summary, file = paste(wd, "/output/itol_summart.csv", sep = ""), quote = FALSE, sep = ",", col.names = TRUE, row.names = FALSE)
 
 #replace values for iTOL
 #0 = open shape, 1 = closed shape; -1 = nothing

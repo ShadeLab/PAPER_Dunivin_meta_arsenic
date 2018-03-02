@@ -35,9 +35,14 @@ data <- data %>%
   mutate(perc.ali = length / q.length)
 
 #plot data quality distribution
-ggplot(data, aes(x = perc.ali, y = score1)) +
+(quality <- ggplot(data, aes(x = perc.ali, y = score1)) +
   geom_point(alpha = 0.5) +
-  facet_wrap(~Gene, scales = "free_y")
+  facet_wrap(~Gene, scales = "free_y") +
+    ylab("Score") +
+    xlab("Percent alignment") +
+    theme_bw(base_size = 10))
+
+ggsave(quality, filename = paste(wd, "/figures/search.quality.png", sep = ""), width = 5.5, height = 4, units = "in")
 
 #remove rows that do not have at least 90% 
 #of hmm length (std)
