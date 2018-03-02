@@ -373,6 +373,7 @@ history <- melt %>%
 #save full community structure
 ggsave(phylum.plot, filename = paste(wd, "/figures/community.structure.full.png", sep=""), width = 12, height = 6)
 ggsave(phylum.plot, filename = paste(wd, "/figures/community.structure.full.eps", sep=""), width = 12, height = 6)
+
 #extract 6 most abundant phyla
 #top 6 were chosen so that at least
 #70% of each community was represented
@@ -428,6 +429,49 @@ ann_colors = list(
 
 
 pheatmap(t(heatmap.cast), cluster_rows = TRUE, cluster_cols = FALSE, clustering_method = "complete", color = hc(100), dendrogram = "row", scale = "none", trace = "none", legend = TRUE, clustering_callback = callback, annotation_row = colors.otu.2_annotated, annotation_colors = ann_colors, show_rownames = FALSE)
+
+#####################
+#SHARED OTU ANALYSIS#
+#####################
+gene_abundance_non <- gene_abundance[!grepl("rplB.", gene_abundance$OTU),]
+
+gene_abundance_non <- gene_abundance_non %>%
+  left_join(meta, by = "Sample") %>%
+  group_by(Site, Gene, OTU) %>%
+  summarise(MeanRelativeAbundance = mean(RelativeAbundance))
+
+gene_abundance_cast <- gene_abundance_non %>%
+  dcast(Site ~ OTU, value.var = "MeanRelativeAbundance")
+
+rownames(gene_abundance_cast) <- gene_abundance_cast$Site
+gene_abundance_cast <- select(gene_abundance_cast, -Site)
+
+#make PA matrix
+gene_abundance_castPA <- (gene_abundance_cast > 0)*1
+
+#list all otus present in > 1 site
+gene_abundance_castPA_2 <- gene_abundance_castPA[,which(colSums(gene_abundance_castPA) > 2)]
+
+#slim gene_abundance based on site presence
+gene_abundance_cast_2 <- gene_abundance_cast[,colnames(gene_abundance_cast) %in% colnames(gene_abundance_castPA_2)]
+
+#remove samples with no otus
+gene_abundance_cast_2 <- gene_abundance_cast_2[rowSums(gene_abundance_cast_2) >0,]
+
+#melt data
+gene_abundance_cast_2_melt <- gene_abundance_cast_2 %>%
+  mutate(Sample = rownames(.)) %>%
+  melt(id.vars = "Sample", variable.name = "OTU", value.name = "NormalizedAbundance") %>%
+  separate(OTU, into = "Gene", by = "_", remove = FALSE) %>%
+  mutate(NormalizedAbundance = ifelse(NormalizedAbundance == 0, NA, NormalizedAbundance))
+
+#plot data
+ggplot(gene_abundance_cast_2_melt, aes(y = OTU, x = Sample)) +
+  geom_point(aes(size = NormalizedAbundance, color = Sample)) +
+  #facet_wrap(~Gene, scales = "free_x") +
+  theme_light() +
+  theme(axis.text.x = element_blank()) +
+  scale_color_manual(values = c("#808000", "#ffe119", "#f58231", "#aaffc3", "#fabebe", "#d2f53c", "#008080", "#3cb44b", "#ffd8b1", "#808080", "#911eb4", "#000080", "#46f0f0", "#0082c8", "grey75"))
 
 ##############################
 #Community membership v. AsRG OLDDDDDDDDD#

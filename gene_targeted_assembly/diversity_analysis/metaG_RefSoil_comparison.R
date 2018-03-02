@@ -24,11 +24,8 @@ metaG.tidy <- metaG %>%
 #tidy RefSoil data
 #(i.e. transform list to count information)
 refSoil.tidy <- refSoil %>%
-  #subset(Gene !="None") %>%
-  dcast(Gene~`RefSoil ID`, length) %>%
-  melt(id.vars = "Gene",value.name = "Count")%>%
   group_by(Gene) %>%
-  summarise(abund = sum(Count), N = length(Count)) %>%
+  summarise(abund = sum(Total), N = 922) %>%
   mutate(RefSoil.abund = abund/N) %>%
   select(Gene, RefSoil.abund) %>%
   mutate(log.RefSoil.abund = log(RefSoil.abund))
@@ -88,7 +85,8 @@ metaG.tidy.nozero <- metaG.tidy %>% subset(total.abund != 0.0000000000) %>% muta
 no <- c("arsA", "None", "rplB")
 (comp.plot <- ggplot(subset(metaG.tidy.nozero, Gene != "rplB"), aes(x = Gene, y = total.abund)) +
   geom_boxplot() +
-  geom_point(data = subset(refSoil.tidy, !Gene %in% no), aes(y = RefSoil.abund), color = "springgreen3", size = 3) +
+  geom_point(data = subset(refSoil.tidy, !Gene %in% no), aes(y = RefSoil.abund), color = "springgreen3", size = 3, shape = 23) +
+    geom_point(data = subset(refSoil.tidy, !Gene %in% no), aes(y = RefSoil.abund), color = "springgreen3", size = 2.5, shape = 23) +
   ylab("Normalized abundance") +
   theme_bw(base_size = 16) +
   theme(axis.text.x = element_text(angle = 45,
@@ -109,7 +107,7 @@ metaG.tidy.nozero.RefSoil <- metaG.tidy.RefSoil %>%
   subset(total.abund != 0.0000000000) %>% 
   group_by(Gene) %>% 
   mutate(N = paste(length(Gene), ")", sep = "")) %>% 
-  unite(col = Gene_n, c(Gene, N), sep = "_(", remove = FALSE) 
+  unite(col = Gene_n, c(Gene, N), sep = " (", remove = FALSE) 
 
 #add N info to original refsoil data
 refsoil.tidy.annotated.n <- refsoil.tidy.annotated %>%
@@ -117,7 +115,7 @@ refsoil.tidy.annotated.n <- refsoil.tidy.annotated %>%
   left_join(subset(metaG.tidy.nozero.RefSoil, Site == "RefSoil"), by = c("Biome", "Sample", "Site", "Gene")) %>%
   select(Gene_n, total.abund)
 
-no <- c("arsA_(1)", "None_(1)", "rplB_(39)")
+no <- c("arsA (1)", "None (1)", "rplB (38)")
 (comp.plot.refsoil.outlier <- ggplot(subset(metaG.tidy.nozero.RefSoil, !Gene_n %in% no), aes(x = Gene_n, y = total.abund)) +
     geom_boxplot(outlier.size = 2) +
     geom_point(data = subset(refsoil.tidy.annotated.n, !Gene_n %in% no), aes(x = Gene_n, y = total.abund), color = "springgreen3", shape = 23, size = 4) +

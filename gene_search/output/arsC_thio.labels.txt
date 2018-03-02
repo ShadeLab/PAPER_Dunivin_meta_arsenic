@@ -1,0 +1,181 @@
+LABELS
+SEPARATOR COMMA
+DATA
+#NODE_ID,LABEL
+BSU25780,Bacillus subtilis subsp. subtilis str. 168
+BH_RS15100,Bacillus halodurans C-125
+DVU1646,Desulfovibrio vulgaris str. Hildenborough
+GSU2953,Geobacter sulfurreducens PCA
+MA_RS16240,Methanosarcina acetivorans C2A
+MM_RS03010,Methanosarcina mazei Go1
+BCE_RS15400,Bacillus cereus ATCC 10987
+BA_3196,Bacillus anthracis str. Ames
+OB_RS12440,Oceanobacillus iheyensis HTE831
+BT_0115,Bacteroides thetaiotaomicron VPI-5482
+BC3152,Bacillus cereus ATCC 14579
+BAS2971,Bacillus anthracis str. Sterne
+BCE33L_RS15600,Bacillus cereus E33L
+BLI_RS10495,Bacillus licheniformis DSM 13
+ABC_RS04435,Bacillus clausii KSM-K16
+SH_RS00485,Staphylococcus haemolyticus JCSC1435
+SH_RS00455,Staphylococcus haemolyticus JCSC1435
+PCAR_RS09850,Pelobacter carbinolicus DSM 2380
+PLUT_RS08795,Chlorobium luteolum DSM 273
+CAG_RS02120,Chlorobium chlorochromatii CaD3
+GMET_RS02600,Geobacter metallireducens GS-15
+DDE_RS12950,Desulfovibrio alaskensis G20
+GBAA_RS15635,Bacillus anthracis str. 'Ames Ancestor'
+DSY_RS22015,Desulfitobacterium hafniense Y51
+ACID345_RS15250,Candidatus Koribacter versatilis Ellin345
+LVIS_RS15860,Lactobacillus brevis ATCC 367
+PPRO_RS04125,Pelobacter propionicus DSM 2379
+CPHA266_RS04755,Chlorobium phaeobacteroides DSM 266
+CPHA266_RS02430,Chlorobium phaeobacteroides DSM 266
+HHAL_RS00480,Halorhodospira halophila SL1
+GTNG_RS08395,Geobacillus thermodenitrificans NG80-2
+STROP_RS03215,Salinispora tropica CNB-440
+BCER98_RS08370,Bacillus cytotoxicus NVH 391-98
+MBOO_RS01095,Methanoregula boonei 6A8
+DOLE_RS14835,Desulfococcus oleovorans Hxd3
+BCERKBAB4_RS14785,Bacillus weihenstephanensis KBAB4
+OTER_RS18540,Opitutus terrae PB90-1
+LEPBI_RS14065,Leptospira biflexa serovar Patoc strain 'Pato
+NPUN_RS32980,Nostoc punctiforme PCC 73102
+SYO3AOP1_RS04840,Sulfurihydrogenibium sp. YO3AOP1
+GLOV_RS02900,Geobacter lovleyi SZ
+LBF_RS14095,Leptospira biflexa serovar Patoc strain 'Pato
+GBEM_RS11770,Geobacter bemidjiensis Bem
+BCAH187_RS15660,Bacillus cereus AH187
+BCB4264_RS15690,Bacillus cereus B4264
+PCC8801_RS13290,Cyanothece sp. PCC 8801
+PCC7424_RS16395,Cyanothece sp. PCC 7424
+BCG9842_RS15505,Bacillus cereus G9842
+BCAH820_RS15955,Bacillus cereus AH820
+DHAF_RS06075,Desulfitobacterium hafniense DCB-2
+MPAL_RS12850,Methanosphaerula palustris E1-9c
+BCQ_RS15160,Bacillus cereus Q1
+SULAZ_RS03910,Sulfurihydrogenibium azorense Az-Fu1
+BCA_RS16620,Bacillus cereus 03BB102
+BBR47_RS16785,Brevibacillus brevis NBRC 100599
+BAA_RS16150,Bacillus anthracis str. A0248
+DESAL_RS11650,Desulfovibrio salexigens DSM 2638
+GM21_RS09335,Geobacter sp. M21
+PHEP_RS15650,Pedobacter heparinus DSM 2366
+CPIN_RS30235,Chitinophaga pinensis DSM 2588
+CYAN8802_RS16210,Cyanothece sp. PCC 8802
+DBAC_RS09575,Desulfomicrobium baculatum DSM 4028
+KFLA_RS19300,Kribbella flavida DSM 17836
+BPOF4_RS14190,Bacillus pseudofirmus OF4
+DACET_RS10660,Denitrovibrio acetiphilus DSM 12809
+BMQ_RS08465,Bacillus megaterium QM B1551
+BMD_RS08400,Bacillus megaterium DSM 319
+BMB171_RS15675,Bacillus thuringiensis BMB171
+LEGAS_RS00945,Leuconostoc gelidum subsp. gasicomitatum LM
+DEBA_RS13180,Desulfarculus baarsii DSM 2075
+BSUW23_RS02825,Bacillus subtilis subsp. spizizenii str. W23
+PPE_RS20105,Paenibacillus polymyxa E681
+MPET_RS04505,Methanolacinia petrolearia DSM 11571
+CLOST_RS09470,[Clostridium] sticklandii
+BATR1942_RS00215,Bacillus atrophaeus 1942
+PALPR_RS09025,Paludibacter propionicigenes WB4
+ML5_RS22995,Micromonospora sp. L5
+BCELL_RS01485,Bacillus cellulosilyticus DSM 2522
+TMAR_RS08325,Thermaerobacter marianensis DSM 12885
+DAES_RS10160,Desulfovibrio aespoeensis Aspo-2
+DESPR_RS06340,Desulfobulbus propionicus DSM 2032
+GM18_RS07650,Geobacter sp. M18
+BSN5_RS03440,Bacillus subtilis BSn5
+PEDSA_RS02935,Pseudopedobacter saltans DSM 12145
+KNP414_RS15250,Paenibacillus mucilaginosus KNP414
+F7308_RS01515,Francisella sp. TX077308
+THETH_RS01045,Pseudothermotoga thermarum DSM 5069
+GYO_RS25275,Bacillus subtilis subsp. spizizenii TU-B-10
+TLIE_RS09145,Thermovirga lienii DSM 17291
+CLOCL_RS01085,[Clostridium] clariflavum DSM 19732
+CLOCL_RS00740,[Clostridium] clariflavum DSM 19732
+DESAF_RS10880,Desulfovibrio africanus str. Walvis Bay
+HPL003_RS03400,Paenibacillus terrae HPL-003
+BCN_RS15315,Bacillus cereus NC7401
+BCF_RS15315,Bacillus cereus F837/76
+BCF_RS10655,Bacillus cereus F837/76
+PM3016_RS06560,Paenibacillus mucilaginosus 3016
+AMIS_RS12435,Actinoplanes missouriensis 431
+HYDTH_RS08925,Hydrogenobacter thermophilus TK-6
+I33_RS02845,Bacillus subtilis subsp. subtilis str. RO-NN-1
+YBT020_RS16080,Bacillus thuringiensis serovar finitimu
+CT43_RS15790,Bacillus thuringiensis serovar chinensis CT-43
+DEVAL_RS08250,Desulfovibrio vulgaris RCH1
+KN400_RS15475,Geobacter sulfurreducens KN400
+PPM_RS16110,Paenibacillus polymyxa M1
+LMKG_RS14040,Listeria monocytogenes FSL R2-561
+HBHAL_RS15725,Halobacillus halophilus DSM 2266
+B2K_RS06620,Paenibacillus mucilaginosus K02
+H9401_RS15600,Bacillus anthracis str. H9401
+SOLCA_RS17820,Solitalea canadensis DSM 3403
+ACPL_RS22450,Actinoplanes sp. SE50/110
+SSIL_RS11275,Solibacillus silvestris StLB046
+BTG_RS03350,Bacillus thuringiensis HD-771
+BTF1_RS13045,Bacillus thuringiensis HD-789
+LMOSLCC2372_RS14325,Listeria monocytogenes SLCC2372
+LMOSLCC2479_RS14045,Listeria monocytogenes SLCC2479
+LFML04_RS04850,Leptospirillum ferriphilum ML-04
+MC28_RS11485,Bacillus thuringiensis MC28
+MPSY_RS01095,Methanolobus psychrophilus R15
+BTB_RS15900,Bacillus thuringiensis Bt407
+PLE7327_RS18900,Pleurocapsa sp. PCC 7327
+OSCIL6304_RS13765,Oscillatoria acuminata PCC 6304
+OSC7112_RS06050,Oscillatoria nigro-viridis PCC 7112
+STA7437_RS04750,Stanieria cyanosphaera PCC 7437
+DACSA_RS17665,Dactylococcopsis salina PCC 8305
+DESDI_RS04650,Desulfitobacterium dichloroeliminans LM
+A284_RS14525,Staphylococcus warneri SG1
+M7W_RS06685,Enterococcus faecium NRRL B-2354
+GHH_RS16355,Geobacillus sp. GHH01
+HD73_RS14225,Bacillus thuringiensis serovar kurstaki str
+C663_RS20045,Bacillus subtilis XF-1
+H175_RS15805,Bacillus thuringiensis serovar thuringiensi
+BSU6051_RS13375,Bacillus subtilis subsp. subtilis 6051-HGW
+I653_RS19820,Bacillus subtilis subsp. subtilis str. BAB-1
+B1NLA3E_RS09185,Bacillus sp. 1NLA3E
+L083_RS39040,Actinoplanes sp. N902-109
+BALI_RS10620,Bacillus paralicheniformis ATCC 9945a
+CCALI_RS11165,Chthonomonas calidirosea T49
+M493_RS15555,Geobacillus sp. JF8
+SA40_RS08735,Staphylococcus aureus subsp. aureus SA40
+AFR_RS08425,Actinoplanes friuliensis DSM 7358
+BTOYO_RS02150,Bacillus toyonensis BCT-7112
+YBT1518_RS17110,Bacillus thuringiensis YBT-1518
+U369_RS15645,Bacillus anthracis 52-G
+U365_RS15705,Bacillus anthracis 9080-G
+U368_RS15640,Bacillus anthracis 8903-G
+A16_RS15640,Bacillus anthracis str. A16
+A16R_RS15635,Bacillus anthracis str. A16R
+BLEG1_RS01040,Bacillus lehensis G1
+PSAB_RS12485,Paenibacillus sabinae T27
+BTK_RS14180,Bacillus thuringiensis serovar kurstaki str
+MI63_RS15555,Bacillus anthracis str. SVA11
+PPSQR21_RS21465,Paenibacillus polymyxa SQR-21
+Y981_RS04050,Leptospirillum ferriphilum YSK
+CH51_RS09960,Staphylococcus aureus
+DF16_RS17195,Bacillus thuringiensis serovar kurstaki str
+DJ48_RS06175,Bacillus anthracis
+FE46_RS05835,Flavobacterium psychrophilum
+DJ46_RS10970,Bacillus anthracis str. Vollum
+DJ44_RS08025,Bacillus anthracis
+BMMGA3_RS07575,Bacillus methanolicus MGA3
+BSUA_RS13980,Bacillus subtilis subsp. subtilis str. JH64
+BSUB_RS13975,Bacillus subtilis subsp. subtilis str. AG1839
+DJ45_RS13895,Bacillus anthracis
+HYU01_RS15565,Bacillus anthracis
+DR_A0123,Deinococcus radiodurans R1
+TTER_RS13410,Thermobaculum terrenum ATCC BAA-798
+WP_000428327.1_147,Bacillus cereus ATCC 10987
+WP_000428327.1_200,Bacillus thuringiensis BMB171
+WP_015211614.1_13,Oscillatoria nigro-viridis PCC 7112
+WP_000428327.1_278,Bacillus cereus AH820
+WP_014686667.1_286,Deinococcus gobiensis I-0
+WP_014686418.1_52,Deinococcus gobiensis I-0
+WP_084264172.1_43,Rubrobacter radiotolerans
+WP_041339039.1_38,Rubrobacter radiotolerans
+WP_014682926.1_206,Deinococcus gobiensis I-0
+WP_015387314.1_5,Staphylococcus warneri SG1

@@ -4,7 +4,6 @@ library(reshape2)
 library(RColorBrewer)
 library(psych)
 
-
 #######################################
 #READ IN AND PREPARE DATA FOR ANALYSIS#
 #######################################
@@ -21,7 +20,7 @@ ncbi <- read_delim(file = paste(wd, "/data/ismej2016168x6_plasmid.csv", sep = ""
 
 #separate out extra NCBI ID's and
 #remove version number on NCBI ID (.##)
-ncbi <- ncbi %>%
+ncbi.tidy <- ncbi %>%
   separate(col = NCBI.ID, into = c("NCBI.ID", "NCBI.ID2", "NCBI.ID3"), sep = ",") %>%
   mutate(Contains.plasmid = !is.na(Plasmid.ID)) %>%
   separate(col = Plasmid.ID, into = c("plasmid1", "plasmid2","plasmid3","plasmid4","plasmid5","plasmid6","plasmid7","plasmid8","plasmid9","plasmid10","plasmid11","plasmid12","plasmid13","plasmid14"), sep = ",") %>%
@@ -33,10 +32,10 @@ ncbi <- ncbi %>%
 
 
 #remove all rows where value = NA
-ncbi <- ncbi[!is.na(ncbi$NCBI.ID),]
+ncbi.tidy <- ncbi.tidy[!is.na(ncbi.tidy$NCBI.ID),]
 
 #join AsRG data with RefSoi IDs
-data.tax <- ncbi %>%
+data.tax <- ncbi.tidy %>%
   group_by(`RefSoil ID`) %>%
   mutate(Elements = length(`RefSoil ID`)) %>%
   left_join(data, by = "NCBI.ID")
@@ -60,30 +59,35 @@ data.tax.cast <- data.tax.cast[-which(data.tax.cast$Gene == "None" & data.tax.ca
 data.taxREL <- data.tax.cast %>%
   mutate(Total = chromosome + plasmid,
          Rel = Total/length(unique(data.tax.cast$`RefSoil ID`)))
- 
-#plot bar chart with filled phyla RELATIVE
-(asrg.phyla.barREL <- ggplot(data.taxREL, aes(x = Gene, y = Rel)) +
-    geom_bar(stat = "identity", color = "black", fill = "grey49") +
-    ylab("Count proportion (number per genome)") +
-    xlab("Gene") +
-    theme_bw(base_size = 12) +
-    theme(axis.text.x = element_text(angle = 60, hjust = 1)))
 
-#save plot
-ggsave(asrg.phyla.barREL, filename = paste(wd, "/figures/numberhits.geneREL.png", sep = ""), width = 10)
+#save table 
+write.table(data.taxREL, file = paste(wd, "/output/RefSoil_count.txt", sep = ""), sep = "\t", row.names = FALSE)
 
-#join phy count information with data.tax
-data.tax.sum <- data.taxREL %>%
-  ungroup() %>%
-  group_by(Gene, Phylum) %>%
-  summarise(gene.count = length(Gene))
-  
 #make color scheme
 #n <- 25
 #qual_col_pals = brewer.pal.info[brewer.pal.info$category == 'qual',]
 #col_vector = unlist(mapply(brewer.pal, qual_col_pals$maxcolors, rownames(qual_col_pals)))
 #phy.color <- print(sample(col_vector, n))
 color <- c("#FDB462", "#F4CAE4", "#DECBE4", "#6A3D9A", "black", "#B15928", "#1F78B4", "#999999", "#E78AC3", "#B3CDE3", "#CCCCCC", "#E31A1C", "#FB9A99", "#E6AB02","#66A61E",  "#B3DE69", "#A6CEE3", "#1B9E77", "#7FC97F", "#F0027F", "#FF7F00", "#CCEBC5", "#A65628","#FFFFCC", "#666666")
+
+#plot bar chart with filled phyla RELATIVE
+(asrg.phyla.barREL <- ggplot(data.taxREL, aes(x = Gene, y = Rel, fill = Phylum, color = Phylum)) +
+    geom_bar(stat = "identity") +
+    scale_fill_manual(values = color) +
+    scale_color_manual(values = color) +
+    ylab("Count proportion (number per genome)") +
+    xlab("Gene") +
+    theme_bw(base_size = 12) +
+    theme(axis.text.x = element_text(angle = 60, hjust = 1)))
+
+#save plot
+ggsave(asrg.phyla.barREL, filename = paste(wd, "/figures/numberhits.geneREL.eps", sep = ""), width = 10)
+
+#join phy count information with data.tax
+data.tax.sum <- data.taxREL %>%
+  ungroup() %>%
+  group_by(Gene, Phylum) %>%
+  summarise(gene.count = length(Gene))
 
 #plot bar chart with filled phyla (+/- gene)
 (asrg.phyla.bar <- ggplot(data = data.tax.sum, aes(x = Gene, fill = Phylum, y = gene.count)) +
@@ -103,17 +107,16 @@ data.taxREL.PA <- data.tax.sum %>%
   #summarise(Count = length(Gene)) %>%
   mutate(RelCount = gene.count / length(unique(data.taxREL$`RefSoil ID`)))
 
-(asrg.logi.phyla.barREL <- ggplot(data.taxREL.PA, aes(x = Gene, y = RelCount)) +
+(asrg.logi.phyla.barREL <- ggplot(data.taxREL.PA, aes(x = Gene, y = RelCount, fill = Phylum)) +
     geom_bar(stat = "identity") +
     ylab("Proportion of genomes containing gene") +
     xlab("Gene") +
-    #scale_fill_manual(values = color) +
-    theme_bw(base_size = 12) +
+    scale_fill_manual(values = color) +
+    theme_bw(base_size = 10) +
     theme(axis.text.x = element_text(angle = 60, hjust = 1)))
 
 #save plot
-ggsave(asrg.logi.phyla.barREL, filename = paste(wd, "/figures/PA.geneREL_grey.eps", sep = ""), width = 6.4, height = 4.3)
-
+ggsave(asrg.logi.phyla.barREL, filename = paste(wd, "/figures/PA.geneREL.eps", sep = ""), width = 8, height = 4)
 
 #genomes from Refsoil
 ncbi.sum <- ncbi %>%
@@ -153,6 +156,35 @@ data.sum <- data.tax %>%
 #save plot
 ggsave(gene.hist, filename = paste(wd, "/figures/gene.historgram.eps", sep = ""), width = 10)
 
+#check number with just plasmids
+(plasmid.hist <- ggplot(subset(data.taxREL, Gene !="None"), aes(x = plasmid, fill = Gene)) +
+    geom_bar(color = "black") +
+    facet_wrap(~Gene, scales = "free_y") +
+    scale_fill_brewer(palette = "Set3") +
+    scale_x_continuous(breaks = c(1,3,5,7,9,11)) +
+    ylab("Number of genomes") +
+    xlab("Number of gene copies") +
+    xlim(0, NA) +
+    ylim(0,35) +
+    theme_bw(base_size = 12))
+
+#save plot
+ggsave(plasmid.hist, filename = paste(wd, "/figures/plasmid.historgram.eps", sep = ""), width = 10)
+
+#check number with just plasmids
+(chromosome.hist <- ggplot(subset(data.taxREL, Gene !="None"), aes(x = chromosome, fill = Gene)) +
+    geom_bar(color = "black") +
+    facet_wrap(~Gene, scales = "free_y") +
+    scale_fill_brewer(palette = "Set3") +
+    scale_x_continuous(breaks = c(1,3,5,7,9,11)) +
+    ylab("Number of genomes") +
+    xlab("Number of gene copies") +
+    xlim(0, NA) +
+    theme_bw(base_size = 12))
+
+#save plot
+ggsave(chromosome.hist, filename = paste(wd, "/figures/chromosome.historgram.eps", sep = ""), width = 10)
+
 #####################################################
 #WHAT IS THE CO-OCCURRENCE OF AsRGs IN SOIL GENOMES?#
 #####################################################
@@ -169,19 +201,29 @@ rownames(data.tax.cast) <- data.tax.cast$`RefSoil ID`
 data.tax.cast[is.na(data.tax.cast)] = 0
 data.tax.cast <- data.tax.cast[,-1]
 
-#remove all columns (RefSoil genomes) with only one gene
-#data.tax.cast.2 <- data.tax.cast[which(colSums(data.tax.cast) > 0),]
-
 #test pairwise correlations
 data.tax.corr <- corr.test(data.tax.cast, method = "spearman", adjust = "fdr", alpha = 0.01)
 
 #label shapes
-#shape = c(rep("circle", 17), rep("square", 4), rep("star", 9), rep("circle", 13), rep("triangle", 23), rep("star", 6), rep("diamond", 12), "square", rep("heart", 11))
+shape = c(rep("circle", 17), rep("square", 4), rep("circle", 18), rep("triangle", 29), rep("star", 8), rep("diamond", 13), "square", rep("heart", 14))
+
+#read in phylum colors
+colors.phy <- read_delim(paste(wd, "/data/colors_phylum.txt", sep = ""), delim = "\t", col_names = c("Color", "Phylum"))
+
+color.aes <- data.tax.corr$r
+node.color <- as.data.frame(color.aes) %>%
+  rownames_to_column(var = "Group") %>%
+  mutate(Group = gsub("arsC_glut", "arsC (grx)", Group),
+         Group = gsub("arsC_thio", "arsC (trx)", Group)) %>%
+  separate(Group, into = c("Gene", "Phylum"), sep = "_") %>%
+  mutate(Phylum = gsub("Terrabacteria", "Terrabacteria_group", Phylum)) %>%
+  left_join(colors.phy, by = "Phylum") %>%
+  select(Color)
 
 #make network of AsRGs
 data.tax.corr$r <- ifelse(data.tax.corr$r<0,0,data.tax.corr$r)
 
-qgraph(data.tax.corr$r, minimum = "sig", graph = "cor", sampleSize = 922, alpha = 0.05, layout = "spring",  threshold = "fdr",  labels = rownames(data.tax.cast$r), posCol = "black", negCol = "red", label.cex = 0.5, label.scale = FALSE, fade = FALSE,  vsize = log(colSums(data.tax.cast)+1), node.width = 1, node.height = 1, width = 7, height = 5, border.color = "grey30")
+qgraph(data.tax.corr$r, minimum = "sig", graph = "cor", sampleSize = 922, alpha = 0.05, layout = "spring",  threshold = "fdr",  labels = rownames(data.tax.cast$r), color = node.color$Color, shape = shape, posCol = "black", negCol = "red", label.cex = 0.5, label.scale = FALSE, fade = FALSE,  vsize = log(colSums(data.tax.cast)+1), node.width = 1, node.height = 1, width = 7, height = 5, border.color = "grey30")
 
 ############################
 #EXTRACT GENE INFO FOR iTOL#
@@ -251,6 +293,39 @@ itol.annotated.color <- itol.annotated %>%
   
 #save as output
 write.table(itol.annotated.color, paste(wd, "/output/iTOL_node_color.csv", sep = ""), quote = FALSE, row.names = FALSE, col.names = TRUE, sep = ",")
+
+##################################
+#SET UP GENE-SPECIFIC PHYLOGENIES#
+##################################
+
+#select labels
+AsRG.labels <- data.tax %>%
+  ungroup() %>%
+  left_join(ncbi, by = c("RefSoil ID", "Taxon ID", "Phylum")) %>%
+  select(Gene, t.name, Organism) 
+
+#write file with labels for each gene
+write.table(subset(AsRG.labels, Gene == "arsC_glut", select = c(t.name, Organism)), file = paste(wd, "/output/arsC_glut.labels.txt", sep = ""), quote = FALSE, row.names = FALSE, col.names = FALSE, sep = ",")
+
+#get label colors for all genes  
+AsRG.color <- data.tax %>%
+  ungroup() %>%
+  left_join(colors.phy, by = "Phylum") %>%
+  mutate(label = "label") %>%
+  select(Gene, t.name, label, Color) 
+
+#save each gene as output
+write.table(subset(AsRG.color, Gene == "acr3", select = c(t.name, label, Color)), paste(wd, "/output/iTOL_acr3_node_color.csv", sep = ""), quote = FALSE, row.names = FALSE, col.names = TRUE, sep = ",")
+
+#make plasmid/genome denotation for iTOL
+#AsRG trees
+location <- data.tax %>%
+  ungroup() %>%
+  select(Gene, t.name, Source) %>%
+  mutate(Source = ifelse(Source == "NCBI.ID", -1, 0))
+
+#save each gene as output
+write.table(subset(location, Gene == "arsC_thio", select = c(t.name, Source)), paste(wd, "/output/iTOL_arsC_thio_plasmid.csv", sep = ""), quote = FALSE, row.names = FALSE, col.names = TRUE, sep = ",")
 
 ####################
 #Soil type analysis#
@@ -371,9 +446,11 @@ type.ars.abund.norm <- type.ars.abund %>%
 ))
 
 #plot AsRG content by soil type
-ggplot(type.ars.abund.norm, aes(x = Gene, y = NormMean, fill = Phylum)) +
+(soil.type <- ggplot(type.ars.abund.norm, aes(x = Gene, y = NormMean, fill = Phylum)) +
   geom_bar(stat = "identity") + 
   facet_wrap(~ SoilType) +
   scale_fill_manual(values = color) +
   theme_bw() +
-  theme(axis.text.x = element_text(angle = 45, hjust = 1, vjust = 1))
+  theme(axis.text.x = element_text(angle = 45, hjust = 1, vjust = 1)))
+
+ggsave(soil.type, filename = paste(wd, "/figures/abund.soil.type.eps", sep = ""))
