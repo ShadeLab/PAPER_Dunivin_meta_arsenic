@@ -461,21 +461,21 @@ ggsave(otu.shared, filename = paste(wd, "/figures/shared.otus.eps", sep = ""), h
 ##############################
 #Community membership v. AsRG OLDDDDDDDDD#
 ##############################
-otu_table_slim <- otu_table
+otu_table_slim <- otu_table_norm[grepl("cen01|cen03|cen04|cen05|cen06|cen07|cen10|cen12|cen13|cen14|cen15|cen16|cen17", otu_table_norm$Sample),]
 
 #make sample the row names
 rownames(otu_table_slim) <- otu_table_slim$Sample
-otu_table_slim <- otu_table_slim[,-1]
+otu_table_slim <- otu_table_slim[,-c(1,2)]
 
 #separate OTU table into 2: rplB and AsRG
 otu_table.rplB <- otu_table_slim[, grep("rplB", colnames(otu_table_slim))]
-otu_table.rplB <- otu_table.rplB[, -which(colSums(otu_table.rplB) < 2)]
+#otu_table.rplB <- otu_table.rplB[, -which(colSums(otu_table.rplB) < 2)]
 
 otu_table.AsRG <- otu_table_slim[, grep("ars|aio|arx|arr|acr", colnames(otu_table_slim))]
-otu_table.AsRG <- otu_table.AsRG[, -which(colSums(otu_table.AsRG) < 2)]
-otu_table.AsRG <- otu_table.AsRG[-which(rowSums(otu_table.AsRG) == 0),]
+#otu_table.AsRG <- otu_table.AsRG[, -which(colSums(otu_table.AsRG) < 2)]
+#otu_table.AsRG <- otu_table.AsRG[-which(rowSums(otu_table.AsRG) == 0),]
 
-otu_table.rplB <- otu_table.rplB[which(rownames(otu_table.rplB) %in% rownames(otu_table.AsRG)),]
+#otu_table.rplB <- otu_table.rplB[which(rownames(otu_table.rplB) %in% rownames(otu_table.AsRG)),]
 
 
 #make metadata a phyloseq class object
