@@ -1,7 +1,7 @@
-## Bin 
+## Xander_bin 
 * Includes scripts for quality control, site comparison, and phylogenetic analysis for gene-targeted assembly outputs
 
-## Diversity Analysis:
+## Diversity Analysis
 * Repository includes assembled sequence data post processing (OTU table analysis). All R scripts are in `bin/`
 * `assembly_summary.R`: Script to make assembly summary figure
 * `diversity_analysis.R` 
@@ -28,6 +28,6 @@
 * `iTOL_fissim_prep.R`: Prepare bar graphs for multi-gene (dissimilatory AsRG) tree
 * `metaG_RefSoil_comparison.R`: Make figure comparing normalized abundance of AsRGs in metagenomes and RefSoil database
 
-## Phylogenetic Analysis: 
+## Phylogenetic Analysis
 * Repository contains files of maximum likelihood trees visualized in iTOL as well as iTOL label and bar graph files
  
