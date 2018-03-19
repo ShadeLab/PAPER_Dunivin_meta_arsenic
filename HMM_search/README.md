@@ -1,13 +1,4 @@
-Folder contains data, figures, and scripts to assess abudnance of AsRG in *soil* genomes.
-
-Figure names key
-* asrg: arsenic resistance genes
-* logi: logical; presence/absence of gene; excludes multiple copies/genome
-* rel: relative proportion of genes/genomes in phylum
-* phyla: phylum-level grouping
-* ##: Percent cutoff for alignment length
-* bar: bar graph
-* slim: smaller version of figure; contains abundant phyla
+Folder contains [tools](https://github.com/ShadeLab/meta_arsenic/tree/master/HMM_search/bin) to assess abudnance of AsRGs in *soil* genomes as well as analysis of AsRGs in [RefSoil genomes](https://github.com/ShadeLab/meta_arsenic/tree/master/HMM_search/RefSoil_HMM_search)
 
 ---
 
