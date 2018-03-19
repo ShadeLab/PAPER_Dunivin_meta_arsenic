@@ -1,7 +1,7 @@
-## Xander_bin 
+## [Xander_bin](https://github.com/ShadeLab/meta_arsenic/tree/master/gene_targeted_assembly/xander_bin)
 * Includes scripts for quality control, site comparison, and phylogenetic analysis for gene-targeted assembly outputs
 
-## Diversity Analysis
+## [Diversity Analysis](https://github.com/ShadeLab/meta_arsenic/tree/master/gene_targeted_assembly/diversity_analysis)
 * Repository includes assembled sequence data post processing (OTU table analysis). All R scripts are in `bin/`
 * `assembly_summary.R`: Script to make assembly summary figure
 * `diversity_analysis.R` 
@@ -28,6 +28,17 @@
 * `iTOL_fissim_prep.R`: Prepare bar graphs for multi-gene (dissimilatory AsRG) tree
 * `metaG_RefSoil_comparison.R`: Make figure comparing normalized abundance of AsRGs in metagenomes and RefSoil database
 
-## Phylogenetic Analysis
+## [Gene resource](https://github.com/ShadeLab/meta_arsenic/tree/master/gene_targeted_assembly/gene_resource)
+* Directory contains information to run Xander on metagenomic data
+* To add AsRGs to your RDPTools (where Xander_assembler) is housed, you can do the following
+```
+cp -R PATH/TO/GIT/meta_arsenic/gene_targeted_assembly/gene_resource/* PATH/TO/RDPTOOLs/Xander_assembler/gene_resource/
+```
+* If you only want to add one gene, for example arsB, you can do the following
+```
+cp -R PATH/TO/GIT/meta_arsenic/gene_targeted_assembly/gene_resource/arsB PATH/TO/RDPTOOLs/Xander_assembler/gene_resource/
+```
+
+## [Phylogenetic Analysis](https://github.com/ShadeLab/meta_arsenic/tree/master/gene_targeted_assembly/phylogenetic_analysis)
 * Repository contains files of maximum likelihood trees visualized in iTOL as well as iTOL label and bar graph files
  
