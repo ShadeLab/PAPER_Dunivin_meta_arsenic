@@ -1,8 +1,0 @@
-Taxon	Abundance	Fraction Abundance
-Verrucomicrobia	1.788	0.4881
-Actinobacteria	1.875	0.5119
-
-
-Lineage	MatchName	Abundance	Fraction Abundance
-Bacteria;Actinobacteria;Actinobacteridae;Actinomycetales;Propionibacterineae;Nocardioidaceae;Nocardioides	119534933_Nocardioides_sp._JS614	1.875	0.5119
-Bacteria;Verrucomicrobia;Spartobacteria;Chthoniobacter	196227372_Chthoniobacter_flavus_Ellin428	1.788	0.4881
