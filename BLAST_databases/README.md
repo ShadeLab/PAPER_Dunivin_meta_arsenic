@@ -1,2 +1,2 @@
 # Arsenic resistance gene BLAST databases
-This directory contains both protein and nucleotide BLAST databases of 10 well-characterized arsenic resistance genes (_acr3_, _aioA_, _arrA_, _arsA_, _arsB_, _arsC_glut_, _arsC_thio_, _arsD_, _arsM_, _arxA_). Blast databases were built off of arsenic resistance gene [FunGene databases](http://fungene.cme.msu.edu/).
+This directory contains both protein and nucleotide BLAST databases of 10 well-characterized arsenic resistance genes (_acr3_, _aioA_, _arrA_, _arsB_, _arsC_glut_, _arsC_thio_, _arsD_, _arsM_, _arxA_). Blast databases were built off of arsenic resistance gene [FunGene databases](http://fungene.cme.msu.edu/). These databases contain all reference sequences used in the gene targeted assembler (Xander). 
