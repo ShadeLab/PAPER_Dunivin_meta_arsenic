@@ -5,18 +5,18 @@
 * Repository includes assembled sequence data post processing (OTU table analysis). All R scripts are in `bin/`
 * `assembly_summary.R`: Script to make assembly summary figure
 * `diversity_analysis.R` 
-    * Overarching goals
+    * __Overarching goals__
        - Normalize AsRG to single copy _rplB_
        - Examine abundance/ distribution of arsenic resistance genes across diverse soil types
        - Examine community structure across diverse soil types using _rplB_
-   * Inputs
-      * rformat_dist_0.1.txt: OTU table for each gene of interest
-      * rplB_45_taxonabund.txt: for each site of interest to examime taxon abundance of _rplB_
-   * Outputs
+   * __Inputs__
+      * `rformat_dist_0.1.txt`: OTU table for each gene of interest
+      * `rplB_45_taxonabund.txt`: for each site of interest to examime taxon abundance of _rplB_
+   * __Outputs__
       * `out_table_full.txt`: OTU table (for all AsRGs and _rplB_)
       * `rplB.summary.scg.txt`: coverage-adjusted abundance of _rplB_ in each metagenome
       * `metaG_normAbund.txt`: summary table for RefSoil comparison
-   * Figures
+   * __Figures__
    	  *	`asrg.quality.eps`: Quality of assembled AsRGs (percent identity to database vs. length in base pairs)
    	  * `shared.otus.eps`: AsRG OTUs present in at least 3 sites
       * `relative_abundace.eps`: relative proportions of AsRGs in soil metagenomes
