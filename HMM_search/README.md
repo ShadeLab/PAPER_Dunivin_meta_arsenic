@@ -3,7 +3,7 @@ Folder contains [tools](https://github.com/ShadeLab/meta_arsenic/tree/master/HMM
 ---
 
 # Detection of arsenic resistance genes using hidden markov models
-This repository contains examples of and information on detecting arsenic resistance genes using hidden markov models. If you want to use arsenic resistance gene HMMs for other purposes, feel free to bypass this workflow and work with the `.hmm` files directly [https://github.com/ShadeLab/methods_arsenic/tree/master/gene_targeted_assembly/gene_resources](https://github.com/ShadeLab/methods_arsenic/tree/master/gene_targeted_assembly/gene_resources) which are located in the gene_resources directories. 
+This repository contains examples of and information on detecting arsenic resistance genes using hidden markov models. If you want to use arsenic resistance gene HMMs for other purposes, feel free to bypass this workflow and work with the `.hmm` files directly [https://github.com/ShadeLab/meta_arsenic/tree/master/gene_targeted_assembly/gene_resource](https://github.com/ShadeLab/meta_arsenic/tree/master/gene_targeted_assembly/gene_resource) which are located in the gene_resources directories. 
 
 ## Required tools
 * [HMMER 3.1](http://hmmer.org/download.html)
@@ -12,7 +12,7 @@ This repository contains examples of and information on detecting arsenic resist
 ## Details 
 * Protocol includes the following arsenic resistance genes: _acr3_, _aioA_, _arrA_, _arsA_, _arsB_, _arsC_glut_, _arsC_thio_, _arsD_, _arsM_, _arxA_
 * Inputs 
-  * [search_setenv.sh](https://github.com/ShadeLab/methods_arsenic/blob/master/gene_search/bin/search_setenv.sh) 
+  * [search_setenv.sh](https://github.com/ShadeLab/meta_arsenic/blob/master/HMM_search/bin/search_setenv.sh) 
   * dataset(s) to test
 * Outputs 
   * `stdout.txt`: standard output for hmmsearch (contains all available data). per gene per dataset
@@ -27,14 +27,14 @@ This repository contains examples of and information on detecting arsenic resist
 ```
 
 ## Environmental setup 
-Must edit [search_setenv.sh](https://github.com/ShadeLab/methods_arsenic/blob/master/gene_search/bin/search_setenv.sh) to fit your environment before beginning
+Must edit [search_setenv.sh](https://github.com/ShadeLab/meta_arsenic/blob/master/HMM_search/bin/search_setenv.sh) to fit your environment before beginning
    * `SEQDIR`: absolute path to folder that contains your sequence(s) of interest
    * `WORKDIR`: absolute path to your results
    * `REF_DIR`: absolute path to directory containing `gene_resource` (if you git cloned this repository the path is as follows `/PATH_TO_GIT_DIRECTORY/methods_arsenic/gene_targeted_assembly`)
    * `HMMSEARCH`: absolute path to hmmsearch (example: /opt/software/HMMER/3.1b2--GCC-4.8.3/bin/hmmsearch)
 
 ## Parameters
-Search parameters can be adjusted in [search_setenv.sh](https://github.com/ShadeLab/methods_arsenic/blob/master/gene_search/bin/search_setenv.sh) before running
+Search parameters can be adjusted in [search_setenv.sh](https://github.com/ShadeLab/meta_arsenic/blob/master/HMM_search/bin/search_setenv.sh) before running
 
    * `AsRG`: adjust this if you do not need to test all 10 arsenic resistance genes
    * `evalue`: adjust this if you would like an e-value cutoff to be more or less stringent. Default set to E-10
