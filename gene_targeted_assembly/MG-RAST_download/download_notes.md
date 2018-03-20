@@ -2,27 +2,26 @@
 
 To find the samples, go to http://metagenomics.anl.gov/mgmain.html?mgpage=search, enter the project ID in the search bar (ex. mgp79868), and choose the field to be project ID. Then all the samples will come up in that project. On the left, click on the gears/settings button and choose "bp count" and "file type". Then have the samples order themselves by bp count.
 
-To download samples, use curl with the API command. For example: IowaCorn_4539522.3:
+To download samples, use curl with the API command. For example: SITE=IowaCorn_4539522.3 and ProjectID=mgm4539522.3:
 ```
-curl "http://api.metagenomics.anl.gov/1/download/mgm4539522.3?file=050.1" > IowaCorn_4539522.3.fastq
+curl "http://api.metagenomics.anl.gov/1/download/${ProjectID}?file=050.1" > ${SITE}.fastq
 ```
 
 #### Table of Contents:
-* [Iowa_corn](https://github.com/ShadeLab/meta_arsenic/blob/master/download/MG-RAST_download.md#1-iowa_corn)
-* [Iowa_agricultural](https://github.com/ShadeLab/meta_arsenic/blob/master/download/MG-RAST_download.md#2-iowa_agricultural)
-* [Mangrove](https://github.com/ShadeLab/meta_arsenic/blob/master/download/MG-RAST_download.md#3-mangrove)
-* [Permafrost_Russia](https://github.com/ShadeLab/meta_arsenic/blob/master/download/MG-RAST_download.md#4-permafrost_russia)
-* [Iowa_prairie](https://github.com/ShadeLab/meta_arsenic/blob/master/download/MG-RAST_download.md#5-iowa_prairie)
-* [Brazilian_forest](https://github.com/ShadeLab/meta_arsenic/blob/master/download/MG-RAST_download.md#6-brazilian_forest)
-* [Illinois_soybean](https://github.com/ShadeLab/meta_arsenic/blob/master/download/MG-RAST_download.md#7-illinois_soybean)
-* [Minnesota_grassland](https://github.com/ShadeLab/meta_arsenic/blob/master/download/MG-RAST_download.md#8-minnesota_grassland)
-* [Disney_preserve](https://github.com/ShadeLab/meta_arsenic/blob/master/download/MG-RAST_download.md#9-disney_preserve)
-* [California_grassland](https://github.com/ShadeLab/meta_arsenic/blob/master/download/MG-RAST_download.md#10-california_grassland)
-* [Illinois_corn](https://github.com/ShadeLab/meta_arsenic/blob/master/download/MG-RAST_download.md#11-illinois_corn)
-* [Wyoming_soil](https://github.com/ShadeLab/meta_arsenic/blob/master/download/download_notes.md#12-wyoming_soil)
-* [Permafrost_Canada](https://github.com/ShadeLab/meta_arsenic/blob/master/download/download_notes.md#13-permafrost_canada)
+* [Iowa_corn](https://github.com/ShadeLab/meta_arsenic/blob/master/gene_targeted_assembly/MG-RAST_download/download_notes.md#1-iowa_corn)
+* [Iowa_agricultural](https://github.com/ShadeLab/meta_arsenic/blob/master/gene_targeted_assembly/MG-RAST_download/download_notes.md#2-iowa_agricultural)
+* [Mangrove](https://github.com/ShadeLab/meta_arsenic/blob/master/gene_targeted_assembly/MG-RAST_download/download_notes.md#3-mangrove)
+* [Permafrost_Russia](https://github.com/ShadeLab/meta_arsenic/blob/master/gene_targeted_assembly/MG-RAST_download/download_notes.md#4-permafrost_russia)
+* [Iowa_prairie](https://github.com/ShadeLab/meta_arsenic/blob/master/gene_targeted_assembly/MG-RAST_download/download_notes.md#5-iowa_prairie)
+* [Brazilian_forest](https://github.com/ShadeLab/meta_arsenic/blob/master/gene_targeted_assembly/MG-RAST_download/download_notes.md#6-brazilian_forest)
+* [Illinois_soybean](https://github.com/ShadeLab/meta_arsenic/blob/master/gene_targeted_assembly/MG-RAST_download/download_notes.md#7-illinois_soybean)
+* [Minnesota_grassland](https://github.com/ShadeLab/meta_arsenic/blob/master/gene_targeted_assembly/MG-RAST_download/download_notes.md#8-minnesota_grassland)
+* [Disney_preserve](https://github.com/ShadeLab/meta_arsenic/blob/master/gene_targeted_assembly/MG-RAST_download/download_notes.md#9-disney_preserve)
+* [California_grassland](https://github.com/ShadeLab/meta_arsenic/blob/master/gene_targeted_assembly/MG-RAST_download/download_notes.md#10-california_grassland)
+* [Illinois_corn](https://github.com/ShadeLab/meta_arsenic/blob/master/gene_targeted_assembly/MG-RAST_download/download_notes.md#11-illinois_corn)
+* [Wyoming_soil](https://github.com/ShadeLab/meta_arsenic/blob/master/gene_targeted_assembly/MG-RAST_download/download_notes.md#12-wyoming_soil)
+* [Permafrost_Canada](https://github.com/ShadeLab/meta_arsenic/blob/master/gene_targeted_assembly/MG-RAST_download/download_notes.md#13-permafrost_canada)
 
-These are the files I am downloading from MG-RAST and performing FastQC and FastX on:
 #### 1. Iowa_corn
 [ProjectID: mgp6368](http://metagenomics.anl.gov/mgmain.html?mgpage=project&project=mgp6368)
 * [Sample1](http://metagenomics.anl.gov/mgmain.html?mgpage=overview&metagenome=mgm4539522.3): mgm4539522.3;  fastq file, has the 2nd bp in the project (the file with the most bp is not in fastq format), less than 30% failed QC; 8,298,450,011 bp, 19G
