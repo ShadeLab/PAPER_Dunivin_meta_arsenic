@@ -8,17 +8,17 @@ curl "http://api.metagenomics.anl.gov/1/download/mgm4539522.3?file=050.1" > Iowa
 ```
 
 #### Table of Contents:
-* [Iowa_corn](https://github.com/ShadeLab/meta_arsenic/blob/master/download/download_notes.md#1-iowa_corn)
-* [Iowa_agricultural](https://github.com/ShadeLab/meta_arsenic/blob/master/download/download_notes.md#2-iowa_agricultural)
-* [Mangrove](https://github.com/ShadeLab/meta_arsenic/blob/master/download/download_notes.md#3-mangrove)
-* [Permafrost_Russia](https://github.com/ShadeLab/meta_arsenic/blob/master/download/download_notes.md#4-permafrost_russia)
-* [Iowa_prairie](https://github.com/ShadeLab/meta_arsenic/blob/master/download/download_notes.md#5-iowa_prairie)
-* [Brazilian_forest](https://github.com/ShadeLab/meta_arsenic/blob/master/download/download_notes.md#6-brazilian_forest)
-* [Illinois_soybean](https://github.com/ShadeLab/meta_arsenic/blob/master/download/download_notes.md#7-illinois_soybean)
-* [Minnesota_grassland](https://github.com/ShadeLab/meta_arsenic/blob/master/download/download_notes.md#8-minnesota_grassland)
-* [Disney_preserve](https://github.com/ShadeLab/meta_arsenic/blob/master/download/download_notes.md#9-disney_preserve)
-* [California_grassland](https://github.com/ShadeLab/meta_arsenic/blob/master/download/download_notes.md#10-california_grassland)
-* [Illinois_corn](https://github.com/ShadeLab/meta_arsenic/blob/master/download/download_notes.md#11-illinois_corn)
+* [Iowa_corn](https://github.com/ShadeLab/meta_arsenic/blob/master/download/MG-RAST_download.md#1-iowa_corn)
+* [Iowa_agricultural](https://github.com/ShadeLab/meta_arsenic/blob/master/download/MG-RAST_download.md#2-iowa_agricultural)
+* [Mangrove](https://github.com/ShadeLab/meta_arsenic/blob/master/download/MG-RAST_download.md#3-mangrove)
+* [Permafrost_Russia](https://github.com/ShadeLab/meta_arsenic/blob/master/download/MG-RAST_download.md#4-permafrost_russia)
+* [Iowa_prairie](https://github.com/ShadeLab/meta_arsenic/blob/master/download/MG-RAST_download.md#5-iowa_prairie)
+* [Brazilian_forest](https://github.com/ShadeLab/meta_arsenic/blob/master/download/MG-RAST_download.md#6-brazilian_forest)
+* [Illinois_soybean](https://github.com/ShadeLab/meta_arsenic/blob/master/download/MG-RAST_download.md#7-illinois_soybean)
+* [Minnesota_grassland](https://github.com/ShadeLab/meta_arsenic/blob/master/download/MG-RAST_download.md#8-minnesota_grassland)
+* [Disney_preserve](https://github.com/ShadeLab/meta_arsenic/blob/master/download/MG-RAST_download.md#9-disney_preserve)
+* [California_grassland](https://github.com/ShadeLab/meta_arsenic/blob/master/download/MG-RAST_download.md#10-california_grassland)
+* [Illinois_corn](https://github.com/ShadeLab/meta_arsenic/blob/master/download/MG-RAST_download.md#11-illinois_corn)
 * [Wyoming_soil](https://github.com/ShadeLab/meta_arsenic/blob/master/download/download_notes.md#12-wyoming_soil)
 * [Permafrost_Canada](https://github.com/ShadeLab/meta_arsenic/blob/master/download/download_notes.md#13-permafrost_canada)
 
