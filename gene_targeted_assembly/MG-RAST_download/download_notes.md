@@ -15,10 +15,10 @@ curl "http://api.metagenomics.anl.gov/1/download/mgm4539522.3?file=050.1" > Iowa
 * [Iowa_prairie](https://github.com/ShadeLab/meta_arsenic/blob/master/download/download_notes.md#5-iowa_prairie)
 * [Brazilian_forest](https://github.com/ShadeLab/meta_arsenic/blob/master/download/download_notes.md#6-brazilian_forest)
 * [Illinois_soybean](https://github.com/ShadeLab/meta_arsenic/blob/master/download/download_notes.md#7-illinois_soybean)
-* [Minnesota_creek](https://github.com/ShadeLab/meta_arsenic/blob/master/download/download_notes.md#8-minnesota_creek)
+* [Minnesota_grassland](https://github.com/ShadeLab/meta_arsenic/blob/master/download/download_notes.md#8-minnesota_grassland)
 * [Disney_preserve](https://github.com/ShadeLab/meta_arsenic/blob/master/download/download_notes.md#9-disney_preserve)
 * [California_grassland](https://github.com/ShadeLab/meta_arsenic/blob/master/download/download_notes.md#10-california_grassland)
-* [Illinois_soil](https://github.com/ShadeLab/meta_arsenic/blob/master/download/download_notes.md#11-illinois_soil)
+* [Illinois_corn](https://github.com/ShadeLab/meta_arsenic/blob/master/download/download_notes.md#11-illinois_corn)
 * [Wyoming_soil](https://github.com/ShadeLab/meta_arsenic/blob/master/download/download_notes.md#12-wyoming_soil)
 * [Permafrost_Canada](https://github.com/ShadeLab/meta_arsenic/blob/master/download/download_notes.md#13-permafrost_canada)
 
@@ -117,7 +117,7 @@ These are the files I am downloading from MG-RAST and performing FastQC and Fast
   * FastX: used flag -Q33 (Illumina 1.9)
   * 11,312,148,300 bp in downloaded file -- good :)
 
-#### 8. Minnesota_creek
+#### 8. Minnesota_grassland
 [ProjectID: mgp5588](http://metagenomics.anl.gov/mgmain.html?mgpage=project&project=mgp5588)
 * [Sample1](http://metagenomics.anl.gov/mgmain.html?mgpage=overview&metagenome=mgm4541646.3): mgm4541646.3; fastq file, has the most bp, 2.55% failed QC; 11,702,083,089 bp, 27G
   * FastQC: seq length 151, Sanger/Illumina 1.9, per base seq qual not good above 140, per base seq. content not very good below 9
@@ -161,7 +161,7 @@ These are the files I am downloading from MG-RAST and performing FastQC and Fast
   * 5,909,734,300 bp -- good :)
 
 
-#### 11. Illinois_soil
+#### 11. Illinois_corn
 [ProjectID: mgp14596](http://metagenomics.anl.gov/mgmain.html?mgpage=project&project=mgp14596)
 * [Sample1](http://metagenomics.anl.gov/mgmain.html?mgpage=overview&metagenome=mgm4653791.3): mgm4653791.3; fastq file, most bp, .05% failed QC; 8,078,926,770 bp, 18G
   * FastQC: seq. length 12-190, Sanger/Illumina 1.9, per base seq. content not very good below 9 and above 160, everything else looks good
