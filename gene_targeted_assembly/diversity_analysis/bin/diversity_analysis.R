@@ -299,7 +299,7 @@ ggsave(relabund.plot, filename = paste(wd, "/figures/relative_abundance.eps", se
 
 #temporarily change working directory to data 
 #to bulk load rplB abundance/ taxonomy files
-setwd(paste(wd, "/data_old2", sep = ""))
+setwd(paste(wd, "/data", sep = ""))
 names <- list.files(pattern="*_45_taxonabund.txt")
 community <- do.call(rbind, lapply(names, function(X) {
   data.frame(Sample = basename(X), fread(X, sep = "\t", skip = "Lineage"))}))
