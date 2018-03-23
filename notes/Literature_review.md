@@ -96,8 +96,8 @@ __Goals:__
  
 ### Luo 2014
 * contaminated soil metagenomes
- * As: 34.11 to 821.23 mg kg21
- * Sb: 226.67 to 3923.07 mg kg21
+   * As: 34.11 to 821.23 mg kg21
+   * Sb: 226.67 to 3923.07 mg kg21
 * observe higher diversity and abundance of  arsC, arrA, aioA, arsB and ACR3 in higher As samples
 * correlation between arsC and aioA and arsenic
 
