@@ -21,7 +21,7 @@ __Goals:__
 * [Luo 2014](https://github.com/ShadeLab/meta_arsenic/blob/master/Literature_review.md#Luo-2014)
 * [Rascovan 2015](https://github.com/ShadeLab/meta_arsenic/blob/master/Literature_review.md#Rascovan-2015)
 * [Bertin 2011](https://github.com/ShadeLab/meta_arsenic/blob/master/Literature_review.md#Bertin-2011)
-* [Edwardson and Hollibaugh 2017](https://github.com/ShadeLab/meta_arsenic/blob/master/Literature_review.md#Edwardson-and Hollibaugh-2017)
+* [Edwardson and Hollibaugh 2017](https://github.com/ShadeLab/meta_arsenic/blob/master/Literature_review.md#Edwardson-and-Hollibaugh-2017)
 * [Sangwan 2015](https://github.com/ShadeLab/meta_arsenic/blob/master/Literature_review.md#angwan-2015)
 * [Oremland review 2005](https://github.com/ShadeLab/meta_arsenic/blob/master/Literature_review.md#Oremland-review-2005)
 * [Xiao 2016](https://github.com/ShadeLab/meta_arsenic/blob/master/Literature_review.md#Xiao-2016)
