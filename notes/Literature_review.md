@@ -21,7 +21,11 @@ __Goals:__
 * [Luo 2014](https://github.com/ShadeLab/meta_arsenic/blob/master/Literature_review.md#Luo-2014)
 * [Rascovan 2015](https://github.com/ShadeLab/meta_arsenic/blob/master/Literature_review.md#Rascovan-2015)
 * [Bertin 2011](https://github.com/ShadeLab/meta_arsenic/blob/master/Literature_review.md#Bertin-2011)
-
+* [Edwardson and Hollibaugh 2017](https://github.com/ShadeLab/meta_arsenic/blob/master/Literature_review.md#Edwardson-and Hollibaugh-2017)
+* [Sangwan 2015](https://github.com/ShadeLab/meta_arsenic/blob/master/Literature_review.md#angwan-2015)
+* [Oremland review 2005](https://github.com/ShadeLab/meta_arsenic/blob/master/Literature_review.md#Oremland-review-2005)
+* [Xiao 2016](https://github.com/ShadeLab/meta_arsenic/blob/master/Literature_review.md#Xiao-2016)
+* [Lu 2016](https://github.com/ShadeLab/meta_arsenic/blob/master/Literature_review.md#Lu-2016)
 
 
 ### Engel et al., 2013
@@ -112,9 +116,30 @@ __Goals:__
 * proteomics confirms ars operon including reductase and efflux pump
 * arsM also detected
  
+### Edwardson and Hollibaugh 2017
+* mono lake
+* metaTRANSCRIPTOMICS of arrA, aioA and arxA
+* micro-aerophilic environment had mostly arxA
+* oxic env had minimal AsRG expression
+* anoxic bottom mostly arrA
 
+### Sangwan 2015
+* Arsenic rich Himalayan hot spring metagenomics
+* do detect ars operon (not sure if they tested other genes)
 
+### Oremland review 2005
+* argues that metagenomes alone are not enough
+* what about clear discrepancies between cultivated genomes and non?
 
-
-
-
+### Xiao 2016
+* low arsenic paddy soil metagenomes
+* mostly see cytoplasmic reduction but do see some arsM, arrA, and aioA
+* see correlations between arsenic resistance genes --> check this with co-occurrence in 16S tree?
+* showed pH as an important factor controlling their distribution in paddy soil
+  * probably not pH but rather community-driving factors
+  * in Cen it changes but is not correlated with pH
+  
+### Lu 2016
+* clone library arrA
+* core sediments collected from a region with arsenic-contaminated groundwater in the Jianghan Plain
+* see lots of diverse arrA 
