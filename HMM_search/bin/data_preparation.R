@@ -83,12 +83,23 @@ arsM <- data.90 %>%
   mutate(target = paste(">", target, sep = "")) %>%
   select(target)
 
-dissim <- c("aioA", "arrA", "arxA")
-dissim.t <- data.90 %>%
-  subset(Gene %in% dissim) %>%
+aioA <- data.90 %>%
+  subset(Gene == "aioA") %>%
   unite(col = target, c(t.name, NCBI.ID), sep = " from ") %>%
   mutate(target = paste(">", target, sep = "")) %>%
   select(target)
+arrA <- data.90 %>%
+  subset(Gene == "arrA") %>%
+  unite(col = target, c(t.name, NCBI.ID), sep = " from ") %>%
+  mutate(target = paste(">", target, sep = "")) %>%
+  select(target)
+
+arxA <- data.90 %>%
+  subset(Gene == "arxA") %>%
+  unite(col = target, c(t.name, NCBI.ID), sep = " from ") %>%
+  mutate(target = paste(">", target, sep = "")) %>%
+  select(target)
+
 
 arsC_thio <- data.90 %>%
   subset(Gene == "arsC_thio") %>%
@@ -115,6 +126,12 @@ acr3 <- data.90 %>%
   select(target)
 
 #save all genes as individual files
+write.table(aioA, file = paste(wd, "/output/aioA.target.txt", sep = ""), row.names = FALSE, quote = FALSE, col.names = FALSE)
+
+write.table(arrA, file = paste(wd, "/output/arrA.target.txt", sep = ""), row.names = FALSE, quote = FALSE, col.names = FALSE)
+
+write.table(arxA, file = paste(wd, "/output/arxA.target.txt", sep = ""), row.names = FALSE, quote = FALSE, col.names = FALSE)
+
 write.table(arsM, file = paste(wd, "/output/arsM.target.txt", sep = ""), row.names = FALSE, quote = FALSE, col.names = FALSE)
 
 write.table(dissim, file = paste(wd, "/output/dissim.target.txt", sep = ""), row.names = FALSE, quote = FALSE, col.names = FALSE)

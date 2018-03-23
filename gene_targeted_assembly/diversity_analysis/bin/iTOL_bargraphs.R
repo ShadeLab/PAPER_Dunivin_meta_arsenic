@@ -6,8 +6,8 @@ library(tidyverse)
 wd <- paste(getwd())
 
 #read in OTU table 
-arsM.table <- read.delim(paste(wd, "/data/arsM_rformat_dist_0.1.txt", sep = ""), header = TRUE)
-arsM.table <- rename(arsM.table, Sample = X)
+arsC_glut.table <- read.delim(paste(wd, "/data/arsC_glut_rformat_dist_0.1.txt", sep = ""), header = TRUE)
+arsC_glut.table <- rename(arsC_glut.table, Sample = X)
 
 #read in metadata
 meta <- data.frame(read.delim(paste(wd, "/data/sample_map.txt", 
@@ -17,7 +17,7 @@ meta <- data.frame(read.delim(paste(wd, "/data/sample_map.txt",
 rplB <- read.delim(paste(wd, "/output/rplB.summary.scg.txt", sep = ""), header = TRUE, sep = " ")
 
 #add census data for normalization purposes
-table.census <- arsM.table %>%
+table.census <- arsC_glut.table %>%
   right_join(rplB, by = "Sample")
 
 #replace NA values with zero
@@ -61,7 +61,7 @@ rownames(table.normalized.t) <- sprintf("%04s", rownames(table.normalized.t))
 rownames(table.normalized.t) <- paste("OTU_", rownames(table.normalized.t), sep="")
 
 #save file
-write.csv(table.normalized.t, paste(wd, "/../../phylogenetic_analysis/arsM_0.1_abund_label.csv", sep = ""), row.names = TRUE, quote = FALSE)
+write.csv(table.normalized.t, paste(wd, "/../phylogenetic_analysis/arsC_glut_0.1_abund_label.csv", sep = ""), row.names = TRUE, quote = FALSE)
 
 
 
