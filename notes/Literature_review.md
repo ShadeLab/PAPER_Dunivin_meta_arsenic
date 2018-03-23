@@ -13,6 +13,16 @@ __Goals:__
 * [Escudero et al., 2013](https://github.com/ShadeLab/meta_arsenic/blob/master/Literature_review.md#escudero-et-al-2017)
 * [Zeng et al., 2016](https://github.com/ShadeLab/meta_arsenic/blob/master/Literature_review.md#zeng-et-al-2016)
 * [Li et al., 2014](https://github.com/ShadeLab/meta_arsenic/blob/master/Literature_review.md#li-et-al-2014)
+* [Saunders and Rocap 2016](https://github.com/ShadeLab/meta_arsenic/blob/master/Literature_review.md#Saunders-and-Rocap-2016)
+* [Plewniak 2013](https://github.com/ShadeLab/meta_arsenic/blob/master/Literature_review.md#Plewniak-2013)
+* [Chi 2017](https://github.com/ShadeLab/meta_arsenic/blob/master/Literature_review.md#Chi-2017)
+* [Costa 2015](https://github.com/ShadeLab/meta_arsenic/blob/master/Literature_review.md#Costa-2015)
+* [Das 2017](https://github.com/ShadeLab/meta_arsenic/blob/master/Literature_review.md#Das-2017)
+* [Luo 2014](https://github.com/ShadeLab/meta_arsenic/blob/master/Literature_review.md#Luo-2014)
+* [Rascovan 2015](https://github.com/ShadeLab/meta_arsenic/blob/master/Literature_review.md#Rascovan-2015)
+* [Bertin 2011](https://github.com/ShadeLab/meta_arsenic/blob/master/Literature_review.md#Bertin-2011)
+
+
 
 ### Engel et al., 2013
 * Study aims to compare 16S rRNA gene diversity with _aioA_ diversity in microbial mats from arsenic contaminated gyser effluent in Chile. 
@@ -47,7 +57,9 @@ __Goals:__
 * See enterobacter arsC in low arsenic concentrations but firmicutes arsC (thio) in higher arsenic concentrations
 
 ### Zeng et al., 2016
-* 
+* Reglar mine
+* Focus on community and aioA (PCR methods)
+* aioA is mostly proteobacteria 
 
 ### Li et al., 2014
 * "However, our knowledge of the distribution, redundancies and organization of these genes in bacteria is still limited."
@@ -56,6 +68,50 @@ __Goals:__
 * Do not find a correlation between genome size and number of As resistance genes 
  * Could check this with jgi cogs data
 * Nice example of examining AsRG distribution with genomes
+
+### Saunders and Rocap 2016
+* Prochlorococcus genomes
+* arsR, acr3, arsC, arsM
+* See ubiquitous arsM in Prochlorocossus, but only see acr3 in oceans with low phosphate concentrations compared to arsenate 
+
+### Plewniak 2013
+* Ocean focus
+* COG data
+
+### Chi 2017
+* Treat mice with 100 ppb As for 13 weeks
+* See _reduction_ in arsC and acr3 post-arsenic exposure (unknown expression levels)
+
+### Costa 2015
+* historically metal-contaminated tropical freshwater stream sediment.
+* anoxic environmet; see lots of arrA ---> perhaps comparable to mangrove? 
+
+### Das 2017
+* arsenic contaminated groundwater
+ * 50% arsC
+ * 25% arsA
+ * 12% acr3
+ * 3% arsB, arsD, arsR, arsH
+ * did not look for arsM
+ 
+### Luo 2014
+* contaminated soil metagenomes
+ * As: 34.11 to 821.23 mg kg21
+ * Sb: 226.67 to 3923.07 mg kg21
+* observe higher diversity and abundance of  arsC, arrA, aioA, arsB and ACR3 in higher As samples
+* correlation between arsC and aioA and arsenic
+
+### Rascovan 2015
+* "However, among the archaea, bioenergetic arsenic metabolism has only been found in the Crenarchaeota phylum"
+* high arsenic and 4589 m above sea level inside a volcano crater in Diamante Lake, Argentina
+* find lots of As-resistance genes related to archaea
+* "phylogenetic analysis of aioA showed that haloarchaea sequences cluster in a novel and monophyletic group, suggesting that the origin of arsenic metabolism in haloarchaea is ancient"
+
+### Bertin 2011
+* AMD ecosystem
+* proteomics confirms ars operon including reductase and efflux pump
+* arsM also detected
+ 
 
 
 
