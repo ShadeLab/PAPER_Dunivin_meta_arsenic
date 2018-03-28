@@ -8,6 +8,7 @@ library(tidyverse)
 library(phyloseq)
 library(reshape2)
 library(data.table)
+library(broom)
 
 #print working directory for future references
 #note the GitHub directory for this script is as follows
@@ -227,9 +228,9 @@ write.table(gene_abundance_annotated, file = paste(wd, "/output/metaG_normAbund.
 #plot heatmap
 #(heatmap <- pheatmap(otu_table_norm.slim_2, cluster_rows = TRUE, cluster_cols = FALSE, clustering_method = "complete", dendrogram = "row", scale = "none", trace = "none", legend = TRUE, cellheight = 6, color = hc(500), cellwidth = 12, treeheight_row = 50, fontsize = 8, border_color = NA, show_rownames = FALSE, annotation_colors = ann_colors,  annotation_row = colors.otu.2_annotated, clustering_callback = callback, width = 12, height = 16))
 
-############################
-#MAKE GENE ABUNDANCE GRAPHS#
-############################
+#############################
+#EXAMINE RANK GENE ABUNDANCE#
+#############################
 #summarise normalized data (aka annotated gene abundance data)
 gene_abundance_summary <- gene_abundance_annotated %>%
   group_by(Gene, Biome, Site, Sample) %>%
@@ -265,9 +266,11 @@ gene_abundance_summary_order$gene_f = factor(gene_abundance_summary_order$Gene, 
           axis.ticks.x=element_blank()))
 
 #save bar graph with SITE means
-ggsave(pointplot.site, filename = paste(wd, "/figures/ordered.point.site2.png", sep= ""), height = 5, units = "in")
 ggsave(pointplot.site, filename = paste(wd, "/figures/ordered.point.site.eps", sep= ""),  height = 7, width = 7.5, units = "in")
 
+#################################
+#EXAMINE GENE RELATIVE ABUNDANCE#
+#################################
 gene_abundance_biome <- gene_abundance_summary %>%
   ungroup() %>%
   mutate(Gene = gsub("arsC_glut", "arsC (grx)", Gene)) %>%
@@ -277,13 +280,9 @@ gene_abundance_biome <- gene_abundance_summary %>%
   arrange(Biome, Site) %>%
   mutate(order = as.factor(row_number())) 
 
-
 gene_abundance_biome$Gene = factor(gene_abundance_biome$Gene, levels=c("acr3", "arsB", "arsC (trx)", "arsC (grx)", "arsD", "arsM", "aioA", "arrA", "arxA"))
 
-#gene_abundance_biome$Biome <- factor(gene_abundance_biome$Biome, levels = c("non-agricultural", "disturbance","agricultural","permafrost", "mangrove"))
-
-#gene_abundance_biome$Site <- factor(gene_abundance_biome$Site, levels = gene_abundance_biome$Site[order(gene_abundance_biome$Biome)])
-
+#Plot AsRG relative abundance by site
 (relabund.plot <- ggplot(subset(gene_abundance_biome, subset = Gene !="rplB"), aes(x = Site, y = Mean, fill = Gene)) +
   geom_bar(stat = "identity", position = "fill") +
   scale_fill_manual(values = c("#8BD1C4", "#F98072", "#F3A955", "#80B1D3", "#FFFFB3", "#B9E563", "#919191", "#C58CDC", "#FBB8DA")) +

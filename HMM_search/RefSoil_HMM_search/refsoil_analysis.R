@@ -43,6 +43,20 @@ data.tax <- ncbi.tidy %>%
 #change NA gene to "None"
 data.tax$Gene[is.na(data.tax$Gene)] <- "None"
 
+#extract genome accession for tree comparison
+#unique.id <- ncbi.tidy[!duplicated(ncbi.tidy$`RefSoil ID`), ]
+#id.tree.comp <- data.tax %>%
+  left_join(unique.id, by = "RefSoil ID") %>%
+  rename(main.id = NCBI.ID.y) %>%
+  ungroup() %>%
+  select(t.name, main.id) %>%
+  drop_na() %>%
+  mutate(t.name = paste(t.name, ":", sep = ""),
+         main.id = paste(main.id, ":", sep = ""))
+
+#save file for export
+#write.table(id.tree.comp, file = paste(wd, "/output/id.tree.comp.txt", sep = ""), quote = FALSE, row.names = FALSE, col.names = FALSE, sep = "\t")
+
 #cast data
 data.tax.cast <- data.tax %>%
   select(`RefSoil ID`, Phylum, Source, NCBI.ID, Contains.plasmid, Elements, Gene) %>%

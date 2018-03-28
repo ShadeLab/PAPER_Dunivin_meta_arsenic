@@ -134,8 +134,6 @@ write.table(arxA, file = paste(wd, "/output/arxA.target.txt", sep = ""), row.nam
 
 write.table(arsM, file = paste(wd, "/output/arsM.target.txt", sep = ""), row.names = FALSE, quote = FALSE, col.names = FALSE)
 
-write.table(dissim, file = paste(wd, "/output/dissim.target.txt", sep = ""), row.names = FALSE, quote = FALSE, col.names = FALSE)
-
 write.table(acr3, file = paste(wd, "/output/acr3.target.txt", sep = ""), row.names = FALSE, quote = FALSE, col.names = FALSE)
 
 write.table(arsB, file = paste(wd, "/output/arsB.target.txt", sep = ""), row.names = FALSE, quote = FALSE, col.names = FALSE)
@@ -143,8 +141,5 @@ write.table(arsB, file = paste(wd, "/output/arsB.target.txt", sep = ""), row.nam
 write.table(arsC_thio, file = paste(wd, "/output/arsC_thio.target.txt", sep = ""), row.names = FALSE, quote = FALSE, col.names = FALSE)
 
 write.table(arsC_glut, file = paste(wd, "/output/arsC_glut.target.txt", sep = ""), row.names = FALSE, quote = FALSE, col.names = FALSE)
-
-
-  
 
 
