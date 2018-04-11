@@ -44,8 +44,8 @@ data.tax <- ncbi.tidy %>%
 data.tax$Gene[is.na(data.tax$Gene)] <- "None"
 
 #extract genome accession for tree comparison
-#unique.id <- ncbi.tidy[!duplicated(ncbi.tidy$`RefSoil ID`), ]
-#id.tree.comp <- data.tax %>%
+unique.id <- ncbi.tidy[!duplicated(ncbi.tidy$`RefSoil ID`), ]
+id.tree.comp <- data.tax %>%
   left_join(unique.id, by = "RefSoil ID") %>%
   rename(main.id = NCBI.ID.y) %>%
   ungroup() %>%
@@ -169,79 +169,12 @@ data.sum <- data.tax %>%
 #save plot
 ggsave(gene.hist, filename = paste(wd, "/figures/gene.historgram.eps", sep = ""), width = 5.5, height = 4, units = "in")
 
-#check number with just plasmids
-(plasmid.hist <- ggplot(subset(data.taxREL, Gene !="None"), aes(x = plasmid, fill = Gene)) +
-    geom_bar(color = "black") +
-    facet_wrap(~Gene, scales = "free_y") +
-    scale_fill_brewer(palette = "Set3") +
-    scale_x_continuous(breaks = c(1,2,3),limits = c(0.5,3.5)) +
-    ylab("Number of genomes") +
-    xlab("Number of gene copies") +
-    theme_bw(base_size = 12))
-
-#save plot
-ggsave(plasmid.hist, filename = paste(wd, "/figures/plasmid.historgram.eps", sep = ""), width = 10)
-
-#check number with just plasmids
-(chromosome.hist <- ggplot(subset(data.taxREL, Gene !="None"), aes(x = chromosome, fill = Gene)) +
-    geom_bar(color = "black") +
-    facet_wrap(~Gene, scales = "free_y") +
-    scale_fill_brewer(palette = "Set3") +
-    scale_x_continuous(breaks = c(1,3,5,7,9,11)) +
-    ylab("Number of genomes") +
-    xlab("Number of gene copies") +
-    xlim(0, NA) +
-    theme_bw(base_size = 12))
-
-#save plot
-ggsave(chromosome.hist, filename = paste(wd, "/figures/chromosome.historgram.eps", sep = ""), width = 10)
-
-#####################################################
-#WHAT IS THE CO-OCCURRENCE OF AsRGs IN SOIL GENOMES?#
-#####################################################
-library(qgraph)
-
-#make matrix of information
-data.tax.sum <- data.tax %>%
-  group_by(Gene, Phylum, `RefSoil ID`) %>%
-  summarise(Occurrence = (length(Gene) > 0)*1)
-
-#cast data
-data.tax.cast <- dcast(data.tax.sum, `RefSoil ID`~Gene+Phylum, value.var = "Occurrence")
-rownames(data.tax.cast) <- data.tax.cast$`RefSoil ID`
-data.tax.cast[is.na(data.tax.cast)] = 0
-data.tax.cast <- data.tax.cast[,-1]
-
-#test pairwise correlations
-data.tax.corr <- corr.test(data.tax.cast, method = "spearman", adjust = "fdr", alpha = 0.01)
-
-#label shapes
-shape = c(rep("circle", 17), rep("square", 4), rep("circle", 18), rep("triangle", 29), rep("star", 8), rep("diamond", 13), "square", rep("heart", 14))
-
-#read in phylum colors
-colors.phy <- read_delim(paste(wd, "/data/colors_phylum.txt", sep = ""), delim = "\t", col_names = c("Color", "Phylum"))
-
-color.aes <- data.tax.corr$r
-node.color <- as.data.frame(color.aes) %>%
-  rownames_to_column(var = "Group") %>%
-  mutate(Group = gsub("arsC_glut", "arsC (grx)", Group),
-         Group = gsub("arsC_thio", "arsC (trx)", Group)) %>%
-  separate(Group, into = c("Gene", "Phylum"), sep = "_") %>%
-  mutate(Phylum = gsub("Terrabacteria", "Terrabacteria_group", Phylum)) %>%
-  left_join(colors.phy, by = "Phylum") %>%
-  select(Color)
-
-#make network of AsRGs
-data.tax.corr$r <- ifelse(data.tax.corr$r<0,0,data.tax.corr$r)
-
-qgraph(data.tax.corr$r, minimum = "sig", graph = "cor", sampleSize = 922, alpha = 0.05, layout = "spring",  threshold = "fdr",  labels = rownames(data.tax.cast$r), color = node.color$Color, shape = shape, posCol = "black", negCol = "red", label.cex = 0.5, label.scale = FALSE, fade = FALSE,  vsize = log(colSums(data.tax.cast)+1), node.width = 1, node.height = 1, width = 7, height = 5, border.color = "grey30")
-
 ############################
 #EXTRACT GENE INFO FOR iTOL#
 ############################
 
 #read in iTOL labels
-itol <- read_delim(paste(wd, "/iTOL_labels.txt", sep = ""), delim = ",", col_names = c("NCBI.ID", "Name"))
+itol <- read_delim(paste(wd, "/phylogenetic_analysis/labels_final.txt", sep = ""), delim = ",", col_names = c("NCBI.ID", "Name"), skip = 4)
 
 #summarise by RefSoil ID (ie join chromosome and plasmid info)
 data.sum.ncbi <- data.taxREL %>%
@@ -273,41 +206,30 @@ itol.summary <- itol.annotated %>%
   ungroup() %>%
   mutate(Proportion = Total/phy.n * 100,
          Phylum = paste(Phylum, " (", phy.n, ")", sep = "")) %>%
-  dcast(Phylum ~ variable)
+  dcast(Phylum ~ variable) 
 
-write.table(itol.summary, file = paste(wd, "/output/itol_summart.csv", sep = ""), quote = FALSE, sep = ",", col.names = TRUE, row.names = FALSE)
+write.table(itol.summary, file = paste(wd, "/output/itol_summary.csv", sep = ""), quote = FALSE, sep = ",", col.names = TRUE, row.names = FALSE)
 
-#replace values for iTOL
-#0 = open shape, 1 = closed shape; -1 = nothing
-#closed shapes
-itol.annotated$acr3_chromosome <- replace(itol.annotated$acr3_chromosome, itol.annotated$acr3_chromosome > 0, 1)
-itol.annotated$arsC_thio_chromosome <- replace(itol.annotated$arsC_thio_chromosome, itol.annotated$arsC_thio_chromosome > 0, 1)
-itol.annotated$aioA_chromosome <- replace(itol.annotated$aioA_chromosome, itol.annotated$aioA_chromosome > 0, 1)
-itol.annotated$arsB_chromosome <- replace(itol.annotated$arsB_chromosome, itol.annotated$arsB_chromosome > 0, 1)
-itol.annotated$arsM_chromosome <- replace(itol.annotated$arsM_chromosome, itol.annotated$arsM_chromosome > 0, 1)
-itol.annotated$arxA_chromosome <- replace(itol.annotated$arxA_chromosome, itol.annotated$arxA_chromosome > 0, 1)
-itol.annotated$arsC_glut_chromosome <- replace(itol.annotated$arsC_glut_chromosome, itol.annotated$arsC_glut_chromosome > 0, 1)
-itol.annotated$arrA_chromosome <- replace(itol.annotated$arrA_chromosome, itol.annotated$arrA_chromosome > 0, 1)
+#extract chromosome PA for iTOL
+itol.annotated.shapes <- itol.annotated
+itol.annotated.shapes[,c(8:27)][itol.annotated.shapes[,c(8:27)] > 0] <- 1
+itol.annotated.shapes[,c(8:27)][is.na(itol.annotated.shapes[,c(8:27)])] <- 0
 
-#make all zeros -1
-itol.annotated[is.na(itol.annotated)] <- -1
-itol.annotated[itol.annotated==0]<- -1
+#save chromosome info as output
+write.table(subset(itol.annotated.shapes, select = c(NCBI.ID, arsB_chromosome, acr3_chromosome, arsC_glut_chromosome, arsC_thio_chromosome, arsM_chromosome, aioA_chromosome, arxA_chromosome, arrA_chromosome)), paste(wd, "/output/iTOL_chromosome.csv", sep = ""), quote = FALSE, row.names = FALSE, col.names = TRUE, sep = ",")
 
-#make plasmids open shapes
-itol.annotated$acr3_plasmid <- replace(itol.annotated$acr3_plasmid, itol.annotated$acr3_plasmid > 0, 0)
-itol.annotated$arsC_thio_plasmid <- replace(itol.annotated$arsC_thio_plasmid, itol.annotated$arsC_thio_plasmid > 0, 0)
-itol.annotated$aioA_plasmid <- replace(itol.annotated$aioA_plasmid, itol.annotated$aioA_plasmid > 0, 0)
-itol.annotated$arsB_plasmid <- replace(itol.annotated$arsB_plasmid, itol.annotated$arsB_plasmid > 0, 0)
-itol.annotated$arsM_plasmid <- replace(itol.annotated$arsM_plasmid, itol.annotated$arsM_plasmid > 0, 0)
-itol.annotated$arxA_plasmid <- replace(itol.annotated$arxA_plasmid, itol.annotated$arxA_plasmid > 0, 0)
-itol.annotated$arsC_glut_plasmid <- replace(itol.annotated$arsC_glut_plasmid, itol.annotated$arsC_glut_plasmid > 0, 0)
-itol.annotated$arrA_plasmid <- replace(itol.annotated$arrA_plasmid, itol.annotated$arrA_plasmid > 0, 0)
+#individually save plasmid outputs
+write.table(subset(itol.annotated.shapes, select = c(NCBI.ID, arsB_plasmid), subset = arsB_plasmid >0), paste(wd, "/output/iTOL_arsB_plasmid.csv", sep = ""), quote = FALSE, row.names = FALSE, col.names = TRUE, sep = ",")
 
-itol.annotated.shapes <- itol.annotated %>%
-  select(NCBI.ID, arsB_chromosome, acr3_chromosome, arsC_glut_chromosome, arsC_thio_chromosome, arsM_chromosome, aioA_chromosome, arxA_chromosome, arrA_chromosome,arsB_plasmid, acr3_plasmid, arsC_glut_plasmid, arsC_thio_plasmid, arsM_plasmid, aioA_plasmid, arxA_plasmid, arrA_plasmid)
+write.table(subset(itol.annotated.shapes, select = c(NCBI.ID, acr3_plasmid), subset = acr3_plasmid >0), paste(wd, "/output/iTOL_cr3_plasmid.csv", sep = ""), quote = FALSE, row.names = FALSE, col.names = TRUE, sep = ",")
 
-#save as output
-write.table(itol.annotated.shapes, paste(wd, "/output/iTOL_shapes.csv", sep = ""), quote = FALSE, row.names = FALSE, col.names = TRUE, sep = ",")
+write.table(subset(itol.annotated.shapes, select = c(NCBI.ID, arsC_glut_plasmid), subset = arsC_glut_plasmid >0), paste(wd, "/output/iTOL_arsC_glut_plasmid.csv", sep = ""), quote = FALSE, row.names = FALSE, col.names = TRUE, sep = ",")
+
+write.table(subset(itol.annotated.shapes, select = c(NCBI.ID, arsC_thio_plasmid), subset = arsC_thio_plasmid >0), paste(wd, "/output/iTOL_arsC_thio_plasmid.csv", sep = ""), quote = FALSE, row.names = FALSE, col.names = TRUE, sep = ",")
+
+write.table(subset(itol.annotated.shapes, select = c(NCBI.ID, arsM_plasmid), subset = arsM_plasmid >0), paste(wd, "/output/iTOL_arsM_plasmid.csv", sep = ""), quote = FALSE, row.names = FALSE, col.names = TRUE, sep = ",")
+
+write.table(subset(itol.annotated.shapes, select = c(NCBI.ID, aioA_plasmid), subset = aioA_plasmid >0), paste(wd, "/output/iTOL_aioA_plasmid.csv", sep = ""), quote = FALSE, row.names = FALSE, col.names = TRUE, sep = ",")
 
 #read in phylum colors
 colors.phy <- read_delim(paste(wd, "/data/colors_phylum.txt", sep = ""), delim = "\t", col_names = c("Color", "Phylum"))
@@ -319,11 +241,19 @@ itol.annotated.color <- itol.annotated %>%
   select(NCBI.ID.x, Phylum.x) %>%
   rename(Phylum = Phylum.x) %>%
   left_join(colors.phy, by = "Phylum") %>%
-  mutate(Type = "label") %>%
-  select(NCBI.ID.x,Type,Color)
+  mutate(Type = "label",
+         outside = -1, 
+         font = "normal",
+         size = 1)
   
-#save as output
-write.table(itol.annotated.color, paste(wd, "/output/iTOL_node_color.csv", sep = ""), quote = FALSE, row.names = FALSE, col.names = TRUE, sep = ",")
+#save as output (clade color)
+write.table(subset(itol.annotated.color, select = c(NCBI.ID.x,Type,Color)), paste(wd, "/output/iTOL_node_color.csv", sep = ""), quote = FALSE, row.names = FALSE, col.names = TRUE, sep = ",")
+
+#save as output (branch color)
+write.table(subset(itol.annotated.color, select = c(NCBI.ID.x,Color,Phylum)), paste(wd, "/output/iTOL_branch_color.csv", sep = ""), quote = FALSE, row.names = FALSE, col.names = TRUE, sep = ",")
+
+#save as output (outside label & color)
+write.table(subset(itol.annotated.color, select = c(NCBI.ID.x,Phylum, outside,Color, font,size)), paste(wd, "/output/iTOL_branch_label_color.csv", sep = ""), quote = FALSE, row.names = FALSE, col.names = TRUE, sep = ",")
 
 ##################################
 #SET UP GENE-SPECIFIC PHYLOGENIES#
@@ -333,10 +263,13 @@ write.table(itol.annotated.color, paste(wd, "/output/iTOL_node_color.csv", sep =
 AsRG.labels <- data.tax %>%
   ungroup() %>%
   left_join(ncbi, by = c("RefSoil ID", "Taxon ID", "Phylum")) %>%
-  select(Gene, t.name, Organism) 
+  select(Gene, t.name, Organism) %>%
+  mutate(Organism = paste(Organism, " (", t.name, ")", sep = ""))
+
+dissim <- c("arxA", "arrA", "aioA")
 
 #write file with labels for each gene
-write.table(subset(AsRG.labels, Gene == "arsC_glut", select = c(t.name, Organism)), file = paste(wd, "/output/arsC_glut.labels.txt", sep = ""), quote = FALSE, row.names = FALSE, col.names = FALSE, sep = ",")
+write.table(subset(AsRG.labels, Gene == "acr3", select = c(t.name, Organism)), file = paste(wd, "/output/acr3.labels.txt", sep = ""), quote = FALSE, row.names = FALSE, col.names = FALSE, sep = ",")
 
 #get label colors for all genes  
 AsRG.color <- data.tax %>%
@@ -346,7 +279,7 @@ AsRG.color <- data.tax %>%
   select(Gene, t.name, label, Color) 
 
 #save each gene as output
-write.table(subset(AsRG.color, Gene == "acr3", select = c(t.name, label, Color)), paste(wd, "/output/iTOL_acr3_node_color.csv", sep = ""), quote = FALSE, row.names = FALSE, col.names = TRUE, sep = ",")
+write.table(subset(AsRG.color, Gene %in% dissim, select = c(t.name, label, Color)), paste(wd, "/output/iTOL_dissim_node_color.csv", sep = ""), quote = FALSE, row.names = FALSE, col.names = TRUE, sep = ",")
 
 #make plasmid/genome denotation for iTOL
 #AsRG trees
@@ -356,7 +289,7 @@ location <- data.tax %>%
   mutate(Source = ifelse(Source == "NCBI.ID", -1, 0))
 
 #save each gene as output
-write.table(subset(location, Gene == "arsC_thio", select = c(t.name, Source)), paste(wd, "/output/iTOL_arsC_thio_plasmid.csv", sep = ""), quote = FALSE, row.names = FALSE, col.names = TRUE, sep = ",")
+write.table(subset(location, Gene == "arsD", select = c(t.name, Source)), paste(wd, "/output/iTOL_arsD_plasmid.csv", sep = ""), quote = FALSE, row.names = FALSE, col.names = TRUE, sep = ",")
 
 ####################
 #Soil type analysis#

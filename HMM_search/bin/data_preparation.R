@@ -60,16 +60,15 @@ data.90 <- data.90[order(data.90$t.name, abs(data.90$score1), decreasing = TRUE)
 #remove duplicates that have the lower score
 data.90 <- data.90[!duplicated(data.90$t.name),]
 
-#plot data quality distribution
-ggplot(data.90, aes(x = perc.ali, y = score1)) +
-  geom_point(alpha = 0.5) +
-  facet_wrap(~Gene, scales = "free_y")
-
-
 #dissim must have a score > 1000 so it doesnt
 #pick up thiosulfate reductases
 data.90 <- data.90[-which(data.90$Gene == "arxA" & data.90$score1 < 1000),]
 data.90 <- data.90[-which(data.90$Gene == "aioA" & data.90$score1 < 1000),]
+
+#plot data quality distribution
+ggplot(data.90, aes(x = perc.ali, y = score1)) +
+  geom_point(alpha = 0.5) +
+  facet_wrap(~Gene, scales = "free_y")
 
 #save table to output
 write.table(data.90, paste(wd, "/output/AsRG_summary.txt", sep = ""), sep = "\t", quote = FALSE, row.names = FALSE)
@@ -125,7 +124,15 @@ acr3 <- data.90 %>%
   mutate(target = paste(">", target, sep = "")) %>%
   select(target)
 
+arsD <- data.90 %>%
+  subset(Gene == "arsD") %>%
+  unite(col = target, c(t.name, NCBI.ID), sep = " from ") %>%
+  mutate(target = paste(">", target, sep = "")) %>%
+  select(target)
+
 #save all genes as individual files
+write.table(arsD, file = paste(wd, "/output/arsD.target.txt", sep = ""), row.names = FALSE, quote = FALSE, col.names = FALSE)
+
 write.table(aioA, file = paste(wd, "/output/aioA.target.txt", sep = ""), row.names = FALSE, quote = FALSE, col.names = FALSE)
 
 write.table(arrA, file = paste(wd, "/output/arrA.target.txt", sep = ""), row.names = FALSE, quote = FALSE, col.names = FALSE)

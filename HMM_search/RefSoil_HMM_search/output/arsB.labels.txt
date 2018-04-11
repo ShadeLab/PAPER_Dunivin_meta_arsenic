@@ -1,464 +1,463 @@
 LABELS
 SEPARATOR COMMA
 DATA
-#NODE_ID,LABEL
-b3502,Escherichia coli str. K-12 substr. MG1655
-BSU36030,Bacillus subtilis subsp. subtilis str. 168
-BSU05340,Bacillus subtilis subsp. subtilis str. 168
-PA2278,Pseudomonas aeruginosa PAO1
-BH_RS15105,Bacillus halodurans C-125
-TVG_RS01495,Thermoplasma volcanium GSS1
-BB_RS05935,Bordetella bronchiseptica RB50
-DET_RS04740,Dehalococcoides mccartyi 195
-MAP_RS02475,Mycobacterium avium subsp. paratuberculosi
-LMOF2365_RS06555,Listeria monocytogenes serotype 4b str. F2365
-SAP1_RS38500,Streptomyces avermitilis MA-4680
-LIN_RS06835,Listeria innocua Clip11262
-BCE_RS25620,Bacillus cereus ATCC 10987
-BA_5462,Bacillus anthracis str. Ames
-PFL_RS16590,Pseudomonas protegens Pf-5
-PFL_RS11040,Pseudomonas protegens Pf-5
-OB_RS12445,Oceanobacillus iheyensis HTE831
-OB_RS10450,Oceanobacillus iheyensis HTE831
-blr5272,Bradyrhizobium diazoefficiens USDA 110
-ECA_RS07945,Pectobacterium atrosepticum SCRI1043
-BC5226,Bacillus cereus ATCC 14579
-TX73_RS17325,Rhodopseudomonas palustris CGA009
-TX73_RS11520,Rhodopseudomonas palustris CGA009
-PSPPH_RS18225,Pseudomonas savastanoi pv. phaseolicola 1448A
-PTO_RS00425,Picrophilus torridus DSM 9790
-BAS5075,Bacillus anthracis str. Sterne
-YPTB_RS04360,Yersinia pseudotuberculosis IP 32953
-STH_RS04595,Symbiobacterium thermophilum IAM 14863
-BCE33L_RS26200,Bacillus cereus E33L
-BLI_RS10500,Bacillus licheniformis DSM 13
-ABC_RS04430,Bacillus clausii KSM-K16
-TK_RS04340,Thermococcus kodakarensis KOD1
-SH_RS00910,Staphylococcus haemolyticus JCSC1435
-SH_RS00490,Staphylococcus haemolyticus JCSC1435
-SH_RS00460,Staphylococcus haemolyticus JCSC1435
-PSYC_RS04960,Psychrobacter arcticus 273-4
-CBDB_RS03635,Dehalococcoides mccartyi CBDB1
-PFL01_RS12120,Pseudomonas fluorescens Pf0-1
-PFL01_RS11060,Pseudomonas fluorescens Pf0-1
-GBAA_RS26630,Bacillus anthracis str. 'Ames Ancestor'
-SBO_RS19325,Shigella boydii Sb227
-RHE_RS03030,Rhizobium etli CFN 42
-MFLA_RS07635,Methylobacillus flagellatus KT
-CSAL_RS07545,Chromohalobacter salexigens DSM 3043
-PCRYO_RS07465,Psychrobacter cryohalolentis K5
-PSEEN_RS15280,Pseudomonas entomophila L48
-MMCS_RS23845,Mycobacterium sp. MCS
-RXYL_RS05330,Rubrobacter xylanophilus DSM 9941
-RXYL_RS05205,Rubrobacter xylanophilus DSM 9941
-YPN_RS03995,Yersinia pestis Nepal516
-YPA_RS14620,Yersinia pestis Antiqua
-RHA1_RS05705,Rhodococcus jostii RHA1
-GBCGDNIH1_RS10850,Granulibacter bethesdensis CGDNIH1
-PA14_RS14295,Pseudomonas aeruginosa UCBPP-PA14
-MAV_RS02780,Mycobacterium avium 104
-MKMS_RS24085,Mycobacterium sp. KMS
-AAVE_RS14190,Acidovorax citrulli AAC00-1
-HHAL_RS01590,Halorhodospira halophila SL1
-MJLS_RS25595,Mycobacterium sp. JLS
-GTNG_RS08115,Geobacillus thermodenitrificans NG80-2
-MFLV_RS07265,Mycobacterium gilvum PYR-GCK
-SPUTCN32_RS19890,Shewanella putrefaciens CN-32
-SPUTCN32_RS06210,Shewanella putrefaciens CN-32
-BRADO_RS15185,Bradyrhizobium sp. ORS 278
-DEHABAV1_RS04195,Dehalococcoides mccartyi BAV1
-RCI_RS00520,Methanocella arvoryzae MRE50
-ACRY_RS16575,Acidiphilium cryptum JF-5
-PPUT_RS15230,Pseudomonas putida F1
-PSYCPRWF_RS05810,Psychrobacter sp. PRwf-1
-TBFG_RS18910,Mycobacterium tuberculosis F11
-KPN_RS17715,Klebsiella pneumoniae subsp. pneumoniae MG
-MMA_RS13655,Janthinobacterium sp. Marseille
-RBAM_RS17905,Bacillus methylotrophicus FZB42
-RBAM_RS16565,Bacillus methylotrophicus FZB42
-SPRO_RS12275,Serratia proteamaculans 568
-BPUM_RS20280,Bacillus pumilus SAFR-032
-SARE_RS10265,Salinispora arenicola CNS-205
-DACI_RS22070,Delftia acidovorans SPH-1
-ACL_RS00700,Acholeplasma laidlawii PG-8A
-BPET_RS13725,Bordetella petrii
-MEXT_RS19910,Methylobacterium extorquens PA1
-MEXT_RS09680,Methylobacterium extorquens PA1
-BCERKBAB4_RS25175,Bacillus weihenstephanensis KBAB4
-PPUTGB1_RS18535,Pseudomonas putida GB-1
-PPUTGB1_RS15595,Pseudomonas putida GB-1
-YPK_RS17160,Yersinia pseudotuberculosis YPIII
-ECOLC_RS01125,Escherichia coli ATCC 8739
-ECDH10B_RS18700,Escherichia coli str. K-12 substr. DH10B
-PPUTW619_RS08710,Pseudomonas putida W619
-MRAD2831_RS52895,Methylobacterium radiotolerans JCM 2831
-MRAD2831_RS38805,Methylobacterium radiotolerans JCM 2831
-M446_RS09405,Methylobacterium sp. 4-46
-PMI_RS10600,Proteus mirabilis HI4320
-EXIG_RS07400,Exiguobacterium sibiricum 255-15
-SGR_RS09905,Streptomyces griseus subsp. griseus NBRC 13350
-BIND_RS15160,Beijerinckia indica subsp. indica ATCC 9039
-YPTS_RS04225,Yersinia pseudotuberculosis PB1/+
-MPOP_RS21960,Methylobacterium populi BJ001
-MPOP_RS03470,Methylobacterium populi BJ001
-SYO3AOP1_RS04835,Sulfurihydrogenibium sp. YO3AOP1
-SMLT_RS12260,Stenotrophomonas maltophilia K279a
-RPAL_RS19190,Rhodopseudomonas palustris TIE-1
-SESA_RS04010,Salmonella enterica subsp. enterica serova
-GDIA_RS12770,Gluconacetobacter diazotrophicus PA1 5
-GDIA_RS05215,Gluconacetobacter diazotrophicus PA1 5
-BCAH187_RS26300,Bacillus cereus AH187
-LMHCC_RS06505,Listeria monocytogenes HCC23
-BCB4264_RS26340,Bacillus cereus B4264
-MCHL_RS21060,Methylobacterium extorquens CM4
-AFE_RS13130,Acidithiobacillus ferrooxidans ATCC 23270
-PLES_RS15685,Pseudomonas aeruginosa LESB58
-BCG9842_RS25850,Bacillus cereus G9842
-BCAH820_RS26440,Bacillus cereus AH820
-MNOD_RS11220,Methylobacterium nodulans ORS 2060
-BCQ_RS25580,Bacillus cereus Q1
-AVI_RS14005,Agrobacterium vitis S4
-DTPSY_RS10715,Acidovorax ebreus TPSY
-JTY_RS18685,Mycobacterium bovis BCG str. Tokyo 172
-SULAZ_RS03915,Sulfurihydrogenibium azorense Az-Fu1
-BCA_RS27040,Bacillus cereus 03BB102
-ACP_RS10770,Acidobacterium capsulatum ATCC 51196
-LM4B_RS06535,Listeria monocytogenes serotype 4b str. CLI
-BBR47_RS02720,Brevibacillus brevis NBRC 100599
-ROP_RS04400,Rhodococcus opacus B4
-BAA_RS27150,Bacillus anthracis str. A0248
-PFLU_RS14435,Pseudomonas fluorescens SBW25
-EAT1B_RS05115,Exiguobacterium sp. AT1b
-KP1_RS21410,Klebsiella pneumoniae subsp. pneumonia
-ECBD_RS01235,Escherichia coli 'BL21-Gold(DE3)pLysS AG'
-ECB_RS17735,Escherichia coli B str. REL606
-ECD_RS17500,Escherichia coli BL21(DE3)
-METD_RS22545,Methylobacterium extorquens DM4
-CACI_RS16685,Catenulispora acidiphila DSM 44928
-CTCNB1_RS16140,Comamonas testosteroni CNB-2
-CTCNB1_RS12880,Comamonas testosteroni CNB-2
-SDEL_RS07710,Sulfurospirillum deleyianum DSM 6946
-TTER_RS05530,Thermobaculum terrenum ATCC BAA-798
-DHCVS_RS03800,Dehalococcoides mccartyi VS
-DD586_RS11920,Dickeya dadantii Ech586
-VB87_RS10995,Xanthomonas albilineans GPE PC73
-KFLA_RS02325,Kribbella flavida DSM 17836
-LM5578_RS07140,Listeria monocytogenes 08-5578
-LM5923_RS06920,Listeria monocytogenes 08-5923
-BPOF4_RS14195,Bacillus pseudofirmus OF4
-KVAR_RS03805,Klebsiella variicola At-22
-DEHALGT_RS03840,Dehalococcoides mccartyi GT
-LSE_RS06050,Listeria seeligeri serovar 1/2b str. SLCC3954
-SCAB_RS04185,Streptomyces scabiei 87.22
-G2583_RS21760,Escherichia coli O55:H7 str. CB9615
-SNAS_RS18080,Stackebrandtia nassauensis DSM 44728
-SNAS_RS03540,Stackebrandtia nassauensis DSM 44728
-BMQ_RS09380,Bacillus megaterium QM B1551
-BMQ_RS08470,Bacillus megaterium QM B1551
-BMQ_RS05235,Bacillus megaterium QM B1551
-BMD_RS09275,Bacillus megaterium DSM 319
-BMD_RS05235,Bacillus megaterium DSM 319
-THI_RS14500,Thiomonas arsenitoxydans
-THI_RS10360,Thiomonas arsenitoxydans
-TINT_RS09170,Thiomonas intermedia K12
-ARNIT_RS03025,Arcobacter nitrofigilis DSM 7299
-BMB171_RS26065,Bacillus thuringiensis BMB171
-BSUW23_RS02820,Bacillus subtilis subsp. spizizenii str. W23
-PPE_RS20110,Paenibacillus polymyxa E681
-HELO_RS02615,Halomonas elongata DSM 2581
-BAMF_RS39310,Bacillus amyloliquefaciens DSM 7
-BAMF_RS38055,Bacillus amyloliquefaciens DSM 7
-ENTCL_RS11075,Enterobacter lignolyticus SCF1
-PPSC2_RS50665,Paenibacillus polymyxa SC2
-BATR1942_RS00210,Bacillus atrophaeus 1942
-AXYL_RS09680,Achromobacter xylosoxidans A8
-REQ_RS14065,Rhodococcus equi 103S
-RPDX1_RS09760,Rhodopseudomonas palustris DX-1
-DEIMA_RS07070,Deinococcus maricopensis DSM 21211
-ACIPR4_RS14240,Terriglobus saanensis SP1PR4
-BSN5_RS14470,Bacillus subtilis BSn5
-BSN5_RS09015,Bacillus subtilis BSn5
-NAL212_RS01115,Nitrosomonas sp. AL212
-PSEBR_RS17435,Pseudomonas brassicacearum subsp
-PNA2_RS04555,Pyrococcus sp. NA2
-DELCS14_RS12240,Delftia sp. Cs1-4
-SERAS9_RS15515,Serratia plymuthica AS9
-DESKU_RS16015,Desulfotomaculum kuznetsovii DSM 6115
-DESKU_RS13570,Desulfotomaculum kuznetsovii DSM 6115
-DESKU_RS03440,Desulfotomaculum kuznetsovii DSM 6115
-PP1Y_RS13445,Novosphingobium sp. PP1Y
-DESRU_RS13020,Desulfotomaculum ruminis DSM 2154
-KNP414_RS29300,Paenibacillus mucilaginosus KNP414
-KNP414_RS15245,Paenibacillus mucilaginosus KNP414
-KNP414_RS07580,Paenibacillus mucilaginosus KNP414
-THETH_RS02495,Pseudothermotoga thermarum DSM 5069
-MAF_RS18670,Mycobacterium africanum GM041182
-ACIFE_RS10615,Acidithiobacillus ferrivorans SS3
-SACTE_RS31605,Streptomyces sp. SirexAA-E
-STRVI_RS05345,Streptomyces violaceusniger Tu 4113
-GYO_RS25270,Bacillus subtilis subsp. spizizenii TU-B-10
-SCAT_RS15145,Streptomyces cattleya NRRL 8057
-DSC_RS02885,Pseudoxanthomonas spadix BD-a59
-ECWSU1_RS06945,Enterobacter cloacae EcWSU1
-MYCRHN_RS10890,Mycobacterium rhodesiae NBB3
-ACIX8_RS22345,Granulicella mallensis MP5ACTX8
-HPL003_RS03405,Paenibacillus terrae HPL-003
-BCN_RS25930,Bacillus cereus NC7401
-BCF_RS25765,Bacillus cereus F837/76
-BACAU_RS18635,Bacillus methylotrophicus CAU B946
-BACAU_RS17340,Bacillus methylotrophicus CAU B946
-PANA5342_RS33875,Pantoea ananatis LMG 5342
-PSF113_RS48845,Pseudomonas fluorescens F113
-GPOL_RS20815,Gordonia polyisoprenivorans VH2
-PM3016_RS29830,Paenibacillus mucilaginosus 3016
-PM3016_RS09975,Paenibacillus mucilaginosus 3016
-PM3016_RS06555,Paenibacillus mucilaginosus 3016
-OCU_RS41535,Mycobacterium intracellulare ATCC 13950
-OCU_RS27400,Mycobacterium intracellulare ATCC 13950
-OCO_RS16575,Mycobacterium intracellulare MOTT-02
-OCO_RS02370,Mycobacterium intracellulare MOTT-02
-OCQ_RS17180,Mycobacterium intracellulare MOTT-64
-OCQ_RS02465,Mycobacterium intracellulare MOTT-64
-MTC_RS12075,Methanocella conradii HZ254
-BANAU_RS19680,Bacillus methylotrophicus YAU B9601-Y2
-BANAU_RS18355,Bacillus methylotrophicus YAU B9601-Y2
-S23_RS14735,Bradyrhizobium sp. S23321
-AMIS_RS08770,Actinoplanes missouriensis 431
-LFE_RS04200,Leptospirillum ferrooxidans C2-3
-HYDTH_RS08940,Hydrogenobacter thermophilus TK-6
-A1122_RS09275,Yersinia pestis A1122
-BAMTA208_RS18880,Bacillus amyloliquefaciens TA208
-BAMTA208_RS17625,Bacillus amyloliquefaciens TA208
-LL3_RS19135,Bacillus amyloliquefaciens LL3
-LL3_RS17880,Bacillus amyloliquefaciens LL3
-BAXH7_RS18910,Bacillus amyloliquefaciens XH7
-BAXH7_RS17655,Bacillus amyloliquefaciens XH7
-I33_RS17360,Bacillus subtilis subsp. subtilis str. RO-NN-1
-I33_RS02840,Bacillus subtilis subsp. subtilis str. RO-NN-1
-BSNT_RS19170,Bacillus subtilis subsp. natto BEST195
-BSNT_RS03060,Bacillus subtilis subsp. natto BEST195
-YBT020_RS26390,Bacillus thuringiensis serovar finitimu
-CT43_RS26500,Bacillus thuringiensis serovar chinensis CT-43
-BJ6T_RS21675,Bradyrhizobium japonicum USDA 6
-LMO4A_RS06950,Listeria monocytogenes L99
-PPUBIRD1_RS15000,Pseudomonas putida BIRD-1
-PAJ_RS06760,Pantoea ananatis AJ13355
-LMM7_RS06960,Listeria monocytogenes M7
-PPM_RS22805,Paenibacillus polymyxa M1
-PPM_RS16115,Paenibacillus polymyxa M1
-LMRG_RS06465,Listeria monocytogenes 10403S
-LMOG_RS06630,Listeria monocytogenes J0161
-LMKG_RS06815,Listeria monocytogenes FSL R2-561
-LMLG_RS06535,Listeria monocytogenes Finland 1998
-PAM18_RS14195,Pseudomonas aeruginosa M18
-NCGM2_RS16250,Pseudomonas aeruginosa NCGM2.S1
-WFL_RS19245,Escherichia coli W
-HBHAL_RS15730,Halobacillus halophilus DSM 2266
-B2K_RS29980,Paenibacillus mucilaginosus K02
-B2K_RS10095,Paenibacillus mucilaginosus K02
-B2K_RS06615,Paenibacillus mucilaginosus K02
-H9401_RS26590,Bacillus anthracis str. H9401
-MY9_RS18170,Bacillus sp. JS
-MY9_RS03065,Bacillus sp. JS
-SHJG_RS40570,Streptomyces hygroscopicus subsp. jinggangensi
-DGO_RS09230,Deinococcus gobiensis I-0
-ACPL_RS09435,Actinoplanes sp. SE50/110
-W5S_RS16825,Pectobacterium sp. SCC3193
-PFLA506_RS13670,Pseudomonas fluorescens A506
-MUS_RS19660,Bacillus amyloliquefaciens Y2
-MUS_RS18335,Bacillus amyloliquefaciens Y2
-YSA_RS23490,Pseudomonas putida ND6
-SULBA_RS07770,Sulfurospirillum barnesii SES-3
-TERRO_RS08220,Terriglobus roseus DSM 18391
-MYCCH_RS22970,Mycobacterium chubuense NBB4
-MYCCH_RS10630,Mycobacterium chubuense NBB4
-SSIL_RS11270,Solibacillus silvestris StLB046
-DESACI_RS03530,Desulfosporosinus acidiphilus SJ4
-A3UG_RS07295,Enterobacter cloacae subsp. dissolvens SDM
-PADK2_RS13920,Pseudomonas aeruginosa DK2
-RVBD_RS18870,Mycobacterium tuberculosis H37Rv
-PSJM300_RS07755,Pseudomonas stutzeri DSM 10701
-MSMEI_RS29720,Mycobacterium smegmatis str. MC2 155
-BCK_RS09780,Bacillus cereus FRI-35
-BTG_RS21945,Bacillus thuringiensis HD-771
-BTF1_RS24130,Bacillus thuringiensis HD-789
-LMOATCC19117_RS06585,Listeria monocytogenes ATCC 19117
-LMOSLCC2378_RS06575,Listeria monocytogenes SLCC2378
-LMOSLCC2540_RS06740,Listeria monocytogenes SLCC2540
-LMOSLCC2755_RS06820,Listeria monocytogenes SLCC2755
-LMOSLCC2372_RS07095,Listeria monocytogenes SLCC2372
-LMOSLCC2479_RS06825,Listeria monocytogenes SLCC2479
-LMOSLCC2482_RS07010,Listeria monocytogenes serotype 7 str
-LMOSLCC7179_RS06410,Listeria monocytogenes SLCC7179
-LMOL312_RS06535,Listeria monocytogenes L312
-LFML04_RS11965,Leptospirillum ferriphilum ML-04
-LFML04_RS04845,Leptospirillum ferriphilum ML-04
-MC28_RS22075,Bacillus thuringiensis MC28
-A911_RS05850,Campylobacter jejuni subsp. jejuni PT14
-DHBDCA_RS02495,Dehalobacter sp. DCA
-DCF50_RS02790,Dehalobacter sp. CF
-BTB_RS26625,Bacillus thuringiensis Bt407
-BN112_2263,Bordetella bronchiseptica 253
-PPUTUW4_RS11450,Pseudomonas sp. UW4
-BN6_RS11025,Saccharothrix espanaensis DSM 44229
-MIC7113_RS22005,Microcoleus sp. PCC 7113
-DEIPE_RS16650,Deinococcus peraridilitoris DSM 19664
-B938_RS18150,Bacillus methylotrophicus AS43.3
-B938_RS16875,Bacillus methylotrophicus AS43.3
-THECO_RS08775,Thermobacillus composti KWC4
-MT7199_RS18830,Mycobacterium tuberculosis 7199-99
-A284_RS14530,Staphylococcus warneri SG1
-H045_RS08340,Pseudomonas poae RE*1-1-14
-SMWW4_RS15445,Serratia marcescens WW4
-HD73_RS28050,Bacillus thuringiensis serovar kurstaki str
-C663_RS17630,Bacillus subtilis XF-1
-C663_RS02795,Bacillus subtilis XF-1
-KSO_RS02365,Bacillus amyloliquefaciens IT-45
-KSO_RS01110,Bacillus amyloliquefaciens IT-45
-H175_RS26480,Bacillus thuringiensis serovar thuringiensi
-DCMB_RS04215,Dehalococcoides mccartyi DCMB5
-BTF_RS03975,Dehalococcoides mccartyi BTF08
-MU9_RS16150,Morganella morganii subsp. morganii KT
-S58_RS15265,Bradyrhizobium oligotrophicum S58
-BN159_RS09510,Streptomyces davawensis JCM 4913
-BSU6051_RS18630,Bacillus subtilis subsp. subtilis 6051-HGW
-BSU6051_RS02960,Bacillus subtilis subsp. subtilis 6051-HGW
-H681_RS12035,Pseudomonas denitrificans ATCC 13867
-I653_RS17400,Bacillus subtilis subsp. subtilis str. BAB-1
-I653_RS02770,Bacillus subtilis subsp. subtilis str. BAB-1
-SHJGH_RS39200,Streptomyces hygroscopicus subsp. jinggangensi
-G655_RS13705,Pseudomonas aeruginosa B136-33
-RORB6_RS04740,Raoultella ornithinolytica B6
-B1NLA3E_RS13085,Bacillus sp. 1NLA3E
-B1NLA3E_RS05915,Bacillus sp. 1NLA3E
-SFUL_RS26435,Streptomyces fulvissimus DSM 40593
-L083_RS38590,Actinoplanes sp. N902-109
-L083_RS13515,Actinoplanes sp. N902-109
-MAP4_RS16845,Mycobacterium avium subsp. paratuberculosi
-PFLCHA0_RS16545,Pseudomonas protegens CHA0
-PFLCHA0_RS11195,Pseudomonas protegens CHA0
-BALI_RS10625,Bacillus paralicheniformis ATCC 9945a
-L483_RS09030,Pseudomonas putida H8234
-H650_RS01620,Enterobacter sp. R4-368
-M062_RS11920,Pseudomonas aeruginosa RP73
-SOD_RS14545,Serratia plymuthica 4Rx13
-FACI_RS04495,Ferroplasma acidarmanus fer1
-M621_RS40370,Serratia plymuthica S13
-M495_RS15170,Serratia liquefaciens ATCC 27592
-REMIM1_RS03425,Rhizobium etli bv. mimosae str. Mim1
-B446_RS32650,Streptomyces collinus Tu 365
-BB2000_RS10780,Proteus mirabilis BB2000
-M493_RS08125,Geobacillus sp. JF8
-BASU_RS18080,Bacillus methylotrophicus UCMB5113
-BASU_RS16805,Bacillus methylotrophicus UCMB5113
-O5Y_RS16690,Rhodococcus erythropolis CCM2595
-VAPA_RS09830,Variovorax paradoxus B4
-SA40_RS08730,Staphylococcus aureus subsp. aureus SA40
-D364_RS17195,Klebsiella pneumoniae CG43
-U471_RS17890,Bacillus amyloliquefaciens CC178
-U471_RS16545,Bacillus amyloliquefaciens CC178
-AFR_RS42075,Actinoplanes friuliensis DSM 7358
-N149_RS05675,Campylobacter coli 15-537360
-MKAN_RS24325,Mycobacterium kansasii ATCC 12478
-MKAN_RS11645,Mycobacterium kansasii ATCC 12478
-PVLB_RS21835,Pseudomonas sp. VLB120
-BTOYO_RS12215,Bacillus toyonensis BCT-7112
-U719_RS06130,Exiguobacterium sp. MH3
-YBT1518_RS28920,Bacillus thuringiensis YBT-1518
-GY50_RS03820,Dehalococcoides mccartyi GY50
-U769_RS13760,Pseudomonas aeruginosa MTB-1
-X809_RS22215,Paenibacillus polymyxa CR1
-U771_RS17090,Pseudomonas sp. TKP
-U771_RS04875,Pseudomonas sp. TKP
-U722_RS17965,Bacillus amyloliquefaciens LFB112
-U722_RS16745,Bacillus amyloliquefaciens LFB112
-SCV20265_RS15120,Pseudomonas aeruginosa SCV20265
-STTU_RS30800,Streptomyces sp. Tu6071
-PSSB64_RS21035,Pseudomonas syringae pv. syringae B64
-N505_RS27570,Rhodococcus aetherivorans
-PMO01_RS10110,Pseudomonas moraviensis R28-S
-U369_RS26650,Bacillus anthracis 52-G
-U365_RS26745,Bacillus anthracis 9080-G
-U368_RS26640,Bacillus anthracis 8903-G
-A16_RS26640,Bacillus anthracis str. A16
-A16R_RS26635,Bacillus anthracis str. A16R
-HKBS1_RS18845,Mycobacterium tuberculosis HKBS1
-GBCGDNIH3_RS10795,Granulibacter bethesdensis CGDNIH3
-MIM_RS10425,Advenella mimigardefordensis DPN7
-BLEG1_RS01035,Bacillus lehensis G1
-PD630_RS24570,Rhodococcus opacus PD630
-KP13_RS05045,Klebsiella pneumoniae subsp. pneumoniae Kp13
-PSAB_RS12480,Paenibacillus sabinae T27
-PSAB_RS05790,Paenibacillus sabinae T27
-BTK_RS27845,Bacillus thuringiensis serovar kurstaki str
-NX02_RS20670,Sphingomonas sanxanigenens DSM 19645
-MI63_RS26505,Bacillus anthracis str. SVA11
-PPSQR21_RS21470,Paenibacillus polymyxa SQR-21
-V529_RS18820,Bacillus methylotrophicus SQR9
-V529_RS17500,Bacillus methylotrophicus SQR9
-T224_RS46135,Pseudomonas aeruginosa LESB65
-DEHRE_RS06605,Dehalobacter restrictus DSM 9455
-Z042_RS01410,Chania multitudinisentens RB-25
-AX25_RS21700,Listeria ivanovii WSLC3009
-SMUL_RS15530,Sulfurospirillum multivorans DSM 12446
-BE24_RS04290,Staphylococcus xylosus
-Y981_RS04045,Leptospirillum ferriphilum YSK
-Q433_RS18240,Bacillus subtilis subsp. subtilis str. O
-Q433_RS02835,Bacillus subtilis subsp. subtilis str. O
-CD58_RS12245,Pseudomonas brassicacearum
-CQ02_RS06570,Listeria monocytogenes
-CH51_RS09955,Staphylococcus aureus
-RRADSPS_RS05000,Rubrobacter radiotolerans
-DI57_RS11585,Enterobacter asburiae L1
-CFNIH1_RS19960,Citrobacter freundii CFNIH1
-CFNIH1_RS07640,Citrobacter freundii CFNIH1
-BJS_RS07330,Bradyrhizobium japonicum SEMIA 5079
-DC74_RS06905,Streptomyces albulus
-DX03_RS08060,Stenotrophomonas rhizophila
-Y193_RS09105,Listeria monocytogenes
-DF16_RS03360,Bacillus thuringiensis serovar kurstaki str
-DJ48_RS23060,Bacillus anthracis
-PD374_RS22745,Pseudomonas sp. WCS374
-PD374_RS13460,Pseudomonas sp. WCS374
-DJ44_RS19025,Bacillus anthracis
-BSUA_RS19450,Bacillus subtilis subsp. subtilis str. JH64
-BSUA_RS03005,Bacillus subtilis subsp. subtilis str. JH64
-MTBK_RS18715,Mycobacterium tuberculosis K
-EY04_RS12805,Pseudomonas chlororaphis
-BSUB_RS19470,Bacillus subtilis subsp. subtilis str. AG1839
-BSUB_RS03005,Bacillus subtilis subsp. subtilis str. AG1839
-DJ45_RS02885,Bacillus anthracis
-HR38_RS00525,Klebsiella oxytoca
-HYU01_RS26525,Bacillus anthracis
-HZ99_RS17285,Pseudomonas fluorescens
-HZ99_RS14705,Pseudomonas fluorescens
-HZ99_RS02100,Pseudomonas fluorescens
-DR96_RS00580,Providencia stuartii
-DJ40_RS07965,Yersinia pseudotuberculosis
-EDL933_RS23330,Escherichia coli O157:H7 str. EDL933
-SMDB11_RS11435,Serratia marcescens subsp. marcescens Db11
-Atu3544,Agrobacterium fabrum str. C58
-H16_RS28565,Ralstonia eutropha H16
-RALTA_RS23660,Cupriavidus taiwanensis LMG 19424
-BPHYT_RS30020,Burkholderia phytofirmans PsJN
-ARAD_RS25660,Agrobacterium radiobacter K84
-BGLU_RS26010,Burkholderia glumae BGR1
-CNE_RS27505,Cupriavidus necator N-1
-N234_RS30530,Ralstonia pickettii DTP0602
-BCEN2424_RS33255,Burkholderia cenocepacia HI2424
-BCEP1808_RS31795,Burkholderia vietnamiensis G4
-BCENMC03_RS31595,Burkholderia cenocepacia MC0-3
-MYA_RS27845,Burkholderia sp. KJ006
-WP_011518499.1_514,Cupriavidus metallidurans CH34
-WP_011906531.1_74,Enterobacter sp. 638
-WP_004152098.1_73,Klebsiella pneumoniae subsp. pneumoniae MG
-WP_000922630.1_44,Zymomonas mobilis subsp. mobilis NCIMB 11163
-WP_013578300.1_601,Rahnella sp. Y9602
-WP_013648962.1_83,Nitrosomonas sp. AL212
-WP_013578300.1_532,Rahnella aquatilis HX2
-WP_000922630.1_180,Klebsiella oxytoca
-WP_012779294.1_25,Methylobacterium extorquens DM4
-WP_006115732.1_53,Acetobacter pasteurianus IFO 3283-01-42C
-WP_014686417.1_51,Deinococcus gobiensis I-0
-WP_014682927.1_207,Deinococcus gobiensis I-0
-WP_015342940.1_907,Rhizobium tropici CIAT 899
+b3502,Escherichia coli str. K-12 substr. MG1655 (b3502)
+BSU36030,Bacillus subtilis subsp. subtilis str. 168 (BSU36030)
+BSU05340,Bacillus subtilis subsp. subtilis str. 168 (BSU05340)
+PA2278,Pseudomonas aeruginosa PAO1 (PA2278)
+BH_RS15105,Bacillus halodurans C-125 (BH_RS15105)
+TVG_RS01495,Thermoplasma volcanium GSS1 (TVG_RS01495)
+BB_RS05935,Bordetella bronchiseptica RB50 (BB_RS05935)
+DET_RS04740,Dehalococcoides mccartyi 195 (DET_RS04740)
+MAP_RS02475,Mycobacterium avium subsp. paratuberculosi (MAP_RS02475)
+LMOF2365_RS06555,Listeria monocytogenes serotype 4b str. F2365 (LMOF2365_RS06555)
+SAP1_RS38500,Streptomyces avermitilis MA-4680 (SAP1_RS38500)
+LIN_RS06835,Listeria innocua Clip11262 (LIN_RS06835)
+BCE_RS25620,Bacillus cereus ATCC 10987 (BCE_RS25620)
+BA_5462,Bacillus anthracis str. Ames (BA_5462)
+PFL_RS16590,Pseudomonas protegens Pf-5 (PFL_RS16590)
+PFL_RS11040,Pseudomonas protegens Pf-5 (PFL_RS11040)
+OB_RS12445,Oceanobacillus iheyensis HTE831 (OB_RS12445)
+OB_RS10450,Oceanobacillus iheyensis HTE831 (OB_RS10450)
+blr5272,Bradyrhizobium diazoefficiens USDA 110 (blr5272)
+ECA_RS07945,Pectobacterium atrosepticum SCRI1043 (ECA_RS07945)
+BC5226,Bacillus cereus ATCC 14579 (BC5226)
+TX73_RS17325,Rhodopseudomonas palustris CGA009 (TX73_RS17325)
+TX73_RS11520,Rhodopseudomonas palustris CGA009 (TX73_RS11520)
+PSPPH_RS18225,Pseudomonas savastanoi pv. phaseolicola 1448A (PSPPH_RS18225)
+PTO_RS00425,Picrophilus torridus DSM 9790 (PTO_RS00425)
+BAS5075,Bacillus anthracis str. Sterne (BAS5075)
+YPTB_RS04360,Yersinia pseudotuberculosis IP 32953 (YPTB_RS04360)
+STH_RS04595,Symbiobacterium thermophilum IAM 14863 (STH_RS04595)
+BCE33L_RS26200,Bacillus cereus E33L (BCE33L_RS26200)
+BLI_RS10500,Bacillus licheniformis DSM 13 (BLI_RS10500)
+ABC_RS04430,Bacillus clausii KSM-K16 (ABC_RS04430)
+TK_RS04340,Thermococcus kodakarensis KOD1 (TK_RS04340)
+SH_RS00910,Staphylococcus haemolyticus JCSC1435 (SH_RS00910)
+SH_RS00490,Staphylococcus haemolyticus JCSC1435 (SH_RS00490)
+SH_RS00460,Staphylococcus haemolyticus JCSC1435 (SH_RS00460)
+PSYC_RS04960,Psychrobacter arcticus 273-4 (PSYC_RS04960)
+CBDB_RS03635,Dehalococcoides mccartyi CBDB1 (CBDB_RS03635)
+PFL01_RS12120,Pseudomonas fluorescens Pf0-1 (PFL01_RS12120)
+PFL01_RS11060,Pseudomonas fluorescens Pf0-1 (PFL01_RS11060)
+GBAA_RS26630,Bacillus anthracis str. 'Ames Ancestor' (GBAA_RS26630)
+SBO_RS19325,Shigella boydii Sb227 (SBO_RS19325)
+RHE_RS03030,Rhizobium etli CFN 42 (RHE_RS03030)
+MFLA_RS07635,Methylobacillus flagellatus KT (MFLA_RS07635)
+CSAL_RS07545,Chromohalobacter salexigens DSM 3043 (CSAL_RS07545)
+PCRYO_RS07465,Psychrobacter cryohalolentis K5 (PCRYO_RS07465)
+PSEEN_RS15280,Pseudomonas entomophila L48 (PSEEN_RS15280)
+MMCS_RS23845,Mycobacterium sp. MCS (MMCS_RS23845)
+RXYL_RS05330,Rubrobacter xylanophilus DSM 9941 (RXYL_RS05330)
+RXYL_RS05205,Rubrobacter xylanophilus DSM 9941 (RXYL_RS05205)
+YPN_RS03995,Yersinia pestis Nepal516 (YPN_RS03995)
+YPA_RS14620,Yersinia pestis Antiqua (YPA_RS14620)
+RHA1_RS05705,Rhodococcus jostii RHA1 (RHA1_RS05705)
+GBCGDNIH1_RS10850,Granulibacter bethesdensis CGDNIH1 (GBCGDNIH1_RS10850)
+PA14_RS14295,Pseudomonas aeruginosa UCBPP-PA14 (PA14_RS14295)
+MAV_RS02780,Mycobacterium avium 104 (MAV_RS02780)
+MKMS_RS24085,Mycobacterium sp. KMS (MKMS_RS24085)
+AAVE_RS14190,Acidovorax citrulli AAC00-1 (AAVE_RS14190)
+HHAL_RS01590,Halorhodospira halophila SL1 (HHAL_RS01590)
+MJLS_RS25595,Mycobacterium sp. JLS (MJLS_RS25595)
+GTNG_RS08115,Geobacillus thermodenitrificans NG80-2 (GTNG_RS08115)
+MFLV_RS07265,Mycobacterium gilvum PYR-GCK (MFLV_RS07265)
+SPUTCN32_RS19890,Shewanella putrefaciens CN-32 (SPUTCN32_RS19890)
+SPUTCN32_RS06210,Shewanella putrefaciens CN-32 (SPUTCN32_RS06210)
+BRADO_RS15185,Bradyrhizobium sp. ORS 278 (BRADO_RS15185)
+DEHABAV1_RS04195,Dehalococcoides mccartyi BAV1 (DEHABAV1_RS04195)
+RCI_RS00520,Methanocella arvoryzae MRE50 (RCI_RS00520)
+ACRY_RS16575,Acidiphilium cryptum JF-5 (ACRY_RS16575)
+PPUT_RS15230,Pseudomonas putida F1 (PPUT_RS15230)
+PSYCPRWF_RS05810,Psychrobacter sp. PRwf-1 (PSYCPRWF_RS05810)
+TBFG_RS18910,Mycobacterium tuberculosis F11 (TBFG_RS18910)
+KPN_RS17715,Klebsiella pneumoniae subsp. pneumoniae MG (KPN_RS17715)
+MMA_RS13655,Janthinobacterium sp. Marseille (MMA_RS13655)
+RBAM_RS17905,Bacillus methylotrophicus FZB42 (RBAM_RS17905)
+RBAM_RS16565,Bacillus methylotrophicus FZB42 (RBAM_RS16565)
+SPRO_RS12275,Serratia proteamaculans 568 (SPRO_RS12275)
+BPUM_RS20280,Bacillus pumilus SAFR-032 (BPUM_RS20280)
+SARE_RS10265,Salinispora arenicola CNS-205 (SARE_RS10265)
+DACI_RS22070,Delftia acidovorans SPH-1 (DACI_RS22070)
+ACL_RS00700,Acholeplasma laidlawii PG-8A (ACL_RS00700)
+BPET_RS13725,Bordetella petrii (BPET_RS13725)
+MEXT_RS19910,Methylobacterium extorquens PA1 (MEXT_RS19910)
+MEXT_RS09680,Methylobacterium extorquens PA1 (MEXT_RS09680)
+BCERKBAB4_RS25175,Bacillus weihenstephanensis KBAB4 (BCERKBAB4_RS25175)
+PPUTGB1_RS18535,Pseudomonas putida GB-1 (PPUTGB1_RS18535)
+PPUTGB1_RS15595,Pseudomonas putida GB-1 (PPUTGB1_RS15595)
+YPK_RS17160,Yersinia pseudotuberculosis YPIII (YPK_RS17160)
+ECOLC_RS01125,Escherichia coli ATCC 8739 (ECOLC_RS01125)
+ECDH10B_RS18700,Escherichia coli str. K-12 substr. DH10B (ECDH10B_RS18700)
+PPUTW619_RS08710,Pseudomonas putida W619 (PPUTW619_RS08710)
+MRAD2831_RS52895,Methylobacterium radiotolerans JCM 2831 (MRAD2831_RS52895)
+MRAD2831_RS38805,Methylobacterium radiotolerans JCM 2831 (MRAD2831_RS38805)
+M446_RS09405,Methylobacterium sp. 4-46 (M446_RS09405)
+PMI_RS10600,Proteus mirabilis HI4320 (PMI_RS10600)
+EXIG_RS07400,Exiguobacterium sibiricum 255-15 (EXIG_RS07400)
+SGR_RS09905,Streptomyces griseus subsp. griseus NBRC 13350 (SGR_RS09905)
+BIND_RS15160,Beijerinckia indica subsp. indica ATCC 9039 (BIND_RS15160)
+YPTS_RS04225,Yersinia pseudotuberculosis PB1/+ (YPTS_RS04225)
+MPOP_RS21960,Methylobacterium populi BJ001 (MPOP_RS21960)
+MPOP_RS03470,Methylobacterium populi BJ001 (MPOP_RS03470)
+SYO3AOP1_RS04835,Sulfurihydrogenibium sp. YO3AOP1 (SYO3AOP1_RS04835)
+SMLT_RS12260,Stenotrophomonas maltophilia K279a (SMLT_RS12260)
+RPAL_RS19190,Rhodopseudomonas palustris TIE-1 (RPAL_RS19190)
+SESA_RS04010,Salmonella enterica subsp. enterica serova (SESA_RS04010)
+GDIA_RS12770,Gluconacetobacter diazotrophicus PA1 5 (GDIA_RS12770)
+GDIA_RS05215,Gluconacetobacter diazotrophicus PA1 5 (GDIA_RS05215)
+BCAH187_RS26300,Bacillus cereus AH187 (BCAH187_RS26300)
+LMHCC_RS06505,Listeria monocytogenes HCC23 (LMHCC_RS06505)
+BCB4264_RS26340,Bacillus cereus B4264 (BCB4264_RS26340)
+MCHL_RS21060,Methylobacterium extorquens CM4 (MCHL_RS21060)
+AFE_RS13130,Acidithiobacillus ferrooxidans ATCC 23270 (AFE_RS13130)
+PLES_RS15685,Pseudomonas aeruginosa LESB58 (PLES_RS15685)
+BCG9842_RS25850,Bacillus cereus G9842 (BCG9842_RS25850)
+BCAH820_RS26440,Bacillus cereus AH820 (BCAH820_RS26440)
+MNOD_RS11220,Methylobacterium nodulans ORS 2060 (MNOD_RS11220)
+BCQ_RS25580,Bacillus cereus Q1 (BCQ_RS25580)
+AVI_RS14005,Agrobacterium vitis S4 (AVI_RS14005)
+DTPSY_RS10715,Acidovorax ebreus TPSY (DTPSY_RS10715)
+JTY_RS18685,Mycobacterium bovis BCG str. Tokyo 172 (JTY_RS18685)
+SULAZ_RS03915,Sulfurihydrogenibium azorense Az-Fu1 (SULAZ_RS03915)
+BCA_RS27040,Bacillus cereus 03BB102 (BCA_RS27040)
+ACP_RS10770,Acidobacterium capsulatum ATCC 51196 (ACP_RS10770)
+LM4B_RS06535,Listeria monocytogenes serotype 4b str. CLI (LM4B_RS06535)
+BBR47_RS02720,Brevibacillus brevis NBRC 100599 (BBR47_RS02720)
+ROP_RS04400,Rhodococcus opacus B4 (ROP_RS04400)
+BAA_RS27150,Bacillus anthracis str. A0248 (BAA_RS27150)
+PFLU_RS14435,Pseudomonas fluorescens SBW25 (PFLU_RS14435)
+EAT1B_RS05115,Exiguobacterium sp. AT1b (EAT1B_RS05115)
+KP1_RS21410,Klebsiella pneumoniae subsp. pneumonia (KP1_RS21410)
+ECBD_RS01235,Escherichia coli 'BL21-Gold(DE3)pLysS AG' (ECBD_RS01235)
+ECB_RS17735,Escherichia coli B str. REL606 (ECB_RS17735)
+ECD_RS17500,Escherichia coli BL21(DE3) (ECD_RS17500)
+METD_RS22545,Methylobacterium extorquens DM4 (METD_RS22545)
+CACI_RS16685,Catenulispora acidiphila DSM 44928 (CACI_RS16685)
+CTCNB1_RS16140,Comamonas testosteroni CNB-2 (CTCNB1_RS16140)
+CTCNB1_RS12880,Comamonas testosteroni CNB-2 (CTCNB1_RS12880)
+SDEL_RS07710,Sulfurospirillum deleyianum DSM 6946 (SDEL_RS07710)
+TTER_RS05530,Thermobaculum terrenum ATCC BAA-798 (TTER_RS05530)
+DHCVS_RS03800,Dehalococcoides mccartyi VS (DHCVS_RS03800)
+DD586_RS11920,Dickeya dadantii Ech586 (DD586_RS11920)
+VB87_RS10995,Xanthomonas albilineans GPE PC73 (VB87_RS10995)
+KFLA_RS02325,Kribbella flavida DSM 17836 (KFLA_RS02325)
+LM5578_RS07140,Listeria monocytogenes 08-5578 (LM5578_RS07140)
+LM5923_RS06920,Listeria monocytogenes 08-5923 (LM5923_RS06920)
+BPOF4_RS14195,Bacillus pseudofirmus OF4 (BPOF4_RS14195)
+KVAR_RS03805,Klebsiella variicola At-22 (KVAR_RS03805)
+DEHALGT_RS03840,Dehalococcoides mccartyi GT (DEHALGT_RS03840)
+LSE_RS06050,Listeria seeligeri serovar 1/2b str. SLCC3954 (LSE_RS06050)
+SCAB_RS04185,Streptomyces scabiei 87.22 (SCAB_RS04185)
+G2583_RS21760,Escherichia coli O55:H7 str. CB9615 (G2583_RS21760)
+SNAS_RS18080,Stackebrandtia nassauensis DSM 44728 (SNAS_RS18080)
+SNAS_RS03540,Stackebrandtia nassauensis DSM 44728 (SNAS_RS03540)
+BMQ_RS09380,Bacillus megaterium QM B1551 (BMQ_RS09380)
+BMQ_RS08470,Bacillus megaterium QM B1551 (BMQ_RS08470)
+BMQ_RS05235,Bacillus megaterium QM B1551 (BMQ_RS05235)
+BMD_RS09275,Bacillus megaterium DSM 319 (BMD_RS09275)
+BMD_RS05235,Bacillus megaterium DSM 319 (BMD_RS05235)
+THI_RS14500,Thiomonas arsenitoxydans (THI_RS14500)
+THI_RS10360,Thiomonas arsenitoxydans (THI_RS10360)
+TINT_RS09170,Thiomonas intermedia K12 (TINT_RS09170)
+ARNIT_RS03025,Arcobacter nitrofigilis DSM 7299 (ARNIT_RS03025)
+BMB171_RS26065,Bacillus thuringiensis BMB171 (BMB171_RS26065)
+BSUW23_RS02820,Bacillus subtilis subsp. spizizenii str. W23 (BSUW23_RS02820)
+PPE_RS20110,Paenibacillus polymyxa E681 (PPE_RS20110)
+HELO_RS02615,Halomonas elongata DSM 2581 (HELO_RS02615)
+BAMF_RS39310,Bacillus amyloliquefaciens DSM 7 (BAMF_RS39310)
+BAMF_RS38055,Bacillus amyloliquefaciens DSM 7 (BAMF_RS38055)
+ENTCL_RS11075,Enterobacter lignolyticus SCF1 (ENTCL_RS11075)
+PPSC2_RS50665,Paenibacillus polymyxa SC2 (PPSC2_RS50665)
+BATR1942_RS00210,Bacillus atrophaeus 1942 (BATR1942_RS00210)
+AXYL_RS09680,Achromobacter xylosoxidans A8 (AXYL_RS09680)
+REQ_RS14065,Rhodococcus equi 103S (REQ_RS14065)
+RPDX1_RS09760,Rhodopseudomonas palustris DX-1 (RPDX1_RS09760)
+DEIMA_RS07070,Deinococcus maricopensis DSM 21211 (DEIMA_RS07070)
+ACIPR4_RS14240,Terriglobus saanensis SP1PR4 (ACIPR4_RS14240)
+BSN5_RS14470,Bacillus subtilis BSn5 (BSN5_RS14470)
+BSN5_RS09015,Bacillus subtilis BSn5 (BSN5_RS09015)
+NAL212_RS01115,Nitrosomonas sp. AL212 (NAL212_RS01115)
+PSEBR_RS17435,Pseudomonas brassicacearum subsp (PSEBR_RS17435)
+PNA2_RS04555,Pyrococcus sp. NA2 (PNA2_RS04555)
+DELCS14_RS12240,Delftia sp. Cs1-4 (DELCS14_RS12240)
+SERAS9_RS15515,Serratia plymuthica AS9 (SERAS9_RS15515)
+DESKU_RS16015,Desulfotomaculum kuznetsovii DSM 6115 (DESKU_RS16015)
+DESKU_RS13570,Desulfotomaculum kuznetsovii DSM 6115 (DESKU_RS13570)
+DESKU_RS03440,Desulfotomaculum kuznetsovii DSM 6115 (DESKU_RS03440)
+PP1Y_RS13445,Novosphingobium sp. PP1Y (PP1Y_RS13445)
+DESRU_RS13020,Desulfotomaculum ruminis DSM 2154 (DESRU_RS13020)
+KNP414_RS29300,Paenibacillus mucilaginosus KNP414 (KNP414_RS29300)
+KNP414_RS15245,Paenibacillus mucilaginosus KNP414 (KNP414_RS15245)
+KNP414_RS07580,Paenibacillus mucilaginosus KNP414 (KNP414_RS07580)
+THETH_RS02495,Pseudothermotoga thermarum DSM 5069 (THETH_RS02495)
+MAF_RS18670,Mycobacterium africanum GM041182 (MAF_RS18670)
+ACIFE_RS10615,Acidithiobacillus ferrivorans SS3 (ACIFE_RS10615)
+SACTE_RS31605,Streptomyces sp. SirexAA-E (SACTE_RS31605)
+STRVI_RS05345,Streptomyces violaceusniger Tu 4113 (STRVI_RS05345)
+GYO_RS25270,Bacillus subtilis subsp. spizizenii TU-B-10 (GYO_RS25270)
+SCAT_RS15145,Streptomyces cattleya NRRL 8057 (SCAT_RS15145)
+DSC_RS02885,Pseudoxanthomonas spadix BD-a59 (DSC_RS02885)
+ECWSU1_RS06945,Enterobacter cloacae EcWSU1 (ECWSU1_RS06945)
+MYCRHN_RS10890,Mycobacterium rhodesiae NBB3 (MYCRHN_RS10890)
+ACIX8_RS22345,Granulicella mallensis MP5ACTX8 (ACIX8_RS22345)
+HPL003_RS03405,Paenibacillus terrae HPL-003 (HPL003_RS03405)
+BCN_RS25930,Bacillus cereus NC7401 (BCN_RS25930)
+BCF_RS25765,Bacillus cereus F837/76 (BCF_RS25765)
+BACAU_RS18635,Bacillus methylotrophicus CAU B946 (BACAU_RS18635)
+BACAU_RS17340,Bacillus methylotrophicus CAU B946 (BACAU_RS17340)
+PANA5342_RS33875,Pantoea ananatis LMG 5342 (PANA5342_RS33875)
+PSF113_RS48845,Pseudomonas fluorescens F113 (PSF113_RS48845)
+GPOL_RS20815,Gordonia polyisoprenivorans VH2 (GPOL_RS20815)
+PM3016_RS29830,Paenibacillus mucilaginosus 3016 (PM3016_RS29830)
+PM3016_RS09975,Paenibacillus mucilaginosus 3016 (PM3016_RS09975)
+PM3016_RS06555,Paenibacillus mucilaginosus 3016 (PM3016_RS06555)
+OCU_RS41535,Mycobacterium intracellulare ATCC 13950 (OCU_RS41535)
+OCU_RS27400,Mycobacterium intracellulare ATCC 13950 (OCU_RS27400)
+OCO_RS16575,Mycobacterium intracellulare MOTT-02 (OCO_RS16575)
+OCO_RS02370,Mycobacterium intracellulare MOTT-02 (OCO_RS02370)
+OCQ_RS17180,Mycobacterium intracellulare MOTT-64 (OCQ_RS17180)
+OCQ_RS02465,Mycobacterium intracellulare MOTT-64 (OCQ_RS02465)
+MTC_RS12075,Methanocella conradii HZ254 (MTC_RS12075)
+BANAU_RS19680,Bacillus methylotrophicus YAU B9601-Y2 (BANAU_RS19680)
+BANAU_RS18355,Bacillus methylotrophicus YAU B9601-Y2 (BANAU_RS18355)
+S23_RS14735,Bradyrhizobium sp. S23321 (S23_RS14735)
+AMIS_RS08770,Actinoplanes missouriensis 431 (AMIS_RS08770)
+LFE_RS04200,Leptospirillum ferrooxidans C2-3 (LFE_RS04200)
+HYDTH_RS08940,Hydrogenobacter thermophilus TK-6 (HYDTH_RS08940)
+A1122_RS09275,Yersinia pestis A1122 (A1122_RS09275)
+BAMTA208_RS18880,Bacillus amyloliquefaciens TA208 (BAMTA208_RS18880)
+BAMTA208_RS17625,Bacillus amyloliquefaciens TA208 (BAMTA208_RS17625)
+LL3_RS19135,Bacillus amyloliquefaciens LL3 (LL3_RS19135)
+LL3_RS17880,Bacillus amyloliquefaciens LL3 (LL3_RS17880)
+BAXH7_RS18910,Bacillus amyloliquefaciens XH7 (BAXH7_RS18910)
+BAXH7_RS17655,Bacillus amyloliquefaciens XH7 (BAXH7_RS17655)
+I33_RS17360,Bacillus subtilis subsp. subtilis str. RO-NN-1 (I33_RS17360)
+I33_RS02840,Bacillus subtilis subsp. subtilis str. RO-NN-1 (I33_RS02840)
+BSNT_RS19170,Bacillus subtilis subsp. natto BEST195 (BSNT_RS19170)
+BSNT_RS03060,Bacillus subtilis subsp. natto BEST195 (BSNT_RS03060)
+YBT020_RS26390,Bacillus thuringiensis serovar finitimu (YBT020_RS26390)
+CT43_RS26500,Bacillus thuringiensis serovar chinensis CT-43 (CT43_RS26500)
+BJ6T_RS21675,Bradyrhizobium japonicum USDA 6 (BJ6T_RS21675)
+LMO4A_RS06950,Listeria monocytogenes L99 (LMO4A_RS06950)
+PPUBIRD1_RS15000,Pseudomonas putida BIRD-1 (PPUBIRD1_RS15000)
+PAJ_RS06760,Pantoea ananatis AJ13355 (PAJ_RS06760)
+LMM7_RS06960,Listeria monocytogenes M7 (LMM7_RS06960)
+PPM_RS22805,Paenibacillus polymyxa M1 (PPM_RS22805)
+PPM_RS16115,Paenibacillus polymyxa M1 (PPM_RS16115)
+LMRG_RS06465,Listeria monocytogenes 10403S (LMRG_RS06465)
+LMOG_RS06630,Listeria monocytogenes J0161 (LMOG_RS06630)
+LMKG_RS06815,Listeria monocytogenes FSL R2-561 (LMKG_RS06815)
+LMLG_RS06535,Listeria monocytogenes Finland 1998 (LMLG_RS06535)
+PAM18_RS14195,Pseudomonas aeruginosa M18 (PAM18_RS14195)
+NCGM2_RS16250,Pseudomonas aeruginosa NCGM2.S1 (NCGM2_RS16250)
+WFL_RS19245,Escherichia coli W (WFL_RS19245)
+HBHAL_RS15730,Halobacillus halophilus DSM 2266 (HBHAL_RS15730)
+B2K_RS29980,Paenibacillus mucilaginosus K02 (B2K_RS29980)
+B2K_RS10095,Paenibacillus mucilaginosus K02 (B2K_RS10095)
+B2K_RS06615,Paenibacillus mucilaginosus K02 (B2K_RS06615)
+H9401_RS26590,Bacillus anthracis str. H9401 (H9401_RS26590)
+MY9_RS18170,Bacillus sp. JS (MY9_RS18170)
+MY9_RS03065,Bacillus sp. JS (MY9_RS03065)
+SHJG_RS40570,Streptomyces hygroscopicus subsp. jinggangensi (SHJG_RS40570)
+DGO_RS09230,Deinococcus gobiensis I-0 (DGO_RS09230)
+ACPL_RS09435,Actinoplanes sp. SE50/110 (ACPL_RS09435)
+W5S_RS16825,Pectobacterium sp. SCC3193 (W5S_RS16825)
+PFLA506_RS13670,Pseudomonas fluorescens A506 (PFLA506_RS13670)
+MUS_RS19660,Bacillus amyloliquefaciens Y2 (MUS_RS19660)
+MUS_RS18335,Bacillus amyloliquefaciens Y2 (MUS_RS18335)
+YSA_RS23490,Pseudomonas putida ND6 (YSA_RS23490)
+SULBA_RS07770,Sulfurospirillum barnesii SES-3 (SULBA_RS07770)
+TERRO_RS08220,Terriglobus roseus DSM 18391 (TERRO_RS08220)
+MYCCH_RS22970,Mycobacterium chubuense NBB4 (MYCCH_RS22970)
+MYCCH_RS10630,Mycobacterium chubuense NBB4 (MYCCH_RS10630)
+SSIL_RS11270,Solibacillus silvestris StLB046 (SSIL_RS11270)
+DESACI_RS03530,Desulfosporosinus acidiphilus SJ4 (DESACI_RS03530)
+A3UG_RS07295,Enterobacter cloacae subsp. dissolvens SDM (A3UG_RS07295)
+PADK2_RS13920,Pseudomonas aeruginosa DK2 (PADK2_RS13920)
+RVBD_RS18870,Mycobacterium tuberculosis H37Rv (RVBD_RS18870)
+PSJM300_RS07755,Pseudomonas stutzeri DSM 10701 (PSJM300_RS07755)
+MSMEI_RS29720,Mycobacterium smegmatis str. MC2 155 (MSMEI_RS29720)
+BCK_RS09780,Bacillus cereus FRI-35 (BCK_RS09780)
+BTG_RS21945,Bacillus thuringiensis HD-771 (BTG_RS21945)
+BTF1_RS24130,Bacillus thuringiensis HD-789 (BTF1_RS24130)
+LMOATCC19117_RS06585,Listeria monocytogenes ATCC 19117 (LMOATCC19117_RS06585)
+LMOSLCC2378_RS06575,Listeria monocytogenes SLCC2378 (LMOSLCC2378_RS06575)
+LMOSLCC2540_RS06740,Listeria monocytogenes SLCC2540 (LMOSLCC2540_RS06740)
+LMOSLCC2755_RS06820,Listeria monocytogenes SLCC2755 (LMOSLCC2755_RS06820)
+LMOSLCC2372_RS07095,Listeria monocytogenes SLCC2372 (LMOSLCC2372_RS07095)
+LMOSLCC2479_RS06825,Listeria monocytogenes SLCC2479 (LMOSLCC2479_RS06825)
+LMOSLCC2482_RS07010,Listeria monocytogenes serotype 7 str (LMOSLCC2482_RS07010)
+LMOSLCC7179_RS06410,Listeria monocytogenes SLCC7179 (LMOSLCC7179_RS06410)
+LMOL312_RS06535,Listeria monocytogenes L312 (LMOL312_RS06535)
+LFML04_RS11965,Leptospirillum ferriphilum ML-04 (LFML04_RS11965)
+LFML04_RS04845,Leptospirillum ferriphilum ML-04 (LFML04_RS04845)
+MC28_RS22075,Bacillus thuringiensis MC28 (MC28_RS22075)
+A911_RS05850,Campylobacter jejuni subsp. jejuni PT14 (A911_RS05850)
+DHBDCA_RS02495,Dehalobacter sp. DCA (DHBDCA_RS02495)
+DCF50_RS02790,Dehalobacter sp. CF (DCF50_RS02790)
+BTB_RS26625,Bacillus thuringiensis Bt407 (BTB_RS26625)
+BN112_2263,Bordetella bronchiseptica 253 (BN112_2263)
+PPUTUW4_RS11450,Pseudomonas sp. UW4 (PPUTUW4_RS11450)
+BN6_RS11025,Saccharothrix espanaensis DSM 44229 (BN6_RS11025)
+MIC7113_RS22005,Microcoleus sp. PCC 7113 (MIC7113_RS22005)
+DEIPE_RS16650,Deinococcus peraridilitoris DSM 19664 (DEIPE_RS16650)
+B938_RS18150,Bacillus methylotrophicus AS43.3 (B938_RS18150)
+B938_RS16875,Bacillus methylotrophicus AS43.3 (B938_RS16875)
+THECO_RS08775,Thermobacillus composti KWC4 (THECO_RS08775)
+MT7199_RS18830,Mycobacterium tuberculosis 7199-99 (MT7199_RS18830)
+A284_RS14530,Staphylococcus warneri SG1 (A284_RS14530)
+H045_RS08340,Pseudomonas poae RE*1-1-14 (H045_RS08340)
+SMWW4_RS15445,Serratia marcescens WW4 (SMWW4_RS15445)
+HD73_RS28050,Bacillus thuringiensis serovar kurstaki str (HD73_RS28050)
+C663_RS17630,Bacillus subtilis XF-1 (C663_RS17630)
+C663_RS02795,Bacillus subtilis XF-1 (C663_RS02795)
+KSO_RS02365,Bacillus amyloliquefaciens IT-45 (KSO_RS02365)
+KSO_RS01110,Bacillus amyloliquefaciens IT-45 (KSO_RS01110)
+H175_RS26480,Bacillus thuringiensis serovar thuringiensi (H175_RS26480)
+DCMB_RS04215,Dehalococcoides mccartyi DCMB5 (DCMB_RS04215)
+BTF_RS03975,Dehalococcoides mccartyi BTF08 (BTF_RS03975)
+MU9_RS16150,Morganella morganii subsp. morganii KT (MU9_RS16150)
+S58_RS15265,Bradyrhizobium oligotrophicum S58 (S58_RS15265)
+BN159_RS09510,Streptomyces davawensis JCM 4913 (BN159_RS09510)
+BSU6051_RS18630,Bacillus subtilis subsp. subtilis 6051-HGW (BSU6051_RS18630)
+BSU6051_RS02960,Bacillus subtilis subsp. subtilis 6051-HGW (BSU6051_RS02960)
+H681_RS12035,Pseudomonas denitrificans ATCC 13867 (H681_RS12035)
+I653_RS17400,Bacillus subtilis subsp. subtilis str. BAB-1 (I653_RS17400)
+I653_RS02770,Bacillus subtilis subsp. subtilis str. BAB-1 (I653_RS02770)
+SHJGH_RS39200,Streptomyces hygroscopicus subsp. jinggangensi (SHJGH_RS39200)
+G655_RS13705,Pseudomonas aeruginosa B136-33 (G655_RS13705)
+RORB6_RS04740,Raoultella ornithinolytica B6 (RORB6_RS04740)
+B1NLA3E_RS13085,Bacillus sp. 1NLA3E (B1NLA3E_RS13085)
+B1NLA3E_RS05915,Bacillus sp. 1NLA3E (B1NLA3E_RS05915)
+SFUL_RS26435,Streptomyces fulvissimus DSM 40593 (SFUL_RS26435)
+L083_RS38590,Actinoplanes sp. N902-109 (L083_RS38590)
+L083_RS13515,Actinoplanes sp. N902-109 (L083_RS13515)
+MAP4_RS16845,Mycobacterium avium subsp. paratuberculosi (MAP4_RS16845)
+PFLCHA0_RS16545,Pseudomonas protegens CHA0 (PFLCHA0_RS16545)
+PFLCHA0_RS11195,Pseudomonas protegens CHA0 (PFLCHA0_RS11195)
+BALI_RS10625,Bacillus paralicheniformis ATCC 9945a (BALI_RS10625)
+L483_RS09030,Pseudomonas putida H8234 (L483_RS09030)
+H650_RS01620,Enterobacter sp. R4-368 (H650_RS01620)
+M062_RS11920,Pseudomonas aeruginosa RP73 (M062_RS11920)
+SOD_RS14545,Serratia plymuthica 4Rx13 (SOD_RS14545)
+FACI_RS04495,Ferroplasma acidarmanus fer1 (FACI_RS04495)
+M621_RS40370,Serratia plymuthica S13 (M621_RS40370)
+M495_RS15170,Serratia liquefaciens ATCC 27592 (M495_RS15170)
+REMIM1_RS03425,Rhizobium etli bv. mimosae str. Mim1 (REMIM1_RS03425)
+B446_RS32650,Streptomyces collinus Tu 365 (B446_RS32650)
+BB2000_RS10780,Proteus mirabilis BB2000 (BB2000_RS10780)
+M493_RS08125,Geobacillus sp. JF8 (M493_RS08125)
+BASU_RS18080,Bacillus methylotrophicus UCMB5113 (BASU_RS18080)
+BASU_RS16805,Bacillus methylotrophicus UCMB5113 (BASU_RS16805)
+O5Y_RS16690,Rhodococcus erythropolis CCM2595 (O5Y_RS16690)
+VAPA_RS09830,Variovorax paradoxus B4 (VAPA_RS09830)
+SA40_RS08730,Staphylococcus aureus subsp. aureus SA40 (SA40_RS08730)
+D364_RS17195,Klebsiella pneumoniae CG43 (D364_RS17195)
+U471_RS17890,Bacillus amyloliquefaciens CC178 (U471_RS17890)
+U471_RS16545,Bacillus amyloliquefaciens CC178 (U471_RS16545)
+AFR_RS42075,Actinoplanes friuliensis DSM 7358 (AFR_RS42075)
+N149_RS05675,Campylobacter coli 15-537360 (N149_RS05675)
+MKAN_RS24325,Mycobacterium kansasii ATCC 12478 (MKAN_RS24325)
+MKAN_RS11645,Mycobacterium kansasii ATCC 12478 (MKAN_RS11645)
+PVLB_RS21835,Pseudomonas sp. VLB120 (PVLB_RS21835)
+BTOYO_RS12215,Bacillus toyonensis BCT-7112 (BTOYO_RS12215)
+U719_RS06130,Exiguobacterium sp. MH3 (U719_RS06130)
+YBT1518_RS28920,Bacillus thuringiensis YBT-1518 (YBT1518_RS28920)
+GY50_RS03820,Dehalococcoides mccartyi GY50 (GY50_RS03820)
+U769_RS13760,Pseudomonas aeruginosa MTB-1 (U769_RS13760)
+X809_RS22215,Paenibacillus polymyxa CR1 (X809_RS22215)
+U771_RS17090,Pseudomonas sp. TKP (U771_RS17090)
+U771_RS04875,Pseudomonas sp. TKP (U771_RS04875)
+U722_RS17965,Bacillus amyloliquefaciens LFB112 (U722_RS17965)
+U722_RS16745,Bacillus amyloliquefaciens LFB112 (U722_RS16745)
+SCV20265_RS15120,Pseudomonas aeruginosa SCV20265 (SCV20265_RS15120)
+STTU_RS30800,Streptomyces sp. Tu6071 (STTU_RS30800)
+PSSB64_RS21035,Pseudomonas syringae pv. syringae B64 (PSSB64_RS21035)
+N505_RS27570,Rhodococcus aetherivorans (N505_RS27570)
+PMO01_RS10110,Pseudomonas moraviensis R28-S (PMO01_RS10110)
+U369_RS26650,Bacillus anthracis 52-G (U369_RS26650)
+U365_RS26745,Bacillus anthracis 9080-G (U365_RS26745)
+U368_RS26640,Bacillus anthracis 8903-G (U368_RS26640)
+A16_RS26640,Bacillus anthracis str. A16 (A16_RS26640)
+A16R_RS26635,Bacillus anthracis str. A16R (A16R_RS26635)
+HKBS1_RS18845,Mycobacterium tuberculosis HKBS1 (HKBS1_RS18845)
+GBCGDNIH3_RS10795,Granulibacter bethesdensis CGDNIH3 (GBCGDNIH3_RS10795)
+MIM_RS10425,Advenella mimigardefordensis DPN7 (MIM_RS10425)
+BLEG1_RS01035,Bacillus lehensis G1 (BLEG1_RS01035)
+PD630_RS24570,Rhodococcus opacus PD630 (PD630_RS24570)
+KP13_RS05045,Klebsiella pneumoniae subsp. pneumoniae Kp13 (KP13_RS05045)
+PSAB_RS12480,Paenibacillus sabinae T27 (PSAB_RS12480)
+PSAB_RS05790,Paenibacillus sabinae T27 (PSAB_RS05790)
+BTK_RS27845,Bacillus thuringiensis serovar kurstaki str (BTK_RS27845)
+NX02_RS20670,Sphingomonas sanxanigenens DSM 19645 (NX02_RS20670)
+MI63_RS26505,Bacillus anthracis str. SVA11 (MI63_RS26505)
+PPSQR21_RS21470,Paenibacillus polymyxa SQR-21 (PPSQR21_RS21470)
+V529_RS18820,Bacillus methylotrophicus SQR9 (V529_RS18820)
+V529_RS17500,Bacillus methylotrophicus SQR9 (V529_RS17500)
+T224_RS46135,Pseudomonas aeruginosa LESB65 (T224_RS46135)
+DEHRE_RS06605,Dehalobacter restrictus DSM 9455 (DEHRE_RS06605)
+Z042_RS01410,Chania multitudinisentens RB-25 (Z042_RS01410)
+AX25_RS21700,Listeria ivanovii WSLC3009 (AX25_RS21700)
+SMUL_RS15530,Sulfurospirillum multivorans DSM 12446 (SMUL_RS15530)
+BE24_RS04290,Staphylococcus xylosus (BE24_RS04290)
+Y981_RS04045,Leptospirillum ferriphilum YSK (Y981_RS04045)
+Q433_RS18240,Bacillus subtilis subsp. subtilis str. O (Q433_RS18240)
+Q433_RS02835,Bacillus subtilis subsp. subtilis str. O (Q433_RS02835)
+CD58_RS12245,Pseudomonas brassicacearum (CD58_RS12245)
+CQ02_RS06570,Listeria monocytogenes (CQ02_RS06570)
+CH51_RS09955,Staphylococcus aureus (CH51_RS09955)
+RRADSPS_RS05000,Rubrobacter radiotolerans (RRADSPS_RS05000)
+DI57_RS11585,Enterobacter asburiae L1 (DI57_RS11585)
+CFNIH1_RS19960,Citrobacter freundii CFNIH1 (CFNIH1_RS19960)
+CFNIH1_RS07640,Citrobacter freundii CFNIH1 (CFNIH1_RS07640)
+BJS_RS07330,Bradyrhizobium japonicum SEMIA 5079 (BJS_RS07330)
+DC74_RS06905,Streptomyces albulus (DC74_RS06905)
+DX03_RS08060,Stenotrophomonas rhizophila (DX03_RS08060)
+Y193_RS09105,Listeria monocytogenes (Y193_RS09105)
+DF16_RS03360,Bacillus thuringiensis serovar kurstaki str (DF16_RS03360)
+DJ48_RS23060,Bacillus anthracis (DJ48_RS23060)
+PD374_RS22745,Pseudomonas sp. WCS374 (PD374_RS22745)
+PD374_RS13460,Pseudomonas sp. WCS374 (PD374_RS13460)
+DJ44_RS19025,Bacillus anthracis (DJ44_RS19025)
+BSUA_RS19450,Bacillus subtilis subsp. subtilis str. JH64 (BSUA_RS19450)
+BSUA_RS03005,Bacillus subtilis subsp. subtilis str. JH64 (BSUA_RS03005)
+MTBK_RS18715,Mycobacterium tuberculosis K (MTBK_RS18715)
+EY04_RS12805,Pseudomonas chlororaphis (EY04_RS12805)
+BSUB_RS19470,Bacillus subtilis subsp. subtilis str. AG1839 (BSUB_RS19470)
+BSUB_RS03005,Bacillus subtilis subsp. subtilis str. AG1839 (BSUB_RS03005)
+DJ45_RS02885,Bacillus anthracis (DJ45_RS02885)
+HR38_RS00525,Klebsiella oxytoca (HR38_RS00525)
+HYU01_RS26525,Bacillus anthracis (HYU01_RS26525)
+HZ99_RS17285,Pseudomonas fluorescens (HZ99_RS17285)
+HZ99_RS14705,Pseudomonas fluorescens (HZ99_RS14705)
+HZ99_RS02100,Pseudomonas fluorescens (HZ99_RS02100)
+DR96_RS00580,Providencia stuartii (DR96_RS00580)
+DJ40_RS07965,Yersinia pseudotuberculosis (DJ40_RS07965)
+EDL933_RS23330,Escherichia coli O157:H7 str. EDL933 (EDL933_RS23330)
+SMDB11_RS11435,Serratia marcescens subsp. marcescens Db11 (SMDB11_RS11435)
+Atu3544,Agrobacterium fabrum str. C58 (Atu3544)
+H16_RS28565,Ralstonia eutropha H16 (H16_RS28565)
+RALTA_RS23660,Cupriavidus taiwanensis LMG 19424 (RALTA_RS23660)
+BPHYT_RS30020,Burkholderia phytofirmans PsJN (BPHYT_RS30020)
+ARAD_RS25660,Agrobacterium radiobacter K84 (ARAD_RS25660)
+BGLU_RS26010,Burkholderia glumae BGR1 (BGLU_RS26010)
+CNE_RS27505,Cupriavidus necator N-1 (CNE_RS27505)
+N234_RS30530,Ralstonia pickettii DTP0602 (N234_RS30530)
+BCEN2424_RS33255,Burkholderia cenocepacia HI2424 (BCEN2424_RS33255)
+BCEP1808_RS31795,Burkholderia vietnamiensis G4 (BCEP1808_RS31795)
+BCENMC03_RS31595,Burkholderia cenocepacia MC0-3 (BCENMC03_RS31595)
+MYA_RS27845,Burkholderia sp. KJ006 (MYA_RS27845)
+WP_011518499.1_514,Cupriavidus metallidurans CH34 (WP_011518499.1_514)
+WP_011906531.1_74,Enterobacter sp. 638 (WP_011906531.1_74)
+WP_004152098.1_73,Klebsiella pneumoniae subsp. pneumoniae MG (WP_004152098.1_73)
+WP_000922630.1_44,Zymomonas mobilis subsp. mobilis NCIMB 11163 (WP_000922630.1_44)
+WP_013578300.1_601,Rahnella sp. Y9602 (WP_013578300.1_601)
+WP_013648962.1_83,Nitrosomonas sp. AL212 (WP_013648962.1_83)
+WP_013578300.1_532,Rahnella aquatilis HX2 (WP_013578300.1_532)
+WP_000922630.1_180,Klebsiella oxytoca (WP_000922630.1_180)
+WP_012779294.1_25,Methylobacterium extorquens DM4 (WP_012779294.1_25)
+WP_006115732.1_53,Acetobacter pasteurianus IFO 3283-01-42C (WP_006115732.1_53)
+WP_014686417.1_51,Deinococcus gobiensis I-0 (WP_014686417.1_51)
+WP_014682927.1_207,Deinococcus gobiensis I-0 (WP_014682927.1_207)
+WP_015342940.1_907,Rhizobium tropici CIAT 899 (WP_015342940.1_907)

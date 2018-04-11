@@ -1,53 +1,52 @@
 LABELS
 SEPARATOR COMMA
 DATA
-#NODE_ID,LABEL
-DET_RS07270,Dehalococcoides mccartyi 195
-TX73_RS18190,Rhodopseudomonas palustris CGA009
-STH_RS11815,Symbiobacterium thermophilum IAM 14863
-CBDB_RS05750,Dehalococcoides mccartyi CBDB1
-TBD_RS07130,Thiobacillus denitrificans ATCC 25259
-GMET_RS13985,Geobacter metallireducens GS-15
-RPB_RS09900,Rhodopseudomonas palustris HaA2
-DSY_RS22020,Desulfitobacterium hafniense Y51
-RPD_RS17210,Rhodopseudomonas palustris BisB5
-CHU_RS07375,Cytophaga hutchinsonii ATCC 33406
-ACID_RS22500,Candidatus Solibacter usitatus Ellin6076
-NOCA_RS20410,Nocardioides sp. JS614
-DEHABAV1_RS06400,Dehalococcoides mccartyi BAV1
-DOLE_RS03925,Desulfococcus oleovorans Hxd3
-OTER_RS08050,Opitutus terrae PB90-1
-MINF_RS00625,Methylacidiphilum infernorum V4
-RPAL_RS20190,Rhodopseudomonas palustris TIE-1
-DHAF_RS06030,Desulfitobacterium hafniense DCB-2
-GAU_RS06475,Gemmatimonas aurantiaca T-27
-GAU_RS03580,Gemmatimonas aurantiaca T-27
-CPIN_RS30230,Chitinophaga pinensis DSM 2588
-DHCVS_RS05850,Dehalococcoides mccartyi VS
-HTUR_RS15045,Haloterrigena turkmenica DSM 5511
-DEHALGT_RS05765,Dehalococcoides mccartyi GT
-DEHLY_RS07110,Dehalogenimonas lykanthroporepellens BL-DC-9
-MPET_RS14200,Methanolacinia petrolearia DSM 11571
-HALSA_RS03295,Halanaerobium hydrogeniformans
-RPDX1_RS08790,Rhodopseudomonas palustris DX-1
-DESPR_RS06190,Desulfobulbus propionicus DSM 2032
-METBO_RS09180,Methanobacterium lacus
-DESCA_RS05330,Desulfotomaculum nigrificans CO-1-SRB
-MLP_RS18165,Microlunatus phosphovorus NM-1
-LFE_RS07035,Leptospirillum ferrooxidans C2-3
-PPM_RS16135,Paenibacillus polymyxa M1
-SOLCA_RS17805,Solitalea canadensis DSM 3403
-DESMER_RS11025,Desulfosporosinus meridiei DSM 13257
-CHRO_RS13990,Chroococcidiopsis thermalis PCC 7203
-DCMB_RS06325,Dehalococcoides mccartyi DCMB5
-BTF_RS06375,Dehalococcoides mccartyi BTF08
-B1NLA3E_RS09205,Bacillus sp. 1NLA3E
-CLOPA_RS02945,Clostridium pasteurianum BC1
-DESGI_RS19715,Desulfotomaculum gibsoniae DSM 7213
-SCE1572_RS04690,Sorangium cellulosum So0157-2
-GY50_RS06045,Dehalococcoides mccartyi GY50
-PSAB_RS12460,Paenibacillus sabinae T27
-BRDCF_RS09135,Bacteroidales bacterium CF
-OP10G_RS14390,Fimbriimonas ginsengisoli Gsoil 348
-UFO1_RS19480,Pelosinus sp. UFO1
-WP_041339041.1_39,Rubrobacter radiotolerans
+DET_RS07270,Dehalococcoides mccartyi 195 (DET_RS07270)
+TX73_RS18190,Rhodopseudomonas palustris CGA009 (TX73_RS18190)
+STH_RS11815,Symbiobacterium thermophilum IAM 14863 (STH_RS11815)
+CBDB_RS05750,Dehalococcoides mccartyi CBDB1 (CBDB_RS05750)
+TBD_RS07130,Thiobacillus denitrificans ATCC 25259 (TBD_RS07130)
+GMET_RS13985,Geobacter metallireducens GS-15 (GMET_RS13985)
+RPB_RS09900,Rhodopseudomonas palustris HaA2 (RPB_RS09900)
+DSY_RS22020,Desulfitobacterium hafniense Y51 (DSY_RS22020)
+RPD_RS17210,Rhodopseudomonas palustris BisB5 (RPD_RS17210)
+CHU_RS07375,Cytophaga hutchinsonii ATCC 33406 (CHU_RS07375)
+ACID_RS22500,Candidatus Solibacter usitatus Ellin6076 (ACID_RS22500)
+NOCA_RS20410,Nocardioides sp. JS614 (NOCA_RS20410)
+DEHABAV1_RS06400,Dehalococcoides mccartyi BAV1 (DEHABAV1_RS06400)
+DOLE_RS03925,Desulfococcus oleovorans Hxd3 (DOLE_RS03925)
+OTER_RS08050,Opitutus terrae PB90-1 (OTER_RS08050)
+MINF_RS00625,Methylacidiphilum infernorum V4 (MINF_RS00625)
+RPAL_RS20190,Rhodopseudomonas palustris TIE-1 (RPAL_RS20190)
+DHAF_RS06030,Desulfitobacterium hafniense DCB-2 (DHAF_RS06030)
+GAU_RS06475,Gemmatimonas aurantiaca T-27 (GAU_RS06475)
+GAU_RS03580,Gemmatimonas aurantiaca T-27 (GAU_RS03580)
+CPIN_RS30230,Chitinophaga pinensis DSM 2588 (CPIN_RS30230)
+DHCVS_RS05850,Dehalococcoides mccartyi VS (DHCVS_RS05850)
+HTUR_RS15045,Haloterrigena turkmenica DSM 5511 (HTUR_RS15045)
+DEHALGT_RS05765,Dehalococcoides mccartyi GT (DEHALGT_RS05765)
+DEHLY_RS07110,Dehalogenimonas lykanthroporepellens BL-DC-9 (DEHLY_RS07110)
+MPET_RS14200,Methanolacinia petrolearia DSM 11571 (MPET_RS14200)
+HALSA_RS03295,Halanaerobium hydrogeniformans (HALSA_RS03295)
+RPDX1_RS08790,Rhodopseudomonas palustris DX-1 (RPDX1_RS08790)
+DESPR_RS06190,Desulfobulbus propionicus DSM 2032 (DESPR_RS06190)
+METBO_RS09180,Methanobacterium lacus (METBO_RS09180)
+DESCA_RS05330,Desulfotomaculum nigrificans CO-1-SRB (DESCA_RS05330)
+MLP_RS18165,Microlunatus phosphovorus NM-1 (MLP_RS18165)
+LFE_RS07035,Leptospirillum ferrooxidans C2-3 (LFE_RS07035)
+PPM_RS16135,Paenibacillus polymyxa M1 (PPM_RS16135)
+SOLCA_RS17805,Solitalea canadensis DSM 3403 (SOLCA_RS17805)
+DESMER_RS11025,Desulfosporosinus meridiei DSM 13257 (DESMER_RS11025)
+CHRO_RS13990,Chroococcidiopsis thermalis PCC 7203 (CHRO_RS13990)
+DCMB_RS06325,Dehalococcoides mccartyi DCMB5 (DCMB_RS06325)
+BTF_RS06375,Dehalococcoides mccartyi BTF08 (BTF_RS06375)
+B1NLA3E_RS09205,Bacillus sp. 1NLA3E (B1NLA3E_RS09205)
+CLOPA_RS02945,Clostridium pasteurianum BC1 (CLOPA_RS02945)
+DESGI_RS19715,Desulfotomaculum gibsoniae DSM 7213 (DESGI_RS19715)
+SCE1572_RS04690,Sorangium cellulosum So0157-2 (SCE1572_RS04690)
+GY50_RS06045,Dehalococcoides mccartyi GY50 (GY50_RS06045)
+PSAB_RS12460,Paenibacillus sabinae T27 (PSAB_RS12460)
+BRDCF_RS09135,Bacteroidales bacterium CF (BRDCF_RS09135)
+OP10G_RS14390,Fimbriimonas ginsengisoli Gsoil 348 (OP10G_RS14390)
+UFO1_RS19480,Pelosinus sp. UFO1 (UFO1_RS19480)
+WP_041339041.1_39,Rubrobacter radiotolerans (WP_041339041.1_39)
