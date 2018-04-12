@@ -1,0 +1,5 @@
+Taxon	Abundance	Fraction Abundance
+coded_by=86507..86860,organism=Lysobacter arseniciresistens ZS79,definition=arsenate reductase	43.462	0.7915
+coded_by=complement(46724..47155),organism=Stenotrophomonas panacihumi,definition=arsenate reductase	1.514	0.0276
+coded_by=113518..113877,organism=Cupriavidus sp. SK-3,definition=arsenate reductase	4.958	0.0903
+coded_by=complement(1486336..1486764),organism=Cupriavidus gilardii CR3,definition=arsenate reductase	4.973999999999999	0.0906

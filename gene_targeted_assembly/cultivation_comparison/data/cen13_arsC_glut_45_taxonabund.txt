@@ -1,0 +1,22 @@
+Taxon	Abundance	Fraction Abundance
+coded_by=86507..86860,organism=Lysobacter arseniciresistens ZS79,definition=arsenate reductase	10.129999999999999	0.0903
+coded_by=complement(65304..65651),organism=Methyloceanibacter stevinii,definition=arsenate reductase	2.481	0.0221
+coded_by=2696984..2697334,organism=Methylococcus capsulatus str. Bath,definition=arsenate reductase	10.5	0.0936
+coded_by=38874..39299,organism=Bosea sp. BIWAKO-01,definition=arsenate reductase	2.884	0.0257
+coded_by=complement(134072..134437),organism=endosymbiont of Loripes lucinalis,definition=arsenate reductase (glutaredoxin)	3.852	0.0343
+coded_by=79954..80301,organism=Sphingomonadales bacterium RIFCSPHIGHO2_01_FULL_65_20,definition=arsenate reductase (glutaredoxin)	3.218	0.0287
+coded_by=3346188..3346553,organism=Lysobacter gummosus,definition=arsenate reductase	2.101	0.0187
+coded_by=2211816..2212169,organism=Caulobacteraceae bacterium OTSz_A_272,definition=hypothetical protein	1.449	0.0129
+coded_by=515..943,organism=Sphingomonas sp. Leaf30,definition=arsenate reductase	4.969	0.0443
+coded_by=complement(111518..111865),organism=Pantoea dispersa,definition=arsenate reductase	20.48	0.1825
+coded_by=1692928..1693293,organism=Lysobacter antibioticus,definition=arsenate reductase	11.188	0.0997
+coded_by=336380..336745,organism=Methyloceanibacter methanicus,definition=arsenate reductase	6.596	0.0588
+coded_by=3965530..3965883,organism=Serratia plymuthica PRI-2C,definition=Arsenate reductase	0.886	0.0079
+coded_by=3843047..3843454,organism=Rhodomicrobium vannielii ATCC 17100,definition=arsenate reductase	1.579	0.0141
+coded_by=115116..115463,organism=alpha proteobacterium BAL199,definition=arsenate reductase	0.853	0.0076
+coded_by=58621..58974,organism=Marinobacter lutaoensis,definition=arsenate reductase (glutaredoxin)	12.532	0.1117
+coded_by=94004..94429,organism=Methylocella silvestris BL2,definition=arsenate reductase	10.642	0.0949
+coded_by=complement(47139..47489),organism=Phenylobacterium sp. RIFCSPHIGHO2_01_FULL_69_31,definition=arsenate reductase (glutaredoxin)	1.264	0.0113
+coded_by=complement(517967..518314),organism=Duganella sp. CF517,definition=arsenate reductase	1.396	0.0124
+coded_by=complement(1553841..1554269),organism=Novosphingobium sp. PP1Y,definition=arsenate reductase	1.726	0.0154
+coded_by=complement(2209..2607),organism=Oceanibaculum pacificum,definition=arsenate reductase	1.472	0.0131

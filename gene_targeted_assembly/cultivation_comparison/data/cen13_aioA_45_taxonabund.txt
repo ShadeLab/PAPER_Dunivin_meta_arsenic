@@ -1,0 +1,9 @@
+Taxon	Abundance	Fraction Abundance
+coded_by=413..2905,organism=Rhodospirillales bacterium RIFCSPLOWO2_12_FULL_67_15,definition=molybdopterin oxidoreductase	29.341	0.2385
+coded_by=6311..8776,organism=Hyphomicrobium sp. SCN 65-11,definition=arsenite oxidase large subunit	2.155	0.0175
+coded_by=470..2965,organism=Betaproteobacteria bacterium RIFCSPLOWO2_12_FULL_62_13,definition=molybdopterin oxidoreductase	24.341	0.1979
+coded_by=complement(1008..3488),organism=Betaproteobacteria bacterium RIFCSPLOWO2_02_FULL_62_17,definition=arsenite oxidase large subunit	20.354	0.1655
+coded_by=143485..145950,organism=Rhodobacter sp. SW2,definition=arsenite oxidase, large subunit	2.047	0.0166
+coded_by=complement(9784..12276),organism=Betaproteobacteria bacterium RIFCSPLOWO2_12_FULL_62_58,definition=molybdopterin oxidoreductase	10.839	0.0881
+coded_by=3082534..3085050,organism=Ectothiorhodospira sp. BSL-9,definition=anaerobic arsenite oxidase molybdopterin containing subunit ArxA	19.292	0.1568
+coded_by=1474..3981,organism=Candidatus Muproteobacteria bacterium RBG_16_65_34,definition=molybdopterin oxidoreductase	14.647	0.1191

@@ -1,0 +1,33 @@
+Taxon	Abundance	Fraction Abundance
+coded_by=complement(430560..431615),organism=Rhizobium sp. LCM 4573,definition=arsenical-resistance protein	17.289	0.0553
+coded_by=4766445..4767527,organism=Opitutus terrae PB90-1,definition=arsenical-resistance protein	2.912	0.0093
+coded_by=7398..8492,organism=Candidatus Dadabacteria bacterium RIFCSPHIGHO2_12_FULL_53_21,definition=arsenical-resistance protein	8.426	0.0270
+coded_by=complement(1517623..1518747),organism=Sphaerobacter thermophilus DSM 20745,definition=arsenical-resistance protein	23.828000000000003	0.0763
+coded_by=complement(5076860..5078008),organism=Caldilinea aerophila DSM 14535 = NBRC 104270,definition=arsenite export protein	5.111000000000001	0.0164
+coded_by=3144..4256,organism=candidate division Zixibacteria bacterium SM1_73,definition=arsenic resistance protein ArsB	10.505	0.0336
+coded_by=13264..14760,organism=Omnitrophica WOR_2 bacterium GWA2_63_20,definition=arsenical-resistance protein	3.903	0.0125
+coded_by=28704..29798,organism=Deltaproteobacteria bacterium GWA2_65_63,definition=arsenical-resistance protein	3.302	0.0106
+coded_by=4786..5931,organism=Thiocapsa sp. KS1,definition=conserved membrane hypothetical protein	19.739	0.0632
+coded_by=11838..12941,organism=Nitrospirae bacterium 13_1_40CM_4_62_6,definition=arsenical-resistance protein	17.987	0.0576
+coded_by=complement(25512..26588),organism=Armatimonadetes bacterium RBG_16_67_12,definition=arsenical-resistance protein	20.562	0.0658
+coded_by=30825..31919,organism=Thermoanaerobaculum aquaticum,definition=transporter	7.56	0.0242
+coded_by=complement(21583..22674),organism=Verrucomicrobia bacterium SCN 57-15,definition=arsenical-resistance protein	2.06	0.0066
+coded_by=complement(5974..7041),organism=Candidatus Handelsmanbacteria bacterium RIFCSPLOWO2_12_FULL_64_10,definition=arsenical-resistance protein	10.955	0.0351
+coded_by=94471..95523,organism=Methylocella silvestris BL2,definition=arsenical-resistance protein	10.872	0.0348
+coded_by=2807440..2808507,organism=Pandoraea pnomenusa 3kgm,definition=arsenic transporter	6.095	0.0195
+coded_by=complement(1941820..1942938),organism=Ammonifex degensii KC4,definition=arsenical-resistance protein	9.378	0.0300
+coded_by=11707..12780,organism=Planctomycetes bacterium GWF2_50_10,definition=arsenical-resistance protein	3.318	0.0106
+coded_by=21395..22474,organism=Nitrospirae bacterium GWC2_57_13,definition=arsenical-resistance protein	3.368	0.0108
+coded_by=4835511..4836581,organism=Acidobacteria bacterium DSM 100886,definition=arsenical-resistance protein	31.035	0.0993
+coded_by=23247..24341,organism=Deltaproteobacteria bacterium RIFCSPLOWO2_12_FULL_60_19,definition=arsenical-resistance protein	16.107	0.0515
+coded_by=38028..39104,organism=Acidobacteria bacterium RIFCSPLOWO2_02_FULL_67_36,definition=arsenical-resistance protein	10.959	0.0351
+coded_by=complement(233835..234890),organism=Oligotropha carboxidovorans OM5,definition=arsenical-resistance protein	2.192	0.0070
+coded_by=complement(3623853..3624944),organism=Nitrospira moscoviensis,definition=putative arsenite efflux transporter ArsB	6.916	0.0221
+coded_by=9313..10389,organism=Planctomycetes bacterium RBG_13_63_9,definition=arsenical-resistance protein	10.356	0.0331
+coded_by=complement(13297..14361),organism=Ignavibacteria bacterium GWA2_36_19,definition=arsenical-resistance protein	2.661	0.0085
+coded_by=39566..40699,organism=Gemmatimonadetes bacterium SCN 70-22,definition=arsenical-resistance protein	4.699	0.0150
+coded_by=complement(1574..2650),organism=Nitrospirae bacterium RBG_19FT_COMBO_58_9,definition=arsenical-resistance protein	10.06	0.0322
+coded_by=complement(2947810..2948868),organism=Pelodictyon phaeoclathratiforme BU-1,definition=arsenical-resistance protein	9.555	0.0306
+coded_by=4004..5119,organism=Ignavibacteria bacterium GWC2_56_12,definition=arsenical-resistance protein	11.405	0.0365
+coded_by=complement(<1..1116),organism=Clostridia bacterium 62_21,definition=Arsenical-resistance protein	3.345	0.0107
+coded_by=1847..3055,organism=Actinobacteria bacterium RBG_16_68_12,definition=arsenical-resistance protein	6.008	0.0192

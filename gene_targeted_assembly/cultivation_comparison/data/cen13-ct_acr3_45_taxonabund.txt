@@ -1,0 +1,16 @@
+Taxon	Abundance	Fraction Abundance
+coded_by=complement(41277..42353),organism=Bordetella bronchiseptica OSU095,definition=arsenical-resistance protein	5.439	0.0042
+coded_by=complement(25744..26805),organism=Bacillus sp. TH008,definition=arsenic resistance protein ArsB	11.176	0.0087
+coded_by=complement(2123..3163),organism=Bacillus anthracis,definition=arsenical-resistance protein	3.634	0.0028
+coded_by=1941923..1942987,organism=Aneurinibacillus sp. XH2,definition=arsenic resistance protein ArsB	818.0669999999999	0.6387
+coded_by=complement(60995..62077),organism=Pleomorphobacterium xiamenense,definition=arsenite transporter, ACR3 family	47.168	0.0368
+coded_by=complement(3448635..3449663),organism=Leptothrix cholodnii SP-6,definition=arsenical-resistance protein	7.75	0.0061
+coded_by=complement(26539..27597),organism=Paenibacillus dendritiformis C454,definition=arsenical-resistance protein	6.483	0.0051
+coded_by=complement(196034..197095),organism=Geobacillus sp. B4113_201601,definition=hypothetical protein	24.388	0.0190
+coded_by=complement(68051..69106),organism=Bacillus flexus,definition=arsenic resistance protein ArsB	8.601	0.0067
+coded_by=complement(1486789..1487865),organism=Cupriavidus gilardii CR3,definition=arsenite efflux pump ACR3 CMGI-7	5.382	0.0042
+coded_by=450185..451276,organism=Bacillus subtilis subsp. subtilis str. SC-8,definition=membrane-associated protein	98.5	0.0769
+coded_by=complement(26036..27094),organism=Bacillus sp. TH008,definition=arsenic resistance protein ArsB	9.464	0.0074
+coded_by=66080..67141,organism=Thermoactinomyces vulgaris,definition=arsenic resistance protein ArsB	222.189	0.1735
+coded_by=2423..3514,organism=Brevibacillus sp. WF146,definition=arsenical-resistance protein	1.962	0.0015
+coded_by=complement(17730..18770),organism=Bacillus cereus Rock3-44,definition=Arsenite resistance protein arsB	10.713	0.0084

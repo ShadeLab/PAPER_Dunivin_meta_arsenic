@@ -1,0 +1,4 @@
+Taxon	Abundance	Fraction Abundance
+coded_by=470..2965,organism=Betaproteobacteria bacterium RIFCSPLOWO2_12_FULL_62_13,definition=molybdopterin oxidoreductase	22.766000000000002	0.3114
+coded_by=complement(14041..16512),organism=Magnetospirillum magnetotacticum MS-1,definition=Anaerobic dehydrogenase typically selenocysteine-containing	6.347	0.0868
+coded_by=1474..3981,organism=Candidatus Muproteobacteria bacterium RBG_16_65_34,definition=molybdopterin oxidoreductase	43.983999999999995	0.6017

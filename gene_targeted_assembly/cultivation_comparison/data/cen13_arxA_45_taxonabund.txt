@@ -1,0 +1,9 @@
+Taxon	Abundance	Fraction Abundance
+coded_by=2751682..2754162,organism=Halomonas chromatireducens,definition=Polysulfide reductase chain A precursor	17.209	0.1586
+coded_by=23179..25614,organism=uncultured Acetothermia bacterium,definition=molybdopterin oxidoreductase	15.507	0.1429
+coded_by=5047..7593,organism=Betaproteobacteria bacterium RIFCSPLOWO2_12_FULL_68_20,definition=dehydrogenase	4.455	0.0411
+coded_by=2770..5316,organism=Betaproteobacteria bacterium RIFCSPLOWO2_12_FULL_64_23,definition=dehydrogenase	4.495	0.0414
+coded_by=complement(14041..16512),organism=Magnetospirillum magnetotacticum MS-1,definition=Anaerobic dehydrogenase typically selenocysteine-containing	19.169	0.1767
+coded_by=complement(58620..61448),organism=Gammaproteobacteria bacterium RIFOXYD12_FULL_61_37,definition=molybdopterin oxidoreductase	14.742	0.1359
+coded_by=7519..10017,organism=Gallionellales bacterium RIFCSPLOWO2_02_58_13,definition=molybdopterin oxidoreductase	29.307000000000002	0.2701
+coded_by=48358..50916,organism=Betaproteobacteria bacterium RBG_16_64_18,definition=dehydrogenase	3.625	0.0334

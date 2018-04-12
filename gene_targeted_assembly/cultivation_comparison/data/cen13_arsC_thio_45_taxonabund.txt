@@ -1,0 +1,5 @@
+Taxon	Abundance	Fraction Abundance
+coded_by=76587..77006,organism=Bacillus sp. SA1-12,definition=arsenate reductase	1.254	0.0460
+coded_by=310381..310803,organism=Acidihalobacter prosperus,definition=arsenate reductase (thioredoxin)	21.385	0.7838
+coded_by=complement(23054..23473),organism=Bacillus selenatarsenatis SF-1,definition=arsenate reductase	3.102	0.1137
+coded_by=complement(53478..53906),organism=Alicyclobacillus sp. USBA-503,definition=arsenate reductase	1.543	0.0566

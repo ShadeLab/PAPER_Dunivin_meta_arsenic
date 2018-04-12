@@ -1,0 +1,5 @@
+Taxon	Abundance	Fraction Abundance
+coded_by=complement(2767308..2768108),organism=Paenibacillus sp. D9,definition=arsenite S-adenosylmethyltransferase	28.127	0.5506
+coded_by=complement(95..895),organism=Paenibacillus sp. A3,definition=arsenite S-adenosylmethyltransferase	10.357	0.2027
+coded_by=complement(44529..45341),organism=Paenibacillus lactis 154,definition=Methyltransferase type 11	8.014	0.1569
+coded_by=40866..41660,organism=Paenibacillus sp. VKM B-2647,definition=arsenite S-adenosylmethyltransferase	4.585	0.0898

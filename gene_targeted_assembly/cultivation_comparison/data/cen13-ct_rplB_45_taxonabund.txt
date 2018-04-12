@@ -1,0 +1,4 @@
+Taxon	Abundance	Fraction Abundance
+Betaproteobacteria	20.009999999999998	0.0081
+Gammaproteobacteria	64.142	0.0261
+Firmicutes	2371.434	0.9657

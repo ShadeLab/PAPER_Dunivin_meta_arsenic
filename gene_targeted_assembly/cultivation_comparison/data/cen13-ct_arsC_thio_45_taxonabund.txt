@@ -1,0 +1,32 @@
+Taxon	Abundance	Fraction Abundance
+coded_by=complement(135214..135639),organism=Bacillus sp. B-jedd,definition=arsenate reductase	1.229	0.0004
+coded_by=43421..43846,organism=Paenibacillus macerans,definition=arsenate reductase	3.224	0.0011
+coded_by=complement(25587..26012),organism=Bacillus sp. TH008,definition=arsenate reductase	68.702	0.0235
+coded_by=complement(26116..26535),organism=Paenibacillus dendritiformis C454,definition=ArsC	7.888	0.0027
+coded_by=7592..8011,organism=Bacillus subtilis subsp. subtilis,definition=Arsenate reductase	69.811	0.0239
+coded_by=complement(52585..53007),organism=Bacillus megaterium,definition=arsenate reductase (thioredoxin)	3.691	0.0013
+coded_by=complement(348414..348833),organism=Anaerobacillus alkalidiazotrophicus,definition=arsenate reductase (thioredoxin)	1.162	0.0004
+coded_by=complement(633415..633834),organism=Bacillus subtilis BSn5,definition=arsenate reductase	67.303	0.0230
+coded_by=3548..3973,organism=Brevibacillus sp. WF146,definition=arsenate reductase	3.223	0.0011
+coded_by=1142..>1507,organism=Geobacillus sp. A1,definition=ArsC1	2.438	0.0008
+coded_by=20684..21103,organism=Bacillus sp. MRMR6,definition=arsenate reductase (thioredoxin)	14.4	0.0049
+coded_by=complement(10567..10971),organism=Streptococcus pneumoniae,definition=Arsenate reductase	2.318	0.0008
+coded_by=complement(2069214..2069633),organism=Bacillus licheniformis DSM 13 = ATCC 14580,definition=arsenate reductase	368.209	0.1258
+coded_by=complement(78443..78862),organism=Bacillus thermoamylovorans,definition=Protein ArsC	20.847	0.0071
+coded_by=48448..48867,organism=Paenibacillus lactis 154,definition=arsenate reductase (thioredoxin)	7.061	0.0024
+coded_by=28689..29108,organism=Bacillus oceanisediminis 2691,definition=arsenate reductase	2.06	0.0007
+coded_by=complement(2656..3081),organism=Paenibacillus sp. A3,definition=arsenate reductase	9.844999999999999	0.0034
+coded_by=complement(782..1204),organism=Bacillus sporothermodurans,definition=Arsenate reductase	8.372	0.0029
+coded_by=1943027..1943452,organism=Aneurinibacillus sp. XH2,definition=arsenate reductase	1262.8410000000001	0.4315
+coded_by=complement(1750518..1750940),organism=Bacillus megaterium Q3,definition=Arsenate reductase	3.083	0.0011
+coded_by=complement(2774293..2774718),organism=Paenibacillus sp. D9,definition=arsenate reductase	40.478	0.0138
+coded_by=complement(25297..25722),organism=Bacillus sp. TH008,definition=arsenate reductase	11.244	0.0038
+coded_by=1554786..1555208,organism=Bacillus methanolicus MGA3,definition=protein tyrosine phosphatase	1.815	0.0006
+coded_by=complement(5399..5821),organism=Lysinibacillus massiliensis 4400831 = CIP 108448 = CCUG 49529,definition=arsenate reductase	1.444	0.0005
+coded_by=76587..77006,organism=Bacillus sp. SA1-12,definition=arsenate reductase	35.852000000000004	0.0122
+coded_by=complement(600816..601241),organism=Brevibacillus borstelensis AK1,definition=protein ArsC	643.1949999999998	0.2198
+coded_by=complement(2942898..2943302),organism=Bacillus anthracis str. Ames,definition=arsenate reductase (thioredoxin)	1.575	0.0005
+coded_by=39154..39579,organism=Paenibacillus sp. A3,definition=arsenate reductase	38.956	0.0133
+coded_by=67172..67594,organism=Thermoactinomyces vulgaris,definition=arsenate reductase	156.526	0.0535
+coded_by=complement(3760679..3761098),organism=Paenibacillus sp. 32O-W,definition=arsenate reductase	64.35	0.0220
+coded_by=12355..12777,organism=Bacillus sp. Root147,definition=arsenate reductase	3.569	0.0012

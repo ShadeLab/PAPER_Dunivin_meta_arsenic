@@ -1,0 +1,22 @@
+Taxon	Abundance	Fraction Abundance
+coded_by=71551..72963,organism=Paenibacillus sp. P22,definition=Putative arsenical pump membrane protein YdfA	26.866	0.0136
+coded_by=complement(269770..271068),organism=Bacillus litoralis,definition=arsenic transporter	4.701	0.0024
+coded_by=48568..49980,organism=Paenibacillus sp. RU4X,definition=arsenical pump membrane protein	8.697	0.0044
+coded_by=555978..557285,organism=Bacillus subtilis subsp. subtilis str. BAB-1,definition=arsenical pump membrane protein	13.642	0.0069
+coded_by=47125..48420,organism=Paenibacillus lactis 154,definition=arsenical pump membrane protein	8.972	0.0045
+coded_by=1873..3168,organism=Paenibacillus sp. P1XP2,definition=Arsenical pump membrane protein	166.72899999999998	0.0842
+coded_by=574173..575480,organism=Bacillus subtilis subsp. natto,definition=arsenic transporter	46.655	0.0236
+coded_by=complement(402445..403740),organism=Bacillus methanolicus PB1,definition=arsenical pump membrane protein	30.664	0.0155
+coded_by=complement(34079..35371),organism=Brevibacillus borstelensis AK1,definition=arsenical pump membrane protein	597.015	0.3016
+coded_by=1469335..1470627,organism=Paenibacillus mucilaginosus K02,definition=arylsulfatase	46.666	0.0236
+coded_by=complement(2069656..2070951),organism=Bacillus licheniformis DSM 13 = ATCC 14580,definition=Arsenical pump membrane protein	325.99399999999997	0.1647
+coded_by=complement(601281..602579),organism=Brevibacillus borstelensis AK1,definition=arsenical pump membrane protein	572.9189999999999	0.2894
+coded_by=37716..39128,organism=Paenibacillus sp. A3,definition=arsenical pump membrane protein	40.144000000000005	0.0203
+coded_by=336472..337779,organism=Bacillus sp. YP1,definition=arsenical pump membrane protein	26.704	0.0135
+coded_by=complement(5070..6377),organism=Streptococcus pneumoniae,definition=Arsenic efflux pump protein	15.979	0.0081
+coded_by=741464..742762,organism=Bacillus sp. FJAT-21352,definition=arsenic transporter	2.237	0.0011
+coded_by=2238391..2239686,organism=Bacillus glycinifermentans,definition=putative arsenical pump membrane protein YdfA	13.397	0.0068
+coded_by=complement(15266..16558),organism=Bacillus sp. WF146,definition=arsenic transporter	1.941	0.0010
+coded_by=complement(3112..4524),organism=Paenibacillus sp. A3,definition=arsenical pump membrane protein	11.134	0.0056
+coded_by=27365..28660,organism=Bacillus oceanisediminis 2691,definition=arsenic transporter	13.897	0.0070
+coded_by=complement(93592..94887),organism=Paenibacillus macerans,definition=arsenical efflux pump membrane protein ArsB	4.444	0.0022
