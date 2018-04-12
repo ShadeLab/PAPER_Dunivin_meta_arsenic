@@ -1,0 +1,204 @@
+db	query	genus	class	phylum	Organism
+ncbi	Rhizobium sp. LCM 4573	Rhizobium	Alphaproteobacteria	Proteobacteria	Rhizobium sp. LCM 4573
+ncbi	Opitutus terrae PB90-1	Opitutus	Opitutae	Verrucomicrobia	Opitutus terrae PB90-1
+ncbi	Candidatus Dadabacteria bacterium RIFCSPHIGHO2_12_FULL_53_21	NA	NA	Candidatus Dadabacteria	Candidatus Dadabacteria bacterium RIFCSPHIGHO2_12_FULL_53_21
+ncbi	Sphaerobacter thermophilus DSM 20745	Sphaerobacter	Thermomicrobia	Chloroflexi	Sphaerobacter thermophilus DSM 20745
+ncbi	Caldilinea aerophila DSM 14535 = NBRC 104270	Caldilinea	Caldilineae	Chloroflexi	Caldilinea aerophila DSM 14535 = NBRC 104270
+ncbi	candidate division Zixibacteria bacterium SM1_73	NA	NA	candidate division Zixibacteria	candidate division Zixibacteria bacterium SM1_73
+ncbi	Omnitrophica WOR_2 bacterium GWA2_63_20	NA	NA	Candidatus Omnitrophica	Omnitrophica WOR_2 bacterium GWA2_63_20
+ncbi	Deltaproteobacteria bacterium GWA2_65_63	NA	Deltaproteobacteria	Proteobacteria	Deltaproteobacteria bacterium GWA2_65_63
+ncbi	Thiocapsa sp. KS1	Thiocapsa	Gammaproteobacteria	Proteobacteria	Thiocapsa sp. KS1
+ncbi	Nitrospirae bacterium 13_1_40CM_4_62_6	NA	NA	Nitrospirae	Nitrospirae bacterium 13_1_40CM_4_62_6
+ncbi	Armatimonadetes bacterium RBG_16_67_12	NA	NA	Armatimonadetes	Armatimonadetes bacterium RBG_16_67_12
+ncbi	Thermoanaerobaculum aquaticum	Thermoanaerobaculum	NA	Acidobacteria	Thermoanaerobaculum aquaticum
+ncbi	Verrucomicrobia bacterium SCN 57-15	NA	NA	Verrucomicrobia	Verrucomicrobia bacterium SCN 57-15
+ncbi	Candidatus Handelsmanbacteria bacterium RIFCSPLOWO2_12_FULL_64_10	NA	NA	Candidatus Handelsmanbacteria	Candidatus Handelsmanbacteria bacterium RIFCSPLOWO2_12_FULL_64_10
+ncbi	Methylocella silvestris BL2	Methylocella	Alphaproteobacteria	Proteobacteria	Methylocella silvestris BL2
+ncbi	Pandoraea pnomenusa 3kgm	Pandoraea	Betaproteobacteria	Proteobacteria	Pandoraea pnomenusa 3kgm
+ncbi	Ammonifex degensii KC4	Ammonifex	Clostridia	Firmicutes	Ammonifex degensii KC4
+ncbi	Planctomycetes bacterium GWF2_50_10	NA	NA	Planctomycetes	Planctomycetes bacterium GWF2_50_10
+ncbi	Nitrospirae bacterium GWC2_57_13	NA	NA	Nitrospirae	Nitrospirae bacterium GWC2_57_13
+ncbi	Acidobacteria bacterium DSM 100886	Luteitalea	NA	Acidobacteria	Acidobacteria bacterium DSM 100886
+ncbi	Deltaproteobacteria bacterium RIFCSPLOWO2_12_FULL_60_19	NA	Deltaproteobacteria	Proteobacteria	Deltaproteobacteria bacterium RIFCSPLOWO2_12_FULL_60_19
+ncbi	Acidobacteria bacterium RIFCSPLOWO2_02_FULL_67_36	NA	NA	Acidobacteria	Acidobacteria bacterium RIFCSPLOWO2_02_FULL_67_36
+ncbi	Oligotropha carboxidovorans OM5	Oligotropha	Alphaproteobacteria	Proteobacteria	Oligotropha carboxidovorans OM5
+ncbi	Nitrospira moscoviensis	Nitrospira	Nitrospira	Nitrospirae	Nitrospira moscoviensis
+ncbi	Planctomycetes bacterium RBG_13_63_9	NA	NA	Planctomycetes	Planctomycetes bacterium RBG_13_63_9
+ncbi	Ignavibacteria bacterium GWA2_36_19	NA	Ignavibacteria	Ignavibacteriae	Ignavibacteria bacterium GWA2_36_19
+ncbi	Gemmatimonadetes bacterium SCN 70-22	NA	NA	Gemmatimonadetes	Gemmatimonadetes bacterium SCN 70-22
+ncbi	Nitrospirae bacterium RBG_19FT_COMBO_58_9	NA	NA	Nitrospirae	Nitrospirae bacterium RBG_19FT_COMBO_58_9
+ncbi	Pelodictyon phaeoclathratiforme BU-1	Pelodictyon	Chlorobia	Chlorobi	Pelodictyon phaeoclathratiforme BU-1
+ncbi	Ignavibacteria bacterium GWC2_56_12	NA	Ignavibacteria	Ignavibacteriae	Ignavibacteria bacterium GWC2_56_12
+ncbi	Clostridia bacterium 62_21	NA	Clostridia	Firmicutes	Clostridia bacterium 62_21
+ncbi	Actinobacteria bacterium RBG_16_68_12	NA	NA	Actinobacteria	Actinobacteria bacterium RBG_16_68_12
+ncbi	Rhodospirillales bacterium RIFCSPLOWO2_12_FULL_67_15	NA	Alphaproteobacteria	Proteobacteria	Rhodospirillales bacterium RIFCSPLOWO2_12_FULL_67_15
+ncbi	Hyphomicrobium sp. SCN 65-11	Hyphomicrobium	Alphaproteobacteria	Proteobacteria	Hyphomicrobium sp. SCN 65-11
+ncbi	Betaproteobacteria bacterium RIFCSPLOWO2_12_FULL_62_13	NA	Betaproteobacteria	Proteobacteria	Betaproteobacteria bacterium RIFCSPLOWO2_12_FULL_62_13
+ncbi	Betaproteobacteria bacterium RIFCSPLOWO2_02_FULL_62_17	NA	Betaproteobacteria	Proteobacteria	Betaproteobacteria bacterium RIFCSPLOWO2_02_FULL_62_17
+ncbi	Rhodobacter sp. SW2	Rhodobacter	Alphaproteobacteria	Proteobacteria	Rhodobacter sp. SW2
+ncbi	Betaproteobacteria bacterium RIFCSPLOWO2_12_FULL_62_58	NA	Betaproteobacteria	Proteobacteria	Betaproteobacteria bacterium RIFCSPLOWO2_12_FULL_62_58
+ncbi	Ectothiorhodospira sp. BSL-9	Ectothiorhodospira	Gammaproteobacteria	Proteobacteria	Ectothiorhodospira sp. BSL-9
+ncbi	Candidatus Muproteobacteria bacterium RBG_16_65_34	NA	Candidatus Muproteobacteria	Proteobacteria	Candidatus Muproteobacteria bacterium RBG_16_65_34
+ncbi	Betaproteobacteria bacterium RIFCSPLOWO2_12_FULL_62_13	NA	Betaproteobacteria	Proteobacteria	Betaproteobacteria bacterium RIFCSPLOWO2_12_FULL_62_13
+ncbi	Magnetospirillum magnetotacticum MS-1	Magnetospirillum	Alphaproteobacteria	Proteobacteria	Magnetospirillum magnetotacticum MS-1
+ncbi	Candidatus Muproteobacteria bacterium RBG_16_65_34	NA	Candidatus Muproteobacteria	Proteobacteria	Candidatus Muproteobacteria bacterium RBG_16_65_34
+ncbi	Streptomyces thermoautotrophicus	Streptomyces	Actinobacteria	Actinobacteria	Streptomyces thermoautotrophicus
+ncbi	Nocardioides sp. Root122	Nocardioides	Actinobacteria	Actinobacteria	Nocardioides sp. Root122
+ncbi	Caldilinea aerophila DSM 14535 = NBRC 104270	Caldilinea	Caldilineae	Chloroflexi	Caldilinea aerophila DSM 14535 = NBRC 104270
+ncbi	Nocardioidaceae bacterium Broad-1	NA	Actinobacteria	Actinobacteria	Nocardioidaceae bacterium Broad-1
+ncbi	Dehalogenimonas lykanthroporepellens BL-DC-9	Dehalogenimonas	Dehalococcoidia	Chloroflexi	Dehalogenimonas lykanthroporepellens BL-DC-9
+ncbi	Chloroflexi bacterium OLB15	NA	NA	Chloroflexi	Chloroflexi bacterium OLB15
+ncbi	Sorangium cellulosum So0157-2	Sorangium	Deltaproteobacteria	Proteobacteria	Sorangium cellulosum So0157-2
+ncbi	Chloroflexus aggregans DSM 9485	Chloroflexus	Chloroflexia	Chloroflexi	Chloroflexus aggregans DSM 9485
+ncbi	Paenibacillus sp. A3	Paenibacillus	Bacilli	Firmicutes	Paenibacillus sp. A3
+ncbi	Candidatus Nitrososphaera gargensis Ga9.2	Nitrososphaera	Nitrososphaeria	Thaumarchaeota	Candidatus Nitrososphaera gargensis Ga9.2
+ncbi	Dehalogenimonas sp. WBC-2	Dehalogenimonas	Dehalococcoidia	Chloroflexi	Dehalogenimonas sp. WBC-2
+ncbi	Chlorobium luteolum DSM 273	Pelodictyon	Chlorobia	Chlorobi	Chlorobium luteolum DSM 273
+ncbi	Lysobacter arseniciresistens ZS79	Lysobacter	Gammaproteobacteria	Proteobacteria	Lysobacter arseniciresistens ZS79
+ncbi	Methyloceanibacter stevinii	Methyloceanibacter	Alphaproteobacteria	Proteobacteria	Methyloceanibacter stevinii
+ncbi	Methylococcus capsulatus str. Bath	Methylococcus	Gammaproteobacteria	Proteobacteria	Methylococcus capsulatus str. Bath
+ncbi	Bosea sp. BIWAKO-01	Bosea	Alphaproteobacteria	Proteobacteria	Bosea sp. BIWAKO-01
+ncbi	endosymbiont of Loripes lucinalis	Candidatus Thiodiazotropha	Gammaproteobacteria	Proteobacteria	endosymbiont of Loripes lucinalis
+ncbi	Sphingomonadales bacterium RIFCSPHIGHO2_01_FULL_65_20	NA	Alphaproteobacteria	Proteobacteria	Sphingomonadales bacterium RIFCSPHIGHO2_01_FULL_65_20
+ncbi	Lysobacter gummosus	Lysobacter	Gammaproteobacteria	Proteobacteria	Lysobacter gummosus
+ncbi	Caulobacteraceae bacterium OTSz_A_272	NA	Alphaproteobacteria	Proteobacteria	Caulobacteraceae bacterium OTSz_A_272
+ncbi	Sphingomonas sp. Leaf30	Sphingomonas	Alphaproteobacteria	Proteobacteria	Sphingomonas sp. Leaf30
+ncbi	Pantoea dispersa	Pantoea	Gammaproteobacteria	Proteobacteria	Pantoea dispersa
+ncbi	Lysobacter antibioticus	Lysobacter	Gammaproteobacteria	Proteobacteria	Lysobacter antibioticus
+ncbi	Methyloceanibacter methanicus	Methyloceanibacter	Alphaproteobacteria	Proteobacteria	Methyloceanibacter methanicus
+ncbi	Serratia plymuthica PRI-2C	Serratia	Gammaproteobacteria	Proteobacteria	Serratia plymuthica PRI-2C
+ncbi	Rhodomicrobium vannielii ATCC 17100	Rhodomicrobium	Alphaproteobacteria	Proteobacteria	Rhodomicrobium vannielii ATCC 17100
+ncbi	alpha proteobacterium BAL199	NA	Alphaproteobacteria	Proteobacteria	alpha proteobacterium BAL199
+ncbi	Marinobacter lutaoensis	Marinobacter	Gammaproteobacteria	Proteobacteria	Marinobacter lutaoensis
+ncbi	Methylocella silvestris BL2	Methylocella	Alphaproteobacteria	Proteobacteria	Methylocella silvestris BL2
+ncbi	Phenylobacterium sp. RIFCSPHIGHO2_01_FULL_69_31	Phenylobacterium	Alphaproteobacteria	Proteobacteria	Phenylobacterium sp. RIFCSPHIGHO2_01_FULL_69_31
+ncbi	Duganella sp. CF517	Duganella	Betaproteobacteria	Proteobacteria	Duganella sp. CF517
+ncbi	Novosphingobium sp. PP1Y	Novosphingobium	Alphaproteobacteria	Proteobacteria	Novosphingobium sp. PP1Y
+ncbi	Oceanibaculum pacificum	Oceanibaculum	Alphaproteobacteria	Proteobacteria	Oceanibaculum pacificum
+ncbi	Bacillus sp. SA1-12	Bacillus	Bacilli	Firmicutes	Bacillus sp. SA1-12
+ncbi	Acidihalobacter prosperus	Acidihalobacter	Gammaproteobacteria	Proteobacteria	Acidihalobacter prosperus
+ncbi	Bacillus selenatarsenatis SF-1	Bacillus	Bacilli	Firmicutes	Bacillus selenatarsenatis SF-1
+ncbi	Alicyclobacillus sp. USBA-503	Alicyclobacillus	Bacilli	Firmicutes	Alicyclobacillus sp. USBA-503
+ncbi	uncultured bacterium	NA	NA	NA	uncultured bacterium
+ncbi	Streptomyces sp. G25(2015)	NA	NA	NA	Streptomyces sp. G25(2015)
+ncbi	Cellulomonas cellasea DSM 20118	Cellulomonas	Actinobacteria	Actinobacteria	Cellulomonas cellasea DSM 20118
+ncbi	uncultured bacterium	NA	NA	NA	uncultured bacterium
+ncbi	Streptomyces roseochromogenus subsp. oscitans DS 12.976	Streptomyces	Actinobacteria	Actinobacteria	Streptomyces roseochromogenus subsp. oscitans DS 12.976
+ncbi	Acidobacteria bacterium 13_1_40CM_4_65_8	NA	NA	Acidobacteria	Acidobacteria bacterium 13_1_40CM_4_65_8
+ncbi	Actinobacteria bacterium RBG_16_70_17	NA	NA	Actinobacteria	Actinobacteria bacterium RBG_16_70_17
+ncbi	Candidatus Peregrinibacteria bacterium CG1_02_54_53	NA	NA	Candidatus Peregrinibacteria	Candidatus Peregrinibacteria bacterium CG1_02_54_53
+ncbi	uncultured bacterium	NA	NA	NA	uncultured bacterium
+ncbi	Acidobacteria bacterium SCN 69-37	NA	NA	Acidobacteria	Acidobacteria bacterium SCN 69-37
+ncbi	Terriglobus roseus DSM 18391	Terriglobus	Acidobacteriia	Acidobacteria	Terriglobus roseus DSM 18391
+ncbi	Fimbriimonas ginsengisoli Gsoil 348	Fimbriimonas	Fimbriimonadia	Armatimonadetes	Fimbriimonas ginsengisoli Gsoil 348
+ncbi	Actinobacteria bacterium RBG_16_70_17	NA	NA	Actinobacteria	Actinobacteria bacterium RBG_16_70_17
+ncbi	hydrocarbon metagenome	NA	NA	NA	hydrocarbon metagenome
+ncbi	Humibacillus sp. DSM 29435	Humibacillus	Actinobacteria	Actinobacteria	Humibacillus sp. DSM 29435
+ncbi	Chloroflexi bacterium RBG_16_70_13	NA	NA	Chloroflexi	Chloroflexi bacterium RBG_16_70_13
+ncbi	Planctomycetales bacterium 71-10	NA	Planctomycetia	Planctomycetes	Planctomycetales bacterium 71-10
+ncbi	Sulfurifustis variabilis	Sulfurifustis	Gammaproteobacteria	Proteobacteria	Sulfurifustis variabilis
+ncbi	uncultured bacterium	NA	NA	NA	uncultured bacterium
+ncbi	Microbacterium sp. SCN 70-10	Microbacterium	Actinobacteria	Actinobacteria	Microbacterium sp. SCN 70-10
+ncbi	candidate division NC10 bacterium RIFCSPLOWO2_02_FULL_66_22	NA	NA	candidate division NC10	candidate division NC10 bacterium RIFCSPLOWO2_02_FULL_66_22
+ncbi	Chloroflexi bacterium RBG_16_72_14	NA	NA	Chloroflexi	Chloroflexi bacterium RBG_16_72_14
+ncbi	Candidatus Thiomargarita nelsonii	Thiomargarita	Gammaproteobacteria	Proteobacteria	Candidatus Thiomargarita nelsonii
+ncbi	Caldithrix sp. RBG_13_44_9	Caldithrix	Calditrichae	Calditrichaeota	Caldithrix sp. RBG_13_44_9
+ncbi	Acidobacteria bacterium RIFCSPLOWO2_02_FULL_61_28	NA	NA	Acidobacteria	Acidobacteria bacterium RIFCSPLOWO2_02_FULL_61_28
+ncbi	Chlorobi bacterium OLB5	NA	NA	Chlorobi	Chlorobi bacterium OLB5
+ncbi	uncultured bacterium	NA	NA	NA	uncultured bacterium
+ncbi	Armatimonadetes bacterium RBG_19FT_COMBO_69_19	NA	NA	Armatimonadetes	Armatimonadetes bacterium RBG_19FT_COMBO_69_19
+ncbi	Actinobacteria bacterium RBG_16_68_21	NA	NA	Actinobacteria	Actinobacteria bacterium RBG_16_68_21
+ncbi	Anaerolineae bacterium CG1_02_58_13	NA	Anaerolineae	Chloroflexi	Anaerolineae bacterium CG1_02_58_13
+ncbi	Candidatus Shapirobacteria bacterium GW2011_GWE1_38_10	NA	NA	Candidatus Shapirobacteria	Candidatus Shapirobacteria bacterium GW2011_GWE1_38_10
+ncbi	uncultured bacterium	NA	NA	NA	uncultured bacterium
+ncbi	Lentzea violacea	Lentzea	Actinobacteria	Actinobacteria	Lentzea violacea
+ncbi	Acidobacteria bacterium 13_1_40CM_4_58_4	NA	NA	Acidobacteria	Acidobacteria bacterium 13_1_40CM_4_58_4
+ncbi	Halomonas chromatireducens	Halomonas	Gammaproteobacteria	Proteobacteria	Halomonas chromatireducens
+ncbi	uncultured Acetothermia bacterium	NA	NA	Candidatus Acetothermia	uncultured Acetothermia bacterium
+ncbi	Betaproteobacteria bacterium RIFCSPLOWO2_12_FULL_68_20	NA	Betaproteobacteria	Proteobacteria	Betaproteobacteria bacterium RIFCSPLOWO2_12_FULL_68_20
+ncbi	Betaproteobacteria bacterium RIFCSPLOWO2_12_FULL_64_23	NA	Betaproteobacteria	Proteobacteria	Betaproteobacteria bacterium RIFCSPLOWO2_12_FULL_64_23
+ncbi	Magnetospirillum magnetotacticum MS-1	Magnetospirillum	Alphaproteobacteria	Proteobacteria	Magnetospirillum magnetotacticum MS-1
+ncbi	Gammaproteobacteria bacterium RIFOXYD12_FULL_61_37	NA	Gammaproteobacteria	Proteobacteria	Gammaproteobacteria bacterium RIFOXYD12_FULL_61_37
+ncbi	Gallionellales bacterium RIFCSPLOWO2_02_58_13	NA	Betaproteobacteria	Proteobacteria	Gallionellales bacterium RIFCSPLOWO2_02_58_13
+ncbi	Betaproteobacteria bacterium RBG_16_64_18	NA	Betaproteobacteria	Proteobacteria	Betaproteobacteria bacterium RBG_16_64_18
+ncbi	Bordetella bronchiseptica OSU095	Bordetella	Betaproteobacteria	Proteobacteria	Bordetella bronchiseptica OSU095
+ncbi	Bacillus sp. TH008	Bacillus	Bacilli	Firmicutes	Bacillus sp. TH008
+ncbi	Bacillus anthracis	Bacillus	Bacilli	Firmicutes	Bacillus anthracis
+ncbi	Aneurinibacillus sp. XH2	Aneurinibacillus	Bacilli	Firmicutes	Aneurinibacillus sp. XH2
+ncbi	Pleomorphobacterium xiamenense	Oceanicella	Alphaproteobacteria	Proteobacteria	Pleomorphobacterium xiamenense
+ncbi	Leptothrix cholodnii SP-6	Leptothrix	Betaproteobacteria	Proteobacteria	Leptothrix cholodnii SP-6
+ncbi	Paenibacillus dendritiformis C454	Paenibacillus	Bacilli	Firmicutes	Paenibacillus dendritiformis C454
+ncbi	Geobacillus sp. B4113_201601	Geobacillus	Bacilli	Firmicutes	Geobacillus sp. B4113_201601
+ncbi	Bacillus flexus	Bacillus	Bacilli	Firmicutes	Bacillus flexus
+ncbi	Cupriavidus gilardii CR3	Cupriavidus	Betaproteobacteria	Proteobacteria	Cupriavidus gilardii CR3
+ncbi	Bacillus subtilis subsp. subtilis str. SC-8	Bacillus	Bacilli	Firmicutes	Bacillus subtilis subsp. subtilis str. SC-8
+ncbi	Bacillus sp. TH008	Bacillus	Bacilli	Firmicutes	Bacillus sp. TH008
+ncbi	Thermoactinomyces vulgaris	Thermoactinomyces	Bacilli	Firmicutes	Thermoactinomyces vulgaris
+ncbi	Brevibacillus sp. WF146	Brevibacillus	Bacilli	Firmicutes	Brevibacillus sp. WF146
+ncbi	Bacillus cereus Rock3-44	Bacillus	Bacilli	Firmicutes	Bacillus cereus Rock3-44
+ncbi	Bacillus sp. FJAT-4402	Bacillus	Bacilli	Firmicutes	Bacillus sp. FJAT-4402
+ncbi	Bacillus thuringiensis MC28	Bacillus	Bacilli	Firmicutes	Bacillus thuringiensis MC28
+ncbi	Bacillus megaterium	Bacillus	Bacilli	Firmicutes	Bacillus megaterium
+ncbi	Paenibacillus mucilaginosus K02	Paenibacillus	Bacilli	Firmicutes	Paenibacillus mucilaginosus K02
+ncbi	Paenibacillus sp. A3	Paenibacillus	Bacilli	Firmicutes	Paenibacillus sp. A3
+ncbi	Paenibacillus sp. P22	Paenibacillus	Bacilli	Firmicutes	Paenibacillus sp. P22
+ncbi	Bacillus litoralis	Bacillus	Bacilli	Firmicutes	Bacillus litoralis
+ncbi	Paenibacillus sp. RU4X	Paenibacillus	Bacilli	Firmicutes	Paenibacillus sp. RU4X
+ncbi	Bacillus subtilis subsp. subtilis str. BAB-1	Bacillus	Bacilli	Firmicutes	Bacillus subtilis subsp. subtilis str. BAB-1
+ncbi	Paenibacillus lactis 154	Paenibacillus	Bacilli	Firmicutes	Paenibacillus lactis 154
+ncbi	Paenibacillus sp. P1XP2	Paenibacillus	Bacilli	Firmicutes	Paenibacillus sp. P1XP2
+ncbi	Bacillus subtilis subsp. natto	Bacillus	Bacilli	Firmicutes	Bacillus subtilis subsp. natto
+ncbi	Bacillus methanolicus PB1	Bacillus	Bacilli	Firmicutes	Bacillus methanolicus PB1
+ncbi	Brevibacillus borstelensis AK1	Brevibacillus	Bacilli	Firmicutes	Brevibacillus borstelensis AK1
+ncbi	Paenibacillus mucilaginosus K02	Paenibacillus	Bacilli	Firmicutes	Paenibacillus mucilaginosus K02
+ncbi	Bacillus licheniformis DSM 13 = ATCC 14580	Bacillus	Bacilli	Firmicutes	Bacillus licheniformis DSM 13 = ATCC 14580
+ncbi	Brevibacillus borstelensis AK1	Brevibacillus	Bacilli	Firmicutes	Brevibacillus borstelensis AK1
+ncbi	Paenibacillus sp. A3	Paenibacillus	Bacilli	Firmicutes	Paenibacillus sp. A3
+ncbi	Bacillus sp. YP1	Bacillus	Bacilli	Firmicutes	Bacillus sp. YP1
+ncbi	Streptococcus pneumoniae	Streptococcus	Bacilli	Firmicutes	Streptococcus pneumoniae
+ncbi	Bacillus sp. FJAT-21352	Bacillus	Bacilli	Firmicutes	Bacillus sp. FJAT-21352
+ncbi	Bacillus glycinifermentans	Bacillus	Bacilli	Firmicutes	Bacillus glycinifermentans
+ncbi	Bacillus sp. WF146	Brevibacillus	Bacilli	Firmicutes	Bacillus sp. WF146
+ncbi	Paenibacillus sp. A3	Paenibacillus	Bacilli	Firmicutes	Paenibacillus sp. A3
+ncbi	Bacillus oceanisediminis 2691	Bacillus	Bacilli	Firmicutes	Bacillus oceanisediminis 2691
+ncbi	Paenibacillus macerans	Paenibacillus	Bacilli	Firmicutes	Paenibacillus macerans
+ncbi	Lysobacter arseniciresistens ZS79	Lysobacter	Gammaproteobacteria	Proteobacteria	Lysobacter arseniciresistens ZS79
+ncbi	Stenotrophomonas panacihumi	Stenotrophomonas	Gammaproteobacteria	Proteobacteria	Stenotrophomonas panacihumi
+ncbi	Cupriavidus sp. SK-3	Cupriavidus	Betaproteobacteria	Proteobacteria	Cupriavidus sp. SK-3
+ncbi	Cupriavidus gilardii CR3	Cupriavidus	Betaproteobacteria	Proteobacteria	Cupriavidus gilardii CR3
+ncbi	Bacillus sp. B-jedd	Bacillus	Bacilli	Firmicutes	Bacillus sp. B-jedd
+ncbi	Paenibacillus macerans	Paenibacillus	Bacilli	Firmicutes	Paenibacillus macerans
+ncbi	Bacillus sp. TH008	Bacillus	Bacilli	Firmicutes	Bacillus sp. TH008
+ncbi	Paenibacillus dendritiformis C454	Paenibacillus	Bacilli	Firmicutes	Paenibacillus dendritiformis C454
+ncbi	Bacillus subtilis subsp. subtilis	Bacillus	Bacilli	Firmicutes	Bacillus subtilis subsp. subtilis
+ncbi	Bacillus megaterium	Bacillus	Bacilli	Firmicutes	Bacillus megaterium
+ncbi	Anaerobacillus alkalidiazotrophicus	Anaerobacillus	Bacilli	Firmicutes	Anaerobacillus alkalidiazotrophicus
+ncbi	Bacillus subtilis BSn5	Bacillus	Bacilli	Firmicutes	Bacillus subtilis BSn5
+ncbi	Brevibacillus sp. WF146	Brevibacillus	Bacilli	Firmicutes	Brevibacillus sp. WF146
+ncbi	Geobacillus sp. A1	Geobacillus	Bacilli	Firmicutes	Geobacillus sp. A1
+ncbi	Bacillus sp. MRMR6	Bacillus	Bacilli	Firmicutes	Bacillus sp. MRMR6
+ncbi	Streptococcus pneumoniae	Streptococcus	Bacilli	Firmicutes	Streptococcus pneumoniae
+ncbi	Bacillus licheniformis DSM 13 = ATCC 14580	Bacillus	Bacilli	Firmicutes	Bacillus licheniformis DSM 13 = ATCC 14580
+ncbi	Bacillus thermoamylovorans	Bacillus	Bacilli	Firmicutes	Bacillus thermoamylovorans
+ncbi	Paenibacillus lactis 154	Paenibacillus	Bacilli	Firmicutes	Paenibacillus lactis 154
+ncbi	Bacillus oceanisediminis 2691	Bacillus	Bacilli	Firmicutes	Bacillus oceanisediminis 2691
+ncbi	Paenibacillus sp. A3	Paenibacillus	Bacilli	Firmicutes	Paenibacillus sp. A3
+ncbi	Bacillus sporothermodurans	Bacillus	Bacilli	Firmicutes	Bacillus sporothermodurans
+ncbi	Aneurinibacillus sp. XH2	Aneurinibacillus	Bacilli	Firmicutes	Aneurinibacillus sp. XH2
+ncbi	Bacillus megaterium Q3	Bacillus	Bacilli	Firmicutes	Bacillus megaterium Q3
+ncbi	Paenibacillus sp. D9	Paenibacillus	Bacilli	Firmicutes	Paenibacillus sp. D9
+ncbi	Bacillus sp. TH008	Bacillus	Bacilli	Firmicutes	Bacillus sp. TH008
+ncbi	Bacillus methanolicus MGA3	Bacillus	Bacilli	Firmicutes	Bacillus methanolicus MGA3
+ncbi	Lysinibacillus massiliensis 4400831 = CIP 108448 = CCUG 49529	Lysinibacillus	Bacilli	Firmicutes	Lysinibacillus massiliensis 4400831 = CIP 108448 = CCUG 49529
+ncbi	Bacillus sp. SA1-12	Bacillus	Bacilli	Firmicutes	Bacillus sp. SA1-12
+ncbi	Brevibacillus borstelensis AK1	Brevibacillus	Bacilli	Firmicutes	Brevibacillus borstelensis AK1
+ncbi	Bacillus anthracis str. Ames	Bacillus	Bacilli	Firmicutes	Bacillus anthracis str. Ames
+ncbi	Paenibacillus sp. A3	Paenibacillus	Bacilli	Firmicutes	Paenibacillus sp. A3
+ncbi	Thermoactinomyces vulgaris	Thermoactinomyces	Bacilli	Firmicutes	Thermoactinomyces vulgaris
+ncbi	Paenibacillus sp. 32O-W	Paenibacillus	Bacilli	Firmicutes	Paenibacillus sp. 32O-W
+ncbi	Bacillus sp. Root147	Bacillus	Bacilli	Firmicutes	Bacillus sp. Root147
+ncbi	Bacillus flexus	Bacillus	Bacilli	Firmicutes	Bacillus flexus
+ncbi	Paenibacillus sp. D9	Paenibacillus	Bacilli	Firmicutes	Paenibacillus sp. D9
+ncbi	Paenibacillus sp. A3	Paenibacillus	Bacilli	Firmicutes	Paenibacillus sp. A3
+ncbi	Paenibacillus lactis 154	Paenibacillus	Bacilli	Firmicutes	Paenibacillus lactis 154
+ncbi	Paenibacillus sp. VKM B-2647	Paenibacillus	Bacilli	Firmicutes	Paenibacillus sp. VKM B-2647
