@@ -46,13 +46,14 @@ otu_table$Site <- gsub("cen", "Cen", otu_table$Site)
 meta <- data.frame(read.delim(paste(wd, "/data/sample_map.txt", sep=""), sep=" ", header=TRUE))
 
 #read in rplB data
-rplB <- read.delim(paste(wd, "/output/rplB.summary.scg_0.1.txt", sep = ""), header = TRUE, sep = " ")
+rplB <- read.delim(paste(wd, "/output/rplB.summary.scg.txt", sep = ""), header = TRUE, sep = " ")
 
 #add census data for normalization purposes
 table.census <- rplB %>%
   rename(Site = Sample) %>%
+  mutate(Site = gsub("cen", "Cen", Site)) %>%
   right_join(otu_table, by = "Site") %>%
-  rename(rplB = rowSums.rplB.)
+  rename(rplB = sum.rplB)
 
 #normalize data
 table.normalized <- cbind(Site = table.census$Site, 
@@ -63,6 +64,13 @@ table.normalized.t = setNames(data.frame(t(table.normalized[,-c(1,ncol(table.nor
                               table.normalized[,1])
 #replace all NAs with zeros
 table.normalized.t[is.na(table.normalized.t)] <- 0
+
+#remove columns that are empty
+table.normalized.t <- table.normalized.t %>%
+  select(Permafrost_Russia13.3, Mangrove70.3, Mangrove02.3, Cen13, Cen16, Cen05)
+
+#remove rows where sum = 0
+table.normalized.t <- table.normalized.t[!rowSums(table.normalized.t) == 0,]
 
 #save file
 write.csv(table.normalized.t, paste(wd, "/output/dissim_abund_label.csv", sep = ""),row.names = TRUE, quote = FALSE)

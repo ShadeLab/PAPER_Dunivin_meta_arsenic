@@ -1,4 +1,22 @@
-,Permafrost_Russia13.3,Mangrove70.3,Mangrove02.3,Cen13,Cen16,Cen05
+DATASET_MULTIBAR
+SEPARATOR COMMA
+DATASET_LABEL, abundance
+
+#define colors for each individual field column (use hexadecimal, RGB or RGBA notation; if using RGB/RGBA, COMMA cannot be used as SEPARATOR)
+FIELD_COLORS,#6082B6,#800080,#800080,#FFFF00,#FFFF00,#FF7F00
+FIELD_LABELS,Permafrost_Russia13.3,Mangrove70.3,Mangrove02.3,Cen13,Cen16,Cen05
+
+#dataset scale: you can simply set the values where the scale will be drawn
+DATASET_SCALE,0.00,0.015,0.03
+
+LEGEND_TITLE,Sample
+LEGEND_SHAPES,1,1,1,1,1,1,
+LEGEND_COLORS,#6082B6,#800080,#800080,#FFFF00,#FFFF00,#FF7F00
+LEGEND_LABELS,Permafrost_Russia13.3,Mangrove70.3,Mangrove02.3,Cen13,Cen16,Cen05
+
+
+DATA
+#,Permafrost_Russia13.3,Mangrove70.3,Mangrove02.3,Cen13,Cen16,Cen05
 aioA_0001,0,0,0,0,0.00212314225053079,0.00196270853778214
 aioA_0007,0,0,0,0,0,0.0098135426889107
 aioA_0008,0,0,0,0,0,0.00392541707556428

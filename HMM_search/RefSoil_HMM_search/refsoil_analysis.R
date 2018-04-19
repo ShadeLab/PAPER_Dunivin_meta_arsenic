@@ -318,11 +318,13 @@ type.ars.abund <- type.ars %>%
          aioA_Andisols = aioA * Andisols,
          arrA_Andisols = arrA * Andisols,
          arsB_Andisols = arsB * Andisols,
+         arsD_Andisols = arsD * Andisols,
          arsC_glut_Andisols = arsC_glut * Andisols,
          arsC_thio_Andisols = arsC_thio * Andisols,
          arsM_Andisols = arsM * Andisols,
          arxA_Andisols = arxA * Andisols,
          acr3_Gelisols = acr3 * Gelisols,
+         arsD_Gelisols = arsD * Gelisols,
          aioA_Gelisols = aioA * Gelisols,
          arrA_Gelisols = arrA * Gelisols,
          arsB_Gelisols = arsB * Gelisols,
@@ -334,6 +336,7 @@ type.ars.abund <- type.ars %>%
          aioA_Vertisols = aioA * Vertisols,
          arrA_Vertisols = arrA * Vertisols,
          arsB_Vertisols = arsB * Vertisols,
+         arsD_Vertisols = arsD * Vertisols,
          arsC_glut_Vertisols = arsC_glut * Vertisols,
          arsC_thio_Vertisols = arsC_thio * Vertisols,
          arsM_Vertisols = arsM * Vertisols,
@@ -342,6 +345,7 @@ type.ars.abund <- type.ars %>%
          aioA_Mollisols = aioA * Mollisols,
          arrA_Mollisols = arrA * Mollisols,
          arsB_Mollisols = arsB * Mollisols,
+         arsD_Mollisols = arsD * Mollisols,
          arsC_glut_Mollisols = arsC_glut * Mollisols,
          arsC_thio_Mollisols = arsC_thio * Mollisols,
          arsM_Mollisols = arsM * Mollisols,
@@ -350,6 +354,7 @@ type.ars.abund <- type.ars %>%
          aioA_Inceptisols = aioA * Inceptisols,
          arrA_Inceptisols = arrA * Inceptisols,
          arsB_Inceptisols = arsB * Inceptisols,
+         arsD_Inceptisols = arsD * Inceptisols,
          arsC_glut_Inceptisols = arsC_glut * Inceptisols,
          arsC_thio_Inceptisols = arsC_thio * Inceptisols,
          arsM_Inceptisols = arsM * Inceptisols,
@@ -358,6 +363,7 @@ type.ars.abund <- type.ars %>%
          aioA_Alfisols = aioA * Alfisols,
          arrA_Alfisols = arrA * Alfisols,
          arsB_Alfisols = arsB * Alfisols,
+         arsD_Alfisols = arsD * Alfisols,
          arsC_glut_Alfisols = arsC_glut * Alfisols,
          arsC_thio_Alfisols = arsC_thio * Alfisols,
          arsM_Alfisols = arsM * Alfisols,
@@ -366,6 +372,7 @@ type.ars.abund <- type.ars %>%
          aioA_Ultisols = aioA * Ultisols,
          arrA_Ultisols = arrA * Ultisols,
          arsB_Ultisols = arsB * Ultisols,
+         arsD_Ultisols = arsD * Ultisols,
          arsC_glut_Ultisols = arsC_glut * Ultisols,
          arsC_thio_Ultisols = arsC_thio * Ultisols,
          arsM_Ultisols = arsM * Ultisols,
@@ -374,6 +381,7 @@ type.ars.abund <- type.ars %>%
          `aioA_Sand,Rock,Ice` = aioA * `Sand,Rock,Ice`,
          `arrA_Sand,Rock,Ice` = arrA * `Sand,Rock,Ice`,
          `arsB_Sand,Rock,Ice` = arsB * `Sand,Rock,Ice`,
+         `arsD_Sand,Rock,Ice` = arsD * `Sand,Rock,Ice`,
          `arsC_glut_Sand,Rock,Ice` = arsC_glut *`Sand,Rock,Ice`,
          `arsC_thio_Sand,Rock,Ice` = arsC_thio *`Sand,Rock,Ice`,
          `arsM_Sand,Rock,Ice` = arsM *`Sand,Rock,Ice`,
@@ -382,6 +390,7 @@ type.ars.abund <- type.ars %>%
          aioA_Entisols = aioA * Entisols,
          arrA_Entisols = arrA * Entisols,
          arsB_Entisols = arsB * Entisols,
+         arsD_Entisols = arsD * Entisols,
          arsC_glut_Entisols = arsC_glut * Entisols,
          arsC_thio_Entisols = arsC_thio * Entisols,
          arsM_Entisols = arsM * Entisols,
@@ -396,6 +405,7 @@ type.ars.abund <- type.ars %>%
 
 #normalize data to total abundance in site
 site.total <-  data.frame(colSums(type[,c(4:12)]))
+
 #tidy
 site.total <- site.total %>%
   rename(SiteTotal = colSums.type...c.4.12...) %>%
@@ -406,15 +416,96 @@ site.total <- site.total %>%
 type.ars.abund.norm <- type.ars.abund %>%
   left_join(site.total, by = "SoilType") %>%
   mutate(NormMean = Mean/SiteTotal,
-         Gene = factor(Gene, levels = c("arsB", "acr3", "arsC (grx)", "arsC (trx)", "arsM", "aioA", "arxA", "arrA")
-))
+         Gene = factor(Gene, levels = c("acr3", "arsB","arsD", "arsC (grx)", "arsC (trx)", "arsM", "aioA", "arxA", "arrA")
+)) %>%
+  group_by(Gene, SoilType) %>%
+  summarise(Total = sum(NormMean))
 
 #plot AsRG content by soil type
-(soil.type <- ggplot(type.ars.abund.norm, aes(x = Gene, y = NormMean, fill = Phylum)) +
-  geom_bar(stat = "identity") + 
-  facet_wrap(~ SoilType) +
-  scale_fill_manual(values = color) +
-  theme_bw() +
+(soil.type <- ggplot(type.ars.abund.norm, aes(x = Gene, y = Total)) +
+  geom_boxplot() +
+  geom_jitter(aes(color = SoilType), height = 0, width = 0.1) + 
+  scale_color_brewer(palette = "Set1") +
+  theme_bw(base_size = 10) +
+  ylab("Mean normalized abundance") +
   theme(axis.text.x = element_text(angle = 45, hjust = 1, vjust = 1)))
 
 ggsave(soil.type, filename = paste(wd, "/figures/abund.soil.type.eps", sep = ""))
+
+################################
+#CALCULATE PHYLOGENETIC SIGNALS#
+################################
+library(ape)
+library(picante)
+
+#read in 16S phylogeny
+tree <- read.tree(paste(wd, "/phylogenetic_analysis/RAxML_bipartitionsBranchLabels.refsoil_bac_arch_16s_RAxML_GTRCAT.nwk", sep = ""))
+tree.f <- multi2di(tree)
+
+#prep tree labels
+tree.data <- data.frame("NCBI.ID" = tree$tip.label) %>%
+  rownames_to_column(var = "order") %>%
+  mutate(order = as.numeric(order))
+
+#add gene information
+tree.data.annotated <- itol.annotated %>%
+  left_join(tree.data, by = "NCBI.ID") %>%
+  arrange(order) %>%
+  column_to_rownames("NCBI.ID") %>%
+  select(-c(Name:Source, order, arsB_plasmid, arsM_plasmid:None_plasmid, arrA_chromosome, arrA_plasmid))
+tree.data.annotated <- data.frame(tree.data.annotated)
+
+#convert to presence absence
+tree.data.annotated[tree.data.annotated > 0] <- 1
+
+#replace NA with zero since we are confident in P/A
+tree.data.annotated[is.na(tree.data.annotated)] <- 0
+
+#test phylogenetic signal
+phy.signal <- multiPhylosignal(x = tree.data.annotated[,c(1:12)], phy = tree.f, reps = 999)
+
+#fdr adjust p values
+phy.signal$p.adjust <- p.adjust(phy.signal$PIC.variance.P, method = "fdr")
+
+#############################################################
+#EXPORT TREES WITH LABEL CHANGES FOR PHYLOGENETIC CONGRUENCE#
+#############################################################
+library(phytools)
+
+#read 16s tree
+tree <- read.tree(paste(wd, "/phylogenetic_analysis/RAxML_bipartitionsBranchLabels.refsoil_bac_arch_16s_RAxML_GTRCAT.nwk", sep = ""))
+
+#prep 16S
+phylo.labels <- data.frame("NCBI.ID" = tree$tip.label) %>%
+  rownames_to_column(var = "order") %>%
+  left_join(ncbi.tidy, by = "NCBI.ID") 
+
+tree$tip.label[tree$tip.label %in% phylo.labels$NCBI.ID] <- phylo.labels$`RefSoil ID`
+
+write.tree(tree, file = paste(wd, "/phylogenetic_analysis/refsoil_labels/16S_refsoil.nwk", sep = ""))
+
+path.dist(arsM.tree, tree)
+
+#arsM
+arsM.tree <- read.tree(paste(wd, "/phylogenetic_analysis/RAxML_bipartitionsBranchLabels.arsM_refsoil_RAxML_PROTGAMMAWAG.nwk", sep = ""))
+
+arsM.labels <- data.frame(arsM.tree$tip.label) %>%
+  rownames_to_column(var = "order") %>%
+  rename(t.name = arsM.tree.tip.label) %>%
+  left_join(data.tax, by = "t.name")
+
+arsM.tree$tip.label[arsM.tree$tip.label %in% arsM.labels$t.name] <- arsM.labels$`RefSoil ID`
+
+write.tree(arsM.tree, file = paste(wd, "/phylogenetic_analysis/refsoil_labels/arsM_refsoil.nwk", sep = ""))
+
+#arsD
+arsD.tree <- read.tree(paste(wd, "/phylogenetic_analysis/RAxML_bipartitionsBranchLabels.arsD_refsoil_RAxML_PROTGAMMAWAG.nwk", sep = ""))
+
+arsD.labels <- data.frame(arsD.tree$tip.label) %>%
+  rownames_to_column(var = "order") %>%
+  rename(t.name = arsD.tree.tip.label) %>%
+  left_join(data.tax, by = "t.name")
+
+arsD.tree$tip.label[arsD.tree$tip.label %in% arsD.labels$t.name] <- arsD.labels$`RefSoil ID`
+
+write.tree(arsD.tree, file = paste(wd, "/phylogenetic_analysis/refsoil_labels/arsD_refsoil.nwk", sep = ""))

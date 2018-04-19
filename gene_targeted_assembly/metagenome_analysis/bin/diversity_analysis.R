@@ -278,13 +278,14 @@ gene_abundance_biome <- gene_abundance_summary %>%
   group_by(Gene, Biome, Site, Sample) %>%
   summarise(Mean = mean(Total)) %>%
   arrange(Biome, Site) %>%
-  mutate(order = as.factor(row_number())) 
+  mutate(order = as.factor(row_number()),
+         N =length(Site))
 
 gene_abundance_biome$Gene = factor(gene_abundance_biome$Gene, levels=c("acr3", "arsB", "arsC (trx)", "arsC (grx)", "arsD", "arsM", "aioA", "arrA", "arxA"))
 
 #Plot AsRG relative abundance by site
-(relabund.plot <- ggplot(subset(gene_abundance_biome, subset = Gene !="rplB"), aes(x = Site, y = Mean, fill = Gene)) +
-  geom_bar(stat = "identity", position = "fill") +
+(relabund.plot <- ggplot(subset(gene_abundance_biome, subset = Gene !="rplB"), aes(x = Site, y = Mean/N, fill = Gene)) +
+  geom_bar(stat = "identity", position = "stack") +
   scale_fill_manual(values = c("#8BD1C4", "#F98072", "#F3A955", "#80B1D3", "#FFFFB3", "#B9E563", "#919191", "#C58CDC", "#FBB8DA")) +
   ylab("Relative Abundance") +
   theme_bw(base_size = 12) +

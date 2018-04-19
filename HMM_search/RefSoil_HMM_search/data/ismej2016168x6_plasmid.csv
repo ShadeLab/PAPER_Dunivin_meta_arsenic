@@ -379,7 +379,7 @@ RefSoil_382,NC_013947.1,446470,Bacteria,Actinobacteria,Actinobacteria,Glycomycet
 RefSoil_383,NC_013961.1,665029,Bacteria,Proteobacteria,Gammaproteobacteria,Enterobacteriales,Enterobacteriaceae,Erwinia,Erwinia amylovora,Erwinia amylovora CFBP1430,665029.1,NC_013957.1
 RefSoil_384,NC_013967.1,309800,Archaea,Euryarchaeota,Halobacteria,Haloferacales,Haloferacaceae,Haloferax,Haloferax volcanii,Haloferax volcanii DS2,309800.35,"NC_013964.1,NC_013965.1,NC_013966.1,NC_013968.1"
 RefSoil_385,NC_013971.1,716540,Bacteria,Proteobacteria,Gammaproteobacteria,Enterobacteriales,Enterobacteriaceae,Erwinia,Erwinia amylovora,Erwinia amylovora ATCC 49946,716540.11,"NC_013972.1,NC_013973.1"
-RefSoil_386,NC_014000.1,240292,Bacteria,Cyanobacteria,,Nostocales,Nostocaceae,Anabaena,Anabaena variabilis,Anabaena variabilis ATCC 29413,240292.39,"NC_007410.1,NC_007411.1,NC_007412.1,NC_014000.1"
+RefSoil_386,NC_007413.1,240292,Bacteria,Cyanobacteria,,Nostocales,Nostocaceae,Anabaena,Anabaena variabilis,Anabaena variabilis ATCC 29413,240292.39,"NC_007410.1,NC_007411.1,NC_007412.1,NC_014000.1"
 RefSoil_387,NC_014002.1,547558,Archaea,Euryarchaeota,Methanomicrobia,Methanosarcinales,Methanosarcinaceae,Methanohalophilus,Methanohalophilus mahii,Methanohalophilus mahii DSM 5219,547558.22,NA
 RefSoil_388,"NC_014006.1,NC_014013.1",452662,Bacteria,Proteobacteria,Alphaproteobacteria,Sphingomonadales,Sphingomonadaceae,Sphingobium,Sphingobium japonicum,Sphingobium japonicum UT26S,"452662.28,452662.27","NC_014007.1,NC_014005.1,NC_014009.1"
 RefSoil_389,NC_014019.1,545693,Bacteria,Firmicutes,Bacilli,Bacillales,Bacillaceae,Bacillus,Bacillus megaterium,Bacillus megaterium QM B1551,545693.18,"NC_010008.2,NC_010009.2,NC_010010.2,NC_004604.2,NC_014025.1,NC_014031.1,NC_014023.1"
