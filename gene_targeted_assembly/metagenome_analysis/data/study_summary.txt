@@ -1,0 +1,20 @@
+Study	Year	Samples	Analysis
+Bertin	2011	1	genome-centric metagenomics
+Plewniak	2013	2	gene-centric metagenomics
+Cai	2013	6	gene-centric metagenomics
+Luo	2014	5	gene-centric metagenomics
+Hug	2014	4	gene-centric metagenomics
+Sangwan	2015	2	genome-centric metagenomics
+Costa	2015	2	gene-centric metagenomics
+Xiao	2016	5	gene-centric metagenomics
+Rascovan	2016	1	gene-centric metagenomics
+Anantharaman	2016	1	genome-centric metagenomics
+Xiaofang	2017	7	gene-centric metagenomics
+Kurth	2017	1	gene-centric metagenomics
+Fullerton	2017	1	genome-centric metagenomics
+Das	2017	5	gene-centric metagenomics
+Chi	2017	2	gene-centric metagenomics
+Lui	2018	5	genome-centric metagenomics
+This	2018	38	gene-centric metagenomics
+Edwardson	2017	10	gene-centric metatranscriptomics
+Edgcomb	2016	5	gene-centric metatranscriptomics

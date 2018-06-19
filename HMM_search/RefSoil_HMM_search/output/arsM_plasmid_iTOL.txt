@@ -4,4 +4,5 @@ DATASET_LABEL,arsM plasmid
 COLOR,#FFFFFF
 
 DATA
+#NCBI.ID,arsM_plasmid
 NZ_CP007514,1

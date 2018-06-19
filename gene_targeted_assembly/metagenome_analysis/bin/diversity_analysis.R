@@ -256,17 +256,20 @@ gene_abundance_summary_order$gene_f = factor(gene_abundance_summary_order$Gene, 
 
 #plot bar graph with SITE means
 (pointplot.site <- ggplot(subset(gene_abundance_summary_order, subset = Gene !="rplB")) +
-    geom_jitter(height = 0, size = 2.5, aes(x = order, y = Total, color = Site)) +
-    facet_wrap(~gene_f, ncol = 2, scales = "free") +
+    geom_point(size = 2.5, shape = 1, aes(x = order, y = Total, color = Site)) +
+    geom_point(size = 2.1, shape = 1, aes(x = order, y = Total, color = Site)) +
+    facet_wrap(~gene_f, ncol = 1, scales = "free") +
     ylab("rplB-normalized abundance") +
-    theme_bw(base_size = 12) +
-    xlab("Site")+
+    theme_light(base_size = 10) +
+    xlab("Site") +
     scale_color_manual(values = c("#808000", "#aa6e28", "#ffe119", "#f58231", "#aaffc3", "#fabebe", "#d2f53c", "#008080", "#3cb44b", "#ffd8b1", "#808080", "#911eb4", "#000080", "#46f0f0", "#0082c8", "grey75")) +
     theme(axis.text.x=element_blank(),
-          axis.ticks.x=element_blank()))
+          axis.ticks.x=element_blank(),
+          legend.position = "none"))
+
 
 #save bar graph with SITE means
-ggsave(pointplot.site, filename = paste(wd, "/figures/ordered.point.site.eps", sep= ""),  height = 7, width = 7.5, units = "in")
+ggsave(pointplot.site, filename = paste(wd, "/figures/ordered.point.site.eps", sep= ""),  height = 9, width = 2.5, units = "in")
 
 #################################
 #EXAMINE GENE RELATIVE ABUNDANCE#
@@ -285,7 +288,7 @@ gene_abundance_biome$Gene = factor(gene_abundance_biome$Gene, levels=c("acr3", "
 
 #Plot AsRG relative abundance by site
 (relabund.plot <- ggplot(subset(gene_abundance_biome, subset = Gene !="rplB"), aes(x = Site, y = Mean/N, fill = Gene)) +
-  geom_bar(stat = "identity", position = "stack") +
+  geom_bar(stat = "identity", position = "fill") +
   scale_fill_manual(values = c("#8BD1C4", "#F98072", "#F3A955", "#80B1D3", "#FFFFB3", "#B9E563", "#919191", "#C58CDC", "#FBB8DA")) +
   ylab("Relative Abundance") +
   theme_bw(base_size = 12) +
@@ -446,7 +449,7 @@ gene_abundance_cast_2_melt <- gene_abundance_cast_2 %>%
   mutate(NormalizedAbundance = ifelse(NormalizedAbundance == 0, NA, NormalizedAbundance)) %>%
   mutate(OTU = gsub("arsCglut", "arsC (grx)", OTU), 
          OTU = gsub("arsCthio", "arsC (trx)", OTU), 
-         OTU = gsub("_", " - ", OTU))
+         OTU = gsub("_", "-", OTU))
 
 #plot data
 (otu.shared <- ggplot(gene_abundance_cast_2_melt, aes(y = OTU, x = Sample)) +
@@ -456,7 +459,32 @@ gene_abundance_cast_2_melt <- gene_abundance_cast_2 %>%
   theme(axis.text.x = element_blank()) +
   scale_color_manual(values = c("#808000", "#ffe119", "#f58231", "#aaffc3", "#fabebe", "#d2f53c", "#008080", "#3cb44b", "#ffd8b1", "#808080", "#911eb4", "#000080", "#46f0f0", "#0082c8", "grey75")))
 
-ggsave(otu.shared, filename = paste(wd, "/figures/shared.otus.eps", sep = ""), height = 5.5, width = 5, units = "in")
+ggsave(otu.shared, filename = paste(wd, "/figures/shared.otus.eps", sep = ""), height = 6, width = 4.5, units = "in")
+
+#what portion are endemic?
+abund_occur <- gene_abundance_annotated %>%
+  mutate(Site = gsub("Centralia_.*", "Centralia", Site)) %>%
+  group_by(Site, Gene, OTU) %>%
+  subset(RelativeAbundance > 0) %>%
+  summarise(MeanAbund = mean(RelativeAbundance)) %>%
+  group_by(OTU) %>%
+  mutate(Occur = length(OTU)) %>%
+  subset(Gene !="rplB") 
+
+occur_stats <- abund_occur %>%
+  group_by(Gene, OTU, Occur) %>%
+  summarise() %>%
+  group_by(Gene) %>%
+  mutate(total = length(Gene)) %>%
+  mutate(occurPA = ifelse(Occur > 1, 0, 1)) %>%
+  group_by(Gene, total) %>%
+  summarise(endemic = sum(occurPA)) %>%
+  mutate(endemic.perc = endemic/total)
+
+ggplot(abund_occur, aes(y = MeanAbund, x = Occur, color = Gene)) +
+  geom_jitter(shape = 1, width = 0.1) +
+  scale_y_log10() +
+  facet_wrap(~Gene)
 
 ##############################
 #Community membership v. AsRG OLDDDDDDDDD#

@@ -216,12 +216,12 @@ itol.annotated.shapes[,c(8:27)][itol.annotated.shapes[,c(8:27)] > 0] <- 1
 itol.annotated.shapes[,c(8:27)][is.na(itol.annotated.shapes[,c(8:27)])] <- 0
 
 #save chromosome info as output
-write.table(subset(itol.annotated.shapes, select = c(NCBI.ID, arsB_chromosome, acr3_chromosome, arsC_glut_chromosome, arsC_thio_chromosome, arsM_chromosome, aioA_chromosome, arxA_chromosome, arrA_chromosome)), paste(wd, "/output/iTOL_chromosome.csv", sep = ""), quote = FALSE, row.names = FALSE, col.names = TRUE, sep = ",")
+write.table(subset(itol.annotated.shapes, select = c(NCBI.ID, arsB_chromosome, acr3_chromosome, arsD_chromosome, arsC_glut_chromosome, arsC_thio_chromosome, arsM_chromosome, aioA_chromosome, arxA_chromosome, arrA_chromosome)), paste(wd, "/output/iTOL_chromosome.csv", sep = ""), quote = FALSE, row.names = FALSE, col.names = TRUE, sep = ",")
 
 #individually save plasmid outputs
-write.table(subset(itol.annotated.shapes, select = c(NCBI.ID, arsB_plasmid), subset = arsB_plasmid >0), paste(wd, "/output/iTOL_arsB_plasmid.csv", sep = ""), quote = FALSE, row.names = FALSE, col.names = TRUE, sep = ",")
+write.table(subset(itol.annotated.shapes, select = c(NCBI.ID, arsB_plasmid), subset = arsB_plasmid > 0), paste(wd, "/output/iTOL_arsB_plasmid.csv", sep = ""), quote = FALSE, row.names = FALSE, col.names = TRUE, sep = ",")
 
-write.table(subset(itol.annotated.shapes, select = c(NCBI.ID, acr3_plasmid), subset = acr3_plasmid >0), paste(wd, "/output/iTOL_cr3_plasmid.csv", sep = ""), quote = FALSE, row.names = FALSE, col.names = TRUE, sep = ",")
+write.table(subset(itol.annotated.shapes, select = c(NCBI.ID, acr3_plasmid), subset = acr3_plasmid >0), paste(wd, "/output/iTOL_acr3_plasmid.csv", sep = ""), quote = FALSE, row.names = FALSE, col.names = TRUE, sep = ",")
 
 write.table(subset(itol.annotated.shapes, select = c(NCBI.ID, arsC_glut_plasmid), subset = arsC_glut_plasmid >0), paste(wd, "/output/iTOL_arsC_glut_plasmid.csv", sep = ""), quote = FALSE, row.names = FALSE, col.names = TRUE, sep = ",")
 
@@ -230,6 +230,9 @@ write.table(subset(itol.annotated.shapes, select = c(NCBI.ID, arsC_thio_plasmid)
 write.table(subset(itol.annotated.shapes, select = c(NCBI.ID, arsM_plasmid), subset = arsM_plasmid >0), paste(wd, "/output/iTOL_arsM_plasmid.csv", sep = ""), quote = FALSE, row.names = FALSE, col.names = TRUE, sep = ",")
 
 write.table(subset(itol.annotated.shapes, select = c(NCBI.ID, aioA_plasmid), subset = aioA_plasmid >0), paste(wd, "/output/iTOL_aioA_plasmid.csv", sep = ""), quote = FALSE, row.names = FALSE, col.names = TRUE, sep = ",")
+
+write.table(subset(itol.annotated.shapes, select = c(NCBI.ID, arsD_plasmid), subset = arsD_plasmid >0), paste(wd, "/output/iTOL_arsD_plasmid.csv", sep = ""), quote = FALSE, row.names = FALSE, col.names = TRUE, sep = ",")
+
 
 #read in phylum colors
 colors.phy <- read_delim(paste(wd, "/data/colors_phylum.txt", sep = ""), delim = "\t", col_names = c("Color", "Phylum"))
@@ -269,7 +272,7 @@ AsRG.labels <- data.tax %>%
 dissim <- c("arxA", "arrA", "aioA")
 
 #write file with labels for each gene
-write.table(subset(AsRG.labels, Gene == "acr3", select = c(t.name, Organism)), file = paste(wd, "/output/acr3.labels.txt", sep = ""), quote = FALSE, row.names = FALSE, col.names = FALSE, sep = ",")
+write.table(subset(AsRG.labels, Gene == "arsD", select = c(t.name, Organism)), file = paste(wd, "/output/arsD.labels.txt", sep = ""), quote = FALSE, row.names = FALSE, col.names = FALSE, sep = ",")
 
 #get label colors for all genes  
 AsRG.color <- data.tax %>%
@@ -289,7 +292,7 @@ location <- data.tax %>%
   mutate(Source = ifelse(Source == "NCBI.ID", -1, 0))
 
 #save each gene as output
-write.table(subset(location, Gene == "arsD", select = c(t.name, Source)), paste(wd, "/output/iTOL_arsD_plasmid.csv", sep = ""), quote = FALSE, row.names = FALSE, col.names = TRUE, sep = ",")
+write.table(subset(location, select = c(t.name, Source)), paste(wd, "/output/iTOL_gene_plasmid.csv", sep = ""), quote = FALSE, row.names = FALSE, col.names = TRUE, sep = ",")
 
 ####################
 #Soil type analysis#
@@ -452,7 +455,7 @@ tree.data.annotated <- itol.annotated %>%
   left_join(tree.data, by = "NCBI.ID") %>%
   arrange(order) %>%
   column_to_rownames("NCBI.ID") %>%
-  select(-c(Name:Source, order, arsB_plasmid, arsM_plasmid:None_plasmid, arrA_chromosome, arrA_plasmid))
+  select(-c(Name:Source, order, arsB_plasmid, arrA_plasmid, arxA_plasmid, None_chromosome, None_plasmid))
 tree.data.annotated <- data.frame(tree.data.annotated)
 
 #convert to presence absence
@@ -462,7 +465,7 @@ tree.data.annotated[tree.data.annotated > 0] <- 1
 tree.data.annotated[is.na(tree.data.annotated)] <- 0
 
 #test phylogenetic signal
-phy.signal <- multiPhylosignal(x = tree.data.annotated[,c(1:12)], phy = tree.f, reps = 999)
+phy.signal <- multiPhylosignal(x = tree.data.annotated, phy = tree.f, reps = 999)
 
 #fdr adjust p values
 phy.signal$p.adjust <- p.adjust(phy.signal$PIC.variance.P, method = "fdr")
@@ -509,3 +512,51 @@ arsD.labels <- data.frame(arsD.tree$tip.label) %>%
 arsD.tree$tip.label[arsD.tree$tip.label %in% arsD.labels$t.name] <- arsD.labels$`RefSoil ID`
 
 write.tree(arsD.tree, file = paste(wd, "/phylogenetic_analysis/refsoil_labels/arsD_refsoil.nwk", sep = ""))
+
+#arsC_thio
+arsC_thio.tree <- read.tree(paste(wd, "/phylogenetic_analysis/RAxML_bipartitionsBranchLabels.arsC_thio_refsoil_RAxML_PROTGAMMAWAG.nwk", sep = ""))
+
+arsC_thio.labels <- data.frame(arsC_thio.tree$tip.label) %>%
+  rownames_to_column(var = "order") %>%
+  rename(t.name = arsC_thio.tree.tip.label) %>%
+  left_join(data.tax, by = "t.name")
+
+arsC_thio.tree$tip.label[arsC_thio.tree$tip.label %in% arsC_thio.labels$t.name] <- arsC_thio.labels$`RefSoil ID`
+
+write.tree(arsC_thio.tree, file = paste(wd, "/phylogenetic_analysis/refsoil_labels/arsC_thio_refsoil.nwk", sep = ""))
+
+#arsC_glut
+arsC_glut.tree <- read.tree(paste(wd, "/phylogenetic_analysis/RAxML_bipartitionsBranchLabels.arsC_glut_refsoil_RAxML_PROTGAMMAWAG.nwk", sep = ""))
+
+arsC_glut.labels <- data.frame(arsC_glut.tree$tip.label) %>%
+  rownames_to_column(var = "order") %>%
+  rename(t.name = arsC_glut.tree.tip.label) %>%
+  left_join(data.tax, by = "t.name")
+
+arsC_glut.tree$tip.label[arsC_glut.tree$tip.label %in% arsC_glut.labels$t.name] <- arsC_glut.labels$`RefSoil ID`
+
+write.tree(arsC_glut.tree, file = paste(wd, "/phylogenetic_analysis/refsoil_labels/arsC_glut_refsoil.nwk", sep = ""))
+
+#arsB
+arsB.tree <- read.tree(paste(wd, "/phylogenetic_analysis/RAxML_bipartitionsBranchLabels.arsB_refsoil_RAxML_PROTGAMMAWAG.nwk", sep = ""))
+
+arsB.labels <- data.frame(arsB.tree$tip.label) %>%
+  rownames_to_column(var = "order") %>%
+  rename(t.name = arsB.tree.tip.label) %>%
+  left_join(data.tax, by = "t.name")
+
+arsB.tree$tip.label[arsB.tree$tip.label %in% arsB.labels$t.name] <- arsB.labels$`RefSoil ID`
+
+write.tree(arsB.tree, file = paste(wd, "/phylogenetic_analysis/refsoil_labels/arsB_refsoil.nwk", sep = ""))
+
+#acr3
+acr3.tree <- read.tree(paste(wd, "/phylogenetic_analysis/RAxML_bipartitionsBranchLabels.acr3_refsoil_RAxML_PROTGAMMAWAG.nwk", sep = ""))
+
+acr3.labels <- data.frame(acr3.tree$tip.label) %>%
+  rownames_to_column(var = "order") %>%
+  rename(t.name = acr3.tree.tip.label) %>%
+  left_join(data.tax, by = "t.name")
+
+acr3.tree$tip.label[acr3.tree$tip.label %in% acr3.labels$t.name] <- acr3.labels$`RefSoil ID`
+
+write.tree(acr3.tree, file = paste(wd, "/phylogenetic_analysis/refsoil_labels/acr3_refsoil.nwk", sep = ""))

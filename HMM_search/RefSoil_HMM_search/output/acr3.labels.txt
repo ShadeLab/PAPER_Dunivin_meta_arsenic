@@ -1,3 +1,6 @@
+LABELS
+SEPARATOR COMMA
+DATA
 BSU25790,Bacillus subtilis subsp. subtilis str. 168 (BSU25790)
 GSU2954,Geobacter sulfurreducens PCA (GSU2954)
 Atu1491,Agrobacterium fabrum str. C58 (Atu1491)
