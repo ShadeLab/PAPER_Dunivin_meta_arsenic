@@ -1,5 +1,5 @@
 # meta_arsenic
-Taylor K Dunivin
+Taylor K Dunivin, Susanna Yeh, Ashley Shade
 
 This repository contains several databases to detect arsenic resistance genes (AsRGs) from nucleotide (genome, metagenome, metatranscriptome) and amino acid (assembled genome) data sets. 
 
