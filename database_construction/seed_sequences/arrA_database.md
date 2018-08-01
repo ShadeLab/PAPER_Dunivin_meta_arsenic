@@ -16,7 +16,7 @@
   * From that super group, I selected the specific domain hit: MobB_Arsenate-R
     * This specific domain perfectly matched the blast sequence
   * The below tree was given by NCBI for this group
-  * ![arrA_ncbi_tree](https://github.com/ShadeLab/Xander_arsenic/blob/master/images/arra_ncbi.gif)
+  * ![arrA_ncbi_tree](https://github.com/ShadeLab/meta_arsenic/blob/master/database_construction/images/arra_ncbi.gif)
   * From this tree, I examined all sequences
     * Sequences were considered "good" if 
       * they came from a paper that specifically tested arsenate reduction in some way
@@ -31,5 +31,5 @@
 * I will boot the tree with aioA since it is closely related
 * If aioA is the most distant, I am confident in the specificity
 * Below is an ml tree with 50 bootstraps testing this
-* ![arrA_seeds](https://github.com/ShadeLab/Xander_arsenic/blob/master/images/arrA_boot.png)
+* ![arrA_seeds](https://github.com/ShadeLab/meta_arsenic/blob/master/database_construction/images/arrA_boot.png)
 * The tree looks great! I will move forward with these seeds. 
