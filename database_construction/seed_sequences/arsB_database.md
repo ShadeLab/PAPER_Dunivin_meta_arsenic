@@ -31,7 +31,7 @@ Below is a tree for the protein superfamily ArsB_NhaD permease, and colors indic
 * blue: YbiR_permease
 * purple: ArsB_permease
 
-![ncbi arsB tree](https://github.com/ShadeLab/Xander_arsenic/blob/master/images/arsB_ncbi_grps.gif)
+![ncbi arsB tree](https://github.com/ShadeLab/meta_arsenic/blob/master/database_construction/images/arsB_ncbi_grps.gif)
 
 This protein group tells me that there are roughly three other permeases similar to ArsB that I should be weary of when constructing the database. I will put my greatest emphasis on YbiR since it clusters with ArsB. 
 
@@ -74,6 +74,6 @@ This protein group tells me that there are roughly three other permeases similar
 I BLASTed sequences from Uniprot, the 3 NCBI recomended seq, old FunGene seq, and bootstraps to see if there would be any "contaminating" hits. Two aryl sulfatases popped up, so I selected those sequences to include in downstream analysis. 
 
 Below is a maximum likelihood tree with 50 bootstraps. The tree includes sequences used for the current FunGene database (upside down triangles), high quality sequences according to uniprot (black squares), one less quality seq from UniProt (open black square), acr3 arsenite efflux pump for bootstrapping (diamond), and potential contamination aryl sulfatases (triangle)
-![arsB tree with seed sequences](https://github.com/ShadeLab/Xander_arsenic/blob/master/images/arsB_boot.png)
+![arsB tree with seed sequences](https://github.com/ShadeLab/meta_arsenic/blob/master/database_construction/images/arsB_boot.png)
 
 It looks like the aryl sulfatases are almost exactly like arsB. BLASTing the sequences also comes up with hits to arsB. I think that this is a nomenclature issue, not a contamination issue. I will not exclude arylsulfatase-similar sequences from the seeds. This is something to keep in mind in downstream analyses though. 
