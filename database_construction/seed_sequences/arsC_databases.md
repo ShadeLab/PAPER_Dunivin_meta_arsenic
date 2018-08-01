@@ -1,5 +1,5 @@
 
-#arsC database construction
+# arsC database construction
 ### Taylor Dunivin
 ## January 20, 2017
 ### Goals: 
@@ -26,7 +26,7 @@ The below tree shows the arsC (glutaredoxin) sequences according to NCBI. Color 
 * Orange: arsC_like
 * Blue: arsC_Yffb
 
-![Image of arsC tree](https://github.com/ShadeLab/Xander_arsenic/blob/master/images/arsC_family_tree.gif)
+![Image of arsC tree](https://github.com/ShadeLab/meta_arsenic/blob/master/database_construction/images/arsC_family_tree.gif)
 
 Even the tree of the arsC (glutaredoxin) suggests that arsC_15kD and arsC_arsC are indeed separate from other protein families. With the above information considered, I would say that only protein families arsC_15kD and arsC_arsC are indeed indicative of glutaredoxin arsenate reductases. 
 
@@ -95,7 +95,7 @@ With the above table, I am not satisfied with the FunGene database for arsC. Lot
   
  * The below tree shows the resulting group of sequences with thioredoxin-dependent arsC from S.aureus included for bootstrapping. 
   
- ![maximum likelihood of arsC seed sequences](https://github.com/ShadeLab/Xander_arsenic/blob/master/images/arsC_glut_boot.png)
+ ![maximum likelihood of arsC seed sequences](https://github.com/ShadeLab/meta_arsenic/blob/master/database_construction/images/arsC_glut_boot.png)
  
 * I will also move sequence Q9CM21 PASMU as it does not cluster with the remaining arsC sequences. Additionally, it is only classified as NCBI arsC not arsC_arsC (so even they technically separate them). 
  
@@ -133,7 +133,7 @@ With the above table, I am not satisfied with the FunGene database for arsC. Lot
 
 The below maximum likelihood tree (50 bootstraps) shows arsC (thioredoxin) sequences. Crystal structures are shown with black squares. Glutaredoxin arsC from E.coli was included to highlight the separation between the arsCs and is indicated with an open square. Open circles show PTPases that have the potential to interfere with HMMs. 
 
-![maximum likelihood tree of arsC thiol](https://github.com/ShadeLab/Xander_arsenic/blob/master/images/arsC_thio_boot.png)
+![maximum likelihood tree of arsC thiol](https://github.com/ShadeLab/meta_arsenic/blob/master/database_construction/images/arsC_thio_boot.png)
 
 * Based on the above tree, I am not concerned about PTPases. It appears there are two clusters from the S.aureus arsC. As a cautionary measure since the second cluster of sequences were not ever confirmed through crystal structure, etc. I will remove them from the .seed sequences. The sequences are on the tree from A7GP55 to C0ZEV2. Otherwise the tree looks good. 
 
