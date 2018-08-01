@@ -1,0 +1,1 @@
+Sequences for the arxA database were curated through __Edwardson, C. F., & Hollibaugh, J. T. (2017). Metatranscriptomic analysis of prokaryotic communities active in sulfur and arsenic cycling in Mono Lake, California, USA. The ISME Journal. https://doi.org/10.1038/ismej.2017.80__
