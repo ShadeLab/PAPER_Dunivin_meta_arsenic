@@ -1,4 +1,4 @@
-#arsM database construction
+# arsM database construction
 ### Taylor Dunivin
 ## February 22, 2017
 ### Goals: 
@@ -35,7 +35,7 @@ CCG
 * Open circle indicates bootstrap sequence
 * Black boxes indicate confident, full length sequences 
 * 50 bootstraps; maximum likelihood
-* ![arsM_boot](https://github.com/ShadeLab/Xander_arsenic/blob/master/images/arsM_boot.pdf)
+* ![arsM_boot](https://github.com/ShadeLab/meta_arsenic/blob/master/database_construction/images/arsM_boot.pdf)
 
 I will remove four sequences based on this resulting in: 
 >ARSM_HALSA (O52025)
