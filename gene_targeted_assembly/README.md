@@ -1,7 +1,7 @@
-# Gene targeted assembly of arsenic resistance genes Data files for project
+# Gene targeted assembly of arsenic resistance genes
 This repository contains resources for assembling arsenic resistance genes using Xander (Wang et al., *Microbiome*, 2015) as well as data and code used to assemble arsenic resistance genes from soil metagenomes. 
 
-## [MG-RAST_download](https://github.com/ShadeLab/meta_arsenic/tree/master/gene_targeted_assembly/mg-rast_download)
+## [MG-RAST_download](https://github.com/ShadeLab/meta_arsenic/tree/master/gene_targeted_assembly/MG-RAST_download)
 - Notes on downloading soil metagenomes from MG-RAST
 
 ## [Cultivation comparison](https://github.com/ShadeLab/meta_arsenic/tree/master/gene_targeted_assembly/cultivation_comparison)
