@@ -350,13 +350,13 @@ history <- melt %>%
 (phylum.plot=(ggplot(history, aes(x=Phylum, y=Average)) +
                 geom_point(size=2) +
                 labs(x="Phylum", y="Mean relative abundance") +
-                facet_wrap(~Site) +
-                theme_bw(base_size = 11) +
-                theme(axis.text.x = element_text(angle = 90, size = 11, 
+                facet_wrap(~Site, ncol = 2) +
+                theme_bw(base_size = 8) +
+                theme(axis.text.x = element_text(angle = 90, size = 8, 
                                                  hjust=0.99,vjust=0.99))))
 
 #save full community structure
-ggsave(phylum.plot, filename = paste(wd, "/figures/community.structure.full.eps", sep=""), width = 12, height = 6)
+ggsave(phylum.plot, filename = paste(wd, "/figures/community.structure.full.eps", sep=""), width = 6.8, height = 10, units = "in")
 
 #extract 6 most abundant phyla
 #top 6 were chosen so that at least
@@ -375,43 +375,6 @@ top.phyla <- c("Proteobacteria", "Actinobacteria", "Verrucomicrobia", "Firmicute
 
 #save plot of top phyla
 ggsave(phylum.plot.top, filename = paste(wd, "/figures/community.structure.top.eps", sep=""), units = "in", width = 6, height = 4)
-
-################################
-#HEATMAP ANALYSIS OF ASRG ABUND#
-################################
-
-library(reshape2)
-heatmap.cast <- dcast(gene_abundance_summary, Gene~Sample, value.var = "Total")
-rownames(heatmap.cast) <- heatmap.cast$Gene
-heatmap.cast <- heatmap.cast[-10,-1]
-
-#set up environment to run heatmap
-library(pheatmap)
-callback = function(hc, mat){
-  sv = svd(t(mat))$v[,1]
-  dend = reorder(as.dendrogram(hc), wts = sv)
-  as.hclust(dend)
-}
-
-#get heatmap colors
-hc=colorRampPalette(c("white", "#91bfdb", "midnightblue"), interpolate="linear", bias = 3)
-
-
-#prep data for gene annotation on heatmap
-colors.otu.2 <- data.frame(t(heatmap.cast))
-colors.otu.2_annotated <- colors.otu.2 %>%
-  rownames_to_column(var = "Sample") %>%
-  left_join(meta, by = c("Sample")) %>%
-  select(Site, Biome)
-rownames(colors.otu.2_annotated) <- rownames(colors.otu.2)
-
-#set gene colors for plotting
-ann_colors = list(
-  Site = c(Brazilian_forest = "#808000", California_grassland = "#aa6e28", Centralia_recovered = "#ffe119", Centralia_active = "#f58231", Centralia_reference = "#aaffc3", Disney_preserve = "#fabebe", Illinois_switchgrass = "#d2f53c", Illinois_soybean = "#008080", Iowa_agricultural = "#3cb44b", Iowa_corn = "#ffd8b1", Iowa_prairie = "#808080", Mangrove = "#911eb4", Minnesota_grassland = "#000080", Permafrost_Canada = "#46f0f0", Permafrost_Russia = "#0082c8", Wyoming_soil ="#FFFFFF"), 
-  Biome = c(permafrost = "white", mangrove = "black",agricultural = "#cb181d", `non-agricultural` = "#fb6a4a", coal_seam_fire = "#fcae91", recovered = "#fee5d9"))
-
-
-pheatmap(t(heatmap.cast), cluster_rows = TRUE, cluster_cols = FALSE, clustering_method = "complete", color = hc(100), dendrogram = "row", scale = "none", trace = "none", legend = TRUE, clustering_callback = callback, annotation_row = colors.otu.2_annotated, annotation_colors = ann_colors, show_rownames = FALSE)
 
 #####################
 #SHARED OTU ANALYSIS#
@@ -454,7 +417,6 @@ gene_abundance_cast_2_melt <- gene_abundance_cast_2 %>%
 #plot data
 (otu.shared <- ggplot(gene_abundance_cast_2_melt, aes(y = OTU, x = Sample)) +
   geom_point(aes(size = NormalizedAbundance, color = Sample)) +
-  #facet_wrap(~Gene, scales = "free_x") +
   theme_light() +
   theme(axis.text.x = element_blank()) +
   scale_color_manual(values = c("#808000", "#ffe119", "#f58231", "#aaffc3", "#fabebe", "#d2f53c", "#008080", "#3cb44b", "#ffd8b1", "#808080", "#911eb4", "#000080", "#46f0f0", "#0082c8", "grey75")))
@@ -463,7 +425,7 @@ ggsave(otu.shared, filename = paste(wd, "/figures/shared.otus.eps", sep = ""), h
 
 #what portion are endemic?
 abund_occur <- gene_abundance_annotated %>%
-  mutate(Site = gsub("Centralia_.*", "Centralia", Site)) %>%
+  #mutate(Site = gsub("Centralia_.*", "Centralia", Site)) %>%
   group_by(Site, Gene, OTU) %>%
   subset(RelativeAbundance > 0) %>%
   summarise(MeanAbund = mean(RelativeAbundance)) %>%
@@ -476,15 +438,22 @@ occur_stats <- abund_occur %>%
   summarise() %>%
   group_by(Gene) %>%
   mutate(total = length(Gene)) %>%
-  mutate(occurPA = ifelse(Occur > 1, 0, 1)) %>%
+  mutate(occurPA = ifelse(Occur > 2, 0, 1)) %>%
   group_by(Gene, total) %>%
   summarise(endemic = sum(occurPA)) %>%
   mutate(endemic.perc = endemic/total)
 
-ggplot(abund_occur, aes(y = MeanAbund, x = Occur, color = Gene)) +
+write.table(occur_stats, file = "output/occurrence_statistics.txt", quote = FALSE, row.names = FALSE, col.names = TRUE, sep = "\t")
+
+(abund_occur_plot <- ggplot(abund_occur, aes(y = MeanAbund, x = as.character(Occur))) +
   geom_jitter(shape = 1, width = 0.1) +
   scale_y_log10() +
-  facet_wrap(~Gene)
+  facet_wrap(~Gene, ncol = 1) +
+    xlab("Occurrence") +
+    ylab("rplB-normalized abundance") +
+  theme_light())
+
+ggsave(abund_occur_plot, filename = "figures/abund.occur.plot.eps", height = 9, width = 2.5, units = "in")
 
 ##############################
 #Community membership v. AsRG OLDDDDDDDDD#
