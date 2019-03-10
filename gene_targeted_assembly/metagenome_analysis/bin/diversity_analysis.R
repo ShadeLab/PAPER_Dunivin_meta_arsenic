@@ -455,69 +455,78 @@ write.table(occur_stats, file = "output/occurrence_statistics.txt", quote = FALS
 
 ggsave(abund_occur_plot, filename = "figures/abund.occur.plot.eps", height = 9, width = 2.5, units = "in")
 
-##############################
-#Community membership v. AsRG OLDDDDDDDDD#
-##############################
-otu_table_slim <- otu_table_norm[grepl("cen01|cen03|cen04|cen05|cen06|cen07|cen10|cen12|cen13|cen14|cen15|cen16|cen17", otu_table_norm$Sample),]
+#make spatial distance matrix
+coord <- read.delim("data/literature_coordinates.txt", sep = "\t")
 
-#make sample the row names
-rownames(otu_table_slim) <- otu_table_slim$Sample
-otu_table_slim <- otu_table_slim[,-c(1,2)]
+#add function from 
+#https://eurekastatistics.com/calculating-a-distance-matrix-for-geographic-points-using-r/
+ReplaceLowerOrUpperTriangle <- function(m, triangle.to.replace){
+  # If triangle.to.replace="lower", replaces the lower triangle of a square matrix with its upper triangle.
+  # If triangle.to.replace="upper", replaces the upper triangle of a square matrix with its lower triangle.
+  
+  if (nrow(m) != ncol(m)) stop("Supplied matrix must be square.")
+  if      (tolower(triangle.to.replace) == "lower") tri <- lower.tri(m)
+  else if (tolower(triangle.to.replace) == "upper") tri <- upper.tri(m)
+  else stop("triangle.to.replace must be set to 'lower' or 'upper'.")
+  m[tri] <- t(m)[tri]
+  return(m)
+}
+GeoDistanceInMetresMatrix <- function(df.geopoints){
+  # Returns a matrix (M) of distances between geographic points.
+  # M[i,j] = M[j,i] = Distance between (df.geopoints$lat[i], df.geopoints$lon[i]) and
+  # (df.geopoints$lat[j], df.geopoints$lon[j]).
+  # The row and column names are given by df.geopoints$name.
+  
+  GeoDistanceInMetres <- function(g1, g2){
+    # Returns a vector of distances. (But if g1$index > g2$index, returns zero.)
+    # The 1st value in the returned vector is the distance between g1[[1]] and g2[[1]].
+    # The 2nd value in the returned vector is the distance between g1[[2]] and g2[[2]]. Etc.
+    # Each g1[[x]] or g2[[x]] must be a list with named elements "index", "lat" and "lon".
+    # E.g. g1 <- list(list("index"=1, "lat"=12.1, "lon"=10.1), list("index"=3, "lat"=12.1, "lon"=13.2))
+    DistM <- function(g1, g2){
+      require("Imap")
+      return(ifelse(g1$index > g2$index, 0, gdist(lat.1=g1$lat, lon.1=g1$lon, lat.2=g2$lat, lon.2=g2$lon, units="m")))
+    }
+    return(mapply(DistM, g1, g2))
+  }
+  
+  n.geopoints <- nrow(df.geopoints)
+  
+  # The index column is used to ensure we only do calculations for the upper triangle of points
+  df.geopoints$index <- 1:n.geopoints
+  
+  # Create a list of lists
+  list.geopoints <- by(df.geopoints[,c("index", "lat", "lon")], 1:n.geopoints, function(x){return(list(x))})
+  
+  # Get a matrix of distances (in metres)
+  mat.distances <- ReplaceLowerOrUpperTriangle(outer(list.geopoints, list.geopoints, GeoDistanceInMetres), "lower")
+  
+  # Set the row and column names
+  rownames(mat.distances) <- df.geopoints$name
+  colnames(mat.distances) <- df.geopoints$name
+  
+  return(mat.distances)
+}
 
-#separate OTU table into 2: rplB and AsRG
-otu_table.rplB <- otu_table_slim[, grep("rplB", colnames(otu_table_slim))]
-#otu_table.rplB <- otu_table.rplB[, -which(colSums(otu_table.rplB) < 2)]
+#calculate geographical distances
+library(Imap)
+coord_dist <- round(GeoDistanceInMetresMatrix(coord) / 1000)
+colnames(coord_dist) <- rownames(coord_dist)
+coord_dist_a <- coord_dist[ order(row.names(coord_dist)), ]
 
-otu_table.AsRG <- otu_table_slim[, grep("ars|aio|arx|arr|acr", colnames(otu_table_slim))]
-#otu_table.AsRG <- otu_table.AsRG[, -which(colSums(otu_table.AsRG) < 2)]
-#otu_table.AsRG <- otu_table.AsRG[-which(rowSums(otu_table.AsRG) == 0),]
+#make gene abundance summary into distance matrix
+as_table <- gene_abundance_summary %>%
+  dcast(Sample ~ Gene, value.var = "Total") %>%
+  select(-rplB) %>%
+  column_to_rownames("Sample") 
 
-#otu_table.rplB <- otu_table.rplB[which(rownames(otu_table.rplB) %in% rownames(otu_table.AsRG)),]
+as_table_norm <- as_table
+for(i in 1:nrow(as_table_norm)){as_table_norm[i,]=as_table[i,]/sum(as_table[i,])}
 
+#as distance
+as_table.d <- vegdist(as_table_norm, diag = TRUE, upper = TRUE)
 
-#make metadata a phyloseq class object
-#meta.phylo <- sample_data(cen_meta)
-row.names(meta) <- meta$Sample
-meta.phylo <- sample_data(meta)
-
-##make biom for phyloseq
-rare_rplB <- merge_phyloseq(otu_table(otu_table.rplB, taxa_are_rows = FALSE), meta.phylo)
-rare_AsRG <- merge_phyloseq(otu_table(otu_table.AsRG, taxa_are_rows = FALSE), meta.phylo)
-
-#relativize rarefied datasets
-rare_rplB_rel = transform_sample_counts(rare_rplB, function(x) x/sum(x))
-
-rare_AsRG_rel = transform_sample_counts(rare_AsRG, function(x) x/sum(x))
-
-#plot Bray Curtis ordination for rplB
-ord.rplB.bray <- ordinate(rare_rplB_rel, method="PCoA", distance="bray")
-(bc.ord=plot_ordination(rare_rplB_rel, ord.rplB.bray, color="Site",
-                        title="Bray Curtis (rplB)", label = "Sample") +
-    geom_point(size=5, alpha = 0.5) +
-    theme_light(base_size = 15))
-
-ggsave(bc.ord, filename = paste(wd, "/figures/cen.bc.rplb.png", sep = ""))
-
-#plot Bray Curtis ordination for AsRGs
-ord.AsRG.bray <- ordinate(rare_AsRG_rel, method="PCoA", distance="bray")
-(bc.ord=plot_ordination(rare_AsRG_rel, ord.AsRG.bray, color="Site",
-                        title="Bray Curtis (AsRG)", label = "Sample") +
-    geom_point(size=5, alpha = 0.5) +
-    theme_light(base_size = 15))
-
-ggsave(bc.ord, filename = paste(wd, "/figures/cen.bc.Asrg.png", sep = ""))
-
-
-#extract OTU table from phyloseq
-rare_rplB_rel.matrix = as(otu_table(rare_rplB_rel), "matrix")
-rare_AsRG_rel.matrix = as(otu_table(rare_AsRG_rel), "matrix")
-
-#calculate distance matrix
-otu_rplB.d <- vegdist(rare_rplB_rel.matrix, diag = TRUE, upper = TRUE)
-otu_AsRG.d <- vegdist(rare_AsRG_rel.matrix, diag = TRUE, upper = TRUE)
-
-#mantel test between rplB and AsRG
-mantel(otu_AsRG.d,otu_rplB.d, method = "spear")
+mantel(as_table.d,coord_dist_a, method = "spear")
 
 ################################
 #Centralia metadata stats +AsRG#
