@@ -5,6 +5,7 @@
 library(tidyverse)
 library(reshape2)
 library(broom)
+library(ggpubr)
 
 #set working directory
 wd <- paste(getwd())
@@ -69,3 +70,28 @@ no <- c("arsA (1)", "None (1)", "rplB (38)")
                                      hjust=0.99,vjust=0.99)))
 ggsave(comp.plot.refsoil.outlier, filename = paste(wd, "/figures/refsoil_metaG_comparison_outlier.eps", sep = ""))
 
+#read in groups
+groups <- read.delim("../metagenome_analysis/data/detox_metab.txt", sep = "\t")
+
+#join w metag info
+metaG.tidy.annotated <- metaG.tidy %>%
+  left_join(groups, by = "Gene") %>%
+  subset(Gene!="rplB") 
+
+#perform statistics comparing gene abundance in metaG
+metab_detox <- tidy(wilcox.test(metaG.tidy.annotated$total.abund~metaG.tidy.annotated$Category))
+
+efflux <- metaG.tidy.annotated %>%
+  subset(Description == "efflux") %>%
+  group_by(Site)
+
+efflux.stats <- tidy(wilcox.test(efflux$total.abund~efflux$Gene))
+
+
+reduc <- metaG.tidy.annotated %>%
+  subset(Description == "cyto_reductase") %>%
+  group_by(Site)
+
+reduc.stats <- tidy(wilcox.test(reduc$total.abund~reduc$Gene))
+
+#read in refsoil abund data

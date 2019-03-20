@@ -434,6 +434,23 @@ type.ars.abund.norm <- type.ars.abund %>%
   theme(axis.text.x = element_text(angle = 45, hjust = 1, vjust = 1)))
 
 ggsave(soil.type, filename = paste(wd, "/figures/abund.soil.type.eps", sep = ""))
+write.table(type.ars.abund.norm, file = "output/refsoil_abundance.txt", quote = FALSE, sep = "\t", row.names = FALSE)
+
+#calculate stats
+
+refsoil_wilcox <- tidy(pairwise.wilcox.test( type.ars.abund.norm$Total, type.ars.abund.norm$Gene, p.adjust.method = "fdr"))
+
+groups <- read.delim("../../gene_targeted_assembly/metagenome_analysis/data/detox_metab.txt", sep = "\t")
+groups <- groups %>%
+  mutate(Gene = gsub("_glut", " (grx)", Gene),
+         Gene = gsub("_thio", " (trx)", Gene))
+
+type.ars.abund.norm2 <- type.ars.abund.norm %>%
+  ungroup() %>%
+  mutate(Gene = as.character(Gene)) %>%
+  left_join(groups, by = "Gene")
+
+wilcox.test(type.ars.abund.norm2$Total~type.ars.abund.norm2$Category, alternative = "greater")
 
 ################################
 #CALCULATE PHYLOGENETIC SIGNALS#

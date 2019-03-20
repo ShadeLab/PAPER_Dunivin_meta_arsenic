@@ -1,0 +1,82 @@
+Gene	SoilType	Total
+acr3	Alfisols	0.755119934890959
+acr3	Andisols	1.09469180973825
+acr3	Entisols	0.698032450195112
+acr3	Gelisols	0.309328917082411
+acr3	Inceptisols	1.15501132743966
+acr3	Mollisols	0.529680140624458
+acr3	Sand,Rock,Ice	1.45813131313131
+acr3	Ultisols	0.937832606019917
+acr3	Vertisols	0.20337791612446
+arsB	Alfisols	0.47066880677185
+arsB	Andisols	0.318989117177972
+arsB	Entisols	0.538319983569521
+arsB	Gelisols	0.672977169854957
+arsB	Inceptisols	0.148174408503245
+arsB	Mollisols	0.501558480242425
+arsB	Sand,Rock,Ice	0.174703615098352
+arsB	Ultisols	0.275342956249301
+arsB	Vertisols	0.595491364789684
+arsD	Alfisols	0.0550449444028958
+arsD	Andisols	0.00669762641898865
+arsD	Entisols	0.163779010063668
+arsD	Gelisols	0.0559244942236319
+arsD	Inceptisols	0.0473112235338205
+arsD	Mollisols	0.0124261034562966
+arsD	Sand,Rock,Ice	0.00198830409356725
+arsD	Ultisols	0.131623587333557
+arsD	Vertisols	0.0972026612280381
+arsC (grx)	Alfisols	1.12356923778338
+arsC (grx)	Andisols	1.45402101510461
+arsC (grx)	Entisols	1.14230026699528
+arsC (grx)	Gelisols	0.106321791610225
+arsC (grx)	Inceptisols	1.1540744715281
+arsC (grx)	Mollisols	0.829860746221651
+arsC (grx)	Sand,Rock,Ice	1.65582502658161
+arsC (grx)	Ultisols	1.08946850173436
+arsC (grx)	Vertisols	0.465569778786704
+arsC (trx)	Alfisols	0.0676714991868168
+arsC (trx)	Andisols	0
+arsC (trx)	Entisols	0.0905730129390018
+arsC (trx)	Gelisols	0.110219050450986
+arsC (trx)	Inceptisols	0.0236087689713322
+arsC (trx)	Mollisols	0.13411163070804
+arsC (trx)	Sand,Rock,Ice	0.00986842105263158
+arsC (trx)	Ultisols	0.0158610271903323
+arsC (trx)	Vertisols	0.313155156993605
+arsM	Alfisols	0.0195047524793303
+arsM	Andisols	0.0139318885448916
+arsM	Entisols	0.0320394331484904
+arsM	Gelisols	0.176528892853603
+arsM	Inceptisols	0.081787521079258
+arsM	Mollisols	0.000958739697414139
+arsM	Sand,Rock,Ice	0.0164473684210526
+arsM	Ultisols	0.00939912722390064
+arsM	Vertisols	0.0996578908225495
+aioA	Alfisols	0.00136079668460444
+aioA	Andisols	0.367647058823529
+aioA	Entisols	0.120147874306839
+aioA	Gelisols	0.00227971057587471
+aioA	Inceptisols	0.00843170320404722
+aioA	Mollisols	0.0183082407602354
+aioA	Sand,Rock,Ice	0.175986842105263
+aioA	Ultisols	0.00906344410876133
+aioA	Vertisols	0.00748889276914421
+arxA	Alfisols	0
+arxA	Andisols	0
+arxA	Entisols	0
+arxA	Gelisols	0
+arxA	Inceptisols	0
+arxA	Mollisols	0
+arxA	Sand,Rock,Ice	0
+arxA	Ultisols	0
+arxA	Vertisols	0
+arrA	Alfisols	0
+arrA	Andisols	0.00696594427244582
+arrA	Entisols	0.0425138632162662
+arrA	Gelisols	0.645257210823669
+arrA	Inceptisols	0.0421585160202361
+arrA	Mollisols	4.46063755000375e-05
+arrA	Sand,Rock,Ice	0
+arrA	Ultisols	0.014098690835851
+arrA	Vertisols	0

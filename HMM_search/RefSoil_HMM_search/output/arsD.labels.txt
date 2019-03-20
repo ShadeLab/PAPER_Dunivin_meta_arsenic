@@ -1,6 +1,3 @@
-LABELS
-SEPARATOR COMMA
-DATA
 CTC_RS09725,Clostridium tetani E88 (CTC_RS09725)
 EB_RS13960,Aromatoleum aromaticum EbN1 (EB_RS13960)
 SH_RS00505,Staphylococcus haemolyticus JCSC1435 (SH_RS00505)

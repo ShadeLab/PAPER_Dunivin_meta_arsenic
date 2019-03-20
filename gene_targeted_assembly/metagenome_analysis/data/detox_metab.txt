@@ -1,0 +1,10 @@
+Gene	Category	Description
+acr3	Detoxification	efflux
+aioA	Metabolism	
+arrA	Metabolism
+arxA	Metabolism
+arsB	Detoxification	efflux
+arsC_glut	Detoxification	cyto_reductase
+arsC_thio	Detoxification	cyto_reductase
+arsD	Detoxification
+arsM	Metabolism
